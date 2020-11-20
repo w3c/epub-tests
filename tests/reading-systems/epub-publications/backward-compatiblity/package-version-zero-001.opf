@@ -1,0 +1,13 @@
+<package xmlns="http://www.idpf.org/2007/opf" version="0" xml:lang="en" unique-identifier="q">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title>Package Version Zero 001</dc:title>
+    <meta name="assert" content="This test checks if a reading system will open an EPUB with package version attribute less than 3" />
+    <meta name="test" content="test passes if this text is visible" />
+    <meta name="help" href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-backward-epub"/>
+    &date;
+    &identifier;
+    &language;
+  </metadata>
+  &manifest;
+  &spine;
+</package>
