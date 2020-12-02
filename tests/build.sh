@@ -10,6 +10,11 @@ my_name="$(basename $HTMLFILE)"
 
 title="${my_name%.*}"
 
+
+extension="${my_name##*.}"
+
+echo ${extension}
+
 FOLDER=${title}
 
 mkdir ${FOLDER}
@@ -19,33 +24,37 @@ echo ${FOLDER}
 mkdir ${FOLDER}/OPS
 mkdir ${FOLDER}/META-INF
 
+
+
+if [ ${extension} = 'opf' ] ; then
+
+echo "found opf"
+
+cp $HTMLFILE ${FOLDER}/OPS/package.opf
+
+cp "common/content_001.xhtml" ${FOLDER}/OPS/content_001.xhtml
+
+
+
+TESTT=xpath ${FOLDER}/OPS/package.opf "*[local-name()='meta'/@test]"
+
+echo ${FOLDER}/OPS/package.opf
+
+
+
+else
+
 cp $HTMLFILE ${FOLDER}/OPS/content_001.xhtml
 
+
+cp "common/package.opf" ${FOLDER}/OPS/package.opf
+
+fi 
+
+
 cp "common/nav.xhtml" ${FOLDER}/OPS/nav.xhtml
-
 cp "common/mimetype" ${FOLDER}/mimetype
-
 cp "common/container.xml" ${FOLDER}/META-INF/container.xml
-
-
-cat > ${FOLDER}/OPS/package.opf <<- "EOF"
-<?xml version='1.0' encoding='UTF-8'?>
-<package xmlns='http://www.idpf.org/2007/opf' version='3.0' xml:lang='en' unique-identifier='q'>
-<metadata xmlns:dc='http://purl.org/dc/elements/1.1/'>
-  <dc:title id='title'>Title</dc:title>
-  <dc:language>en</dc:language>
-  <dc:identifier id='q'>NOID</dc:identifier>
-  <meta property='dcterms:modified'>2020-11-19T00:00:00Z</meta>
-</metadata>
-<manifest>
-  <item id='content_001'  href='content_001.xhtml' media-type='application/xhtml+xml'/>
-  <item id='nav'  href='nav.xhtml' media-type='application/xhtml+xml' properties='nav'/>
-</manifest>
-<spine>
-  <itemref idref='content_001' />
-</spine>
-</package>
-EOF
 
 
 
