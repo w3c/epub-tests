@@ -14,7 +14,7 @@
     * manifest-fallback-001.epub (JSON spine item[application/json] with XHTML fallback)
     * manifest-fallback-002.epub (XML spine item[application/dtc+xml] with XHTML fallback
     * manifest-fallback-005.epub (XML spine item[application/xml] with XHTML fallback
-    * manifest-fallback-004.epub (PSD image in content doc with PNG fallback
+    * manifest-fallback-004.epub (PSD image in content doc with PNG fallback)
 
 
 
@@ -123,3 +123,56 @@ Reading System do not have to use or present linked resources, even if they reco
 When it comes to resolving discrepancies and conflicts between metadata expressed in the Package Document and in linked metadata records, Reading Systems MUST use the document order of link elements in the Package Document to establish precedence (i.e., metadata in the first linked record encountered has the highest precedence and metadata in the Package Document the lowest, regardless of whether the link elements occur before, within or after the package metadata elements).
 
 Reading Systems MUST ignore any instructions contained in linked resources related to the layout and rendering of the EPUB Publication.
+
+#### 3.2.2 Manifest
+
+##### The item element
+
+* When an href attribute contains a relative IRI, Reading Systems MUST use the IRI of the Package Document as the base when resolving to an absolute IRI.
+
+    * item-iri-001.epub (like every epub, uses a relative IRI)
+
+
+* Reading Systems MAY optimize the rendering depending on the properties set in the properties attribute (e.g., disable a rendering process or use a fallback). 
+
+* Reading Systems MUST ignore all descriptive metadata properties that they do not recognize.
+
+    * unknown-properties-001.epub
+    * https://github.com/w3c/epub-specs/issues/1475
+
+* A Reading System that does not support the Media Type of a given Publication Resource MUST traverse the fallback chain until it has identified at least one supported Publication Resource to use in place of the unsupported resource. 
+
+    * https://github.com/w3c/epub-specs/issues/1464
+
+
+
+* If the Reading System supports multiple Publication Resources in the fallback chain, it MAY select the resource to use based on specific properties [EPUB-33] of that resource, otherwise it SHOULD honor the Author's preferred fallback order. 
+
+* If a Reading System does not support any resource in the fallback chain, it MUST alert the reader that content could not be displayed.
+
+    * manifest-fallback-005.epub (DMG falls back to PSD; bad results in many reading systems)
+
+
+
+##### Manifest fallbacks
+
+* Reading System MAY choose to utilize fallbacks to find the optimal version of a Content Document to render in a given context.
+
+#### 3.2.3 Spine
+
+##### The Spine Element
+
+* Reading Systems MUST provide a means of rendering the EPUB Publication in the order defined in the spine, which includes: 1) recognizing the first primary itemref as the beginning of the default reading order; and, 2) rendering successive primary items in the order given in the spine.
+
+    * spine-order-001.epub (make sure chapters occur in order)
+
+* When the default value of the page-progression-direction attribute is specified, the Reading System can choose the rendering direction. The default value MUST be assumed when the attribute is not specified. In this case, the reading system SHOULD choose a default page-progression-direction value based on the first language element.
+
+    * page-progression-001.epub (make sure ppd="ltr" works)
+    * page-progression-002.epub (make sure ppd="rtl" works)
+    * page-progression-003.epub (no ppd attribute, lang="ar"; should be rtl)
+    
+* Reading Systems MUST ignore the page progression direction defined in pre-paginated XHTML Content Documents. The page-progression-direction attribute defines the flow direction from one fixed-layout page to the next.
+
+
+##### The Itemref Element
