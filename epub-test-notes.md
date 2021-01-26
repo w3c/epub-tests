@@ -137,7 +137,7 @@ Reading Systems MUST ignore any instructions contained in linked resources relat
 
 * Reading Systems MUST ignore all descriptive metadata properties that they do not recognize.
 
-    * unknown-properties-001.epub
+    * unknown-properties-001.epub (weird properties attribute on item)
     * https://github.com/w3c/epub-specs/issues/1475
 
 * A Reading System that does not support the Media Type of a given Publication Resource MUST traverse the fallback chain until it has identified at least one supported Publication Resource to use in place of the unsupported resource. 
@@ -156,7 +156,7 @@ Reading Systems MUST ignore any instructions contained in linked resources relat
 
 ##### Manifest fallbacks
 
-* Reading System MAY choose to utilize fallbacks to find the optimal version of a Content Document to render in a given context.
+* When manifest fallbacks [EPUB-33] are provided for Top-level Content Documents, Reading Systems MAY choose from the available options in order to find the optimal version to render in a given context (e.g., by inspecting the properties attribute for each).
 
 #### 3.2.3 Spine
 
@@ -174,5 +174,35 @@ Reading Systems MUST ignore any instructions contained in linked resources relat
     
 * Reading Systems MUST ignore the page progression direction defined in pre-paginated XHTML Content Documents. The page-progression-direction attribute defines the flow direction from one fixed-layout page to the next.
 
+    * page-progression-004.epub (ppd="ltr"; all FXL content docs are dir="rtl")
+
 
 ##### The Itemref Element
+
+* When rendering an EPUB Publication, a Reading System MAY either suppress non-linear content so that it does not appear in the default reading order, or ignore the linear attribute to provide users access to the entire content of the EPUB Publication. This specification does not mandate which model Reading Systems have to use. A Reading System MAY also provide the option for users to toggle between the two models.
+
+    * linear-reachable-001.epub (make sure link to linear="no" spine item works)
+
+* Reading Systems MUST ignore all metadata properties expressed in the properties attribute that they do not recognize.
+
+    * unknown-properties-002.epub (weird properties attribute on itemref)
+
+
+#### 3.2.4 Collections
+
+In the context of this specification, support for collections in Reading Systems is OPTIONAL. Reading Systems MUST ignore collection elements that define unrecognized roles.
+
+    * unknown-collections-001.epub (collection with random role attribute)
+    
+    
+### 3.3 Publication Identifiers
+
+
+#### Unique Identifiers
+
+* Reading Systems MUST NOT depend on the Unique Identifier being unique to one and only one EPUB Publication. Determining whether two EPUB Publications with the same Unique Identifier represent different versions of the same publication, or different publications, might require inspecting other metadata, such as the titles or authors.
+
+    * publication-identifier-001A.epub (two epubs with the same unique id)
+    * publication-identifier-001B.epub
+
+
