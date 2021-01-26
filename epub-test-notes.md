@@ -204,5 +204,24 @@ In the context of this specification, support for collections in Reading Systems
 
     * publication-identifier-001A.epub (two epubs with the same unique id)
     * publication-identifier-001B.epub
+    
+    
+## 5 Navigation Document
+
+### 5.1 Navigation Document Conformance
 
 
+
+ * When requested by a user, it MUST provide access to the links and link labels in the nav elements [EPUB-33] of the EPUB Navigation Document in a fashion that allows the user to activate the links.
+ 
+    * navigation-access-001.epub (access to nav not in spine)
+    * navigation-access-002.epub (access to nav in spine)
+
+ * When a link is activated, it MUST relocate the application's current reading position to the destination identified by that link.
+ 
+    * navigation-link-001.epub (link from nav not in spine goes to content doc)
+    * navigation-link-002.epub (link from nav in spine goes to content doc)
+
+ * It MUST honor the above requirements irrespective of whether the EPUB Navigation Document is part of the spine.
+
+## 6 Fixed Layout
