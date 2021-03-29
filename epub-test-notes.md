@@ -4,11 +4,14 @@
 
 ### EPUB 3 Processing
 
-*  It MUST process the EPUB Container as defined in § 7. Open Container Format Processing.
+*  It [MUST](https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-ocf) process the EPUB Container as defined in § 7. Open Container Format Processing.
    * this is not testable
 
-*  It MUST process the Package Document as defined in § 3. Package Document Processing.
+*  It [MUST](https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-package) process the Package Document as defined in § 3. Package Document Processing.
    * this is not testable
+   
+*  It [MUST](https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-data-urls) prevent data URLs [RFC2397] from opening in top-level browsing contexts [HTML], except when initiated through a Reading System affordance such as a context menu. If a Reading System does not use a top-level browsing context for Top-level Content Documents, it MUST also prevent data URLs from opening as though they are Top-level Content Documents.
+   * no tests yet
    
 *  It MAY support an arbitrary set of Foreign Resource types, and MUST process fallbacks for unsupported Foreign Resources as defined in Foreign Resources [EPUB-33] if not.
     * manifest-fallback-001.epub (JSON spine item[application/json] with XHTML fallback)
@@ -37,7 +40,7 @@
 
 ### Backward Compatibility 
 
-*  It MUST attempt to process an EPUB Publication whose Package Document version attribute is less than "3.0".
+*  It [MUST](https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-backward-epub) attempt to process an EPUB Publication whose Package Document version attribute is less than "3.0".
    * package-version-000.epub has `package version="0"` to test if a reading system will open such a file. 
     
     
