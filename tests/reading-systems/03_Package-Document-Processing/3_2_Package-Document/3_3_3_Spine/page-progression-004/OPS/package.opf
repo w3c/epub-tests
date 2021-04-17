@@ -10,22 +10,22 @@
   <meta property="rendition:layout">pre-paginated</meta>
 </metadata>
 <manifest>
-  <item id="page_001" href="page_001.xhtml" media-type="application/xhtml+xml"/>
-  <item id="page_002" href="page_002.xhtml" media-type="application/xhtml+xml"/>
-  <item id="page_003" href="page_003.xhtml" media-type="application/xhtml+xml"/>
-  <item id="page_004" href="page_004.xhtml" media-type="application/xhtml+xml"/>
-  <item id="style"    href="fixed.css" media-type="text/css"/>
-  <item id="stix-font" href="fonts/STIXTwoText-Regular.otf" media-type="font/otf"/>
-  <item id="murmure-font" href="fonts/le-murmure.otf" media-type="font/otf"/>
+  <item id="page_001" href="page_001.xhtml" media-type="application/xhtml+xml" />
+  <item id="page_002" href="page_002.xhtml" media-type="application/xhtml+xml" />
+  <item id="page_003" href="page_003.xhtml" media-type="application/xhtml+xml" />
+  <item id="page_004" href="page_004.xhtml" media-type="application/xhtml+xml" />
+  <item id="style"    href="fixed.css" media-type="text/css" />
+  <item id="stix-font" href="fonts/STIXTwoText-Regular.otf" media-type="font/otf" />
+  <item id="murmure-font" href="fonts/le-murmure.otf" media-type="font/otf" />
   <!--  -->
 
 
-  <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
+  <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
 </manifest>
 <spine page-progression-direction="ltr">
-  <itemref idref="page_001"/>
-  <itemref idref="page_002"/>
-  <itemref idref="page_003"/>
-  <itemref idref="page_004"/>
+  <itemref idref="page_001" />
+  <itemref idref="page_002" />
+  <itemref idref="page_003" />
+  <itemref idref="page_004" />
 </spine>
 </package>

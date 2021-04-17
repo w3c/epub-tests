@@ -9,18 +9,18 @@
   <dc:language>en</dc:language>
 </metadata>
 <manifest>
-  <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml"/>
-  <item id="content_002" href="content_002.xhtml" media-type="application/xhtml+xml"/>
-  <item id="content_003" href="content_003.xhtml" media-type="application/xhtml+xml"/>
-  <item id="content_004" href="content_004.xhtml" media-type="application/xhtml+xml"/>
+  <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
+  <item id="content_002" href="content_002.xhtml" media-type="application/xhtml+xml" />
+  <item id="content_003" href="content_003.xhtml" media-type="application/xhtml+xml" />
+  <item id="content_004" href="content_004.xhtml" media-type="application/xhtml+xml" />
 
 
-  <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
+  <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
 </manifest>
 <spine page-progression-direction="ltr">
-  <itemref idref="content_001"/>
-  <itemref idref="content_002"/>
-  <itemref idref="content_003"/>
-  <itemref idref="content_004"/>
+  <itemref idref="content_001" />
+  <itemref idref="content_002" />
+  <itemref idref="content_003" />
+  <itemref idref="content_004" />
 </spine>
 </package>

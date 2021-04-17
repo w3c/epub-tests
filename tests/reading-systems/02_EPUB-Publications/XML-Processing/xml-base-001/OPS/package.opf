@@ -9,10 +9,10 @@
   <dc:language>en</dc:language>
 </metadata>
 <manifest>
-  <item id="content_001" href="base/content_001.xhtml" media-type="application/xhtml+xml"/>
-  <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
+  <item id="content_001" href="base/content_001.xhtml" media-type="application/xhtml+xml" />
+  <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
 </manifest>
 <spine>
-  <itemref idref="content_001"/>
+  <itemref idref="content_001" />
 </spine>
 </package>
