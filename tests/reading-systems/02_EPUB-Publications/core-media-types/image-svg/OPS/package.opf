@@ -11,7 +11,7 @@
 <manifest>
   <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
   <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
-  <item id="001.svg" href="img/001.svg" media-type="image/svg+xml" />
+  <item id="001" href="img/001.svg" media-type="image/svg+xml" />
 </manifest>
 <spine>
   <itemref idref="content_001" />
