@@ -1,0 +1,8 @@
+@font-face {
+	font-family: "Comic Sans MS";
+	src: url("../fonts/ComicSansMS.ttf");
+}
+
+.comic-sans {
+	font-family: "Comic Sans MS";
+}
