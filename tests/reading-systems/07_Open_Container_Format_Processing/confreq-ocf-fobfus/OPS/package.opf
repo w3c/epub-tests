@@ -10,9 +10,9 @@
     <meta property="ibooks:specified-fonts">true</meta>
   </metadata>
   <manifest>
-	<item id="comic_sans_ms" href="font/ComicSansMS.ttf" media-type="application/vnd.ms-opentype" />
+	  <item id="comic_sans_ms" href="font/ComicSansMS.ttf" media-type="application/vnd.ms-opentype" />
     <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
-	<item id="css" href="css/css.css" media-type="text/css" />
+	  <item id="css" href="css/css.css" media-type="text/css" />
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
   </manifest>
   <spine>
