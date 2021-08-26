@@ -85,14 +85,17 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
    `.epub` test file(s) as comma-separated values:
 
    ```html
-   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="confreq-rs-epub3-xhtml.epub">Reading Systems MUST process
-      <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">XHTML Content Documents</a> [[EPUB-33]].</p>
+   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="confreq-rs-epub3-xhtml.epub">Reading
+      Systems MUST process <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">XHTML Content
+      Documents</a> [[EPUB-33]].</p>
 
    ...
 
    <p id="confreq-rs-epub3-images"
-      data-tests="cmt-gif.epub,cmt-jpg.epub,cmt-png.epub,cmt-svg.epub,cmt-webp.epub">If a Reading System has a Viewport, it
-      MUST support the <a href="https://www.w3.org/TR/epub-33/#cmt-grp-image">image Core Media Type Resources</a> [[EPUB-33]].</p>
+      data-tests="cmt-gif.epub,cmt-jpg.epub,cmt-png.epub,cmt-svg.epub,cmt-webp.epub">If a Reading
+      System has a <a>Viewport</a>, it MUST support the
+      <a href="https://www.w3.org/TR/epub-33/#cmt-grp-image">image Core Media Type Resources</a>
+      [[EPUB-33]].</p>
    ```
 
 1. Create a pull request for your spec change and await review.
@@ -107,7 +110,7 @@ have a folder named `confreq-mathml-rs-behavior` and a compressed file named `co
 
 If a normative statement does not already have a unique anchor, please create one, following naming examples elsewhere in the
 spec. (You will commit this new anchor along with your `data-tests` attribute in a pull request against the spec, as
-explained in the `[step-by-step instructions](#step-by-step) above.)
+explained in the [step-by-step instructions](#step-by-step) above.)
 
 If multiple tests are necessary for a single anchor, differentiate the test cases by appending an underscore and a unique
 identifier. For example, a test that ensures reading systems treat explicit `dir="auto"` identically to omitting `dir`, as
@@ -198,11 +201,10 @@ The template file in `reports/templates/template.json` should list all available
 
 ## Generated test reports
 
-When new tests are committed to the repo, a GitHub Actions workflow generates a
-[test report](https://iherman.github.io/epub-testing/tests.html) based on the available tests in the `tests` directory and
-all available [implementation reports](#implementation-reports) in the `reports` directory.
+When new tests are committed to the repo, a GitHub Actions workflow generates a report from the tests in the `tests`
+directory and [implementation reports](#implementation-reports) in the `reports` directory.
 
-The report consists of two HTML files, namely:
+The report consists of two HTML pages, namely:
 
 * An [implementation report](https://iherman.github.io/epub-testing/) that lists reading systems that have submitted test
   results along with their results tables. Each table has one row per test and one column per implementation, with cells
