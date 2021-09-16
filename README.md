@@ -171,11 +171,14 @@ JSON file is as follows:
 
 * `name`: The name of the reading system.
 
+* `variant` (optional): The name of the reading system variant. Typical values may be `Android,` `iOS`, or `Web`, if one
+  implementation (i.e., sharing the same `name` value) has specific versions running in those environments.
+
 * `ref` (optional): A URL that creates a link on the name of the reading system in the implementation report.
 
 * `tests`: An object with the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
-   values of `true` or `false` for tests that pass or fail, respectively. If a test is not listed, the implementation report
-   will show a value of N/A, indicating that the implementation has not run the test.
+  values of `true` or `false` for tests that pass or fail, respectively. If a test is not listed, the implementation report
+  will show a value of N/A, indicating that the implementation has not run the test.
 
 Here is an example of a small test report:
 
