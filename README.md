@@ -25,6 +25,8 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
 
 * Install [eCanCrusher](https://www.docdataflow.com/ecancrusher/) or another utility or local script that can turn an EPUB
   folder into a compressed .epub file.
+   
+   * For MacOS, a command in Terminal can zip EPUB, go to the folder containing the files and enter the following: `zip -X0 book.epub mimetype; zip -Xur9D book.epub META-INF OEBPS -x ‘*.DS_Store’ `
 
 * Ensure you have several EPUB reading systems available to validate your tests (that is, validate that you have written the
   test correctly; many tests will nonetheless fail in individual reading systems). For example:
@@ -41,6 +43,8 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
     where you're signed into the same Google account)
 
   * [Kindle Previewer](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765261)
+
+  * [Kobo Books](https://www.kobo.com/ca/en/p/apps) and [instructions for sideloading](https://github.com/kobolabs/epub-spec#sideloading-for-testing-purposes)
 
   * [Thorium Reader](https://www.edrlab.org/software/thorium-reader/)
 
