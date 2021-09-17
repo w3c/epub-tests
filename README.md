@@ -136,7 +136,9 @@ The package document for each test must contain the following metadata, which is
 * `dc:description`: A longer description of the test for the generated test report.
 
 * `dc:coverage`: Which section of the report the test should be listed in. The report has a separate table for each section
-   to make it more readable. Examples are "Internationalization features", "Core media", etc.
+   to make it more readable. The following sections currently exist:
+
+   *  Core Media Types
 
 * `dcterms:isReferencedBy` (repeated, as part of a `meta` element): A series of URLs that refer to the relevant sections of
    the specification. These links provide back-links to the relevant normative statements from each test entry in the
