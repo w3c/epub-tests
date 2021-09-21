@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+	<head>
+		<meta charset="utf-8" />
+		<title>EPUB 3.3 Test Results</title>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
+		<link rel="stylesheet" href="css/tables.css">
+		<script class="remove">
+			var respecConfig = {
+				group: "epub",
+				wgPublicList: "public-epub3",
+				specStatus: "base",
+				noRecTrack: true,
+				publishDate: "2021-09-21",
+				shortName: "epub-tests-results",
+				edDraftURI: "https://w3c.github.io/epub-tests/results/",
+                copyrightStart: "2021",
+				editors:[
+					{
+						name: "Ivan Herman",
+						url: "https://www.w3.org/People/Ivan/",
+						company: "W3C",
+						w3cid: 7382,
+						orcid: "0000-0003-0782-2704",
+						companyURL: "https://www.w3.org",
+					},
+					{
+						name: "Dan Lazin",
+						company: "Google LLC",
+						w3cid: 130027,
+						companyURL: "https://www.google.com",
+					}
+				],
+				processVersion: 2020,
+				includePermalinks: true,
+				permalinkEdge: true,
+				permalinkHide: false,
+				diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+				github: {
+					repoURL: "https://github.com/w3c/epub-tests",
+					branch: "main"
+				}
+			};
+		</script>
+	</head>
+	
+	<body>
+		<section id="abstract">
+			<p>Results of EPUB Testing</p>
+		</section>
+		<section id="sotd"></section>
+
+		<section>
+			<h2>Introduction</h2>
+			<p>
+				This document contains the test results for all the EPUB 3 Tests. There is a <a href="tests.html">separate document</a> giving a short description for each tests; these descriptions are linked from the the tests in the tables below.
+			</p>
+
+			<p>
+				Some implementations may come in different "variants": though they have identical core EPUB Reading system engines, their behaviors may slightly diverge 
+				in different environments (typically IOS, Android, or Web) and, therefore, they are reported separately from one another.
+				From the W3C Process point of view, these variants should not considered to be independent implementations and, 
+				therefore, they should be considered as one implementation as far as the formal Candidate Recommendation report is concerned.
+				On the other hand, implementors may see a value in keeping those implementation results separated.
+			</p>
+			<p>
+				The report tables below reflect this duality. <a href="#sec-consolidated-report-tables"></a> shows a view of the reports where reports with identical core engines, albeit in different variants,
+				are displayed as if it was a single implementation. The test results for a specific test is set to <code>true</code> if <em>any</em> of the variants has a <code>true</code> value. On the other hand, the separate <a href="#sec-detailed-report-tables"></a> keeps all the variants separate, showing the full implementation results.
+			</p>
+
+			<p>
+				<a href="#sec-implementer-list"></a> lists all the implementations with the variant in parenthesis, if applicable.
+			</p>
+
+
+		</section>
+
+		<section data-include='fragments/implementations.html' data-include-replace='true'></section>
+		<section data-include='fragments/results.html' data-include-replace='true'></section>
+	</body>
+</html>

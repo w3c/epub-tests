@@ -205,7 +205,7 @@ Here is an example of a small test report:
 }
 ```
 
-The template file in `reports/templates/template.json` should list all available test identifiers.
+The template file in `reports/xx-template.json` should list all available test identifiers.
 
 
 ## Generated test reports
@@ -215,11 +215,11 @@ directory and [implementation reports](#implementation-reports) in the `reports`
 
 The report consists of two HTML pages, namely:
 
-* An [implementation report](https://iherman.github.io/epub-testing/) that lists reading systems that have submitted test
+* An [implementation report](https://w3c.github.io/epub-tests/results/) that lists reading systems that have submitted test
   results along with their results tables. Each table has one row per test and one column per implementation, with cells
   indicating whether the test passed, failed, or has not been run.
 
-* A [test suite description](https://iherman.github.io/epub-testing/tests.html) that lists each test that contains the
+* A [test suite description](https://w3c.github.io/epub-tests/results/tests.html) that lists each test that contains the
   appropriate [metadata](#metadata), split into one table per unique `dc:coverage` value. Each table has one row per test,
   showing the test's ID, title, description, back-links to the relevant relevant normative statements in the spec, and links
   to the test results.

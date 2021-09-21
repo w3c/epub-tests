@@ -1,0 +1,22 @@
+{
+    "name": "(Implementation's name)",
+    "ref": "https://www.example.com",
+    "tests": {
+        "confreq-mathml-rs-behavior": false,
+        "NOID": false,
+        "cmt-gif": false,
+        "cmt-jpeg": false,
+        "cmt-mp3": false,
+        "cmt-mp4-aac": false,
+        "cmt-ogg-opus": false,
+        "cmt-png": false,
+        "cmt-svg": false,
+        "cmt-webp": false,
+        "package-title-dir-rtl-001": false,
+        "package-title-dir-rtl-002": false,
+        "package-title-dir-rtl-003": false,
+        "package-title-dir-rtl-004": false,
+        "package-title-dir-rtl-005": false,
+        "package-title-dir-rtl-006": false
+    }
+}

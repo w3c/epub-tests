@@ -1,0 +1,20 @@
+{
+    "name"  : "ACME Books",
+    "ref"   : "https://www.example.org/acme",
+    "tests" : {
+        "cmt-gif": false,
+        "cmt-jpeg": false,
+        "cmt-mp3": false,
+        "cmt-mp4-aac": false,
+        "cmt-ogg-opus": true,
+        "cmt-png": false,
+        "cmt-svg": false,
+        "cmt-webp": true,
+        "package-title-dir-rtl-001": false,
+        "package-title-dir-rtl-002": false,
+        "package-title-dir-rtl-003": false,
+        "package-title-dir-rtl-004": true,
+        "package-title-dir-rtl-005": true,
+        "package-title-dir-rtl-006": true
+    }
+}

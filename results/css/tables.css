@@ -1,0 +1,76 @@
+/* Table zebra style... */
+
+table.zebra {
+    font-size: inherit;
+    font: 100%;
+    margin: 1em;
+    width: 100% !important;
+}
+
+table.zebra td {
+    padding-left: 0.3em;
+}
+
+table.zebra th {
+    font-weight: bold;
+    text-align: center;
+    font-size: 100%;
+    background: hsl(180, 30%, 50%);
+    color: #fff;
+}
+
+table.zebra th a:link {
+    color: #fff;
+}
+
+table.zebra th a:visited {
+    color: #aaa;
+}
+
+table.zebra tr:nth-child(even) {
+    background-color: hsl(180, 30%, 93%)
+}
+
+table.zebra th {
+    border-bottom: 1px solid #bbb;
+    padding: .2em 1em;
+}
+
+table.zebra td {
+    border-bottom: 1px solid #ddd;
+    padding: .2em 1em;
+}
+
+td a {
+    text-decoration: none !important;
+}
+
+td summary {
+    font-weight: normal;
+}
+
+td.pass {
+    background-color: green;
+}
+
+td.fail {
+    background-color: red;
+}
+
+col.col_id {
+    width: 20%;
+}
+
+col.col_title {
+    width: 20%;
+}
+
+col.col_sref {
+    width: 5%;
+    text-align: center;    
+}
+
+col.col_tref {
+    width: 5%;
+    text-align: center;
+}

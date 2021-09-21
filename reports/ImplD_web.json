@@ -1,0 +1,21 @@
+{
+    "name"  : "Example Books",
+    "ref"   : "https://www.example.org/sea",
+    "variant" : "Web", 
+    "tests" : {
+        "cmt-gif": true,
+        "cmt-jpeg": false,
+        "cmt-mp3": false,
+        "cmt-mp4-aac": false,
+        "cmt-ogg-opus": true,
+        "cmt-png": true,
+        "cmt-svg": false,
+        "cmt-webp": true,
+        "package-title-dir-rtl-001": true,
+        "package-title-dir-rtl-002": true,
+        "package-title-dir-rtl-003": false,
+        "package-title-dir-rtl-004": true,
+        "package-title-dir-rtl-005": true,
+        "package-title-dir-rtl-006": false
+    }
+}
