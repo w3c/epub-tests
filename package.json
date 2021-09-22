@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "run": "node bin/main.js",
+    "generate": "node bin/main.js",
     "ts": "ts-node src/main.ts",
     "lint": "eslint . --ext .ts"
   },
