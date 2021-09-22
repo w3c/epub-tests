@@ -7,7 +7,7 @@
         <dc:identifier id="pub-id">package-title-dir-rtl-004</dc:identifier>
         <meta property="dcterms:modified">2021-06-24T00:00:00Z</meta>
         <dc:language>ar</dc:language>
-        <dc:coverage lang="en">Internationalization Features</dc:coverage>
+        <dc:coverage lang="en">Internationalization</dc:coverage>
         <meta property="dcterms:alternative" lang="en">Correct dir on package</meta>
         <dc:description lang="en">The 'dc:title' element contains a text whose proper rendering requires bidi control. The root's 'dir' attribute is set to 'rtl'; the title should display correctly.</dc:description>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
