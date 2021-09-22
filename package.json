@@ -1,0 +1,36 @@
+{
+  "name": "epub-tests",
+  "version": "1.0.0",
+  "description": "Automatic reporting of EPUB 3 testing results",
+  "main": "bin/main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc",
+    "generate": "node bin/main.js",
+    "ts": "ts-node src/main.ts",
+    "lint": "eslint . --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w3c/epub-tests.git"
+  },
+  "author": "Ivan Herman, Dan Lazin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w3c/epub-tests/issues"
+  },
+  "homepage": "https://github.com/w3c/epub-tests#readme",
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@types/node": "^16.9.4",
+    "@types/xml2js": "^0.4.9",
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "@typescript-eslint/parser": "^4.31.2",
+    "eslint": "^7.32.0",
+    "typescript": "^4.4.3"
+  }
+}

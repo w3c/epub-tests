@@ -1,0 +1,50 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "alwaysStrict": true,
+        "baseUrl": ".",
+        "esModuleInterop": false,
+        "lib": ["ES2019", "dom"],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noEmitHelpers": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": false,
+        "outDir": "bin",
+        "paths": {
+            "*": [
+                "node_modules/*"
+            ]
+        },
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "target": "ES2019",
+    },
+    "typesRoots": [
+        "../node_modules/@types"
+    ],
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "dist/**/*",
+        "lib/**/*",
+        "Attic/**/*"
+    ],
+    "typedocOptions" : {
+        "excludeExternals": true,
+        "excludePrivate" : true,
+        "excludeProtected" : false,
+
+        "out" : "docs/tool_documentation",
+        "theme": "default",
+        "name" : "EPUB 3.3 Implementation Report Generator",
+        "includeVersion": true,
+        "categorizeByGroup": true,
+        "gitRemote": "origin",
+        "hideGenerator": true,
+        "disableOutputCheck": false,
+        "listInvalidSymbolLinks": true
+    }
+}

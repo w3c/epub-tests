@@ -4,7 +4,7 @@
   <dc:title>Publication Identifier 001B</dc:title>
   <dc:date>2021-01-18</dc:date>
   <dc:creator>Dave Cramer</dc:creator>
-  <dc:identifier id="pub-id">NOID</dc:identifier>
+  <dc:identifier id="pub-id">publication-identifier-001A</dc:identifier>
   <meta property="dcterms:modified">2021-01-26T00:00:00Z</meta>
   <dc:language>en</dc:language>
 </metadata>
