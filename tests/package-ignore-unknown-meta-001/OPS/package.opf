@@ -4,7 +4,7 @@
   <dc:title>Package Ignore Unknown Meta 001</dc:title>
   <dc:date>2021-01-11</dc:date>
   <dc:creator>Dave Cramer</dc:creator>
-  <dc:identifier id="pub-id">NOID</dc:identifier>
+  <dc:identifier id="pub-id">package-ignore-unknown-meta-001</dc:identifier>
   <meta property="dcterms:modified">2021-01-11T00:00:00Z</meta>
   <meta property="dcterms:titlee">This Is Not The Title</meta>
   <dc:language>en</dc:language>

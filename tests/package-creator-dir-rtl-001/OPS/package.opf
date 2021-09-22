@@ -4,8 +4,9 @@
   <dc:title>Package Creator Direction RTL 001</dc:title>
   <dc:date>2021-02-03</dc:date>
   <dc:creator dir="rtl">غ ظ ض ذ خ ث ت ش ر ق ص ف ع س ن م ل ك ي ط ح ز و ه د ج ب أ</dc:creator>
-  <dc:identifier id="pub-id">NOID</dc:identifier>
+  <dc:identifier id="pub-id">package-creator-dir-rtl-001</dc:identifier>
   <meta property="dcterms:modified">2021-02-03T00:00:00Z</meta>
+  <dc:coverage>Internationalization</dc:coverage>
   <dc:language>en</dc:language>
 </metadata>
 <manifest>
