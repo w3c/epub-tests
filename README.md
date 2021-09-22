@@ -139,6 +139,7 @@ The package document for each test must contain the following metadata, which is
    to make it more readable. The following sections currently exist:
 
    *  Core Media Types
+   *  Internationalization
 
 * `dcterms:isReferencedBy` (repeated, as part of a `meta` element): A series of URLs that refer to the relevant sections of
    the specification. These links provide back-links to the relevant normative statements from each test entry in the
@@ -160,7 +161,7 @@ In this example, only the relevant metadata items are shown:
             The dc:title element contains text whose proper rendering requires bidi control. 
             The element's 'dir' attribute is set to 'rtl'; the title should display from right to left.
         </dc:description>
-        <dc:coverage>Internationalization features</dc:coverage>
+        <dc:coverage>Internationalization</dc:coverage>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir</meta>
         <meta property="dcterms:alternative">Title's base direction set to RTL</meta>

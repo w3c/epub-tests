@@ -35,7 +35,7 @@ Here is an example (only the relevant metadata items are shown):
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
         <dc:title dir="rtl" xml:lang="he">CSS: הרפתקה חדשה!</dc:title>
         <dc:identifier id="pub-id">test_id_12345</dc:identifier>
-        <dc:coverage>Internationalization features</dc:coverage>
+        <dc:coverage>Internationalization</dc:coverage>
         <meta property="dcterms:alternative">Correct base direction setting on the element</meta>
         <dc:description>
             The dc:title element contains a text whose proper rendering requires bidi control. 
