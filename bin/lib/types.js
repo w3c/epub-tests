@@ -16,7 +16,7 @@ var Constants;
     /** Location for the implementation report templates */
     Constants.TEST_RESULTS_TEMPLATE = `${Constants.TEST_RESULTS_DIR}/xx-template.json`;
     /** Base URL for the tests in the repository */
-    Constants.TEST_URL_BASE = 'https://github.com/iherman/epub-testing/tree/main/tests';
+    Constants.TEST_URL_BASE = 'https://github.com/w3c/epub-tests/tree/main/tests';
     /** Location of the OPF file within the test directory */
     Constants.OPF_FILE = 'OPS/package.opf';
     /** Location for the HTML fragment on implementation lists */

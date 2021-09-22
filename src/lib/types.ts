@@ -16,7 +16,7 @@ export namespace Constants {
     export const TEST_RESULTS_TEMPLATE: string = `${TEST_RESULTS_DIR}/xx-template.json`;
 
     /** Base URL for the tests in the repository */
-    export const TEST_URL_BASE: string = 'https://github.com/iherman/epub-testing/tree/main/tests';
+    export const TEST_URL_BASE: string = 'https://github.com/w3c/epub-tests/tree/main/tests';
 
     /** Location of the OPF file within the test directory */
     export const OPF_FILE: string = 'OPS/package.opf';
