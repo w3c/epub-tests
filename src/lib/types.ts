@@ -40,7 +40,7 @@ export namespace Constants {
     export const DOC_TEST_DESCRIPTIONS: string = 'tests.html';
 
     /** List of test ID-s whose creators should not be considered for display */
-    export const IGNORE_CREATOR_ID: string[] = ['package-creator-dir-rtl-001', 'content_001'];
+    export const IGNORE_CREATOR_ID: string[] = ['package-creator-order-001', 'package-creator-dir-rtl-001', 'content_001'];
 
     /** List of creator names that should not be considered for display */
     export const IGNORE_CREATORS: string[] = ['Creator', '(Unknown)'];
