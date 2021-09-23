@@ -30,11 +30,20 @@ export namespace Constants {
     /** Location for the HTML fragment on test metadata */
     export const TEST_FRAGMENT: string = `${DOCS_DIR}/fragments/tests.html`;
 
+    /** Location for the HTML fragment on test creators */
+    export const CREATORS_FRAGMENT: string = `${DOCS_DIR}/fragments/creators.html`;
+
     /** (Relative) File name of the test results */
     export const DOC_TEST_RESULTS: string = 'index.html';
 
     /** (Relative) File name of the test descriptions */
     export const DOC_TEST_DESCRIPTIONS: string = 'tests.html';
+
+    /** List of test ID-s whose creators should not be considered for display */
+    export const IGNORE_CREATOR_ID: string[] = ['package-creator-order-001', 'package-creator-dir-rtl-001', 'content_001'];
+
+    /** List of creator names that should not be considered for display */
+    export const IGNORE_CREATORS: string[] = ['Creator', '(Unknown)'];
 
     /** CSS Class name for table cells with positive test results */
     export const CLASS_PASS = "pass";
@@ -53,6 +62,9 @@ export namespace Constants {
 
     /** CSS Class name for columns containing spec references */
     export const CLASS_COL_SREF = "col_sref";
+
+    /** CSS Class name for the list of creators  */
+    export const CLASS_CREATOR_LIST = "creator_list";
 }
 
 /**
@@ -64,6 +76,10 @@ export interface TestData {
      * Unique identifier (usually the file name)
      */
     identifier: string;
+    /**
+     * Creator of the test
+     */
+    creator: string;
     /**
      * Short title of the test
      */

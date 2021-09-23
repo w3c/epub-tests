@@ -205,6 +205,7 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             title       : final_title,
             description : get_string_value("dc:description", "(No description)"),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)"),
+            creator     : get_string_value("dc:creator", "(Unknown)"),
             references  : metadata["meta"].filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy").map((entry:any): string => entry._),
         }
     }
