@@ -586,6 +586,90 @@
         <th>Ref</th>
       </tr>
       <tr>
+        <td id="confreq-rs-pkg-dir_rtl-001">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-dir_rtl-001">confreq-rs-pkg-dir_rtl-001</a>
+        </td>
+        <td>Correct 'dir=rtl' on the title</td>
+        <td>The 'dc:title' element contains a text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'rtl'; the title should display correctly.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33/#attrdef-dir">(1) </a>
+          <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
+        </td>
+        <td>
+          <a href="index.html#confreq-rs-pkg-dir_rtl-001-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_rtl-002">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-dir_rtl-002">confreq-rs-pkg-dir_rtl-002</a>
+        </td>
+        <td>No 'dir' on the title</td>
+        <td>The 'dc:title' element contains a text whose proper rendering requires bidi control. The element's 'dir' attribute is not set; the title should display incorrectly.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33/#attrdef-dir">(1) </a>
+          <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
+        </td>
+        <td>
+          <a href="index.html#confreq-rs-pkg-dir_rtl-002-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_rtl-003">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-dir_rtl-003">confreq-rs-pkg-dir_rtl-003</a>
+        </td>
+        <td>Incorrect 'dir=auto' on the title</td>
+        <td>The 'dc:title' element contains a text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'auto'; the title should display incorrectly.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33/#attrdef-dir">(1) </a>
+          <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
+        </td>
+        <td>
+          <a href="index.html#confreq-rs-pkg-dir_rtl-003-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_rtl-004">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-dir_rtl-004">confreq-rs-pkg-dir_rtl-004</a>
+        </td>
+        <td>Correct 'dir=rtl' on the package</td>
+        <td>The 'dc:title' element contains a text whose proper rendering requires bidi control. The root's 'dir' attribute is set to 'rtl'; the title should display correctly.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33/#attrdef-dir">(1) </a>
+          <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
+        </td>
+        <td>
+          <a href="index.html#confreq-rs-pkg-dir_rtl-004-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_rtl-005">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-dir_rtl-005">confreq-rs-pkg-dir_rtl-005</a>
+        </td>
+        <td>Correct 'dir=rtl' on the package, wrongly overwritten by 'dir=auto' on title</td>
+        <td>The 'dc:title' element contains a text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'auto', and the 'dir' attribute is set to 'rtl' on the package element; the title should display incorrectly.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33/#attrdef-dir">(1) </a>
+          <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
+        </td>
+        <td>
+          <a href="index.html#confreq-rs-pkg-dir_rtl-005-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_rtl-006">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-dir_rtl-006">confreq-rs-pkg-dir_rtl-006</a>
+        </td>
+        <td>'dir=ltr' on the package, correctly overwritten 'dir=rtl' on title</td>
+        <td>The 'dc:title' element contains a text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'rtl' and the 'dir' attribute is set to 'ltr' on the 'package' element; the title should display correctly.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33/#attrdef-dir">(1) </a>
+          <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
+        </td>
+        <td>
+          <a href="index.html#confreq-rs-pkg-dir_rtl-006-results">❐</a>
+        </td>
+      </tr>
+      <tr>
         <td id="package-creator-dir-rtl-001">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/package-creator-dir-rtl-001">package-creator-dir-rtl-001</a>
         </td>
