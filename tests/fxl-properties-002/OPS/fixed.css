@@ -47,6 +47,17 @@ font-size: 20px;
 font-family: "StixTwoText";
 }
 
+p.bodytext {
+position: relative;
+top: 120px;
+left: 40px;
+width: 820px;
+margin: 0;
+padding: 0;
+font-size: 20px;
+font-family: "StixTwoText";
+}
+
 #p1, #p3 {
 background-color: palegreen;
 
