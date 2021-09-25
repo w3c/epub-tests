@@ -6,6 +6,8 @@ This is the repository tests to validate the implementability of the W3C's EPUB 
 [EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format itself) and
 [EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files).
 
+Existing tests are described in the [generated test reports](#generated-test-reports).
+
 You're welcome to contribute!
 
 
@@ -53,12 +55,16 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
 
 1. Find an untested (or undertested) normative statement in the [EPUB 3.3](https://www.w3.org/TR/epub-33/) or
    [EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) specs to test — that is, a statement whose anchor element
-   does not have a `data-tests` attribute. Claim it in the
-   [spreadsheet of EPUB 3.3 Tests](https://docs.google.com/spreadsheets/d/13wgptApSVbQbYzi2L5VXe3D_1QLzJOTGySUAtOxn4sA/edit).
+   does not have a `data-tests` attribute. It may help to look at the (non-authoritative)
+   [spreadsheet of EPUB 3.3 Tests](https://docs.google.com/spreadsheets/d/13wgptApSVbQbYzi2L5VXe3D_1QLzJOTGySUAtOxn4sA/edit). 
 
-1. If you are an owner of [w3c/epub-tests](https://github.com/w3c/epub-tests/), create a branch on
-   that repo for your new test. Otherwise, fork the repo and create a branch on your fork. (It's
-   easier for reviewers to clone a PR to validate the test if it's in the original repo.)
+1. Claim the normative statement by [creating an issue](https://github.com/w3c/epub-tests/issues/new) in the
+   [w3c/epub-tests](https://github.com/w3c/epub-tests/) repo. For example, see the issue
+   [Test obfuscated resources (fonts)](https://github.com/w3c/epub-tests/issues/39).
+
+1. If you are an owner of [w3c/epub-tests](https://github.com/w3c/epub-tests/), create a branch on that repo for your new
+   test. Otherwise, fork the repo and create a branch on your fork. (It's easier for reviewers to clone a PR to validate the
+   test if it's in the original repo.)
 
 1. Within the branch, copy the
    [test template](https://github.com/w3c/epub-tests/tree/dir/tests/reading-systems/XX-Test-Template/epub-template)
@@ -76,6 +82,10 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
 1. Open the `.epub` file in one or more reading systems to verify it behaves as expected. It is common for reading systems
    not to meet requirements, but if you cannot find *any* reading system that processes the test as expected, that may
    indicate an implementation mistake in the test. Fix as necessary.
+
+1. Run the `.epub` through the online [EPUB Validator](http://validator.idpf.org/) or the
+   [EPUBCheck](https://www.w3.org/publishing/epubcheck/) command-line tool to ensure you didn't make any silly mistakes. Fix
+   if you did.
 
 1. Create a pull request for your test change, including both the uncompressed folder and the compressed `.epub` file. Please
    ensure the PR's description clearly indicates which statement is being tested. Await review.
