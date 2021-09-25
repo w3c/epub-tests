@@ -308,10 +308,16 @@ export async function get_report_data(tests: string, reports: string): Promise<R
  */
 export function get_template(report: ReportData): ImplementationReport {
     const test_list: {[index: string]: boolean } = {};
+    const keys: string[] = [];
+
+    // Get the keys first in order to sort them
     for (const table of report.tables) {
         for (const impl of table.implementations) {
-            test_list[impl.identifier] = false;
+            keys.push(impl.identifier);
         }
+    }
+    for (const key of keys.sort()) {
+        test_list[key] = false;
     }
 
     return {
