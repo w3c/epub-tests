@@ -2,7 +2,7 @@ name: Automatic Report generation
 on:
   push:
     branches: [main]
-    paths: ["reports/**", "tests/**"]
+    paths: ["reports/**", "tests/**", "src/**", "results/drafts/*.html"]
 
 jobs:
   build:
@@ -21,6 +21,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run generate
+      - run: npm run respec
       - name: setup git config
         run: |
           git config user.name "Report generation bot"
@@ -28,7 +29,8 @@ jobs:
       - name: commit the changes
         run: |
           git add results/*.html
-          git add results/fragments/*.html
+          git add results/drafts/fragments/*.html
+          git add results/drafts/*.html
           git add reports/xx-*.json
           git commit -am "Automated report generation"
           git push origin main
