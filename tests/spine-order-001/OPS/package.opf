@@ -12,23 +12,21 @@
 <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-spine</meta>
 <dc:coverage>Internationalization</dc:coverage>
 <dc:description>
-	Basic test of whether a reading system can display spine items in the correct order.
+	Basic test of whether a reading system can display spine items in the correct order. The test is designed to fail if the reading system presents content in the order in which the file names sort, or if it presents files in manifest order rather than spine order.
 </dc:description> 
 
 </metadata>
 <manifest>
-  <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
-  <item id="content_002" href="content_002.xhtml" media-type="application/xhtml+xml" />
-  <item id="content_003" href="content_003.xhtml" media-type="application/xhtml+xml" />
-  <item id="content_004" href="content_004.xhtml" media-type="application/xhtml+xml" />
-
-
+  <item id="b-content_003" href="b-content_003.xhtml" media-type="application/xhtml+xml" />
+  <item id="a-content_004" href="a-content_004.xhtml" media-type="application/xhtml+xml" />
+  <item id="c-content_002" href="c-content_002.xhtml" media-type="application/xhtml+xml" />
+  <item id="d-content_001" href="d-content_001.xhtml" media-type="application/xhtml+xml" />
   <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
 </manifest>
 <spine>
-  <itemref idref="content_001" />
-  <itemref idref="content_002" />
-  <itemref idref="content_003" />
-  <itemref idref="content_004" />
+  <itemref idref="d-content_001" />
+  <itemref idref="c-content_002" />
+  <itemref idref="b-content_003" />
+  <itemref idref="a-content_004" />
 </spine>
 </package>
