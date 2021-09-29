@@ -10,7 +10,7 @@ export namespace Constants {
     export const TEST_RESULTS_DIR: string = 'reports';
 
     /** Location for the final report */
-    export const DOCS_DIR: string = 'results';
+    export const DOCS_DIR: string = 'results/drafts';
 
     /** Location for the implementation report templates */
     export const TEST_RESULTS_TEMPLATE: string = `${TEST_RESULTS_DIR}/xx-template.json`;
