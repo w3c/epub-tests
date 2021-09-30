@@ -67,9 +67,9 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
    test if it's in the original repo.)
 
 1. Within the branch, copy the
-   [test template](https://github.com/w3c/epub-tests/tree/dir/tests/reading-systems/XX-Test-Template/epub-template)
+   [test template](https://github.com/w3c/epub-tests/tree/main/tests/xx-epub-template)
    (or the
-   [fixed layout template](https://github.com/w3c/epub-tests/tree/dir/tests/reading-systems/06_Fixed-Layout-Documents/fixed-layout-base)
+   [fixed layout template](https://github.com/w3c/epub-tests/tree/main/tests/xx-fixed-layout-template)
    if you're testing fixed layout). Name your copy as explained in [naming](#naming) below.
 
 1. Modify the template as necessary to implement the test.
@@ -95,19 +95,18 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
    [EPUB Reading Systems 3.3](https://github.com/w3c/epub-specs/blob/main/epub33/rs/index.html).
 
 1. In the spec document, find the anchor element for the normative statement. If there is no anchor element, add one, using
-   the same naming conventions as the test. Then add a `data-tests` attribute to the anchor element with the name(s) of your
-   `.epub` test file(s) as comma-separated values:
+   the same naming conventions as the test. Then add a `data-tests` attribute to the anchor element with the name(s) of your test(s) as comma-separated anchors:
 
    ```html
-   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="confreq-rs-epub3-xhtml.epub">Reading
+   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="#confreq-rs-epub3-xhtml">Reading
       Systems MUST process <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">XHTML Content
       Documents</a> [[EPUB-33]].</p>
 
    ...
 
    <p id="confreq-rs-epub3-images"
-      data-tests="cmt-gif.epub,cmt-jpg.epub,cmt-png.epub,cmt-svg.epub,cmt-webp.epub">If a Reading
-      System has a <a>Viewport</a>, it MUST support the
+      data-tests="#cmt-gif,#cmt-jpg,#cmt-png,#cmt-svg,#cmt-webp">If a Reading System has a
+      <a>Viewport</a>, it MUST support the
       <a href="https://www.w3.org/TR/epub-33/#cmt-grp-image">image Core Media Type Resources</a>
       [[EPUB-33]].</p>
    ```
@@ -150,6 +149,8 @@ The package document for each test must contain the following metadata, which is
 
    *  Core Media Types
    *  Internationalization
+
+   If you add a new coverage value, please edit this document to list it above.
 
 * `dcterms:isReferencedBy` (repeated, as part of a `meta` element): A series of URLs that refer to the relevant sections of
    the specification. These links provide back-links to the relevant normative statements from each test entry in the
