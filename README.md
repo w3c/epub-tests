@@ -6,6 +6,8 @@ This is the repository tests to validate the implementability of the W3C's EPUB 
 [EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format itself) and
 [EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files).
 
+Existing tests are described in the [generated test reports](#generated-test-reports).
+
 You're welcome to contribute!
 
 
@@ -53,17 +55,21 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
 
 1. Find an untested (or undertested) normative statement in the [EPUB 3.3](https://www.w3.org/TR/epub-33/) or
    [EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) specs to test — that is, a statement whose anchor element
-   does not have a `data-tests` attribute. Claim it in the
-   [spreadsheet of EPUB 3.3 Tests](https://docs.google.com/spreadsheets/d/13wgptApSVbQbYzi2L5VXe3D_1QLzJOTGySUAtOxn4sA/edit).
+   does not have a `data-tests` attribute. It may help to look at the (non-authoritative)
+   [spreadsheet of EPUB 3.3 Tests](https://docs.google.com/spreadsheets/d/13wgptApSVbQbYzi2L5VXe3D_1QLzJOTGySUAtOxn4sA/edit). 
 
-1. If you are an owner of [w3c/epub-tests](https://github.com/w3c/epub-tests/), create a branch on
-   that repo for your new test. Otherwise, fork the repo and create a branch on your fork. (It's
-   easier for reviewers to clone a PR to validate the test if it's in the original repo.)
+1. Claim the normative statement by [creating an issue](https://github.com/w3c/epub-tests/issues/new) in the
+   [w3c/epub-tests](https://github.com/w3c/epub-tests/) repo. For example, see the issue
+   [Test obfuscated resources (fonts)](https://github.com/w3c/epub-tests/issues/39).
+
+1. If you are an owner of [w3c/epub-tests](https://github.com/w3c/epub-tests/), create a branch on that repo for your new
+   test. Otherwise, fork the repo and create a branch on your fork. (It's easier for reviewers to clone a PR to validate the
+   test if it's in the original repo.)
 
 1. Within the branch, copy the
-   [test template](https://github.com/w3c/epub-tests/tree/dir/tests/reading-systems/XX-Test-Template/epub-template)
+   [test template](https://github.com/w3c/epub-tests/tree/main/tests/xx-epub-template)
    (or the
-   [fixed layout template](https://github.com/w3c/epub-tests/tree/dir/tests/reading-systems/06_Fixed-Layout-Documents/fixed-layout-base)
+   [fixed layout template](https://github.com/w3c/epub-tests/tree/main/tests/xx-fixed-layout-template)
    if you're testing fixed layout). Name your copy as explained in [naming](#naming) below.
 
 1. Modify the template as necessary to implement the test.
@@ -77,6 +83,10 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
    not to meet requirements, but if you cannot find *any* reading system that processes the test as expected, that may
    indicate an implementation mistake in the test. Fix as necessary.
 
+1. Run the `.epub` through the online [EPUB Validator](http://validator.idpf.org/) or the
+   [EPUBCheck](https://www.w3.org/publishing/epubcheck/) command-line tool to ensure you didn't make any silly mistakes. Fix
+   if you did.
+
 1. Create a pull request for your test change, including both the uncompressed folder and the compressed `.epub` file. Please
    ensure the PR's description clearly indicates which statement is being tested. Await review.
 
@@ -85,19 +95,18 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
    [EPUB Reading Systems 3.3](https://github.com/w3c/epub-specs/blob/main/epub33/rs/index.html).
 
 1. In the spec document, find the anchor element for the normative statement. If there is no anchor element, add one, using
-   the same naming conventions as the test. Then add a `data-tests` attribute to the anchor element with the name(s) of your
-   `.epub` test file(s) as comma-separated values:
+   the same naming conventions as the test. Then add a `data-tests` attribute to the anchor element with the name(s) of your test(s) as comma-separated anchors:
 
    ```html
-   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="confreq-rs-epub3-xhtml.epub">Reading
+   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="#confreq-rs-epub3-xhtml">Reading
       Systems MUST process <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">XHTML Content
       Documents</a> [[EPUB-33]].</p>
 
    ...
 
    <p id="confreq-rs-epub3-images"
-      data-tests="cmt-gif.epub,cmt-jpg.epub,cmt-png.epub,cmt-svg.epub,cmt-webp.epub">If a Reading
-      System has a <a>Viewport</a>, it MUST support the
+      data-tests="#cmt-gif,#cmt-jpg,#cmt-png,#cmt-svg,#cmt-webp">If a Reading System has a
+      <a>Viewport</a>, it MUST support the
       <a href="https://www.w3.org/TR/epub-33/#cmt-grp-image">image Core Media Type Resources</a>
       [[EPUB-33]].</p>
    ```
@@ -140,6 +149,8 @@ The package document for each test must contain the following metadata, which is
 
    *  Core Media Types
    *  Internationalization
+
+   If you add a new coverage value, please edit this document to list it above.
 
 * `dcterms:isReferencedBy` (repeated, as part of a `meta` element): A series of URLs that refer to the relevant sections of
    the specification. These links provide back-links to the relevant normative statements from each test entry in the
