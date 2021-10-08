@@ -2,19 +2,13 @@
 
 # Test repository for the EPUB 3.3 specifications
 
-This is the repository tests to validate the implementability of the W3C's EPUB 3.3 specifications, specifically core
+This repository contains tests to validate the implementability of the W3C's EPUB 3.3 specifications, specifically core
 [EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format itself) and
-[EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files).
+[EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files). Our
+objective is to test every normative statement (that is, every
+[`MUST` or `SHOULD` or `MAY`](https://datatracker.ietf.org/doc/html/bcp14), etc.).
 
 Existing tests are described in the [generated test reports](#generated-test-reports).
-
-You're welcome to contribute!
-
-
-## What to test
-
-We should test every normative statement in our specs (that is, every
-[`MUST` or `SHOULD` or `MAY`](https://datatracker.ietf.org/doc/html/bcp14), etc.).
 
 
 ## Prerequisites
