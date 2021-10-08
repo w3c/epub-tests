@@ -147,6 +147,7 @@ The package document for each test must contain the following metadata, which is
 * `dc:coverage`: Which section of the report the test should be listed in. The report has a separate table for each section
    to make it more readable. The following sections currently exist:
 
+   *  Content Documents
    *  Core Media Types
    *  Internationalization
 
