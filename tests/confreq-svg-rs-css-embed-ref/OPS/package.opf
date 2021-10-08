@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:title>Title</dc:title>
-    <dc:creator>Creator</dc:creator>
-    <dc:date>2021-01-01</dc:date>
+    <dc:coverage>Content Document Processing</dc:coverage>
+    <dc:creator>Dan Lazin</dc:creator>
+    <dc:date>2021-05-25</dc:date>
+    <dc:description>CSS does NOT change the color of an SVG image that is embedded in the XHTML content by reference.</dc:description>
     <dc:identifier id="pub-id">confreq-rs-css-embed-ref</dc:identifier>
     <dc:language>en</dc:language>
-    <meta property="dcterms:modified">2021-01-01T00:00:00Z</meta>
+    <dc:title>CSS not applied to referenced SVG</dc:title>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-css-embed-ref</meta>
+    <meta property="dcterms:modified">2021-05-25T00:00:00Z</meta>
   </metadata>
   <manifest>
     <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
