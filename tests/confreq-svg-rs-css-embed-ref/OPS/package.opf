@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:coverage>Content Document Processing</dc:coverage>
+    <dc:coverage>Content Documents</dc:coverage>
     <dc:creator>Dan Lazin</dc:creator>
     <dc:date>2021-05-25</dc:date>
     <dc:description>CSS does NOT change the color of an SVG image that is embedded in the XHTML content by reference.</dc:description>
