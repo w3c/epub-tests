@@ -103,7 +103,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-epub3",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2021-10-08",
+  "publishDate": "2021-10-09",
   "shortName": "epub-tests",
   "edDraftURI": "https://w3c.github.io/epub-tests/results/",
   "copyrightStart": "2021",
@@ -132,14 +132,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2021-10-08T00:00:00.000Z",
-  "generatedSubtitle": " 08 October 2021"
+  "publishISODate": "2021-10-09T00:00:00.000Z",
+  "generatedSubtitle": " 09 October 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
 	<body class="h-entry informative"><div class="head">
      <h1 id="title" class="title">EPUB 3.3 Tests</h1>
     
-    <h2> <time class="dt-published" datetime="2021-10-08">08 October 2021</time></h2>
+    <h2> <time class="dt-published" datetime="2021-10-09">09 October 2021</time></h2>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -204,13 +204,24 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
        document. It has no official standing
       of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-test-tables"><bdi class="secno">2. </bdi>Description of the Tests</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-(uncategorized)-data"><bdi class="secno">2.1 </bdi>(Uncategorized)</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-data"><bdi class="secno">2.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-data"><bdi class="secno">2.3 </bdi>Internationalization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a></li></ol></nav>
+    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-test-tables"><bdi class="secno">2. </bdi>Description of the Tests</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-(uncategorized)-data"><bdi class="secno">2.1 </bdi>(Uncategorized)</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-data"><bdi class="secno">2.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-data"><bdi class="secno">2.3 </bdi>Internationalization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#contributors"><bdi class="secno">A. </bdi>Acknowledgements</a></li></ol></nav>
 
 		<section id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 
-			<p>This document provides a short overview for each EPUB 3 test, grouped separate tables by test categories. The columns in the tables are as follows:</p>
+			<p>
+				This is the repository for the the tests to validate the implementability of <abbr title="World Wide Web Consortium">W3C</abbr>'s EPUB&nbsp;3.3 specifications, specifically the core 
+				<a href="https://www.w3.org/TR/epub-33/">EPUB 3.3</a> (the specification for the EPUB format itself) and
+				the <a href="https://www.w3.org/TR/epub-rs-33/">EPUB Reading Systems&nbsp;3.3</a> (the specification for applications that read and
+				render EPUB files).
+			</p>
 
+			<p>
+				The development of the tests is a community effort (see the <a href="#contributors">list of contributors</a>). Everyone is welcome to
+				contribute tests; please read the separate <a href="./contribute">contribution guidelines</a> if you are interested to do so.
+			</p>
+
+			<p>This document provides a short overview for each EPUB&nbsp;3 test, grouped into separate tables by test categories. The columns in the tables are as follows:</p>
 			<ol>
 				<li>The identification of each test, linked to the unzipped tests themselves in the github repository</li>
 				<li>Title of the test</li>
@@ -219,7 +230,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<li>Pointer to the (consolidated) implementation status of the test in the separate <a href="results.html">implementation report file</a></li>
 			</ol>
 
-
+			<p>The tests have </p>
 		</section>
 
 		<section id="description-of-the-tests">
@@ -952,8 +963,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </section>
 </section>
 
-		<section class="appendix" id="acknowledgements">
-			<h2 id="a-acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2>
+		<section class="appendix" id="contributors">
+			<h2 id="a-acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements<a class="self-link" aria-label="§" href="#contributors"></a></h2>
 
 			<p>The following experts contributed to the test suite:</p>
 
