@@ -2,25 +2,13 @@
 
 # Test repository for the EPUB 3.3 specifications
 
-This is the repository tests to validate the implementability of the W3C's EPUB 3.3 specifications, specifically core
+This repository contains tests to validate the implementability of the W3C's EPUB 3.3 specifications, specifically core
 [EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format itself) and
-[EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files).
-
-Existing tests are described in the [generated test reports](#generated-test-reports).
-
-You're welcome to contribute!
-
-
-## What to test
-
-We should test every normative statement in our specs (that is, every
+[EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files). Our
+objective is to test every normative statement (that is, every
 [`MUST` or `SHOULD` or `MAY`](https://datatracker.ietf.org/doc/html/bcp14), etc.).
 
-Informally, we use the
-[spreadsheet of EPUB 3.3 Tests](https://docs.google.com/spreadsheets/d/13wgptApSVbQbYzi2L5VXe3D_1QLzJOTGySUAtOxn4sA/edit)
-to track the normative statements and whether they are tested. However, since the spec changes frequently and the spreadsheet
-may be out of date, the source of truth is whether the nearest anchor to a normative statement in the spec bears a
-`data-tests` attribute pointing to test files in this repo, as described below.
+Existing tests are described in the [generated test reports](#generated-test-reports).
 
 
 ## Prerequisites
@@ -28,7 +16,8 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
 * Install [eCanCrusher](https://www.docdataflow.com/ecancrusher/) or another utility or local script that can turn an EPUB
   folder into a compressed .epub file.
    
-   * For MacOS, a command in Terminal can zip EPUB, go to the folder containing the files and enter the following: `zip -X0 book.epub mimetype; zip -Xur9D book.epub META-INF OEBPS -x ‘*.DS_Store’ `
+   * For MacOS, a command in Terminal can zip EPUB, go to the folder containing the files and enter the following:
+   `zip -X0 book.epub mimetype; zip -Xur9D book.epub META-INF OEBPS -x ‘*.DS_Store’ `
 
 * Ensure you have several EPUB reading systems available to validate your tests (that is, validate that you have written the
   test correctly; many tests will nonetheless fail in individual reading systems). For example:
@@ -53,10 +42,13 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
 
 ## Step-by-step
 
-1. Find an untested (or undertested) normative statement in the [EPUB 3.3](https://www.w3.org/TR/epub-33/) or
-   [EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) specs to test — that is, a statement whose anchor element
-   does not have a `data-tests` attribute. It may help to look at the (non-authoritative)
-   [spreadsheet of EPUB 3.3 Tests](https://docs.google.com/spreadsheets/d/13wgptApSVbQbYzi2L5VXe3D_1QLzJOTGySUAtOxn4sA/edit). 
+1. Find an untested normative statement in the [EPUB 3.3](https://w3c.github.io/epub-specs/epub33/core/) or
+   [EPUB Reading Systems 3.3](https://w3c.github.io/epub-specs/epub33/rs/) specs to test — that is, a statement that does not
+   have an expandable "tests" section like
+   [Core Media Types](https://w3c.github.io/epub-specs/epub33/rs/#sec-epub-rs-conf-cmt). (Note that these links point at the
+   working drafts of the spec on GitHub, not the published versions on w3.org; the published spec hides the "tests" sections.
+   In the published versions, you can still see whether a statement is tested by checking whether its anchor element has a
+   `data-tests` attribute.)
 
 1. Claim the normative statement by [creating an issue](https://github.com/w3c/epub-tests/issues/new) in the
    [w3c/epub-tests](https://github.com/w3c/epub-tests/) repo. For example, see the issue
@@ -95,7 +87,8 @@ may be out of date, the source of truth is whether the nearest anchor to a norma
    [EPUB Reading Systems 3.3](https://github.com/w3c/epub-specs/blob/main/epub33/rs/index.html).
 
 1. In the spec document, find the anchor element for the normative statement. If there is no anchor element, add one, using
-   the same naming conventions as the test. Then add a `data-tests` attribute to the anchor element with the name(s) of your test(s) as comma-separated anchors:
+   the same naming conventions as the test. Then add a `data-tests` attribute to the anchor element with the name(s) of your
+   test(s) as comma-separated anchors:
 
    ```html
    <p id="confreq-rs-epub3-xhtml" class="support" data-tests="#confreq-rs-epub3-xhtml">Reading
