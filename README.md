@@ -143,6 +143,7 @@ The package document for each test must contain the following metadata, which is
    *  Content Documents
    *  Core Media Types
    *  Internationalization
+   *  Package Documents
 
    If you add a new coverage value, please edit this document to list it above.
 
