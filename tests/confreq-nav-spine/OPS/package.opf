@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:coverage>Package Documents</dc:coverage>
+    <dc:coverage>Navigation Documents</dc:coverage>
     <dc:creator>Dave Cramer</dc:creator>
     <dc:date>2021-01-26</dc:date>
-    <dc:description>The naviation document is not referenced in the spine, but can still be accessed through reading system
+    <dc:description>The navigation document is not referenced in the spine, but can still be accessed through reading system
       controls.</dc:description>
     <dc:identifier id="pub-id">confreq-nav-spine</dc:identifier>
     <dc:language>en</dc:language>
