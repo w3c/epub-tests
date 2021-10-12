@@ -204,22 +204,31 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
        document. It has no official standing
       of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-test-tables"><bdi class="secno">2. </bdi>Description of the Tests</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-(uncategorized)-data"><bdi class="secno">2.1 </bdi>(Uncategorized)</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-data"><bdi class="secno">2.2 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-data"><bdi class="secno">2.3 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-data"><bdi class="secno">2.4 </bdi>Internationalization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a></li></ol></nav>
+    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-test-tables"><bdi class="secno">2. </bdi>Description of the Tests</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-(uncategorized)-data"><bdi class="secno">2.1 </bdi>(Uncategorized)</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-data"><bdi class="secno">2.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-data"><bdi class="secno">2.3 </bdi>Internationalization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#contributors"><bdi class="secno">A. </bdi>Acknowledgements</a></li></ol></nav>
 
 		<section id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 
-			<p>This document provides a short overview for each EPUB 3 test, grouped separate tables by test categories. The columns in the tables are as follows:</p>
+			<p>
+				This is the repository for the the tests to validate the implementability of <abbr title="World Wide Web Consortium">W3C</abbr>'s EPUB&nbsp;3.3 specifications, specifically the core 
+				<a href="https://www.w3.org/TR/epub-33/">EPUB 3.3</a> (the specification for the EPUB format itself) and
+				the <a href="https://www.w3.org/TR/epub-rs-33/">EPUB Reading Systems&nbsp;3.3</a> (the specification for applications that read and
+				render EPUB files).
+			</p>
 
+			<p>
+				The development of the tests is a community effort (see the <a href="#contributors">list of contributors</a>). Everyone is welcome to
+				contribute tests; please read the separate <a href="./contributing">contribution guidelines</a> if you are interested to do so.
+			</p>
+
+			<p>This document provides a short overview for each EPUB&nbsp;3 test, grouped into separate tables by test categories. The columns in the tables are as follows:</p>
 			<ol>
 				<li>The identification of each test, linked to the unzipped tests themselves in the github repository</li>
 				<li>Title of the test</li>
 				<li>Short description of the test</li>
 				<li>References to the normative statements or sections in the EPUB 3 specification that this test is relevant to</li>
-				<li>Pointer to the (consolidated) implementation status of the test in the separate <a href="index.html">implementation report file</a></li>
+				<li>Pointer to the (consolidated) implementation status of the test in the separate <a href="results.html">implementation report file</a></li>
 			</ol>
-
-
 		</section>
 
 		<section id="description-of-the-tests">
@@ -242,6 +251,72 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <th>Ref</th>
       </tr>
       <tr>
+        <td id="confreq-mathml-rs-behavior">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-mathml-rs-behavior">confreq-mathml-rs-behavior</a>
+        </td>
+        <td>Title</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
+        <td>
+          <a href="results.html#confreq-mathml-rs-behavior-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-epub3-svg">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-epub3-svg">confreq-rs-epub3-svg</a>
+        </td>
+        <td>Title</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
+        <td>
+          <a href="results.html#confreq-rs-epub3-svg-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-epub3-xhtml">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-epub3-xhtml">confreq-rs-epub3-xhtml</a>
+        </td>
+        <td>Title</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
+        <td>
+          <a href="results.html#confreq-rs-epub3-xhtml-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-css-embed-inc">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-css-embed-inc">confreq-rs-css-embed-inc</a>
+        </td>
+        <td>Title</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
+        <td>
+          <a href="results.html#confreq-rs-css-embed-inc-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-css-embed-ref">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-css-embed-ref">confreq-rs-css-embed-ref</a>
+        </td>
+        <td>Title</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
+        <td>
+          <a href="results.html#confreq-rs-css-embed-ref-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-svg-rs-embed">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-svg-rs-embed">confreq-svg-rs-embed</a>
+        </td>
+        <td>Title</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
+        <td>
+          <a href="results.html#confreq-svg-rs-embed-results">❐</a>
+        </td>
+      </tr>
+      <tr>
         <td id="find-the-package-001">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/find-the-package-001">find-the-package-001</a>
         </td>
@@ -249,7 +324,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#find-the-package-001-results">❐</a>
+          <a href="results.html#find-the-package-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -260,7 +335,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#find-the-package-002-results">❐</a>
+          <a href="results.html#find-the-package-002-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -271,7 +346,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#fxl-viewport-crop-001-results">❐</a>
+          <a href="results.html#fxl-viewport-crop-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -282,7 +357,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#item-iri-001-results">❐</a>
+          <a href="results.html#item-iri-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -293,7 +368,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#linear-reachable-001-results">❐</a>
+          <a href="results.html#linear-reachable-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -304,7 +379,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#manifest-fallback-001-results">❐</a>
+          <a href="results.html#manifest-fallback-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -315,7 +390,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#manifest-fallback-002-results">❐</a>
+          <a href="results.html#manifest-fallback-002-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -326,7 +401,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#manifest-fallback-003-results">❐</a>
+          <a href="results.html#manifest-fallback-003-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -337,7 +412,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#manifest-fallback-004-results">❐</a>
+          <a href="results.html#manifest-fallback-004-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -348,7 +423,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#manifest-fallback-005-results">❐</a>
+          <a href="results.html#manifest-fallback-005-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -359,7 +434,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#navigation-access-001-results">❐</a>
+          <a href="results.html#navigation-access-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -370,7 +445,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#navigation-access-002-results">❐</a>
+          <a href="results.html#navigation-access-002-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -381,7 +456,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#navigation-link-001-results">❐</a>
+          <a href="results.html#navigation-link-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -392,7 +467,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#navigation-link-002-results">❐</a>
+          <a href="results.html#navigation-link-002-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -403,7 +478,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#package-creator-order-001-results">❐</a>
+          <a href="results.html#package-creator-order-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -414,7 +489,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#package-ignore-unknown-meta-001-results">❐</a>
+          <a href="results.html#package-ignore-unknown-meta-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -425,7 +500,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#package-title-display-001-results">❐</a>
+          <a href="results.html#package-title-display-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -436,7 +511,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#package-unlisted-resources-001-results">❐</a>
+          <a href="results.html#package-unlisted-resources-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -447,7 +522,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#package-version-000-results">❐</a>
+          <a href="results.html#package-version-000-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -458,7 +533,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#package-whitespace-001-results">❐</a>
+          <a href="results.html#package-whitespace-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -469,7 +544,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#publication-identifier-001A-results">❐</a>
+          <a href="results.html#publication-identifier-001A-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -480,7 +555,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#publication-identifier-001B-results">❐</a>
+          <a href="results.html#publication-identifier-001B-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -491,7 +566,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#spine-order-001-results">❐</a>
+          <a href="results.html#spine-order-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -502,7 +577,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#unknown-collections-001-results">❐</a>
+          <a href="results.html#unknown-collections-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -513,7 +588,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#unknown-properties-001-results">❐</a>
+          <a href="results.html#unknown-properties-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -524,7 +599,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#unknown-properties-002-results">❐</a>
+          <a href="results.html#unknown-properties-002-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -535,7 +610,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#viewport-css-001-results">❐</a>
+          <a href="results.html#viewport-css-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -546,7 +621,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#xml-base-001-results">❐</a>
+          <a href="results.html#xml-base-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -557,7 +632,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#xml-external-entities-001-results">❐</a>
+          <a href="results.html#xml-external-entities-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -568,7 +643,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#xml-names-001-results">❐</a>
+          <a href="results.html#xml-names-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -579,7 +654,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#xml-non-validating-parser-001-results">❐</a>
+          <a href="results.html#xml-non-validating-parser-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -590,111 +665,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#xml-non-validating-parser-002-results">❐</a>
-        </td>
-      </tr>
-    </tbody></table>
-  </section>
-  <section id="content-documents">
-    <h3 id="sec-content-documents-data"><bdi class="secno">2.2 </bdi>Content Documents<a class="self-link" aria-label="§" href="#sec-content-documents-data"></a></h3>
-    <table class="zebra">
-      <colgroup>
-        <col class="col_id">
-        <col class="col_title">
-        <col>
-        <col class="col_sref">
-        <col class="col_tref">
-      </colgroup>
-      <tbody><tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Specs</th>
-        <th>Ref</th>
-      </tr>
-      <tr>
-        <td id="confreq-mathml-rs-behavior">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-mathml-rs-behavior">confreq-mathml-rs-behavior</a>
-        </td>
-        <td>Support for Presentation MathML</td>
-        <td>A Presentation MathML equation is displayed as part of the XHTML content.</td>
-        <td>
-          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-mathml-rs-behavior">(1) </a>
-          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-mathml-rs-render">(2) </a>
-        </td>
-        <td>
-          <a href="index.html#confreq-mathml-rs-behavior-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="confreq-rs-epub3-svg">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-epub3-svg">confreq-rs-epub3-svg</a>
-        </td>
-        <td>SVG content document</td>
-        <td>An SVG image is displayed as a content document (not as part of an XHTML file).</td>
-        <td>
-          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-svg">(1) </a>
-        </td>
-        <td>
-          <a href="index.html#confreq-rs-epub3-svg-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="confreq-rs-epub3-xhtml">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-epub3-xhtml">confreq-rs-epub3-xhtml</a>
-        </td>
-        <td>XHTML content document</td>
-        <td>An XHTML file is displayed as a content document.</td>
-        <td>
-          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-xhtml">(1) </a>
-        </td>
-        <td>
-          <a href="index.html#confreq-rs-epub3-xhtml-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="confreq-svg-rs-css-embed-inc">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-svg-rs-css-embed-inc">confreq-svg-rs-css-embed-inc</a>
-        </td>
-        <td>CSS applied to included SVG</td>
-        <td>CSS changes the color of an SVG image that is embedded in the XHTML content by inclusion.</td>
-        <td>
-          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-svg-rs-css-embed-inc">(1) </a>
-        </td>
-        <td>
-          <a href="index.html#confreq-svg-rs-css-embed-inc-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="confreq-rs-css-embed-ref">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-css-embed-ref">confreq-rs-css-embed-ref</a>
-        </td>
-        <td>CSS not applied to referenced SVG</td>
-        <td>CSS does NOT change the color of an SVG image that is embedded in the XHTML content by reference.</td>
-        <td>
-          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-css-embed-ref">(1) </a>
-        </td>
-        <td>
-          <a href="index.html#confreq-rs-css-embed-ref-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="confreq-svg-rs-embed">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-svg-rs-embed">confreq-svg-rs-embed</a>
-        </td>
-        <td>SVG embedded in XHTML content</td>
-        <td>An SVG image is embedded in the XHTML content (as inline SVG).</td>
-        <td>
-          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-svg-rs-embed">(1) </a>
-        </td>
-        <td>
-          <a href="index.html#confreq-svg-rs-embed-results">❐</a>
+          <a href="results.html#xml-non-validating-parser-002-results">❐</a>
         </td>
       </tr>
     </tbody></table>
   </section>
   <section id="core-media-types">
-    <h3 id="sec-core-media types-data"><bdi class="secno">2.3 </bdi>Core Media Types<a class="self-link" aria-label="§" href="#sec-core-media types-data"></a></h3>
+    <h3 id="sec-core-media types-data"><bdi class="secno">2.2 </bdi>Core Media Types<a class="self-link" aria-label="§" href="#sec-core-media types-data"></a></h3>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -721,7 +698,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-images">(2) </a>
         </td>
         <td>
-          <a href="index.html#cmt-gif-results">❐</a>
+          <a href="results.html#cmt-gif-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -735,7 +712,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-images">(2) </a>
         </td>
         <td>
-          <a href="index.html#cmt-jpeg-results">❐</a>
+          <a href="results.html#cmt-jpeg-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -749,7 +726,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-mp3-aac">(2) </a>
         </td>
         <td>
-          <a href="index.html#cmt-mp3-results">❐</a>
+          <a href="results.html#cmt-mp3-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -763,7 +740,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-mp3-aac">(2) </a>
         </td>
         <td>
-          <a href="index.html#cmt-mp4-aac-results">❐</a>
+          <a href="results.html#cmt-mp4-aac-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -777,7 +754,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-mp3-aac">(2) </a>
         </td>
         <td>
-          <a href="index.html#cmt-ogg-opus-results">❐</a>
+          <a href="results.html#cmt-ogg-opus-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -791,7 +768,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-images">(2) </a>
         </td>
         <td>
-          <a href="index.html#cmt-png-results">❐</a>
+          <a href="results.html#cmt-png-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -805,7 +782,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-images">(2) </a>
         </td>
         <td>
-          <a href="index.html#cmt-svg-results">❐</a>
+          <a href="results.html#cmt-svg-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -819,13 +796,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-images">(2) </a>
         </td>
         <td>
-          <a href="index.html#cmt-webp-results">❐</a>
+          <a href="results.html#cmt-webp-results">❐</a>
         </td>
       </tr>
     </tbody></table>
   </section>
   <section id="internationalization">
-    <h3 id="sec-internationalization-data"><bdi class="secno">2.4 </bdi>Internationalization<a class="self-link" aria-label="§" href="#sec-internationalization-data"></a></h3>
+    <h3 id="sec-internationalization-data"><bdi class="secno">2.3 </bdi>Internationalization<a class="self-link" aria-label="§" href="#sec-internationalization-data"></a></h3>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -852,7 +829,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
         </td>
         <td>
-          <a href="index.html#confreq-rs-pkg-dir_rtl-001-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-dir_rtl-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -866,7 +843,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
         </td>
         <td>
-          <a href="index.html#confreq-rs-pkg-dir_rtl-002-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-dir_rtl-002-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -880,7 +857,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
         </td>
         <td>
-          <a href="index.html#confreq-rs-pkg-dir_rtl-003-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-dir_rtl-003-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -894,7 +871,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
         </td>
         <td>
-          <a href="index.html#confreq-rs-pkg-dir_rtl-004-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-dir_rtl-004-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -908,7 +885,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
         </td>
         <td>
-          <a href="index.html#confreq-rs-pkg-dir_rtl-005-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-dir_rtl-005-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -922,7 +899,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir">(2) </a>
         </td>
         <td>
-          <a href="index.html#confreq-rs-pkg-dir_rtl-006-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-dir_rtl-006-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -933,7 +910,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#package-creator-dir-rtl-001-results">❐</a>
+          <a href="results.html#package-creator-dir-rtl-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -944,7 +921,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#page-progression-001-results">❐</a>
+          <a href="results.html#page-progression-001-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -955,7 +932,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#page-progression-002-results">❐</a>
+          <a href="results.html#page-progression-002-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -966,7 +943,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#page-progression-003-results">❐</a>
+          <a href="results.html#page-progression-003-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -977,15 +954,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>(No description)</td>
         <td>n.a. </td>
         <td>
-          <a href="index.html#page-progression-004-results">❐</a>
+          <a href="results.html#page-progression-004-results">❐</a>
         </td>
       </tr>
     </tbody></table>
   </section>
 </section>
 
-		<section class="appendix" id="acknowledgements">
-			<h2 id="a-acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2>
+		<section class="appendix" id="contributors">
+			<h2 id="a-acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements<a class="self-link" aria-label="§" href="#contributors"></a></h2>
 
 			<p>The following experts contributed to the test suite:</p>
 

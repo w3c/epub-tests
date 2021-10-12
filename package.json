@@ -8,7 +8,7 @@
   },
   "scripts": {
     "generate": "./node_modules/ts-node/dist/bin.js src/main.ts",
-    "respec": "(cd results/drafts; ../../node_modules/respec/tools/respec2html.js --localhost  -s index.html -o ../index.html; ../../node_modules/respec/tools/respec2html.js --localhost -s tests.html -o ../tests.html)",
+    "respec": "(cd docs/drafts; ../../node_modules/respec/tools/respec2html.js --localhost  -s index.html -o ../index.html; ../../node_modules/respec/tools/respec2html.js --localhost -s results.html -o ../results.html)",
     "lint": "eslint . --ext .ts"
   },
   "repository": {
