@@ -8,4 +8,6 @@ This repository contains tests to validate the implementability of the W3C's EPU
 objective is to test every normative statement (that is, every
 [`MUST` or `SHOULD` or `MAY`](https://datatracker.ietf.org/doc/html/bcp14), etc.).
 
-There is a [document](https://w3c.github.io/epub-tests/) describing all the tests, with a reference to the implementation results, and ways to contribute.
+The [test reports](https://w3c.github.io/epub-tests/) describe all the tests, including
+[implementation results](https://w3c.github.io/epub-tests/results) and
+[how to contribute](https://w3c.github.io/epub-tests/contributing).
