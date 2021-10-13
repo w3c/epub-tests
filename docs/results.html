@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.14.0">
+<meta name="generator" content="ReSpec 26.15.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 dfn{cursor:pointer}
@@ -33,7 +33,7 @@ dfn{cursor:pointer}
 100%{transform:scale(1,1)}
 }
 .hljs{background:0 0!important}
-a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
 dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
@@ -75,11 +75,11 @@ details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 h2,h3,h4,h5,h6{position:relative}
 aside.example .marker>a.self-link{color:inherit}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
-h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
 @media (max-width:767px){
 dd{margin-left:0}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
 }
 @media print{
 .removeOnSave{display:none}
@@ -103,7 +103,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-epub3",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2021-10-12",
+  "publishDate": "2021-10-13",
   "shortName": "epub-tests-results",
   "edDraftURI": "https://w3c.github.io/epub-tests/results/",
   "copyrightStart": "2021",
@@ -132,15 +132,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2021-10-12T00:00:00.000Z",
-  "generatedSubtitle": " 12 October 2021"
+  "publishISODate": "2021-10-13T00:00:00.000Z",
+  "generatedSubtitle": " 13 October 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
 	
 	<body class="h-entry informative"><div class="head">
      <h1 id="title" class="title">EPUB 3.3 Test Results</h1>
     
-    <h2> <time class="dt-published" datetime="2021-10-12">12 October 2021</time></h2>
+    <h2> <time class="dt-published" datetime="2021-10-13">13 October 2021</time></h2>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -191,10 +191,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
     <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
-    apply.
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
   </p>
     <hr title="Separator for header">
   </div>
@@ -205,7 +205,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
        document. It has no official standing
       of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-implementer-list"><bdi class="secno">2. </bdi>List of Implementations</a></li><li class="tocline"><a class="tocxref" href="#sec-consolidated-report-tables"><bdi class="secno">3. </bdi>Consolidated Implementation Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-(uncategorized)-results"><bdi class="secno">3.1 </bdi>(Uncategorized)</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-results"><bdi class="secno">3.2 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-results"><bdi class="secno">3.3 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-results"><bdi class="secno">3.4 </bdi>Internationalization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-detailed-report-tables"><bdi class="secno">4. </bdi>Detailed Implementation Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-(uncategorized)-results"><bdi class="secno">4.1 </bdi>(Uncategorized)</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-results"><bdi class="secno">4.2 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-results"><bdi class="secno">4.3 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-results"><bdi class="secno">4.4 </bdi>Internationalization</a></li></ol></li></ol></nav>
+    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-implementer-list"><bdi class="secno">2. </bdi>List of Implementations</a></li><li class="tocline"><a class="tocxref" href="#sec-consolidated-report-tables"><bdi class="secno">3. </bdi>Consolidated Implementation Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-(uncategorized)-results"><bdi class="secno">3.1 </bdi>(Uncategorized)</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-results"><bdi class="secno">3.2 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-results"><bdi class="secno">3.3 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-results"><bdi class="secno">3.4 </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-navigation-documents-results"><bdi class="secno">3.5 </bdi>Navigation Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-open-container format-results"><bdi class="secno">3.6 </bdi>Open Container Format</a></li><li class="tocline"><a class="tocxref" href="#sec-package-documents-results"><bdi class="secno">3.7 </bdi>Package Documents</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-detailed-report-tables"><bdi class="secno">4. </bdi>Detailed Implementation Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-(uncategorized)-results"><bdi class="secno">4.1 </bdi>(Uncategorized)</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-results"><bdi class="secno">4.2 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-results"><bdi class="secno">4.3 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-results"><bdi class="secno">4.4 </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-navigation-documents-results"><bdi class="secno">4.5 </bdi>Navigation Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-open-container format-results"><bdi class="secno">4.6 </bdi>Open Container Format</a></li><li class="tocline"><a class="tocxref" href="#sec-package-documents-results"><bdi class="secno">4.7 </bdi>Package Documents</a></li></ol></li></ol></nav>
 
 		<section id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
@@ -272,22 +272,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <th>T</th>
       </tr>
       <tr>
-        <td id="find-the-package-001-results">
-          <a href="index.html#find-the-package-001">find-the-package-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="find-the-package-002-results">
-          <a href="index.html#find-the-package-002">find-the-package-002</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
         <td id="fxl-viewport-crop-001-results">
           <a href="index.html#fxl-viewport-crop-001">fxl-viewport-crop-001</a>
         </td>
@@ -298,14 +282,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <tr>
         <td id="item-iri-001-results">
           <a href="index.html#item-iri-001">item-iri-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="linear-reachable-001-results">
-          <a href="index.html#linear-reachable-001">linear-reachable-001</a>
         </td>
         <td class="fail">fail</td>
         <td class="fail">fail</td>
@@ -352,62 +328,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>n/a</td>
       </tr>
       <tr>
-        <td id="navigation-access-001-results">
-          <a href="index.html#navigation-access-001">navigation-access-001</a>
-        </td>
-        <td class="pass">pass</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="navigation-access-002-results">
-          <a href="index.html#navigation-access-002">navigation-access-002</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="navigation-link-001-results">
-          <a href="index.html#navigation-link-001">navigation-link-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="navigation-link-002-results">
-          <a href="index.html#navigation-link-002">navigation-link-002</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="package-creator-order-001-results">
-          <a href="index.html#package-creator-order-001">package-creator-order-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="package-ignore-unknown-meta-001-results">
-          <a href="index.html#package-ignore-unknown-meta-001">package-ignore-unknown-meta-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="package-title-display-001-results">
-          <a href="index.html#package-title-display-001">package-title-display-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
         <td id="package-unlisted-resources-001-results">
           <a href="index.html#package-unlisted-resources-001">package-unlisted-resources-001</a>
         </td>
@@ -418,14 +338,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <tr>
         <td id="package-version-000-results">
           <a href="index.html#package-version-000">package-version-000</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="package-whitespace-001-results">
-          <a href="index.html#package-whitespace-001">package-whitespace-001</a>
         </td>
         <td class="fail">fail</td>
         <td class="fail">fail</td>
@@ -450,30 +362,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <tr>
         <td id="spine-order-001-results">
           <a href="index.html#spine-order-001">spine-order-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="unknown-collections-001-results">
-          <a href="index.html#unknown-collections-001">unknown-collections-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="unknown-properties-001-results">
-          <a href="index.html#unknown-properties-001">unknown-properties-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="unknown-properties-002-results">
-          <a href="index.html#unknown-properties-002">unknown-properties-002</a>
         </td>
         <td class="fail">fail</td>
         <td class="fail">fail</td>
@@ -771,6 +659,160 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </tr>
     </tbody></table>
   </section>
+  <section id="navigation-documents">
+    <h3 id="sec-navigation-documents-results"><bdi class="secno">3.5 </bdi>Navigation Documents<a class="self-link" aria-label="§" href="#sec-navigation-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-nav-activation_in-spine-results">
+          <a href="index.html#confreq-nav-activation_in-spine">confreq-nav-activation_in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-activation_not-in-spine-results">
+          <a href="index.html#confreq-nav-activation_not-in-spine">confreq-nav-activation_not-in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-spine_in-spine-results">
+          <a href="index.html#confreq-nav-spine_in-spine">confreq-nav-spine_in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-spine_not-in-spine-results">
+          <a href="index.html#confreq-nav-spine_not-in-spine">confreq-nav-spine_not-in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="open-container-format">
+    <h3 id="sec-open-container format-results"><bdi class="secno">3.6 </bdi>Open Container Format<a class="self-link" aria-label="§" href="#sec-open-container format-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="container-default-rendition_arbitrary-results">
+          <a href="index.html#container-default-rendition_arbitrary">container-default-rendition_arbitrary</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="container-default-rendition_multiple-results">
+          <a href="index.html#container-default-rendition_multiple">container-default-rendition_multiple</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="package-documents">
+    <h3 id="sec-package-documents-results"><bdi class="secno">3.7 </bdi>Package Documents<a class="self-link" aria-label="§" href="#sec-package-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-collections-unknown-results">
+          <a href="index.html#confreq-rs-pkg-collections-unknown">confreq-rs-pkg-collections-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-creator-order-results">
+          <a href="index.html#confreq-rs-pkg-creator-order">confreq-rs-pkg-creator-order</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-manifest-unknown-results">
+          <a href="index.html#confreq-rs-pkg-manifest-unknown">confreq-rs-pkg-manifest-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-meta-unknown-results">
+          <a href="index.html#confreq-rs-pkg-meta-unknown">confreq-rs-pkg-meta-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-spine-unknown-results">
+          <a href="index.html#confreq-rs-pkg-spine-unknown">confreq-rs-pkg-spine-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-whitespace-results">
+          <a href="index.html#confreq-rs-pkg-whitespace">confreq-rs-pkg-whitespace</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-spine-nonlinear-results">
+          <a href="index.html#confreq-spine-nonlinear">confreq-spine-nonlinear</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="title-order-results">
+          <a href="index.html#title-order">title-order</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
 </section>
 <section id="detailed-implementation-results">
   <h2 id="sec-detailed-report-tables"><bdi class="secno">4. </bdi>Detailed Implementation Results<a class="self-link" aria-label="§" href="#sec-detailed-report-tables"></a></h2>
@@ -789,26 +831,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <th>T</th>
       </tr>
       <tr>
-        <td id="find-the-package-001-results-detailed">
-          <a href="index.html#find-the-package-001">find-the-package-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="find-the-package-002-results-detailed">
-          <a href="index.html#find-the-package-002">find-the-package-002</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
         <td id="fxl-viewport-crop-001-results-detailed">
           <a href="index.html#fxl-viewport-crop-001">fxl-viewport-crop-001</a>
         </td>
@@ -821,16 +843,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <tr>
         <td id="item-iri-001-results-detailed">
           <a href="index.html#item-iri-001">item-iri-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="linear-reachable-001-results-detailed">
-          <a href="index.html#linear-reachable-001">linear-reachable-001</a>
         </td>
         <td class="fail">fail</td>
         <td class="fail">fail</td>
@@ -889,76 +901,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>n/a</td>
       </tr>
       <tr>
-        <td id="navigation-access-001-results-detailed">
-          <a href="index.html#navigation-access-001">navigation-access-001</a>
-        </td>
-        <td class="pass">pass</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="navigation-access-002-results-detailed">
-          <a href="index.html#navigation-access-002">navigation-access-002</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="navigation-link-001-results-detailed">
-          <a href="index.html#navigation-link-001">navigation-link-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="navigation-link-002-results-detailed">
-          <a href="index.html#navigation-link-002">navigation-link-002</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="package-creator-order-001-results-detailed">
-          <a href="index.html#package-creator-order-001">package-creator-order-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="package-ignore-unknown-meta-001-results-detailed">
-          <a href="index.html#package-ignore-unknown-meta-001">package-ignore-unknown-meta-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="package-title-display-001-results-detailed">
-          <a href="index.html#package-title-display-001">package-title-display-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
         <td id="package-unlisted-resources-001-results-detailed">
           <a href="index.html#package-unlisted-resources-001">package-unlisted-resources-001</a>
         </td>
@@ -971,16 +913,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <tr>
         <td id="package-version-000-results-detailed">
           <a href="index.html#package-version-000">package-version-000</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="package-whitespace-001-results-detailed">
-          <a href="index.html#package-whitespace-001">package-whitespace-001</a>
         </td>
         <td class="fail">fail</td>
         <td class="fail">fail</td>
@@ -1011,36 +943,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       <tr>
         <td id="spine-order-001-results-detailed">
           <a href="index.html#spine-order-001">spine-order-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="unknown-collections-001-results-detailed">
-          <a href="index.html#unknown-collections-001">unknown-collections-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="unknown-properties-001-results-detailed">
-          <a href="index.html#unknown-properties-001">unknown-properties-001</a>
-        </td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="fail">fail</td>
-        <td class="pass">pass</td>
-      </tr>
-      <tr>
-        <td id="unknown-properties-002-results-detailed">
-          <a href="index.html#unknown-properties-002">unknown-properties-002</a>
         </td>
         <td class="fail">fail</td>
         <td class="fail">fail</td>
@@ -1405,6 +1307,194 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td class="fail">fail</td>
         <td class="fail">fail</td>
         <td class="pass">pass</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="navigation-documents-0">
+    <h3 id="sec-navigation-documents-results"><bdi class="secno">4.5 </bdi>Navigation Documents<a class="self-link" aria-label="§" href="#sec-navigation-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-nav-activation_in-spine-results-detailed">
+          <a href="index.html#confreq-nav-activation_in-spine">confreq-nav-activation_in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-activation_not-in-spine-results-detailed">
+          <a href="index.html#confreq-nav-activation_not-in-spine">confreq-nav-activation_not-in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-spine_in-spine-results-detailed">
+          <a href="index.html#confreq-nav-spine_in-spine">confreq-nav-spine_in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-spine_not-in-spine-results-detailed">
+          <a href="index.html#confreq-nav-spine_not-in-spine">confreq-nav-spine_not-in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="open-container-format-0">
+    <h3 id="sec-open-container format-results"><bdi class="secno">4.6 </bdi>Open Container Format<a class="self-link" aria-label="§" href="#sec-open-container format-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="container-default-rendition_arbitrary-results-detailed">
+          <a href="index.html#container-default-rendition_arbitrary">container-default-rendition_arbitrary</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="container-default-rendition_multiple-results-detailed">
+          <a href="index.html#container-default-rendition_multiple">container-default-rendition_multiple</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="package-documents-0">
+    <h3 id="sec-package-documents-results"><bdi class="secno">4.7 </bdi>Package Documents<a class="self-link" aria-label="§" href="#sec-package-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-collections-unknown-results-detailed">
+          <a href="index.html#confreq-rs-pkg-collections-unknown">confreq-rs-pkg-collections-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-creator-order-results-detailed">
+          <a href="index.html#confreq-rs-pkg-creator-order">confreq-rs-pkg-creator-order</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-manifest-unknown-results-detailed">
+          <a href="index.html#confreq-rs-pkg-manifest-unknown">confreq-rs-pkg-manifest-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-meta-unknown-results-detailed">
+          <a href="index.html#confreq-rs-pkg-meta-unknown">confreq-rs-pkg-meta-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-spine-unknown-results-detailed">
+          <a href="index.html#confreq-rs-pkg-spine-unknown">confreq-rs-pkg-spine-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-whitespace-results-detailed">
+          <a href="index.html#confreq-rs-pkg-whitespace">confreq-rs-pkg-whitespace</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-spine-nonlinear-results-detailed">
+          <a href="index.html#confreq-spine-nonlinear">confreq-spine-nonlinear</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="title-order-results-detailed">
+          <a href="index.html#title-order">title-order</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
       </tr>
     </tbody></table>
   </section>
