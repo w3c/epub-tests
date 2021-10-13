@@ -10,7 +10,7 @@ export namespace Constants {
     export const TEST_RESULTS_DIR: string = 'reports';
 
     /** Location for the final report */
-    export const DOCS_DIR: string = 'results/drafts';
+    export const DOCS_DIR: string = 'docs/drafts';
 
     /** Location for the implementation report templates */
     export const TEST_RESULTS_TEMPLATE: string = `${TEST_RESULTS_DIR}/xx-template.json`;
@@ -34,10 +34,10 @@ export namespace Constants {
     export const CREATORS_FRAGMENT: string = `${DOCS_DIR}/fragments/creators.html`;
 
     /** (Relative) File name of the test results */
-    export const DOC_TEST_RESULTS: string = 'index.html';
+    export const DOC_TEST_RESULTS: string = 'results.html';
 
     /** (Relative) File name of the test descriptions */
-    export const DOC_TEST_DESCRIPTIONS: string = 'tests.html';
+    export const DOC_TEST_DESCRIPTIONS: string = 'index.html';
 
     /** List of test ID-s whose creators should not be considered for display */
     export const IGNORE_CREATOR_ID: string[] = ['package-creator-order-001', 'package-creator-dir-rtl-001', 'content_001'];
@@ -46,25 +46,25 @@ export namespace Constants {
     export const IGNORE_CREATORS: string[] = ['Creator', '(Unknown)'];
 
     /** CSS Class name for table cells with positive test results */
-    export const CLASS_PASS = "pass";
+    export const CLASS_PASS: string = "pass";
 
     /** CSS Class name for table cells with negative test results */
-    export const CLASS_FAIL = "fail"
+    export const CLASS_FAIL: string = "fail"
 
     /** CSS Class name for columns containing the ID-s */
-    export const CLASS_COL_ID = "col_id";
+    export const CLASS_COL_ID: string = "col_id";
 
     /** CSS Class name for columns containing test table references */
-    export const CLASS_COL_TREF = "col_tref";
+    export const CLASS_COL_TREF: string = "col_tref";
 
     /** CSS Class name for columns containing title */
-    export const CLASS_COL_TITLE = "col_title";
+    export const CLASS_COL_TITLE: string = "col_title";
 
     /** CSS Class name for columns containing spec references */
-    export const CLASS_COL_SREF = "col_sref";
+    export const CLASS_COL_SREF: string = "col_sref";
 
     /** CSS Class name for the list of creators  */
-    export const CLASS_CREATOR_LIST = "creator_list";
+    export const CLASS_CREATOR_LIST: string = "creator_list";
 }
 
 /**

@@ -2,7 +2,7 @@ name: Automatic Report generation
 on:
   push:
     branches: [main]
-    paths: ["reports/**", "tests/**", "src/**", "results/drafts/*.html"]
+    paths: ["reports/**", "tests/**", "src/**", "docs/drafts/*.html"]
 
 jobs:
   build:
@@ -28,9 +28,9 @@ jobs:
           git config user.email "<>"
       - name: commit the changes
         run: |
-          git add results/*.html
-          git add results/drafts/fragments/*.html
-          git add results/drafts/*.html
+          git add docs/*.html
+          git add docs/drafts/fragments/*.html
+          git add docs/drafts/*.html
           git add reports/xx-*.json
           git commit -am "Automated report generation"
           git push origin main
