@@ -7,7 +7,7 @@
     <dc:description>
       The navigation document is not referenced in the spine, but can still be accessed through reading system controls.
     </dc:description>
-    <dc:identifier id="pub-id">confreq-nav-spine_absent</dc:identifier>
+    <dc:identifier id="pub-id">confreq-nav-spine_not-in-spine</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Navigation Accessible while not in Spine</dc:title>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33-rs/#confreq-nav-spine</meta>
