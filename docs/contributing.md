@@ -6,6 +6,7 @@ layout: page
 
 # Writing tests for EPUB 3.3
 
+** This is the version that was put into the PR **
 
 The [w3c/epub-tests/](https://github.com/w3c/epub-tests/) repository contains tests to validate the implementability of the
 W3C's EPUB 3.3 specifications, specifically core [EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format
