@@ -1,6 +1,10 @@
 ---
-title: Writing tests for EPUB 3.3
+layout: page
 ---
+
+![W3C Logo](https://www.w3.org/Icons/w3c_home)
+
+# Writing tests for EPUB 3.3
 
 The [w3c/epub-tests/](https://github.com/w3c/epub-tests/) repository contains tests to validate the implementability of the
 W3C's EPUB 3.3 specifications, specifically core [EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format
