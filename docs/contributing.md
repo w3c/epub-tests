@@ -1,4 +1,5 @@
 ---
+layout: page
 title: Writing tests for EPUB 3.3
 ---
 
