@@ -2,17 +2,15 @@
 title: Writing tests for EPUB 3.3
 ---
 
-![W3C Logo](https://www.w3.org/Icons/w3c_home)
-
-# Test repository for the EPUB 3.3 specifications
-
-This repository contains tests to validate the implementability of the W3C's EPUB 3.3 specifications, specifically core
-[EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format itself) and
-[EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files). Our
-objective is to test every normative statement (that is, every
+The [w3c/epub-tests/](https://github.com/w3c/epub-tests/) repository contains tests to validate the implementability of the
+W3C's EPUB 3.3 specifications, specifically core [EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format
+itself) and [EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files).
+Our objective is to test every normative statement (that is, every
 [`MUST` or `SHOULD` or `MAY`](https://datatracker.ietf.org/doc/html/bcp14), etc.).
 
 Existing tests are described in the [generated test reports](#generated-test-reports).
+
+This page explains how to write new tests.
 
 
 ## Prerequisites
@@ -20,7 +18,7 @@ Existing tests are described in the [generated test reports](#generated-test-rep
 * Install [eCanCrusher](https://www.docdataflow.com/ecancrusher/) or another utility or local script that can turn an EPUB
   folder into a compressed .epub file.
    
-   * For MacOS, a command in Terminal can zip EPUB, go to the folder containing the files and enter the following:
+   * On macOS, a command in Terminal can zip EPUB. Go to the folder containing the files and enter the following:
    `zip -X0 book.epub mimetype; zip -Xur9D book.epub META-INF OEBPS -x ‘*.DS_Store’ `
 
 * Ensure you have several EPUB reading systems available to validate your tests (that is, validate that you have written the
@@ -228,12 +226,10 @@ directory and [implementation reports](#implementation-reports) in the `reports`
 
 The report consists of two HTML pages, namely:
 
-* A [test suite description](https://w3c.github.io/epub-tests/) that lists each test that contains the
-  appropriate [metadata](#metadata), split into one table per unique `dc:coverage` value. Each table has one row per test,
-  showing the test's ID, title, description, back-links to the relevant relevant normative statements in the spec, and links
-  to the test results.
+* A [test suite description](https://w3c.github.io/epub-tests/) that lists each test, split into one table per unique
+  `dc:coverage` value. Each table has one row per test, showing the test's ID, title, description, back-links to the relevant
+  normative statements in the spec, and links to the implementation results.
 
-* An [implementation report](https://w3c.github.io/epub-tests/results.html) that lists reading systems that have submitted test
+* An [implementation report](https://w3c.github.io/epub-tests/results) that lists reading systems that have submitted test
   results along with their results tables. Each table has one row per test and one column per implementation, with cells
   indicating whether the test passed, failed, or has not been run.
-
