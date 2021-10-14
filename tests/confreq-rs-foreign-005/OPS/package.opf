@@ -5,8 +5,11 @@
   <dc:date>2021-01-22</dc:date>
   <dc:creator>Dave Cramer</dc:creator>
   <dc:identifier id="pub-id">manifest-fallback-005</dc:identifier>
-  <meta property="dcterms:modified">2021-01-22T00:00:00Z</meta>
+  <meta property="dcterms:modified">2021-10-14T00:00:00Z</meta>
   <dc:language>en</dc:language>
+  <dc:description>Test of manifest feedback with a wildly invalid EPUB. The spine item is a DMG, with a fallback being a photoshop file.</dc:description>
+  <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign</meta>
+<dc:coverage>Core Media Types</dc:coverage>
 </metadata>
 <manifest>
 
