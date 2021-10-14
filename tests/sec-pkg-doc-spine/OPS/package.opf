@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <dc:title>Package Document Spine Order 001</dc:title>
+  <dc:title>Spine Items in Order</dc:title>
   <dc:date>2021-01-21</dc:date>
   <dc:creator>Dave Cramer</dc:creator>
   <dc:identifier id="pub-id">sec-pkg-doc-spine-001</dc:identifier>
-  <meta property="dcterms:modified">2021-01-21T00:00:00Z</meta>
+  <meta property="dcterms:modified">2021-10-14T00:00:00Z</meta>
   <dc:language>en</dc:language>
   
 <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-spine</meta>
