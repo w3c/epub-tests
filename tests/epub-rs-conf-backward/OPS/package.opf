@@ -4,9 +4,12 @@
   <dc:title>Package Version Zero</dc:title>
   <dc:date>2021-01-04</dc:date>
   <dc:creator>Dave Cramer</dc:creator>
-  <dc:identifier id="pub-id">package-version-000</dc:identifier>
-  <meta property="dcterms:modified">2021-01-05T00:00:00Z</meta>
+  <dc:identifier id="pub-id">epub-rs-conf-backward</dc:identifier>
+  <meta property="dcterms:modified">2021-10-14T00:00:00Z</meta>
   <dc:language>en</dc:language>
+  <dc:description>“Reading Systems MUST attempt to process an EPUB Publication whose Package Document version attribute is less than "3.0"”. This test presents an EPUB with package version zero, to see if a reading system will open it. </dc:description>
+  <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-epub-rs-conf-backward</meta>
+<dc:coverage>Package Documents</dc:coverage>
 </metadata>
 <manifest>
   <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
