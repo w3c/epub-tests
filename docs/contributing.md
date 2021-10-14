@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Writing tests for EPUB 3.3
 ---
 
 ![W3C Logo](https://www.w3.org/Icons/w3c_home)
