@@ -182,7 +182,8 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
                 if (entry === undefined) {
                     return fallback;
                 } else {
-                    return typeof entry === "string" ? entry : entry._;
+                    const retval = typeof entry === "string" ? entry : entry._;
+                    return retval.trim().replace(/\s+/g, ' ');
                 }
             } catch {
                 return fallback;
