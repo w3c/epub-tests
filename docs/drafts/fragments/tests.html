@@ -40,61 +40,6 @@
         </td>
       </tr>
       <tr>
-        <td id="manifest-fallback-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/manifest-fallback-001">manifest-fallback-001</a>
-        </td>
-        <td>Manifest Fallback 001</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#manifest-fallback-001-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="manifest-fallback-002">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/manifest-fallback-002">manifest-fallback-002</a>
-        </td>
-        <td>Manifest Fallback 002</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#manifest-fallback-002-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="manifest-fallback-003">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/manifest-fallback-003">manifest-fallback-003</a>
-        </td>
-        <td>Manifest Fallback 003</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#manifest-fallback-003-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="manifest-fallback-004">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/manifest-fallback-004">manifest-fallback-004</a>
-        </td>
-        <td>Manifest Fallback 004</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#manifest-fallback-004-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="manifest-fallback-005">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/manifest-fallback-005">manifest-fallback-005</a>
-        </td>
-        <td>Manifest Fallback 005</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#manifest-fallback-005-results">❐</a>
-        </td>
-      </tr>
-      <tr>
         <td id="package-unlisted-resources-001">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/package-unlisted-resources-001">package-unlisted-resources-001</a>
         </td>
@@ -103,17 +48,6 @@
         <td>n.a. </td>
         <td>
           <a href="results.html#package-unlisted-resources-001-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="package-version-000">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/package-version-000">package-version-000</a>
-        </td>
-        <td>Package Version Zero</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#package-version-000-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -716,6 +650,19 @@
         <th>Ref</th>
       </tr>
       <tr>
+        <td id="confreq-rs-backward-epub">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-backward-epub">confreq-rs-backward-epub</a>
+        </td>
+        <td>Package Version Less Than 3.0</td>
+        <td>“Reading Systems MUST attempt to process an EPUB Publication whose Package Document version attribute is less than "3.0"”. This is an EPUB with package version attribute set to "0", to see if a reading system will open it.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-backward-epub">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-backward-epub-results">❐</a>
+        </td>
+      </tr>
+      <tr>
         <td id="confreq-rs-pkg-collections-unknown">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-collections-unknown">confreq-rs-pkg-collections-unknown</a>
         </td>
@@ -830,6 +777,90 @@
         </td>
         <td>
           <a href="results.html#title-order-results">❐</a>
+        </td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <h2 id="sec-publication-resources-data">Publication Resources</h2>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id"/>
+        <col class="col_title"/>
+        <col/>
+        <col class="col_sref"/>
+        <col class="col_tref"/>
+      </colgroup>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Specs</th>
+        <th>Ref</th>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign-bad-fallback">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-bad-fallback">confreq-rs-foreign-bad-fallback</a>
+        </td>
+        <td>Manifest Fallback with Unsupported Fallback</td>
+        <td>This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine item is a DMG, with a fallback being a PSD file.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-foreign-bad-fallback-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign-image">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-image">confreq-rs-foreign-image</a>
+        </td>
+        <td>Manifest Fallback For Image</td>
+        <td>An HTML content file contains a PSD image, with a manifest fallback to a PNG image. This tests fallbacks for resources that are not in the spine.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-foreign-image-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign-json-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-json-spine">confreq-rs-foreign-json-spine</a>
+        </td>
+        <td>Manifest Fallback With JSON Content Document in Spine</td>
+        <td>This EPUB uses a JSON content file in the spine, with a manifest fallback to an HTML document. If the reading system does not “support” JSON, it should display the HTML.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-foreign-json-spine-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign-xml-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-xml-spine">confreq-rs-foreign-xml-spine</a>
+        </td>
+        <td>Manifest Fallback with XML in Spine</td>
+        <td>This EPUB uses an ordinary XML content file, with mimetype application/xml, in the spine, with a manifest fallback to an HTML document. If the reading system does not “support” XML, it should display the HTML.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-foreign-xml-spine-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign-xml-suffix-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-xml-suffix-spine">confreq-rs-foreign-xml-suffix-spine</a>
+        </td>
+        <td>Manifest Fallback with XML with Suffix in Spine</td>
+        <td>This EPUB uses an custom XML content file, with mimetype application/dtc+xml, in the spine, with a manifest fallback to an HTML document. If the reading system does not “support” XML, it should display the HTML.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-foreign-xml-suffix-spine-results">❐</a>
         </td>
       </tr>
     </table>
