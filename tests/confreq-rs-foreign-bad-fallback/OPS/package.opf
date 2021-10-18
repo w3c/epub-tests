@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <dc:title>Manifest Fallback 005</dc:title>
+  <dc:title>Manifest Fallback with Unsupported Fallback</dc:title>
   <dc:date>2021-01-22</dc:date>
   <dc:creator>Dave Cramer</dc:creator>
-  <dc:identifier id="pub-id">manifest-fallback-005</dc:identifier>
-  <meta property="dcterms:modified">2021-01-22T00:00:00Z</meta>
+  <dc:identifier id="pub-id">confreq-rs-foreign-bad-fallback</dc:identifier>
+  <meta property="dcterms:modified">2021-10-15T00:00:00Z</meta>
   <dc:language>en</dc:language>
+  <dc:description>This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine item is a DMG, with a fallback being a PSD file.</dc:description>
+  <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign</meta>
+<dc:coverage>Publication Resources</dc:coverage>
 </metadata>
 <manifest>
 

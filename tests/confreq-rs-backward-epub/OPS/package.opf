@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="0" xml:lang="en" unique-identifier="pub-id">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <dc:title>Package Version Zero</dc:title>
+  <dc:title>Package Version Less Than 3.0</dc:title>
   <dc:date>2021-01-04</dc:date>
   <dc:creator>Dave Cramer</dc:creator>
-  <dc:identifier id="pub-id">package-version-000</dc:identifier>
-  <meta property="dcterms:modified">2021-01-05T00:00:00Z</meta>
+  <dc:identifier id="pub-id">confreq-rs-backward-epub</dc:identifier>
+  <meta property="dcterms:modified">2021-10-15T00:00:00Z</meta>
   <dc:language>en</dc:language>
+  <dc:description>“Reading Systems MUST attempt to process an EPUB Publication whose Package Document version attribute is less than "3.0"”. This is an EPUB with package version attribute set to "0", to see if a reading system will open it. </dc:description>
+  <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-backward-epub</meta>
+<dc:coverage>Package Documents</dc:coverage>
 </metadata>
 <manifest>
   <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />

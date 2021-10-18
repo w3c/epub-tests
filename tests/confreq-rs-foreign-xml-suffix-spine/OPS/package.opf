@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <dc:title>Manifest Fallback 002</dc:title>
+  <dc:title>Manifest Fallback with XML with Suffix in Spine</dc:title>
   <dc:date>2021-01-12</dc:date>
   <dc:creator>Dave Cramer</dc:creator>
-  <dc:identifier id="pub-id">manifest-fallback-002</dc:identifier>
+  <dc:identifier id="pub-id">confreq-rs-foreign-xml-suffix-spine</dc:identifier>
   <meta property="dcterms:modified">2021-01-12T00:00:00Z</meta>
   <dc:language>en</dc:language>
+  <dc:description>This EPUB uses an custom XML content file, with mimetype application/dtc+xml, in the spine, with a manifest fallback to an HTML document. If the reading system does not “support” XML, it should display the HTML.</dc:description>
+  <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign</meta>
+  <dc:coverage>Publication Resources</dc:coverage>
 </metadata>
 <manifest>
   <item id="content_primary" fallback="content_fallback" href="moby.xml" media-type="application/dtc+xml" />
