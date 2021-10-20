@@ -3,8 +3,11 @@
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:coverage>Publication Resources</dc:coverage>
     <dc:creator>Matthew Chan</dc:creator>
-    <dc:date>2021-10-19</dc:date>
-    <dc:description>Readings systems MUST prevent data: URLs from opening in top-level browsing contexts (except when initiated through a RS affordance such as a context menu).</dc:description>
+    <dc:date>2021-10-20</dc:date>
+    <dc:description>
+    XHTML content contains an img element where the src attribute is given as a data URL. 
+    RS must display the image rather than opening it in a new top-level browsing context.
+    </dc:description>
     <dc:identifier id="pub-id">confreq-rs-data-urls</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>top-level data: URLs</dc:title>
