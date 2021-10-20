@@ -139,7 +139,8 @@ The package document for each test must contain the following metadata, which is
 * `dc:identifier`: A unique identifier for the test (unique across _all_ tests). This is typically the test’s directory name.
   It is used as an anchor in the reports, so its format must be suitable as an HTML fragment identifier.
 
-* `dc:title`: The title of the test. It is used in the test description and should be as concise as possible.
+* `dc:title`: The title of the test, in sentence case. It is used in the test description and should be as concise as
+  possible.
 
 * `dc:description`: A longer description of the test for the generated test report.
 
