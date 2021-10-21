@@ -17,6 +17,7 @@
         "confreq-nav-spine_not-in-spine": false,
         "confreq-rs-backward-epub": false,
         "confreq-rs-css-embed-ref": false,
+        "confreq-rs-data-urls": false,
         "confreq-rs-epub3-svg": false,
         "confreq-rs-epub3-xhtml": false,
         "confreq-rs-foreign-bad-fallback": false,
