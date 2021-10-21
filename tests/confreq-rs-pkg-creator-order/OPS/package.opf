@@ -14,7 +14,7 @@
     </dc:description>
     <dc:identifier id="pub-id">confreq-rs-pkg-creator-order</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>Creators Listed in Order</dc:title>
+    <dc:title>Creators listed in order</dc:title>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-creator-order</meta>
     <meta property="dcterms:modified">2021-01-11T00:00:00Z</meta>
   </metadata>
