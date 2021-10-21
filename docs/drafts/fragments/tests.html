@@ -537,7 +537,7 @@
         <td id="confreq-nav-activation_in-spine">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-nav-activation_in-spine">confreq-nav-activation_in-spine</a>
         </td>
-        <td>Navigation Relocates Position while in Spine</td>
+        <td>Navigation relocates position while in spine</td>
         <td>Activating a link in the navigation document relocates the reading position to the target of the link. The navigation document is in the spine.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-33-rs/#confreq-nav-activation">(1) </a>
@@ -550,7 +550,7 @@
         <td id="confreq-nav-activation_not-in-spine">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-nav-activation_not-in-spine">confreq-nav-activation_not-in-spine</a>
         </td>
-        <td>Navigation Relocates Position while not in Spine</td>
+        <td>Navigation relocates position while not in spine</td>
         <td>Activating a link in the navigation document relocates the reading position to the target of the link. The navigation document is not in the spine.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-33-rs/#confreq-nav-activation">(1) </a>
@@ -576,7 +576,7 @@
         <td id="confreq-nav-spine_not-in-spine">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-nav-spine_not-in-spine">confreq-nav-spine_not-in-spine</a>
         </td>
-        <td>Navigation Accessible while not in Spine</td>
+        <td>Navigation accessible while not in spine</td>
         <td>The navigation document is not referenced in the spine, but can still be accessed through reading system controls.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-33-rs/#confreq-nav-spine">(1) </a>
@@ -653,7 +653,7 @@
         <td id="confreq-rs-backward-epub">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-backward-epub">confreq-rs-backward-epub</a>
         </td>
-        <td>Package Version Less Than 3.0</td>
+        <td>Package version less than 3.0</td>
         <td>“Reading Systems MUST attempt to process an EPUB Publication whose Package Document version attribute is less than "3.0"”. This is an EPUB with package version attribute set to "0", to see if a reading system will open it.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-backward-epub">(1) </a>
@@ -666,7 +666,7 @@
         <td id="confreq-rs-pkg-collections-unknown">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-collections-unknown">confreq-rs-pkg-collections-unknown</a>
         </td>
-        <td>Collection with Unknown Role</td>
+        <td>Collection with unknown role</td>
         <td>The package document contains a collection with an unknown role. The reading system must open the EPUB successfully.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-collections-unknown">(1) </a>
@@ -679,7 +679,7 @@
         <td id="confreq-rs-pkg-creator-order">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-creator-order">confreq-rs-pkg-creator-order</a>
         </td>
-        <td>Creators Listed in Order</td>
+        <td>Creators listed in order</td>
         <td>Several creators are listed in the package document. The reading system must not display them out of order (but it may display only the first).</td>
         <td>
           <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-creator-order">(1) </a>
@@ -813,68 +813,68 @@
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign-bad-fallback">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-bad-fallback">confreq-rs-foreign-bad-fallback</a>
+        <td id="confreq-rs-foreign_bad-fallback">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_bad-fallback">confreq-rs-foreign_bad-fallback</a>
         </td>
-        <td>Manifest Fallback with Unsupported Fallback</td>
-        <td>This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine item is a DMG, with a fallback being a PSD file.</td>
+        <td>Manifest fallback with unsupported fallback</td>
+        <td>This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine item is a DMG, with a fallback to a PSD file.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign-bad-fallback-results">❐</a>
+          <a href="results.html#confreq-rs-foreign_bad-fallback-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign-image">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-image">confreq-rs-foreign-image</a>
+        <td id="confreq-rs-foreign_image">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_image">confreq-rs-foreign_image</a>
         </td>
-        <td>Manifest Fallback For Image</td>
+        <td>Manifest fallback with image</td>
         <td>An HTML content file contains a PSD image, with a manifest fallback to a PNG image. This tests fallbacks for resources that are not in the spine.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign-image-results">❐</a>
+          <a href="results.html#confreq-rs-foreign_image-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign-json-spine">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-json-spine">confreq-rs-foreign-json-spine</a>
+        <td id="confreq-rs-foreign_json-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_json-spine">confreq-rs-foreign_json-spine</a>
         </td>
-        <td>Manifest Fallback With JSON Content Document in Spine</td>
-        <td>This EPUB uses a JSON content file in the spine, with a manifest fallback to an HTML document. If the reading system does not “support” JSON, it should display the HTML.</td>
+        <td>Manifest fallback With JSON content document in spine</td>
+        <td>This EPUB uses a JSON content file in the spine, with a manifest fallback to an HTML document. If the reading system does not support JSON, it should display the HTML.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign-json-spine-results">❐</a>
+          <a href="results.html#confreq-rs-foreign_json-spine-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign-xml-spine">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-xml-spine">confreq-rs-foreign-xml-spine</a>
+        <td id="confreq-rs-foreign_xml-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_xml-spine">confreq-rs-foreign_xml-spine</a>
         </td>
-        <td>Manifest Fallback with XML in Spine</td>
-        <td>This EPUB uses an ordinary XML content file, with mimetype application/xml, in the spine, with a manifest fallback to an HTML document. If the reading system does not “support” XML, it should display the HTML.</td>
+        <td>Manifest fallback with XML in spine</td>
+        <td>This EPUB uses an ordinary XML content file with mimetype application/xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign-xml-spine-results">❐</a>
+          <a href="results.html#confreq-rs-foreign_xml-spine-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign-xml-suffix-spine">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign-xml-suffix-spine">confreq-rs-foreign-xml-suffix-spine</a>
+        <td id="confreq-rs-foreign_xml-suffix-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_xml-suffix-spine">confreq-rs-foreign_xml-suffix-spine</a>
         </td>
-        <td>Manifest Fallback with XML with Suffix in Spine</td>
-        <td>This EPUB uses an custom XML content file, with mimetype application/dtc+xml, in the spine, with a manifest fallback to an HTML document. If the reading system does not “support” XML, it should display the HTML.</td>
+        <td>Manifest fallback with XML with suffix in spine</td>
+        <td>This EPUB uses an custom XML content file with mimetype application/dtc+xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.</td>
         <td>
           <a href="https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign-xml-suffix-spine-results">❐</a>
+          <a href="results.html#confreq-rs-foreign_xml-suffix-spine-results">❐</a>
         </td>
       </tr>
     </table>
