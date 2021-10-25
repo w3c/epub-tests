@@ -149,6 +149,7 @@ The package document for each test must contain the following metadata, which is
 
    *  Content Documents
    *  Core Media Types
+   *  Fixed Layout
    *  Internationalization
    *  Navigation Documents
    *  Open Container Format
