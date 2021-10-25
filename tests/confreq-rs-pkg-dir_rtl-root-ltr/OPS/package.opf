@@ -13,7 +13,7 @@
     <dc:title dir="rtl" xml:lang="he">CSS: הרפתקה חדשה!</dc:title>
     <meta property="dcterms:alternative">Incorrect 'dir=ltr' on the package, correctly overwritten by 'dir=rtl' on title</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir</meta>
     <meta property="dcterms:modified">2021-09-22T00:00:00Z</meta>        
   </metadata>
   <manifest>
