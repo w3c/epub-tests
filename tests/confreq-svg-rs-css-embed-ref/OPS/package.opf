@@ -4,7 +4,9 @@
     <dc:coverage>Content Documents</dc:coverage>
     <dc:creator>Dan Lazin</dc:creator>
     <dc:date>2021-05-25</dc:date>
-    <dc:description>CSS does NOT change the color of an SVG image that is embedded in the XHTML content by reference.</dc:description>
+    <dc:description>
+      CSS does not change the color of an SVG image that is embedded in the XHTML content by reference.
+    </dc:description>
     <dc:identifier id="pub-id">confreq-rs-css-embed-ref</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>CSS not applied to referenced SVG</dc:title>

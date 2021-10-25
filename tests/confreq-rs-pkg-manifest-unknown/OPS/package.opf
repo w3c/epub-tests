@@ -10,7 +10,7 @@
     </dc:description>
     <dc:identifier id="pub-id">confreq-rs-pkg-manifest-unknown</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>Manifest Item with Unknown Properties</dc:title>
+    <dc:title>Manifest item with unknown properties</dc:title>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-manifest-unknown</meta>
     <meta property="dcterms:modified">2021-01-18T00:00:00Z</meta>
   </metadata>
