@@ -10,7 +10,7 @@
     </dc:description>
     <dc:identifier id="pub-id">title-order</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>First Title in Package</dc:title>
+    <dc:title>First title in package</dc:title>
     <dc:title>This title must not display first</dc:title>
     <dc:title>Also, this title must not display first</dc:title>
     <dc:title>This title also must not display first</dc:title>
