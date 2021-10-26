@@ -1,9 +1,10 @@
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
-import { ReportData, ImplementationReport, Constants } from './lib/types';
+import { ReportData, ImplementationReport, Config, Constants } from './lib/types';
 import { get_report_data, get_template } from "./lib/data";
 import { create_report } from "./lib/html";
+import { get_config } from './lib/config';
 
 
 /**
@@ -21,7 +22,8 @@ async function adjust_date(fname: string): Promise<void> {
  * Main entry point: generate the reports' html fragment files (i.e., the real "meat" for the data) and a template file
  */
 async function main() {
-    const report_data: ReportData = await get_report_data(Constants.TESTS_DIR, Constants.TEST_RESULTS_DIR);
+    const config: Config = get_config();
+    const report_data: ReportData = await get_report_data(config, Constants.TESTS_DIR, Constants.TEST_RESULTS_DIR);
 
     const template: ImplementationReport = get_template(report_data);
     const {implementations, results, tests, creators} = create_report(report_data);

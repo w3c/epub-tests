@@ -22,7 +22,8 @@ import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 import * as xml2js from "xml2js";
 
-import { TestData, ImplementationReport, ImplementationData, ImplementationTable, Implementer, ReportData, Constants } from './types';
+import { TestData, ImplementationReport, ImplementationData, ImplementationTable, Implementer, ReportData, Constants, Config } from './types';
+import { switch_reference } from './config';
 
 /** 
  * Name tells it all...
@@ -40,7 +41,7 @@ function string_comparison(a: string, b: string): number {
  * 
  * @internal 
  */
- function isDirectory(name: string): boolean {
+function isDirectory(name: string): boolean {
     return fs_old_school.lstatSync(name).isDirectory();
 }
 
@@ -173,7 +174,7 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
  * @param dir_name test directory name
  * @returns EPUB metadata converted into the [[TestData]] structure
  */
-async function get_test_metadata(dir_name: string): Promise<TestData[]> {
+async function get_test_metadata(config: Config, dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
     const get_single_test_metadata = async (file_name: string): Promise<TestData> => {
         const get_string_value = (label: string, fallback: string): string => {
@@ -207,7 +208,7 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             description : get_string_value("dc:description", "(No description)"),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)"),
             creator     : get_string_value("dc:creator", "(Unknown)"),
-            references  : metadata["meta"].filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy").map((entry:any): string => entry._),
+            references  : metadata["meta"].filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy").map((entry:any): string => switch_reference(config, entry._)),
         }
     }
 
@@ -279,9 +280,9 @@ function create_implementation_tables(implementation_data: ImplementationData[])
  * @param tests directory where the tests reside
  * @param reports directory where the implementation reports reside
  */
-export async function get_report_data(tests: string, reports: string): Promise<ReportData> {
+export async function get_report_data(config: Config, tests: string, reports: string): Promise<ReportData> {
     // Get the metadata for all available tests;
-    const metadata: TestData[] = await get_test_metadata(tests);
+    const metadata: TestData[] = await get_test_metadata(config, tests);
 
     // Get the list of available implementation reports
     const impl_list: ImplementationReport[] = await get_implementation_reports(reports);
