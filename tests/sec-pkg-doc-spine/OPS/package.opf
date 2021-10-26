@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
-<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <dc:title>Spine Items in Order</dc:title>
-  <dc:date>2021-01-21</dc:date>
-  <dc:creator>Dave Cramer</dc:creator>
-  <dc:identifier id="pub-id">sec-pkg-doc-spine</dc:identifier>
-  <meta property="dcterms:modified">2021-10-14T00:00:00Z</meta>
-  <dc:language>en</dc:language>
-  
-<meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-spine</meta>
-<dc:coverage>Package Documents</dc:coverage>
-<dc:description>
-Basic test of whether a reading system can display spine items in the correct order. The test is designed to fail if the reading system presents content in the order in which the file names sort, or if it presents files in manifest order rather than spine order.
-</dc:description> 
-
-</metadata>
-<manifest>
-  <item id="b-content_003" href="b-content_003.xhtml" media-type="application/xhtml+xml" />
-  <item id="a-content_004" href="a-content_004.xhtml" media-type="application/xhtml+xml" />
-  <item id="c-content_002" href="c-content_002.xhtml" media-type="application/xhtml+xml" />
-  <item id="d-content_001" href="d-content_001.xhtml" media-type="application/xhtml+xml" />
-  <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
-</manifest>
-<spine>
-  <itemref idref="d-content_001" />
-  <itemref idref="c-content_002" />
-  <itemref idref="b-content_003" />
-  <itemref idref="a-content_004" />
-</spine>
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage>Package Documents</dc:coverage>
+    <dc:creator>Dave Cramer</dc:creator>
+    <dc:date>2021-01-21</dc:date>
+    <dc:description>
+      Basic test of whether a reading system can display spine items in the correct order. The test fails if the reading
+      system presents content in the order in which the file names sort, or if it presents files in manifest order rather
+      than spine order.
+    </dc:description> 
+    <dc:identifier id="pub-id">sec-pkg-doc-spine</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:title>Spine items in order</dc:title>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-spine</meta>
+    <meta property="dcterms:modified">2021-10-14T00:00:00Z</meta>
+  </metadata>
+  <manifest>
+    <item id="b-content_003" href="b-content_003.xhtml" media-type="application/xhtml+xml" />
+    <item id="a-content_004" href="a-content_004.xhtml" media-type="application/xhtml+xml" />
+    <item id="c-content_002" href="c-content_002.xhtml" media-type="application/xhtml+xml" />
+    <item id="d-content_001" href="d-content_001.xhtml" media-type="application/xhtml+xml" />
+    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
+  </manifest>
+  <spine>
+    <itemref idref="d-content_001" />
+    <itemref idref="c-content_002" />
+    <itemref idref="b-content_003" />
+    <itemref idref="a-content_004" />
+  </spine>
 </package>

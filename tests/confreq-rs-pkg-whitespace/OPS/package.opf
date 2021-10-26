@@ -10,7 +10,7 @@
     </dc:description>
     <dc:identifier id="pub-id">confreq-rs-pkg-whitespace</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>      		Whitespace    Removed   from  Package Metadata             </dc:title>
+    <dc:title>      		Whitespace    removed   from  package metadata             </dc:title>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-whitespace</meta>
     <meta property="dcterms:modified">2021-01-11T00:00:00Z</meta>
   </metadata>
