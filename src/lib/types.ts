@@ -155,12 +155,3 @@ export interface ReportData {
     implementers : Implementer[];
     consolidated_implementers: Implementer[];
 } 
-
-/**
- * External configuration type
- */
-export interface Config {
-    final: boolean;
-    coverage_labels: string[];
-    document_mappings: { from: string; to: string}[];
-}
