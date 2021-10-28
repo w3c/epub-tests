@@ -5,7 +5,7 @@
     <dc:creator>Wendy Reid</dc:creator>
     <dc:date>2021-09-24</dc:date>
     <dc:description>When rendition:layout is pre-paginated, reading systems must display one page per spine item.</dc:description>
-    <dc:identifier id="pub-id">fxl-properties-002</dc:identifier>
+    <dc:identifier id="pub-id">def-layout-pre-paginated</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>rendition:layout pre-paginated spine order</dc:title>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#def-layout-pre-paginated</meta>
