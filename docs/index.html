@@ -204,7 +204,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
        document. It has no official standing
       of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-test-tables"><bdi class="secno">2. </bdi>Description of the Tests</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-publication-resources-data"><bdi class="secno">2.1 </bdi>Publication Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-data"><bdi class="secno">2.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-package-documents-data"><bdi class="secno">2.3 </bdi>Package Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-data"><bdi class="secno">2.4 </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-data"><bdi class="secno">2.5 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-navigation-documents-data"><bdi class="secno">2.6 </bdi>Navigation Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-fixed-layout-data"><bdi class="secno">2.7 </bdi>Fixed Layout</a></li><li class="tocline"><a class="tocxref" href="#sec-open-container format-data"><bdi class="secno">2.8 </bdi>Open Container Format</a></li><li class="tocline"><a class="tocxref" href="#sec-(uncategorized)-data"><bdi class="secno">2.9 </bdi>(Uncategorized)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#contributors"><bdi class="secno">A. </bdi>Acknowledgements</a></li></ol></nav>
+    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-test-tables"><bdi class="secno">2. </bdi>Description of the Tests</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-publication-resources-data"><bdi class="secno">2.1 </bdi>Publication Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-data"><bdi class="secno">2.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-package-documents-data"><bdi class="secno">2.3 </bdi>Package Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-data"><bdi class="secno">2.4 </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-data"><bdi class="secno">2.5 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-navigation-documents-data"><bdi class="secno">2.6 </bdi>Navigation Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-fixed-layout-data"><bdi class="secno">2.7 </bdi>Fixed Layout</a></li><li class="tocline"><a class="tocxref" href="#sec-open-container format-data"><bdi class="secno">2.8 </bdi>Open Container Format</a></li></ol></li><li class="tocline"><a class="tocxref" href="#contributors"><bdi class="secno">A. </bdi>Acknowledgements</a></li></ol></nav>
 
 		<section id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
@@ -331,6 +331,19 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
         <td>
           <a href="results.html#confreq-rs-foreign_xml-suffix-spine-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-xml-extid">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-xml-extid">confreq-rs-xml-extid</a>
+        </td>
+        <td>XML external entity not resolved</td>
+        <td>The XHTML content document contains a reference to an external entity. The reading system must not resolve it.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-xml-extid">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-xml-extid-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -624,6 +637,32 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
         <td>
           <a href="results.html#confreq-rs-pkg-spine-unknown-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-unique-id">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-unique-id">confreq-rs-pkg-unique-id</a>
+        </td>
+        <td>Unique identifier not unique</td>
+        <td>The package document's unique-identifier attribute and dc:identifier element are identical across two publications. The reading system should display both publications independently.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-unique-id">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-pkg-unique-id-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-unique-id">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-unique-id">confreq-rs-pkg-unique-id</a>
+        </td>
+        <td>Unique identifier reused</td>
+        <td>The package document's unique-identifier attribute and dc:identifier element are identical across two publications. The reading system should display both publications independently.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-unique-id">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-pkg-unique-id-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -1097,58 +1136,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
         <td>
           <a href="results.html#container-default-rendition_multiple-results">❐</a>
-        </td>
-      </tr>
-    </tbody></table>
-  </section>
-  <section id="uncategorized">
-    <h3 id="sec-(uncategorized)-data"><bdi class="secno">2.9 </bdi>(Uncategorized)<a class="self-link" aria-label="§" href="#sec-(uncategorized)-data"></a></h3>
-    <table class="zebra">
-      <colgroup>
-        <col class="col_id">
-        <col class="col_title">
-        <col>
-        <col class="col_sref">
-        <col class="col_tref">
-      </colgroup>
-      <tbody><tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Specs</th>
-        <th>Ref</th>
-      </tr>
-      <tr>
-        <td id="publication-identifier-001A">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/publication-identifier-001A">publication-identifier-001A</a>
-        </td>
-        <td>Publication Identifier 001A</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#publication-identifier-001A-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="publication-identifier-001B">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/publication-identifier-001B">publication-identifier-001B</a>
-        </td>
-        <td>Publication Identifier 001B</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#publication-identifier-001B-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="xml-external-entities-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/xml-external-entities-001">xml-external-entities-001</a>
-        </td>
-        <td>XML External Entities 001</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#xml-external-entities-001-results">❐</a>
         </td>
       </tr>
     </tbody></table>

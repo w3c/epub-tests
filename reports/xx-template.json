@@ -41,7 +41,9 @@
         "confreq-rs-pkg-manifest-url": false,
         "confreq-rs-pkg-meta-unknown": false,
         "confreq-rs-pkg-spine-unknown": false,
+        "confreq-rs-pkg-unique-id": false,
         "confreq-rs-pkg-whitespace": false,
+        "confreq-rs-xml-extid": false,
         "confreq-rs-xml-ns": false,
         "confreq-rs-xml-nval_invalid": false,
         "confreq-rs-xml-nval_unclosed": false,
@@ -54,10 +56,7 @@
         "page-progression-002": false,
         "page-progression-003": false,
         "page-progression-004": false,
-        "publication-identifier-001A": false,
-        "publication-identifier-001B": false,
         "sec-pkg-doc-spine": false,
-        "title-order": false,
-        "xml-external-entities-001": false
+        "title-order": false
     }
 }
