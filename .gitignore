@@ -19,5 +19,4 @@ typings/
 # VS data
 .vscode
 
-# annoying apple files
-.DS_Store
+
