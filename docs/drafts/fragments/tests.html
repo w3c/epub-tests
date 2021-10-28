@@ -1,7 +1,7 @@
 <section>
   <h2 id="sec-test-tables">Description of the Tests</h2>
   <section>
-    <h2 id="sec-(uncategorized)-data">(Uncategorized)</h2>
+    <h2 id="sec-publication-resources-data">Publication Resources</h2>
     <table class="zebra">
       <colgroup>
         <col class="col_id"/>
@@ -18,119 +18,88 @@
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="fxl-viewport-crop-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-viewport-crop-001">fxl-viewport-crop-001</a>
+        <td id="confreq-rs-data-urls">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-data-urls">confreq-rs-data-urls</a>
         </td>
-        <td>FXL Viewport Crop 001</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>Data URL does not open in top-level context</td>
+        <td>XHTML content contains an img element where the src attribute is given as a data URL. RS must display the image rather than opening it in a new top-level browsing context.</td>
         <td>
-          <a href="results.html#fxl-viewport-crop-001-results">❐</a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-data-urls">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#sec-data-urls">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-data-urls-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="item-iri-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/item-iri-001">item-iri-001</a>
+        <td id="confreq-rs-foreign_bad-fallback">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_bad-fallback">confreq-rs-foreign_bad-fallback</a>
         </td>
-        <td>Item IRI 001</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>Manifest fallback with unsupported fallback</td>
+        <td>This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine item is a DMG, with a fallback to a PSD file.</td>
         <td>
-          <a href="results.html#item-iri-001-results">❐</a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-foreign_bad-fallback-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="package-unlisted-resources-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/package-unlisted-resources-001">package-unlisted-resources-001</a>
+        <td id="confreq-rs-foreign_image">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_image">confreq-rs-foreign_image</a>
         </td>
-        <td>Package Unlisted Resources 001</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>Manifest fallback with image</td>
+        <td>An HTML content file contains a PSD image, with a manifest fallback to a PNG image. This tests fallbacks for resources that are not in the spine.</td>
         <td>
-          <a href="results.html#package-unlisted-resources-001-results">❐</a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-foreign_image-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="publication-identifier-001A">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/publication-identifier-001A">publication-identifier-001A</a>
+        <td id="confreq-rs-foreign_json-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_json-spine">confreq-rs-foreign_json-spine</a>
         </td>
-        <td>Publication Identifier 001A</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>Manifest fallback With JSON content document in spine</td>
+        <td>This EPUB uses a JSON content file in the spine, with a manifest fallback to an HTML document. If the reading system does not support JSON, it should display the HTML.</td>
         <td>
-          <a href="results.html#publication-identifier-001A-results">❐</a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-foreign_json-spine-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="publication-identifier-001B">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/publication-identifier-001B">publication-identifier-001B</a>
+        <td id="confreq-rs-foreign_xml-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_xml-spine">confreq-rs-foreign_xml-spine</a>
         </td>
-        <td>Publication Identifier 001B</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>Manifest fallback with XML in spine</td>
+        <td>This EPUB uses an ordinary XML content file with mimetype application/xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.</td>
         <td>
-          <a href="results.html#publication-identifier-001B-results">❐</a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-foreign_xml-spine-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="viewport-css-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/viewport-css-001">viewport-css-001</a>
+        <td id="confreq-rs-foreign_xml-suffix-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_xml-suffix-spine">confreq-rs-foreign_xml-suffix-spine</a>
         </td>
-        <td>Acid 2 Test</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>Manifest fallback with XML with suffix in spine</td>
+        <td>This EPUB uses an custom XML content file with mimetype application/dtc+xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.</td>
         <td>
-          <a href="results.html#viewport-css-001-results">❐</a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
         </td>
-      </tr>
-      <tr>
-        <td id="xml-external-entities-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/xml-external-entities-001">xml-external-entities-001</a>
-        </td>
-        <td>XML External Entities 001</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
         <td>
-          <a href="results.html#xml-external-entities-001-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="xml-names-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/xml-names-001">xml-names-001</a>
-        </td>
-        <td>XML Names 001</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#xml-names-001-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="xml-non-validating-parser-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/xml-non-validating-parser-001">xml-non-validating-parser-001</a>
-        </td>
-        <td>XML Non-Validating Parser 001</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#xml-non-validating-parser-001-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="xml-non-validating-parser-002">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/xml-non-validating-parser-002">xml-non-validating-parser-002</a>
-        </td>
-        <td>XML Non-Validating Parser 002</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
-        <td>
-          <a href="results.html#xml-non-validating-parser-002-results">❐</a>
+          <a href="results.html#confreq-rs-foreign_xml-suffix-spine-results">❐</a>
         </td>
       </tr>
     </table>
   </section>
   <section>
-    <h2 id="sec-content-documents-data">Content Documents</h2>
+    <h2 id="sec-package-documents-data">Package Documents</h2>
     <table class="zebra">
       <colgroup>
         <col class="col_id"/>
@@ -147,213 +116,133 @@
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="confreq-mathml-rs-behavior">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-mathml-rs-behavior">confreq-mathml-rs-behavior</a>
+        <td id="confreq-rs-backward-epub">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-backward-epub">confreq-rs-backward-epub</a>
         </td>
-        <td>Support for Presentation MathML</td>
-        <td>A Presentation MathML equation is displayed as part of the XHTML content.</td>
+        <td>Package version less than 3.0</td>
+        <td>“Reading Systems MUST attempt to process an EPUB Publication whose Package Document version attribute is less than "3.0"”. This is an EPUB with package version attribute set to "0", to see if a reading system will open it.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-mathml-rs-behavior">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-mathml-rs-render">(2) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-backward-epub">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-mathml-rs-behavior-results">❐</a>
+          <a href="results.html#confreq-rs-backward-epub-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-epub3-svg">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-epub3-svg">confreq-rs-epub3-svg</a>
+        <td id="confreq-rs-pkg-collections-unknown">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-collections-unknown">confreq-rs-pkg-collections-unknown</a>
         </td>
-        <td>SVG content document</td>
-        <td>An SVG image is displayed as a content document (not as part of an XHTML file).</td>
+        <td>Collection with unknown role</td>
+        <td>The package document contains a collection with an unknown role. The reading system must open the EPUB successfully.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-svg">(1) </a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-collections-unknown">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-epub3-svg-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-collections-unknown-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-epub3-xhtml">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-epub3-xhtml">confreq-rs-epub3-xhtml</a>
+        <td id="confreq-rs-pkg-creator-order">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-creator-order">confreq-rs-pkg-creator-order</a>
         </td>
-        <td>XHTML content document</td>
-        <td>An XHTML file is displayed as a content document.</td>
+        <td>Creators listed in order</td>
+        <td>Several creators are listed in the package document. The reading system must not display them out of order (but it may display only the first).</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-xhtml">(1) </a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-creator-order">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-epub3-xhtml-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-creator-order-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-svg-rs-css-embed-inc">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-svg-rs-css-embed-inc">confreq-svg-rs-css-embed-inc</a>
+        <td id="confreq-rs-pkg-manifest-unknown">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-manifest-unknown">confreq-rs-pkg-manifest-unknown</a>
         </td>
-        <td>CSS applied to included SVG</td>
-        <td>CSS changes the color of an SVG image that is embedded in the XHTML content by inclusion.</td>
+        <td>Manifest Item with Unknown Properties</td>
+        <td>The package document contains a manifest item with unknown properties. The reading system must open the EPUB successfully.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-svg-rs-css-embed-inc">(1) </a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-manifest-unknown">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-svg-rs-css-embed-inc-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-manifest-unknown-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-css-embed-ref">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-css-embed-ref">confreq-rs-css-embed-ref</a>
+        <td id="confreq-rs-pkg-meta-unknown">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-meta-unknown">confreq-rs-pkg-meta-unknown</a>
         </td>
-        <td>CSS not applied to referenced SVG</td>
-        <td>CSS does NOT change the color of an SVG image that is embedded in the XHTML content by reference.</td>
+        <td>Meta Tag with Unknown Property</td>
+        <td>The package document contains a meta tag with an unknown property. The reading system must open the EPUB successfully.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-css-embed-ref">(1) </a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-meta-unknown">(1) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-css-embed-ref-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-meta-unknown-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-svg-rs-embed">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-svg-rs-embed">confreq-svg-rs-embed</a>
+        <td id="confreq-rs-pkg-spine-unknown">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-spine-unknown">confreq-rs-pkg-spine-unknown</a>
         </td>
-        <td>SVG embedded in XHTML content</td>
-        <td>An SVG image is embedded in the XHTML content (as inline SVG).</td>
+        <td>Spine Item with Unknown Properties</td>
+        <td>The package document contains a spine item with unknown properties. The reading system must open the EPUB successfully.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-svg-rs-embed">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#confreq-svg-rs-embed-results">❐</a>
-        </td>
-      </tr>
-    </table>
-  </section>
-  <section>
-    <h2 id="sec-core-media types-data">Core Media Types</h2>
-    <table class="zebra">
-      <colgroup>
-        <col class="col_id"/>
-        <col class="col_title"/>
-        <col/>
-        <col class="col_sref"/>
-        <col class="col_tref"/>
-      </colgroup>
-      <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Specs</th>
-        <th>Ref</th>
-      </tr>
-      <tr>
-        <td id="cmt-gif">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-gif">cmt-gif</a>
-        </td>
-        <td>GIF image</td>
-        <td>A GIF image is displayed as part of the XHTML content.</td>
-        <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-gif">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-spine-unknown">(1) </a>
         </td>
         <td>
-          <a href="results.html#cmt-gif-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-spine-unknown-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="cmt-jpeg">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-jpeg">cmt-jpeg</a>
+        <td id="confreq-rs-pkg-whitespace">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-whitespace">confreq-rs-pkg-whitespace</a>
         </td>
-        <td>JPEG image</td>
-        <td>A JPEG image is displayed as part of the XHTML content.</td>
+        <td>Whitespace Removed from Package Metadata</td>
+        <td>The package document's title and creator contain leading and trailing spaces along with excess internal whitespace. The reading system must render only a single space in all cases.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-jpeg">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-whitespace">(1) </a>
         </td>
         <td>
-          <a href="results.html#cmt-jpeg-results">❐</a>
+          <a href="results.html#confreq-rs-pkg-whitespace-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="cmt-mp3">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-mp3">cmt-mp3</a>
+        <td id="confreq-spine-nonlinear">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-spine-nonlinear">confreq-spine-nonlinear</a>
         </td>
-        <td>MP3 audio</td>
-        <td>An MP3 audio file is displayed as part of the XHTML content.</td>
+        <td>Non-Linear Spine Item is Reachable</td>
+        <td>An itemref in the spine is marked as non-linear. Although it (possibly) cannot be accessed through the table of contents, it can be reached from a link in the XHTML content.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-mp3">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-mp3-aac">(2) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#confreq-spine-nonlinear">(1) </a>
         </td>
         <td>
-          <a href="results.html#cmt-mp3-results">❐</a>
+          <a href="results.html#confreq-spine-nonlinear-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="cmt-mp4-aac">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-mp4-aac">cmt-mp4-aac</a>
+        <td id="sec-pkg-doc-spine">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/sec-pkg-doc-spine">sec-pkg-doc-spine</a>
         </td>
-        <td>MP4 audio</td>
-        <td>An MP4 audio file is displayed as part of the XHTML content.</td>
+        <td>Spine Items in Order</td>
+        <td>Basic test of whether a reading system can display spine items in the correct order. The test is designed to fail if the reading system presents content in the order in which the file names sort, or if it presents files in manifest order rather than spine order.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-cmt-mp4-aac">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-mp3-aac">(2) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#sec-pkg-doc-spine">(1) </a>
         </td>
         <td>
-          <a href="results.html#cmt-mp4-aac-results">❐</a>
+          <a href="results.html#sec-pkg-doc-spine-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="cmt-ogg-opus">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-ogg-opus">cmt-ogg-opus</a>
+        <td id="title-order">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/title-order">title-order</a>
         </td>
-        <td>OPUS audio</td>
-        <td>An OPUS audio file is displayed as part of the XHTML content.</td>
+        <td>First Title in Package</td>
+        <td>Several titles are listed in the package document. The reading system must use the first title (and whether to use other titles is not defined).</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-ogg-opus">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-mp3-aac">(2) </a>
-        </td>
-        <td>
-          <a href="results.html#cmt-ogg-opus-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="cmt-png">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-png">cmt-png</a>
-        </td>
-        <td>PNG image</td>
-        <td>A PNG image is displayed as part of the XHTML content.</td>
-        <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-png">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#title-order">(1) </a>
         </td>
         <td>
-          <a href="results.html#cmt-png-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="cmt-svg">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-svg">cmt-svg</a>
-        </td>
-        <td>SVG image</td>
-        <td>An SVG image is displayed as part of the XHTML content (as a reference, not embedded).</td>
-        <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-svg">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
-        </td>
-        <td>
-          <a href="results.html#cmt-svg-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="cmt-webp">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-webp">cmt-webp</a>
-        </td>
-        <td>WEBP image</td>
-        <td>A WEBP image is displayed as part of the XHTML content.</td>
-        <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-webp">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
-        </td>
-        <td>
-          <a href="results.html#cmt-webp-results">❐</a>
+          <a href="results.html#title-order-results">❐</a>
         </td>
       </tr>
     </table>
@@ -517,6 +406,104 @@
     </table>
   </section>
   <section>
+    <h2 id="sec-content-documents-data">Content Documents</h2>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id"/>
+        <col class="col_title"/>
+        <col/>
+        <col class="col_sref"/>
+        <col class="col_tref"/>
+      </colgroup>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Specs</th>
+        <th>Ref</th>
+      </tr>
+      <tr>
+        <td id="confreq-mathml-rs-behavior">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-mathml-rs-behavior">confreq-mathml-rs-behavior</a>
+        </td>
+        <td>Support for Presentation MathML</td>
+        <td>A Presentation MathML equation is displayed as part of the XHTML content.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-mathml-rs-behavior">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-mathml-rs-render">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-mathml-rs-behavior-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-epub3-svg">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-epub3-svg">confreq-rs-epub3-svg</a>
+        </td>
+        <td>SVG content document</td>
+        <td>An SVG image is displayed as a content document (not as part of an XHTML file).</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-svg">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-epub3-svg-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-epub3-xhtml">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-epub3-xhtml">confreq-rs-epub3-xhtml</a>
+        </td>
+        <td>XHTML content document</td>
+        <td>An XHTML file is displayed as a content document.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-xhtml">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-epub3-xhtml-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-svg-rs-css-embed-inc">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-svg-rs-css-embed-inc">confreq-svg-rs-css-embed-inc</a>
+        </td>
+        <td>CSS applied to included SVG</td>
+        <td>CSS changes the color of an SVG image that is embedded in the XHTML content by inclusion.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-svg-rs-css-embed-inc">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-svg-rs-css-embed-inc-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-css-embed-ref">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-css-embed-ref">confreq-rs-css-embed-ref</a>
+        </td>
+        <td>CSS not applied to referenced SVG</td>
+        <td>CSS does NOT change the color of an SVG image that is embedded in the XHTML content by reference.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-css-embed-ref">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-css-embed-ref-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="confreq-svg-rs-embed">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-svg-rs-embed">confreq-svg-rs-embed</a>
+        </td>
+        <td>SVG embedded in XHTML content</td>
+        <td>An SVG image is embedded in the XHTML content (as inline SVG).</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-svg-rs-embed">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-svg-rs-embed-results">❐</a>
+        </td>
+      </tr>
+    </table>
+  </section>
+  <section>
     <h2 id="sec-navigation-documents-data">Navigation Documents</h2>
     <table class="zebra">
       <colgroup>
@@ -633,7 +620,7 @@
     </table>
   </section>
   <section>
-    <h2 id="sec-package-documents-data">Package Documents</h2>
+    <h2 id="sec-(uncategorized)-data">(Uncategorized)</h2>
     <table class="zebra">
       <colgroup>
         <col class="col_id"/>
@@ -650,139 +637,119 @@
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="confreq-rs-backward-epub">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-backward-epub">confreq-rs-backward-epub</a>
+        <td id="fxl-viewport-crop-001">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-viewport-crop-001">fxl-viewport-crop-001</a>
         </td>
-        <td>Package version less than 3.0</td>
-        <td>“Reading Systems MUST attempt to process an EPUB Publication whose Package Document version attribute is less than "3.0"”. This is an EPUB with package version attribute set to "0", to see if a reading system will open it.</td>
+        <td>FXL Viewport Crop 001</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-backward-epub">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#confreq-rs-backward-epub-results">❐</a>
+          <a href="results.html#fxl-viewport-crop-001-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-pkg-collections-unknown">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-collections-unknown">confreq-rs-pkg-collections-unknown</a>
+        <td id="item-iri-001">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/item-iri-001">item-iri-001</a>
         </td>
-        <td>Collection with unknown role</td>
-        <td>The package document contains a collection with an unknown role. The reading system must open the EPUB successfully.</td>
+        <td>Item IRI 001</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-collections-unknown">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#confreq-rs-pkg-collections-unknown-results">❐</a>
+          <a href="results.html#item-iri-001-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-pkg-creator-order">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-creator-order">confreq-rs-pkg-creator-order</a>
+        <td id="package-unlisted-resources-001">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/package-unlisted-resources-001">package-unlisted-resources-001</a>
         </td>
-        <td>Creators listed in order</td>
-        <td>Several creators are listed in the package document. The reading system must not display them out of order (but it may display only the first).</td>
+        <td>Package Unlisted Resources 001</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-creator-order">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#confreq-rs-pkg-creator-order-results">❐</a>
+          <a href="results.html#package-unlisted-resources-001-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-pkg-manifest-unknown">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-manifest-unknown">confreq-rs-pkg-manifest-unknown</a>
+        <td id="publication-identifier-001A">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/publication-identifier-001A">publication-identifier-001A</a>
         </td>
-        <td>Manifest Item with Unknown Properties</td>
-        <td>The package document contains a manifest item with unknown properties. The reading system must open the EPUB successfully.</td>
+        <td>Publication Identifier 001A</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-manifest-unknown">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#confreq-rs-pkg-manifest-unknown-results">❐</a>
+          <a href="results.html#publication-identifier-001A-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-pkg-meta-unknown">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-meta-unknown">confreq-rs-pkg-meta-unknown</a>
+        <td id="publication-identifier-001B">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/publication-identifier-001B">publication-identifier-001B</a>
         </td>
-        <td>Meta Tag with Unknown Property</td>
-        <td>The package document contains a meta tag with an unknown property. The reading system must open the EPUB successfully.</td>
+        <td>Publication Identifier 001B</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-meta-unknown">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#confreq-rs-pkg-meta-unknown-results">❐</a>
+          <a href="results.html#publication-identifier-001B-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-pkg-spine-unknown">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-spine-unknown">confreq-rs-pkg-spine-unknown</a>
+        <td id="viewport-css-001">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/viewport-css-001">viewport-css-001</a>
         </td>
-        <td>Spine Item with Unknown Properties</td>
-        <td>The package document contains a spine item with unknown properties. The reading system must open the EPUB successfully.</td>
+        <td>Acid 2 Test</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-spine-unknown">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#confreq-rs-pkg-spine-unknown-results">❐</a>
+          <a href="results.html#viewport-css-001-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-pkg-whitespace">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-whitespace">confreq-rs-pkg-whitespace</a>
+        <td id="xml-external-entities-001">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/xml-external-entities-001">xml-external-entities-001</a>
         </td>
-        <td>Whitespace Removed from Package Metadata</td>
-        <td>The package document's title and creator contain leading and trailing spaces along with excess internal whitespace. The reading system must render only a single space in all cases.</td>
+        <td>XML External Entities 001</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-whitespace">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#confreq-rs-pkg-whitespace-results">❐</a>
+          <a href="results.html#xml-external-entities-001-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-spine-nonlinear">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-spine-nonlinear">confreq-spine-nonlinear</a>
+        <td id="xml-names-001">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/xml-names-001">xml-names-001</a>
         </td>
-        <td>Non-Linear Spine Item is Reachable</td>
-        <td>An itemref in the spine is marked as non-linear. Although it (possibly) cannot be accessed through the table of contents, it can be reached from a link in the XHTML content.</td>
+        <td>XML Names 001</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#confreq-spine-nonlinear">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#confreq-spine-nonlinear-results">❐</a>
+          <a href="results.html#xml-names-001-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="sec-pkg-doc-spine">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/sec-pkg-doc-spine">sec-pkg-doc-spine</a>
+        <td id="xml-non-validating-parser-001">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/xml-non-validating-parser-001">xml-non-validating-parser-001</a>
         </td>
-        <td>Spine Items in Order</td>
-        <td>Basic test of whether a reading system can display spine items in the correct order. The test is designed to fail if the reading system presents content in the order in which the file names sort, or if it presents files in manifest order rather than spine order.</td>
+        <td>XML Non-Validating Parser 001</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#sec-pkg-doc-spine">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#sec-pkg-doc-spine-results">❐</a>
+          <a href="results.html#xml-non-validating-parser-001-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="title-order">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/title-order">title-order</a>
+        <td id="xml-non-validating-parser-002">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/xml-non-validating-parser-002">xml-non-validating-parser-002</a>
         </td>
-        <td>First Title in Package</td>
-        <td>Several titles are listed in the package document. The reading system must use the first title (and whether to use other titles is not defined).</td>
+        <td>XML Non-Validating Parser 002</td>
+        <td>(No description)</td>
+        <td>n.a. </td>
         <td>
-          <a href="https://www.w3.org/TR/epub-33-rs/#title-order">(1) </a>
-        </td>
-        <td>
-          <a href="results.html#title-order-results">❐</a>
+          <a href="results.html#xml-non-validating-parser-002-results">❐</a>
         </td>
       </tr>
     </table>
   </section>
   <section>
-    <h2 id="sec-publication-resources-data">Publication Resources</h2>
+    <h2 id="sec-core-media types-data">Core Media Types</h2>
     <table class="zebra">
       <colgroup>
         <col class="col_id"/>
@@ -799,82 +766,115 @@
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="confreq-rs-data-urls">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-data-urls">confreq-rs-data-urls</a>
+        <td id="cmt-gif">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-gif">cmt-gif</a>
         </td>
-        <td>Data URL does not open in top-level context</td>
-        <td>XHTML content contains an img element where the src attribute is given as a data URL. RS must display the image rather than opening it in a new top-level browsing context.</td>
+        <td>GIF image</td>
+        <td>A GIF image is displayed as part of the XHTML content.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-data-urls">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#sec-data-urls">(2) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-gif">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-data-urls-results">❐</a>
+          <a href="results.html#cmt-gif-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign_bad-fallback">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_bad-fallback">confreq-rs-foreign_bad-fallback</a>
+        <td id="cmt-jpeg">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-jpeg">cmt-jpeg</a>
         </td>
-        <td>Manifest fallback with unsupported fallback</td>
-        <td>This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine item is a DMG, with a fallback to a PSD file.</td>
+        <td>JPEG image</td>
+        <td>A JPEG image is displayed as part of the XHTML content.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-jpeg">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign_bad-fallback-results">❐</a>
+          <a href="results.html#cmt-jpeg-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign_image">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_image">confreq-rs-foreign_image</a>
+        <td id="cmt-mp3">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-mp3">cmt-mp3</a>
         </td>
-        <td>Manifest fallback with image</td>
-        <td>An HTML content file contains a PSD image, with a manifest fallback to a PNG image. This tests fallbacks for resources that are not in the spine.</td>
+        <td>MP3 audio</td>
+        <td>An MP3 audio file is displayed as part of the XHTML content.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-mp3">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-mp3-aac">(2) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign_image-results">❐</a>
+          <a href="results.html#cmt-mp3-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign_json-spine">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_json-spine">confreq-rs-foreign_json-spine</a>
+        <td id="cmt-mp4-aac">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-mp4-aac">cmt-mp4-aac</a>
         </td>
-        <td>Manifest fallback With JSON content document in spine</td>
-        <td>This EPUB uses a JSON content file in the spine, with a manifest fallback to an HTML document. If the reading system does not support JSON, it should display the HTML.</td>
+        <td>MP4 audio</td>
+        <td>An MP4 audio file is displayed as part of the XHTML content.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-cmt-mp4-aac">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-mp3-aac">(2) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign_json-spine-results">❐</a>
+          <a href="results.html#cmt-mp4-aac-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign_xml-spine">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_xml-spine">confreq-rs-foreign_xml-spine</a>
+        <td id="cmt-ogg-opus">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-ogg-opus">cmt-ogg-opus</a>
         </td>
-        <td>Manifest fallback with XML in spine</td>
-        <td>This EPUB uses an ordinary XML content file with mimetype application/xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.</td>
+        <td>OPUS audio</td>
+        <td>An OPUS audio file is displayed as part of the XHTML content.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-ogg-opus">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-mp3-aac">(2) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign_xml-spine-results">❐</a>
+          <a href="results.html#cmt-ogg-opus-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="confreq-rs-foreign_xml-suffix-spine">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-foreign_xml-suffix-spine">confreq-rs-foreign_xml-suffix-spine</a>
+        <td id="cmt-png">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-png">cmt-png</a>
         </td>
-        <td>Manifest fallback with XML with suffix in spine</td>
-        <td>This EPUB uses an custom XML content file with mimetype application/dtc+xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.</td>
+        <td>PNG image</td>
+        <td>A PNG image is displayed as part of the XHTML content.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-foreign">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-png">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
         </td>
         <td>
-          <a href="results.html#confreq-rs-foreign_xml-suffix-spine-results">❐</a>
+          <a href="results.html#cmt-png-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="cmt-svg">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-svg">cmt-svg</a>
+        </td>
+        <td>SVG image</td>
+        <td>An SVG image is displayed as part of the XHTML content (as a reference, not embedded).</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-svg">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#cmt-svg-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="cmt-webp">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-webp">cmt-webp</a>
+        </td>
+        <td>WEBP image</td>
+        <td>A WEBP image is displayed as part of the XHTML content.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#cmt-webp">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-epub3-images">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#cmt-webp-results">❐</a>
         </td>
       </tr>
     </table>

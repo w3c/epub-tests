@@ -23,7 +23,7 @@ const fs = fs_old_school.promises;
 import * as xml2js from "xml2js";
 
 import { TestData, ImplementationReport, ImplementationData, ImplementationTable, Implementer, ReportData, Constants, Config } from './types';
-import { switch_reference } from './config';
+import { change_doc_references } from './config';
 
 /** 
  * Name tells it all...
@@ -208,7 +208,7 @@ async function get_test_metadata(config: Config, dir_name: string): Promise<Test
             description : get_string_value("dc:description", "(No description)"),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)"),
             creator     : get_string_value("dc:creator", "(Unknown)"),
-            references  : metadata["meta"].filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy").map((entry:any): string => switch_reference(config, entry._)),
+            references  : metadata["meta"].filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy").map((entry:any): string => change_doc_references(config, entry._)),
         }
     }
 
