@@ -2,7 +2,7 @@ name: Automatic Report generation
 on:
   push:
     branches: [main]
-    paths: ["reports/**", "tests/**", "src/**", "docs/drafts/*.html"]
+    paths: ["reports/**", "tests/**", "src/**", "docs/drafts/*.html", "docs/drafts/config.json"]
 
 jobs:
   build:

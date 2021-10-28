@@ -40,7 +40,7 @@ function string_comparison(a: string, b: string): number {
  * 
  * @internal 
  */
- function isDirectory(name: string): boolean {
+function isDirectory(name: string): boolean {
     return fs_old_school.lstatSync(name).isDirectory();
 }
 
@@ -103,7 +103,7 @@ async function get_implementation_reports(dir_name: string): Promise<Implementat
  * are usually using the same engine, so their results should be merged into one for the purpose of a formal
  * report for the AC.
  *
- * @param implementations the original list of implementations
+ * @param implementations the original list of implementation reports
  * @returns a consolidated list of the implementation reports
  */
 function consolidate_implementation_reports(implementations: ImplementationReport[]): ImplementationReport[] {
@@ -207,7 +207,9 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             description : get_string_value("dc:description", "(No description)"),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)"),
             creator     : get_string_value("dc:creator", "(Unknown)"),
-            references  : metadata["meta"].filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy").map((entry:any): string => entry._),
+            references  : metadata["meta"]
+                .filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy")
+                .map((entry:any): string => entry._),
         }
     }
 
@@ -263,7 +265,10 @@ function create_implementation_tables(implementation_data: ImplementationData[])
     }
 
     // Sort the results per section heading
-    retval.sort( (a,b) => string_comparison(a.header, b.header));
+    // Note that this sounds like unnecessary, because, at a later step, the sections are reordered
+    // per the configuration file. But this is a safety measure: if the configuration file is
+    // not available and/or erroneous, the order is still somewhat deterministic.
+    retval.sort((a,b) => string_comparison(a.header, b.header));
     return retval;
 }
 

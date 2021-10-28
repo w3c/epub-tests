@@ -65,6 +65,9 @@ export namespace Constants {
 
     /** CSS Class name for the list of creators  */
     export const CLASS_CREATOR_LIST: string = "creator_list";
+
+    /** Config file location */
+    export const CONFIG_FILE: string = `${DOCS_DIR}/config.json`;
 }
 
 /**
@@ -147,8 +150,8 @@ export interface ImplementationTable {
  * Data needed for the display of the test results
  */
 export interface ReportData {
-    tables: ImplementationTable[],
-    consolidated_tables: ImplementationTable[],
-    implementers : Implementer[],
+    tables: ImplementationTable[];
+    consolidated_tables: ImplementationTable[];
+    implementers : Implementer[];
     consolidated_implementers: Implementer[];
 } 
