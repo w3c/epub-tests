@@ -145,7 +145,10 @@ The package document for each test must contain the following metadata, which is
 * `dc:description`: A longer description of the test for the generated test report.
 
 * `dc:coverage`: Which section of the report the test should be listed in. The report has a separate table for each section
-   to make it more readable. The current list of sections is listed in a [JSON configuration file](https://github.com/w3c/epub-tests/blob/main/docs/drafts/config.json); if you add a new coverage value, please edit that JSON file (preferably as part of you Pull Request) to add it to the `coverage_labels` list member of the JSON file. Note that the order in that list is important and should reflect the order of the corresponding sections in the EPUB specification.
+   to make it more readable. The current list of sections is listed in a
+   [JSON configuration file](https://github.com/w3c/epub-tests/blob/main/docs/drafts/config.json); if you add a new coverage
+   value, edit that JSON file in the same pull request to add the new value under the `coverage_labels`. That list should
+   reflect the order of the corresponding sections in the EPUB specification.
 
 * `dcterms:isReferencedBy` (repeated, as part of a `meta` element): A series of URLs that refer to the relevant sections of
    the specification. These links provide back-links to the relevant normative statements from each test entry in the
