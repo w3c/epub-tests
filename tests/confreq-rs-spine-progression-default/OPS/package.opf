@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage>Internationalization</dc:coverage>
+    <dc:creator>Dave Cramer</dc:creator>
+    <dc:date>2021-01-21</dc:date>
+    <dc:description>
+      In a publication set as using an RTL language, the spine does not set 'page-progression-direction', so it is implicitly
+      'default'.  The pages must appear from right to left.
+    </dc:description>
+    <dc:identifier id="pub-id">confreq-rs-spine-progression-default</dc:identifier>
+    <dc:language>ar</dc:language>
+    <dc:title>RTL publication's spine has implicit 'page-progression-direction="default"'</dc:title>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33-rs/#confreq-rs-spine-progression-default</meta>
+    <meta property="dcterms:modified">2021-01-21T00:00:00Z</meta>
+  </metadata>
+  <manifest>
+    <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
+    <item id="content_002" href="content_002.xhtml" media-type="application/xhtml+xml" />
+    <item id="content_003" href="content_003.xhtml" media-type="application/xhtml+xml" />
+    <item id="content_004" href="content_004.xhtml" media-type="application/xhtml+xml" />
+    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
+  </manifest>
+  <spine>
+    <itemref idref="content_001" />
+    <itemref idref="content_002" />
+    <itemref idref="content_003" />
+    <itemref idref="content_004" />
+  </spine>
+</package>
