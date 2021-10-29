@@ -5,8 +5,8 @@
     <dc:creator>Dave Cramer</dc:creator>
     <dc:date>2021-01-21</dc:date>
     <dc:description>
-      In an Arabic publication, the spine does not set 'page-progression-direction', so it is implicitly 'default'.  The
-      pages must appear from right to left.
+      In a publication set as using an RTL language, the spine does not set 'page-progression-direction', so it is implicitly
+      'default'.  The pages must appear from right to left.
     </dc:description>
     <dc:identifier id="pub-id">confreq-rs-spine-progression-default</dc:identifier>
     <dc:language>ar</dc:language>
