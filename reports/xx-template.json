@@ -43,6 +43,10 @@
         "confreq-rs-pkg-spine-unknown": false,
         "confreq-rs-pkg-unique-id": false,
         "confreq-rs-pkg-whitespace": false,
+        "confreq-rs-spine-progression-default": false,
+        "confreq-rs-spine-progression-prepaginated": false,
+        "confreq-rs-spine-progression_ltr": false,
+        "confreq-rs-spine-progression_rtl": false,
         "confreq-rs-xml-extid": false,
         "confreq-rs-xml-ns": false,
         "confreq-rs-xml-nval_invalid": false,
@@ -52,10 +56,6 @@
         "confreq-svg-rs-embed": false,
         "container-default-rendition_arbitrary": false,
         "container-default-rendition_multiple": false,
-        "page-progression-001": false,
-        "page-progression-002": false,
-        "page-progression-003": false,
-        "page-progression-004": false,
         "sec-pkg-doc-spine": false,
         "title-order": false
     }
