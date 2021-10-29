@@ -164,16 +164,16 @@ In this example, only the relevant metadata items are shown:
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-        <dc:identifier id="pub-id">test_id_12345</dc:identifier>
-        <dc:title dir="rtl" xml:lang="he">CSS: הרפתקה חדשה!</dc:title>
-        <dc:description>
-            The dc:title element contains text whose proper rendering requires bidi control. 
-            The element's 'dir' attribute is set to 'rtl'; the title should display from right to left.
-        </dc:description>
         <dc:coverage>Internationalization</dc:coverage>
-        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
-        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-pkg-doc-base-dir</meta>
+        <dc:description>
+            The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute
+            is set to 'rtl'; the title should display from right to left.
+        </dc:description>
+        <dc:identifier id="pub-id">confreq-rs-pkg-dir_rtl-root-unset</dc:identifier>
+        <dc:title dir="rtl" xml:lang="he">CSS: הרפתקה חדשה!</dc:title>
         <meta property="dcterms:alternative">Title's base direction set to RTL</meta>
+        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
+        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir</meta>
     </metadata>
     ...
  </package>
