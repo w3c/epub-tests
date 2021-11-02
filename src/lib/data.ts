@@ -40,7 +40,7 @@ function string_comparison(a: string, b: string): number {
  * 
  * @internal 
  */
-function isDirectory(name: string): boolean {
+export function isDirectory(name: string): boolean {
     return fs_old_school.lstatSync(name).isDirectory();
 }
 
@@ -49,7 +49,7 @@ function isDirectory(name: string): boolean {
  * 
  * @internal 
  */
-function isFile(name: string): boolean {
+export function isFile(name: string): boolean {
     return fs_old_school.lstatSync(name).isFile();
 }
 
@@ -63,7 +63,7 @@ function isFile(name: string): boolean {
  * @returns lists of files in the directory
  */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-async function get_list_dir(dir_name: string, filter_name: (name: string) => boolean = (name: string) => true): Promise<string[]> {
+export async function get_list_dir(dir_name: string, filter_name: (name: string) => boolean = (name: string) => true): Promise<string[]> {
     // The filter works on the full path, hence this extra layer
     const file_name_filter = (name: string): boolean => {
         return name.startsWith('xx-') === false && filter_name(`${dir_name}/${name}`);
