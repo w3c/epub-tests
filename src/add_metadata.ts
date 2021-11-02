@@ -6,7 +6,6 @@ import { Constants } from './lib/types';
 
 const new_metadata: string[] = [
     '    <dc:rights>https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</dc:rights>',
-    '    <dc:rightsHolder>https://www.w3.org</dc:rightsHolder>',
 ]
 
 async function main() {

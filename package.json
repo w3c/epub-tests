@@ -10,7 +10,7 @@
     "generate": "./node_modules/ts-node/dist/bin.js src/main.ts",
     "respec": "(cd docs/drafts; ../../node_modules/respec/tools/respec2html.js --localhost  -s index.html -o ../index.html; ../../node_modules/respec/tools/respec2html.js --localhost -s results.html -o ../results.html)",
     "lint": "eslint . --ext .ts",
-    "extra_metadata": "./node_modules/ts-node/dist/bin.js src/add_metadata.ts"
+    "extra_metadata": "./node_modules/ts-node/dist/bin.js src/add_metadata.ts; (cd local_tests; for i in `find . -type d -maxdepth 1 -mindepth 1`; do toEpub $i; done)"
   },
   "repository": {
     "type": "git",
