@@ -1,8 +1,9 @@
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
-import {get_list_dir, isFile, isDirectory} from './lib/data';
+import {get_list_dir, isDirectory} from './lib/data';
 import { Constants } from './lib/types';
+import { create_epub } from './lib/epub';
 
 const new_metadata: string[] = [
     '    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>',
@@ -34,8 +35,14 @@ async function main() {
     }
 
     const dirs: string[] = await get_list_dir(dir_name, isDirectory);
-    const promises: Promise<void>[] = dirs.map((test) => handle_single_test_metadata(`${dir_name}/${test}`));
-    await Promise.all(promises);
+
+    // Modify the metadata content for the tests
+    const dir_promises: Promise<void>[] = dirs.map((test) => handle_single_test_metadata(`${dir_name}/${test}`));
+    await Promise.all(dir_promises);
+
+    // Generate the epub files themselves
+    const epub_promises: Promise<void>[] = dirs.map((test) => create_epub(`${dir_name}/${test}`));
+    await Promise.all(epub_promises);
 }
 
 main();
