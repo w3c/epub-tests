@@ -10,6 +10,9 @@ const new_metadata: string[] = [
     '    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>',
 ]
 
+/**
+ * Main entry point for the separate metadata extension: modify the OPF file for each test directory, and generate the epub files themselves.
+ */
 async function main() {
     const dir_name = 'local_tests'; /* Constants.TEST_DIR */
     const handle_single_test_metadata = async (file_name: string): Promise<void> => {
