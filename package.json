@@ -1,6 +1,6 @@
 {
   "name": "epub-tests",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatic reporting of EPUB 3 testing results",
   "main": "bin/main.js",
   "directories": {

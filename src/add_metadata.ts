@@ -5,11 +5,12 @@ import {get_list_dir, isFile, isDirectory} from './lib/data';
 import { Constants } from './lib/types';
 
 const new_metadata: string[] = [
-    '    <dc:rights>https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</dc:rights>',
+    '    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>',
+    '    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>',
 ]
 
 async function main() {
-    const dir_name = 'local_tests';
+    const dir_name = 'local_tests'; /* Constants.TEST_DIR */
     const handle_single_test_metadata = async (file_name: string): Promise<void> => {
         const opf_file = `${file_name}/${Constants.OPF_FILE}`;
         const package_xml = await fs.readFile(opf_file,'utf-8');
