@@ -68,6 +68,8 @@ export namespace Constants {
 
     /** Config file location */
     export const CONFIG_FILE: string = `${DOCS_DIR}/config.json`;
+
+    export const EPUB_MEDIA_TYPE: string = 'application/epub+zip';
 }
 
 /**

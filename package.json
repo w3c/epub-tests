@@ -10,7 +10,7 @@
     "generate": "./node_modules/ts-node/dist/bin.js src/main.ts",
     "respec": "(cd docs/drafts; ../../node_modules/respec/tools/respec2html.js --localhost  -s index.html -o ../index.html; ../../node_modules/respec/tools/respec2html.js --localhost -s results.html -o ../results.html)",
     "lint": "eslint . --ext .ts",
-    "extra_metadata": "./node_modules/ts-node/dist/bin.js src/add_metadata.ts; (cd local_tests; for i in `find . -type d -maxdepth 1 -mindepth 1`; do toEpub $i; done)"
+    "add_metadata": "./node_modules/ts-node/dist/bin.js src/add_metadata.ts"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
   "dependencies": {
     "@types/node": "^16.9.4",
     "@types/xml2js": "^0.4.9",
+    "@types/jszip": "^3.4.1",
+    "jszip": "^3.7.1",
     "respec": "^26.13.4",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3",
