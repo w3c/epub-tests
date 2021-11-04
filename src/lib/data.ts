@@ -40,7 +40,7 @@ function string_comparison(a: string, b: string): number {
  * 
  * @internal 
  */
- function isDirectory(name: string): boolean {
+function isDirectory(name: string): boolean {
     return fs_old_school.lstatSync(name).isDirectory();
 }
 
@@ -103,7 +103,7 @@ async function get_implementation_reports(dir_name: string): Promise<Implementat
  * are usually using the same engine, so their results should be merged into one for the purpose of a formal
  * report for the AC.
  *
- * @param implementations the original list of implementations
+ * @param implementations the original list of implementation reports
  * @returns a consolidated list of the implementation reports
  */
 function consolidate_implementation_reports(implementations: ImplementationReport[]): ImplementationReport[] {
@@ -182,7 +182,8 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
                 if (entry === undefined) {
                     return fallback;
                 } else {
-                    return typeof entry === "string" ? entry : entry._;
+                    const retval = typeof entry === "string" ? entry : entry._;
+                    return retval.trim().replace(/\s+/g, ' ');
                 }
             } catch {
                 return fallback;
@@ -205,7 +206,10 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             title       : final_title,
             description : get_string_value("dc:description", "(No description)"),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)"),
-            references  : metadata["meta"].filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy").map((entry:any): string => entry._),
+            creator     : get_string_value("dc:creator", "(Unknown)"),
+            references  : metadata["meta"]
+                .filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy")
+                .map((entry:any): string => entry._),
         }
     }
 
@@ -261,7 +265,10 @@ function create_implementation_tables(implementation_data: ImplementationData[])
     }
 
     // Sort the results per section heading
-    retval.sort( (a,b) => string_comparison(a.header, b.header));
+    // Note that this sounds like unnecessary, because, at a later step, the sections are reordered
+    // per the configuration file. But this is a safety measure: if the configuration file is
+    // not available and/or erroneous, the order is still somewhat deterministic.
+    retval.sort((a,b) => string_comparison(a.header, b.header));
     return retval;
 }
 
@@ -307,10 +314,16 @@ export async function get_report_data(tests: string, reports: string): Promise<R
  */
 export function get_template(report: ReportData): ImplementationReport {
     const test_list: {[index: string]: boolean } = {};
+    const keys: string[] = [];
+
+    // Get the keys first in order to sort them
     for (const table of report.tables) {
         for (const impl of table.implementations) {
-            test_list[impl.identifier] = false;
+            keys.push(impl.identifier);
         }
+    }
+    for (const key of keys.sort()) {
+        test_list[key] = false;
     }
 
     return {

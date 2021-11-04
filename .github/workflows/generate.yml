@@ -1,0 +1,38 @@
+name: Automatic Report generation
+on:
+  push:
+    branches: [main]
+    paths: ["reports/**", "tests/**", "src/**", "docs/drafts/*.html", "docs/drafts/config.json"]
+
+jobs:
+  build:
+    name: Generate Reports using NodeJS
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run generate
+      - run: npm run respec
+      - name: setup git config
+        run: |
+          git config user.name "Report generation bot"
+          git config user.email "<>"
+      - name: commit the changes
+        run: |
+          git add docs/*.html
+          git add docs/drafts/fragments/*.html
+          git add docs/drafts/*.html
+          git add reports/xx-*.json
+          git commit -am "Automated report generation"
+          git push origin main
+
+

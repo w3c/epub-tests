@@ -7,9 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "build": "tsc",
-    "generate": "node bin/main.js",
-    "ts": "ts-node src/main.ts",
+    "generate": "./node_modules/ts-node/dist/bin.js src/main.ts",
+    "respec": "(cd docs/drafts; ../../node_modules/respec/tools/respec2html.js --localhost  -s index.html -o ../index.html; ../../node_modules/respec/tools/respec2html.js --localhost -s results.html -o ../results.html)",
     "lint": "eslint . --ext .ts"
   },
   "repository": {
@@ -23,14 +22,16 @@
   },
   "homepage": "https://github.com/w3c/epub-tests#readme",
   "dependencies": {
+    "@types/node": "^16.9.4",
+    "@types/xml2js": "^0.4.9",
+    "respec": "^26.13.4",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
-    "@types/node": "^16.9.4",
-    "@types/xml2js": "^0.4.9",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
-    "eslint": "^7.32.0",
-    "typescript": "^4.4.3"
+    "eslint": "^7.32.0"
   }
 }

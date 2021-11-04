@@ -7,7 +7,7 @@
     <dc:description>TODO: A longer description of the test for the generated test report.</dc:description>
     <dc:identifier id="pub-id">TODO: spec-anchor</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>TODO: Concise Test Title</dc:title>
+    <dc:title>TODO: Concise test title</dc:title>
     <meta property="dcterms:isReferencedBy">TODO: https://www.w3.org/TR/epub-33/#spec-anchor</meta>
     <meta property="dcterms:isReferencedBy">TODO: https://www.w3.org/TR/epub-rs-33/#spec-anchor</meta>
     <meta property="dcterms:modified">2021-01-01T00:00:00Z</meta>

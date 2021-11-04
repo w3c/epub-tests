@@ -1,0 +1,23 @@
+{
+    "final": false,
+    "document_mappings": [
+        {
+            "from": "https://www.w3.org/TR/epub-rs-33/",
+            "to": "https://w3c.github.io/epub-specs/epub33/rs/"
+        },
+        {
+            "from": "https://www.w3.org/TR/epub-33/",
+            "to": "https://w3c.github.io/epub-specs/epub33/core/"
+        }
+    ],
+    "coverage_labels": [
+        "Publication Resources",
+        "Core Media Types",
+        "Package Documents",
+        "Internationalization",
+        "Content Documents",
+        "Navigation Documents",
+        "Fixed Layout",
+        "Open Container Format"
+    ]
+}

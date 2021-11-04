@@ -1,0 +1,1758 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 26.16.1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+		
+		
+<title>EPUB 3.3 Test Results</title>
+		
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+.hljs{background:0 0!important}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+		
+<link rel="stylesheet" href="css/tables.css">
+		
+	
+<meta name="description" content="Results of EPUB Testing.">
+<link rel="canonical" href="https://www.w3.org/TR/epub-tests-results/">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "group": "epub",
+  "wgPublicList": "public-epub3",
+  "specStatus": "base",
+  "noRecTrack": true,
+  "publishDate": "2021-10-28",
+  "shortName": "epub-tests-results",
+  "edDraftURI": "https://w3c.github.io/epub-tests/results/",
+  "copyrightStart": "2021",
+  "editors": [
+    {
+      "name": "Ivan Herman",
+      "url": "https://www.w3.org/People/Ivan/",
+      "company": "W3C",
+      "w3cid": 7382,
+      "orcid": "https://orcid.org/0000-0003-0782-2704",
+      "companyURL": "https://www.w3.org"
+    },
+    {
+      "name": "Dan Lazin",
+      "company": "Google LLC",
+      "w3cid": 130027,
+      "companyURL": "https://www.google.com"
+    }
+  ],
+  "processVersion": 2020,
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+  "github": {
+    "repoURL": "https://github.com/w3c/epub-tests",
+    "branch": "main"
+  },
+  "publishISODate": "2021-10-28T00:00:00.000Z",
+  "generatedSubtitle": " 28 October 2021"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
+	
+	<body class="h-entry informative"><div class="head">
+     <h1 id="title" class="title">EPUB 3.3 Test Results</h1>
+    
+    <h2> <time class="dt-published" datetime="2021-10-28">28 October 2021</time></h2>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/epub-tests/results/">https://w3c.github.io/epub-tests/results/</a></dd>
+        <dt>History:</dt><dd>
+        <a href="https://github.com/w3c/epub-tests/commits/main">Commit history</a>
+      </dd>
+        
+        
+        
+        
+        
+        <dt>Editors:</dt>
+        <dd class="editor p-author h-card vcard" data-editor-id="7382">
+    <a class="u-url url p-name fn" href="https://www.w3.org/People/Ivan/">Ivan Herman</a><a class="p-name orcid" href="https://orcid.org/0000-0003-0782-2704"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <style>
+
+    .st1 {
+      fill: #fff;
+    }
+  
+</style>
+  <path d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z" fill="#a6ce39"></path>
+  <path class="st1" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7C191.7 111.2 178 93 148 93h-23.7v79.4zM88.7 56.8c0 5.5-4.5 10.1-10.1 10.1s-10.1-4.6-10.1-10.1c0-5.6 4.5-10.1 10.1-10.1s10.1 4.6 10.1 10.1z"></path>
+</svg></a> (<a class="p-org org h-org" href="https://www.w3.org">W3C</a>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="130027">
+    <span class="p-name fn">Dan Lazin</span> (<a class="p-org org h-org" href="https://www.google.com">Google LLC</a>)
+  </dd>
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/epub-tests/">GitHub w3c/epub-tests</a>
+        (<a href="https://github.com/w3c/epub-tests/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/epub-tests/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/epub-tests/issues/">open issues</a>)
+      </dd><dd><a href="mailto:public-epub3@w3.org?subject=%5Bepub-tests-results%5D%20YOUR%20TOPIC%20HERE">public-epub3@w3.org</a> with subject line <kbd>[epub-tests-results] <em>… message topic …</em></kbd> (<a rel="discussion" href="https://lists.w3.org/Archives/Public/public-epub3">archives</a>)</dd>
+        
+      </dl>
+    </details>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2021
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>
+			<p>Results of EPUB Testing.</p>
+		</section>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
+      This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
+       document. It has no official standing
+      of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-implementer-list"><bdi class="secno">2. </bdi>List of Implementations</a></li><li class="tocline"><a class="tocxref" href="#sec-consolidated-report-tables"><bdi class="secno">3. </bdi>Consolidated Implementation Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-publication-resources-results"><bdi class="secno">3.1 </bdi>Publication Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-results"><bdi class="secno">3.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-package-documents-results"><bdi class="secno">3.3 </bdi>Package Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-results"><bdi class="secno">3.4 </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-results"><bdi class="secno">3.5 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-navigation-documents-results"><bdi class="secno">3.6 </bdi>Navigation Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-fixed-layout-results"><bdi class="secno">3.7 </bdi>Fixed Layout</a></li><li class="tocline"><a class="tocxref" href="#sec-open-container format-results"><bdi class="secno">3.8 </bdi>Open Container Format</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-detailed-report-tables"><bdi class="secno">4. </bdi>Detailed Implementation Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-publication-resources-results"><bdi class="secno">4.1 </bdi>Publication Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-results"><bdi class="secno">4.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-package-documents-results"><bdi class="secno">4.3 </bdi>Package Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-results"><bdi class="secno">4.4 </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-results"><bdi class="secno">4.5 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-navigation-documents-results"><bdi class="secno">4.6 </bdi>Navigation Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-fixed-layout-results"><bdi class="secno">4.7 </bdi>Fixed Layout</a></li><li class="tocline"><a class="tocxref" href="#sec-open-container format-results"><bdi class="secno">4.8 </bdi>Open Container Format</a></li></ol></li></ol></nav>
+
+		<section id="introduction">
+			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
+			<p>
+				This document contains the test results for all tests. There is a <a href="index.html">separate document</a> giving a short description for each tests; these descriptions are linked from the the tests in the tables below.
+			</p>
+
+			<p>
+				Some implementations may come in different "variants": though they have identical core EPUB Reading system engines, their behaviors may slightly diverge 
+				in different environments (typically IOS, Android, or Web) and, therefore, they are reported separately from one another.
+				From the <abbr title="World Wide Web Consortium">W3C</abbr> Process point of view, these variants should not considered to be independent implementations and, 
+				therefore, they should be considered as one implementation as far as the formal Candidate Recommendation report is concerned.
+				On the other hand, implementors may see a value in keeping those implementation results separated.
+			</p>
+
+			<p>
+				The report tables below reflect this duality. <a href="#sec-consolidated-report-tables" class="sec-ref">§&nbsp;<bdi class="secno">3. </bdi>Consolidated Implementation Results</a> shows a view of the reports where reports with identical core engines, albeit in different variants,
+				are displayed as if it was a single implementation. The test results for a specific test is set to <code>true</code> if <em>any</em> of the variants has a <code>true</code> value. On the other hand, the separate <a href="#sec-detailed-report-tables" class="sec-ref">§&nbsp;<bdi class="secno">4. </bdi>Detailed Implementation Results</a> keeps all the variants separate, showing the full implementation results.
+			</p>
+
+			<p>
+				<a href="#sec-implementer-list" class="sec-ref">§&nbsp;<bdi class="secno">2. </bdi>List of Implementations</a> lists all the implementations with the variant in parenthesis, if applicable.
+			</p>
+
+			<p>
+				The development of the tests is a community effort (see the <a href="./index.html#contributors">list of contributors</a>). Everyone is welcome to
+				contribute tests; please read the separate <a href="./contributing">contribution guidelines</a> if you are interested in doing so.
+			</p>
+
+		</section>
+
+		<section id="list-of-implementations">
+  <h2 id="sec-implementer-list"><bdi class="secno">2. </bdi>List of Implementations<a class="self-link" aria-label="§" href="#sec-implementer-list"></a></h2>
+  <ol>
+    <li>
+      <a href="https://www.example.org/acme">ACME Books</a>
+    </li>
+    <li>
+      <a href="https://www.example.org/sea">Example Books (Android)</a>
+    </li>
+    <li>
+      <a href="https://www.example.org/sea">Example Books (iOS)</a>
+    </li>
+    <li>
+      <a href="https://www.example.org/sea">Example Books (Web)</a>
+    </li>
+    <li>
+      <a href="https://www.example.com">T</a>
+    </li>
+  </ol>
+</section>
+		<section id="consolidated-implementation-results">
+  <h2 id="sec-consolidated-report-tables"><bdi class="secno">3. </bdi>Consolidated Implementation Results<a class="self-link" aria-label="§" href="#sec-consolidated-report-tables"></a></h2>
+  <section id="publication-resources">
+    <h3 id="sec-publication-resources-results"><bdi class="secno">3.1 </bdi>Publication Resources<a class="self-link" aria-label="§" href="#sec-publication-resources-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-rs-data-urls-results">
+          <a href="index.html#confreq-rs-data-urls">confreq-rs-data-urls</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_bad-fallback-results">
+          <a href="index.html#confreq-rs-foreign_bad-fallback">confreq-rs-foreign_bad-fallback</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_image-results">
+          <a href="index.html#confreq-rs-foreign_image">confreq-rs-foreign_image</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_json-spine-results">
+          <a href="index.html#confreq-rs-foreign_json-spine">confreq-rs-foreign_json-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_xml-spine-results">
+          <a href="index.html#confreq-rs-foreign_xml-spine">confreq-rs-foreign_xml-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_xml-suffix-spine-results">
+          <a href="index.html#confreq-rs-foreign_xml-suffix-spine">confreq-rs-foreign_xml-suffix-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-xml-extid-results">
+          <a href="index.html#confreq-rs-xml-extid">confreq-rs-xml-extid</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-xml-ns-results">
+          <a href="index.html#confreq-rs-xml-ns">confreq-rs-xml-ns</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-xml-nval_invalid-results">
+          <a href="index.html#confreq-rs-xml-nval_invalid">confreq-rs-xml-nval_invalid</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-xml-nval_unclosed-results">
+          <a href="index.html#confreq-rs-xml-nval_unclosed">confreq-rs-xml-nval_unclosed</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="core-media-types">
+    <h3 id="sec-core-media types-results"><bdi class="secno">3.2 </bdi>Core Media Types<a class="self-link" aria-label="§" href="#sec-core-media types-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="cmt-gif-results">
+          <a href="index.html#cmt-gif">cmt-gif</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="cmt-jpeg-results">
+          <a href="index.html#cmt-jpeg">cmt-jpeg</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="cmt-mp3-results">
+          <a href="index.html#cmt-mp3">cmt-mp3</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+      </tr>
+      <tr>
+        <td id="cmt-mp4-aac-results">
+          <a href="index.html#cmt-mp4-aac">cmt-mp4-aac</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+      </tr>
+      <tr>
+        <td id="cmt-ogg-opus-results">
+          <a href="index.html#cmt-ogg-opus">cmt-ogg-opus</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+      </tr>
+      <tr>
+        <td id="cmt-png-results">
+          <a href="index.html#cmt-png">cmt-png</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="cmt-svg-results">
+          <a href="index.html#cmt-svg">cmt-svg</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="cmt-webp-results">
+          <a href="index.html#cmt-webp">cmt-webp</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="package-documents">
+    <h3 id="sec-package-documents-results"><bdi class="secno">3.3 </bdi>Package Documents<a class="self-link" aria-label="§" href="#sec-package-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-rendition-rs-manifest-results">
+          <a href="index.html#confreq-rendition-rs-manifest">confreq-rendition-rs-manifest</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-backward-epub-results">
+          <a href="index.html#confreq-rs-backward-epub">confreq-rs-backward-epub</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-collections-unknown-results">
+          <a href="index.html#confreq-rs-pkg-collections-unknown">confreq-rs-pkg-collections-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-creator-order-results">
+          <a href="index.html#confreq-rs-pkg-creator-order">confreq-rs-pkg-creator-order</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-manifest-unknown-results">
+          <a href="index.html#confreq-rs-pkg-manifest-unknown">confreq-rs-pkg-manifest-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-manifest-url-results">
+          <a href="index.html#confreq-rs-pkg-manifest-url">confreq-rs-pkg-manifest-url</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-meta-unknown-results">
+          <a href="index.html#confreq-rs-pkg-meta-unknown">confreq-rs-pkg-meta-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-spine-unknown-results">
+          <a href="index.html#confreq-rs-pkg-spine-unknown">confreq-rs-pkg-spine-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-unique-id-results">
+          <a href="index.html#confreq-rs-pkg-unique-id">confreq-rs-pkg-unique-id</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-unique-id-results">
+          <a href="index.html#confreq-rs-pkg-unique-id">confreq-rs-pkg-unique-id</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-whitespace-results">
+          <a href="index.html#confreq-rs-pkg-whitespace">confreq-rs-pkg-whitespace</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-spine-nonlinear-results">
+          <a href="index.html#confreq-spine-nonlinear">confreq-spine-nonlinear</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="sec-pkg-doc-spine-results">
+          <a href="index.html#sec-pkg-doc-spine">sec-pkg-doc-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="title-order-results">
+          <a href="index.html#title-order">title-order</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="internationalization">
+    <h3 id="sec-internationalization-results"><bdi class="secno">3.4 </bdi>Internationalization<a class="self-link" aria-label="§" href="#sec-internationalization-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir-auto_root-rtl-results">
+          <a href="index.html#confreq-rs-pkg-dir-auto_root-rtl">confreq-rs-pkg-dir-auto_root-rtl</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir-auto_root-unset-results">
+          <a href="index.html#confreq-rs-pkg-dir-auto_root-unset">confreq-rs-pkg-dir-auto_root-unset</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_creator-rtl-results">
+          <a href="index.html#confreq-rs-pkg-dir_creator-rtl">confreq-rs-pkg-dir_creator-rtl</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_rtl-root-ltr-results">
+          <a href="index.html#confreq-rs-pkg-dir_rtl-root-ltr">confreq-rs-pkg-dir_rtl-root-ltr</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_rtl-root-unset-results">
+          <a href="index.html#confreq-rs-pkg-dir_rtl-root-unset">confreq-rs-pkg-dir_rtl-root-unset</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_unset-root-rtl-results">
+          <a href="index.html#confreq-rs-pkg-dir_unset-root-rtl">confreq-rs-pkg-dir_unset-root-rtl</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_unset-root-unset-results">
+          <a href="index.html#confreq-rs-pkg-dir_unset-root-unset">confreq-rs-pkg-dir_unset-root-unset</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="page-progression-001-results">
+          <a href="index.html#page-progression-001">page-progression-001</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="page-progression-002-results">
+          <a href="index.html#page-progression-002">page-progression-002</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="page-progression-003-results">
+          <a href="index.html#page-progression-003">page-progression-003</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="page-progression-004-results">
+          <a href="index.html#page-progression-004">page-progression-004</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="content-documents">
+    <h3 id="sec-content-documents-results"><bdi class="secno">3.5 </bdi>Content Documents<a class="self-link" aria-label="§" href="#sec-content-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-css-rs-support-results">
+          <a href="index.html#confreq-css-rs-support">confreq-css-rs-support</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-mathml-rs-behavior-results">
+          <a href="index.html#confreq-mathml-rs-behavior">confreq-mathml-rs-behavior</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-epub3-svg-results">
+          <a href="index.html#confreq-rs-epub3-svg">confreq-rs-epub3-svg</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-epub3-xhtml-results">
+          <a href="index.html#confreq-rs-epub3-xhtml">confreq-rs-epub3-xhtml</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="confreq-svg-rs-css-embed-inc-results">
+          <a href="index.html#confreq-svg-rs-css-embed-inc">confreq-svg-rs-css-embed-inc</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-css-embed-ref-results">
+          <a href="index.html#confreq-rs-css-embed-ref">confreq-rs-css-embed-ref</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="confreq-svg-rs-embed-results">
+          <a href="index.html#confreq-svg-rs-embed">confreq-svg-rs-embed</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="navigation-documents">
+    <h3 id="sec-navigation-documents-results"><bdi class="secno">3.6 </bdi>Navigation Documents<a class="self-link" aria-label="§" href="#sec-navigation-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-nav-activation_in-spine-results">
+          <a href="index.html#confreq-nav-activation_in-spine">confreq-nav-activation_in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-activation_not-in-spine-results">
+          <a href="index.html#confreq-nav-activation_not-in-spine">confreq-nav-activation_not-in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-spine_in-spine-results">
+          <a href="index.html#confreq-nav-spine_in-spine">confreq-nav-spine_in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-spine_not-in-spine-results">
+          <a href="index.html#confreq-nav-spine_not-in-spine">confreq-nav-spine_not-in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="fixed-layout">
+    <h3 id="sec-fixed-layout-results"><bdi class="secno">3.7 </bdi>Fixed Layout<a class="self-link" aria-label="§" href="#sec-fixed-layout-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-fxl-rs-xhtml-icb-results">
+          <a href="index.html#confreq-fxl-rs-xhtml-icb">confreq-fxl-rs-xhtml-icb</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="open-container-format">
+    <h3 id="sec-open-container format-results"><bdi class="secno">3.8 </bdi>Open Container Format<a class="self-link" aria-label="§" href="#sec-open-container format-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(consolidated)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="container-default-rendition_arbitrary-results">
+          <a href="index.html#container-default-rendition_arbitrary">container-default-rendition_arbitrary</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="container-default-rendition_multiple-results">
+          <a href="index.html#container-default-rendition_multiple">container-default-rendition_multiple</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+</section>
+<section id="detailed-implementation-results">
+  <h2 id="sec-detailed-report-tables"><bdi class="secno">4. </bdi>Detailed Implementation Results<a class="self-link" aria-label="§" href="#sec-detailed-report-tables"></a></h2>
+  <section id="publication-resources-0">
+    <h3 id="sec-publication-resources-results"><bdi class="secno">4.1 </bdi>Publication Resources<a class="self-link" aria-label="§" href="#sec-publication-resources-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-rs-data-urls-results-detailed">
+          <a href="index.html#confreq-rs-data-urls">confreq-rs-data-urls</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_bad-fallback-results-detailed">
+          <a href="index.html#confreq-rs-foreign_bad-fallback">confreq-rs-foreign_bad-fallback</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_image-results-detailed">
+          <a href="index.html#confreq-rs-foreign_image">confreq-rs-foreign_image</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_json-spine-results-detailed">
+          <a href="index.html#confreq-rs-foreign_json-spine">confreq-rs-foreign_json-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_xml-spine-results-detailed">
+          <a href="index.html#confreq-rs-foreign_xml-spine">confreq-rs-foreign_xml-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-foreign_xml-suffix-spine-results-detailed">
+          <a href="index.html#confreq-rs-foreign_xml-suffix-spine">confreq-rs-foreign_xml-suffix-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-xml-extid-results-detailed">
+          <a href="index.html#confreq-rs-xml-extid">confreq-rs-xml-extid</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-xml-ns-results-detailed">
+          <a href="index.html#confreq-rs-xml-ns">confreq-rs-xml-ns</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-xml-nval_invalid-results-detailed">
+          <a href="index.html#confreq-rs-xml-nval_invalid">confreq-rs-xml-nval_invalid</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-xml-nval_unclosed-results-detailed">
+          <a href="index.html#confreq-rs-xml-nval_unclosed">confreq-rs-xml-nval_unclosed</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="core-media-types-0">
+    <h3 id="sec-core-media types-results"><bdi class="secno">4.2 </bdi>Core Media Types<a class="self-link" aria-label="§" href="#sec-core-media types-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="cmt-gif-results-detailed">
+          <a href="index.html#cmt-gif">cmt-gif</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="cmt-jpeg-results-detailed">
+          <a href="index.html#cmt-jpeg">cmt-jpeg</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="cmt-mp3-results-detailed">
+          <a href="index.html#cmt-mp3">cmt-mp3</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+      </tr>
+      <tr>
+        <td id="cmt-mp4-aac-results-detailed">
+          <a href="index.html#cmt-mp4-aac">cmt-mp4-aac</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+      </tr>
+      <tr>
+        <td id="cmt-ogg-opus-results-detailed">
+          <a href="index.html#cmt-ogg-opus">cmt-ogg-opus</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+      </tr>
+      <tr>
+        <td id="cmt-png-results-detailed">
+          <a href="index.html#cmt-png">cmt-png</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="cmt-svg-results-detailed">
+          <a href="index.html#cmt-svg">cmt-svg</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="cmt-webp-results-detailed">
+          <a href="index.html#cmt-webp">cmt-webp</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="package-documents-0">
+    <h3 id="sec-package-documents-results"><bdi class="secno">4.3 </bdi>Package Documents<a class="self-link" aria-label="§" href="#sec-package-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-rendition-rs-manifest-results-detailed">
+          <a href="index.html#confreq-rendition-rs-manifest">confreq-rendition-rs-manifest</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-backward-epub-results-detailed">
+          <a href="index.html#confreq-rs-backward-epub">confreq-rs-backward-epub</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-collections-unknown-results-detailed">
+          <a href="index.html#confreq-rs-pkg-collections-unknown">confreq-rs-pkg-collections-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-creator-order-results-detailed">
+          <a href="index.html#confreq-rs-pkg-creator-order">confreq-rs-pkg-creator-order</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-manifest-unknown-results-detailed">
+          <a href="index.html#confreq-rs-pkg-manifest-unknown">confreq-rs-pkg-manifest-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-manifest-url-results-detailed">
+          <a href="index.html#confreq-rs-pkg-manifest-url">confreq-rs-pkg-manifest-url</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-meta-unknown-results-detailed">
+          <a href="index.html#confreq-rs-pkg-meta-unknown">confreq-rs-pkg-meta-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-spine-unknown-results-detailed">
+          <a href="index.html#confreq-rs-pkg-spine-unknown">confreq-rs-pkg-spine-unknown</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-unique-id-results-detailed">
+          <a href="index.html#confreq-rs-pkg-unique-id">confreq-rs-pkg-unique-id</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-unique-id-results-detailed">
+          <a href="index.html#confreq-rs-pkg-unique-id">confreq-rs-pkg-unique-id</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-whitespace-results-detailed">
+          <a href="index.html#confreq-rs-pkg-whitespace">confreq-rs-pkg-whitespace</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-spine-nonlinear-results-detailed">
+          <a href="index.html#confreq-spine-nonlinear">confreq-spine-nonlinear</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="sec-pkg-doc-spine-results-detailed">
+          <a href="index.html#sec-pkg-doc-spine">sec-pkg-doc-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="title-order-results-detailed">
+          <a href="index.html#title-order">title-order</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="internationalization-0">
+    <h3 id="sec-internationalization-results"><bdi class="secno">4.4 </bdi>Internationalization<a class="self-link" aria-label="§" href="#sec-internationalization-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir-auto_root-rtl-results-detailed">
+          <a href="index.html#confreq-rs-pkg-dir-auto_root-rtl">confreq-rs-pkg-dir-auto_root-rtl</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir-auto_root-unset-results-detailed">
+          <a href="index.html#confreq-rs-pkg-dir-auto_root-unset">confreq-rs-pkg-dir-auto_root-unset</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_creator-rtl-results-detailed">
+          <a href="index.html#confreq-rs-pkg-dir_creator-rtl">confreq-rs-pkg-dir_creator-rtl</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_rtl-root-ltr-results-detailed">
+          <a href="index.html#confreq-rs-pkg-dir_rtl-root-ltr">confreq-rs-pkg-dir_rtl-root-ltr</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_rtl-root-unset-results-detailed">
+          <a href="index.html#confreq-rs-pkg-dir_rtl-root-unset">confreq-rs-pkg-dir_rtl-root-unset</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_unset-root-rtl-results-detailed">
+          <a href="index.html#confreq-rs-pkg-dir_unset-root-rtl">confreq-rs-pkg-dir_unset-root-rtl</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-pkg-dir_unset-root-unset-results-detailed">
+          <a href="index.html#confreq-rs-pkg-dir_unset-root-unset">confreq-rs-pkg-dir_unset-root-unset</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="page-progression-001-results-detailed">
+          <a href="index.html#page-progression-001">page-progression-001</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="page-progression-002-results-detailed">
+          <a href="index.html#page-progression-002">page-progression-002</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="page-progression-003-results-detailed">
+          <a href="index.html#page-progression-003">page-progression-003</a>
+        </td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="page-progression-004-results-detailed">
+          <a href="index.html#page-progression-004">page-progression-004</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="content-documents-0">
+    <h3 id="sec-content-documents-results"><bdi class="secno">4.5 </bdi>Content Documents<a class="self-link" aria-label="§" href="#sec-content-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-css-rs-support-results-detailed">
+          <a href="index.html#confreq-css-rs-support">confreq-css-rs-support</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-mathml-rs-behavior-results-detailed">
+          <a href="index.html#confreq-mathml-rs-behavior">confreq-mathml-rs-behavior</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-epub3-svg-results-detailed">
+          <a href="index.html#confreq-rs-epub3-svg">confreq-rs-epub3-svg</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-epub3-xhtml-results-detailed">
+          <a href="index.html#confreq-rs-epub3-xhtml">confreq-rs-epub3-xhtml</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="confreq-svg-rs-css-embed-inc-results-detailed">
+          <a href="index.html#confreq-svg-rs-css-embed-inc">confreq-svg-rs-css-embed-inc</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-rs-css-embed-ref-results-detailed">
+          <a href="index.html#confreq-rs-css-embed-ref">confreq-rs-css-embed-ref</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+      <tr>
+        <td id="confreq-svg-rs-embed-results-detailed">
+          <a href="index.html#confreq-svg-rs-embed">confreq-svg-rs-embed</a>
+        </td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+        <td class="fail">fail</td>
+        <td class="fail">fail</td>
+        <td class="pass">pass</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="navigation-documents-0">
+    <h3 id="sec-navigation-documents-results"><bdi class="secno">4.6 </bdi>Navigation Documents<a class="self-link" aria-label="§" href="#sec-navigation-documents-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-nav-activation_in-spine-results-detailed">
+          <a href="index.html#confreq-nav-activation_in-spine">confreq-nav-activation_in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-activation_not-in-spine-results-detailed">
+          <a href="index.html#confreq-nav-activation_not-in-spine">confreq-nav-activation_not-in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-spine_in-spine-results-detailed">
+          <a href="index.html#confreq-nav-spine_in-spine">confreq-nav-spine_in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="confreq-nav-spine_not-in-spine-results-detailed">
+          <a href="index.html#confreq-nav-spine_not-in-spine">confreq-nav-spine_not-in-spine</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="fixed-layout-0">
+    <h3 id="sec-fixed-layout-results"><bdi class="secno">4.7 </bdi>Fixed Layout<a class="self-link" aria-label="§" href="#sec-fixed-layout-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="confreq-fxl-rs-xhtml-icb-results-detailed">
+          <a href="index.html#confreq-fxl-rs-xhtml-icb">confreq-fxl-rs-xhtml-icb</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+  <section id="open-container-format-0">
+    <h3 id="sec-open-container format-results"><bdi class="secno">4.8 </bdi>Open Container Format<a class="self-link" aria-label="§" href="#sec-open-container format-results"></a></h3>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id">
+      </colgroup>
+      <tbody><tr>
+        <th>Id</th>
+        <th>ACME Books</th>
+        <th>Example Books <br>(Android)</th>
+        <th>Example Books <br>(iOS)</th>
+        <th>Example Books <br>(Web)</th>
+        <th>T</th>
+      </tr>
+      <tr>
+        <td id="container-default-rendition_arbitrary-results-detailed">
+          <a href="index.html#container-default-rendition_arbitrary">container-default-rendition_arbitrary</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="container-default-rendition_multiple-results-detailed">
+          <a href="index.html#container-default-rendition_multiple">container-default-rendition_multiple</a>
+        </td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td>n/a</td>
+      </tr>
+    </tbody></table>
+  </section>
+</section>
+	
+
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
