@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.16.1">
+<meta name="generator" content="ReSpec 27.0.4">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 dfn{cursor:pointer}
@@ -103,7 +103,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-epub3",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2021-10-28",
+  "publishDate": "2021-11-04",
   "shortName": "epub-tests",
   "edDraftURI": "https://w3c.github.io/epub-tests/results/",
   "copyrightStart": "2021",
@@ -132,14 +132,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2021-10-28T00:00:00.000Z",
-  "generatedSubtitle": " 28 October 2021"
+  "publishISODate": "2021-11-04T00:00:00.000Z",
+  "generatedSubtitle": " 04 November 2021"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
 	<body class="h-entry informative"><div class="head">
      <h1 id="title" class="title">EPUB 3.3 Tests</h1>
     
-    <h2> <time class="dt-published" datetime="2021-10-28">28 October 2021</time></h2>
+    <p id="w3c-state"> <time class="dt-published" datetime="2021-11-04">04 November 2021</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -178,9 +178,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <a href="https://github.com/w3c/epub-tests/issues/">open issues</a>)
       </dd><dd><a href="mailto:public-epub3@w3.org?subject=%5Bepub-tests%5D%20YOUR%20TOPIC%20HERE">public-epub3@w3.org</a> with subject line <kbd>[epub-tests] <em>… message topic …</em></kbd> (<a rel="discussion" href="https://lists.w3.org/Archives/Public/public-epub3">archives</a>)</dd>
         
+        
       </dl>
     </details>
-    
     
     
     <p class="copyright">
@@ -220,7 +220,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			<p>
 				The development of the tests is a community effort (see the <a href="#contributors">list of
 				contributors</a>). Everyone is welcome to contribute tests; please read the separate
-				<a href="./contributing">contribution guidelines</a> if you are interested.
+				<a href="contributing">contribution guidelines</a> if you are interested.
 			</p>
 
 			<p>This document provides a short overview for each test, grouped into separate tables by test categories. The
@@ -231,7 +231,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<li>Short description of the test</li>
 				<li>References to the corresponding normative statements or sections in the EPUB 3.3 specification(s)</li>
 				<li>Pointer to the (consolidated) implementation status of the test in the separate
-					<a href="results.html">implementation report</a></li>
+					<a href="results">implementation report</a></li>
 			</ol>
 		</section>
 
@@ -835,47 +835,55 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="page-progression-001">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/page-progression-001">page-progression-001</a>
+        <td id="confreq-rs-spine-progression-default">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-spine-progression-default">confreq-rs-spine-progression-default</a>
         </td>
-        <td>Page Progression 001</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>RTL publication's spine has implicit 'page-progression-direction="default"'</td>
+        <td>In a publication set as using an RTL language, the spine does not set 'page-progression-direction', so it is implicitly 'default'. The pages must appear from right to left.</td>
         <td>
-          <a href="results.html#page-progression-001-results">❐</a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-spine-progression-default">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-spine-progression-default-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="page-progression-002">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/page-progression-002">page-progression-002</a>
+        <td id="confreq-rs-spine-progression-prepaginated">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-spine-progression-prepaginated">confreq-rs-spine-progression-prepaginated</a>
         </td>
-        <td>Page Progression 002</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>Pre-paginated publication's spine sets 'page-progression-direction="ltr"'</td>
+        <td>In a pre-paginated publication whose XHTML content sets 'dir="rtl"', the spine sets 'page-progression-direction="ltr"'. The pages must appear from left to right.</td>
         <td>
-          <a href="results.html#page-progression-002-results">❐</a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-spine-progression-prepaginated">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-spine-progression-prepaginated-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="page-progression-003">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/page-progression-003">page-progression-003</a>
+        <td id="confreq-rs-spine-progression_ltr">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-spine-progression_ltr">confreq-rs-spine-progression_ltr</a>
         </td>
-        <td>Page Progression 003</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>Spine sets 'page-progression-direction="ltr"'</td>
+        <td>The spine sets 'page-progression-direction="ltr"'. The pages must appear from left to right.</td>
         <td>
-          <a href="results.html#page-progression-003-results">❐</a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-spine-progression">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-spine-progression_ltr-results">❐</a>
         </td>
       </tr>
       <tr>
-        <td id="page-progression-004">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/page-progression-004">page-progression-004</a>
+        <td id="confreq-rs-spine-progression_rtl">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-spine-progression_rtl">confreq-rs-spine-progression_rtl</a>
         </td>
-        <td>Page Progression 004</td>
-        <td>(No description)</td>
-        <td>n.a. </td>
+        <td>Spine sets 'page-progression-direction="rtl"'</td>
+        <td>The spine sets 'page-progression-direction="rtl"'. The pages must appear from right to left.</td>
         <td>
-          <a href="results.html#page-progression-004-results">❐</a>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-spine-progression">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-spine-progression_rtl-results">❐</a>
         </td>
       </tr>
     </tbody></table>
@@ -1093,6 +1101,19 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="results.html#confreq-fxl-rs-xhtml-icb-results">❐</a>
         </td>
       </tr>
+      <tr>
+        <td id="confreq-rs-fxl-prepaginated-spreads">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-fxl-prepaginated-spreads">confreq-rs-fxl-prepaginated-spreads</a>
+        </td>
+        <td>rendition:layout pre-paginated spreads</td>
+        <td>When the layout is pre-paginated, pages are displayed with no gaps when in synthetic spreads.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-fxl-prepaginated-spreads">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#confreq-rs-fxl-prepaginated-spreads-results">❐</a>
+        </td>
+      </tr>
     </tbody></table>
   </section>
   <section id="open-container-format">
@@ -1152,6 +1173,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   <li>Dave Cramer</li>
   <li>Ivan Herman</li>
   <li>Matthew Chan</li>
+  <li>Wendy Reid</li>
 </ul>	
 		</section>
 
@@ -1381,4 +1403,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
