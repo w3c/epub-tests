@@ -1,7 +1,7 @@
 /**
  * Adding extra metadata to the tests.
  * 
- * Note that this module is _not_ part of the report generation; it is supposed to be ran separately. It is kept along side the 
+ * Note that this module is _not_ part of the report generation; it is supposed to be ran separately. It is kept alongside the 
  * report generation script because it reuses some tools in the library.
  * 
  * Note that the generation of an EPUB file (ie, the zipped content) is done in a separate module in the library.
@@ -18,23 +18,9 @@ import { Constants } from './lib/types';
 import { create_epub } from './lib/epub';
 
 /**
- * The extra metadata items to be added to the package metadata
- */
-const new_metadata: string[] = [
-    '    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>',
-    '    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>',
-]
-
-/**
- * The pattern to be used to find the target for the new metadata entries. They will be inserted
- * _before_ the first occurrence of the pattern among the other metadata lines.
- */
-const cut_off_pattern: string = '<meta property';
-
-/**
  * Main entry point for the separate metadata extension: modify the OPF file for each test directory, and generate the epub files themselves.
  */
-async function main() {
+async function main(new_metadata: string[], cut_off_pattern: string): Promise<void> {
     const dir_name: string = Constants.TESTS_DIR;
     const handle_single_test_metadata = async (file_name: string): Promise<void> => {
         const opf_file = `${file_name}/${Constants.OPF_FILE}`;
@@ -69,4 +55,20 @@ async function main() {
     await Promise.all(epub_promises);
 }
 
-main();
+
+// =========================== Entry point for adding expressions for rights ======== 
+/**
+ * The extra metadata items to be added to the package metadata
+ */
+const DC_Rights: string[] = [
+    '    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>',
+    '    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>',
+]
+
+/**
+ * The pattern to be used to find the target for the new metadata entries. They will be inserted
+ * _before_ the first occurrence of the pattern among the other metadata lines.
+ */
+const cutoff_meta_property: string = '<meta property';
+
+main(DC_Rights, cutoff_meta_property);
