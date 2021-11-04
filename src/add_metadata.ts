@@ -1,3 +1,15 @@
+/**
+ * Adding extra metadata to the tests.
+ * 
+ * Note that this module is _not_ part of the report generation; it is supposed to be ran separately. It is kept along side the 
+ * report generation script because it reuses some tools in the library.
+ * 
+ * Note that the generation of an EPUB file (ie, the zipped content) is done in a separate module in the library.
+ * 
+ * 
+ *  @packageDocumentation
+ */
+
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
@@ -5,10 +17,19 @@ import {get_list_dir, isDirectory} from './lib/data';
 import { Constants } from './lib/types';
 import { create_epub } from './lib/epub';
 
+/**
+ * The extra metadata items to be added to the package metadata
+ */
 const new_metadata: string[] = [
     '    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>',
     '    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>',
 ]
+
+/**
+ * The pattern to be used to find the target for the new metadata entries. They will be inserted
+ * _before_ the first occurrence of the pattern among the other metadata lines.
+ */
+const cut_off_pattern: string = '<meta property';
 
 /**
  * Main entry point for the separate metadata extension: modify the OPF file for each test directory, and generate the epub files themselves.
@@ -24,7 +45,7 @@ async function main() {
             //1. Find the cut-off point, ie, where the new lines must be inserted:
             let index = -1;
             for (index = 0; index < lines.length; index++) {
-                if (lines[index].includes('<meta property')) {
+                if (lines[index].includes(cut_off_pattern)) {
                     break
                 }
             }
