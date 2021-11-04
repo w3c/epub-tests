@@ -80,8 +80,6 @@ export async function recursive_walk(dir: string, filter?: (f:string) => boolean
  */
 async function get_content(entry_dir: string): Promise<FileContent[]> {
     const file_names: string[]  = await recursive_walk(entry_dir, (fname: string): boolean => !(ignored_files.includes(path.basename(fname))));
-
-    console.log(file_names);
     const content: Buffer[]     = await Promise.all(file_names.map((fname) => fs.readFile(fname)));
     const retval: FileContent[] = [];
 

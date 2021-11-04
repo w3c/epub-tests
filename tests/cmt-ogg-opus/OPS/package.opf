@@ -8,6 +8,8 @@
     <dc:identifier id="pub-id">cmt-ogg-opus</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>OPUS audio</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#cmt-ogg-opus</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-epub3-mp3-aac</meta>
     <meta property="dcterms:modified">2021-04-07T00:00:00Z</meta>
