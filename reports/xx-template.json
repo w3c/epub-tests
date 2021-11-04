@@ -28,6 +28,7 @@
         "confreq-rs-foreign_json-spine": false,
         "confreq-rs-foreign_xml-spine": false,
         "confreq-rs-foreign_xml-suffix-spine": false,
+        "confreq-rs-fxl-prepaginated-spreads": false,
         "confreq-rs-pkg-collections-unknown": false,
         "confreq-rs-pkg-creator-order": false,
         "confreq-rs-pkg-dir-auto_root-rtl": false,
