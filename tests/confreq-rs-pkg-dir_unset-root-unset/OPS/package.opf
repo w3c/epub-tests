@@ -11,6 +11,8 @@
     <dc:identifier id="pub-id">confreq-rs-pkg-dir_unset-root-unset</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title xml:lang="ar">CSS: مغامرة جديدة!</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:alternative">No 'dir' on the title</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir</meta>

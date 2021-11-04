@@ -11,6 +11,8 @@
     <dc:identifier id="pub-id">confreq-rs-pkg-unique-id</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Unique identifier not unique</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-unique-id</meta>
     <meta property="dcterms:modified">2021-01-18T00:00:00Z</meta>
   </metadata>

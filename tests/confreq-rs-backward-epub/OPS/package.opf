@@ -11,6 +11,8 @@
       "3.0"”. This is an EPUB with package version attribute set to "0", to see if a reading system will open it.
     </dc:description>
     <dc:title>Package version less than 3.0</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-backward-epub</meta>
     <meta property="dcterms:modified">2021-10-15T00:00:00Z</meta>
   </metadata>
