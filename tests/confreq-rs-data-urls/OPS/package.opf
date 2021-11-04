@@ -11,6 +11,8 @@
     <dc:identifier id="pub-id">confreq-rs-data-urls</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Data URL does not open in top-level context</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-data-urls</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-data-urls</meta>
     <meta property="dcterms:modified">2021-01-01T00:00:00Z</meta>

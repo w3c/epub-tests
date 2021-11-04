@@ -1,6 +1,6 @@
 {
   "name": "epub-tests",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatic reporting of EPUB 3 testing results",
   "main": "bin/main.js",
   "directories": {
@@ -9,7 +9,8 @@
   "scripts": {
     "generate": "./node_modules/ts-node/dist/bin.js src/main.ts",
     "respec": "(cd docs/drafts; ../../node_modules/respec/tools/respec2html.js --localhost  -s index.html -o ../index.html; ../../node_modules/respec/tools/respec2html.js --localhost -s results.html -o ../results.html)",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "add_metadata": "./node_modules/ts-node/dist/bin.js src/add_metadata.ts"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,8 @@
   "dependencies": {
     "@types/node": "^16.9.4",
     "@types/xml2js": "^0.4.9",
+    "@types/jszip": "^3.4.1",
+    "jszip": "^3.7.1",
     "respec": "^26.13.4",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3",
