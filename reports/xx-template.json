@@ -57,6 +57,7 @@
         "confreq-svg-rs-embed": false,
         "container-default-rendition_arbitrary": false,
         "container-default-rendition_multiple": false,
+        "def-layout-pre-paginated": false,
         "sec-pkg-doc-spine": false,
         "title-order": false
     }
