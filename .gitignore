@@ -18,7 +18,3 @@ typings/
 
 # VS data
 .vscode
-
-# Development related files locally, I.H.
-todo.md
-local_tests/
