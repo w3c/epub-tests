@@ -20,7 +20,7 @@ This page explains how to write new tests.
 ## Prerequisites
 
 * Install [eCanCrusher](https://www.docdataflow.com/ecancrusher/) or another utility or local script that can turn an EPUB
-  folder into a compressed .epub file.
+  folder into a compressed EPUB file.
    
    * On macOS, a command in Terminal can zip EPUB. Go to the folder containing the files and enter the following:
    `zip -X0 book.epub mimetype; zip -Xur9D book.epub META-INF OEBPS -x ‘*.DS_Store’ `
@@ -64,28 +64,26 @@ This page explains how to write new tests.
    test. Otherwise, fork the repo and create a branch on your fork. (It's easier for reviewers to clone a PR to validate the
    test if it's in the original repo.)
 
-1. Within the branch, copy the
-   [test template](https://github.com/w3c/epub-tests/tree/main/tests/xx-epub-template)
-   (or the
-   [fixed layout template](https://github.com/w3c/epub-tests/tree/main/tests/xx-fixed-layout-template)
-   if you're testing fixed layout). Name your copy as explained in [naming](#naming) below.
+1. Within the branch, copy the [test template](https://github.com/w3c/epub-tests/tree/main/tests/xx-epub-template)
+   (or the [fixed layout template](https://github.com/w3c/epub-tests/tree/main/tests/xx-fixed-layout-template) if you're
+   testing fixed layout). Name your copy as explained in [naming](#naming) below.
 
 1. Modify the template as necessary to implement the test.
 
 1. Describe the test by adding the [metadata](#metadata) documented below to the package document.
 
 1. Once your test is complete, drag the test's folder onto [eCanCrusher](https://www.docdataflow.com/ecancrusher/) to
-   compress it into an `.epub` file, or create a compressed .epub file by some other means.
+   compress it into an EPUB file, or create a compressed EPUB file by some other means.
 
-1. Open the `.epub` file in one or more reading systems to verify it behaves as expected. It is common for reading systems
+1. Open the EPUB file in one or more reading systems to verify it behaves as expected. It is common for reading systems
    not to meet requirements, but if you cannot find *any* reading system that processes the test as expected, that may
    indicate an implementation mistake in the test. Fix as necessary.
 
-1. Run the `.epub` through the online [EPUB Validator](http://validator.idpf.org/) or the
+1. Run the EPUB through the online [EPUB Validator](http://validator.idpf.org/) or the
    [EPUBCheck](https://www.w3.org/publishing/epubcheck/) command-line tool to ensure you didn't make any silly mistakes. Fix
    if you did.
 
-1. Create a pull request for your test change, including both the uncompressed folder and the compressed `.epub` file. Please
+1. Create a pull request for your test change, including both the uncompressed folder and the compressed EPUB file. Please
    ensure the PR's description clearly indicates which statement is being tested. Await review.
 
 1. Once the pull request has been merged, fork the repo for the spec you are testing —
@@ -93,18 +91,17 @@ This page explains how to write new tests.
    [EPUB Reading Systems 3.3](https://github.com/w3c/epub-specs/blob/main/epub33/rs/index.html).
 
 1. In the spec document, find the anchor element for the normative statement. If there is no anchor element, add one, using
-   the same naming conventions as the test. Then add a `data-tests` attribute to the anchor element with the name(s) of your
-   test(s) as comma-separated anchors:
+   the same naming conventions as nearby anchors. Then add a `data-tests` attribute to the anchor element with the name(s) of
+   your test(s) as comma-separated anchors:
 
    ```html
-   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="#confreq-rs-epub3-xhtml">Reading
-      Systems MUST process <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">XHTML Content
-      Documents</a> [[EPUB-33]].</p>
+   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="#doc-xhtml-support">Reading Systems MUST process
+      <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">XHTML Content Documents</a> [[EPUB-33]].</p>
 
    ...
 
    <p id="confreq-rs-epub3-images"
-      data-tests="#cmt-gif,#cmt-jpg,#cmt-png,#cmt-svg,#cmt-webp">If a Reading System has a
+      data-tests="#pub-cmt-gif,#pub-cmt-jpg,#pub-cmt-png,#pub-cmt-svg,#pub-cmt-webp">If a Reading System has a
       <a>Viewport</a>, it MUST support the
       <a href="https://www.w3.org/TR/epub-33/#cmt-grp-image">image Core Media Type Resources</a>
       [[EPUB-33]].</p>
@@ -115,20 +112,17 @@ This page explains how to write new tests.
 
 ## Naming
 
-Because sections are frequently renumbered, individual tests should be named based on section anchors within the spec. For
-example, a test for
+Test names should start with a three-letter abbreviation that corresponds to the value of the [`dc:coverage`](#metadata)
+element below (for example, `cnt` for Content Documents, `pkg` for Package Documents, etc.), followed by a short hyphenated
+identifier that makes clear which requirement is under test. For example, a test for
 [the requirement for reading systems to support MathML](https://www.w3.org/TR/epub-rs-33/#confreq-mathml-rs-behavior) should
-have a folder named `confreq-mathml-rs-behavior` and a compressed file named `confreq-mathml-rs-behavior.epub`.
+be named `cnt-mathml-support`.
 
-If a normative statement does not already have a unique anchor, please create one, following naming examples elsewhere in the
-spec. (You will commit this new anchor along with your `data-tests` attribute in a pull request against the spec, as
-explained in the [step-by-step instructions](#step-by-step) above.)
-
-If multiple tests are necessary for a single anchor, differentiate the test cases by appending an underscore and a unique
-identifier. For example, a test that ensures reading systems treat explicit `dir="auto"` identically to omitting `dir`, as
-part of the requirement to
+If multiple tests are necessary for a single normative statement, differentiate the test cases by appending an underscore and
+a unique identifier. For example, a test that ensures reading systems treat explicit `dir="auto"` identically to omitting
+`dir`, as part of the requirement to
 [automatically handle base direction of the package document](https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir-auto)
-might be named `confreq-rs-pkg-dir-auto_explicit`.
+might be named `pkg-dir-auto_explicit`.
 
 
 ## Metadata
@@ -169,7 +163,7 @@ In this example, only the relevant metadata items are shown:
             The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute
             is set to 'rtl'; the title should display from right to left.
         </dc:description>
-        <dc:identifier id="pub-id">confreq-rs-pkg-dir_rtl-root-unset</dc:identifier>
+        <dc:identifier id="pub-id">pkg-dir_rtl-root-unset</dc:identifier>
         <dc:title dir="rtl" xml:lang="he">CSS: הרפתקה חדשה!</dc:title>
         <meta property="dcterms:alternative">Title's base direction set to RTL</meta>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
@@ -203,14 +197,14 @@ Here is an example of a small test report:
     "name"  : "ACME Books",
     "ref"   : "https://www.example.org/acme",
     "tests" : {
-        "cmt-gif": true,
-        "cmt-jpeg": true,
-        "package-title-dir-rtl-001": false,
-        "package-title-dir-rtl-002": true,
-        "package-title-dir-rtl-003": false,
-        "package-title-dir-rtl-004": true,
-        "package-title-dir-rtl-005": false,
-        "package-title-dir-rtl-006": false
+        "pub-cmt-gif": true,
+        "pub-cmt-jpeg": true,
+        "pkg-dir_rtl-root-ltr": false,
+        "pkg-dir_rtl-root-unset": true,
+        "pkg-dir_unset-root-rtl": false,
+        "pkg-dir_unset-root-unset": true,
+        "pkg-dir-auto_root-rtl": false,
+        "pkg-dir-auto_root-unset": false
     }
 }
 ```
