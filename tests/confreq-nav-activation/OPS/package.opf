@@ -5,10 +5,9 @@
     <dc:creator>Dave Cramer</dc:creator>
     <dc:date>2021-01-26</dc:date>
     <dc:description>
-      Activating a link in the navigation document relocates the reading position to the target of the link. The navigation
-      document is in the spine.
+      Activating a link in the navigation document relocates the reading position to the target of the link.
     </dc:description>
-    <dc:identifier id="pub-id">confreq-nav-activation_in-spine</dc:identifier>
+    <dc:identifier id="pub-id">confreq-nav-activation</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Navigation relocates position while in spine</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
