@@ -8,13 +8,15 @@
         Reading System must process and display the title and creator metadata from the package document.
         An ONIX 3.0 format linked metadata record exists, but contains neither title nor creator metadata.
     </dc:description>
-    <dc:identifier id="pub-id">sec-linked-records</dc:identifier>
+    <dc:identifier id="pub-id">pkg-linked-records</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Package metadata title!</dc:title>
     <link rel="record"
           href="sampleONIX-30.xml"
           media-type="application/xml"
           properties="onix" />
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-linked-records</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-linked-records</meta>
     <meta property="dcterms:modified">2021-01-01T00:00:00Z</meta>
