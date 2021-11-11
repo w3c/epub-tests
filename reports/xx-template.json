@@ -26,6 +26,7 @@
         "pkg-dir_rtl-root-unset": false,
         "pkg-dir_unset-root-rtl": false,
         "pkg-dir_unset-root-unset": false,
+        "pkg-linked-records": false,
         "pkg-manifest-unknown": false,
         "pkg-manifest-unlisted-resource": false,
         "pkg-manifest-url": false,
