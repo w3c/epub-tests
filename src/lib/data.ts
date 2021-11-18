@@ -188,9 +188,31 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             } catch {
                 return fallback;
             }
-        }
+        };
+
+        const get_array_of_string_values = (label: string, fallback:string): string[] => {
+            try {
+                const entries = metadata[label];
+                if (entries === undefined || entries.length === 0) {
+                    return [fallback];
+                } else {
+                    return entries.map( (entry: any): string => {
+                        const retval = typeof entry === "string" ? entry : entry._;
+                        return retval.trim().replace(/\s+/g, ' ');
+                    });
+                }
+            } catch {
+                return [fallback]
+            }
+        };
     
-        const package_xml: string = await fs.readFile(`${file_name}/${Constants.OPF_FILE}`,'utf-8');
+        let package_xml: string;
+        try {
+            package_xml = await fs.readFile(`${file_name}/${Constants.OPF_FILE}`,'utf-8');
+        } catch (error) {
+            console.warn(`Directory ${file_name} does not contain an OPF file; skipped.`);
+            return undefined;
+        }
         const package_js: any = await xml2js.parseStringPromise(package_xml, {
             trim          : true,
             normalizeTags : true,
@@ -206,7 +228,7 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             title       : final_title,
             description : get_string_value("dc:description", "(No description)"),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)"),
-            creator     : get_string_value("dc:creator", "(Unknown)"),
+            creators    : get_array_of_string_values("dc:creator", "(Unknown)"),
             references  : metadata["meta"]
                 .filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy")
                 .map((entry:any): string => entry._),
@@ -217,7 +239,8 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
     const test_list = await get_list_dir(dir_name, isDirectory);
     const test_data_promises: Promise<TestData>[] = test_list.map((name: string) => get_single_test_metadata(`${dir_name}/${name}`));
     // Use the 'Promise.all' trick to get to all the data in one async step rather than going through a cycle
-    return await Promise.all(test_data_promises);
+    const test_data: TestData[] = await Promise.all(test_data_promises);
+    return test_data.filter((entry) => entry !== undefined);
 }
 
 

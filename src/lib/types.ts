@@ -5,6 +5,7 @@
 export namespace Constants {
     /** Location for the tests themselves */
     export const TESTS_DIR: string = 'tests';
+    // export const TESTS_DIR: string = 'local_tests';
 
     /** Location for the implementation reports */
     export const TEST_RESULTS_DIR: string = 'reports';
@@ -40,7 +41,7 @@ export namespace Constants {
     export const DOC_TEST_DESCRIPTIONS: string = 'index.html';
 
     /** List of test ID-s whose creators should not be considered for display */
-    export const IGNORE_CREATOR_ID: string[] = ['package-creator-order-001', 'package-creator-dir-rtl-001', 'content_001'];
+    export const IGNORE_CREATOR_ID: string[] = ['pkg-creator-order', 'pkg-dir_creator-rtl', 'content_001'];
 
     /** List of creator names that should not be considered for display */
     export const IGNORE_CREATORS: string[] = ['Creator', '(Unknown)'];
@@ -84,7 +85,7 @@ export interface TestData {
     /**
      * Creator of the test
      */
-    creator: string;
+    creators: string[];
     /**
      * Short title of the test
      */

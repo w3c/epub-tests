@@ -407,8 +407,12 @@ function create_creator_list(data: ReportData): string {
     // Collect all creators into a set (i.e, to avoid duplicates)
     for (const table of data.tables) {
         for (const test of table.implementations) {
-            if (!(Constants.IGNORE_CREATOR_ID.includes(test.identifier) || Constants.IGNORE_CREATORS.includes(test.creator))) {
-                creators.add(test.creator);
+            if (!Constants.IGNORE_CREATOR_ID.includes(test.identifier)) {
+                for (const creator of test.creators) {
+                    if (!Constants.IGNORE_CREATORS.includes(creator)) {
+                        creators.add(creator)
+                    }
+                } 
             }
         }
     }
