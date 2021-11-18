@@ -136,6 +136,8 @@ The package document for each test must contain the following metadata, which is
 * `dc:title`: The title of the test, in sentence case. It is used in the test description and should be as concise as
   possible.
 
+* `dc:creator` (may be repeated): Creator(s) of the tests.
+
 * `dc:description`: A longer description of the test for the generated test report.
 
 * `dc:coverage`: Which section of the report the test should be listed in. The report has a separate table for each section
@@ -164,6 +166,8 @@ In this example, only the relevant metadata items are shown:
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
         <dc:coverage>Internationalization</dc:coverage>
+        <dc:creator>Dan Lazin</dc:creator>
+        <dc:creator>Ivan Herman</dc:creator>
         <dc:description>
             The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute
             is set to 'rtl'; the title should display from right to left.
