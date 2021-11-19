@@ -18,6 +18,7 @@
         "Content Documents",
         "Navigation Documents",
         "Fixed Layout",
-        "Open Container Format"
+        "Open Container Format",
+        "Package Rendering Metadata"
     ]
 }
