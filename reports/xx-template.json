@@ -12,6 +12,7 @@
         "fxl-layout-pre-paginated": false,
         "fxl-layout-pre-paginated-spreads": false,
         "fxl-xhtml-icb": false,
+        "nav-access": false,
         "nav-activation": false,
         "nav-spine_in-spine": false,
         "nav-spine_not-in-spine": false,
