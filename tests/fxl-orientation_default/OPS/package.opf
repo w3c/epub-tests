@@ -4,8 +4,8 @@
     <dc:coverage>Fixed Layout</dc:coverage>
     <dc:creator>Wendy Reid</dc:creator>
     <dc:date>2021-11-18</dc:date>
-    <dc:description>Reading systems should display the EPUB in the orientation of the device</dc:description>
-    <dc:identifier id="pub-id">fxl-properties-003</dc:identifier>
+    <dc:description>rendition:orientation is not specified. Therefore, it has the value "auto" and reading systems should display the EPUB in the orientation of the device.</dc:description>
+    <dc:identifier id="pub-id">fxl-orientation_default</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>rendition:orientation default</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
