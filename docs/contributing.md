@@ -45,6 +45,9 @@ This page explains how to write new tests.
 
   * [Thorium Reader](https://www.edrlab.org/software/thorium-reader/)
 
+  * [VitalSource Bookshelf](https://support.vitalsource.com/hc/en-us/sections/360002383594-Download-Bookshelf) and [instructions for sideloading](https://support.vitalsource.com/hc/en-us/search?utf8=✓&query=side+loading+epubs)
+
+
 
 ## Step-by-step
 
