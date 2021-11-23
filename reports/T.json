@@ -36,6 +36,6 @@
         "pub-cmt-png": true,
         "pub-cmt-svg": true,
         "pub-cmt-webp": true,
-        "pub-xml-names": true,
+        "pub-xml-names": true
      }
 }
