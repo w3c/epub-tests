@@ -83,14 +83,20 @@ async function get_implementation_reports(dir_name: string): Promise<Implementat
     // Get a single implementation report, which must be a JSON file
     const get_implementation_report = async (file_name: string): Promise<ImplementationReport> => {
         const implementation_report = await fs.readFile(file_name, 'utf-8');
-        return JSON.parse(implementation_report) as ImplementationReport;
+        try {
+            return JSON.parse(implementation_report) as ImplementationReport;
+        } catch (error) {
+            console.warn(`Warning: unable to parse ${file_name}; ignored`);
+            return undefined;
+        }
     };
 
     const implementation_list = await get_list_dir(dir_name, isFile);
 
     // Use the 'Promise.all' trick to get to all the implementation reports in one async step rather than going through a cycle
     const report_list_promises: Promise<ImplementationReport>[] = implementation_list.map((file_name) => get_implementation_report(`${dir_name}/${file_name}`));
-    const implementation_reports: ImplementationReport[] = await Promise.all(report_list_promises);
+    const proto_implementation_reports: ImplementationReport[] = await Promise.all(report_list_promises);
+    const implementation_reports: ImplementationReport[] = proto_implementation_reports.filter((entry) => entry !== undefined); 
     implementation_reports.sort((a,b) => string_comparison(a.name, b.name));
 
     return implementation_reports

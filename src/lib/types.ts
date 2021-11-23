@@ -5,7 +5,8 @@
 export namespace Constants {
     /** Location for the tests themselves */
     export const TESTS_DIR: string = 'tests';
-    // export const TESTS_DIR: string = 'local_tests';
+
+    export const TESTS_DIR_DEBUG: string = 'local_tests';
 
     /** Location for the implementation reports */
     export const TEST_RESULTS_DIR: string = 'reports';
