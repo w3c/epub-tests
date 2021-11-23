@@ -5,7 +5,7 @@
     <dc:creator>Matt Garrish</dc:creator>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2021-11-21</dc:date>
-    <dc:description>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-continuous". The content should be presented as one continuous scrolling document.</dc:description>
+    <dc:description>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-continuous". The content should be presented as one continuous scrolling document (i.e., not paginated).</dc:description>
     <dc:identifier id="pub-id">pkg-flow-scrolled-continuous</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>rendition:flow set to scrolled-continuous</dc:title>
