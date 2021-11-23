@@ -392,25 +392,70 @@ function create_test_data(data: ReportData): string {
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
+/*                                             Creators                                                   */
+/* ------------------------------------------------------------------------------------------------------ */
+
+/**
+ * Create an HTML unnumbered list with the creators of the tests. The names are sorted alphabetically.
+ * 
+ * @param data 
+ * @returns Serialized XML for the creators' list.
+ */
+function create_creator_list(data: ReportData): string {
+    const creators: Set<string> = new Set<string>();
+
+    // Collect all creators into a set (i.e, to avoid duplicates)
+    for (const table of data.tables) {
+        for (const test of table.implementations) {
+            if (!Constants.IGNORE_CREATOR_ID.includes(test.identifier)) {
+                for (const creator of test.creators) {
+                    if (!Constants.IGNORE_CREATORS.includes(creator)) {
+                        creators.add(creator)
+                    }
+                } 
+            }
+        }
+    }
+
+    // Generate the HTML List...
+    const root: any = {
+        ul : {
+            $ : {
+                class : Constants.CLASS_CREATOR_LIST,
+            },
+
+            li : [...creators].sort(),
+        },
+    }
+
+    return builder.buildObject(root);
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
 /*                                   External entry point                                                 */
 /* ------------------------------------------------------------------------------------------------------ */
 
 /**
- * Create three HTML fragments, to be stored in separate files. Each is in a `<section>` with a subtitle, prepared for respec
+ * Create four HTML fragments, to be stored in separate files. Each is in a `<section>` with a subtitle, except for the last one
+ * that is simply an HTML `<ul>` list. These fragments can be included in the final report using the `data-include` feature of respec:
  * 
  * 1. A bulleted list of available implementations, linked (if available) to the Web Site of the implementation itself
  * 2. A series of subsections, each with its own table; each table row is a reference to the test and a series of cells (one per implementation) whether the test passes or not. This structure comes twice: one for consolidated results, and one for the
  * original ones
  * 3. A series of subsections, each with its own table; each table row contains basic metadata and cross references to the tests.
+ * 4. A list of test creators
  * 
  * The return for each of those is in the form of a string containing the XHTML fragment
  * 
  */
-export function create_report(data: ReportData): {implementations: string, results: string, tests: string} {
+export function create_report(data: ReportData): {implementations: string, results: string, tests: string, creators: string} {
     return {
         implementations : create_impl_list(data.implementers),
         results         : create_impl_reports(data),
         tests           : create_test_data(data),
+        creators        : create_creator_list(data),
     }
 }
 

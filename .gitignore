@@ -19,3 +19,8 @@ typings/
 # VS data
 .vscode
 
+# Local tests
+local_tests/
+
+todo.md
+tests/.DS_Store

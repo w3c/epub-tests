@@ -40,7 +40,7 @@ function string_comparison(a: string, b: string): number {
  * 
  * @internal 
  */
- function isDirectory(name: string): boolean {
+export function isDirectory(name: string): boolean {
     return fs_old_school.lstatSync(name).isDirectory();
 }
 
@@ -49,7 +49,7 @@ function string_comparison(a: string, b: string): number {
  * 
  * @internal 
  */
-function isFile(name: string): boolean {
+export function isFile(name: string): boolean {
     return fs_old_school.lstatSync(name).isFile();
 }
 
@@ -63,7 +63,7 @@ function isFile(name: string): boolean {
  * @returns lists of files in the directory
  */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-async function get_list_dir(dir_name: string, filter_name: (name: string) => boolean = (name: string) => true): Promise<string[]> {
+export async function get_list_dir(dir_name: string, filter_name: (name: string) => boolean = (name: string) => true): Promise<string[]> {
     // The filter works on the full path, hence this extra layer
     const file_name_filter = (name: string): boolean => {
         return name.startsWith('xx-') === false && filter_name(`${dir_name}/${name}`);
@@ -103,7 +103,7 @@ async function get_implementation_reports(dir_name: string): Promise<Implementat
  * are usually using the same engine, so their results should be merged into one for the purpose of a formal
  * report for the AC.
  *
- * @param implementations the original list of implementations
+ * @param implementations the original list of implementation reports
  * @returns a consolidated list of the implementation reports
  */
 function consolidate_implementation_reports(implementations: ImplementationReport[]): ImplementationReport[] {
@@ -182,14 +182,37 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
                 if (entry === undefined) {
                     return fallback;
                 } else {
-                    return typeof entry === "string" ? entry : entry._;
+                    const retval = typeof entry === "string" ? entry : entry._;
+                    return retval.trim().replace(/\s+/g, ' ');
                 }
             } catch {
                 return fallback;
             }
-        }
+        };
+
+        const get_array_of_string_values = (label: string, fallback:string): string[] => {
+            try {
+                const entries = metadata[label];
+                if (entries === undefined || entries.length === 0) {
+                    return [fallback];
+                } else {
+                    return entries.map( (entry: any): string => {
+                        const retval = typeof entry === "string" ? entry : entry._;
+                        return retval.trim().replace(/\s+/g, ' ');
+                    });
+                }
+            } catch {
+                return [fallback]
+            }
+        };
     
-        const package_xml: string = await fs.readFile(`${file_name}/${Constants.OPF_FILE}`,'utf-8');
+        let package_xml: string;
+        try {
+            package_xml = await fs.readFile(`${file_name}/${Constants.OPF_FILE}`,'utf-8');
+        } catch (error) {
+            console.warn(`Directory ${file_name} does not contain an OPF file; skipped.`);
+            return undefined;
+        }
         const package_js: any = await xml2js.parseStringPromise(package_xml, {
             trim          : true,
             normalizeTags : true,
@@ -205,7 +228,10 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             title       : final_title,
             description : get_string_value("dc:description", "(No description)"),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)"),
-            references  : metadata["meta"].filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy").map((entry:any): string => entry._),
+            creators    : get_array_of_string_values("dc:creator", "(Unknown)"),
+            references  : metadata["meta"]
+                .filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy")
+                .map((entry:any): string => entry._),
         }
     }
 
@@ -213,7 +239,8 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
     const test_list = await get_list_dir(dir_name, isDirectory);
     const test_data_promises: Promise<TestData>[] = test_list.map((name: string) => get_single_test_metadata(`${dir_name}/${name}`));
     // Use the 'Promise.all' trick to get to all the data in one async step rather than going through a cycle
-    return await Promise.all(test_data_promises);
+    const test_data: TestData[] = await Promise.all(test_data_promises);
+    return test_data.filter((entry) => entry !== undefined);
 }
 
 
@@ -261,7 +288,10 @@ function create_implementation_tables(implementation_data: ImplementationData[])
     }
 
     // Sort the results per section heading
-    retval.sort( (a,b) => string_comparison(a.header, b.header));
+    // Note that this sounds like unnecessary, because, at a later step, the sections are reordered
+    // per the configuration file. But this is a safety measure: if the configuration file is
+    // not available and/or erroneous, the order is still somewhat deterministic.
+    retval.sort((a,b) => string_comparison(a.header, b.header));
     return retval;
 }
 
@@ -307,10 +337,16 @@ export async function get_report_data(tests: string, reports: string): Promise<R
  */
 export function get_template(report: ReportData): ImplementationReport {
     const test_list: {[index: string]: boolean } = {};
+    const keys: string[] = [];
+
+    // Get the keys first in order to sort them
     for (const table of report.tables) {
         for (const impl of table.implementations) {
-            test_list[impl.identifier] = false;
+            keys.push(impl.identifier);
         }
+    }
+    for (const key of keys.sort()) {
+        test_list[key] = false;
     }
 
     return {

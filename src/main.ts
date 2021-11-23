@@ -4,6 +4,7 @@ const fs = fs_old_school.promises;
 import { ReportData, ImplementationReport, Constants } from './lib/types';
 import { get_report_data, get_template } from "./lib/data";
 import { create_report } from "./lib/html";
+import { apply_configuration_options } from './lib/config';
 
 
 /**
@@ -24,12 +25,15 @@ async function main() {
     const report_data: ReportData = await get_report_data(Constants.TESTS_DIR, Constants.TEST_RESULTS_DIR);
 
     const template: ImplementationReport = get_template(report_data);
-    const {implementations, results, tests} = create_report(report_data);
+
+    const final_report_data = apply_configuration_options(report_data);
+    const {implementations, results, tests, creators} = create_report(final_report_data);
     
     await Promise.all([
         fs.writeFile(Constants.IMPL_FRAGMENT, implementations, 'utf-8'),
         fs.writeFile(Constants.RESULT_FRAGMENT, results, 'utf-8'),
         fs.writeFile(Constants.TEST_FRAGMENT, tests, 'utf-8'),
+        fs.writeFile(Constants.CREATORS_FRAGMENT, creators, 'utf-8'),
         fs.writeFile(Constants.TEST_RESULTS_TEMPLATE, JSON.stringify(template, null, 4)),
         adjust_date(`${Constants.DOCS_DIR}/${Constants.DOC_TEST_RESULTS}`),
         adjust_date(`${Constants.DOCS_DIR}/${Constants.DOC_TEST_DESCRIPTIONS}`),

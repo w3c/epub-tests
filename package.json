@@ -1,16 +1,16 @@
 {
   "name": "epub-tests",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatic reporting of EPUB 3 testing results",
   "main": "bin/main.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "build": "tsc",
-    "generate": "node bin/main.js",
-    "ts": "ts-node src/main.ts",
-    "lint": "eslint . --ext .ts"
+    "generate": "./node_modules/ts-node/dist/bin.js src/main.ts",
+    "respec": "(cd docs/drafts; ../../node_modules/respec/tools/respec2html.js --localhost  -s index.html -o ../index.html; ../../node_modules/respec/tools/respec2html.js --localhost -s results.html -o ../results.html)",
+    "lint": "eslint . --ext .ts",
+    "add_metadata": "./node_modules/ts-node/dist/bin.js src/add_metadata.ts"
   },
   "repository": {
     "type": "git",
@@ -23,14 +23,18 @@
   },
   "homepage": "https://github.com/w3c/epub-tests#readme",
   "dependencies": {
+    "@types/node": "^16.9.4",
+    "@types/xml2js": "^0.4.9",
+    "@types/jszip": "^3.4.1",
+    "jszip": "^3.7.1",
+    "respec": "^26.13.4",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
-    "@types/node": "^16.9.4",
-    "@types/xml2js": "^0.4.9",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
-    "eslint": "^7.32.0",
-    "typescript": "^4.4.3"
+    "eslint": "^7.32.0"
   }
 }
