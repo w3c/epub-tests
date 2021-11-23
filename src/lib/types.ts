@@ -56,6 +56,9 @@ export namespace Constants {
     /** CSS Class name for columns containing the ID-s */
     export const CLASS_COL_ID: string = "col_id";
 
+    /** CSS Class name for columns containing the Requirement flag */
+    export const CLASS_COL_REQ: string = "col_req";
+
     /** CSS Class name for columns containing test table references */
     export const CLASS_COL_TREF: string = "col_tref";
 
@@ -103,6 +106,10 @@ export interface TestData {
      * This is a series of URL strings, referring to the section in the spec this test is pertinent to.
      */
     references: string[];
+    /**
+     * Whether this test corresponds to a _MUST_ or a _SHOULD_ statement
+     */
+    required: boolean;
 }
 
 /**

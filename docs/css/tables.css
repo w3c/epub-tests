@@ -65,6 +65,11 @@ col.col_title {
     width: 20%;
 }
 
+col.col_req {
+    width: 5%;
+    text-align: center;    
+}
+
 col.col_sref {
     width: 5%;
     text-align: center;    

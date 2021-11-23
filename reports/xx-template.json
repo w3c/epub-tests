@@ -5,8 +5,12 @@
         "cmt-mp3": false,
         "confreq-mathml-rs-behavior": false,
         "confreq-rs-pkg-dir_creator-rtl": false,
+        "pkg-a-title-order": false,
+        "pkg-dir_creator-rtl": false,
+        "pkg-dir_unset-root-rtl": false,
         "pkg-flow-paginated": false,
         "pkg-flow-scrolled-continuous": false,
-        "pkg-flow-scrolled-doc": false
+        "pkg-unique-id": false,
+        "pkg-z-flow-scrolled-doc": false
     }
 }

@@ -96,7 +96,7 @@ function create_impl_list(impl: Implementer[]): string {
  */
 const create_one_result_table = (data: ImplementationTable, implementers: Implementer[], suffix: string = ''): any[] => {
     // The table header is on its own
-    const fixed_head = ["Id"];
+    const fixed_head = ["Id", "Req?"];
     const variable_head = implementers.map((impl) => 'variant' in impl ? `${impl.name} &#10;(${impl.variant})` : impl.name);
     const head = [...fixed_head,...variable_head].map((title) => {
         return { th: title }
@@ -106,7 +106,7 @@ const create_one_result_table = (data: ImplementationTable, implementers: Implem
         // Creation of one row for a specific test, ie, an array of 'td' elements
         // The row consists of the test (meta)data, and the list of test results
 
-        // Fist the test metadata (currently the ID only); ...
+        // First the test metadata (currently the ID only); ...
         const test_data = [
             {
                 td : {
@@ -121,6 +121,9 @@ const create_one_result_table = (data: ImplementationTable, implementers: Implem
                         _ : row.identifier,
                     },
                 },
+            },
+            {
+                td : row.required,
             },
         ];
 
@@ -152,6 +155,7 @@ const create_one_result_table = (data: ImplementationTable, implementers: Implem
  * Create a series of sections with implementation tables
  * @returns Serialized XML
  */
+// eslint-disable-next-line max-lines-per-function
 function create_impl_reports(data: ReportData): string {
     const root1: any = {
         section : {
@@ -179,12 +183,19 @@ function create_impl_reports(data: ReportData): string {
                         },
                         // the `colgroup` structure allows styling of the table columns, especially their widths
                         colgroup : {
-                            // Only one column is styled; by setting the width we ensure that all tables look identical
-                            col : {
-                                $ : {
-                                    class : Constants.CLASS_COL_ID,
+                            // Only two columns are styled; by setting the width we ensure that all tables look identical
+                            col : [
+                                {
+                                    $ : {
+                                        class : Constants.CLASS_COL_ID,
+                                    },
                                 },
-                            },
+                                {
+                                    $ : {
+                                        class : Constants.CLASS_COL_REQ,
+                                    },
+                                },
+                            ],
                         },
                         // The function returns an array of elements
                         tr : create_one_result_table(table, data.consolidated_implementers),
@@ -219,12 +230,19 @@ function create_impl_reports(data: ReportData): string {
                         },
                         // the `colgroup` structure allows styling of the table columns, especially their widths
                         colgroup : {
-                            // Only one column is styled; by setting the width we ensure that all tables look identical
-                            col : {
-                                $ : {
-                                    class : Constants.CLASS_COL_ID,
+                            // Only two columns are styled; by setting the width we ensure that all tables look identical
+                            col : [
+                                {
+                                    $ : {
+                                        class : Constants.CLASS_COL_ID,
+                                    },
                                 },
-                            },
+                                {
+                                    $ : {
+                                        class : Constants.CLASS_COL_REQ,
+                                    },
+                                },                               
+                            ],
                         },
                         // The function returns an array of elements
                         tr : create_one_result_table(table, data.implementers,'-detailed'),
@@ -274,7 +292,7 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
     }
 
     // Creation of the header row
-    const fixed_head = ["Id", "Title", "Description", "Specs", "Ref"];
+    const fixed_head = ["Id", "Req?", "Title", "Description", "Specs", "Ref"];
     const head = fixed_head.map((title) => { return { th: title} });
 
     // Creation of an array of regular rows
@@ -293,6 +311,9 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
                         _ : row.identifier,
                     },
                 },
+            },
+            {
+                td : row.required,
             },
             {
                 td : row.title,
@@ -359,6 +380,11 @@ function create_test_data(data: ReportData): string {
                                 {
                                     $ : {
                                         class : Constants.CLASS_COL_ID,
+                                    },
+                                },
+                                {
+                                    $ : {
+                                        class : Constants.CLASS_COL_REQ,
                                     },
                                 },
                                 {

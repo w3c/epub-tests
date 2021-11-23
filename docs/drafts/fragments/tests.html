@@ -5,6 +5,7 @@
     <table class="zebra">
       <colgroup>
         <col class="col_id"/>
+        <col class="col_req"/>
         <col class="col_title"/>
         <col/>
         <col class="col_sref"/>
@@ -12,6 +13,7 @@
       </colgroup>
       <tr>
         <th>Id</th>
+        <th>Req?</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
@@ -21,6 +23,7 @@
         <td id="cmt-mp3">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/cmt-mp3">cmt-mp3</a>
         </td>
+        <td>true</td>
         <td>MP3 audio</td>
         <td>An MP3 audio file is displayed as part of the XHTML content.</td>
         <td>
@@ -38,6 +41,7 @@
     <table class="zebra">
       <colgroup>
         <col class="col_id"/>
+        <col class="col_req"/>
         <col class="col_title"/>
         <col/>
         <col class="col_sref"/>
@@ -45,15 +49,59 @@
       </colgroup>
       <tr>
         <th>Id</th>
+        <th>Req?</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
         <th>Ref</th>
       </tr>
       <tr>
+        <td id="pkg-a-title-order">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-a-title-order">pkg-a-title-order</a>
+        </td>
+        <td>true</td>
+        <td>First title in package</td>
+        <td>Several titles are listed in the package document. The reading system must use the first title (and whether to use other titles is not defined).</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33-rs/#title-order">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#pkg-a-title-order-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="pkg-unique-id">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-unique-id">pkg-unique-id</a>
+        </td>
+        <td>true</td>
+        <td>Unique identifier not unique</td>
+        <td>The package document's dc:identifier is identical across two publications. The reading system should display both publications independently.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-unique-id">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#pkg-unique-id-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="pkg-unique-id">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-unique-id">pkg-unique-id</a>
+        </td>
+        <td>true</td>
+        <td>Unique identifier reused</td>
+        <td>The package document's dc:identifier is identical across two publications. The reading system should display both publications independently.</td>
+        <td>
+          <a href="https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-unique-id">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#pkg-unique-id-results">❐</a>
+        </td>
+      </tr>
+      <tr>
         <td id="pkg-flow-paginated">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-flow-paginated">pkg-flow-paginated</a>
         </td>
+        <td>false</td>
         <td>rendition:flow set to paginated</td>
         <td>Tests on handling overflow content with the "rendition:flow" property set to "paginated". The content should be dynamically paginated (i.e., not scrolled) by the reading system.</td>
         <td>
@@ -68,6 +116,7 @@
         <td id="pkg-flow-scrolled-continuous">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-flow-scrolled-continuous">pkg-flow-scrolled-continuous</a>
         </td>
+        <td>false</td>
         <td>rendition:flow set to scrolled-continuous</td>
         <td>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-continuous". The content should be presented as one continuous scrolling document (i.e., not paginated).</td>
         <td>
@@ -79,9 +128,10 @@
         </td>
       </tr>
       <tr>
-        <td id="pkg-flow-scrolled-doc">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-flow-scrolled-doc">pkg-flow-scrolled-doc</a>
+        <td id="pkg-z-flow-scrolled-doc">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-z-flow-scrolled-doc">pkg-z-flow-scrolled-doc</a>
         </td>
+        <td>false</td>
         <td>rendition:flow set to scrolled-doc</td>
         <td>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-doc". Each of the chapters in this publication should be vertically scrollable, and swiping horizontally should moves from one to the next.</td>
         <td>
@@ -89,7 +139,7 @@
           <a href="https://w3c.github.io/epub-specs/epub33/rs/#scrolled-doc">(2) </a>
         </td>
         <td>
-          <a href="results.html#pkg-flow-scrolled-doc-results">❐</a>
+          <a href="results.html#pkg-z-flow-scrolled-doc-results">❐</a>
         </td>
       </tr>
     </table>
@@ -99,6 +149,7 @@
     <table class="zebra">
       <colgroup>
         <col class="col_id"/>
+        <col class="col_req"/>
         <col class="col_title"/>
         <col/>
         <col class="col_sref"/>
@@ -106,6 +157,7 @@
       </colgroup>
       <tr>
         <th>Id</th>
+        <th>Req?</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
@@ -115,6 +167,7 @@
         <td id="confreq-rs-pkg-dir_creator-rtl">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-rs-pkg-dir_creator-rtl">confreq-rs-pkg-dir_creator-rtl</a>
         </td>
+        <td>true</td>
         <td>'dir=rtl' on the creator</td>
         <td>The 'dc:creator' element's 'dir' attribute is set to 'rtl'; the creator's name should display right-to-left.</td>
         <td>
@@ -125,6 +178,36 @@
           <a href="results.html#confreq-rs-pkg-dir_creator-rtl-results">❐</a>
         </td>
       </tr>
+      <tr>
+        <td id="pkg-dir_creator-rtl">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_creator-rtl">pkg-dir_creator-rtl</a>
+        </td>
+        <td>true</td>
+        <td>'dir=rtl' on the creator</td>
+        <td>The 'dc:creator' element's 'dir' attribute is set to 'rtl'; the creator's name should display right-to-left.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#attrdef-dir">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-pkg-dir">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#pkg-dir_creator-rtl-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="pkg-dir_unset-root-rtl">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_unset-root-rtl">pkg-dir_unset-root-rtl</a>
+        </td>
+        <td>true</td>
+        <td>Correct 'dir=rtl' on the package</td>
+        <td>The 'dc:title' element contains text whose proper rendering requires bidi control. The root's 'dir' attribute is set to 'rtl'; the title should display correctly.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#attrdef-dir">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-pkg-dir">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#pkg-dir_unset-root-rtl-results">❐</a>
+        </td>
+      </tr>
     </table>
   </section>
   <section>
@@ -132,6 +215,7 @@
     <table class="zebra">
       <colgroup>
         <col class="col_id"/>
+        <col class="col_req"/>
         <col class="col_title"/>
         <col/>
         <col class="col_sref"/>
@@ -139,6 +223,7 @@
       </colgroup>
       <tr>
         <th>Id</th>
+        <th>Req?</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
@@ -148,6 +233,7 @@
         <td id="confreq-mathml-rs-behavior">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/confreq-mathml-rs-behavior">confreq-mathml-rs-behavior</a>
         </td>
+        <td>true</td>
         <td>Support for Presentation MathML</td>
         <td>A Presentation MathML equation is displayed as part of the XHTML content.</td>
         <td>
