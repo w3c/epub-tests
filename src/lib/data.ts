@@ -182,7 +182,10 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
 async function get_test_metadata(dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
     const get_single_test_metadata = async (file_name: string): Promise<TestData> => {
-        const get_string_value = (label: string, fallback: string): string => {
+        // Note the heavy use of "any" in the function; this is related to the fact that
+        // the xmljs package returns a pretty "unpredictable" object...
+        // As a consequence, this function bypasses most of TypeScript's checks. Alas!
+        const get_string_value = (label: string, fallback: string, metadata: any): string => {
             try {
                 const entry = metadata[label][0];
                 if (entry === undefined) {
@@ -196,7 +199,7 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             }
         };
 
-        const get_array_of_string_values = (label: string, fallback:string): string[] => {
+        const get_array_of_string_values = (label: string, fallback:string, metadata: any): string[] => {
             try {
                 const entries = metadata[label];
                 if (entries === undefined || entries.length === 0) {
@@ -212,23 +215,25 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             }
         };
 
-        const get_array_of_meta_values = (property: string): string[] => {
+        const get_array_of_meta_values = (property: string, metadata: any): string[] => {
             return metadata["meta"].filter((entry:any): boolean => entry["$"].property === property)
         }
 
-        const get_single_meta_value = (property: string): any => {
+        const get_single_meta_value = (property: string, metadata: any): any => {
             return metadata.meta.find((entry: any): boolean => entry["$"].property === property)
         }
 
-        const is_required = (): boolean => {
-            const is_set = get_single_meta_value("belongs-to-collection");
+        const is_required = (metadata: any): boolean => {
+            const is_set = get_single_meta_value("belongs-to-collection", metadata);
             return is_set === undefined ? true : is_set._ !== "should";
         }
 
-        const get_final_title = (): string => {
-            const alternate_title = get_single_meta_value("dcterms:alternative");
-            return alternate_title === undefined ? get_string_value("dc:title", "(No title)") : alternate_title._;    
+        const get_final_title = (metadata: any): string => {
+            const alternate_title = get_single_meta_value("dcterms:alternative", metadata);
+            return alternate_title === undefined ? get_string_value("dc:title", "(No title)", metadata) : alternate_title._;    
         }
+
+        // ---------
 
         let package_xml: string;
         try {
@@ -242,19 +247,19 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             normalizeTags : true,
             explicitArray : true,
         });
-        const metadata = package_js.package.metadata[0]
+        const test_metadata = package_js.package.metadata[0]
     
         // const alternate_title = get_single_meta_value("dcterms:alternative");
         // const final_title = alternate_title === undefined ? get_string_value("dc:title", "(No title)") : alternate_title._;
     
         return {
-            identifier  : get_string_value("dc:identifier", file_name.split('/').pop()),
-            title       : get_final_title(),
-            description : get_string_value("dc:description", "(No description)"),
-            coverage    : get_string_value("dc:coverage", "(Uncategorized)"),
-            creators    : get_array_of_string_values("dc:creator", "(Unknown)"),
-            required    : is_required(),
-            references  : get_array_of_meta_values("dcterms:isReferencedBy").map((entry:any): string => entry._),
+            identifier  : get_string_value("dc:identifier", file_name.split('/').pop(), test_metadata),
+            title       : get_final_title(test_metadata),
+            description : get_string_value("dc:description", "(No description)", test_metadata),
+            coverage    : get_string_value("dc:coverage", "(Uncategorized)", test_metadata),
+            creators    : get_array_of_string_values("dc:creator", "(Unknown)", test_metadata),
+            required    : is_required(test_metadata),
+            references  : get_array_of_meta_values("dcterms:isReferencedBy", test_metadata).map((entry:any): string => entry._),
         }
     }
 
@@ -340,6 +345,9 @@ export async function get_report_data(tests: string, reports: string): Promise<R
             (test.required === true ? required_tests : optional_tests).push(test)
         }
 
+        // This is, most of the times, unnecessary, because the directory reading has an alphabetic order already.
+        // However, in rare cases, the test's file name and the test's identifier may not coincide, and the latter
+        // should prevail...
         return [
             ...required_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
             ...optional_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
