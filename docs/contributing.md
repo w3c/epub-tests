@@ -157,12 +157,14 @@ The package document for each test must contain the following metadata, which is
   report. This should be used if the subject of the test is the value of `dc:title` itself (e.g., testing the base direction
   of the `title` element).
 
-* `dcterms:rights` as part of a `link` element: the rights associated with the test. Except for the rare cases the `href` attribute value should be set to `https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document` (i.e., to the W3C Software and Document Notice and Licence).
+* `belongs-to-collection` (optional, as part of a `meta` element): The value is `should` or `must`, and it specifies whether the test corresponds to a _SHOULD_, respectively a _MUST_, statement in the specification. If the metadata is not provided, or any other value is used, the default `must` value is used. 
 
-* `dcterms:rightsHolder` as part of a `link` element: the holder of the rights expressed by `dcterms:rights`. The `href` attribute value should be set to `https://www.w3.org/` in case the the rights value is set to the W3C Software and Document Notice and Licence, otherwise to a URL identifying the right holder.
+* `dcterms:rights` as part of a `link` element: the rights associated with the test. Except for the rare cases the `href` attribute value should be set to `https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document` (i.e., to the W3C Software and Document Notice and License).
+
+* `dcterms:rightsHolder` as part of a `link` element: the holder of the rights expressed by `dcterms:rights`. The `href` attribute value should be set to `https://www.w3.org/` in case the the rights value is set to the W3C Software and Document Notice and License, otherwise to a URL identifying the right holder.
 
 
-In this example, only the relevant metadata items are shown:
+In this example, only the relevant metadata items are shown (a test may have additional metadata items):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -180,6 +182,7 @@ In this example, only the relevant metadata items are shown:
         <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
         <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
         <meta property="dcterms:alternative">Title's base direction set to RTL</meta>
+        <meta property="belongs-to-collection">must</meta>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir</meta>
     </metadata>
