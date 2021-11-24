@@ -1222,6 +1222,46 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
+        <td id="fxl-orientation_default">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-orientation_default">fxl-orientation_default</a>
+        </td>
+        <td>rendition:orientation default</td>
+        <td>rendition:orientation is not specified. Therefore, it has the value "auto" and reading systems should display the EPUB in the orientation of the device.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#orientation">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#orientation">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-orientation_default-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-orientation_duplication">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-orientation_duplication">fxl-orientation_duplication</a>
+        </td>
+        <td>rendition:orientation duplication</td>
+        <td>rendition:orientation is specified twice. EPUBCheck should produce an error.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#orientation">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-orientation_duplication-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-orientation_landscape">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-orientation_landscape">fxl-orientation_landscape</a>
+        </td>
+        <td>rendition:orientation landscape</td>
+        <td>rendition:orientation is landscape, Reading Systems should either display the content in landscape or inform the user it should be.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#orientation">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-orientation_landscape-results">❐</a>
+        </td>
+      </tr>
+      <tr>
         <td id="fxl-xhtml-icb">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-xhtml-icb">fxl-xhtml-icb</a>
         </td>
