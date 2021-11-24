@@ -123,7 +123,12 @@ const create_one_result_table = (data: ImplementationTable, implementers: Implem
                 },
             },
             {
-                td : row.required,
+                td : {
+                    $ : {
+                        class : row.required ? Constants.CLASS_MUST : Constants.CLASS_SHOULD,
+                    },
+                    _ : row.required,
+                },
             },
         ];
 
@@ -313,7 +318,12 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
                 },
             },
             {
-                td : row.required,
+                td : {
+                    $ : {
+                        class : row.required ? Constants.CLASS_MUST : Constants.CLASS_SHOULD,
+                    },
+                    _ : row.required,
+                },
             },
             {
                 td : row.title,

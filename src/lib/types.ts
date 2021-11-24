@@ -51,7 +51,13 @@ export namespace Constants {
     export const CLASS_PASS: string = "pass";
 
     /** CSS Class name for table cells with negative test results */
-    export const CLASS_FAIL: string = "fail"
+    export const CLASS_FAIL: string = "fail";
+
+    /** CSS Class name for "required" table cell set to true  */
+    export const CLASS_MUST: string = "must";
+
+    /** CSS Class name for "required" table cell set to false  */
+    export const CLASS_SHOULD: string = "should";
 
     /** CSS Class name for columns containing the ID-s */
     export const CLASS_COL_ID: string = "col_id";
