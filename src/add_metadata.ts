@@ -13,7 +13,7 @@
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
-import {get_list_dir, isDirectory} from './lib/data';
+import {get_list_dir, isDirectory, get_opf_file} from './lib/data';
 import { Constants } from './lib/types';
 import { create_epub } from './lib/epub';
 
@@ -23,7 +23,8 @@ import { create_epub } from './lib/epub';
 async function main(new_metadata: string[], cut_off_pattern: string): Promise<void> {
     const dir_name: string = Constants.TESTS_DIR;
     const handle_single_test_metadata = async (file_name: string): Promise<void> => {
-        const opf_file = `${file_name}/${Constants.OPF_FILE}`;
+        const opf_file_name = await get_opf_file(file_name)
+        const opf_file = await `${file_name}/${opf_file_name}`;
         const package_xml = await fs.readFile(opf_file,'utf-8');
         const lines: string[] = package_xml.split(/\n/);
         // let us avoid doing things twice...
