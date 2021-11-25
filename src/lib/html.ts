@@ -96,7 +96,7 @@ function create_impl_list(impl: Implementer[]): string {
  */
 const create_one_result_table = (data: ImplementationTable, implementers: Implementer[], suffix: string = ''): any[] => {
     // The table header is on its own
-    const fixed_head = ["Id", "Req?"];
+    const fixed_head = ["Id", "Req"];
     const variable_head = implementers.map((impl) => 'variant' in impl ? `${impl.name} &#10;(${impl.variant})` : impl.name);
     const head = [...fixed_head,...variable_head].map((title) => {
         return { th: title }
@@ -106,12 +106,13 @@ const create_one_result_table = (data: ImplementationTable, implementers: Implem
         // Creation of one row for a specific test, ie, an array of 'td' elements
         // The row consists of the test (meta)data, and the list of test results
 
-        // First the test metadata (currently the ID only); ...
+        // First the test metadata (ID and conformance class); ...
         const test_data = [
             {
                 td : {
                     $ : {
-                        id : `${row.identifier}-results${suffix}`,
+                        id    : `${row.identifier}-results${suffix}`,
+                        class : row.required,
                     },
                     // link to the description of the test in another table...
                     a : {
@@ -123,12 +124,7 @@ const create_one_result_table = (data: ImplementationTable, implementers: Implem
                 },
             },
             {
-                td : {
-                    $ : {
-                        class : row.required ? Constants.CLASS_MUST : Constants.CLASS_SHOULD,
-                    },
-                    _ : row.required,
-                },
+                td : row.required,
             },
         ];
 
@@ -297,7 +293,7 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
     }
 
     // Creation of the header row
-    const fixed_head = ["Id", "Req?", "Title", "Description", "Specs", "Ref"];
+    const fixed_head = ["Id", "Req", "Title", "Description", "Specs", "Ref"];
     const head = fixed_head.map((title) => { return { th: title} });
 
     // Creation of an array of regular rows
@@ -307,7 +303,8 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
             {
                 td : {
                     $ : {
-                        id : `${row.identifier}`,
+                        id    : `${row.identifier}`,
+                        class : row.required,
                     },
                     a : {
                         $ : {
@@ -318,12 +315,7 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
                 },
             },
             {
-                td : {
-                    $ : {
-                        class : row.required ? Constants.CLASS_MUST : Constants.CLASS_SHOULD,
-                    },
-                    _ : row.required,
-                },
+                td : row.required,
             },
             {
                 td : row.title,

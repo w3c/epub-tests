@@ -79,3 +79,9 @@ col.col_tref {
     width: 5%;
     text-align: center;
 }
+
+td.should ~ td, td.should,
+td.may ~ td, td.may
+{
+    opacity: 0.5;
+}

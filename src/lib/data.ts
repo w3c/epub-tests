@@ -22,7 +22,7 @@ import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 import * as xml2js from "xml2js";
 
-import { TestData, ImplementationReport, ImplementationData, ImplementationTable, Implementer, ReportData, Constants } from './types';
+import { TestData, ImplementationReport, ImplementationData, ImplementationTable, Implementer, ReportData, ReqType, Constants } from './types';
 
 /** 
  * Name tells it all...
@@ -222,6 +222,7 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
  * @param dir_name test directory name
  * @returns EPUB metadata converted into the [[TestData]] structure
  */
+// eslint-disable-next-line max-lines-per-function
 async function get_test_metadata(dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
     const get_single_test_metadata = async (file_name: string): Promise<TestData> => {
@@ -266,9 +267,21 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             return metadata.meta.find((entry: any): boolean => entry["$"].property === property)
         }
 
-        const is_required = (metadata: any): boolean => {
+        const get_required = (metadata: any): ReqType => {
             const is_set = get_single_meta_value("belongs-to-collection", metadata);
-            return is_set === undefined ? true : is_set._ !== "should";
+            if (is_set === undefined) {
+                return "must";
+            } else {
+                const val: string = (<string>is_set._).toLowerCase();
+                switch (val) {
+                case "must":
+                case "should":
+                case "may":
+                    return val;
+                default:
+                    return "must";
+                }
+            }
         }
 
         const get_final_title = (metadata: any): string => {
@@ -291,17 +304,14 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             explicitArray : true,
         });
         const test_metadata = package_js.package.metadata[0]
-    
-        // const alternate_title = get_single_meta_value("dcterms:alternative");
-        // const final_title = alternate_title === undefined ? get_string_value("dc:title", "(No title)") : alternate_title._;
-    
+        
         return {
             identifier  : get_string_value("dc:identifier", file_name.split('/').pop(), test_metadata),
             title       : get_final_title(test_metadata),
             description : get_string_value("dc:description", "(No description)", test_metadata),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)", test_metadata),
             creators    : get_array_of_string_values("dc:creator", "(Unknown)", test_metadata),
-            required    : is_required(test_metadata),
+            required    : get_required(test_metadata),
             references  : get_array_of_meta_values("dcterms:isReferencedBy", test_metadata).map((entry:any): string => entry._),
         }
     }
@@ -383,9 +393,21 @@ export async function get_report_data(tests: string, reports: string): Promise<R
     const sort_test_data = (all_tests: TestData[]): TestData[] => {
         const required_tests: TestData[] = [];
         const optional_tests: TestData[] = [];
+        const possible_tests: TestData[] = [];
+
+        const get_array = (val: ReqType): TestData[] => {
+            switch (val) {
+            case "must": return required_tests;
+            case "should": return optional_tests;
+            case "may": return possible_tests;
+            // This is, in fact, not necessary, but typescript is not sophisticated enough to see that...
+            // and I hate eslint warnings!
+            default: return required_tests;
+            }
+        }
 
         for (const test of all_tests) {
-            (test.required === true ? required_tests : optional_tests).push(test)
+            get_array(test.required).push(test);
         }
 
         // This is, most of the times, unnecessary, because the directory reading has an alphabetic order already.
@@ -394,6 +416,7 @@ export async function get_report_data(tests: string, reports: string): Promise<R
         return [
             ...required_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
             ...optional_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
+            ...possible_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
         ]
     }
 
