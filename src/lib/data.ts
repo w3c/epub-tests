@@ -22,7 +22,7 @@ import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 import * as xml2js from "xml2js";
 
-import { TestData, ImplementationReport, ImplementationData, ImplementationTable, Implementer, ReportData, Constants } from './types';
+import { TestData, ImplementationReport, ImplementationData, ImplementationTable, Implementer, ReportData, ReqType, Constants } from './types';
 
 /** 
  * Name tells it all...
@@ -83,14 +83,20 @@ async function get_implementation_reports(dir_name: string): Promise<Implementat
     // Get a single implementation report, which must be a JSON file
     const get_implementation_report = async (file_name: string): Promise<ImplementationReport> => {
         const implementation_report = await fs.readFile(file_name, 'utf-8');
-        return JSON.parse(implementation_report) as ImplementationReport;
+        try {
+            return JSON.parse(implementation_report) as ImplementationReport;
+        } catch (error) {
+            console.warn(`Warning: unable to parse ${file_name}; ignored`);
+            return undefined;
+        }
     };
 
     const implementation_list = await get_list_dir(dir_name, isFile);
 
     // Use the 'Promise.all' trick to get to all the implementation reports in one async step rather than going through a cycle
     const report_list_promises: Promise<ImplementationReport>[] = implementation_list.map((file_name) => get_implementation_report(`${dir_name}/${file_name}`));
-    const implementation_reports: ImplementationReport[] = await Promise.all(report_list_promises);
+    const proto_implementation_reports: ImplementationReport[] = await Promise.all(report_list_promises);
+    const implementation_reports: ImplementationReport[] = proto_implementation_reports.filter((entry) => entry !== undefined); 
     implementation_reports.sort((a,b) => string_comparison(a.name, b.name));
 
     return implementation_reports
@@ -173,10 +179,14 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
  * @param dir_name test directory name
  * @returns EPUB metadata converted into the [[TestData]] structure
  */
+// eslint-disable-next-line max-lines-per-function
 async function get_test_metadata(dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
     const get_single_test_metadata = async (file_name: string): Promise<TestData> => {
-        const get_string_value = (label: string, fallback: string): string => {
+        // Note the heavy use of "any" in the function; this is related to the fact that
+        // the xmljs package returns a pretty "unpredictable" object...
+        // As a consequence, this function bypasses most of TypeScript's checks. Alas!
+        const get_string_value = (label: string, fallback: string, metadata: any): string => {
             try {
                 const entry = metadata[label][0];
                 if (entry === undefined) {
@@ -190,7 +200,7 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             }
         };
 
-        const get_array_of_string_values = (label: string, fallback:string): string[] => {
+        const get_array_of_string_values = (label: string, fallback:string, metadata: any): string[] => {
             try {
                 const entries = metadata[label];
                 if (entries === undefined || entries.length === 0) {
@@ -205,7 +215,39 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
                 return [fallback]
             }
         };
-    
+
+        const get_array_of_meta_values = (property: string, metadata: any): string[] => {
+            return metadata["meta"].filter((entry:any): boolean => entry["$"].property === property)
+        }
+
+        const get_single_meta_value = (property: string, metadata: any): any => {
+            return metadata.meta.find((entry: any): boolean => entry["$"].property === property)
+        }
+
+        const get_required = (metadata: any): ReqType => {
+            const is_set = get_single_meta_value("belongs-to-collection", metadata);
+            if (is_set === undefined) {
+                return "must";
+            } else {
+                const val: string = (<string>is_set._).toLowerCase();
+                switch (val) {
+                case "must":
+                case "should":
+                case "may":
+                    return val;
+                default:
+                    return "must";
+                }
+            }
+        }
+
+        const get_final_title = (metadata: any): string => {
+            const alternate_title = get_single_meta_value("dcterms:alternative", metadata);
+            return alternate_title === undefined ? get_string_value("dc:title", "(No title)", metadata) : alternate_title._;    
+        }
+
+        // ---------
+
         let package_xml: string;
         try {
             package_xml = await fs.readFile(`${file_name}/${Constants.OPF_FILE}`,'utf-8');
@@ -218,26 +260,23 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             normalizeTags : true,
             explicitArray : true,
         });
-        const metadata = package_js.package.metadata[0]
-    
-        const alternate_title = metadata.meta.find((entry: any): boolean => entry["$"].property === "dcterms:alternative");
-        const final_title = alternate_title === undefined ? get_string_value("dc:title", "(No title)") : alternate_title._;
-    
+        const test_metadata = package_js.package.metadata[0]
+        
         return {
-            identifier  : get_string_value("dc:identifier", file_name.split('/').pop()),
-            title       : final_title,
-            description : get_string_value("dc:description", "(No description)"),
-            coverage    : get_string_value("dc:coverage", "(Uncategorized)"),
-            creators    : get_array_of_string_values("dc:creator", "(Unknown)"),
-            references  : metadata["meta"]
-                .filter((entry:any): boolean => entry["$"].property === "dcterms:isReferencedBy")
-                .map((entry:any): string => entry._),
+            identifier  : get_string_value("dc:identifier", file_name.split('/').pop(), test_metadata),
+            title       : get_final_title(test_metadata),
+            description : get_string_value("dc:description", "(No description)", test_metadata),
+            coverage    : get_string_value("dc:coverage", "(Uncategorized)", test_metadata),
+            creators    : get_array_of_string_values("dc:creator", "(Unknown)", test_metadata),
+            required    : get_required(test_metadata),
+            references  : get_array_of_meta_values("dcterms:isReferencedBy", test_metadata).map((entry:any): string => entry._),
         }
     }
 
     // Get the test descriptions
     const test_list = await get_list_dir(dir_name, isDirectory);
     const test_data_promises: Promise<TestData>[] = test_list.map((name: string) => get_single_test_metadata(`${dir_name}/${name}`));
+    
     // Use the 'Promise.all' trick to get to all the data in one async step rather than going through a cycle
     const test_data: TestData[] = await Promise.all(test_data_promises);
     return test_data.filter((entry) => entry !== undefined);
@@ -308,8 +347,38 @@ function create_implementation_tables(implementation_data: ImplementationData[])
  * @param reports directory where the implementation reports reside
  */
 export async function get_report_data(tests: string, reports: string): Promise<ReportData> {
+    const sort_test_data = (all_tests: TestData[]): TestData[] => {
+        const required_tests: TestData[] = [];
+        const optional_tests: TestData[] = [];
+        const possible_tests: TestData[] = [];
+
+        const get_array = (val: ReqType): TestData[] => {
+            switch (val) {
+            case "must": return required_tests;
+            case "should": return optional_tests;
+            case "may": return possible_tests;
+            // This is, in fact, not necessary, but typescript is not sophisticated enough to see that...
+            // and I hate eslint warnings!
+            default: return required_tests;
+            }
+        }
+
+        for (const test of all_tests) {
+            get_array(test.required).push(test);
+        }
+
+        // This is, most of the times, unnecessary, because the directory reading has an alphabetic order already.
+        // However, in rare cases, the test's file name and the test's identifier may not coincide, and the latter
+        // should prevail...
+        return [
+            ...required_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
+            ...optional_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
+            ...possible_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
+        ]
+    }
+
     // Get the metadata for all available tests;
-    const metadata: TestData[] = await get_test_metadata(tests);
+    const metadata: TestData[] = sort_test_data(await get_test_metadata(tests));
 
     // Get the list of available implementation reports
     const impl_list: ImplementationReport[] = await get_implementation_reports(reports);

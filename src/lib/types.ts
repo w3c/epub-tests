@@ -1,11 +1,13 @@
 /* eslint-disable @typescript-eslint/no-namespace */
+
 /**
  * Constants
  */
 export namespace Constants {
     /** Location for the tests themselves */
     export const TESTS_DIR: string = 'tests';
-    // export const TESTS_DIR: string = 'local_tests';
+
+    export const TESTS_DIR_DEBUG: string = 'local_tests';
 
     /** Location for the implementation reports */
     export const TEST_RESULTS_DIR: string = 'reports';
@@ -41,7 +43,7 @@ export namespace Constants {
     export const DOC_TEST_DESCRIPTIONS: string = 'index.html';
 
     /** List of test ID-s whose creators should not be considered for display */
-    export const IGNORE_CREATOR_ID: string[] = ['pkg-creator-order', 'pkg-dir_creator-rtl', 'content_001'];
+    export const IGNORE_CREATOR_ID: string[] = ['pkg-creator-order', 'pkg-dir_creator-rtl'];
 
     /** List of creator names that should not be considered for display */
     export const IGNORE_CREATORS: string[] = ['Creator', '(Unknown)'];
@@ -50,10 +52,13 @@ export namespace Constants {
     export const CLASS_PASS: string = "pass";
 
     /** CSS Class name for table cells with negative test results */
-    export const CLASS_FAIL: string = "fail"
+    export const CLASS_FAIL: string = "fail";
 
     /** CSS Class name for columns containing the ID-s */
     export const CLASS_COL_ID: string = "col_id";
+
+    /** CSS Class name for columns containing the Requirement flag */
+    export const CLASS_COL_REQ: string = "col_req";
 
     /** CSS Class name for columns containing test table references */
     export const CLASS_COL_TREF: string = "col_tref";
@@ -72,6 +77,11 @@ export namespace Constants {
 
     export const EPUB_MEDIA_TYPE: string = 'application/epub+zip';
 }
+
+/**
+ * The three possible values for the conformance level of a test.
+ */
+export type ReqType = "must" | "should" | "may";
 
 /**
  * The metadata related to a single test, extracted from the test's package document
@@ -102,6 +112,10 @@ export interface TestData {
      * This is a series of URL strings, referring to the section in the spec this test is pertinent to.
      */
     references: string[];
+    /**
+     * Whether this test corresponds to a _MUST_, _SHOULD_, or _MAY_ statement
+     */
+    required: ReqType;
 }
 
 /**
