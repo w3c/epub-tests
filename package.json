@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "./node_modules/ts-node/dist/bin.js src/main.ts -t",
+    "debug": "./node_modules/ts-node/dist/bin.js src/main.ts -t",
     "generate": "./node_modules/ts-node/dist/bin.js src/main.ts",
     "respec": "(cd docs/drafts; ../../node_modules/respec/tools/respec2html.js --localhost  -s index.html -o ../index.html; ../../node_modules/respec/tools/respec2html.js --localhost -s results.html -o ../results.html)",
     "lint": "eslint . --ext .ts",

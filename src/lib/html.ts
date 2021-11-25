@@ -106,12 +106,13 @@ const create_one_result_table = (data: ImplementationTable, implementers: Implem
         // Creation of one row for a specific test, ie, an array of 'td' elements
         // The row consists of the test (meta)data, and the list of test results
 
-        // First the test metadata (currently the ID only); ...
+        // First the test metadata (ID and conformance class); ...
         const test_data = [
             {
                 td : {
                     $ : {
-                        id : `${row.identifier}-results${suffix}`,
+                        id    : `${row.identifier}-results${suffix}`,
+                        class : row.required,
                     },
                     // link to the description of the test in another table...
                     a : {
@@ -123,12 +124,7 @@ const create_one_result_table = (data: ImplementationTable, implementers: Implem
                 },
             },
             {
-                td : {
-                    $ : {
-                        class : row.required,
-                    },
-                    _ : row.required,
-                },
+                td : row.required,
             },
         ];
 
@@ -307,7 +303,8 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
             {
                 td : {
                     $ : {
-                        id : `${row.identifier}`,
+                        id    : `${row.identifier}`,
+                        class : row.required,
                     },
                     a : {
                         $ : {
@@ -318,12 +315,7 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
                 },
             },
             {
-                td : {
-                    $ : {
-                        class : row.required,
-                    },
-                    _ : row.required,
-                },
+                td : row.required,
             },
             {
                 td : row.title,
