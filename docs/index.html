@@ -103,7 +103,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-epub3",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2021-11-23",
+  "publishDate": "2021-11-25",
   "shortName": "epub-tests",
   "edDraftURI": "https://w3c.github.io/epub-tests/results/",
   "copyrightStart": "2021",
@@ -132,14 +132,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2021-11-23T00:00:00.000Z",
-  "generatedSubtitle": " 23 November 2021"
+  "publishISODate": "2021-11-25T00:00:00.000Z",
+  "generatedSubtitle": " 25 November 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
 	<body class="h-entry informative"><div class="head">
      <h1 id="title" class="title">EPUB 3.3 Tests</h1>
     
-    <p id="w3c-state"> <time class="dt-published" datetime="2021-11-23">23 November 2021</time></p>
+    <p id="w3c-state"> <time class="dt-published" datetime="2021-11-25">25 November 2021</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -226,12 +226,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			<p>This document provides a short overview for each test, grouped into separate tables by test categories. The
 			columns in the tables are as follows:</p>
 			<ol>
-				<li>The identification of each test, linked to the unzipped tests themselves in the GitHub repository</li>
-				<li>Title of the test</li>
-				<li>Short description of the test</li>
-				<li>References to the corresponding normative statements or sections in the EPUB 3.3 specification(s)</li>
-				<li>Pointer to the (consolidated) implementation status of the test in the separate
-					<a href="results">implementation report</a></li>
+				<li>The identification of each test, linked to the unzipped tests themselves in the GitHub repository.</li>
+				<li>Conformance flag of test (i.e., <code>must</code>, <code>should</code>, or <code>may</code>).</li>
+				<li>Title of the test.</li>
+				<li>Short description of the test.</li>
+				<li>References to the corresponding normative statements or sections in the EPUB 3.3 specification(s).</li>
+				<li>Pointer to the (consolidated) implementation status of the test in the separate <a href="results">implementation report</a>.</li>
 			</ol>
 		</section>
 
@@ -242,6 +242,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <table class="zebra">
       <colgroup>
         <col class="col_id">
+        <col class="col_req">
         <col class="col_title">
         <col>
         <col class="col_sref">
@@ -249,15 +250,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </colgroup>
       <tbody><tr>
         <th>Id</th>
+        <th>Req</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="pub-data-urls">
+        <td id="pub-data-urls" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-data-urls">pub-data-urls</a>
         </td>
+        <td>must</td>
         <td>Data URL does not open in top-level context</td>
         <td>The XHTML content contains an img element where the src attribute is given as a data URL. The reading system must display the image rather than opening it in a new top-level browsing context.</td>
         <td>
@@ -269,9 +272,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-foreign_bad-fallback">
+        <td id="pub-foreign_bad-fallback" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_bad-fallback">pub-foreign_bad-fallback</a>
         </td>
+        <td>must</td>
         <td>Manifest fallback with unsupported fallback</td>
         <td>This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine item is a DMG, with a fallback to a PSD file.</td>
         <td>
@@ -282,9 +286,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-foreign_image">
+        <td id="pub-foreign_image" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_image">pub-foreign_image</a>
         </td>
+        <td>must</td>
         <td>Manifest fallback with image</td>
         <td>An HTML content file contains a PSD image, with a manifest fallback to a PNG image. This tests fallbacks for resources that are not in the spine.</td>
         <td>
@@ -295,9 +300,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-foreign_json-spine">
+        <td id="pub-foreign_json-spine" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_json-spine">pub-foreign_json-spine</a>
         </td>
+        <td>must</td>
         <td>Manifest fallback With JSON content document in spine</td>
         <td>This EPUB uses a JSON content file in the spine, with a manifest fallback to an HTML document. If the reading system does not support JSON, it should display the HTML.</td>
         <td>
@@ -308,9 +314,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-foreign_xml-spine">
+        <td id="pub-foreign_xml-spine" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_xml-spine">pub-foreign_xml-spine</a>
         </td>
+        <td>must</td>
         <td>Manifest fallback with XML in spine</td>
         <td>This EPUB uses an ordinary XML content file with mimetype application/xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.</td>
         <td>
@@ -321,9 +328,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-foreign_xml-suffix-spine">
+        <td id="pub-foreign_xml-suffix-spine" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_xml-suffix-spine">pub-foreign_xml-suffix-spine</a>
         </td>
+        <td>must</td>
         <td>Manifest fallback with XML with suffix in spine</td>
         <td>This EPUB uses an custom XML content file with mimetype application/dtc+xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.</td>
         <td>
@@ -334,9 +342,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-xml-external-id">
+        <td id="pub-xml-external-id" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-external-id">pub-xml-external-id</a>
         </td>
+        <td>must</td>
         <td>XML external entity not resolved</td>
         <td>The XHTML content document contains a reference to an external entity. The reading system must not resolve it.</td>
         <td>
@@ -347,9 +356,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-xml-names">
+        <td id="pub-xml-names" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-names">pub-xml-names</a>
         </td>
+        <td>must</td>
         <td>Invalid XML element name</td>
         <td>An XHTML element has an invalid name with two successive colons. The reading system must produce an error.</td>
         <td>
@@ -360,9 +370,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-xml-non-validating_invalid">
+        <td id="pub-xml-non-validating_invalid" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-non-validating_invalid">pub-xml-non-validating_invalid</a>
         </td>
+        <td>must</td>
         <td>Invalid XML navigation document</td>
         <td>The spine XML is invalid. The reading system must not display the navigation document.</td>
         <td>
@@ -373,9 +384,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-xml-non-validating_unclosed">
+        <td id="pub-xml-non-validating_unclosed" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-non-validating_unclosed">pub-xml-non-validating_unclosed</a>
         </td>
+        <td>must</td>
         <td>Unclosed XML tag</td>
         <td>An XHTML element does not have a closing tag. The reading system must produce an error.</td>
         <td>
@@ -392,6 +404,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <table class="zebra">
       <colgroup>
         <col class="col_id">
+        <col class="col_req">
         <col class="col_title">
         <col>
         <col class="col_sref">
@@ -399,15 +412,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </colgroup>
       <tbody><tr>
         <th>Id</th>
+        <th>Req</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="pub-cmt-gif">
+        <td id="pub-cmt-gif" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-gif">pub-cmt-gif</a>
         </td>
+        <td>must</td>
         <td>GIF image</td>
         <td>A GIF image is displayed as part of the XHTML content.</td>
         <td>
@@ -419,9 +434,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-cmt-jpeg">
+        <td id="pub-cmt-jpeg" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-jpeg">pub-cmt-jpeg</a>
         </td>
+        <td>must</td>
         <td>JPEG image</td>
         <td>A JPEG image is displayed as part of the XHTML content.</td>
         <td>
@@ -433,9 +449,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-cmt-mp3">
+        <td id="pub-cmt-mp3" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-mp3">pub-cmt-mp3</a>
         </td>
+        <td>must</td>
         <td>MP3 audio</td>
         <td>An MP3 audio file is displayed as part of the XHTML content.</td>
         <td>
@@ -447,9 +464,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-cmt-mp4">
+        <td id="pub-cmt-mp4" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-mp4">pub-cmt-mp4</a>
         </td>
+        <td>must</td>
         <td>MP4 audio</td>
         <td>An MP4 audio file is displayed as part of the XHTML content.</td>
         <td>
@@ -461,9 +479,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-cmt-opus">
+        <td id="pub-cmt-opus" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-opus">pub-cmt-opus</a>
         </td>
+        <td>must</td>
         <td>OPUS audio</td>
         <td>An OPUS audio file is displayed as part of the XHTML content.</td>
         <td>
@@ -475,9 +494,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-cmt-png">
+        <td id="pub-cmt-png" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-png">pub-cmt-png</a>
         </td>
+        <td>must</td>
         <td>PNG image</td>
         <td>A PNG image is displayed as part of the XHTML content.</td>
         <td>
@@ -489,9 +509,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-cmt-svg">
+        <td id="pub-cmt-svg" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-svg">pub-cmt-svg</a>
         </td>
+        <td>must</td>
         <td>SVG image</td>
         <td>An SVG image is displayed as part of the XHTML content (as a reference, not embedded).</td>
         <td>
@@ -503,9 +524,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pub-cmt-webp">
+        <td id="pub-cmt-webp" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-webp">pub-cmt-webp</a>
         </td>
+        <td>must</td>
         <td>WEBP image</td>
         <td>A WEBP image is displayed as part of the XHTML content.</td>
         <td>
@@ -523,6 +545,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <table class="zebra">
       <colgroup>
         <col class="col_id">
+        <col class="col_req">
         <col class="col_title">
         <col>
         <col class="col_sref">
@@ -530,15 +553,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </colgroup>
       <tbody><tr>
         <th>Id</th>
+        <th>Req</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="pkg-collections-unknown">
+        <td id="pkg-collections-unknown" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-collections-unknown">pkg-collections-unknown</a>
         </td>
+        <td>must</td>
         <td>Collection with unknown role</td>
         <td>The package document contains a collection with an unknown role. The reading system must open the EPUB successfully.</td>
         <td>
@@ -549,9 +574,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-creator-order">
+        <td id="pkg-creator-order" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-creator-order">pkg-creator-order</a>
         </td>
+        <td>must</td>
         <td>Creators listed in order</td>
         <td>Several creators are listed in the package document. The reading system must not display them out of order (but it may display only the first).</td>
         <td>
@@ -562,51 +588,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-flow-paginated">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-flow-paginated">pkg-flow-paginated</a>
-        </td>
-        <td>rendition:flow set to paginated</td>
-        <td>Tests on handling overflow content with the "rendition:flow" property set to "paginated". The content should be dynamically paginated (i.e., not scrolled) by the reading system.</td>
-        <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#paginated">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#paginated">(2) </a>
-        </td>
-        <td>
-          <a href="results.html#pkg-flow-paginated-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="pkg-flow-scrolled-continuous">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-flow-scrolled-continuous">pkg-flow-scrolled-continuous</a>
-        </td>
-        <td>rendition:flow set to scrolled-continuous</td>
-        <td>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-continuous". The content should be presented as one continuous scrolling document (i.e., not paginated).</td>
-        <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#scrolled-continuous">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scrolled-continuous">(2) </a>
-        </td>
-        <td>
-          <a href="results.html#pkg-flow-scrolled-continuous-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="pkg-flow-scrolled-doc">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-flow-scrolled-doc">pkg-flow-scrolled-doc</a>
-        </td>
-        <td>rendition:flow set to scrolled-doc</td>
-        <td>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-doc". Each of the chapters in this publication should be vertically scrollable, and swiping horizontally should moves from one to the next.</td>
-        <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/core/#scrolled-doc">(1) </a>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scrolled-doc">(2) </a>
-        </td>
-        <td>
-          <a href="results.html#pkg-flow-scrolled-doc-results">❐</a>
-        </td>
-      </tr>
-      <tr>
-        <td id="pkg-linked-records">
+        <td id="pkg-linked-records" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-linked-records">pkg-linked-records</a>
         </td>
+        <td>must</td>
         <td>Package processed with linked metadata record</td>
         <td>Reading System must process and display the title and creator metadata from the package document. An ONIX 3.0 format linked metadata record exists, but contains neither title nor creator metadata.</td>
         <td>
@@ -618,9 +603,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-manifest-unknown">
+        <td id="pkg-manifest-unknown" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-manifest-unknown">pkg-manifest-unknown</a>
         </td>
+        <td>must</td>
         <td>Manifest item with unknown properties</td>
         <td>The package document contains a manifest item with unknown properties. The reading system must open the EPUB successfully.</td>
         <td>
@@ -631,9 +617,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-manifest-unlisted-resource">
+        <td id="pkg-manifest-unlisted-resource" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-manifest-unlisted-resource">pkg-manifest-unlisted-resource</a>
         </td>
+        <td>must</td>
         <td>Resource not listed in manifest</td>
         <td>The XHTML content references an image that does not appear in the manifest. The image should not be shown.</td>
         <td>
@@ -644,9 +631,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-manifest-url">
+        <td id="pkg-manifest-url" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-manifest-url">pkg-manifest-url</a>
         </td>
+        <td>must</td>
         <td>Content in arbitrary directory</td>
         <td>The manifest refers to an XHTML file in an arbitrary subfolder. The reading system must be able to find the content.</td>
         <td>
@@ -657,9 +645,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-meta-unknown">
+        <td id="pkg-meta-unknown" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-meta-unknown">pkg-meta-unknown</a>
         </td>
+        <td>must</td>
         <td>Meta tag with unknown property</td>
         <td>The package document contains a meta tag with an unknown property. The reading system must open the EPUB successfully.</td>
         <td>
@@ -670,9 +659,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-meta-whitespace">
+        <td id="pkg-meta-whitespace" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-meta-whitespace">pkg-meta-whitespace</a>
         </td>
+        <td>must</td>
         <td>Whitespace removed from package metadata</td>
         <td>The package document's title and creator contain leading and trailing spaces along with excess internal whitespace. The reading system must render only a single space in all cases.</td>
         <td>
@@ -683,9 +673,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-duplicate-item-hyperlink">
+        <td id="pkg-spine-duplicate-item-hyperlink" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-duplicate-item-hyperlink">pkg-spine-duplicate-item-hyperlink</a>
         </td>
+        <td>must</td>
         <td>Hyperlink to duplicate items in spine</td>
         <td>The spine contains several references to the same content document. The reading system must move to the position of the first duplicate in the reading order when following a hyperlink.</td>
         <td>
@@ -696,9 +687,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-duplicate-item-rendering">
+        <td id="pkg-spine-duplicate-item-rendering" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-duplicate-item-rendering">pkg-spine-duplicate-item-rendering</a>
         </td>
+        <td>must</td>
         <td>Duplicate items in spine render</td>
         <td>The spine contains several references to the same content document. The reading system must not skip the duplicates when rendering the reading order.</td>
         <td>
@@ -709,9 +701,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-duplicate-item-ui">
+        <td id="pkg-spine-duplicate-item-ui" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-duplicate-item-ui">pkg-spine-duplicate-item-ui</a>
         </td>
+        <td>must</td>
         <td>UI recognizes duplicate items in spine</td>
         <td>The spine contains several references to the same content document. The reading system must allow the duplicates to be independently bookmarked or otherwise recognized in the UI.</td>
         <td>
@@ -722,9 +715,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-nonlinear-activation">
+        <td id="pkg-spine-nonlinear-activation" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-nonlinear-activation">pkg-spine-nonlinear-activation</a>
         </td>
+        <td>must</td>
         <td>Non-linear spine item is reachable</td>
         <td>An itemref in the spine is marked as non-linear. Although it (possibly) cannot be accessed through the table of contents, it can be reached from a link in the XHTML content.</td>
         <td>
@@ -735,9 +729,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-order">
+        <td id="pkg-spine-order" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-order">pkg-spine-order</a>
         </td>
+        <td>must</td>
         <td>Spine items in order</td>
         <td>Basic test of whether a reading system can display spine items in the correct order. The test fails if the reading system presents content in the order in which the file names sort, or if it presents files in manifest order rather than spine order.</td>
         <td>
@@ -748,9 +743,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-order-svg">
+        <td id="pkg-spine-order-svg" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-order-svg">pkg-spine-order-svg</a>
         </td>
+        <td>must</td>
         <td>SVG spine items in order</td>
         <td>Basic test of whether a reading system can display SVG spine items in the correct order.</td>
         <td>
@@ -761,9 +757,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-unknown">
+        <td id="pkg-spine-unknown" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-unknown">pkg-spine-unknown</a>
         </td>
+        <td>must</td>
         <td>Spine item with unknown properties</td>
         <td>The package document contains a spine item with unknown properties. The reading system must open the EPUB successfully.</td>
         <td>
@@ -774,9 +771,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-title-order">
+        <td id="pkg-title-order" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-title-order">pkg-title-order</a>
         </td>
+        <td>must</td>
         <td>First title in package</td>
         <td>Several titles are listed in the package document. The reading system must use the first title (and whether to use other titles is not defined).</td>
         <td>
@@ -787,9 +785,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-unique-id">
+        <td id="pkg-unique-id" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-unique-id">pkg-unique-id</a>
         </td>
+        <td>must</td>
         <td>Unique identifier not unique</td>
         <td>The package document's dc:identifier is identical across two publications. The reading system should display both publications independently.</td>
         <td>
@@ -800,9 +799,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-unique-id">
+        <td id="pkg-unique-id" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-unique-id">pkg-unique-id</a>
         </td>
+        <td>must</td>
         <td>Unique identifier reused</td>
         <td>The package document's dc:identifier is identical across two publications. The reading system should display both publications independently.</td>
         <td>
@@ -813,9 +813,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-version-backward">
+        <td id="pkg-version-backward" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-version-backward">pkg-version-backward</a>
         </td>
+        <td>must</td>
         <td>Package version less than 3.0</td>
         <td>“Reading Systems <em class="rfc2119">MUST</em> attempt to process an EPUB Publication whose Package Document version attribute is less than "3.0"”. This is an EPUB with package version attribute set to "0", to see if a reading system will open it.</td>
         <td>
@@ -825,6 +826,51 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="results.html#pkg-version-backward-results">❐</a>
         </td>
       </tr>
+      <tr>
+        <td id="pkg-flow-paginated" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-flow-paginated">pkg-flow-paginated</a>
+        </td>
+        <td>should</td>
+        <td>rendition:flow set to paginated</td>
+        <td>Tests on handling overflow content with the "rendition:flow" property set to "paginated". The content should be dynamically paginated (i.e., not scrolled) by the reading system.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#paginated">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#paginated">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#pkg-flow-paginated-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="pkg-flow-scrolled-continuous" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-flow-scrolled-continuous">pkg-flow-scrolled-continuous</a>
+        </td>
+        <td>should</td>
+        <td>rendition:flow set to scrolled-continuous</td>
+        <td>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-continuous". The content should be presented as one continuous scrolling document (i.e., not paginated).</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#scrolled-continuous">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scrolled-continuous">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#pkg-flow-scrolled-continuous-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="pkg-flow-scrolled-doc" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-flow-scrolled-doc">pkg-flow-scrolled-doc</a>
+        </td>
+        <td>should</td>
+        <td>rendition:flow set to scrolled-doc</td>
+        <td>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-doc". Each of the chapters in this publication should be vertically scrollable, and swiping horizontally should moves from one to the next.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#scrolled-doc">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scrolled-doc">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#pkg-flow-scrolled-doc-results">❐</a>
+        </td>
+      </tr>
     </tbody></table>
   </section>
   <section id="internationalization">
@@ -832,6 +878,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <table class="zebra">
       <colgroup>
         <col class="col_id">
+        <col class="col_req">
         <col class="col_title">
         <col>
         <col class="col_sref">
@@ -839,15 +886,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </colgroup>
       <tbody><tr>
         <th>Id</th>
+        <th>Req</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="pkg-dir-auto_root-rtl">
+        <td id="pkg-dir-auto_root-rtl" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir-auto_root-rtl">pkg-dir-auto_root-rtl</a>
         </td>
+        <td>must</td>
         <td>Correct 'dir=rtl' on the package, incorrectly overwritten by 'dir=auto' on title</td>
         <td>The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'auto' and the 'dir' attribute is set to 'rtl' on the package element; the title should display incorrectly.</td>
         <td>
@@ -859,9 +908,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-dir-auto_root-unset">
+        <td id="pkg-dir-auto_root-unset" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir-auto_root-unset">pkg-dir-auto_root-unset</a>
         </td>
+        <td>must</td>
         <td>Incorrect 'dir=auto' on the title</td>
         <td>The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'auto'; the title should display incorrectly.</td>
         <td>
@@ -873,9 +923,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-dir_creator-rtl">
+        <td id="pkg-dir_creator-rtl" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_creator-rtl">pkg-dir_creator-rtl</a>
         </td>
+        <td>must</td>
         <td>'dir=rtl' on the creator</td>
         <td>The 'dc:creator' element's 'dir' attribute is set to 'rtl'; the creator's name should display right-to-left.</td>
         <td>
@@ -887,9 +938,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-dir_rtl-root-ltr">
+        <td id="pkg-dir_rtl-root-ltr" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_rtl-root-ltr">pkg-dir_rtl-root-ltr</a>
         </td>
+        <td>must</td>
         <td>Incorrect 'dir=ltr' on the package, correctly overwritten by 'dir=rtl' on title</td>
         <td>The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'rtl' and the 'dir' attribute is set to 'ltr' on the 'package' element; the title should display correctly.</td>
         <td>
@@ -901,9 +953,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-dir_rtl-root-unset">
+        <td id="pkg-dir_rtl-root-unset" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_rtl-root-unset">pkg-dir_rtl-root-unset</a>
         </td>
+        <td>must</td>
         <td>Correct 'dir=rtl' on the title</td>
         <td>The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'rtl'; the title should display correctly.</td>
         <td>
@@ -915,9 +968,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-dir_unset-root-rtl">
+        <td id="pkg-dir_unset-root-rtl" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_unset-root-rtl">pkg-dir_unset-root-rtl</a>
         </td>
+        <td>must</td>
         <td>Correct 'dir=rtl' on the package</td>
         <td>The 'dc:title' element contains text whose proper rendering requires bidi control. The root's 'dir' attribute is set to 'rtl'; the title should display correctly.</td>
         <td>
@@ -929,9 +983,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-dir_unset-root-unset">
+        <td id="pkg-dir_unset-root-unset" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_unset-root-unset">pkg-dir_unset-root-unset</a>
         </td>
+        <td>must</td>
         <td>No 'dir' on the title</td>
         <td>The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is not set; the title should display incorrectly.</td>
         <td>
@@ -943,9 +998,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-progression-default">
+        <td id="pkg-spine-progression-default" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-progression-default">pkg-spine-progression-default</a>
         </td>
+        <td>must</td>
         <td>RTL publication's spine has implicit 'page-progression-direction="default"'</td>
         <td>In a publication set as using an RTL language, the spine does not set 'page-progression-direction', so it is implicitly 'default'. The pages must appear from right to left.</td>
         <td>
@@ -956,9 +1012,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-progression-pre-paginated">
+        <td id="pkg-spine-progression-pre-paginated" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-progression-pre-paginated">pkg-spine-progression-pre-paginated</a>
         </td>
+        <td>must</td>
         <td>Pre-paginated publication's spine sets 'page-progression-direction="ltr"'</td>
         <td>In a pre-paginated publication whose XHTML content sets 'dir="rtl"', the spine sets 'page-progression-direction="ltr"'. The pages must appear from left to right.</td>
         <td>
@@ -969,9 +1026,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-progression_ltr">
+        <td id="pkg-spine-progression_ltr" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-progression_ltr">pkg-spine-progression_ltr</a>
         </td>
+        <td>must</td>
         <td>Spine sets 'page-progression-direction="ltr"'</td>
         <td>The spine sets 'page-progression-direction="ltr"'. The pages must appear from left to right.</td>
         <td>
@@ -982,9 +1040,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="pkg-spine-progression_rtl">
+        <td id="pkg-spine-progression_rtl" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-progression_rtl">pkg-spine-progression_rtl</a>
         </td>
+        <td>must</td>
         <td>Spine sets 'page-progression-direction="rtl"'</td>
         <td>The spine sets 'page-progression-direction="rtl"'. The pages must appear from right to left.</td>
         <td>
@@ -1001,6 +1060,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <table class="zebra">
       <colgroup>
         <col class="col_id">
+        <col class="col_req">
         <col class="col_title">
         <col>
         <col class="col_sref">
@@ -1008,15 +1068,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </colgroup>
       <tbody><tr>
         <th>Id</th>
+        <th>Req</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="cnt-css-support">
+        <td id="cnt-css-support" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/cnt-css-support">cnt-css-support</a>
         </td>
+        <td>must</td>
         <td>Acid2 test</td>
         <td>The Acid2 test, ported from acid2.acidtests.org, demonstrates broad CSS support.</td>
         <td>
@@ -1027,9 +1089,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="cnt-mathml-support">
+        <td id="cnt-mathml-support" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/cnt-mathml-support">cnt-mathml-support</a>
         </td>
+        <td>must</td>
         <td>Support for Presentation MathML</td>
         <td>A Presentation MathML equation is displayed as part of the XHTML content.</td>
         <td>
@@ -1041,9 +1104,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="cnt-svg-css-inclusion">
+        <td id="cnt-svg-css-inclusion" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-css-inclusion">cnt-svg-css-inclusion</a>
         </td>
+        <td>must</td>
         <td>CSS applied to included SVG</td>
         <td>CSS changes the color of an SVG image that is embedded in the XHTML content by inclusion.</td>
         <td>
@@ -1054,9 +1118,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="cnt-svg-css-reference">
+        <td id="cnt-svg-css-reference" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-css-reference">cnt-svg-css-reference</a>
         </td>
+        <td>must</td>
         <td>CSS not applied to referenced SVG</td>
         <td>CSS does not change the color of an SVG image that is embedded in the XHTML content by reference.</td>
         <td>
@@ -1067,9 +1132,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="cnt-svg-embedded">
+        <td id="cnt-svg-embedded" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-embedded">cnt-svg-embedded</a>
         </td>
+        <td>must</td>
         <td>SVG embedded in XHTML content</td>
         <td>An SVG image is embedded in the XHTML content (as inline SVG).</td>
         <td>
@@ -1080,9 +1146,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="cnt-svg-support">
+        <td id="cnt-svg-support" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-support">cnt-svg-support</a>
         </td>
+        <td>must</td>
         <td>SVG content document</td>
         <td>An SVG image is displayed as a content document (not as part of an XHTML file).</td>
         <td>
@@ -1093,9 +1160,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="cnt-xhtml-support">
+        <td id="cnt-xhtml-support" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/cnt-xhtml-support">cnt-xhtml-support</a>
         </td>
+        <td>must</td>
         <td>XHTML content document</td>
         <td>An XHTML file is displayed as a content document.</td>
         <td>
@@ -1112,6 +1180,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <table class="zebra">
       <colgroup>
         <col class="col_id">
+        <col class="col_req">
         <col class="col_title">
         <col>
         <col class="col_sref">
@@ -1119,15 +1188,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </colgroup>
       <tbody><tr>
         <th>Id</th>
+        <th>Req</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="nav-access">
+        <td id="nav-access" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/nav-access">nav-access</a>
         </td>
+        <td>must</td>
         <td>Single link in navigation can be accessed</td>
         <td>The navigation document contains a single link and can be accessed through reading system controls.</td>
         <td>
@@ -1138,9 +1209,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="nav-activation">
+        <td id="nav-activation" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/nav-activation">nav-activation</a>
         </td>
+        <td>must</td>
         <td>Navigation relocates position while in spine</td>
         <td>Activating a link in the navigation document relocates the reading position to the target of the link.</td>
         <td>
@@ -1151,9 +1223,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="nav-spine_in-spine">
+        <td id="nav-spine_in-spine" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/nav-spine_in-spine">nav-spine_in-spine</a>
         </td>
+        <td>must</td>
         <td>Navigation accessible while in spine</td>
         <td>The navigation document is referenced in the spine and can be accessed through reading system controls.</td>
         <td>
@@ -1164,9 +1237,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="nav-spine_not-in-spine">
+        <td id="nav-spine_not-in-spine" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/nav-spine_not-in-spine">nav-spine_not-in-spine</a>
         </td>
+        <td>must</td>
         <td>Navigation accessible while not in spine</td>
         <td>The navigation document is not referenced in the spine, but can still be accessed through reading system controls.</td>
         <td>
@@ -1183,6 +1257,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <table class="zebra">
       <colgroup>
         <col class="col_id">
+        <col class="col_req">
         <col class="col_title">
         <col>
         <col class="col_sref">
@@ -1190,15 +1265,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </colgroup>
       <tbody><tr>
         <th>Id</th>
+        <th>Req</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="fxl-layout-pre-paginated">
+        <td id="fxl-layout-pre-paginated" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-layout-pre-paginated">fxl-layout-pre-paginated</a>
         </td>
+        <td>must</td>
         <td>rendition:layout pre-paginated spine order</td>
         <td>When rendition:layout is pre-paginated, reading systems must display one page per spine item.</td>
         <td>
@@ -1209,9 +1286,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="fxl-layout-pre-paginated-spreads">
+        <td id="fxl-layout-pre-paginated-spreads" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-layout-pre-paginated-spreads">fxl-layout-pre-paginated-spreads</a>
         </td>
+        <td>must</td>
         <td>rendition:layout pre-paginated spreads</td>
         <td>When the layout is pre-paginated, pages are displayed with no gaps when in synthetic spreads.</td>
         <td>
@@ -1222,9 +1300,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="fxl-orientation_default">
+        <td id="fxl-orientation_default" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-orientation_default">fxl-orientation_default</a>
         </td>
+        <td>must</td>
         <td>rendition:orientation default</td>
         <td>rendition:orientation is not specified. Therefore, it has the value "auto" and reading systems should display the EPUB in the orientation of the device.</td>
         <td>
@@ -1236,9 +1315,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="fxl-orientation_duplication">
+        <td id="fxl-orientation_duplication" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-orientation_duplication">fxl-orientation_duplication</a>
         </td>
+        <td>must</td>
         <td>rendition:orientation duplication</td>
         <td>rendition:orientation is specified twice. EPUBCheck should produce an error.</td>
         <td>
@@ -1249,9 +1329,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="fxl-orientation_landscape">
+        <td id="fxl-orientation_landscape" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-orientation_landscape">fxl-orientation_landscape</a>
         </td>
+        <td>must</td>
         <td>rendition:orientation landscape</td>
         <td>rendition:orientation is landscape, Reading Systems should either display the content in landscape or inform the user it should be.</td>
         <td>
@@ -1262,9 +1343,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="fxl-xhtml-icb">
+        <td id="fxl-xhtml-icb" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-xhtml-icb">fxl-xhtml-icb</a>
         </td>
+        <td>must</td>
         <td>XHTML content clipped outside viewport</td>
         <td>XHTML content outside the initial containing block (ICB) is clipped.</td>
         <td>
@@ -1282,6 +1364,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <table class="zebra">
       <colgroup>
         <col class="col_id">
+        <col class="col_req">
         <col class="col_title">
         <col>
         <col class="col_sref">
@@ -1289,15 +1372,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       </colgroup>
       <tbody><tr>
         <th>Id</th>
+        <th>Req</th>
         <th>Title</th>
         <th>Description</th>
         <th>Specs</th>
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="ocf-package_arbitrary">
+        <td id="ocf-package_arbitrary" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/ocf-package_arbitrary">ocf-package_arbitrary</a>
         </td>
+        <td>must</td>
         <td>Package in arbitrary directory</td>
         <td>The EPUB contains three valid package files and three corresponding sets of content documents, but only one of the packages, in an unusual subdirectory, is referenced by the container.xml file. The reading system must use this package.</td>
         <td>
@@ -1308,9 +1393,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="ocf-package_multiple">
+        <td id="ocf-package_multiple" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/ocf-package_multiple">ocf-package_multiple</a>
         </td>
+        <td>must</td>
         <td>Multiple packages in container file</td>
         <td>The EPUB contains three valid package files and three corresponding sets of content documents, all referenced by the container.xml file. The reading system must use the first package.</td>
         <td>
