@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-namespace */
+
 /**
  * Constants
  */
@@ -42,7 +43,7 @@ export namespace Constants {
     export const DOC_TEST_DESCRIPTIONS: string = 'index.html';
 
     /** List of test ID-s whose creators should not be considered for display */
-    export const IGNORE_CREATOR_ID: string[] = ['pkg-creator-order', 'pkg-dir_creator-rtl', 'content_001'];
+    export const IGNORE_CREATOR_ID: string[] = ['pkg-creator-order', 'pkg-dir_creator-rtl'];
 
     /** List of creator names that should not be considered for display */
     export const IGNORE_CREATORS: string[] = ['Creator', '(Unknown)'];
@@ -52,12 +53,6 @@ export namespace Constants {
 
     /** CSS Class name for table cells with negative test results */
     export const CLASS_FAIL: string = "fail";
-
-    /** CSS Class name for "required" table cell set to true  */
-    export const CLASS_MUST: string = "must";
-
-    /** CSS Class name for "required" table cell set to false  */
-    export const CLASS_SHOULD: string = "should";
 
     /** CSS Class name for columns containing the ID-s */
     export const CLASS_COL_ID: string = "col_id";
@@ -82,6 +77,11 @@ export namespace Constants {
 
     export const EPUB_MEDIA_TYPE: string = 'application/epub+zip';
 }
+
+/**
+ * The three possible values for the conformance level of a test.
+ */
+export type ReqType = "must" | "should" | "may";
 
 /**
  * The metadata related to a single test, extracted from the test's package document
@@ -113,9 +113,9 @@ export interface TestData {
      */
     references: string[];
     /**
-     * Whether this test corresponds to a _MUST_ or a _SHOULD_ statement
+     * Whether this test corresponds to a _MUST_, _SHOULD_, or _MAY_ statement
      */
-    required: boolean;
+    required: ReqType;
 }
 
 /**

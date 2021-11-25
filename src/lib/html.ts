@@ -96,7 +96,7 @@ function create_impl_list(impl: Implementer[]): string {
  */
 const create_one_result_table = (data: ImplementationTable, implementers: Implementer[], suffix: string = ''): any[] => {
     // The table header is on its own
-    const fixed_head = ["Id", "Req?"];
+    const fixed_head = ["Id", "Req"];
     const variable_head = implementers.map((impl) => 'variant' in impl ? `${impl.name} &#10;(${impl.variant})` : impl.name);
     const head = [...fixed_head,...variable_head].map((title) => {
         return { th: title }
@@ -125,7 +125,7 @@ const create_one_result_table = (data: ImplementationTable, implementers: Implem
             {
                 td : {
                     $ : {
-                        class : row.required ? Constants.CLASS_MUST : Constants.CLASS_SHOULD,
+                        class : row.required,
                     },
                     _ : row.required,
                 },
@@ -297,7 +297,7 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
     }
 
     // Creation of the header row
-    const fixed_head = ["Id", "Req?", "Title", "Description", "Specs", "Ref"];
+    const fixed_head = ["Id", "Req", "Title", "Description", "Specs", "Ref"];
     const head = fixed_head.map((title) => { return { th: title} });
 
     // Creation of an array of regular rows
@@ -320,7 +320,7 @@ const create_one_test_table = (data: ImplementationTable): any[] => {
             {
                 td : {
                     $ : {
-                        class : row.required ? Constants.CLASS_MUST : Constants.CLASS_SHOULD,
+                        class : row.required,
                     },
                     _ : row.required,
                 },
