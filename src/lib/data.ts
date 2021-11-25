@@ -35,6 +35,49 @@ function string_comparison(a: string, b: string): number {
     else return 0;
 }
 
+
+/**
+ * Get OPF file location, following the official EPUB mechanism
+ * @param dirname 
+ * @returns fname
+ */
+export async function get_opf_file(dirname: string): Promise<string> {
+    let container_xml: string;
+    try {
+        container_xml = await fs.readFile(`${dirname}/${Constants.CONTAINER_FILE}`, 'utf-8');
+    } catch (error) {
+        console.warn(`Container.xml file could not be accessed in Directory ${dirname}`);
+        throw (`"container.xml" file could not be accessed in directory "${dirname}"`)
+    }
+    const container_js: any = await xml2js.parseStringPromise(container_xml, {
+        trim          : true,
+        normalizeTags : true,
+        explicitArray : true,
+    });
+    try {
+        return container_js.container.rootfiles[0].rootfile[0]["$"]["full-path"];
+    } catch (error) {
+        throw (`OPF file name could not be accessed in the "container.xml" file of "${dirname}"`)
+    }
+}
+
+
+/**
+ * Find and extract the OPF file, following the official EPUB mechanism
+ * 
+ * @param dirname Directory name
+ * @returns OPF content in an XML string
+ */
+async function get_opf(dirname: string): Promise<string> {
+    const fname: string = await get_opf_file(dirname);
+    try {
+        return await fs.readFile(`${dirname}/${fname}`,'utf-8');
+    } catch (error) {
+        throw (`OPF file could not be accessed in directory "${dirname}"`)
+    }
+}
+
+
 /** 
  * See if a file name path refers to a real file
  * 
@@ -250,9 +293,9 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
 
         let package_xml: string;
         try {
-            package_xml = await fs.readFile(`${file_name}/${Constants.OPF_FILE}`,'utf-8');
+            package_xml = await get_opf(file_name)
         } catch (error) {
-            console.warn(`Directory ${file_name} does not contain an OPF file; skipped.`);
+            console.warn(`${error}; skipped.`);
             return undefined;
         }
         const package_js: any = await xml2js.parseStringPromise(package_xml, {

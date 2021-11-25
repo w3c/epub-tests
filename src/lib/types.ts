@@ -21,8 +21,8 @@ export namespace Constants {
     /** Base URL for the tests in the repository */
     export const TEST_URL_BASE: string = 'https://github.com/w3c/epub-tests/tree/main/tests';
 
-    /** Location of the OPF file within the test directory */
-    export const OPF_FILE: string = 'OPS/package.opf';
+    /** Location of the container file within the test directory */
+    export const CONTAINER_FILE: string = 'META-INF/container.xml';
 
     /** Location for the HTML fragment on implementation lists */
     export const IMPL_FRAGMENT: string = `${DOCS_DIR}/fragments/implementations.html`;

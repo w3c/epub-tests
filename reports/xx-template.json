@@ -39,6 +39,7 @@
         "pkg-manifest-url": false,
         "pkg-meta-unknown": false,
         "pkg-meta-whitespace": false,
+        "pkg-relative-url": false,
         "pkg-spine-duplicate-item-hyperlink": false,
         "pkg-spine-duplicate-item-rendering": false,
         "pkg-spine-duplicate-item-ui": false,
