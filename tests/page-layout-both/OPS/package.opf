@@ -14,6 +14,7 @@
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#page-layout-both</meta>
     <meta property="dcterms:modified">2021-01-01T00:00:00Z</meta>
     <meta property="rendition:layout">pre-paginated</meta>
+    <meta property="belongs-to-collection">should</meta>
   </metadata>
   <manifest>
     <item id="page_001" href="page_001.xhtml" media-type="application/xhtml+xml" />
