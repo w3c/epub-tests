@@ -5,16 +5,16 @@
     <dc:creator>Wendy Reid</dc:creator>
     <dc:date>2021-11-24</dc:date>
     <dc:description>When rendition:spread is "both", the content should appear in a synthetic spread regardless of reading system orientation.</dc:description>
-    <dc:identifier id="pub-id">fxl-spread_both</dc:identifier>
+    <dc:identifier id="pub-id">fxl-spread-both</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>rendition:spread both</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+    <meta property="belongs-to-collection">should</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#def-spread-both</meta>
     <meta property="dcterms:modified">2021-11-24T00:00:00Z</meta>
     <meta property="rendition:layout">pre-paginated</meta>
     <meta property="rendition:spread">both</meta>
-    <meta property="belongs-to-collection">should</meta>
   </metadata>
   <manifest>
     <item id="page_001" href="page_001.xhtml" media-type="application/xhtml+xml" />

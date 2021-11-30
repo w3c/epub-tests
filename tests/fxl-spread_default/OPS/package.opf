@@ -4,7 +4,7 @@
     <dc:coverage>Fixed Layout</dc:coverage>
     <dc:creator>Wendy Reid</dc:creator>
     <dc:date>2021-11-24</dc:date>
-    <dc:description>The default value for rendition:spread should be "auto" if not specified.</dc:description>
+    <dc:description>The default value for rendition:spread should be "auto" if not specified. When rendition:spread is "auto", the reading system can choose to display spine items in a synthetic spread.</dc:description>
     <dc:identifier id="pub-id">fxl-spread_default</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>rendition:spread default</dc:title>

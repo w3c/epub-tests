@@ -7,7 +7,7 @@
     <dc:description>
       When rendition:layout is duplicated, EPUBCheck must return an error.
     </dc:description>
-    <dc:identifier id="pub-id">fxl-layout_duplication</dc:identifier>
+    <dc:identifier id="pub-id">fxl-layout-duplication</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>rendition:layout duplication</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
