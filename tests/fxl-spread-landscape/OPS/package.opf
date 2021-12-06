@@ -4,7 +4,7 @@
     <dc:coverage>Fixed Layout</dc:coverage>
     <dc:creator>Wendy Reid</dc:creator>
     <dc:date>2021-11-24</dc:date>
-    <dc:description>If rendition:spread is "landscape", synthetic spreads should be rendered when the reading system is in landscape orientation.</dc:description>
+    <dc:description>If rendition:spread is "landscape", synthetic spreads should be rendered only when the reading system is in landscape orientation.</dc:description>
     <dc:identifier id="pub-id">fxl-spread_landscape</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>rendition:spread landscape</dc:title>
