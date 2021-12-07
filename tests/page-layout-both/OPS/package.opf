@@ -22,6 +22,7 @@
     <item id="page_003" href="page_003.xhtml" media-type="application/xhtml+xml" />
     <item id="page_004" href="page_004.xhtml" media-type="application/xhtml+xml" />
     <item id="style"    href="fixed.css" media-type="text/css" />
+    <item id="style2"   href="reflow.css" media-type="text/css" />
     <item id="stix-font" href="fonts/STIXTwoText-Regular.otf" media-type="font/otf" />
     <item id="murmure-font" href="fonts/le-murmure.otf" media-type="font/otf" />
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />

@@ -1,0 +1,54 @@
+body {
+  width: 1200px;
+  height: 600px;
+  margin: 0;
+  overflow: hidden;
+}
+
+img {
+  position: absolute; width: 600px; height: 600px; margin: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@font-face {
+  font-family: "StixTwoText";
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/STIXTwoText-Regular.otf');
+}
+
+@font-face {
+  font-family: "le-murmure";
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/le-murmure.otf');
+}
+
+h1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-family: "le-murmure";
+}
+
+p {
+  top: 80px;
+  left: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "StixTwoText";
+}
+
+#p1, #p3 {
+  background-color: palegreen;
+}
+
+#p2, #p4 {
+  background-color: lightpink;
+}
