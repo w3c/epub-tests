@@ -26,7 +26,7 @@
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
   </manifest>
   <spine>
-    <itemref idref="page_001" properties="rendition:page-spread-right"/>
+    <itemref idref="page_001" properties="page-spread-right"/>
     <itemref idref="page_002" />
     <itemref idref="page_003" />
     <itemref idref="page_004" />

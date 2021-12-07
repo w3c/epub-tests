@@ -27,7 +27,7 @@
   </manifest>
   <spine>
     <itemref idref="page_001" />
-    <itemref idref="page_002" properties="rendition:page-spread-left"/>
+    <itemref idref="page_002" properties="page-spread-left"/>
     <itemref idref="page_003" />
     <itemref idref="page_004" />
   </spine>
