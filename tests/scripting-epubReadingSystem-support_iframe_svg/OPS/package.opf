@@ -5,9 +5,9 @@
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2021-12-10</dc:date>
     <dc:description>Checks whether the reading system implements the epubReadingSystem object in container-constraint document.</dc:description>
-    <dc:identifier id="pub-id">scripting-epubReadingSystem-support_iframe</dc:identifier>
+    <dc:identifier id="pub-id">scripting-epubReadingSystem-support_iframe_svg</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>epubReadingSystem object support in an iframe</dc:title>
+    <dc:title>epubReadingSystem object support in SVG in an iframe</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#scripting-req-epubReadingSystem</meta>
@@ -16,7 +16,7 @@
   </metadata>
   <manifest>
     <item id="content_001" properties="scripted" href="content_001.xhtml" media-type="application/xhtml+xml" />
-    <item id="iframe_content" properties="scripted" href="iframe_content.xhtml" media-type="application/xhtml+xml" />
+    <item id="iframe_content" properties="scripted" href="iframe_content.svg" media-type="image/svg+xml" />
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
   </manifest>
   <spine>
