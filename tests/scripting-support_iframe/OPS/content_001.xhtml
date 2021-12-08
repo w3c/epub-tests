@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Scripting support</title>
+    <script>
+      /**
+       * A simple test that proves that scripting is enabled.
+       */ 
+      function test_support() {
+        const report = document.getElementById('scripting_support');
+        report.textContent = 'This Reading System supports scripting. Test passes.';
+      }
+      window.addEventListener('load', test_support);
+    </script>
+  </head>
+  <body>
+    <iframe src="iframe_content.xhtml" width="600" style="border: solid;" title="Embedded iframe to check the availability scripting"></iframe>
+
+  </body>
+</html>
