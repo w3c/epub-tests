@@ -103,7 +103,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-epub3",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2021-12-07",
+  "publishDate": "2021-12-09",
   "shortName": "epub-tests",
   "edDraftURI": "https://w3c.github.io/epub-tests/results/",
   "copyrightStart": "2021",
@@ -132,14 +132,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2021-12-07T00:00:00.000Z",
-  "generatedSubtitle": " 07 December 2021"
+  "publishISODate": "2021-12-09T00:00:00.000Z",
+  "generatedSubtitle": " 09 December 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
 	<body class="h-entry informative"><div class="head">
      <h1 id="title" class="title">EPUB 3.3 Tests</h1>
     
-    <p id="w3c-state"> <time class="dt-published" datetime="2021-12-07">07 December 2021</time></p>
+    <p id="w3c-state"> <time class="dt-published" datetime="2021-12-09">09 December 2021</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -1288,6 +1288,20 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <th>Ref</th>
       </tr>
       <tr>
+        <td id="fxl-layout-duplication" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-layout-duplication">fxl-layout-duplication</a>
+        </td>
+        <td>must</td>
+        <td>rendition:layout duplication</td>
+        <td>When rendition:layout is duplicated, EPUBCheck must return an error.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#fxl-layout-duplication">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-layout-duplication-results">❐</a>
+        </td>
+      </tr>
+      <tr>
         <td id="fxl-layout-pre-paginated" class="must">
           <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-layout-pre-paginated">fxl-layout-pre-paginated</a>
         </td>
@@ -1345,17 +1359,31 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
       </tr>
       <tr>
-        <td id="fxl-orientation_landscape" class="must">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-orientation_landscape">fxl-orientation_landscape</a>
+        <td id="fxl-spread_default" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-spread_default">fxl-spread_default</a>
         </td>
         <td>must</td>
-        <td>rendition:orientation landscape</td>
-        <td>rendition:orientation is landscape, Reading Systems should either display the content in landscape or inform the user it should be.</td>
+        <td>rendition:spread default</td>
+        <td>The default value for rendition:spread should be "auto" if not specified. When rendition:spread is "auto", the reading system can choose to display spine items in a synthetic spread.</td>
         <td>
-          <a href="https://w3c.github.io/epub-specs/epub33/rs/#orientation">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#fxl-spread-default">(1) </a>
         </td>
         <td>
-          <a href="results.html#fxl-orientation_landscape-results">❐</a>
+          <a href="results.html#fxl-spread_default-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-spread_none" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-spread_none">fxl-spread_none</a>
+        </td>
+        <td>must</td>
+        <td>rendition:spread none</td>
+        <td>When rendition:spead is "none", spine items must not appear in synthetic spreads.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#def-spread-none">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-spread_none-results">❐</a>
         </td>
       </tr>
       <tr>
@@ -1371,6 +1399,148 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         </td>
         <td>
           <a href="results.html#fxl-xhtml-icb-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="page-layout-both-spread" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/page-layout-both-spread">page-layout-both-spread</a>
+        </td>
+        <td>must</td>
+        <td>page-layout-both spread</td>
+        <td>If a reflowable spine item has a page-spread-* value, it must be honored.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#property-layout-local">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#page-spread-flow">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#page-layout-both-spread-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-orientation-landscape" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-orientation-landscape">fxl-orientation-landscape</a>
+        </td>
+        <td>should</td>
+        <td>rendition:orientation landscape</td>
+        <td>rendition:orientation is landscape, Reading Systems should either display the content in landscape or inform the user it should be.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#orientation">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-orientation-landscape-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-page-spread-center" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-center">fxl-page-spread-center</a>
+        </td>
+        <td>should</td>
+        <td>rendition:page-spread-center</td>
+        <td>When rendition:page-spread-center is applied to a spine item, the document should be displayed in the center of the screen and not in a synthetic spread.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#page-spread-center">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-page-spread-center-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-page-spread-combined" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-combined">fxl-page-spread-combined</a>
+        </td>
+        <td>should</td>
+        <td>rendition:page-spread combined</td>
+        <td>When rendition:page-spread-right and -left are applied to adjacent spine items, they should be displayed in a synthetic spread.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#fxl-page-spread">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-page-spread-combined-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-page-spread-left" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-left">fxl-page-spread-left</a>
+        </td>
+        <td>should</td>
+        <td>rendition:page-spread-left</td>
+        <td>When rendition:page-spread-left is applied to a spine item, it should be displayed on the left side of the synthetic spread.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#page-spread-left">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-page-spread-left-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-page-spread-right" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-right">fxl-page-spread-right</a>
+        </td>
+        <td>should</td>
+        <td>rendition:page-spread-right</td>
+        <td>When rendition:page-spread-right is applied to a spine item, it should be displayed on the right side of the synthetic spread.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#page-spread-right">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-page-spread-right-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-spread-both" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-spread-both">fxl-spread-both</a>
+        </td>
+        <td>should</td>
+        <td>rendition:spread both</td>
+        <td>When rendition:spread is "both", the content should appear in a synthetic spread regardless of reading system orientation.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#def-spread-both">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-spread-both-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-spread_landscape" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-spread_landscape">fxl-spread_landscape</a>
+        </td>
+        <td>should</td>
+        <td>rendition:spread landscape</td>
+        <td>If rendition:spread is "landscape", synthetic spreads should be rendered only when the reading system is in landscape orientation.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#def-spread-landscape">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-spread_landscape-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="page-layout-both" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/page-layout-both">page-layout-both</a>
+        </td>
+        <td>should</td>
+        <td>page-layout-both</td>
+        <td>If a reflowable spine item follows a pre-paginated one, it should appear on the next page.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#property-layout-local">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#page-layout-both">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#page-layout-both-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="fxl-spread-auto" class="may">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/fxl-spread-auto">fxl-spread-auto</a>
+        </td>
+        <td>may</td>
+        <td>rendition:spread auto</td>
+        <td>When rendition:spread is "auto", the reading system can choose to display spine items in a synthetic spread.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#def-spread-auto">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#fxl-spread-auto-results">❐</a>
         </td>
       </tr>
     </tbody></table>
