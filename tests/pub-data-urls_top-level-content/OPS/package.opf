@@ -5,12 +5,12 @@
     <dc:creator>Matthew Chan</dc:creator>
     <dc:date>2021-12-03</dc:date>
     <dc:description>
-      The reading system must display an img (where src is a data URL) as part of the Top-level Content
-      Document in which it is embedded, rather than opening it as thought it were its own Top-level Content Document.
+      The reading system must display an img (where src is a data URL) positioned at the bottom of the first page
+      of a fixed layout ebook rather than opening the data URL as thought it were its own top-level content document.
     </dc:description>
     <dc:identifier id="pub-id">pub-data-urls_top-level-content</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>Data URL not opening as a Top-level Content Document</dc:title>
+    <dc:title>Data URL not opening as a top-level content document</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-data-urls</meta>
