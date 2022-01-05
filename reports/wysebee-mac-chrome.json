@@ -1,0 +1,14 @@
+{
+    "name": "Gardenia Corp",
+    "ref": "https://wysebee.com/",
+    "variant" : "Web",
+    "tests": {
+        "cnt-css-support": true,
+        "cnt-mathml-support": false,
+        "cnt-svg-css-inclusion": true,
+        "cnt-svg-css-reference": false,
+        "cnt-svg-embedded": true,
+        "cnt-svg-support": true,
+        "cnt-xhtml-support": true
+    }
+}

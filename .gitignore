@@ -25,3 +25,4 @@ local_tests/
 todo.md
 tests/.DS_Store
 .DS_Store
+.idea/
