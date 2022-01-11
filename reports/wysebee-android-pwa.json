@@ -1,7 +1,7 @@
 {
     "name": "Wysebee",
     "ref": "https://wysebee.com/",
-    "variant" : "Web (Chrome)",
+    "variant" : "Android (PWA)",
     "tests": {
         "cnt-css-support": true,
         "cnt-mathml-support": false,
