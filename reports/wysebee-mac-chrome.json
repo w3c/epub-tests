@@ -1,7 +1,6 @@
 {
-    "name": "Gardenia Corp",
+    "name": "Wysebee",
     "ref": "https://wysebee.com/",
-    "variant" : "Web",
     "tests": {
         "cnt-css-support": true,
         "cnt-mathml-support": false,
