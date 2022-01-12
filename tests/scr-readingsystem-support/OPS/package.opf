@@ -4,7 +4,7 @@
     <dc:coverage>Scripting</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2021-12-10</dc:date>
-    <dc:description>Checks whether the reading system implements the epubReadingSystem object in a spine-level document.</dc:description>
+    <dc:description>Checks whether the reading system implements the epubReadingSystem object.</dc:description>
     <dc:identifier id="pub-id">scr-readingsystem-support</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>epubReadingSystem object support</dc:title>

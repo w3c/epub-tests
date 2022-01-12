@@ -10,7 +10,7 @@
        */ 
       function test_ers() {
         const support = document.getElementById('scripting_support');
-        support.textContent = 'This Reading System supports scripting.';
+        support.textContent = 'This reading system supports scripting.';
 
         try {
           const ers = navigator.epubReadingSystem;
@@ -39,19 +39,19 @@
     </script>
   </head>
   <body>
-    <p id="scripting_support">This Reading System does not support scripting.</p>
+    <p id="scripting_support">This reading system does not support scripting.</p>
 
     <div id="fail" style="display: block">
-      <p>The Reading System does not implement the <code>epubReadingSystem</code> object. Test fails.</p>
+      <p>The reading system does not implement the <code>epubReadingSystem</code> object. Test fails.</p>
     </div>
 
     <div id="pass" style="display: none">
-      <p>The Reading System implements the <code>epubReadingSystem</code> object, with the following properties:</p>
+      <p>The reading system implements the <code>epubReadingSystem</code> object, with the following properties:</p>
       <ul>
         <li>Reading System Name: <span id="ers_name"></span></li>
         <li>Reading System Version: <span id="ers_version"></span></li>
       </ul>
-      <p>Test passes.</p>
+      <p>Test passes, unless one of the two values are set to <code>undefined</code>.</p>
     </div>
 
   </body>

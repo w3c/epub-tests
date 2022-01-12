@@ -19,7 +19,7 @@
        */ 
       function test_ers_features() {
         const support = document.getElementById('scripting_support');
-        support.textContent = 'This Reading System supports scripting.';
+        support.textContent = 'This reading system supports scripting.';
 
         try {
           const ers = navigator.epubReadingSystem;
@@ -43,7 +43,7 @@
               const feature_entry = document.getElementById(feature);
               try {
                 const result = ers.hasFeature(feature);
-                feature_entry.textContent = (result === undefined || result === null) ? 'n/a' : `${result}`;
+                feature_entry.textContent = (result === undefined || result === null) ? 'unimplemented' : `${result}`;
               } catch(e) {
                 // if whatever happens...
                 feature_entry.textContent = 'n/a';
