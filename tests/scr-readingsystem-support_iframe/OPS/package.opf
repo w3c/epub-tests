@@ -4,7 +4,7 @@
     <dc:coverage>Scripting</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2021-12-10</dc:date>
-    <dc:description>Checks whether the reading system implements the epubReadingSystem object in container-constraint document.</dc:description>
+    <dc:description>Checks whether the reading system implements the epubReadingSystem object in container-constrained document (e.g., an iframe).</dc:description>
     <dc:identifier id="pub-id">scr-readingsystem-support_iframe</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>epubReadingSystem object support in an iframe</dc:title>
