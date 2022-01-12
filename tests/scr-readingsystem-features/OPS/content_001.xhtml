@@ -46,7 +46,7 @@
                 feature_entry.textContent = (result === undefined || result === null) ? 'unimplemented' : `${result}`;
               } catch(e) {
                 // if whatever happens...
-                feature_entry.textContent = 'n/a';
+                feature_entry.textContent = 'unimplemented';
               }
             }
 
@@ -80,7 +80,7 @@
       </ul>
       <p>
         If all entries are <code>true</code> or <code>false</code>, the test passes. 
-        Otherwise, i.e., if there are one or more <code>n/a</code> entries, the test fails.
+        Otherwise, i.e., if there are one or more <code>unimplemented</code> entries, the test fails.
       </p>
     </div>
 
