@@ -83,6 +83,14 @@
         "pub-xml-external-id": false,
         "pub-xml-names": false,
         "pub-xml-non-validating_invalid": false,
-        "pub-xml-non-validating_unclosed": false
+        "pub-xml-non-validating_unclosed": false,
+        "scr-readingsystem-features": false,
+        "scr-readingsystem-support": false,
+        "scr-readingsystem-support_iframe": false,
+        "scr-readingsystem-support_iframe_svg": false,
+        "scr-readingsystem-support_svg": false,
+        "scr-support": false,
+        "scr-support_iframe": false,
+        "scr-support_svg": false
     }
 }

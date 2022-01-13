@@ -1357,4 +1357,145 @@
       </tr>
     </table>
   </section>
+  <section>
+    <h2 id="sec-scripting-data">Scripting</h2>
+    <table class="zebra">
+      <colgroup>
+        <col class="col_id"/>
+        <col class="col_req"/>
+        <col class="col_title"/>
+        <col/>
+        <col class="col_sref"/>
+        <col class="col_tref"/>
+      </colgroup>
+      <tr>
+        <th>Id</th>
+        <th>Req</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Specs</th>
+        <th>Ref</th>
+      </tr>
+      <tr>
+        <td id="scr-readingsystem-features" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-features">scr-readingsystem-features</a>
+        </td>
+        <td>must</td>
+        <td>epubReadingSystem object features</td>
+        <td>Checks whether the reading system implements the required epubReadingSystem feature string queries.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem-features">(2) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-scripted-readingsystem-object">(3) </a>
+        </td>
+        <td>
+          <a href="results.html#scr-readingsystem-features-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="scr-readingsystem-support" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-support">scr-readingsystem-support</a>
+        </td>
+        <td>must</td>
+        <td>epubReadingSystem object support</td>
+        <td>Checks whether the reading system implements the epubReadingSystem object.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem-properties">(2) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-scripted-readingsystem-object">(3) </a>
+        </td>
+        <td>
+          <a href="results.html#scr-readingsystem-support-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="scr-readingsystem-support_iframe" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-support_iframe">scr-readingsystem-support_iframe</a>
+        </td>
+        <td>must</td>
+        <td>epubReadingSystem object support in an iframe</td>
+        <td>Checks whether the reading system implements the epubReadingSystem object in container-constrained document (e.g., an iframe).</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem-properties">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#scr-readingsystem-support_iframe-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="scr-readingsystem-support_iframe_svg" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-support_iframe_svg">scr-readingsystem-support_iframe_svg</a>
+        </td>
+        <td>must</td>
+        <td>epubReadingSystem object support in an SVG within an iframe</td>
+        <td>Checks whether the reading system implements the epubReadingSystem object in container-constrained SVG document (e.g., an iframe).</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem-properties">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#scr-readingsystem-support_iframe_svg-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="scr-readingsystem-support_svg" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-support_svg">scr-readingsystem-support_svg</a>
+        </td>
+        <td>must</td>
+        <td>epubReadingSystem object support in a spine-level SVG</td>
+        <td>Checks whether the reading system implements the epubReadingSystem object in a spine-level SVG document.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#scripting-req-readingsystem-properties">(2) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-scripted-readingsystem-object">(3) </a>
+        </td>
+        <td>
+          <a href="results.html#scr-readingsystem-support_svg-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="scr-support" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/scr-support">scr-support</a>
+        </td>
+        <td>should</td>
+        <td>Scripting support</td>
+        <td>Checks whether the reading system implements scripting in a spine-level document (i.e., whether a simple inline script is executed at all).</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-scripted">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#scr-support-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="scr-support_iframe" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/scr-support_iframe">scr-support_iframe</a>
+        </td>
+        <td>should</td>
+        <td>Support for container-constrained scripts</td>
+        <td>Checks whether the reading system implements container-constrained scripts (i.e., whether a simple inline script is executed at all in an iframe).</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-scripted">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#scr-support_iframe-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="scr-support_svg" class="should">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/scr-support_svg">scr-support_svg</a>
+        </td>
+        <td>should</td>
+        <td>Scripting support in spine-level SVG</td>
+        <td>Checks whether the reading system implements scripting in a spine-level SVG document (i.e., whether a simple inline script is executed at all).</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-scripted">(1) </a>
+        </td>
+        <td>
+          <a href="results.html#scr-support_svg-results">❐</a>
+        </td>
+      </tr>
+    </table>
+  </section>
 </section>
