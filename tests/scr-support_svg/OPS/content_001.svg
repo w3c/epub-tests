@@ -1,0 +1,29 @@
+<svg version="1.1" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <script>//<![CDATA[
+      /**
+      * A simple test that proves that scripting is enabled.
+      */ 
+      function test_support() {
+        const report = document.getElementById('middle_line');
+        report.replaceChildren(document.createTextNode('supports scripting'))
+        const passes = document.getElementById('passes');
+        passes.replaceChildren(document.createTextNode('Test passes.'))
+      }
+      window.addEventListener('load', test_support);
+      //]]>
+  </script>
+  <style>
+    text {
+      font-size: 10px;
+      text-anchor: middle;
+      fill: white;
+    }
+  </style>
+  <rect width="100%" height="100%" fill="red" />
+  <circle cx="150" cy="100" r="80" fill="green" />
+  <g transform="translate(0,-35)">
+    <text x="150" y="125">The Reading System</text>
+    <text x="150" y="140" id="middle_line">does not support scripting</text>
+    <text x="150" y="155">in SVG. <tspan id="passes">Test fails.</tspan></text>
+  </g>
+</svg>

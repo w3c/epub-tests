@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Support for container-constrained scripts</title>
+    <script>
+      /**
+       * A simple test that proves that scripting is enabled.
+       */ 
+      function test_support() {
+        const report = document.getElementById('scripting_support');
+        report.textContent = 'This Reading System supports scripting in an iframe. Test passes.';
+      }
+      window.addEventListener('load', test_support);
+    </script>
+  </head>
+  <body>
+    <p id="scripting_support">This reading system does not support scripting in an iframe. Test fails.</p>
+  </body>
+</html>

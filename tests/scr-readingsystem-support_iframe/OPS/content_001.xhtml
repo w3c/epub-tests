@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>epubReadingSystem object support in an iframe</title>
+    <script>
+      /**
+       * A simple change that proves that scripting is enabled.
+       * 
+       * Note that the script is more complicated than would be necessary in HTML, due to the fact that the innerHTML method does not
+       * seem to work in xhtml (only in html) :-(
+       */ 
+      function test_ers() {
+        const support = document.getElementById('scripting_support');
+        support.textContent = 'This reading system supports scripting.';
+
+      }
+
+      window.addEventListener('load', test_ers);
+    </script>
+  </head>
+  <body>
+    <p id="scripting_support">This Reading System does not support scripting.</p>
+
+    <iframe src="iframe_content.xhtml" width="600" height="600" style="border: solid;" title="Embedded iframe to check the availability of the epubReadingSystem object support"></iframe>
+
+    <p>Note that the test relies on the availability of the <code>iframe</code> element in HTML. If no content appears above this line, this means the <code>iframe</code> is not available, and the test fails.</p>
+
+  </body>
+</html>

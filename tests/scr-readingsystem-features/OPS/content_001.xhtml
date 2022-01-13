@@ -1,0 +1,88 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>epubReadingSystem object features</title>
+    <script>
+      const required_features = [
+        'dom-manipulation', 
+        'layout-changes', 
+        'touch-events', 
+        'mouse-events',
+        'keyboard-events',
+        'spine-scripting'
+       ]
+
+      /**
+       * A simple change that proves that scripting is enabled.
+       * 
+       * Note that the script is more complicated than would be necessary in HTML, because the innerHTML method does not
+       * seem to work in xhtml (only in html) :-(
+       */ 
+      function test_ers_features() {
+        const support = document.getElementById('scripting_support');
+        support.textContent = 'This reading system supports scripting.';
+
+        try {
+          const ers = navigator.epubReadingSystem;
+          // For code test only!!
+          // const ers = {
+          //   hasFeature(n) {
+          //     if (required_features.includes(n)) {
+          //       if (n === 'keyboard-events') return false;
+          //       if (n === 'touch-events') return undefined;
+          //       return true;
+          //     } else {
+          //       return false;
+          //     }
+          //   }
+          // }
+          if (ers !== undefined) {
+            const div_pass = document.getElementById('pass');
+            const div_fail = document.getElementById('fail');
+
+            for (const feature of required_features) {
+              const feature_entry = document.getElementById(feature);
+              try {
+                const result = ers.hasFeature(feature);
+                feature_entry.textContent = (result === undefined || result === null) ? 'unimplemented' : `${result}`;
+              } catch(e) {
+                // if whatever happens...
+                feature_entry.textContent = 'unimplemented';
+              }
+            }
+
+            div_fail.style.display = 'none';
+            div_pass.style.display = 'block';
+          }
+        } catch (e) {
+          // Let the original, i.e., negative report, stay as is. 
+        }
+      }
+
+      window.addEventListener('load', test_ers_features);
+    </script>
+  </head>
+  <body>
+    <p id="scripting_support">This Reading System does not support scripting.</p>
+
+    <div id="fail" style="display: block">
+      <p>The Reading System does not implement the <code>epubReadingSystem</code> object. Test fails.</p>
+    </div>
+
+    <div id="pass" style="display: none">
+      <p>The Reading System implements the <code>epubReadingSystem</code> object with the following features:</p>
+      <ul>
+        <li><code>dom-manipulation</code>: <code id="dom-manipulation"></code></li>
+        <li><code>layout-changes</code>: <code id="layout-changes"></code></li>
+        <li><code>touch-events</code>: <code id="touch-events"></code></li>
+        <li><code>mouse-events</code>: <code id="mouse-events"></code></li>
+        <li><code>keyboard-events</code>: <code id="keyboard-events"></code></li>
+        <li><code>spine-scripting</code>: <code id="spine-scripting"></code></li>
+      </ul>
+      <p>
+        If all entries are <code>true</code> or <code>false</code>, the test passes. 
+        Otherwise, i.e., if there are one or more <code>unimplemented</code> entries, the test fails.
+      </p>
+    </div>
+
+  </body>
+</html>
