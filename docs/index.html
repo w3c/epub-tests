@@ -255,8 +255,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <th>Ref</th>
       </tr>
       <tr>
-        <td id="pub-data-urls" class="must">
-          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-data-urls">pub-data-urls</a>
+        <td id="pub-data-urls_browsing-context" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-data-urls_browsing-context">pub-data-urls_browsing-context</a>
         </td>
         <td>must</td>
         <td>Data URL does not open in top-level context</td>
@@ -266,7 +266,22 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="https://w3c.github.io/epub-specs/epub33/core/#sec-data-urls">(2) </a>
         </td>
         <td>
-          <a href="results.html#pub-data-urls-results">❐</a>
+          <a href="results.html#pub-data-urls_browsing-context-results">❐</a>
+        </td>
+      </tr>
+      <tr>
+        <td id="pub-data-urls_top-level-content" class="must">
+          <a href="https://github.com/w3c/epub-tests/tree/main/tests/pub-data-urls_top-level-content">pub-data-urls_top-level-content</a>
+        </td>
+        <td>must</td>
+        <td>Data URL not opening as a top-level content document</td>
+        <td>The reading system must display an img (where src is a data URL) positioned at the bottom of the first page of a fixed layout ebook rather than opening the data URL as thought it were its own top-level content document.</td>
+        <td>
+          <a href="https://w3c.github.io/epub-specs/epub33/rs/#confreq-rs-data-urls">(1) </a>
+          <a href="https://w3c.github.io/epub-specs/epub33/core/#sec-data-urls">(2) </a>
+        </td>
+        <td>
+          <a href="results.html#pub-data-urls_top-level-content-results">❐</a>
         </td>
       </tr>
       <tr>
