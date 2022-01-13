@@ -8,7 +8,7 @@
       The XHTML content contains an img element where the src attribute is given as a data URL. The reading system must
       display the image rather than opening it in a new top-level browsing context.
     </dc:description>
-    <dc:identifier id="pub-id">pub-data-urls</dc:identifier>
+    <dc:identifier id="pub-id">pub-data-urls_browsing-context</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Data URL does not open in top-level context</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
