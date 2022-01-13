@@ -1,10 +1,10 @@
 {
     "name": "Wysebee",
     "ref": "https://wysebee.com/",
-    "variant" : "Web (Chrome)",
+    "variant" : "iOS (PWA)",
     "tests": {
         "cnt-css-support": true,
-        "cnt-mathml-support": false,
+        "cnt-mathml-support": true,
         "cnt-svg-css-inclusion": true,
         "cnt-svg-css-reference": false,
         "cnt-svg-embedded": true,
