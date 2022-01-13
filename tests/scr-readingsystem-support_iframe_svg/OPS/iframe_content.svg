@@ -71,8 +71,8 @@
     <g transform="translate(0,-38)">
       <text x="150" y="125">The reading system</text>
       <text x="150" y="132">implements the <tspan class="ers">epubReadingSystem</tspan> object.</text>
-      <text x="150" y="139">Reading System Name: <tspan id="ers_name">sg</tspan></text>
-      <text x="150" y="146">Reading System Version: <tspan id="ers_version">1.0.0</tspan></text>
+      <text x="150" y="139">Reading System Name: <tspan id="ers_name"></tspan></text>
+      <text x="150" y="146">Reading System Version: <tspan id="ers_version"></tspan></text>
       <text x="150" y="153">Test passes unless one of the values is undefined.</text>
     </g>
   </g>

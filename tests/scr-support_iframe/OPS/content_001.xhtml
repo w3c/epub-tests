@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
   <head>
-    <title>Scripting support</title>
+    <title>Support for container-constrained scripts</title>
     <script>
       /**
        * A simple test that proves that scripting is enabled.
@@ -14,6 +14,8 @@
   </head>
   <body>
     <iframe src="iframe_content.xhtml" width="600" style="border: solid;" title="Embedded iframe to check the availability scripting"></iframe>
+
+    <p>Note that the test relies on the availability of the <code>iframe</code> element in HTML. If no content appears above this line, this means the <code>iframe</code> is not available, and the test fails.</p>
 
   </body>
 </html>
