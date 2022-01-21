@@ -15,6 +15,7 @@
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:alternative">Incorrect 'dir=auto' on the title</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir-intro</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir-auto</meta>
     <meta property="dcterms:modified">2021-09-22T00:00:00Z</meta>
   </metadata>
