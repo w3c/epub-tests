@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="he" unique-identifier="pub-id" dir="rtl">
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="fr" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:coverage xml:lang="en">Internationalization</dc:coverage>
     <dc:creator xml:lang="en">Ivan Herman</dc:creator>
-    <dc:date>2022-01-21</dc:date>
+    <dc:date>2022-01-25</dc:date>
     <dc:description xml:lang="en">
-      The package document's language is set to 'he' and direction 'rtl' but the content document is not annotated for language and direction. The content document should not become automatically 'he' and 'rtl'
+      The package document's language is set to 'fr' but the content document is not annotated for language. The content document should not become automatically 'fr' but should be the default 'en'.
     </dc:description>
-    <dc:identifier id="pub-id">pkg-dir_pkg_non_content</dc:identifier>
-    <dc:language>he</dc:language>
-    <dc:title>CSS: הרפתקה חדשה!</dc:title>
+    <dc:identifier id="pub-id">pkg-lang_pkg_non_content</dc:identifier>
+    <dc:language>fr</dc:language>
+    <dc:title>Le contenu n'est pas automatiquement français</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:alternative"  xml:lang="en">Content document must not inherit package dir settings</meta>
+    <meta property="dcterms:alternative"  xml:lang="en">Content document must not inherit package language settings</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-lang-no-content</meta>
     <meta property="dcterms:modified">2022-01-21T00:00:00Z</meta>        
   </metadata>
