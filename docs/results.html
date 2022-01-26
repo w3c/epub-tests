@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 28.2.1">
+<meta name="generator" content="ReSpec 28.2.6">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 dfn{cursor:pointer}
@@ -72,13 +72,12 @@ details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padd
 details.respec-tests-details>ul{width:100%;margin-top:-.3em}
 details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
-h2,h3,h4,h5,h6{position:relative}
 aside.example .marker>a.self-link{color:inherit}
-:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
-:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
+:is(h2,h3,h4,h5,h6)+a.self-link{border:none;color:inherit;position:relative;top:-2.9em;left:-1.4em;margin-bottom:-2em}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";opacity:.5;text-decoration:none}
 @media (max-width:767px){
 dd{margin-left:0}
-:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
+:is(h2,h3,h4,h5,h6)+a.self-link{left:95%}
 }
 @media print{
 .removeOnSave{display:none}
@@ -101,7 +100,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-epub3",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2022-01-13",
+  "publishDate": "2022-01-26",
   "shortName": "epub-tests-results",
   "edDraftURI": "https://w3c.github.io/epub-tests/results/",
   "copyrightStart": "2021",
@@ -130,15 +129,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2022-01-13T00:00:00.000Z",
-  "generatedSubtitle": " 13 January 2022"
+  "publishISODate": "2022-01-26T00:00:00.000Z",
+  "generatedSubtitle": " 26 January 2022"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
 	
 	<body class="h-entry informative"><div class="head">
      <h1 id="title" class="title">EPUB 3.3 Test Results</h1>
     
-    <p id="w3c-state"> <time class="dt-published" datetime="2022-01-13">13 January 2022</time></p>
+    <p id="w3c-state"> <time class="dt-published" datetime="2022-01-26">26 January 2022</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -196,17 +195,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p>
     <hr title="Separator for header">
   </div>
-		<section id="abstract" class="introductory"><h2 id="abstract-0">Abstract<a class="self-link" href="#abstract" aria-label="Permalink for Section"></a></h2>
+		<section id="abstract" class="introductory"><h2 id="abstract-0">Abstract</h2><a class="self-link" href="#abstract" aria-label="Permalink for this Section"></a>
 			<p>Results of EPUB Testing.</p>
 		</section>
-		<section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document<a class="self-link" href="#sotd" aria-label="Permalink for Section"></a></h2><p>
+		<section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document</h2><a class="self-link" href="#sotd" aria-label="Permalink for this Section"></a><p>
       This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
        document. It has no official standing
       of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
     </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-implementer-list"><bdi class="secno">2. </bdi>List of Implementations</a></li><li class="tocline"><a class="tocxref" href="#sec-consolidated-report-tables"><bdi class="secno">3. </bdi>Consolidated Implementation Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-publication-resources-results"><bdi class="secno">3.1 </bdi>Publication Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-results"><bdi class="secno">3.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-package-documents-results"><bdi class="secno">3.3 </bdi>Package Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-results"><bdi class="secno">3.4 </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-results"><bdi class="secno">3.5 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-navigation-documents-results"><bdi class="secno">3.6 </bdi>Navigation Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-fixed-layout-results"><bdi class="secno">3.7 </bdi>Fixed Layout</a></li><li class="tocline"><a class="tocxref" href="#sec-open-container format-results"><bdi class="secno">3.8 </bdi>Open Container Format</a></li><li class="tocline"><a class="tocxref" href="#sec-scripting-results"><bdi class="secno">3.9 </bdi>Scripting</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sec-detailed-report-tables"><bdi class="secno">4. </bdi>Detailed Implementation Results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-publication-resources-results"><bdi class="secno">4.1 </bdi>Publication Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-results"><bdi class="secno">4.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-package-documents-results"><bdi class="secno">4.3 </bdi>Package Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-results"><bdi class="secno">4.4 </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-results"><bdi class="secno">4.5 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-navigation-documents-results"><bdi class="secno">4.6 </bdi>Navigation Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-fixed-layout-results"><bdi class="secno">4.7 </bdi>Fixed Layout</a></li><li class="tocline"><a class="tocxref" href="#sec-open-container format-results"><bdi class="secno">4.8 </bdi>Open Container Format</a></li><li class="tocline"><a class="tocxref" href="#sec-scripting-results"><bdi class="secno">4.9 </bdi>Scripting</a></li></ol></li></ol></nav>
 
 		<section id="introduction">
-			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></h2>
+			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a>
 			<p>
 				This document contains the test results for all tests. There is a <a href="index.html">separate document</a> giving a short description for each tests; these descriptions are linked from the the tests in the tables below.
 			</p>
@@ -220,12 +219,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 			</p>
 
 			<p>
-				The report tables below reflect this duality. <a href="#sec-consolidated-report-tables" class="sec-ref">§&nbsp;<bdi class="secno">3. </bdi>Consolidated Implementation Results</a> shows a view of the reports where reports with identical core engines, albeit in different variants,
-				are displayed as if it was a single implementation. The test results for a specific test is set to <code>true</code> if <em>any</em> of the variants has a <code>true</code> value. On the other hand, the separate <a href="#sec-detailed-report-tables" class="sec-ref">§&nbsp;<bdi class="secno">4. </bdi>Detailed Implementation Results</a> keeps all the variants separate, showing the full implementation results.
+				The report tables below reflect this duality. <a href="#sec-consolidated-report-tables" class="sec-ref"><bdi class="secno">3. </bdi>Consolidated Implementation Results</a> shows a view of the reports where reports with identical core engines, albeit in different variants,
+				are displayed as if it was a single implementation. The test results for a specific test is set to <code>true</code> if <em>any</em> of the variants has a <code>true</code> value. On the other hand, the separate <a href="#sec-detailed-report-tables" class="sec-ref"><bdi class="secno">4. </bdi>Detailed Implementation Results</a> keeps all the variants separate, showing the full implementation results.
 			</p>
 
 			<p>
-				<a href="#sec-implementer-list" class="sec-ref">§&nbsp;<bdi class="secno">2. </bdi>List of Implementations</a> lists all the implementations with the variant in parenthesis, if applicable.
+				<a href="#sec-implementer-list" class="sec-ref"><bdi class="secno">2. </bdi>List of Implementations</a> lists all the implementations with the variant in parenthesis, if applicable.
 			</p>
 
 			<p>
@@ -240,7 +239,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 		</section>
 
 		<section id="list-of-implementations">
-  <h2 id="sec-implementer-list"><bdi class="secno">2. </bdi>List of Implementations<a class="self-link" href="#sec-implementer-list" aria-label="Permalink for Section 2."></a></h2>
+  <h2 id="sec-implementer-list"><bdi class="secno">2. </bdi>List of Implementations</h2><a class="self-link" href="#sec-implementer-list" aria-label="Permalink for Section 2."></a>
   <ol>
     <li>
       <a href="https://wysebee.com/">Wysebee (Android (PWA))</a>
@@ -257,9 +256,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </ol>
 </section>
 		<section id="consolidated-implementation-results">
-  <h2 id="sec-consolidated-report-tables"><bdi class="secno">3. </bdi>Consolidated Implementation Results<a class="self-link" href="#sec-consolidated-report-tables" aria-label="Permalink for Section 3."></a></h2>
+  <h2 id="sec-consolidated-report-tables"><bdi class="secno">3. </bdi>Consolidated Implementation Results</h2><a class="self-link" href="#sec-consolidated-report-tables" aria-label="Permalink for Section 3."></a>
   <section id="publication-resources">
-    <h3 id="sec-publication-resources-results"><bdi class="secno">3.1 </bdi>Publication Resources<a class="self-link" href="#sec-publication-resources-results" aria-label="Permalink for Section 3.1"></a></h3>
+    <h3 id="sec-publication-resources-results"><bdi class="secno">3.1 </bdi>Publication Resources</h3><a class="self-link" href="#sec-publication-resources-results" aria-label="Permalink for Section 3.1"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -275,82 +274,82 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="index.html#pub-data-urls_browsing-context">pub-data-urls_browsing-context</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-data-urls_top-level-content-results" class="must">
           <a href="index.html#pub-data-urls_top-level-content">pub-data-urls_top-level-content</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-foreign_bad-fallback-results" class="must">
           <a href="index.html#pub-foreign_bad-fallback">pub-foreign_bad-fallback</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
       </tr>
       <tr>
         <td id="pub-foreign_image-results" class="must">
           <a href="index.html#pub-foreign_image">pub-foreign_image</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
       </tr>
       <tr>
         <td id="pub-foreign_json-spine-results" class="must">
           <a href="index.html#pub-foreign_json-spine">pub-foreign_json-spine</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-foreign_xml-spine-results" class="must">
           <a href="index.html#pub-foreign_xml-spine">pub-foreign_xml-spine</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
       </tr>
       <tr>
         <td id="pub-foreign_xml-suffix-spine-results" class="must">
           <a href="index.html#pub-foreign_xml-suffix-spine">pub-foreign_xml-suffix-spine</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
       </tr>
       <tr>
         <td id="pub-xml-external-id-results" class="must">
           <a href="index.html#pub-xml-external-id">pub-xml-external-id</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-xml-names-results" class="must">
           <a href="index.html#pub-xml-names">pub-xml-names</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-xml-non-validating_invalid-results" class="must">
           <a href="index.html#pub-xml-non-validating_invalid">pub-xml-non-validating_invalid</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-xml-non-validating_unclosed-results" class="must">
           <a href="index.html#pub-xml-non-validating_unclosed">pub-xml-non-validating_unclosed</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
     </tbody></table>
   </section>
   <section id="core-media-types">
-    <h3 id="sec-core-media types-results"><bdi class="secno">3.2 </bdi>Core Media Types<a class="self-link" href="#sec-core-media types-results" aria-label="Permalink for Section 3.2"></a></h3>
+    <h3 id="sec-core-media types-results"><bdi class="secno">3.2 </bdi>Core Media Types</h3><a class="self-link" href="#sec-core-media types-results" aria-label="Permalink for Section 3.2"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -366,61 +365,61 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="index.html#pub-cmt-gif">pub-cmt-gif</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-cmt-jpeg-results" class="must">
           <a href="index.html#pub-cmt-jpeg">pub-cmt-jpeg</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-cmt-mp3-results" class="must">
           <a href="index.html#pub-cmt-mp3">pub-cmt-mp3</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-cmt-mp4-results" class="must">
           <a href="index.html#pub-cmt-mp4">pub-cmt-mp4</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-cmt-opus-results" class="must">
           <a href="index.html#pub-cmt-opus">pub-cmt-opus</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-cmt-png-results" class="must">
           <a href="index.html#pub-cmt-png">pub-cmt-png</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-cmt-svg-results" class="must">
           <a href="index.html#pub-cmt-svg">pub-cmt-svg</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pub-cmt-webp-results" class="must">
           <a href="index.html#pub-cmt-webp">pub-cmt-webp</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
     </tbody></table>
   </section>
   <section id="package-documents">
-    <h3 id="sec-package-documents-results"><bdi class="secno">3.3 </bdi>Package Documents<a class="self-link" href="#sec-package-documents-results" aria-label="Permalink for Section 3.3"></a></h3>
+    <h3 id="sec-package-documents-results"><bdi class="secno">3.3 </bdi>Package Documents</h3><a class="self-link" href="#sec-package-documents-results" aria-label="Permalink for Section 3.3"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -436,91 +435,91 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="index.html#pkg-collections-unknown">pkg-collections-unknown</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-creator-order-results" class="must">
           <a href="index.html#pkg-creator-order">pkg-creator-order</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-linked-records-results" class="must">
           <a href="index.html#pkg-linked-records">pkg-linked-records</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-manifest-unknown-results" class="must">
           <a href="index.html#pkg-manifest-unknown">pkg-manifest-unknown</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-manifest-url-results" class="must">
           <a href="index.html#pkg-manifest-url">pkg-manifest-url</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-meta-unknown-results" class="must">
           <a href="index.html#pkg-meta-unknown">pkg-meta-unknown</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-meta-whitespace-results" class="must">
           <a href="index.html#pkg-meta-whitespace">pkg-meta-whitespace</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-relative-url-results" class="must">
           <a href="index.html#pkg-relative-url">pkg-relative-url</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-duplicate-item-hyperlink-results" class="must">
           <a href="index.html#pkg-spine-duplicate-item-hyperlink">pkg-spine-duplicate-item-hyperlink</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-duplicate-item-rendering-results" class="must">
           <a href="index.html#pkg-spine-duplicate-item-rendering">pkg-spine-duplicate-item-rendering</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-duplicate-item-ui-results" class="must">
           <a href="index.html#pkg-spine-duplicate-item-ui">pkg-spine-duplicate-item-ui</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-nonlinear-activation-results" class="must">
           <a href="index.html#pkg-spine-nonlinear-activation">pkg-spine-nonlinear-activation</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-order-results" class="must">
           <a href="index.html#pkg-spine-order">pkg-spine-order</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-order-svg-results" class="must">
@@ -534,68 +533,68 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="index.html#pkg-spine-unknown">pkg-spine-unknown</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-title-order-results" class="must">
           <a href="index.html#pkg-title-order">pkg-title-order</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-unique-id-results" class="must">
           <a href="index.html#pkg-unique-id">pkg-unique-id</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-unique-id-results" class="must">
           <a href="index.html#pkg-unique-id">pkg-unique-id</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-version-backward-results" class="must">
           <a href="index.html#pkg-version-backward">pkg-version-backward</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-flow-paginated-results" class="should">
           <a href="index.html#pkg-flow-paginated">pkg-flow-paginated</a>
         </td>
         <td>should</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
       </tr>
       <tr>
         <td id="pkg-flow-scrolled-continuous-results" class="should">
           <a href="index.html#pkg-flow-scrolled-continuous">pkg-flow-scrolled-continuous</a>
         </td>
         <td>should</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
       </tr>
       <tr>
         <td id="pkg-flow-scrolled-doc-results" class="should">
           <a href="index.html#pkg-flow-scrolled-doc">pkg-flow-scrolled-doc</a>
         </td>
         <td>should</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
       </tr>
       <tr>
         <td id="pkg-manifest-unlisted-resource-results" class="should">
           <a href="index.html#pkg-manifest-unlisted-resource">pkg-manifest-unlisted-resource</a>
         </td>
         <td>should</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
     </tbody></table>
   </section>
   <section id="internationalization">
-    <h3 id="sec-internationalization-results"><bdi class="secno">3.4 </bdi>Internationalization<a class="self-link" href="#sec-internationalization-results" aria-label="Permalink for Section 3.4"></a></h3>
+    <h3 id="sec-internationalization-results"><bdi class="secno">3.4 </bdi>Internationalization</h3><a class="self-link" href="#sec-internationalization-results" aria-label="Permalink for Section 3.4"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -611,82 +610,82 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a href="index.html#pkg-dir-auto_root-rtl">pkg-dir-auto_root-rtl</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
       </tr>
       <tr>
         <td id="pkg-dir-auto_root-unset-results" class="must">
           <a href="index.html#pkg-dir-auto_root-unset">pkg-dir-auto_root-unset</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-dir_creator-rtl-results" class="must">
           <a href="index.html#pkg-dir_creator-rtl">pkg-dir_creator-rtl</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-dir_rtl-root-ltr-results" class="must">
           <a href="index.html#pkg-dir_rtl-root-ltr">pkg-dir_rtl-root-ltr</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-dir_rtl-root-unset-results" class="must">
           <a href="index.html#pkg-dir_rtl-root-unset">pkg-dir_rtl-root-unset</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-dir_unset-root-rtl-results" class="must">
           <a href="index.html#pkg-dir_unset-root-rtl">pkg-dir_unset-root-rtl</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
       </tr>
       <tr>
         <td id="pkg-dir_unset-root-unset-results" class="must">
           <a href="index.html#pkg-dir_unset-root-unset">pkg-dir_unset-root-unset</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-progression-default-results" class="must">
           <a href="index.html#pkg-spine-progression-default">pkg-spine-progression-default</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-progression-pre-paginated-results" class="must">
           <a href="index.html#pkg-spine-progression-pre-paginated">pkg-spine-progression-pre-paginated</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-progression_ltr-results" class="must">
           <a href="index.html#pkg-spine-progression_ltr">pkg-spine-progression_ltr</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
       <tr>
         <td id="pkg-spine-progression_rtl-results" class="must">
           <a href="index.html#pkg-spine-progression_rtl">pkg-spine-progression_rtl</a>
         </td>
         <td>must</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
       </tr>
     </tbody></table>
   </section>
   <section id="content-documents">
-    <h3 id="sec-content-documents-results"><bdi class="secno">3.5 </bdi>Content Documents<a class="self-link" href="#sec-content-documents-results" aria-label="Permalink for Section 3.5"></a></h3>
+    <h3 id="sec-content-documents-results"><bdi class="secno">3.5 </bdi>Content Documents</h3><a class="self-link" href="#sec-content-documents-results" aria-label="Permalink for Section 3.5"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -749,7 +748,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="navigation-documents">
-    <h3 id="sec-navigation-documents-results"><bdi class="secno">3.6 </bdi>Navigation Documents<a class="self-link" href="#sec-navigation-documents-results" aria-label="Permalink for Section 3.6"></a></h3>
+    <h3 id="sec-navigation-documents-results"><bdi class="secno">3.6 </bdi>Navigation Documents</h3><a class="self-link" href="#sec-navigation-documents-results" aria-label="Permalink for Section 3.6"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -791,7 +790,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="fixed-layout">
-    <h3 id="sec-fixed-layout-results"><bdi class="secno">3.7 </bdi>Fixed Layout<a class="self-link" href="#sec-fixed-layout-results" aria-label="Permalink for Section 3.7"></a></h3>
+    <h3 id="sec-fixed-layout-results"><bdi class="secno">3.7 </bdi>Fixed Layout</h3><a class="self-link" href="#sec-fixed-layout-results" aria-label="Permalink for Section 3.7"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -931,7 +930,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="open-container-format">
-    <h3 id="sec-open-container format-results"><bdi class="secno">3.8 </bdi>Open Container Format<a class="self-link" href="#sec-open-container format-results" aria-label="Permalink for Section 3.8"></a></h3>
+    <h3 id="sec-open-container format-results"><bdi class="secno">3.8 </bdi>Open Container Format</h3><a class="self-link" href="#sec-open-container format-results" aria-label="Permalink for Section 3.8"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -959,7 +958,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="scripting">
-    <h3 id="sec-scripting-results"><bdi class="secno">3.9 </bdi>Scripting<a class="self-link" href="#sec-scripting-results" aria-label="Permalink for Section 3.9"></a></h3>
+    <h3 id="sec-scripting-results"><bdi class="secno">3.9 </bdi>Scripting</h3><a class="self-link" href="#sec-scripting-results" aria-label="Permalink for Section 3.9"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1030,9 +1029,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </section>
 </section>
 <section id="detailed-implementation-results">
-  <h2 id="sec-detailed-report-tables"><bdi class="secno">4. </bdi>Detailed Implementation Results<a class="self-link" href="#sec-detailed-report-tables" aria-label="Permalink for Section 4."></a></h2>
+  <h2 id="sec-detailed-report-tables"><bdi class="secno">4. </bdi>Detailed Implementation Results</h2><a class="self-link" href="#sec-detailed-report-tables" aria-label="Permalink for Section 4."></a>
   <section id="publication-resources-0">
-    <h3 id="sec-publication-resources-results"><bdi class="secno">4.1 </bdi>Publication Resources<a class="self-link" href="#sec-publication-resources-results" aria-label="Permalink for Section 4.1"></a></h3>
+    <h3 id="sec-publication-resources-results"><bdi class="secno">4.1 </bdi>Publication Resources</h3><a class="self-link" href="#sec-publication-resources-results" aria-label="Permalink for Section 4.1"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1053,7 +1052,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1063,7 +1062,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1073,7 +1072,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1083,7 +1082,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1093,7 +1092,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1103,7 +1102,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1113,7 +1112,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1123,7 +1122,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1133,7 +1132,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1143,7 +1142,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1153,13 +1152,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
     </tbody></table>
   </section>
   <section id="core-media-types-0">
-    <h3 id="sec-core-media types-results"><bdi class="secno">4.2 </bdi>Core Media Types<a class="self-link" href="#sec-core-media types-results" aria-label="Permalink for Section 4.2"></a></h3>
+    <h3 id="sec-core-media types-results"><bdi class="secno">4.2 </bdi>Core Media Types</h3><a class="self-link" href="#sec-core-media types-results" aria-label="Permalink for Section 4.2"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1180,7 +1179,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1190,7 +1189,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1200,7 +1199,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1210,7 +1209,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1220,7 +1219,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1230,7 +1229,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1240,7 +1239,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1250,13 +1249,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
     </tbody></table>
   </section>
   <section id="package-documents-0">
-    <h3 id="sec-package-documents-results"><bdi class="secno">4.3 </bdi>Package Documents<a class="self-link" href="#sec-package-documents-results" aria-label="Permalink for Section 4.3"></a></h3>
+    <h3 id="sec-package-documents-results"><bdi class="secno">4.3 </bdi>Package Documents</h3><a class="self-link" href="#sec-package-documents-results" aria-label="Permalink for Section 4.3"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1277,7 +1276,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1287,7 +1286,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1297,7 +1296,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1307,7 +1306,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1317,7 +1316,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1327,7 +1326,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1337,7 +1336,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1347,7 +1346,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1357,7 +1356,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1367,7 +1366,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1377,7 +1376,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1387,7 +1386,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1397,7 +1396,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1417,7 +1416,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1427,17 +1426,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
-        <td>n/a</td>
-      </tr>
-      <tr>
-        <td id="pkg-unique-id-results-detailed" class="must">
-          <a href="index.html#pkg-unique-id">pkg-unique-id</a>
-        </td>
-        <td>must</td>
-        <td>n/a</td>
-        <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1447,7 +1436,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
+      </tr>
+      <tr>
+        <td id="pkg-unique-id-results-detailed" class="must">
+          <a href="index.html#pkg-unique-id">pkg-unique-id</a>
+        </td>
+        <td>must</td>
+        <td>n/a</td>
+        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1457,7 +1456,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1467,7 +1466,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>should</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1477,7 +1476,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>should</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1487,7 +1486,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>should</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1497,13 +1496,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>should</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
     </tbody></table>
   </section>
   <section id="internationalization-0">
-    <h3 id="sec-internationalization-results"><bdi class="secno">4.4 </bdi>Internationalization<a class="self-link" href="#sec-internationalization-results" aria-label="Permalink for Section 4.4"></a></h3>
+    <h3 id="sec-internationalization-results"><bdi class="secno">4.4 </bdi>Internationalization</h3><a class="self-link" href="#sec-internationalization-results" aria-label="Permalink for Section 4.4"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1524,7 +1523,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1534,7 +1533,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1544,7 +1543,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1554,7 +1553,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1564,7 +1563,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1574,7 +1573,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="fail">fail</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1584,7 +1583,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1594,7 +1593,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1604,7 +1603,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1614,7 +1613,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
       <tr>
@@ -1624,13 +1623,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         <td>must</td>
         <td>n/a</td>
         <td>n/a</td>
-        <td>n/a</td>
+        <td class="pass">pass</td>
         <td>n/a</td>
       </tr>
     </tbody></table>
   </section>
   <section id="content-documents-0">
-    <h3 id="sec-content-documents-results"><bdi class="secno">4.5 </bdi>Content Documents<a class="self-link" href="#sec-content-documents-results" aria-label="Permalink for Section 4.5"></a></h3>
+    <h3 id="sec-content-documents-results"><bdi class="secno">4.5 </bdi>Content Documents</h3><a class="self-link" href="#sec-content-documents-results" aria-label="Permalink for Section 4.5"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1717,7 +1716,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="navigation-documents-0">
-    <h3 id="sec-navigation-documents-results"><bdi class="secno">4.6 </bdi>Navigation Documents<a class="self-link" href="#sec-navigation-documents-results" aria-label="Permalink for Section 4.6"></a></h3>
+    <h3 id="sec-navigation-documents-results"><bdi class="secno">4.6 </bdi>Navigation Documents</h3><a class="self-link" href="#sec-navigation-documents-results" aria-label="Permalink for Section 4.6"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1774,7 +1773,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="fixed-layout-0">
-    <h3 id="sec-fixed-layout-results"><bdi class="secno">4.7 </bdi>Fixed Layout<a class="self-link" href="#sec-fixed-layout-results" aria-label="Permalink for Section 4.7"></a></h3>
+    <h3 id="sec-fixed-layout-results"><bdi class="secno">4.7 </bdi>Fixed Layout</h3><a class="self-link" href="#sec-fixed-layout-results" aria-label="Permalink for Section 4.7"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1971,7 +1970,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="open-container-format-0">
-    <h3 id="sec-open-container format-results"><bdi class="secno">4.8 </bdi>Open Container Format<a class="self-link" href="#sec-open-container format-results" aria-label="Permalink for Section 4.8"></a></h3>
+    <h3 id="sec-open-container format-results"><bdi class="secno">4.8 </bdi>Open Container Format</h3><a class="self-link" href="#sec-open-container format-results" aria-label="Permalink for Section 4.8"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -2008,7 +2007,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="scripting-0">
-    <h3 id="sec-scripting-results"><bdi class="secno">4.9 </bdi>Scripting<a class="self-link" href="#sec-scripting-results" aria-label="Permalink for Section 4.9"></a></h3>
+    <h3 id="sec-scripting-results"><bdi class="secno">4.9 </bdi>Scripting</h3><a class="self-link" href="#sec-scripting-results" aria-label="Permalink for Section 4.9"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">

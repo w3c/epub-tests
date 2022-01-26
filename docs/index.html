@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 28.2.1">
+<meta name="generator" content="ReSpec 28.2.6">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 dfn{cursor:pointer}
@@ -72,13 +72,12 @@ details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padd
 details.respec-tests-details>ul{width:100%;margin-top:-.3em}
 details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
-h2,h3,h4,h5,h6{position:relative}
 aside.example .marker>a.self-link{color:inherit}
-:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
-:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
+:is(h2,h3,h4,h5,h6)+a.self-link{border:none;color:inherit;position:relative;top:-2.9em;left:-1.4em;margin-bottom:-2em}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";opacity:.5;text-decoration:none}
 @media (max-width:767px){
 dd{margin-left:0}
-:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
+:is(h2,h3,h4,h5,h6)+a.self-link{left:95%}
 }
 @media print{
 .removeOnSave{display:none}
@@ -101,7 +100,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-epub3",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2022-01-13",
+  "publishDate": "2022-01-26",
   "shortName": "epub-tests",
   "edDraftURI": "https://w3c.github.io/epub-tests/results/",
   "copyrightStart": "2021",
@@ -130,14 +129,14 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2022-01-13T00:00:00.000Z",
-  "generatedSubtitle": " 13 January 2022"
+  "publishISODate": "2022-01-26T00:00:00.000Z",
+  "generatedSubtitle": " 26 January 2022"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
 	<body class="h-entry informative"><div class="head">
      <h1 id="title" class="title">EPUB 3.3 Tests</h1>
     
-    <p id="w3c-state"> <time class="dt-published" datetime="2022-01-13">13 January 2022</time></p>
+    <p id="w3c-state"> <time class="dt-published" datetime="2022-01-26">26 January 2022</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -195,17 +194,17 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p>
     <hr title="Separator for header">
   </div>
-		<section id="abstract" class="introductory"><h2 id="abstract-0">Abstract<a class="self-link" href="#abstract" aria-label="Permalink for Section"></a></h2>
+		<section id="abstract" class="introductory"><h2 id="abstract-0">Abstract</h2><a class="self-link" href="#abstract" aria-label="Permalink for this Section"></a>
 			<p>Description of the EPUB 3.3 tests.</p>
 		</section>
-		<section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document<a class="self-link" href="#sotd" aria-label="Permalink for Section"></a></h2><p>
+		<section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document</h2><a class="self-link" href="#sotd" aria-label="Permalink for this Section"></a><p>
       This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
        document. It has no official standing
       of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
     </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#sec-test-tables"><bdi class="secno">2. </bdi>Description of the Tests</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sec-publication-resources-data"><bdi class="secno">2.1 </bdi>Publication Resources</a></li><li class="tocline"><a class="tocxref" href="#sec-core-media types-data"><bdi class="secno">2.2 </bdi>Core Media Types</a></li><li class="tocline"><a class="tocxref" href="#sec-package-documents-data"><bdi class="secno">2.3 </bdi>Package Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-internationalization-data"><bdi class="secno">2.4 </bdi>Internationalization</a></li><li class="tocline"><a class="tocxref" href="#sec-content-documents-data"><bdi class="secno">2.5 </bdi>Content Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-navigation-documents-data"><bdi class="secno">2.6 </bdi>Navigation Documents</a></li><li class="tocline"><a class="tocxref" href="#sec-fixed-layout-data"><bdi class="secno">2.7 </bdi>Fixed Layout</a></li><li class="tocline"><a class="tocxref" href="#sec-open-container format-data"><bdi class="secno">2.8 </bdi>Open Container Format</a></li><li class="tocline"><a class="tocxref" href="#sec-scripting-data"><bdi class="secno">2.9 </bdi>Scripting</a></li></ol></li><li class="tocline"><a class="tocxref" href="#contributors"><bdi class="secno">A. </bdi>Acknowledgements</a></li></ol></nav>
 
 		<section id="introduction">
-			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></h2>
+			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a>
 
 			<p>
 				<a href="https://github.com/w3c/epub-tests">w3c/epub-tests</a> is the repository for the the tests to
@@ -234,9 +233,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 		</section>
 
 		<section id="description-of-the-tests">
-  <h2 id="sec-test-tables"><bdi class="secno">2. </bdi>Description of the Tests<a class="self-link" href="#sec-test-tables" aria-label="Permalink for Section 2."></a></h2>
+  <h2 id="sec-test-tables"><bdi class="secno">2. </bdi>Description of the Tests</h2><a class="self-link" href="#sec-test-tables" aria-label="Permalink for Section 2."></a>
   <section id="publication-resources">
-    <h3 id="sec-publication-resources-data"><bdi class="secno">2.1 </bdi>Publication Resources<a class="self-link" href="#sec-publication-resources-data" aria-label="Permalink for Section 2.1"></a></h3>
+    <h3 id="sec-publication-resources-data"><bdi class="secno">2.1 </bdi>Publication Resources</h3><a class="self-link" href="#sec-publication-resources-data" aria-label="Permalink for Section 2.1"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -413,7 +412,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="core-media-types">
-    <h3 id="sec-core-media types-data"><bdi class="secno">2.2 </bdi>Core Media Types<a class="self-link" href="#sec-core-media types-data" aria-label="Permalink for Section 2.2"></a></h3>
+    <h3 id="sec-core-media types-data"><bdi class="secno">2.2 </bdi>Core Media Types</h3><a class="self-link" href="#sec-core-media types-data" aria-label="Permalink for Section 2.2"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -554,7 +553,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="package-documents">
-    <h3 id="sec-package-documents-data"><bdi class="secno">2.3 </bdi>Package Documents<a class="self-link" href="#sec-package-documents-data" aria-label="Permalink for Section 2.3"></a></h3>
+    <h3 id="sec-package-documents-data"><bdi class="secno">2.3 </bdi>Package Documents</h3><a class="self-link" href="#sec-package-documents-data" aria-label="Permalink for Section 2.3"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -903,7 +902,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="internationalization">
-    <h3 id="sec-internationalization-data"><bdi class="secno">2.4 </bdi>Internationalization<a class="self-link" href="#sec-internationalization-data" aria-label="Permalink for Section 2.4"></a></h3>
+    <h3 id="sec-internationalization-data"><bdi class="secno">2.4 </bdi>Internationalization</h3><a class="self-link" href="#sec-internationalization-data" aria-label="Permalink for Section 2.4"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1085,7 +1084,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="content-documents">
-    <h3 id="sec-content-documents-data"><bdi class="secno">2.5 </bdi>Content Documents<a class="self-link" href="#sec-content-documents-data" aria-label="Permalink for Section 2.5"></a></h3>
+    <h3 id="sec-content-documents-data"><bdi class="secno">2.5 </bdi>Content Documents</h3><a class="self-link" href="#sec-content-documents-data" aria-label="Permalink for Section 2.5"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1205,7 +1204,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="navigation-documents">
-    <h3 id="sec-navigation-documents-data"><bdi class="secno">2.6 </bdi>Navigation Documents<a class="self-link" href="#sec-navigation-documents-data" aria-label="Permalink for Section 2.6"></a></h3>
+    <h3 id="sec-navigation-documents-data"><bdi class="secno">2.6 </bdi>Navigation Documents</h3><a class="self-link" href="#sec-navigation-documents-data" aria-label="Permalink for Section 2.6"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1282,7 +1281,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="fixed-layout">
-    <h3 id="sec-fixed-layout-data"><bdi class="secno">2.7 </bdi>Fixed Layout<a class="self-link" href="#sec-fixed-layout-data" aria-label="Permalink for Section 2.7"></a></h3>
+    <h3 id="sec-fixed-layout-data"><bdi class="secno">2.7 </bdi>Fixed Layout</h3><a class="self-link" href="#sec-fixed-layout-data" aria-label="Permalink for Section 2.7"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1559,7 +1558,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="open-container-format">
-    <h3 id="sec-open-container format-data"><bdi class="secno">2.8 </bdi>Open Container Format<a class="self-link" href="#sec-open-container format-data" aria-label="Permalink for Section 2.8"></a></h3>
+    <h3 id="sec-open-container format-data"><bdi class="secno">2.8 </bdi>Open Container Format</h3><a class="self-link" href="#sec-open-container format-data" aria-label="Permalink for Section 2.8"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1608,7 +1607,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     </tbody></table>
   </section>
   <section id="scripting">
-    <h3 id="sec-scripting-data"><bdi class="secno">2.9 </bdi>Scripting<a class="self-link" href="#sec-scripting-data" aria-label="Permalink for Section 2.9"></a></h3>
+    <h3 id="sec-scripting-data"><bdi class="secno">2.9 </bdi>Scripting</h3><a class="self-link" href="#sec-scripting-data" aria-label="Permalink for Section 2.9"></a>
     <table class="zebra">
       <colgroup>
         <col class="col_id">
@@ -1751,7 +1750,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </section>
 
 		<section class="appendix" id="contributors">
-			<h2 id="a-acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements<a class="self-link" href="#contributors" aria-label="Permalink for Appendix A."></a></h2>
+			<h2 id="a-acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</h2><a class="self-link" href="#contributors" aria-label="Permalink for Appendix A."></a>
 
 			<p>The following experts contributed to the test suite:</p>
 
