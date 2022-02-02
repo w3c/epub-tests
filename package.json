@@ -23,13 +23,15 @@
   },
   "homepage": "https://github.com/w3c/epub-tests#readme",
   "dependencies": {
+    "@types/jsdom": "^16.2.14",
+    "@types/jszip": "^3.4.1",
     "@types/node": "^16.9.4",
     "@types/xml2js": "^0.4.9",
-    "@types/jszip": "^3.4.1",
+    "jsdom": "^19.0.0",
     "jszip": "^3.7.1",
-    "respec": "^26.13.4",
-    "ts-node": "^10.2.1",
-    "typescript": "^4.4.3",
+    "respec": "^28.2.8",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {

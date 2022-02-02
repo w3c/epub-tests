@@ -5,31 +5,8 @@
  *  @packageDocumentation
  */
 
-/*
-The module is based on the JS object format that the [xml2js](https://www.npmjs.com/package/xml2js) package uses
-to generate XML from JS easily. Using this module is simpler than either coming up with the XML text through text
-concatenations or through the manipulation of a DOM tree using the DOM interface.
-
-Short overview of the format: 
-
-- Each xml element is represented by a JS key;
-- If the value is a string then that that is the only textual content;
-- If the value is an object, then:
-    - the `_` key provides the textual content;
-    - the `$` key provides the the attributes through its own JS object;
-    - all other keys are considered as sub-elements (or arrays of sub-elements).
-- If the value is an array of objects or strings, that represents repeated XML elements.
-
-Due to their fuzzy nature, all this objects are type-annotated as `any`...
-
-*/
-
-import { ReportData, ImplementationTable, Implementer, ImplementationData, Constants } from './types';
-
-import * as xml2js from "xml2js";
-const builder = new xml2js.Builder({
-    headless : true,
-});
+import { ReportData, Implementer, Constants } from './types';
+import { JSDOM } from "jsdom";
 
 /**
  * Turn a text into a string that can be used as an ID
@@ -37,6 +14,23 @@ const builder = new xml2js.Builder({
  */
 const convert_to_id = (header: string): string => {
     return header.toLowerCase().replace(' ', '-');
+}
+
+/**
+ * Add a new HTML Element to a parent, and return the new element
+ * 
+ * @param parent The parent HTML Element
+ * @param element The new element's name
+ * @param content The new element's (HTML) content
+ * @returns 
+ * 
+ * @internal
+ */
+const add_child = (parent: HTMLElement, element: string, content: string = undefined): HTMLElement => {
+    const new_element = parent.ownerDocument.createElement(element);
+    parent.appendChild(new_element);
+    if (content !== undefined) new_element.innerHTML = content;
+    return new_element;
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
@@ -49,39 +43,18 @@ const convert_to_id = (header: string): string => {
  * @returns results in XML format
  */
 function create_impl_list(impl: Implementer[]): string {
-    const root: any = {
-        section : {
-            h2 : {
-                $ : {
-                    id : "sec-implementer-list",
-                },                    
-                _ : "List of Implementations",
-            },
-            ol : {
-            },
-        },
+    const dom: DocumentFragment = JSDOM.fragment('<section id="sec-implementer-list"><h2>List of Implementations</h2></section>');
+    const section: HTMLElement = dom.querySelector('section');
+
+    const ol = add_child(section, 'ol');
+
+    for (const implementer of impl) {
+        const li = add_child(ol, 'li');
+        const name = 'ref' in implementer ? `<a href="${implementer.ref}">${implementer.name}</a>` : `${implementer.name}`;
+        li.innerHTML = 'variant' in implementer ? `${name}, ${implementer.variant}` : name;
     }
-
-    // The value of li is an array, ie, a repeated set if li elements...
-    root.section.ol.li = impl.map((implementer: Implementer): any => {
-        // Some implementation reports may not provide a website reference...
-        const name = 'variant' in implementer ? `${implementer.name} (${implementer.variant})` : implementer.name;
-        if ('ref' in implementer) {
-            return {
-                a : {
-                    $ : {
-                        href : implementer.ref,
-                    },
-                    _ : name,
-                },    
-            }
-        } else {
-            return name
-        }
-    }); 
-
-    // This is where the object is turned into an XML serialization...
-    return builder.buildObject(root)
+    // This returns, in effect, the XML serialization of the section
+    return section.outerHTML;
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
@@ -89,334 +62,158 @@ function create_impl_list(impl: Implementer[]): string {
 /* ------------------------------------------------------------------------------------------------------ */
 
 /**
- * Create one result table: ie, the table with a fixed head and then a series of rows, one for each test.
- * 
- * @param suffix a string to be appended to the ID of a test; used when the same table is displayed with slightly different columns (like for variants)
- * @returns an array of objects to represent the content of the table as JS Objects for a `tr` element in the table
- */
-const create_one_result_table = (data: ImplementationTable, implementers: Implementer[], suffix: string = ''): any[] => {
-    // The table header is on its own
-    const fixed_head = ["Id", "Req"];
-    const variable_head = implementers.map((impl) => 'variant' in impl ? `${impl.name} &#10;(${impl.variant})` : impl.name);
-    const head = [...fixed_head,...variable_head].map((title) => {
-        return { th: title }
-    });
-
-    const tests = data.implementations.map((row: ImplementationData): any[] => {
-        // Creation of one row for a specific test, ie, an array of 'td' elements
-        // The row consists of the test (meta)data, and the list of test results
-
-        // First the test metadata (ID and conformance class); ...
-        const test_data = [
-            {
-                td : {
-                    $ : {
-                        id    : `${row.identifier}-results${suffix}`,
-                        class : row.required,
-                    },
-                    // link to the description of the test in another table...
-                    a : {
-                        $ : {
-                            href : `${Constants.DOC_TEST_DESCRIPTIONS}#${row.identifier}`,
-                        },
-                        _ : row.identifier,
-                    },
-                },
-            },
-            {
-                td : row.required,
-            },
-        ];
-
-        // ...followed by the test results themselves
-        const test_results = row.implementations.map((result) => {
-            if (result === undefined) {
-                return {td: "n/a"}
-            } else {
-                const text = result ? Constants.CLASS_PASS : Constants.CLASS_FAIL;
-                return {
-                    td : {
-                        $ : {
-                            class : text,
-                        },
-                        _ : text,
-                    },
-                }
-            }
-        })
-        // This is one regular row of `td` elements (i.e., the object representations thereof)
-        return [...test_data, ...test_results]
-    });
-
-    // Combine the two arrays for the full table content
-    return [...[head], ...tests];
-}
-
-/**
- * Create a series of sections with implementation tables
+ * Create a series of sections with implementation tables; this includes separating the block of
+ * "consolidated" data from the "variant" versions.
  * @returns Serialized XML
  */
 // eslint-disable-next-line max-lines-per-function
 function create_impl_reports(data: ReportData): string {
-    const root1: any = {
-        section : {
-            h2 : {
-                $ : {
-                    id : "sec-consolidated-report-tables",
-                },
-                _ : "Consolidated Implementation Results",
-            },
-            // ... and one (sub)section for each test category, with its own table
-            section : data.consolidated_tables.map((table): any => {
-                return {
-                    h3 : {
-                        $ : {
-                            id : `sec-${convert_to_id(table.header)}-results`,
-                        },
-                        _ : table.header,
-                    },
+    // Two tables must be created: the consolidated and detailed results. The function below is 
+    // invoked twice to get these two.
+    const create_impl_report = (consolidated: boolean): string => {
+        // The whole content is enclosed in a large, top level section
+        const title = consolidated ? 'Consolidated Implementation Results' : 'Detailed Implementation Results';
+        const id = consolidated ? 'sec-consolidated-report-tables' : 'sec-detailed-report-tables';
+        const suffix: string = consolidated ? '' : '-detailed'
 
-                    // The table itself is created by adding the rows for each test
-                    table : {
-                        // The zebra class allow for a proper styling of the table
-                        $ : {
-                            class : "zebra",
-                        },
-                        // the `colgroup` structure allows styling of the table columns, especially their widths
-                        colgroup : {
-                            // Only two columns are styled; by setting the width we ensure that all tables look identical
-                            col : [
-                                {
-                                    $ : {
-                                        class : Constants.CLASS_COL_ID,
-                                    },
-                                },
-                                {
-                                    $ : {
-                                        class : Constants.CLASS_COL_REQ,
-                                    },
-                                },
-                            ],
-                        },
-                        // The function returns an array of elements
-                        tr : create_one_result_table(table, data.consolidated_implementers),
-                    },
+        const dom: DocumentFragment = JSDOM.fragment(`<section id="${id}"><h2>${title}</h2></section>`);
+        const top_section: HTMLElement = dom.querySelector('section');
+
+        // Going through the implementation table entries; 
+        // Each table corresponds to one 'category' (Core Media Types, Internationalizations, Fixed Layouts, etc.)
+        for (const table of (consolidated ? data.consolidated_tables : data.tables)) {
+            // Each table is enclosed in a separate subsection
+            const table_section = add_child(top_section, 'section');
+
+            const h3 = add_child(table_section, 'h3', table.header);
+            h3.id = `sec-${convert_to_id(table.header)}-results`;
+
+            const test_table = add_child(table_section, 'table');
+            test_table.className = 'zebra';
+
+            add_child(test_table, 'colgroup', `
+                <col class="${Constants.CLASS_COL_ID}"/>
+                <col class="${Constants.CLASS_COL_REQ}"/>
+            `);
+
+            // Header rows for each implementation
+            const header_row = add_child(test_table, 'tr');
+            add_child(header_row, 'th', 'Id');
+            add_child(header_row, 'th', 'Req');
+            for (const impl of (consolidated ? data.consolidated_implementers : data.implementers)) {
+                const head = impl.variant !== 'consolidated' ? `${impl.name}<br />${impl.variant}` : impl.name;
+                add_child(header_row, 'th', head);
+            }
+
+            // A cycle for each table row:
+            for (const row of table.implementations) {
+                const tr = add_child(test_table, 'tr'); 
+
+                // First the fixed table cells...
+                const td_id = add_child(tr, 'td', `<a href="${Constants.DOC_TEST_DESCRIPTIONS}#${row.identifier}">${row.identifier}</a>`);
+                td_id.id = `${row.identifier}-results${suffix}`;
+                td_id.className = row.required;
+
+                add_child(tr, 'td', row.required);
+
+                //... followed by the test results themselves
+                for (const result of row.implementations) {
+                    if (result === undefined) {
+                        add_child(tr, 'td', 'n/a');
+                    } else {
+                        const text = result ? Constants.CLASS_PASS : Constants.CLASS_FAIL
+                        const td_impl = add_child(tr, 'td', text);
+                        td_impl.className = text
+                    }
                 }
-            }),
-        },
+            }
+        }
+        return top_section.outerHTML;
     }
 
-    const root2: any = {
-        section : {
-            h2 : {
-                $ : {
-                    id : "sec-detailed-report-tables",
-                },
-                _ : "Detailed Implementation Results",
-            },
-            section : data.tables.map((table): any => {
-                return {
-                    h3 : {
-                        $ : {
-                            id : `sec-${convert_to_id(table.header)}-results`,
-                        },
-                        _ : table.header,
-                    },
+    return `
+    ${create_impl_report(true)}
 
-                    // The table itself is created by adding the rows for each test
-                    table : {
-                        // The zebra class allow for a proper styling of the table
-                        $ : {
-                            class : "zebra",
-                        },
-                        // the `colgroup` structure allows styling of the table columns, especially their widths
-                        colgroup : {
-                            // Only two columns are styled; by setting the width we ensure that all tables look identical
-                            col : [
-                                {
-                                    $ : {
-                                        class : Constants.CLASS_COL_ID,
-                                    },
-                                },
-                                {
-                                    $ : {
-                                        class : Constants.CLASS_COL_REQ,
-                                    },
-                                },                               
-                            ],
-                        },
-                        // The function returns an array of elements
-                        tr : create_one_result_table(table, data.implementers,'-detailed'),
-                    },
-                }
-            }),
-        },
-    }
-
-
-    // This is where the object is turned into an XML serialization...
-    const the_xml: string = builder.buildObject(root1) + '\n'+ builder.buildObject(root2);
-    // Dirty trick: the newline entity is turned into pure text by the builder, changing it manually...
-    return the_xml.replace(/&amp;#10;/g, '<br>');
+    ${create_impl_report(false)}
+    `;
 }
+
 
 /* ------------------------------------------------------------------------------------------------------ */
 /*                                      Test description tables                                           */
 /* ------------------------------------------------------------------------------------------------------ */
 
 /**
- * Create one test table: ie, the table with a fixed head and then a series of rows, one for each test.
- * 
- * @returns an array of objects to represent the content of the table as JS Objects for a `tr` element in the table
- */
-const create_one_test_table = (data: ImplementationTable): any[] => {
-
-    // The list of specification references must be turned into a series of
-    // `a` elements...
-    const reference_list = (refs: string[]): any => {
-        if (refs.length === 0) {
-            return "n.a. ";
-        } else {
-            let counter = 0;
-            return refs.map((ref:string) => {
-                counter += 1;
-                return {
-                    a : {
-                        $ : {
-                            href : ref,
-                        },
-                        _ : `(${counter}) `,
-                    },
-                }
-            } )
-        }
-    }
-
-    // Creation of the header row
-    const fixed_head = ["Id", "Req", "Title", "Description", "Specs", "Ref"];
-    const head = fixed_head.map((title) => { return { th: title} });
-
-    // Creation of an array of regular rows
-    const tests = data.implementations.map((row: ImplementationData): any[] => {
-        // Creation of one row for a specific test, ie, an array of 'td' elements
-        return [
-            {
-                td : {
-                    $ : {
-                        id    : `${row.identifier}`,
-                        class : row.required,
-                    },
-                    a : {
-                        $ : {
-                            href : `${Constants.TEST_URL_BASE}/${row.identifier}`,
-                        },
-                        _ : row.identifier,
-                    },
-                },
-            },
-            {
-                td : row.required,
-            },
-            {
-                td : row.title,
-            },
-            {
-                td : row.description,
-            },
-            {
-                td : reference_list(row.references),
-            },
-            {
-                td : {
-                    a : {
-                        $ : {
-                            href : `${Constants.DOC_TEST_RESULTS}#${row.identifier}-results`,
-                        },
-                        _ : "❐",
-                    },
-                },
-            },
-        ];
-    });
-
-    // Combine the two for the full table content
-    return [...[head], ...tests];
-}
-
-/**
- * Create the test (meta) data table
+ * Create the test (meta) data table.
  * @param data 
  * @returns Serialized XML
  */
 function create_test_data(data: ReportData): string {
-    const root: any = {
-        // It is all a big section...
-        section : {
-            // ... with a header
-            h2 : {
-                $ : {
-                    id : "sec-test-tables",
-                },
-                _ : "Description of the Tests",
-            },
+    const dom: DocumentFragment = JSDOM.fragment('<section id="sec-test-tables"><h2>Description of the Tests</h2></section>');
+    const full_section: HTMLElement = dom.querySelector('section');
 
-            // ... and one (sub)section for each test category, with its own table
-            section : data.tables.map((table): any => {
-                return {
-                    h2 : {
-                        $ : {
-                            id : `sec-${convert_to_id(table.header)}-data`,
-                        },
-                        _ : table.header,
-                    },
+    for (const table of data.tables) {
+        // Each table is enclosed in a separate subsection
+        const table_section = add_child(full_section, 'section');
 
-                    // The table itself is created by adding the rows for each test
-                    table : {
-                        // The zebra class allow for a proper styling of the table
-                        $ : {
-                            class : "zebra",
-                        },
-                        // the `colgroup` structure allows styling of the table columns, especially their widths
-                        colgroup : {
-                            col : [
-                                {
-                                    $ : {
-                                        class : Constants.CLASS_COL_ID,
-                                    },
-                                },
-                                {
-                                    $ : {
-                                        class : Constants.CLASS_COL_REQ,
-                                    },
-                                },
-                                {
-                                    $ : {
-                                        class : Constants.CLASS_COL_TITLE,
-                                    },
-                                },
-                                {},
-                                {
-                                    $ : {
-                                        class : Constants.CLASS_COL_SREF,
-                                    },
- 
-                                },
-                                {
-                                    $ : {
-                                        class : Constants.CLASS_COL_TREF,
-                                    },
-                                },
-                            ],
-                        },
-                        tr : create_one_test_table(table),
-                    },
+        const h3 = add_child(table_section, 'h3', table.header);
+        h3.id = `sec-${convert_to_id(table.header)}-data`;
+
+        const test_table = add_child(table_section, 'table');
+        test_table.className = 'zebra';
+
+        // The table begins with a colgroup to allow for a proper styling, 
+        // especially a common width for all columns across the document
+        add_child(test_table, 'colgroup',`
+            <col class="${Constants.CLASS_COL_ID}"/>
+            <col class="${Constants.CLASS_COL_REQ}"/>
+            <col class="${Constants.CLASS_COL_TITLE}"/>
+            <col/>
+            <col class="${Constants.CLASS_COL_SREF}"/>
+            <col class="${Constants.CLASS_COL_TREF}"/>
+        `);
+
+        // Next is a header row
+        add_child(test_table, 'tr',`
+            <th>Id</th>
+            <th>Req</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Specs</th>
+            <th>Ref</th>
+        `);
+
+        // Finally, a row per test
+        for (const row of table.implementations) {
+            const tr = add_child(test_table, 'tr');
+
+            // a bunch of table cells...
+            const td_id = add_child(tr, 'td', `<a href="${Constants.TEST_URL_BASE}/${row.identifier}">${row.identifier}</a>`);
+            td_id.className = row.required;
+            td_id.id = `${row.identifier}`;
+
+            add_child(tr, 'td', row.required);
+            add_child(tr, 'td', row.title); 
+            add_child(tr, 'td', row.description);
+
+            const td_specs = add_child(tr, 'td');
+            if (row.references.length === 0) {
+                td_specs.innerHTML = 'n.a. ';
+            } else {
+                let counter = 0;
+                for (const ref of row.references) {
+                    counter += 1;
+                    const a = add_child(td_specs, 'a', ` (${counter})`);
+                    a.setAttribute('href', ref);
                 }
-            }),
-        },
-    };
+            }
+
+            add_child(tr, 'td', `<a href="${Constants.DOC_TEST_RESULTS}#${row.identifier}-results">❐</a>`);
+        }
+    }
 
     // This is where the object is turned into an XML serialization...
-    return builder.buildObject(root);
+    return full_section.outerHTML;
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
@@ -431,8 +228,12 @@ function create_test_data(data: ReportData): string {
  */
 function create_creator_list(data: ReportData): string {
     const creators: Set<string> = new Set<string>();
+    const dom: DocumentFragment = JSDOM.fragment('<ul></ul>');
+    const ul: HTMLElement = dom.querySelector('ul');
 
-    // Collect all creators into a set (i.e, to avoid duplicates)
+    // Collect all creators into a set (to avoid duplicates)
+    // Some (fake) creators should not be added; these are tests that test the id values...
+    // Also, mistakes happen, and tests may not have a creator assigned, those should be filtered out, too
     for (const table of data.tables) {
         for (const test of table.implementations) {
             if (!Constants.IGNORE_CREATOR_ID.includes(test.identifier)) {
@@ -445,18 +246,11 @@ function create_creator_list(data: ReportData): string {
         }
     }
 
-    // Generate the HTML List...
-    const root: any = {
-        ul : {
-            $ : {
-                class : Constants.CLASS_CREATOR_LIST,
-            },
-
-            li : [...creators].sort(),
-        },
+    for (const creator of [...creators].sort()) {
+        add_child(ul, 'li', creator);
     }
 
-    return builder.buildObject(root);
+    return ul.outerHTML;
 }
 
 

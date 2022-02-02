@@ -87,6 +87,7 @@ export function isDirectory(name: string): boolean {
     return fs_old_school.lstatSync(name).isDirectory();
 }
 
+
 /** 
  * See if a file name path refers to a real file
  * 
@@ -95,6 +96,7 @@ export function isDirectory(name: string): boolean {
 export function isFile(name: string): boolean {
     return fs_old_school.lstatSync(name).isFile();
 }
+
 
 /**
  * Lists of a directory content.
