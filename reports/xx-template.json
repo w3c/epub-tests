@@ -33,6 +33,8 @@
         "ocf-package_multiple": false,
         "page-layout-both": false,
         "page-layout-both-spread": false,
+        "pgk-lang_pkg_non_content": false,
+        "pgk-lang_pkg_non_content_dir": false,
         "pkg-collections-unknown": false,
         "pkg-creator-order": false,
         "pkg-dir-auto_root-rtl": false,
