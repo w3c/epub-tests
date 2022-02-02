@@ -28,6 +28,7 @@
         "nav-access": false,
         "nav-activation": false,
         "nav-spine_in-spine": false,
+        "nav-spine_in-spine-no-list-style": false,
         "nav-spine_not-in-spine": false,
         "ocf-package_arbitrary": false,
         "ocf-package_multiple": false,
