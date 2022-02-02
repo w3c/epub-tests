@@ -3,10 +3,9 @@
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:coverage>Navigation Documents</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
-    <dc:creator>Dave Cramer</dc:creator>
     <dc:date>2022-01-25</dc:date>
     <dc:description>
-      The navigation document is also referenced in the spine; however, the TOC items in the Reading System's own control must not use the list style type of the navigation document.
+      The reading system's rendering of the navigation must not show numbering, disregarding the list-style-type declared in the navigation document.
     </dc:description>
     <dc:identifier id="pub-id">nav-spine_in-spine-no-list-style</dc:identifier>
     <dc:language>en</dc:language>
