@@ -7,7 +7,7 @@
     <dc:description xml:lang="en">
       The package document's language is set to 'fr' but the content document is not annotated for language. The content document should not become automatically 'fr' but should be the default 'en'.
     </dc:description>
-    <dc:identifier id="pub-id">pkg-lang_pkg_non_content</dc:identifier>
+    <dc:identifier id="pub-id">pgk-lang_pkg_non_content</dc:identifier>
     <dc:language>fr</dc:language>
     <dc:title>Le contenu n'est pas automatiquement français</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
