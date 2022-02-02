@@ -50,7 +50,7 @@ function create_impl_list(impl: Implementer[]): string {
 
     for (const implementer of impl) {
         const li = add_child(ol, 'li');
-        const name = 'ref' in implementer ? `<a href=${implementer.ref}>${implementer.name}</a>` : `${implementer.name}`;
+        const name = 'ref' in implementer ? `<a href="${implementer.ref}">${implementer.name}</a>` : `${implementer.name}`;
         li.innerHTML = 'variant' in implementer ? `${name}, ${implementer.variant}` : name;
     }
     // This returns, in effect, the XML serialization of the section
