@@ -6,7 +6,7 @@
     <dc:creator>Marisa DeMeglio</dc:creator>
     <dc:date>2022-02-10</dc:date>
     <dc:description>Tests whether the Reading System starts at the beginning of the audio track in the absence of a clipBegin attribute in the smil file.</dc:description>
-    <dc:identifier id="pub-id">mol-css_classes</dc:identifier>
+    <dc:identifier id="pub-id">mol-audio_no_clipbegin</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Automatic start at the begining of an audio track</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
