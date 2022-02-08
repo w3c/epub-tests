@@ -3,12 +3,12 @@
         <seq epub:textref="../mobydick.xhtml#mobyexcerpt">
             <par id="first">
                 <text src="../mobydick.xhtml#first"/>
-                <audio src="../audio/mobydick.mp4" clipBegin="0:00:29.268" clipEnd="0:00:44.783"/>
+                <audio src="../audio/mobydick.mp3" clipBegin="0:00:29.268" clipEnd="0:00:44.783"/>
             </par>
 
             <par id="second">
                 <text src="../mobydick.xhtml#second"/>
-                <audio src="../audio/mobydick.mp4" clipBegin="0:00:44.783" />
+                <audio src="../audio/mobydick.mp3" clipBegin="0:00:44.783" />
             </par>
         </seq>
     </body>

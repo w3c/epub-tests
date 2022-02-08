@@ -8,7 +8,7 @@
     <dc:description>Tests whether the Reading System starts at the beginning of the audio track in the absence of a clipBegin attribute in the smil file.</dc:description>
     <dc:identifier id="pub-id">mol-audio_no_clipbegin</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>Automatic start at the begining of an audio track</dc:title>
+    <dc:title>Automatic start at the beginning of an audio track</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="belongs-to-collection">may</meta>
@@ -21,7 +21,7 @@
     <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
     <item id="mobydick" href="mobydick.xhtml" media-type="application/xhtml+xml" media-overlay="md-smil" />
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
-    <item id="md-mp4" href="audio/mobydick.mp4" media-type="audio/mp4"/>
+    <item id="md-mp4" href="audio/mobydick.mp3" media-type="audio/mp3"/>
     <item id="md-smil" href="mo/mobydick.smil" media-type="application/smil+xml"/>
   </manifest>
   <spine>

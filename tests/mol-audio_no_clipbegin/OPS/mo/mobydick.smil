@@ -3,17 +3,17 @@
         <seq epub:textref="../mobydick.xhtml#mobyexcerpt">
             <par id="first">
                 <text src="../mobydick.xhtml#first"/>
-                <audio src="../audio/mobydick.mp4" clipEnd="0:00:44.783"/>
+                <audio src="../audio/mobydick.mp3" clipEnd="0:00:44.783"/>
             </par>
 
             <par id="second">
                 <text src="../mobydick.xhtml#second"/>
-                <audio src="../audio/mobydick.mp4" clipBegin="0:00:44.783" clipEnd="0:00:50.450"/>
+                <audio src="../audio/mobydick.mp3" clipBegin="0:00:44.783" clipEnd="0:00:50.450"/>
             </par>
 
             <par id="third">
                 <text src="../mobydick.xhtml#third"/>
-                <audio src="../audio/mobydick.mp4" clipBegin="0:00:50.450" clipEnd="0:01:27.850"/>
+                <audio src="../audio/mobydick.mp3" clipBegin="0:00:50.450" clipEnd="0:01:27.850"/>
             </par>
         </seq>
     </body>
