@@ -25,6 +25,7 @@
         "fxl-spread_landscape": false,
         "fxl-spread_none": false,
         "fxl-xhtml-icb": false,
+        "mol-timing-synchronization": false,
         "nav-access": false,
         "nav-activation": false,
         "nav-spine_in-spine": false,
