@@ -1,0 +1,60 @@
+<svg version="1.1" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font-size: 5px;
+      fill: black;
+    }
+
+    .active-item {
+      background-color: rgb(13,146,95);
+      color: rgb(241, 241, 220);
+    }
+    .rendered-with-mo {
+      color: rgb(158,158,158);
+    }
+  </style>
+  <rect width="100%" height="100%" fill="bisque" />
+
+  <title>Media overlay and SVG</title>
+
+  <g id="mobyexcerpt">
+    <g transform="translate(20,20)" id="first">
+      <text x="0" y="0">
+        Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse,
+      </text>
+      <text x="0" y="7">
+        and nothing particular to interest me on shore, I thought I would sail about a little and see the watery
+      </text>
+      <text x="0" y="14">
+        part of the world.
+      </text>
+    </g>
+
+    <g transform="translate(20,45)" id="second">
+      <text x="0" y="0">
+        It is a way I have of driving off the spleen and regulating the circulation.
+      </text>
+    </g>
+
+    <g transform="translate(20,58)" id="third">
+      <text x="0" y="0">
+        Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; 
+      </text>
+      <text x="0" y="7">
+        whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every 
+      </text>
+      <text x="0" y="14">
+        funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong  
+      </text>
+      <text x="0" y="21">
+        moral principle to prevent me from deliberately stepping into the street, and methodically knocking  
+      </text>
+      <text x="0" y="28">
+        people’s hats off—then, I account it high time to get to sea as soon as I can. This is my substitute for pistol
+      </text>
+      <text x="0" y="35">
+        and ball.
+      </text>
+    </g>
+  </g>
+</svg>
