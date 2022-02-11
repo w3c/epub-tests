@@ -11,7 +11,7 @@
     <dc:title>Basic media overlay test in SVG</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="belongs-to-collection">may</meta>
+    <meta property="belongs-to-collection">should</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-timing-sync</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-rendering-audio</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-rendering-with-styling</meta>
