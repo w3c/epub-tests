@@ -15,7 +15,7 @@
   </style>
   <rect width="100%" height="100%" fill="bisque" />
 
-  <title>Media overlay and SVG</title>
+  <title>Basic media overlay test in SVG</title>
 
   <g id="mobyexcerpt">
     <g transform="translate(20,20)" id="first">
