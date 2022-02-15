@@ -13,7 +13,6 @@
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="belongs-to-collection">should</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-timing-sync</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-rendering-audio</meta>
     <meta property="dcterms:modified">2022-02-10T00:00:00Z</meta>
     <meta property="media:duration" refines="#md-smil">00:02:32.732</meta>
     <meta property="media:duration">00:02:32.732</meta>
