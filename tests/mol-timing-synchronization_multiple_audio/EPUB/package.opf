@@ -14,8 +14,8 @@
     <meta property="belongs-to-collection">should</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-timing-sync</meta>
     <meta property="dcterms:modified">2022-02-14T00:00:00Z</meta>
-    <meta property="media:duration" refines="#md-smil">00:02:47.768</meta>
-    <meta property="media:duration">00:02:47.768</meta>
+    <meta property="media:duration" refines="#md-smil">00:01:46.35</meta>
+    <meta property="media:duration">00:01:46.35</meta>
     <meta property="media:active-class">active-item</meta>
     <meta property="media:playback-active-class">rendered-with-mo</meta>
   </metadata>
