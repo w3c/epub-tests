@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 30.0.0">
+<meta name="generator" content="ReSpec 31.0.1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 dfn{cursor:pointer}
@@ -74,7 +74,7 @@ details.respec-tests-details>li{padding-left:1em}
 .self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 aside.example .marker>a.self-link{color:inherit}
 .header-wrapper{display:flex;align-items:center}
-:is(h2,h3,h4,h5,h6):not(#toch2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
 :is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;top:.8rem;font-size:1rem;opacity:.5}
 :is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
 :is(h4,h5,h6)+a.self-link::before{color:#000}
@@ -103,7 +103,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-epub3",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2022-02-08",
+  "publishDate": "2022-02-16",
   "shortName": "epub-tests-results",
   "edDraftURI": "https://w3c.github.io/epub-tests/results/",
   "copyrightStart": "2021",
@@ -132,30 +132,34 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2022-02-08T00:00:00.000Z",
-  "generatedSubtitle": "08 February 2022"
+  "publishISODate": "2022-02-16T00:00:00.000Z",
+  "generatedSubtitle": "16 February 2022"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
 	
 	<body class="h-entry informative"><div class="head">
-     <h1 id="title" class="title">EPUB 3.3 Test Results</h1>
     
-    <p id="w3c-state"> <time class="dt-published" datetime="2022-02-08">08 February 2022</time></p>
+    <h1 id="title" class="title">EPUB 3.3 Test Results</h1> 
+    <p id="w3c-state"> <time class="dt-published" datetime="2022-02-16">16 February 2022</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
-        
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://www.w3.org/TR/base-epub-tests-results-20220216/">https://www.w3.org/TR/base-epub-tests-results-20220216/</a>
+              </dd>
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/epub-tests-results/">https://www.w3.org/TR/epub-tests-results/</a>
+              </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/epub-tests/results/">https://w3c.github.io/epub-tests/results/</a></dd>
         <dt>History:</dt><dd>
-        <a href="https://github.com/w3c/epub-tests/commits/main">Commit history</a>
-      </dd>
+                    <a href="https://github.com/w3c/epub-tests/commits/main">Commit history</a>
+                  </dd>
         
         
         
         
         
-        <dt>Editors:</dt>
-        <dd class="editor p-author h-card vcard" data-editor-id="7382">
+        <dt>Editors:</dt><dd class="editor p-author h-card vcard" data-editor-id="7382">
     <a class="u-url url p-name fn" href="https://www.w3.org/People/Ivan/">Ivan Herman</a><a class="p-name orcid" href="https://orcid.org/0000-0003-0782-2704"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
   <style>
 
@@ -198,10 +202,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p>
     <hr title="Separator for header">
   </div>
-		<section id="abstract" class="introductory"><div class="header-wrapper"><h2 id="abstract-0">Abstract</h2><a class="self-link" href="#abstract" aria-label="Permalink for this Section"></a></div>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>
 			<p>Results of EPUB Testing.</p>
 		</section>
-		<section id="sotd" class="introductory"><div class="header-wrapper"><h2 id="status-of-this-document">Status of This Document</h2><a class="self-link" href="#sotd" aria-label="Permalink for this Section"></a></div><p>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
       This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
        document. It has no official standing
       of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
@@ -273,7 +277,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             </colgroup><tbody><tr><th>Id</th><th>Req</th><th>Wysebee</th></tr><tr><td id="ocf-package_arbitrary-results" class="must"><a href="index.html#ocf-package_arbitrary">ocf-package_arbitrary</a></td><td>must</td><td>n/a</td></tr><tr><td id="ocf-package_multiple-results" class="must"><a href="index.html#ocf-package_multiple">ocf-package_multiple</a></td><td>must</td><td>n/a</td></tr></tbody></table></section><section id="media-overlays"><div class="header-wrapper"><h3 id="sec-media-overlays-results"><bdi class="secno">3.10 </bdi>Media Overlays</h3><a class="self-link" href="#sec-media-overlays-results" aria-label="Permalink for Section 3.10"></a></div><table class="zebra"><colgroup>
                 <col class="col_id">
                 <col class="col_req">
-            </colgroup><tbody><tr><th>Id</th><th>Req</th><th>Wysebee</th></tr><tr><td id="mol-timing-synchronization-results" class="may"><a href="index.html#mol-timing-synchronization">mol-timing-synchronization</a></td><td>may</td><td>n/a</td></tr></tbody></table></section></section>
+            </colgroup><tbody><tr><th>Id</th><th>Req</th><th>Wysebee</th></tr><tr><td id="mol-css-results" class="should"><a href="index.html#mol-css">mol-css</a></td><td>should</td><td>n/a</td></tr><tr><td id="mol-timing-synchronization-results" class="should"><a href="index.html#mol-timing-synchronization">mol-timing-synchronization</a></td><td>should</td><td>n/a</td></tr><tr><td id="mol-timing-synchronization_multiple_audio-results" class="should"><a href="index.html#mol-timing-synchronization_multiple_audio">mol-timing-synchronization_multiple_audio</a></td><td>should</td><td>n/a</td></tr></tbody></table></section></section>
 
     <section id="sec-detailed-report-tables"><div class="header-wrapper"><h2 id="x4-detailed-implementation-results"><bdi class="secno">4. </bdi>Detailed Implementation Results</h2><a class="self-link" href="#sec-detailed-report-tables" aria-label="Permalink for Section 4."></a></div><section id="publication-resources-0"><div class="header-wrapper"><h3 id="sec-publication-resources-results"><bdi class="secno">4.1 </bdi>Publication Resources</h3><a class="self-link" href="#sec-publication-resources-results" aria-label="Permalink for Section 4.1"></a></div><table class="zebra"><colgroup>
                 <col class="col_id">
@@ -305,7 +309,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             </colgroup><tbody><tr><th>Id</th><th>Req</th><th>Wysebee<br>Android (PWA)</th><th>Wysebee<br>iOS (PWA)</th><th>Wysebee<br>Web (Chrome)</th><th>Wysebee<br>Web (Safari)</th></tr><tr><td id="ocf-package_arbitrary-results-detailed" class="must"><a href="index.html#ocf-package_arbitrary">ocf-package_arbitrary</a></td><td>must</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr><tr><td id="ocf-package_multiple-results-detailed" class="must"><a href="index.html#ocf-package_multiple">ocf-package_multiple</a></td><td>must</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr></tbody></table></section><section id="media-overlays-0"><div class="header-wrapper"><h3 id="sec-media-overlays-results"><bdi class="secno">4.10 </bdi>Media Overlays</h3><a class="self-link" href="#sec-media-overlays-results" aria-label="Permalink for Section 4.10"></a></div><table class="zebra"><colgroup>
                 <col class="col_id">
                 <col class="col_req">
-            </colgroup><tbody><tr><th>Id</th><th>Req</th><th>Wysebee<br>Android (PWA)</th><th>Wysebee<br>iOS (PWA)</th><th>Wysebee<br>Web (Chrome)</th><th>Wysebee<br>Web (Safari)</th></tr><tr><td id="mol-timing-synchronization-results-detailed" class="may"><a href="index.html#mol-timing-synchronization">mol-timing-synchronization</a></td><td>may</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr></tbody></table></section></section>
+            </colgroup><tbody><tr><th>Id</th><th>Req</th><th>Wysebee<br>Android (PWA)</th><th>Wysebee<br>iOS (PWA)</th><th>Wysebee<br>Web (Chrome)</th><th>Wysebee<br>Web (Safari)</th></tr><tr><td id="mol-css-results-detailed" class="should"><a href="index.html#mol-css">mol-css</a></td><td>should</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr><tr><td id="mol-timing-synchronization-results-detailed" class="should"><a href="index.html#mol-timing-synchronization">mol-timing-synchronization</a></td><td>should</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr><tr><td id="mol-timing-synchronization_multiple_audio-results-detailed" class="should"><a href="index.html#mol-timing-synchronization_multiple_audio">mol-timing-synchronization_multiple_audio</a></td><td>should</td><td>n/a</td><td>n/a</td><td>n/a</td><td>n/a</td></tr></tbody></table></section></section>
     
 	
 

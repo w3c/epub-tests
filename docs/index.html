@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 30.0.0">
+<meta name="generator" content="ReSpec 31.0.1">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 dfn{cursor:pointer}
@@ -74,7 +74,7 @@ details.respec-tests-details>li{padding-left:1em}
 .self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 aside.example .marker>a.self-link{color:inherit}
 .header-wrapper{display:flex;align-items:center}
-:is(h2,h3,h4,h5,h6):not(#toch2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
 :is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;top:.8rem;font-size:1rem;opacity:.5}
 :is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
 :is(h4,h5,h6)+a.self-link::before{color:#000}
@@ -103,7 +103,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "wgPublicList": "public-epub3",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2022-02-08",
+  "publishDate": "2022-02-16",
   "shortName": "epub-tests",
   "edDraftURI": "https://w3c.github.io/epub-tests/results/",
   "copyrightStart": "2021",
@@ -132,29 +132,33 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2022-02-08T00:00:00.000Z",
-  "generatedSubtitle": "08 February 2022"
+  "publishISODate": "2022-02-16T00:00:00.000Z",
+  "generatedSubtitle": "16 February 2022"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
 	<body class="h-entry informative"><div class="head">
-     <h1 id="title" class="title">EPUB 3.3 Tests</h1>
     
-    <p id="w3c-state"> <time class="dt-published" datetime="2022-02-08">08 February 2022</time></p>
+    <h1 id="title" class="title">EPUB 3.3 Tests</h1> 
+    <p id="w3c-state"> <time class="dt-published" datetime="2022-02-16">16 February 2022</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
-        
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://www.w3.org/TR/base-epub-tests-20220216/">https://www.w3.org/TR/base-epub-tests-20220216/</a>
+              </dd>
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/epub-tests/">https://www.w3.org/TR/epub-tests/</a>
+              </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/epub-tests/results/">https://w3c.github.io/epub-tests/results/</a></dd>
         <dt>History:</dt><dd>
-        <a href="https://github.com/w3c/epub-tests/commits/main">Commit history</a>
-      </dd>
+                    <a href="https://github.com/w3c/epub-tests/commits/main">Commit history</a>
+                  </dd>
         
         
         
         
         
-        <dt>Editors:</dt>
-        <dd class="editor p-author h-card vcard" data-editor-id="7382">
+        <dt>Editors:</dt><dd class="editor p-author h-card vcard" data-editor-id="7382">
     <a class="u-url url p-name fn" href="https://www.w3.org/People/Ivan/">Ivan Herman</a><a class="p-name orcid" href="https://orcid.org/0000-0003-0782-2704"><svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
   <style>
 
@@ -197,10 +201,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p>
     <hr title="Separator for header">
   </div>
-		<section id="abstract" class="introductory"><div class="header-wrapper"><h2 id="abstract-0">Abstract</h2><a class="self-link" href="#abstract" aria-label="Permalink for this Section"></a></div>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>
 			<p>Description of the EPUB 3.3 tests.</p>
 		</section>
-		<section id="sotd" class="introductory"><div class="header-wrapper"><h2 id="status-of-this-document">Status of This Document</h2><a class="self-link" href="#sotd" aria-label="Permalink for this Section"></a></div><p>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
       This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal
        document. It has no official standing
       of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
@@ -375,7 +379,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
             <th>Description</th>
             <th>Specs</th>
             <th>Ref</th>
-        </tr><tr><td class="may" id="mol-timing-synchronization"><a href="https://github.com/w3c/epub-tests/tree/main/tests/mol-timing-synchronization">mol-timing-synchronization</a></td><td>may</td><td>Basic media overlay test</td><td>Tests whether the Reading System implements media overlays.</td><td><a href="https://w3c.github.io/epub-specs/epub33/rs/#mol-timing-sync"> (1)</a><a href="https://w3c.github.io/epub-specs/epub33/rs/#mol-rendering-audio"> (2)</a></td><td><a href="results.html#mol-timing-synchronization-results">❐</a></td></tr></tbody></table></section></section>
+        </tr><tr><td class="should" id="mol-css"><a href="https://github.com/w3c/epub-tests/tree/main/tests/mol-css">mol-css</a></td><td>should</td><td>Basic media overlay test with CSS styling</td><td>Tests whether the Reading System implements the associated CSS styling for media overlays.</td><td><a href="https://w3c.github.io/epub-specs/epub33/rs/#mol-timing-sync"> (1)</a><a href="https://w3c.github.io/epub-specs/epub33/rs/#mol-rendering-with-styling"> (2)</a></td><td><a href="results.html#mol-css-results">❐</a></td></tr><tr><td class="should" id="mol-timing-synchronization"><a href="https://github.com/w3c/epub-tests/tree/main/tests/mol-timing-synchronization">mol-timing-synchronization</a></td><td>should</td><td>Basic media overlay test</td><td>Tests whether the Reading System implements media overlays.</td><td><a href="https://w3c.github.io/epub-specs/epub33/rs/#mol-timing-sync"> (1)</a></td><td><a href="results.html#mol-timing-synchronization-results">❐</a></td></tr><tr><td class="should" id="mol-timing-synchronization_multiple_audio"><a href="https://github.com/w3c/epub-tests/tree/main/tests/mol-timing-synchronization_multiple_audio">mol-timing-synchronization_multiple_audio</a></td><td>should</td><td>Media overlay test with two audio files</td><td>Tests whether the Reading System implements media overlays with a SMIL file referring to two audio files.</td><td><a href="https://w3c.github.io/epub-specs/epub33/rs/#mol-timing-sync"> (1)</a></td><td><a href="results.html#mol-timing-synchronization_multiple_audio-results">❐</a></td></tr></tbody></table></section></section>
 
 		<section class="appendix" id="contributors"><div class="header-wrapper"><h2 id="a-acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</h2><a class="self-link" href="#contributors" aria-label="Permalink for Appendix A."></a></div>
 			
