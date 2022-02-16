@@ -1,5 +1,5 @@
 <smil xmlns:epub="http://www.idpf.org/2007/ops" xmlns="http://www.w3.org/ns/SMIL" version="3.0">
-  <body epub:textref="../clip_times_tests.xhtml">
+  <body epub:textref="../clip_times_tests.xhtml#body">
       <par>
         <text src="../clip_times_tests.xhtml#mo-1"/>
         <audio src="../audio/clip_times_tests1A.mp3" clipEnd="00:00:04.548"/>
