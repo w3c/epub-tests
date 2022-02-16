@@ -1,0 +1,18 @@
+<smil xmlns="http://www.w3.org/ns/SMIL" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0">
+    <body>
+        <par id="first">
+            <text src="../page_001.xhtml#first"/>
+            <audio src="../audio/mobydick.mp3" clipBegin="0:00:29.268" clipEnd="0:00:44.783"/>
+        </par>
+
+        <par id="second">
+            <text src="../page_002.xhtml#second"/>
+            <audio src="../audio/mobydick.mp3" clipBegin="0:00:44.783" clipEnd="0:00:50.450"/>
+        </par>
+
+        <par id="third">
+            <text src="../page_003.xhtml#third"/>
+            <audio src="../audio/mobydick.mp3" clipBegin="0:00:50.450" clipEnd="0:01:27.850"/>
+        </par>
+    </body>
+</smil>   
