@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-/*for the active text element*/
-.-epub-media-overlay-active {
+/*for the active element*/
+.my-active-item {
     background-color: pink !important;
     color: black !important;
 }
 /*for the currently-playing document*/
-.-epub-media-overlay-playback-active .mo-playing {
+.my-document-playing {
     background-color: green !important;
     color: white !important;
 }

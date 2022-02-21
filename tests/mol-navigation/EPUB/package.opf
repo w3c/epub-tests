@@ -17,8 +17,8 @@
         <meta property="media:duration" refines="#smil-1">00:00:29.218</meta>
         <meta property="media:duration" refines="#smil-2">00:00:06.484</meta>
         <meta property="media:duration">00:00:35.702</meta>
-        <meta property="media:active-class">-epub-media-overlay-active</meta>
-        <meta property="media:playback-active-class">-epub-media-overlay-playback-active</meta>
+        <meta property="media:active-class">my-active-item</meta>
+        <meta property="media:playback-active-class">my-document-playing</meta>
     </metadata>
 
     <manifest>
