@@ -13,10 +13,10 @@
         <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
         <meta property="belongs-to-collection">should</meta>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-rsconf-navigation</meta>
-        <meta property="dcterms:modified">2022-02-10T00:00:00Z</meta>
+        <meta property="dcterms:modified">2022-02-21T00:00:00Z</meta>
         <meta property="media:duration" refines="#smil-1">00:00:29.218</meta>
-        <meta property="media:duration" refines="#smil-2">00:00:06.484</meta>
-        <meta property="media:duration">00:00:35.702</meta>
+        <meta property="media:duration" refines="#smil-2">00:00:07.048</meta>
+        <meta property="media:duration">00:00:36.266</meta>
         <meta property="media:active-class">my-active-item</meta>
         <meta property="media:playback-active-class">my-document-playing</meta>
     </metadata>
