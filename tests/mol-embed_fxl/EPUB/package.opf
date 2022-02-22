@@ -7,7 +7,7 @@
     <dc:description>Tests whether the Reading System implements the control of embedded videos via media overlay in an FXL publication.</dc:description>
     <dc:identifier id="pub-id">mol-embed</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>Media overlay with embedded video in FXL</dc:title>
+    <dc:title>Media overlay with embedded video in fixed layout</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="belongs-to-collection">should</meta>
