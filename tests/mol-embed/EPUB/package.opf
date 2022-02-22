@@ -4,7 +4,7 @@
     <dc:coverage>Media Overlays</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2022-02-18</dc:date>
-    <dc:description>Tests whether the Reading System implements the control of embedded videos via media overlay.</dc:description>
+    <dc:description>Tests whether the reading system implements the control of embedded videos via media overlay.</dc:description>
     <dc:identifier id="pub-id">mol-embed</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Media overlay with embedded video</dc:title>
