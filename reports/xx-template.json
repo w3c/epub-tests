@@ -30,6 +30,8 @@
         "mol-timing-synchronization": false,
         "mol-timing-synchronization_fxl": false,
         "mol-timing-synchronization_multiple_audio": false,
+        "mol-tts_multi": false,
+        "mol-tts_single": false,
         "nav-access": false,
         "nav-activation": false,
         "nav-spine_in-spine": false,
