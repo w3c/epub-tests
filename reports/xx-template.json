@@ -32,6 +32,7 @@
         "mol-css": false,
         "mol-embed": false,
         "mol-embed_deactivate_playback": false,
+        "mol-embed_fxl": false,
         "mol-timing-synchronization": false,
         "mol-timing-synchronization_fxl": false,
         "mol-timing-synchronization_multiple_audio": false,
