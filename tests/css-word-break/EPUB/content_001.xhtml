@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>EPUB CSS Word Break</title>
+  </head>
+  <body>
+    <h1>-epub-word-break Tests</h1>
+
+    <p>1. This test passes if all of the words in the following block of text appear without breaks.</p>
+
+    <p style="margin: 1em; -epub-word-break:normal">The family of Dashwood had long been settled in Sussex. Their estate was large, and their residence was at Norland Park, in the centre of their property, where, for many generations, they had lived in so respectable a manner as to engage the general good opinion of their surrounding acquaintance.</p>
+
+    <p>2. This test passes if all of the words in the following block of text appear without breaks.</p>
+
+    <p style="margin: 1em; -epub-word-break: keep-all;">The late owner of this estate was a single man, who lived to a very advanced age, and who for many years of his life, had a constant companion and housekeeper in his sister. But her death, which happened ten years before his own, produced a great alteration in his home; for to supply her loss, he invited and received into his house the family of his nephew Mr. Henry Dashwood, the legal inheritor of the Norland estate, and the person to whom he intended to bequeath it.</p>
+
+    <p>3. This test passes if any of the words in the following block of text appear with a break.</p>
+
+    <p style="margin: 1em; -epub-word-break: break-all;">In the society of his nephew and niece, and their children, the old Gentleman’s days were comfortably spent. His attachment to them all increased. The constant attention of Mr. and Mrs. Henry Dashwood to his wishes, which proceeded not merely from interest, but from goodness of heart, gave him every degree of solid comfort which his age could receive; and the cheerfulness of the children added a relish to his existence.</p>
+  </body>
+</html>
