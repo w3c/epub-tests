@@ -3,6 +3,6 @@
   <rootfiles>
     <rootfile full-path="FOO/BAR/package.opf" media-type="application/oebps-package+xml" />
     <rootfile full-path="OEBPS/package.opf" media-type="application/oebps-package+xml" />
-    <rootfile full-path="OPS/package.opf" media-type="application/oebps-package+xml" />
+    <rootfile full-path="EPUB/package.opf" media-type="application/oebps-package+xml" />
   </rootfiles>
 </container>
