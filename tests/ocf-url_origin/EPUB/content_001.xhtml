@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Check origin value</title>
+        <script type="text/javascript">
+            const current_path    = 'EPUB/content_001.xhtml'
+            function test_url() {
+                try {
+                    document.getElementById('no_scripting').style.display = 'none';
+                    document.getElementById('scripting').style.display = 'block';
+                    document.getElementById('origin').textContent = document.location.origin;
+                } catch(e) {
+                    alert(e)
+                }
+            }
+            window.addEventListener('load', test_url);
+        </script>
+    </head>
+    <body>
+        <p id="no_scripting" style="display: block">This reading system does not support scripting, which is necessary for this test to run.</p>
+
+        <div id="scripting" style="display:none">
+            <p>If the publication is displayed by two different users, and the origin URLs below are <em>different</em>, the test passes.</p>
+            <dl>
+                <dt>Origin URL:</dt>
+                <dd id="origin"></dd>
+            </dl>
+        </div>
+    </body>
+</html>   
