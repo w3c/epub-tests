@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Parse a root-relative URL</title>
+        <script type="text/javascript">
+            const path_absolute   = '/media/imgs/monastery.jpg';
+            const current_path    = 'EPUB/content_001.xhtml'
+            function test_url() {
+                try {
+                    document.getElementById('no_scripting').style.display = 'none';
+                    document.getElementById('scripting').style.display = 'block';
+
+                    // in some cases this URL contains search or fragment, this should be removed to get to the
+                    // 'pure' URL. This is done by cloning the document's URI and removing  
+                    // relevant portions of the full URL
+                    // (There are RS-s that add a long query string to the URL, hence the necessity of this step)
+                    const new_URL = new URL(document.documentURI);
+                    new_URL.search = '';  new_URL.hash = '';
+                    const documentURI = new_URL.toString();
+
+                    // This is, hopefully, a good representation of the container root URL: remove the
+                    // relative path of the current document
+                    const container_root_URL = documentURI.slice(0,documentURI.length - current_path.length);
+                    document.getElementById('container_root_url').textContent = container_root_URL;
+
+                    document.getElementById('test_url').textContent = path_absolute;
+
+                    const image_src = new URL(path_absolute, container_root_URL);
+                    document.getElementById('image_url_path_absolute').textContent = image_src;
+
+                    document.getElementById('expected').textContent = `{Container Root URL}${path_absolute}`;
+                } catch(e) {
+                    alert(e)
+                }
+            }
+            window.addEventListener('load', test_url);
+        </script>
+    </head>
+    <body>
+        <p id="no_scripting" style="display: block">This reading system does not support scripting, which is necessary for this test to run.</p>
+
+        <div id="scripting" style="display:none">
+
+            <p>The test passes if the calculated absolute URL value is of the form "<span id="expected"></span>":</p>
+
+            <dl>
+                <dt>Container Root URL:</dt>
+                <dd id="container_root_url"></dd>
+
+                <dt>Test URL:</dt>
+                <dd id="test_url"></dd>
+                
+                <dt>Calculated absolute URL:</dt>
+                <dd id="image_url_path_absolute"></dd>                    
+            </dl>
+
+        </div>
+    </body>
+</html>   
