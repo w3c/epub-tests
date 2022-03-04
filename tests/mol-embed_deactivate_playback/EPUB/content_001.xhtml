@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+        <meta charset="utf-8" />
+		<title>Media overlay with embedded video; no playback control</title>
+        <style>
+            video {
+                padding: 35px;
+                border: 2px solid black;
+            }
+            video.active-item {
+                background-color: rgb(13,146,95);
+            }
+            div.video_container {
+                text-align: center;
+                padding:10px;
+            }
+        </style>
+        <meta name="viewport" content="width=900, height=600" />
+    </head>
+	<body id="body"> 
+        <h1>Display a video element</h1>
+        <p>Test passes (i.e., the Reading System implements Media Overlays embedded media) if</p>
+        <ol>
+            <li>The Reading System provides the user with a way to turn sound on</li>
+            <li>On the next page, if sound is turned on, the audio (music) plays and the first video starts automatically;
+                the default play/pause control should not be visible
+            </li>
+            <li>After 30 seconds the first video stops and the second starts while the music plays for another 10 seconds</li>
+            <li>If the Reading System implements styling for media overlays, the active video is framed in green</li>
+        </ol>
+    </body>
+</html>
