@@ -12,17 +12,7 @@
                     document.getElementById('no_scripting').style.display = 'none';
                     document.getElementById('scripting').style.display = 'block';
 
-                    // in some cases this URL contains search or fragment, this should be removed to get to the
-                    // 'pure' URL. This is done by cloning the document's URI and removing  
-                    // relevant portions of the full URL
-                    // (There are RS-s that add a long query string to the URL, hence the necessity of this step)
-                    const new_URL = new URL(document.documentURI);
-                    new_URL.search = '';  new_URL.hash = '';
-                    const documentURI = new_URL.toString();
-
-                    // This is, hopefully, a good representation of the container root URL: remove the
-                    // relative path of the current document
-                    const container_root_URL = documentURI.slice(0,documentURI.length - current_path.length);
+                    const container_root_URL = new URL('../..', document.documentURI);
                     document.getElementById('container_root_url').textContent = container_root_URL;
 
                     document.getElementById('test_url').textContent = parent_relative;
