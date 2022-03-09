@@ -4,22 +4,19 @@
     <dc:coverage>Content Documents</dc:coverage>
     <dc:creator>Wendy Reid</dc:creator>
     <dc:date>2022-03-02</dc:date>
-    <dc:description>Tests for the prefixed CSS properties -epub-text-emphasis-color, -position, and -style</dc:description>
-    <dc:identifier id="pub-id">css-text-emphasis</dc:identifier>
+    <dc:description>Tests for the prefixed CSS property -epub-writing-mode</dc:description>
+    <dc:identifier id="pub-id">css-epub-writing-mode</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>EPUB CSS Text Emphasis</dc:title>
+    <dc:title>EPUB CSS Writing Mode</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-css-prefixed-text-epub-text-emphasis-color</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-css-prefixed-text-epub-text-emphasis-position</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-css-prefixed-text-epub-text-emphasis-style</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-css-prefixed-writing-modes-writing-mode</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-css</meta>
     <meta property="dcterms:modified">2022-03-02T00:00:00Z</meta>
   </metadata>
   <manifest>
     <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
-    <item id="KentenGeneric" href="KentenGeneric.otf" media-type="font/otf" />
   </manifest>
   <spine>
     <itemref idref="content_001" />

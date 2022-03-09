@@ -4,13 +4,13 @@
     <dc:coverage>Content Documents</dc:coverage>
     <dc:creator>Wendy Reid</dc:creator>
     <dc:date>2022-03-02</dc:date>
-    <dc:description>Tests for the prefixed CSS property -epub-hyphens</dc:description>
-    <dc:identifier id="pub-id">css-hyphens</dc:identifier>
+    <dc:description>Tests for the prefixed CSS value -epub-fullwidth</dc:description>
+    <dc:identifier id="pub-id">css-epub-text-transform</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>EPUB CSS Hyphens</dc:title>
+    <dc:title>EPUB CSS Text Transform</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-css-prefixed-text-epub-hyphens</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-css-prefixed-text-text-transform</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-css</meta>
     <meta property="dcterms:modified">2022-03-02T00:00:00Z</meta>  
   </metadata>

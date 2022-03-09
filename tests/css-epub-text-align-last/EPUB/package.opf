@@ -5,7 +5,7 @@
     <dc:creator>Wendy Reid</dc:creator>
     <dc:date>2022-03-02</dc:date>
     <dc:description>Tests for the prefixed CSS property -epub-text-align-last</dc:description>
-    <dc:identifier id="pub-id">css-text-align-last</dc:identifier>
+    <dc:identifier id="pub-id">css-epub-text-align-last</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>EPUB CSS Test Align Last</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
