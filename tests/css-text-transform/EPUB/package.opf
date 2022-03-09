@@ -7,7 +7,7 @@
     <dc:description>Tests for the prefixed CSS value -epub-fullwidth</dc:description>
     <dc:identifier id="pub-id">css-text-transform</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>css-text-transform</dc:title>
+    <dc:title>EPUB CSS Text Transform</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-css-prefixed-text-text-transform</meta>

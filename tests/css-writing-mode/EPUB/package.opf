@@ -7,7 +7,7 @@
     <dc:description>Tests for the prefixed CSS property -epub-writing-mode</dc:description>
     <dc:identifier id="pub-id">css-writing-mode</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>css-writing-mode</dc:title>
+    <dc:title>EPUB CSS Writing Mode</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-css-prefixed-writing-modes-writing-mode</meta>
