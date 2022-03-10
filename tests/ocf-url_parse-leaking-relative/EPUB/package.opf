@@ -4,14 +4,15 @@
     <dc:coverage>Open Container Format</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2021-03-05</dc:date>
-    <dc:description>Parse a path-absolute URL from the content to a photograph. The folder hierarchy containing the photograph starts at the root level.</dc:description>
-    <dc:identifier id="pub-id">ocf-url_parse_path_absolute</dc:identifier>
+    <dc:description>Parse a relative link with several double-dot path segments from the content to a photograph. The folder hierarchy containing the photograph starts at the root level; the number of segments exceeds the depth of the folder hierarchy.
+    </dc:description>
+    <dc:identifier id="pub-id">ocf-url_parse-leaking-relative</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>Parse a path-absolute URL</dc:title>
+    <dc:title>Parse a potentially leaking relative URL</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-container-iri-root-parse</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-container-iri-root-parse</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-container-iri-step-parse</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-container-iri-step-parse</meta>
     <meta property="dcterms:modified">2021-03-05T00:00:00Z</meta>
   </metadata>
   <manifest>

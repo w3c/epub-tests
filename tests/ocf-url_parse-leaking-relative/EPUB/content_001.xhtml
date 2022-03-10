@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
     <head>
         <meta charset="utf-8"/>
-        <title>Parse a potentially leaking URL</title>
+        <title>Parse a potentially leaking relative URL</title>
         <script type="text/javascript">
             const expected_path   = 'media/imgs/monastery.jpg';
             const parent_relative = `../../../../../${expected_path}`;
-            const current_path    = 'EPUB/content_001.xhtml'
             function test_url() {
                 try {
                     document.getElementById('no_scripting').style.display = 'none';
