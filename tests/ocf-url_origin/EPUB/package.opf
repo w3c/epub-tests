@@ -7,11 +7,11 @@
     <dc:description>The origin value is displayed. The origin must be unique for each user-specific instance of the publication.</dc:description>
     <dc:identifier id="pub-id">ocf-url_origin</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>Check origin value</dc:title>
+    <dc:title>Unique origin for each instance</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-container-iri-origin</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-scripted-origin-2</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-scripted-origin-user</meta>
     <meta property="dcterms:modified">2021-03-05T00:00:00Z</meta>
   </metadata>
   <manifest>
