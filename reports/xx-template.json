@@ -49,6 +49,7 @@
         "ocf-url_link-path-absolute": false,
         "ocf-url_link-relative": false,
         "ocf-url_manifest": false,
+        "ocf-url_origin": false,
         "ocf-url_relative": false,
         "page-layout-both": false,
         "page-layout-both-spread": false,
@@ -111,6 +112,7 @@
         "scr-readingsystem-support_svg": false,
         "scr-support": false,
         "scr-support_iframe": false,
+        "scr-support_origin": false,
         "scr-support_svg": false
     }
 }
