@@ -2,15 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
     <head>
         <meta charset="utf-8"/>
-        <title>Parse a root-relative URL</title>
+        <title>Root-relative URL, parsed by JS</title>
         <script type="text/javascript">
+            // This is the path that to be tested
             const path_absolute   = '/media/imgs/monastery.jpg';
-            const current_path    = 'EPUB/content_001.xhtml'
             function test_url() {
                 try {
                     document.getElementById('no_scripting').style.display = 'none';
                     document.getElementById('scripting').style.display = 'block';
 
+                    // The (expected) Javascript representation of the Container Root URL, as defined by the specification
                     const container_root_URL = new URL('../..', document.documentURI);
                     document.getElementById('container_root_url').textContent = container_root_URL;
 

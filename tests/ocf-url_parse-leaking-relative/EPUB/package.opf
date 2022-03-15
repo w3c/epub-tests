@@ -4,11 +4,11 @@
     <dc:coverage>Open Container Format</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2021-03-05</dc:date>
-    <dc:description>Parse a relative link with several double-dot path segments from the content to a photograph. The folder hierarchy containing the photograph starts at the root level; the number of segments exceeds the depth of the folder hierarchy.
+    <dc:description>Parse, in Javascript, a relative link with several double-dot path segments from the content to a photograph. The folder hierarchy containing the photograph starts at the root level; the number of segments exceeds the depth of the folder hierarchy.
     </dc:description>
     <dc:identifier id="pub-id">ocf-url_parse-leaking-relative</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>Parse a potentially leaking relative URL</dc:title>
+    <dc:title>Relative URL that exceeds depth of hierarchy, parsed by JS</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-container-iri-step-parse</meta>

@@ -4,10 +4,10 @@
     <dc:coverage>Open Container Format</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2021-03-05</dc:date>
-    <dc:description>Parse a path-absolute URL, i.e., starting with a slash, from the content to an image. The folder hierarchy containing the image starts at the root level.</dc:description>
+    <dc:description>Parse, in Javascript, a path-absolute URL, i.e., beginning with a leading slash, from the content to an image. The folder hierarchy containing the image starts at the root level.</dc:description>
     <dc:identifier id="pub-id">ocf-url_parse-path-absolute</dc:identifier>
     <dc:language>en</dc:language>
-    <dc:title>Parse a path-absolute URL</dc:title>
+    <dc:title>Root-relative URL, parsed by JS</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-container-iri-root-parse</meta>

@@ -2,15 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
     <head>
         <meta charset="utf-8"/>
-        <title>Parse a potentially leaking relative URL</title>
+        <title>Relative URL that exceeds depth of hierarchy, parsed by JS</title>
         <script type="text/javascript">
+            // This is the path that the correct JS parsing should produce
             const expected_path   = 'media/imgs/monastery.jpg';
+            // This is the path to be tested; it depth exceeds the depth of the hierarchy
             const parent_relative = `../../../../../${expected_path}`;
             function test_url() {
                 try {
                     document.getElementById('no_scripting').style.display = 'none';
                     document.getElementById('scripting').style.display = 'block';
 
+                    // The (expected) Javascript representation of the Container Root URL, as defined by the specification
                     const container_root_URL = new URL('../..', document.documentURI);
                     document.getElementById('container_root_url').textContent = container_root_URL;
 
