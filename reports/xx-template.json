@@ -98,6 +98,7 @@
         "pub-cmt-webp": false,
         "pub-data-urls_browsing-context": false,
         "pub-data-urls_top-level-content": false,
+        "pub-external-links": false,
         "pub-foreign_bad-fallback": false,
         "pub-foreign_image": false,
         "pub-foreign_json-spine": false,
