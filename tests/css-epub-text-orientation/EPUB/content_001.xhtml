@@ -5,13 +5,15 @@
   <body>
     <h1>-epub-text-orientation Tests</h1>
 
-    <p style="margin: 1em; -epub-text-orientation: mixed">1. これはテストです。This test passes if the English text appears to be turned 90 degrees while the Japanese text is vertical.</p>
+    <p>Instructions: All conditions of this test book must pass for the feature to pass. If any test fails, mark this section as a fail in the implementation report.</p>
 
-    <p style="margin: 1em; -epub-text-orientation: upright">2. これはテストです。This test passes if the English text appears upright and vertical while the Japanese text is vertical.</p>
+    <p style="margin: 1em; -epub-text-orientation: mixed; writing-mode: vertical-lr;">1. これはテストです。This test passes if the English text appears to be turned 90 degrees while the Japanese text is vertical.</p>
 
-    <p style="margin: 1em; -epub-text-orientation: sideways">3. これはテストです。This test passes if both the English and Japanese text appear to be turned 90 degrees while vertical.</p>
+    <p style="margin: 1em; -epub-text-orientation: upright; writing-mode: vertical-lr;">2. これはテストです。This test passes if the English text appears upright and vertical while the Japanese text is vertical.</p>
 
-    <p style="margin: 1em; -epub-text-orientation: sideways-right">4. これはテストです。This test passes if this text renders identically to the test above.</p>
+    <p style="margin: 1em; -epub-text-orientation: sideways; writing-mode: vertical-lr;">3. これはテストです。This test passes if both the English and Japanese text appear to be turned 90 degrees while vertical.</p>
+
+    <p style="margin: 1em; -epub-text-orientation: sideways-right; writing-mode: vertical-lr;">4. これはテストです。This test passes if this text renders identically to the test above.</p>
 
   </body>
 </html>
