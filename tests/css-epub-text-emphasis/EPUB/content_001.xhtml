@@ -3,11 +3,13 @@
     <title>EPUB CSS Text Emphasis</title>
 
     <style>
-      p.test {
-        @font-face {
+      @font-face {
           font-family: "KentenGeneric";
-          src: url(KentenGeneric.otf);
-        };
+          src: url(KentenGeneric.otf) format("opentype");
+      }
+
+      p.test {
+        font-family: "KentenGeneric";
       }
     </style>
   </head>
