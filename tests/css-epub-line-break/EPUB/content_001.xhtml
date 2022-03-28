@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>EPUB CSS Line Break</title>
+
+    <style>
+      p.test {
+        white-space: nowrap;
+      }
+
+      p.wrapbox { 
+        width: 10em; 
+        margin: 0.5em; 
+        white-space: normal; 
+        vertical-align: top; 
+        display: inline-block; 
+      }
+
+      p.auto { 
+        -epub-line-break: auto; 
+      }
+
+      p.loose { 
+        -epub-line-break: loose; 
+      }
+
+      p.normal { 
+        -epub-line-break: normal; 
+      }
+
+      p.strict { 
+        -epub-line-break: strict; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1>-epub-line-break Tests</h1>
+
+    <p>Instructions: All conditions of this test book must pass for the feature to pass. If any test fails, mark this section as a fail in the implementation report.</p>
+
+    <p>For all of the tests to pass, line breaks should occur <em>before</em> the characters "々" or "ぁ". These characters should not appear at the end of a line.</p>
+
+    <p>1. <code>-epub-line-break: auto;</code>: This test passes if the following block of text breaks to a new line at the end of the viewport, no text is outside of the viewport, and line breaks update when the font size or viewport size changes.</p>
+
+    <p class="test wrapbox auto" lang="jp">auto:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。</p>
+
+    <p>2. <code>-epub-line-break: loose;</code>: This test passes if the following block of text breaks to a new line at the end of the viewport, no text is outside of the viewport, and line breaks update when the font size or viewport size changes.</p>
+
+    <p class="test wrapbox loose" lang="jp">loose:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。</p>
+
+    <p>3. <code>-epub-line-break: normal;</code>: This test passes if the following block of text breaks to a new line at the end of the viewport, no text is outside of the viewport, and line breaks update when the font size or viewport size changes.</p>
+
+    <p class="test wrapbox normal" lang="jp">normal:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。</p>
+
+    <p>4. <code>-epub-line-break: strict;</code>: This test passes if the following block of text breaks to a new line at the end of the viewport, no text is outside of the viewport, and line breaks update when the font size or viewport size changes.</p>
+
+    <p class="test wrapbox strict" lang="jp">strict:<br />そこは湖のほとりで木々が輝いていた。<br />その景色に、美しいなぁと思わずつぶやいた。</p>
+
+    <!--Text examples borrowed from the MDN page on CSS line-break, which only applies to CJK characters.-->
+    
+  </body>
+</html>

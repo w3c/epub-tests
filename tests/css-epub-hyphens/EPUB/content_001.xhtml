@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>EPUB CSS Hyphens</title>
+
+    <style>
+      body {
+        hyphens: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>-epub-hyphens Test</h1>
+
+    <p>Instructions: All conditions of this test book must pass for the feature to pass. If any test fails, mark this section as a fail in the implementation report.</p>
+
+    <p>For this test, testers may need to adjust the font size setting on their reading system to meet the conditions of the test.</p>
+
+    <p>1. This test passes if no hyphens appear within the following block of text.</p>
+
+    <p style="margin: 1em; -epub-hyphens: none;">The nineteenth century dislike of romanticism is the rage of Caliban not seeing his own face in a glass. The moral life of man forms part of the subject-matter of the artist, but the morality of art consists in the perfect use of an imperfect medium. No artist desires to prove anything. Even things that are true can be proved. No artist has ethical sympathies. An ethical sympathy in an artist is an unpardonable mannerism of style. No artist is ever morbid. </p>
+
+    <p>2. This test passes if hyphens appear in the any of these words in the following block of text: artist, express, everything, language, instruments, virtue, materials, musician, feeling, surface, or symbol.</p>
+
+    <p style="margin: 1em; -epub-hyphens: manual;">The art&#xAD;ist can ex&#xAD;press every&#xAD;thing. Thought and lang&#xAD;uage are to the art&#xAD;ist instru&#xAD;ments of an art. Vice and vir&#xAD;tue are to the art&#xAD;ist mater&#xAD;ials for an art. From the point of view of form, the type of all the arts is the art of the music&#xAD;ian. From the point of view of feel&#xAD;ing, the actor’s craft is the type. All art is at once sur&#xAD;face and sym&#xAD;bol.</p>
+
+    <p>3. This test passes if hyphens appear in the following block of text.</p>
+
+    <p style="margin: 1em; -epub-hyphens: auto;">Those who go beneath the surface do so at their peril. Those who read the symbol do so at their peril. It is the spectator, and not life, that art really mirrors. Diversity of opinion about a work of art shows that the work is new, complex, and vital. When critics disagree, the artist is in accord with himself. We can forgive a man for making a useful thing as long as he does not admire it. The only excuse for making a useless thing is that one admires it intensely.</p>
+  </body>
+</html>
