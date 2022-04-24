@@ -125,11 +125,23 @@ export async function get_list_dir(dir_name: string, filter_name: (name: string)
  * @param dir_name the directory that contains the implementation reports
  */
 async function get_implementation_reports(dir_name: string): Promise<ImplementationReport[]> {
+    // Filter out the "null" values from the implementation reports
+    const remove_nulls = (inp: ImplementationReport): ImplementationReport => {
+        const val: any = {};
+        for (const key in inp.tests) {
+            if (inp.tests[key] !== null) {
+                val[key] = inp.tests[key]
+            }
+        }
+        inp.tests = val;
+        return inp;
+    }
+
     // Get a single implementation report, which must be a JSON file
     const get_implementation_report = async (file_name: string): Promise<ImplementationReport> => {
         const implementation_report = await fs.readFile(file_name, 'utf-8');
         try {
-            return JSON.parse(implementation_report) as ImplementationReport;
+            return remove_nulls(JSON.parse(implementation_report) as ImplementationReport);
         } catch (error) {
             console.warn(`Warning: unable to parse ${file_name}; ignored`);
             return undefined;
@@ -164,7 +176,7 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
     const final: ImplementationReport[] = [];
     const to_be_consolidated: Variants = {};
 
-    // This is the real meat: creat a new set of test results combining the test result of the variants.
+    // This is the real meat: create a new set of test results combining the test result of the variants.
     // The problem is that different variants may skip some tests, i.e., the
     // final list of test names must be the union of all the tests in the different variants
     const consolidate_test_results = (variant_results: TestResults[]): TestResults => {

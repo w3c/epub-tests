@@ -2,8 +2,8 @@
     "name": "Apple Books (Mac)",
     "ref": "https://www.apple.com/apple-books/",
     "tests": {
-        "cnt-css-support": null,
-        "cnt-mathml-support": null,
+        "cnt-css-support": true,
+        "cnt-mathml-support": false,
         "cnt-svg-css-inclusion": null,
         "cnt-svg-css-reference": null,
         "cnt-svg-embedded": null,
