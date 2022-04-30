@@ -472,7 +472,7 @@ export function get_template(report: ReportData): ImplementationReport {
         }
     }
     for (const key of keys.sort()) {
-        test_list[key] = false;
+        test_list[key] = null;
     }
 
     return {

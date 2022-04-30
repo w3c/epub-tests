@@ -206,8 +206,7 @@ JSON file is as follows:
 * `ref` (optional): A URL that creates a link on the name of the reading system in the implementation report.
 
 * `tests`: An object with the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
-  values of `true` or `false` for tests that pass or fail, respectively. If a test is not listed, the implementation report
-  will show a value of N/A, indicating that the implementation has not run the test.
+  values of `true`, `false`, or `null` for tests that pass, fail, or not tested, respectively. If a test is not listed, or its value is `null`, the implementation report will show a value of N/A, indicating that the implementation has not run the test.
 
 Here is an example of a small test report:
 
@@ -222,13 +221,13 @@ Here is an example of a small test report:
         "pkg-dir_rtl-root-unset": true,
         "pkg-dir_unset-root-rtl": false,
         "pkg-dir_unset-root-unset": true,
-        "pkg-dir-auto_root-rtl": false,
+        "pkg-dir-auto_root-rtl": null,
         "pkg-dir-auto_root-unset": false
     }
 }
 ```
 
-The template file in `reports/xx-template.json` should list all available test identifiers.
+The template file in `reports/xx-template.json` should list all available test identifiers, with all values set, initially, to `null`.
 
 
 ## Generated test reports
