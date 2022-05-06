@@ -22,6 +22,9 @@ typings/
 # Local tests
 local_tests/
 
+# Null-tests
+reports/null-test.json
+
 todo.md
 tests/.DS_Store
 .DS_Store

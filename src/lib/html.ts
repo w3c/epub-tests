@@ -101,7 +101,12 @@ function create_impl_reports(data: ReportData): string {
             add_child(header_row, 'th', 'Id');
             add_child(header_row, 'th', 'Req');
             for (const impl of (consolidated ? data.consolidated_implementers : data.implementers)) {
-                const head = impl.variant !== 'consolidated' ? `${impl.name}<br />${impl.variant}` : impl.name;
+                let head: string;
+                if (impl.variant !== undefined) {
+                    head = impl.variant !== 'consolidated' ? `${impl.name}<br />${impl.variant}` : impl.name;
+                } else {
+                    head = `${impl.name}`;
+                }
                 add_child(header_row, 'th', head);
             }
 
