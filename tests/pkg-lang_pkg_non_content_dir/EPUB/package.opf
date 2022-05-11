@@ -7,7 +7,7 @@
     <dc:description xml:lang="en">
       The package document's language is set to 'he' and direction 'rtl' but the content document is not annotated for language and direction. The content document should not become automatically 'he' and 'rtl'.
     </dc:description>
-    <dc:identifier id="pub-id">pgk-lang_pkg_non_content_dir</dc:identifier>
+    <dc:identifier id="pub-id">pkg-lang_pkg_non_content_dir</dc:identifier>
     <dc:language>he</dc:language>
     <dc:title>CSS: הרפתקה חדשה!</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
