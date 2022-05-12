@@ -4,7 +4,92 @@
 		<meta charset="utf-8" />
 		<title>EPUB 3.3 Test Results</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
-		<link rel="stylesheet" href="css/tables.css">
+		<style>
+			/* Table zebra style... */
+			table.zebra {
+				font-size: inherit;
+				font: 100%;
+				margin: 1em;
+				width: 100% !important;
+			}
+
+			table.zebra td {
+				padding-left: 0.3em;
+			}
+
+			table.zebra th {
+				font-weight: bold;
+				text-align: center;
+				font-size: 100%;
+				background: hsl(180, 30%, 50%);
+				color: #fff;
+			}
+
+			table.zebra th a:link {
+				color: #fff;
+			}
+
+			table.zebra th a:visited {
+				color: #aaa;
+			}
+
+			table.zebra tr:nth-child(even) {
+				background-color: hsl(180, 30%, 93%)
+			}
+
+			table.zebra th {
+				border-bottom: 1px solid #bbb;
+				padding: .2em 1em;
+			}
+
+			table.zebra td {
+				border-bottom: 1px solid #ddd;
+				padding: .2em 1em;
+			}
+
+			td a {
+				text-decoration: none !important;
+			}
+
+			td summary {
+				font-weight: normal;
+			}
+
+			td.pass {
+				background-color: green;
+			}
+
+			td.fail {
+				background-color: red;
+			}
+
+			col.col_id {
+				width: 20%;
+			}
+
+			col.col_title {
+				width: 20%;
+			}
+
+			col.col_req {
+				width: 5%;
+				text-align: center;    
+			}
+
+			col.col_sref {
+				width: 5%;
+				text-align: center;    
+			}
+
+			col.col_tref {
+				width: 5%;
+				text-align: center;
+			}
+
+			button#should_may_visibility {
+				cursor: pointer;
+			}
+		</style>
 		<script class="remove">
 			var respecConfig = {
 				wgPublicList: "public-epub3",
@@ -41,6 +126,51 @@
 				}
 			};
 		</script>
+		<script>
+			// The current visibility state is stored in a local storage
+			// This means that the requested visibility is kept (in the same browser) and
+			// is valid across the two report files.
+			const ROW_HIDE = "true";
+			const ROW_SHOW = "false";
+			const STORAGE_KEY = 'hide_should_may_tests';
+
+			function row_visibility(current_state) {
+				// Modify the inline text to reflect the visibility status
+				const span = document.getElementById("test_visibility");
+				span.textContent = current_state === ROW_HIDE ? "hidden" : "visible";
+
+				// Collect all relevant `<tr>` elements... 
+				const tr_should = document.querySelectorAll("td.should");
+				const tr_may = document.querySelectorAll("td.may");
+				const tr_all = [...Array.from(tr_should), ...Array.from(tr_may)]
+
+				// ... and change the visibility
+				for (const td of tr_all) {
+					td.parentNode.hidden = (current_state === ROW_HIDE);
+				}
+			}
+
+			// Button clicked: change the status and regenerate the relevant tables
+			function clicked() {
+				let current_state = localStorage.getItem(STORAGE_KEY) === ROW_HIDE ? ROW_SHOW : ROW_HIDE;
+				localStorage.setItem(STORAGE_KEY, current_state);
+				row_visibility(current_state);
+			}
+
+			window.addEventListener('load', () => {
+				// This is the initial setup
+				// At first run the visibility is not yet set, so it must be set to a default.
+				let current_state = localStorage.getItem(STORAGE_KEY);
+				if (current_state === null) {
+					localStorage.setItem(STORAGE_KEY, ROW_SHOW);
+					current_state = ROW_SHOW;
+				} 
+				row_visibility(current_state);
+				
+				const change_button = document.getElementById('should_may_visibility');
+				change_button.addEventListener('click', clicked);
+			});
+		</script>
 	</head>
 	
 	<body>
@@ -75,6 +205,13 @@
 			<p>
 				The report tables also include a separate column (with the heading "Req") providing the conformance level for the feature being tested (i.e., <code>must</code>, <code>should</code>, or <code>may</code>).
 			</p>
+
+			<p>
+				Strictly speaking, the “<code>should</code>” and “<code>may</code>” tests are not necessary for the official CR testing of
+				the specifications. These tests are currently <span id="test_visibility"></span> in the tables below; by pushing the 
+				<button id="should_may_visibility">switch visibility</button> button the visibility of these tests may turned on/off.
+			</p>
+
 
 			<p>
 				The development of the tests is a community effort (see the <a href="./index.html#contributors">list of contributors</a>). Everyone is welcome to
