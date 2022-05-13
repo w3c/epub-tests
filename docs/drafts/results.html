@@ -143,9 +143,7 @@
 				change_button.textContent = current_state === ROW_HIDE ? "show should/may tests" : "hide should/may tests";
 
 				// Collect all relevant `<tr>` elements... 
-				const tr_should = document.querySelectorAll("td.should");
-				const tr_may = document.querySelectorAll("td.may");
-				const tr_all = [...Array.from(tr_should), ...Array.from(tr_may)]
+				const tr_all = document.querySelectorAll("td.should, td.may");
 
 				// ... and change the visibility
 				for (const td of tr_all) {
