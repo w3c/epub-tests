@@ -86,8 +86,22 @@
 				text-align: center;
 			}
 
+			div#button_container {
+				display: flex; 
+				justify-content: center; 
+				align-items: center;				
+			}
 			button#should_may_visibility {
 				cursor: pointer;
+				font-size: 110%;
+				font-style: italic;
+				text-align: center;
+				border-radius: 10px;
+				background-color: hsl(180, 30%, 50%);
+				color: white;
+			}
+			button#should_may_visibility span {
+				font-size: 90%;
 			}
 		</style>
 		<script class="remove">
@@ -140,7 +154,7 @@
 				span.textContent = current_state === ROW_HIDE ? "hidden" : "visible";
 
 				const change_button = document.getElementById('should_may_visibility');
-				change_button.textContent = current_state === ROW_HIDE ? "show should/may tests" : "hide should/may tests";
+				change_button.innerHTML = current_state === ROW_HIDE ? "Show all tests" : "Show only <span>MUST</span> tests";
 
 				// Collect all relevant `<tr>` elements... 
 				const tr_all = document.querySelectorAll("td.should, td.may");
@@ -211,7 +225,7 @@
 				Strictly speaking, the <code>should</code> and <code>may</code> tests are not necessary for the official CR testing of
 				the specifications. 
 				These tests are currently <span id="test_visibility"></span> in the tables below; to change the visibility, click the 
-				<button id="should_may_visibility">switch visibility</button> button.
+				<button id="should_may_visibility">switch visibility</button> button below.
 			</p>
 
 
