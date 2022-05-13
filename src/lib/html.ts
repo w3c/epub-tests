@@ -154,8 +154,20 @@ function create_impl_reports(data: ReportData): string {
  * @returns Serialized XML
  */
 function create_test_data(data: ReportData): string {
+    // Add the button to switch the visibility of should/may tests on and off
+    const add_visibility_button = (parent: HTMLElement): void => {
+        const div = add_child(parent, "div");
+        div.id = "button_container";
+        const button = add_child(div, "button", "Switch visibility");
+        button.id = "should_may_visibility"
+        button.setAttribute("type", "button");
+    };
+    
     const dom: DocumentFragment = JSDOM.fragment('<section id="sec-test-tables"><h2>Description of the Tests</h2></section>');
     const full_section: HTMLElement = dom.querySelector('section');
+
+    // Add the visibility switch button
+    add_visibility_button(full_section);
 
     for (const table of data.tables) {
         // Each table is enclosed in a separate subsection

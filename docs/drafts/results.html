@@ -154,7 +154,9 @@
 				span.textContent = current_state === ROW_HIDE ? "hidden" : "visible";
 
 				const change_button = document.getElementById('should_may_visibility');
-				change_button.innerHTML = current_state === ROW_HIDE ? "Show all tests" : "Show only <span>MUST</span> tests";
+				change_button.innerHTML = current_state === ROW_HIDE ? 
+					"Currently showing the results for <span>MUST</span> tests only; click here to show all test results" : 
+					"Currently showing all test results; click here to show the results for <span>MUST</span> tests only";
 
 				// Collect all relevant `<tr>` elements... 
 				const tr_all = document.querySelectorAll("td.should, td.may");
@@ -223,9 +225,8 @@
 
 			<p>
 				Strictly speaking, the <code>should</code> and <code>may</code> tests are not necessary for the official CR testing of
-				the specifications. 
-				These tests are currently <span id="test_visibility"></span> in the tables below; to change the visibility, click the 
-				<button id="should_may_visibility">switch visibility</button> button below.
+				the specifications. These tests are currently <span id="test_visibility"></span> in the tables below; to change their visibility, click the 
+				switch visibility button below.
 			</p>
 
 
@@ -237,6 +238,16 @@
 		</section>
 
 		<section data-include='fragments/implementations.html' data-include-replace='true'></section>
-		<section data-include='fragments/results.html' data-include-replace='true'></section>
+
+		<section>
+			<h2>Implementations Results</h2>
+
+			<div id="button_container">
+				<button id="should_may_visibility" type="button">switch visibility</button>
+			</div>
+
+			<section data-include='fragments/results.html' data-include-replace='true'></section>
+		</section>
+
 	</body>
 </html>

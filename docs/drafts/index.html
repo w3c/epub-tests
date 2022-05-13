@@ -155,7 +155,9 @@
 				span.textContent = current_state === ROW_HIDE ? "hidden" : "visible";
 				
 				const change_button = document.getElementById('should_may_visibility');
-				change_button.innerHTML = current_state === ROW_HIDE ? "Show all tests" : "Show only <span>MUST</span> tests";
+				change_button.innerHTML = current_state === ROW_HIDE ? 
+					"Currently showing only the <span>MUST</span> tests; click here to show all the tests" : 
+					"Currently showing all the tests; click here to show only the <span>MUST</span> tests";
 
 				// Collect all relevant `<tr>` elements... 
 				const tr_all = document.querySelectorAll("td.should, td.may");
@@ -224,7 +226,7 @@
 
 			<p>
 				Strictly speaking, the <code>should</code> and <code>may</code> tests are not necessary for the official CR testing of
-				the specifications. These tests are currently <span id="test_visibility"></span> in the tables below; to change the visibility, click the 
+				the specifications. These tests are currently <span id="test_visibility"></span> in the tables below; to change their visibility, click the 
 				switch visibility button below.
 			</p>
 		</section>
