@@ -139,6 +139,9 @@
 				const span = document.getElementById("test_visibility");
 				span.textContent = current_state === ROW_HIDE ? "hidden" : "visible";
 
+				const change_button = document.getElementById('should_may_visibility');
+				change_button.textContent = current_state === ROW_HIDE ? "show should/may tests" : "hide should/may tests";
+
 				// Collect all relevant `<tr>` elements... 
 				const tr_should = document.querySelectorAll("td.should");
 				const tr_may = document.querySelectorAll("td.may");
