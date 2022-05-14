@@ -2,8 +2,10 @@
     "name": "(Implementation's name)",
     "ref": "https://www.example.com",
     "tests": {
+        "cnt-css-fonts": null,
         "cnt-css-support": null,
         "cnt-mathml-support": null,
+        "cnt-svg-css": null,
         "cnt-svg-css-inclusion": null,
         "cnt-svg-css-reference": null,
         "cnt-svg-embedded": null,
