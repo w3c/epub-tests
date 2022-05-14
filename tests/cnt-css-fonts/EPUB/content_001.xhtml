@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>CSS support for font resources</title>
+    <style>
+    @font-face {
+      font-family: 'Macondo';
+      src: url(fonts/Macondo.woff2) format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Lobster';
+      src: url(fonts/Lobster.ttf) format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Franky Toys';
+      src: url(fonts/FrankyToys.otf) format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Pacifico';
+      src: url(fonts/Pacifico.woff) format('woff');
+    }
+
+    .font-opentype {
+      font-family: 'Franky Toys';
+    }
+
+    .font-truetype {
+      font-family: 'Lobster';
+    }
+
+    .font-woff {
+      font-family: 'Pacifico';
+    }
+
+    .font-woff2 {
+      font-family: 'Macondo';
+    }
+    </style>
+  </head>
+  <body>
+    <p>Test passes if all four list items below are rendered in unusual fonts.</p>
+    <ol>
+      <li class="font-opentype">This should be an unusual OpenType font.</li>
+      <li class="font-truetype">This should be an unusual TrueType font.</li>
+      <li class="font-woff">This should be an unusual WOFF font.</li>
+      <li class="font-woff2">This should be an unusual WOFF2 font.</li>
+    </ol>
+  </body>
+</html>
