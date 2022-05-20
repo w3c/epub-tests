@@ -82,9 +82,8 @@ This page explains how to write new tests.
    not to meet requirements, but if you cannot find *any* reading system that processes the test as expected, that may
    indicate an implementation mistake in the test. Fix as necessary.
 
-1. Run the EPUB through the online [EPUB Validator](http://validator.idpf.org/) or the
-   [EPUBCheck](https://www.w3.org/publishing/epubcheck/) command-line tool to ensure you didn't make any silly mistakes. Fix
-   if you did.
+1. Run the EPUB through [EPUBCheck](https://www.w3.org/publishing/epubcheck/) to ensure you didn't make any silly mistakes.
+   Fix if you did.
 
 1. Create a pull request for your test change, including both the uncompressed folder and the compressed EPUB file. Please
    ensure the PR's description clearly indicates which statement is being tested. Await review.
