@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf"
+    xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+        <dc:coverage>Media Overlays</dc:coverage>
+        <dc:creator>Marisa DeMeglio</dc:creator>
+        <dc:date>2022-02-10</dc:date>
+        <dc:description>When navigating to another page, the media overlay playback position updates accordingly.</dc:description>
+        <dc:identifier id="pub-id">mol-navigation</dc:identifier>
+        <dc:language>en</dc:language>
+        <dc:title>Navigation with media overlays</dc:title>
+        <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+        <meta property="belongs-to-collection">should</meta>
+        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-rsconf-navigation</meta>
+        <meta property="dcterms:modified">2022-02-21T00:00:00Z</meta>
+        <meta property="media:duration" refines="#smil-1">00:00:29.218</meta>
+        <meta property="media:duration" refines="#smil-2">00:00:07.048</meta>
+        <meta property="media:duration">00:00:36.266</meta>
+        <meta property="media:active-class">my-active-item</meta>
+        <meta property="media:playback-active-class">my-document-playing</meta>
+    </metadata>
+
+    <manifest>
+
+        <item href="nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+        <item id="xhtml-001" href="ch1.xhtml" media-type="application/xhtml+xml" media-overlay="smil-1"/>
+        <item id="xhtml-002" href="ch2.xhtml" media-type="application/xhtml+xml" media-overlay="smil-2"/>
+        <item href="css/base.css" media-type="text/css" id="css"/>
+
+        <item id="aud-1" href="audio/ch1.mp3" media-type="audio/mpeg"/>
+        <item id="aud-2" href="audio/ch2.mp3" media-type="audio/mpeg"/>
+
+        <item id="smil-1" href="mo/ch1.smil" media-type="application/smil+xml"/>
+        <item id="smil-2" href="mo/ch2.smil" media-type="application/smil+xml"/>
+    </manifest>
+    <spine>
+        <itemref idref="xhtml-001"/>
+        <itemref idref="xhtml-002"/>
+    </spine>
+</package>
