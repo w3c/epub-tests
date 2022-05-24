@@ -1,16 +1,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta charset="utf-8"/>
-        <title>EPUB Media Overlays Tests: Rendering Audio</title>
-        <link rel="stylesheet" type="text/css" href="css/base.css"/>
-    </head>
-    <body id="body">
-        <h1>EPUB Media Overlays Tests: Rendering Audio</h1>
-        <p>Each sentence below should play in full when this page is played.</p>
-        <ul>
-            <li id="mo-1">If clipBegin is not specified, its value is assumed to be 0.</li>
-            <li id="mo-2">If clipEnd is not specified, its value is assumed to be the full duration of the physical media.</li>
-            <li id="mo-3">If clipEnd exceeds the full duration of the physical media, then its value is assumed to be the full duration of the physical media.</li>
-        </ul>
-    </body>
+  <head>
+    <title>Media overlays render audio</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+  </head>
+  <body id="body">
+    <h1>Media overlays render audio</h1>
+    <p>The test passes if the audio for each sentence below plays in full. Otherwise, it fails.</p>
+    <ul>
+      <li id="mo-1">If clipBegin is not specified, its value is assumed to be 0.</li>
+      <li id="mo-2">If clipEnd is not specified, its value is assumed to be the full duration of the physical media.</li>
+      <li id="mo-3">If clipEnd exceeds the full duration of the physical media, then its value is assumed to be the full
+      duration of the physical media.</li>
+    </ul>
+  </body>
 </html>

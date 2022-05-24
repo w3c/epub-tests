@@ -1,12 +1,11 @@
-@charset "utf-8";
-
-/*for the active element*/
+/* for the active element */
 .my-active-item {
-    background-color: pink !important;
-    color: black !important;
+  background-color: pink !important;
+  color: black !important;
 }
-/*for the currently-playing document*/
+
+/* for the currently playing document */
 .my-document-playing {
-    background-color: green !important;
-    color: white !important;
+  background-color: green !important;
+  color: white !important;
 }
