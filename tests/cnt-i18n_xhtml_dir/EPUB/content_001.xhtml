@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" dir="rtl">
+  <head>
+    <title>Processing the 'dir' attribute in XHTML content</title>
+  </head>
+  <body>
+    <div dir="ltr">
+      <p>Test passes if:</p>
+      <ul>
+        <li>the numbered list below is adjusted to the right edge of the screen</li>
+        <li>the numbering of the items are on the right of the corresponding texts</li>
+        <li>the item with the ABC is rendered "backwards", i.e., as "zyxwv…"</li>
+      </ul>
+    </div>
+
+    <ol>
+      <li>lorem ipsum dolor sit amet</li>
+      <li>consectetur adipiscing elit</li>
+      <li><bdo dir="rtl">abcdefghijklmnopqrstuvwxyz</bdo></li>
+    </ol>
+
+  </body>
+</html>

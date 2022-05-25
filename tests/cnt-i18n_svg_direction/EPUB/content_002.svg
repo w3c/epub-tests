@@ -1,0 +1,10 @@
+<svg viewBox="0 0 600 72" xmlns="http://www.w3.org/2000/svg" lang="fa" direction="rtl">
+  <!-- There is a bug in the SVG spec, see 
+    See https://github.com/w3c/svgwg/issues/884 and https://github.com/w3c/epubcheck/issues/1334
+
+    As a consequence epubcheck leads to an error for thus file, which should 
+   -->
+  <title lang="en" direction="ltr">Processing the 'direction' attribute in SVG content</title>
+  <desc lang="en" direction="ltr">A farsi text, with a mixed set of arabic and latin characters, and whose proper rendering depends on the setting of the 'direction' attribute in the SVG content.</desc>
+  <text x="300" y="50" text-anchor="middle" font-size="36">داستان SVG 1.1 SE طولا ني است.</text>
+</svg>
