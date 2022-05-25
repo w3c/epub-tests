@@ -1,0 +1,16 @@
+<smil xmlns:epub="http://www.idpf.org/2007/ops" xmlns="http://www.w3.org/ns/SMIL" version="3.0">
+  <body epub:textref="../clip_times_tests.xhtml#body">
+      <par>
+        <text src="../clip_times_tests.xhtml#mo-1"/>
+        <audio src="../audio/clip_times_tests1A.mp3" clipEnd="00:00:04.548"/>
+      </par>
+      <par>
+        <text src="../clip_times_tests.xhtml#mo-2"/>
+        <audio src="../audio/clip_times_tests2A.mp3" clipBegin="00:00:00.000"/>
+      </par>
+      <par>
+        <text src="../clip_times_tests.xhtml#mo-3"/>
+        <audio src="../audio/clip_times_tests3A.mp3" clipBegin="00:00:00.000" clipEnd="00:01:00.000"/>
+      </par>
+  </body>
+</smil>
