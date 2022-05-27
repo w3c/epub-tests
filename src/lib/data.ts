@@ -231,13 +231,69 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
 
 
 /**
+ * Combine the metadata, as retrieved from the tests, and the implementation reports into 
+ * one structure for each tests with the test run results included
+ * 
+ */
+function create_implementation_data(metadata: TestData[], implementations: ImplementationReport[]): ImplementationData[] {
+    return metadata.map((single_test: TestData): ImplementationData => {
+        // Extend the object with, at first, an empty array of implementations
+        const retval: ImplementationData = {...single_test, implementations: []};
+        retval.implementations = implementations.map((implementor: ImplementationReport) => {
+            if (single_test.identifier in implementor.tests) {
+                return implementor.tests[single_test.identifier]
+            } else {
+                return undefined
+            }
+        });
+        return retval;
+    })
+}
+
+
+/**
+ * Create Implementation tables: a separate list of implementations for each "section", ie, a collection of tests
+ * that share the same `dc:coverage` data
+ * 
+ */
+function create_implementation_tables(implementation_data: ImplementationData[]): ImplementationTable[] {
+    const retval: ImplementationTable[] = [];
+
+    for (const impl_data of implementation_data) {
+        const header = impl_data.coverage;
+        let section = retval.find((table) => table.header === header);
+        if (section === undefined) {
+            section = {
+                header          : header,
+                implementations : [impl_data],
+            }
+            retval.push(section)
+        } else {
+            section.implementations.push(impl_data)
+        }
+    }
+
+    // Sort the results per section heading
+    // Note that this sounds like unnecessary, because, at a later step, the sections are reordered
+    // per the configuration file. But this is a safety measure: if the configuration file is
+    // not available and/or erroneous, the order is still somewhat deterministic.
+    retval.sort((a,b) => string_comparison(a.header, b.header));
+    return retval;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/*                                   External entry points                                                */
+/* ------------------------------------------------------------------------------------------------------ */
+
+/**
  * Extract all the test information from all available tests.
  * 
  * @param dir_name test directory name
  * @returns EPUB metadata converted into the [[TestData]] structure
  */
 // eslint-disable-next-line max-lines-per-function
-async function get_test_metadata(dir_name: string): Promise<TestData[]> {
+export async function get_test_metadata(dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
     const get_single_test_metadata = async (file_name: string): Promise<TestData> => {
         // Note the heavy use of "any" in the function; this is related to the fact that
@@ -317,7 +373,8 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             normalizeTags : true,
             explicitArray : true,
         });
-        const test_metadata = package_js.package.metadata[0]
+        const test_metadata = package_js.package.metadata[0];
+        const modification_date = get_single_meta_value("dcterms:modified", test_metadata);
         
         return {
             identifier  : get_string_value("dc:identifier", file_name.split('/').pop(), test_metadata),
@@ -326,6 +383,7 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
             coverage    : get_string_value("dc:coverage", "(Uncategorized)", test_metadata),
             creators    : get_array_of_string_values("dc:creator", "(Unknown)", test_metadata),
             required    : get_required(test_metadata),
+            modified    : modification_date === undefined ? "(Unknown)" : modification_date._,
             references  : get_array_of_meta_values("dcterms:isReferencedBy", test_metadata).map((entry:any): string => entry._),
         }
     }
@@ -341,69 +399,13 @@ async function get_test_metadata(dir_name: string): Promise<TestData[]> {
 
 
 /**
- * Combine the metadata, as retrieved from the tests, and the implementation reports into 
- * one structure for each tests with the test run results included
- * 
- */
-function create_implementation_data(metadata: TestData[], implementations: ImplementationReport[]): ImplementationData[] {
-    return metadata.map((single_test: TestData): ImplementationData => {
-        // Extend the object with, at first, an empty array of implementations
-        const retval: ImplementationData = {...single_test, implementations: []};
-        retval.implementations = implementations.map((implementor: ImplementationReport) => {
-            if (single_test.identifier in implementor.tests) {
-                return implementor.tests[single_test.identifier]
-            } else {
-                return undefined
-            }
-        });
-        return retval;
-    })
-}
-
-
-/**
- * Create Implementation tables: a separate list of implementations for each "section", ie, a collection of tests
- * that share the same `dc:coverage` data
- * 
- */
-function create_implementation_tables(implementation_data: ImplementationData[]): ImplementationTable[] {
-    const retval: ImplementationTable[] = [];
-
-    for (const impl_data of implementation_data) {
-        const header = impl_data.coverage;
-        let section = retval.find((table) => table.header === header);
-        if (section === undefined) {
-            section = {
-                header          : header,
-                implementations : [impl_data],
-            }
-            retval.push(section)
-        } else {
-            section.implementations.push(impl_data)
-        }
-    }
-
-    // Sort the results per section heading
-    // Note that this sounds like unnecessary, because, at a later step, the sections are reordered
-    // per the configuration file. But this is a safety measure: if the configuration file is
-    // not available and/or erroneous, the order is still somewhat deterministic.
-    retval.sort((a,b) => string_comparison(a.header, b.header));
-    return retval;
-}
-
-
-/* ------------------------------------------------------------------------------------------------------ */
-/*                                   External entry points                                                */
-/* ------------------------------------------------------------------------------------------------------ */
-
-/**
  * Get all the test reports and tests files metadata and create the data structures that allow a simple
  * generation of a final report
  * 
- * @param tests directory where the tests reside
+ * @param test_data all the metadata for all tests
  * @param reports directory where the implementation reports reside
  */
-export async function get_report_data(tests: string, reports: string): Promise<ReportData> {
+export async function get_report_data(test_data: TestData[], reports: string): Promise<ReportData> {
     const sort_test_data = (all_tests: TestData[]): TestData[] => {
         const required_tests: TestData[] = [];
         const optional_tests: TestData[] = [];
@@ -434,8 +436,8 @@ export async function get_report_data(tests: string, reports: string): Promise<R
         ]
     }
 
-    // Get the metadata for all available tests;
-    const metadata: TestData[] = sort_test_data(await get_test_metadata(tests));
+    // Sort the metadata for all available tests. including the separation of must/should/may tests;
+    const metadata: TestData[] = sort_test_data(test_data);
 
     // Get the list of available implementation reports
     const impl_list: ImplementationReport[] = await get_implementation_reports(reports);

@@ -21,6 +21,9 @@ export namespace Constants {
     /** Base URL for the tests in the repository */
     export const TEST_URL_BASE: string = 'https://github.com/w3c/epub-tests/tree/main/tests';
 
+    /** Base URL for the test epub file, accessible via github.io */
+    export const TEST_DOWNLOAD_URL_BASE: string = 'https://github.com/w3c/epub-tests/raw/main/tests';
+
     /** Location of the container file within the test directory */
     export const CONTAINER_FILE: string = 'META-INF/container.xml';
 
@@ -112,6 +115,10 @@ export interface TestData {
      * This is a series of URL strings, referring to the section in the spec this test is pertinent to.
      */
     references: string[];
+    /**
+     * The value of the 'modified' string from the package file
+     */
+    modified: string;
     /**
      * Whether this test corresponds to a _MUST_, _SHOULD_, or _MAY_ statement
      */
