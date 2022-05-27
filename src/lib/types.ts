@@ -15,6 +15,20 @@ export namespace Constants {
     /** Location for the final report */
     export const DOCS_DIR: string = 'docs/drafts';
 
+    /** Relative location for the final OPDS data */
+    export const OPDS_DIR: string = 'docs/opds';
+
+    export const OPDS_DIR_URL: string = 'https://w3c.github.io/epub-tests/opds';
+
+    /** (Relative) File name of the OPDS file */
+    export const DOC_OPDS: string = 'opds.json';
+
+    /** (Relative) File name of the OPDS file */
+    export const DOC_OPDS_COVER_PNG: string = 'test_cover.png';
+
+    /** (Relative) File name of the OPDS file */
+    export const DOC_OPDS_COVER_SVG: string = 'test_cover.svg';
+
     /** Location for the implementation report templates */
     export const TEST_RESULTS_TEMPLATE: string = `${TEST_RESULTS_DIR}/xx-template.json`;
 

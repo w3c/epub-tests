@@ -32,8 +32,6 @@ async function main() {
     const final_report_data = apply_configuration_options(report_data);
     const {implementations, results, tests, creators} = create_report(final_report_data);
     const opds_data = create_opds(test_data);
-
-    console.log(JSON.stringify(opds_data, null, 4));
     
     await Promise.all([
         fs.writeFile(Constants.IMPL_FRAGMENT, implementations, 'utf-8'),
@@ -41,6 +39,7 @@ async function main() {
         fs.writeFile(Constants.TEST_FRAGMENT, tests, 'utf-8'),
         fs.writeFile(Constants.CREATORS_FRAGMENT, creators, 'utf-8'),
         fs.writeFile(Constants.TEST_RESULTS_TEMPLATE, JSON.stringify(template, null, 4)),
+        fs.writeFile(`${Constants.OPDS_DIR}/${Constants.DOC_OPDS}`, JSON.stringify(opds_data, null, 4)),
         adjust_date(`${Constants.DOCS_DIR}/${Constants.DOC_TEST_RESULTS}`),
         adjust_date(`${Constants.DOCS_DIR}/${Constants.DOC_TEST_DESCRIPTIONS}`),
     ]);

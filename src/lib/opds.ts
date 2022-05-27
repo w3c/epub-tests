@@ -32,8 +32,8 @@ interface PublicationLink {
 interface ImageLink {
     type: string;
     href: string;
-    height: number;
-    width: number;
+    height?: number;
+    width?: number;
 }
 
 interface Publication {
@@ -46,6 +46,7 @@ export interface OPDS {
     metadata: {
         title: string;
     };
+    links : PublicationLink[];
     publications: Publication[];
 }
 
@@ -53,20 +54,23 @@ export function create_opds(tests: TestData[]): OPDS {
 
     /** All cover images are identical */
     const images: ImageLink[] = [{
-        href   : "https://w3c.github.io/epub-tests/opds/test_cover.png",
-        type   : "image/png",
+        href   : `${Constants.OPDS_DIR_URL}/${Constants.DOC_OPDS_COVER_PNG}`,
+        type   : 'image/png',
         height : 849,
         width  : 600,
+    },{
+        href : `${Constants.OPDS_DIR_URL}/${Constants.DOC_OPDS_COVER_SVG}`,
+        type : 'image/svg',
     }]
 
     const publications = tests.map((test: TestData): Publication => {
         const links: PublicationLink[] = [{
-            type : "application/epub+zip",
-            rel  : "http://opds-spec.org/acquisition/open-access",
+            type : `${Constants.EPUB_MEDIA_TYPE}`,
+            rel  : 'http://opds-spec.org/acquisition/open-access',
             href : `${Constants.TEST_DOWNLOAD_URL_BASE}/${test.identifier}.epub`,
         }]
         const metadata: PublicationMetadata = {
-            "@type"     : "http://schema.org/Book",
+            "@type"     : 'http://schema.org/Book',
             identifier  : `${Constants.TEST_URL_BASE}/${test.identifier}`,
             title       : test.title,
             author      : test.creators.length === 1 ? test.creators[0] : test.creators,
@@ -85,8 +89,15 @@ export function create_opds(tests: TestData[]): OPDS {
 
     return {
         metadata : {
-            title : "W3C EPUB 3.3 Test Suite",
+            title : 'W3C EPUB 3.3 Test Suite',
         },
+        links : [
+            {
+                href : `${Constants.OPDS_DIR_URL}/${Constants.DOC_OPDS}`,
+                type : 'application/opds+json',
+                rel  : 'self',
+            },
+        ],
         publications,
     }
 }
