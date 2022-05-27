@@ -12,7 +12,6 @@
     <dc:title>Navigation with media overlays</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="belongs-to-collection">should</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-navigation</meta>
     <meta property="dcterms:modified">2022-02-21T00:00:00Z</meta>
     <meta property="media:duration" refines="#smil-1">00:00:29.218</meta>
