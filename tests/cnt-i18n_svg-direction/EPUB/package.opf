@@ -5,7 +5,7 @@
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2022-05-25</dc:date>
     <dc:description>The SVG content document's text direction is set to 'rtl' using the 'direction' attribute; the rendering should reflect this setting.</dc:description>
-    <dc:identifier id="pub-id">cnt-i18n_svg_direction</dc:identifier>
+    <dc:identifier id="pub-id">cnt-i18n_svg-direction</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Processing the 'direction' attribute in SVG content</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>

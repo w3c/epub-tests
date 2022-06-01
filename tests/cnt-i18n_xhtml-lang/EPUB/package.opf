@@ -7,7 +7,7 @@
     <dc:description xml:lang="en">
       The content document's language is set to 'fr' using the 'lang' attribute; the rendering should reflect this setting.
     </dc:description>
-    <dc:identifier id="pub-id">cnt-i18n_xhtml_lang</dc:identifier>
+    <dc:identifier id="pub-id">cnt-i18n_xhtml-lang</dc:identifier>
     <dc:language>en</dc:language>
     <dc:title>Processing the 'lang' attribute in XHTML content</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
