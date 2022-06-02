@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<script>
+			/**
+			 * A simple change that proves that scripting is enabled.
+			 * 
+			 */ 
+			function test() {
+			  const div_no_scripting = document.getElementById('no_scripting');
+			  div_no_scripting.style.display = 'none';
+			  const div_scripting = document.getElementById('scripting');
+			  div_scripting.style.display = 'block';
+			}
+			window.addEventListener('load', test);
+		</script>
+		<title>rendition:flow set to scrolled-doc when scripting is supported</title>
+	</head>
+	<body>
+		<section id="flow-015">
+			<h2>Scrolled Flow</h2>
+			<div id="no_scripting" style="display: block">
+				<p>This reading system does not support scripting. The test is not relevant, and can be marked as "null" in the report</p>
+			</div>
+			<div id="scripting" style="display: none">
+				<p>
+					Tests whether setting the global <code>rendition:flow</code> property to <code>scrolled-continuous</code> results in
+					scrollable publication in the case when scripted is supported by the reading system. 
+					The test passes if the publication is presented as one continuous scroll from spine item to spine item.
+				</p>
+				<p>
+					<em>
+						Note: Some reading systems allow readers to manually change the flow (e.g., from dynamically
+							paginated to scrolled). Do <strong>not</strong> use these settings for this test. To pass, the reading system must adapt to the specified flow.
+					</em>
+				</p>	
+			</div>
+
+		</section>
+	</body>
+</html>
