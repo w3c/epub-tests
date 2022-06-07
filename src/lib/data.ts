@@ -293,9 +293,9 @@ function create_implementation_tables(implementation_data: ImplementationData[])
  * @returns EPUB metadata converted into the [[TestData]] structure
  */
 // eslint-disable-next-line max-lines-per-function
-export async function get_test_metadata(dir_name: string): Promise<TestData[]> {
+export async function get_test_data(dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
-    const get_single_test_metadata = async (file_name: string): Promise<TestData> => {
+    const get_single_test_data = async (file_name: string): Promise<TestData> => {
         // Note the heavy use of "any" in the function; this is related to the fact that
         // the xmljs package returns a pretty "unpredictable" object...
         // As a consequence, this function bypasses most of TypeScript's checks. Alas!
@@ -390,7 +390,7 @@ export async function get_test_metadata(dir_name: string): Promise<TestData[]> {
 
     // Get the test descriptions
     const test_list = await get_list_dir(dir_name, isDirectory);
-    const test_data_promises: Promise<TestData>[] = test_list.map((name: string) => get_single_test_metadata(`${dir_name}/${name}`));
+    const test_data_promises: Promise<TestData>[] = test_list.map((name: string) => get_single_test_data(`${dir_name}/${name}`));
     
     // Use the 'Promise.all' trick to get to all the data in one async step rather than going through a cycle
     const test_data: TestData[] = await Promise.all(test_data_promises);
