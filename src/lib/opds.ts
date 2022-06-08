@@ -20,7 +20,8 @@ interface PublicationMetadata {
     description: string;
     collection: string;
     modified: string;
-    publisher: string
+    publisher: string;
+    subject: string | string[];
 }
 
 interface PublicationLink {
@@ -78,6 +79,7 @@ export function create_opds(tests: TestData[]): OPDS {
             collection  : test.coverage,
             modified    : test.modified,
             publisher   : 'W3C',
+            subject     : ['epub-test'],
         };
 
         return {
