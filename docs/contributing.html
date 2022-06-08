@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Contributing to EPUB Testing</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <style>
+      .todo {
+        background-color: yellow;
+        color: #900;
+      }
+      .todo::before {
+        content: "(still to be done)";
+      }
+        /* Table zebra style... */
+
+        table {
+            font-size:inherit;
+            font:90%;
+            margin:1em;
+        }
+
+        table td {
+            padding-left: 0.3em;
+        }
+
+        table th {
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(0,0,128) !important;
+            font-size: 110%;
+            background: hsl(180, 30%, 50%);
+            color: #fff;
+        }
+
+        table th a:link {
+          color: #fff;
+        }
+
+        table th a:visited {
+          color: #aaa;
+        }
+
+        table tr:nth-child(even) {
+            background-color: hsl(180, 30%, 93%) !important;
+        }
+
+        table th{border-bottom:1px solid #bbb;padding:.2em 1em;}
+        table td{border-bottom:1px solid #ddd;padding:.2em 1em;}
+    </style>
+    <script class="remove">
+        var respecConfig = {
+            specStatus: "base",
+            latestVersion: "https://w3c.github.io/epub-tests/contributing.html",
+            noRecTrack: true,
+            editors:[
+                {
+                    name: "Ivan Herman",
+                    url: "https://www.w3.org/People/Ivan/",
+                    company: "W3C",
+                    w3cid: 7382,
+                    orcid: "0000-0003-0782-2704",
+                    companyURL: "https://www.w3.org",
+                },
+                {
+                    name: "Dan Lazin",
+                    company: "Google LLC",
+                    w3cid: 130027,
+                    companyURL: "https://www.google.com",
+                }
+            ],
+            github: {
+					repoURL: "https://github.com/w3c/epub-tests",
+					branch: "main"
+			},
+            shortName: "contributing"
+        };
+    </script>
+</head>
+
+<body>
+    <section id="abstract">
+        <p>
+            This document provides information on how to write EPUB 3.3 tests, as well as how to run the tests in a reading system and producing an implementation report.
+    </section>
+    <section id="sotd">
+    </section>
+
+    <div data-include="contributing.md" data-include-format="markdown" data-include-replace="true"></div>
+
+</body>
+</html>
