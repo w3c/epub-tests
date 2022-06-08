@@ -19,7 +19,10 @@
                 "description": "TrueType, OpenType, WOFF, and WOFF2 font resources are referenced from @font-face rules.",
                 "collection": "Content Documents",
                 "modified": "2022-05-13T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -50,7 +53,10 @@
                 "description": "The Acid2 test, ported from acid2.acidtests.org, demonstrates broad CSS support.",
                 "collection": "Content Documents",
                 "modified": "2021-01-07T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -81,7 +87,10 @@
                 "description": "A Presentation MathML equation is displayed as part of the XHTML content.",
                 "collection": "Content Documents",
                 "modified": "2021-05-26T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -112,7 +121,10 @@
                 "description": "CSS styling is applied to an SVG content document.",
                 "collection": "Content Documents",
                 "modified": "2022-05-13T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -143,7 +155,10 @@
                 "description": "CSS changes the color of an SVG image that is embedded in the XHTML content by inclusion.",
                 "collection": "Content Documents",
                 "modified": "2021-05-25T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -174,7 +189,10 @@
                 "description": "CSS does not change the color of an SVG image that is embedded in the XHTML content by reference.",
                 "collection": "Content Documents",
                 "modified": "2021-05-25T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -205,7 +223,10 @@
                 "description": "An SVG image is embedded in the XHTML content (as inline SVG).",
                 "collection": "Content Documents",
                 "modified": "2021-05-25T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -236,7 +257,10 @@
                 "description": "An SVG image is displayed as a content document (not as part of an XHTML file).",
                 "collection": "Content Documents",
                 "modified": "2021-05-26T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -267,7 +291,10 @@
                 "description": "An XHTML file is displayed as a content document.",
                 "collection": "Content Documents",
                 "modified": "2021-05-26T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -298,7 +325,10 @@
                 "description": "Tests for the prefixed CSS property -epub-hyphens",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -329,7 +359,10 @@
                 "description": "Tests for the prefixed CSS property -epub-line-break",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -360,7 +393,10 @@
                 "description": "Tests for the prefixed CSS property -epub-text-align-last",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -391,7 +427,10 @@
                 "description": "Tests for the prefixed CSS property -epub-text-combine-horizontal",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -422,7 +461,10 @@
                 "description": "Tests for the prefixed CSS properties -epub-text-emphasis-color, -position, and -style",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -453,7 +495,10 @@
                 "description": "Tests for the prefixed CSS property -epub-text-orientation",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -484,7 +529,10 @@
                 "description": "Tests for the prefixed CSS value -epub-fullwidth",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -515,7 +563,10 @@
                 "description": "Tests for the prefixed CSS properties -epub-text-underline-position",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -546,7 +597,10 @@
                 "description": "Tests for the prefixed CSS property -epub-word-break",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -577,7 +631,10 @@
                 "description": "Tests for the prefixed CSS property -epub-writing-mode",
                 "collection": "Content Documents",
                 "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -608,7 +665,10 @@
                 "description": "When rendition:layout is duplicated, EPUBCheck must return an error.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -639,7 +699,10 @@
                 "description": "When rendition:layout is pre-paginated, reading systems must display one page per spine item.",
                 "collection": "Fixed Layout",
                 "modified": "2021-09-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -670,7 +733,10 @@
                 "description": "When the layout is pre-paginated, pages are displayed with no gaps when in synthetic spreads.",
                 "collection": "Fixed Layout",
                 "modified": "2021-09-22T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -701,7 +767,10 @@
                 "description": "rendition:orientation is not specified. Therefore, it has the value \"auto\" and reading systems should display the EPUB in the orientation of the device.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -732,7 +801,10 @@
                 "description": "rendition:orientation is specified twice. EPUBCheck should produce an error.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -763,7 +835,10 @@
                 "description": "rendition:orientation is landscape, Reading Systems should either display the content in landscape or inform the user it should be.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -794,7 +869,10 @@
                 "description": "When rendition:page-spread-center is applied to a spine item, the document should be displayed in the center of the screen and not in a synthetic spread.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -825,7 +903,10 @@
                 "description": "When rendition:page-spread-right and -left are applied to adjacent spine items, they should be displayed in a synthetic spread.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -856,7 +937,10 @@
                 "description": "When rendition:page-spread-left is applied to a spine item, it should be displayed on the left side of the synthetic spread.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -887,7 +971,10 @@
                 "description": "When rendition:page-spread-right is applied to a spine item, it should be displayed on the right side of the synthetic spread.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -918,7 +1005,10 @@
                 "description": "When rendition:spread is \"auto\", the reading system can choose to display spine items in a synthetic spread.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -949,7 +1039,10 @@
                 "description": "When rendition:spread is \"both\", the content should appear in a synthetic spread regardless of reading system orientation.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -980,7 +1073,10 @@
                 "description": "The default value for rendition:spread should be \"auto\" if not specified. When rendition:spread is \"auto\", the reading system can choose to display spine items in a synthetic spread.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1011,7 +1107,10 @@
                 "description": "If rendition:spread is \"landscape\", synthetic spreads should be rendered only when the reading system is in landscape orientation.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1042,7 +1141,10 @@
                 "description": "When rendition:spead is \"none\", spine items must not appear in synthetic spreads.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1073,7 +1175,10 @@
                 "description": "XHTML content outside the initial containing block (ICB) is clipped.",
                 "collection": "Fixed Layout",
                 "modified": "2021-01-27T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1104,7 +1209,10 @@
                 "description": "Tests whether the Reading System obeys the clipBegin and clipEnd attributes.",
                 "collection": "Media Overlays",
                 "modified": "2022-05-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1138,7 +1246,10 @@
                 "description": "Tests whether the Reading System ignores the clipEnd attribute in the smil file's par element if it exceeds the length of the audio file.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-14T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1172,7 +1283,10 @@
                 "description": "Tests whether the Reading System starts at the beginning of the audio track in the absence of a clipBegin attribute in the smil file.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1206,7 +1320,10 @@
                 "description": "Tests whether the Reading System plays until the end of the audio track in the absence of a clipEnd attribute in the smil file.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1240,7 +1357,10 @@
                 "description": "Tests whether the Reading System implements the associated CSS styling for media overlays.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1271,7 +1391,10 @@
                 "description": "Tests whether the reading system implements the control of embedded videos via media overlay.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1302,7 +1425,10 @@
                 "description": "Tests whether the reading system implements the control of embedded videos via media overlay. The playback control of the videos are deactivated.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1333,7 +1459,10 @@
                 "description": "Tests whether the reading system implements embedded video in media overlays in a fixed layout publication.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1364,7 +1493,10 @@
                 "description": "When navigating to another page, the media overlay playback position updates accordingly.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1398,7 +1530,10 @@
                 "description": "Tests whether the Reading System implements media overlays.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1433,7 +1568,10 @@
                 "description": "Tests whether the Reading System implements media overlays in fixed layout publications.",
                 "collection": "Fixed Layout",
                 "modified": "2022-02-11T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1467,7 +1605,10 @@
                 "description": "Tests whether the Reading System implements media overlays with a SMIL file referring to two audio files.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-14T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1501,7 +1642,10 @@
                 "description": "Basic media overlay test in SVG content with CSS styling.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1532,7 +1676,10 @@
                 "description": "Tests whether the reading system implements Text-to-Speech as a fallback when no audio content is provided. Several fragments are defined in the SMIL file.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-17T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1563,7 +1710,10 @@
                 "description": "Tests whether the reading rystem implements text-to-speech as a fallback when no audio content is provided. Only one fragment is defined in the SMIL file.",
                 "collection": "Media Overlays",
                 "modified": "2022-02-17T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1594,7 +1744,10 @@
                 "description": "The navigation document contains a single link and can be accessed through reading system controls.",
                 "collection": "Navigation Documents",
                 "modified": "2021-11-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1625,7 +1778,10 @@
                 "description": "Activating a link in the navigation document relocates the reading position to the target of the link.",
                 "collection": "Navigation Documents",
                 "modified": "2021-01-26T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1656,7 +1812,10 @@
                 "description": "The navigation document is referenced in the spine and can be accessed through reading system controls.",
                 "collection": "Navigation Documents",
                 "modified": "2021-01-26T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1687,7 +1846,10 @@
                 "description": "The reading system's rendering of the navigation must not show numbering, disregarding the list-style-type declared in the navigation document.",
                 "collection": "Navigation Documents",
                 "modified": "2022-01-25T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1718,7 +1880,10 @@
                 "description": "The navigation document is not referenced in the spine, but can still be accessed through reading system controls.",
                 "collection": "Navigation Documents",
                 "modified": "2021-01-26T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1749,7 +1914,10 @@
                 "description": "The EPUB contains three valid package files and three corresponding sets of content documents, but only one of the packages, in an unusual subdirectory, is referenced by the container.xml file. The reading system must use this package.",
                 "collection": "Open Container Format",
                 "modified": "2021-01-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1780,7 +1948,10 @@
                 "description": "The EPUB contains three valid package files and three corresponding sets of content documents, all referenced by the container.xml file. The reading system must use the first package.",
                 "collection": "Open Container Format",
                 "modified": "2021-01-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1811,7 +1982,10 @@
                 "description": "Use a relative link with several double-dot path segments from the content to a photograph. The folder hierarchy containing the photograph starts at the root level; the relative image reference exceeds depth of hierarchy.",
                 "collection": "Open Container Format",
                 "modified": "2022-03-06T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1842,7 +2016,10 @@
                 "description": "Use a path-absolute link, i.e., beginning with a leading slash, from the content to a photograph. The folder hierarchy containing the photograph starts at the root level.",
                 "collection": "Open Container Format",
                 "modified": "2022-03-06T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1873,7 +2050,10 @@
                 "description": "A simple relative link from the content to a photograph. The folder hierarchy containing the photograph starts at the root level.",
                 "collection": "Open Container Format",
                 "modified": "2022-03-06T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1904,7 +2084,10 @@
                 "description": "The manifest refers to an XHTML file in an arbitrary subfolder. The reading system must be able to find the content.",
                 "collection": "Open Container Format",
                 "modified": "2021-01-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1935,7 +2118,10 @@
                 "description": "The origin value is displayed. The origin must be unique for each user-specific instance of the publication.",
                 "collection": "Open Container Format",
                 "modified": "2021-03-05T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1966,7 +2152,10 @@
                 "description": "Parse, in Javascript, a relative link with several double-dot path segments from the content to a photograph. The folder hierarchy containing the photograph starts at the root level; the number of segments exceeds the depth of the folder hierarchy.",
                 "collection": "Open Container Format",
                 "modified": "2021-03-05T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -1997,7 +2186,10 @@
                 "description": "Parse, in Javascript, a path-absolute URL, i.e., beginning with a leading slash, from the content to an image. The folder hierarchy containing the image starts at the root level.",
                 "collection": "Open Container Format",
                 "modified": "2021-03-05T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2028,7 +2220,10 @@
                 "description": "The manifest refers to an XHTML file in an arbitrary subfolder that is relative to the package's own arbitrary folder. The reading system must be able to find the content.",
                 "collection": "Open Container Format",
                 "modified": "2021-11-12T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2059,7 +2254,10 @@
                 "description": "If a reflowable spine item follows a pre-paginated one, it should appear on the next page.",
                 "collection": "Fixed Layout",
                 "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2090,7 +2288,10 @@
                 "description": "If a reflowable spine item has a page-spread-* value, it must be honored.",
                 "collection": "Fixed Layout",
                 "modified": "2022-05-12T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2121,7 +2322,10 @@
                 "description": "The package document contains a collection with an unknown role. The reading system must open the EPUB successfully.",
                 "collection": "Package Documents",
                 "modified": "2021-01-26T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2158,7 +2362,10 @@
                 "description": "Several creators are listed in the package document. The reading system must not display them out of order (but it may display only the first).",
                 "collection": "Package Documents",
                 "modified": "2021-01-11T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2189,7 +2396,10 @@
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'auto' and the 'dir' attribute is set to 'rtl' on the package element; the title should display incorrectly.",
                 "collection": "Internationalization",
                 "modified": "2021-09-22T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2220,7 +2430,10 @@
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'auto'; the title should display incorrectly.",
                 "collection": "Internationalization",
                 "modified": "2021-09-22T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2251,7 +2464,10 @@
                 "description": "The package document's language is set to 'he' and direction 'rtl' but the content document is not annotated for language and direction. The content document should not become automatically 'he' and 'rtl'.",
                 "collection": "Internationalization",
                 "modified": "2022-01-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2282,7 +2498,10 @@
                 "description": "The 'dc:creator' element's 'dir' attribute is set to 'rtl'; the creator's name should display right-to-left.",
                 "collection": "Internationalization",
                 "modified": "2021-02-03T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2313,7 +2532,10 @@
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'rtl' and the 'dir' attribute is set to 'ltr' on the 'package' element; the title should display correctly.",
                 "collection": "Internationalization",
                 "modified": "2021-09-22T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2344,7 +2566,10 @@
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'rtl'; the title should display correctly.",
                 "collection": "Internationalization",
                 "modified": "2021-09-22T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2375,7 +2600,10 @@
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The root's 'dir' attribute is set to 'rtl'; the title should display correctly.",
                 "collection": "Internationalization",
                 "modified": "2021-09-22T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2406,7 +2634,10 @@
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is not set; the title should display incorrectly.",
                 "collection": "Internationalization",
                 "modified": "2021-09-22T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2440,7 +2671,10 @@
                 "description": "Tests on handling overflow content with the \"rendition:flow\" property set to \"paginated\". The content should be dynamically paginated (i.e., not scrolled) by the reading system.",
                 "collection": "Package Documents",
                 "modified": "2021-11-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2474,7 +2708,10 @@
                 "description": "Tests on handling overflow content with the \"rendition:flow\" property set to \"scrolled-continuous\". The content should be presented as one continuous scrolling document (i.e., not paginated).",
                 "collection": "Package Documents",
                 "modified": "2021-11-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2508,7 +2745,10 @@
                 "description": "Tests on handling overflow content with the \"rendition:flow\" property set to \"scrolled-doc\". Each of the chapters in this publication should be vertically scrollable, and swiping horizontally should moves from one to the next.",
                 "collection": "Package Documents",
                 "modified": "2021-11-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2539,7 +2779,10 @@
                 "description": "The package document's language is set to 'fr' but the content document is not annotated for language. The content document should not become automatically 'fr' but should be the default 'en'.",
                 "collection": "Internationalization",
                 "modified": "2022-01-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2570,7 +2813,10 @@
                 "description": "Reading System must process and display the title and creator metadata from the package document. An ONIX 3.0 format linked metadata record exists, but contains neither title nor creator metadata.",
                 "collection": "Package Documents",
                 "modified": "2021-01-01T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2601,7 +2847,10 @@
                 "description": "The package document contains a manifest item with unknown properties. The reading system must open the EPUB successfully.",
                 "collection": "Package Documents",
                 "modified": "2021-01-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2632,7 +2881,10 @@
                 "description": "The XHTML content references an image that does not appear in the manifest. The image should not be shown.",
                 "collection": "Package Documents",
                 "modified": "2021-11-08T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2663,7 +2915,10 @@
                 "description": "The package document contains a meta tag with an unknown property. The reading system must open the EPUB successfully.",
                 "collection": "Package Documents",
                 "modified": "2021-01-11T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2694,7 +2949,10 @@
                 "description": "The package document's title and creator contain leading and trailing spaces along with excess internal whitespace. The reading system must render only a single space in all cases.",
                 "collection": "Package Documents",
                 "modified": "2021-01-11T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2725,7 +2983,10 @@
                 "description": "The spine contains several references to the same content document. The reading system must move to the position of the first duplicate in the reading order when following a hyperlink.",
                 "collection": "Package Documents",
                 "modified": "2021-11-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2756,7 +3017,10 @@
                 "description": "The spine contains several references to the same content document. The reading system must not skip the duplicates when rendering the reading order.",
                 "collection": "Package Documents",
                 "modified": "2021-11-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2787,7 +3051,10 @@
                 "description": "The spine contains several references to the same content document. The reading system must allow the duplicates to be independently bookmarked or otherwise recognized in the UI.",
                 "collection": "Package Documents",
                 "modified": "2021-11-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2818,7 +3085,10 @@
                 "description": "An itemref in the spine is marked as non-linear. Although it (possibly) cannot be accessed through the table of contents, it can be reached from a link in the XHTML content.",
                 "collection": "Package Documents",
                 "modified": "2021-01-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2849,7 +3119,10 @@
                 "description": "Basic test of whether a reading system can display spine items in the correct order. The test fails if the reading system presents content in the order in which the file names sort, or if it presents files in manifest order rather than spine order.",
                 "collection": "Package Documents",
                 "modified": "2021-10-14T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2880,7 +3153,10 @@
                 "description": "Basic test of whether a reading system can display SVG spine items in the correct order.",
                 "collection": "Package Documents",
                 "modified": "2021-11-22T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2911,7 +3187,10 @@
                 "description": "In a publication set as using an RTL language, the spine does not set 'page-progression-direction', so it is implicitly 'default'. The pages must appear from right to left.",
                 "collection": "Internationalization",
                 "modified": "2021-01-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2942,7 +3221,10 @@
                 "description": "In a pre-paginated publication whose XHTML content sets 'dir=\"rtl\"', the spine sets 'page-progression-direction=\"ltr\"'. The pages must appear from left to right.",
                 "collection": "Internationalization",
                 "modified": "2021-01-25T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -2973,7 +3255,10 @@
                 "description": "The spine sets 'page-progression-direction=\"ltr\"'. The pages must appear from left to right.",
                 "collection": "Internationalization",
                 "modified": "2021-01-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3004,7 +3289,10 @@
                 "description": "The spine sets 'page-progression-direction=\"rtl\"'. The pages must appear from right to left.",
                 "collection": "Internationalization",
                 "modified": "2021-01-21T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3035,7 +3323,10 @@
                 "description": "The package document contains a spine item with unknown properties. The reading system must open the EPUB successfully.",
                 "collection": "Package Documents",
                 "modified": "2021-01-26T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3066,7 +3357,10 @@
                 "description": "Several titles are listed in the package document. The reading system must use the first title (and whether to use other titles is not defined).",
                 "collection": "Package Documents",
                 "modified": "2021-01-11T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3097,7 +3391,10 @@
                 "description": "The package document's dc:identifier is identical across two publications. The reading system should display both publications independently.",
                 "collection": "Package Documents",
                 "modified": "2021-01-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3128,7 +3425,10 @@
                 "description": "The package document's dc:identifier is identical across two publications. The reading system should display both publications independently.",
                 "collection": "Package Documents",
                 "modified": "2021-01-18T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3159,7 +3459,10 @@
                 "description": "“Reading Systems MUST attempt to process an EPUB Publication whose Package Document version attribute is less than \"3.0\"”. This is an EPUB with package version attribute set to \"0\", to see if a reading system will open it.",
                 "collection": "Package Documents",
                 "modified": "2021-10-15T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3190,7 +3493,10 @@
                 "description": "A GIF image is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
                 "modified": "2021-04-01T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3221,7 +3527,10 @@
                 "description": "A JPEG image is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
                 "modified": "2021-04-01T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3252,7 +3561,10 @@
                 "description": "An MP3 audio file is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
                 "modified": "2021-04-07T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3283,7 +3595,10 @@
                 "description": "An MP4 audio file is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
                 "modified": "2021-04-07T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3314,7 +3629,10 @@
                 "description": "An OPUS audio file is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
                 "modified": "2021-04-07T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3345,7 +3663,10 @@
                 "description": "A PNG image is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
                 "modified": "2021-04-01T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3376,7 +3697,10 @@
                 "description": "An SVG image is displayed as part of the XHTML content (as a reference, not embedded).",
                 "collection": "Core Media Types",
                 "modified": "2021-04-07T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3407,7 +3731,10 @@
                 "description": "A WEBP image is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
                 "modified": "2021-04-01T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3438,7 +3765,10 @@
                 "description": "The XHTML content contains an img element where the src attribute is given as a data URL. The reading system must display the image rather than opening it in a new top-level browsing context.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-01T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3469,7 +3799,10 @@
                 "description": "The reading system must display an img (where src is a data URL) positioned at the bottom of the first page of a fixed layout ebook rather than opening the data URL as thought it were its own top-level content document.",
                 "collection": "Publication Resources",
                 "modified": "2021-12-03T22:11:11Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3500,7 +3833,10 @@
                 "description": "The XHTML content document contains a link to an external website. The reading system should open it in a new browser instance.",
                 "collection": "Publication Resources",
                 "modified": "2022-03-06T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3531,7 +3867,10 @@
                 "description": "This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine item is a DMG, with a fallback to a PSD file.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-22T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3562,7 +3901,10 @@
                 "description": "An HTML content file contains a PSD image, with a manifest fallback to a PNG image. This tests fallbacks for resources that are not in the spine.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-12T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3593,7 +3935,10 @@
                 "description": "This EPUB uses a JSON content file in the spine, with a manifest fallback to an HTML document. If the reading system does not support JSON, it should display the HTML.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-12T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3624,7 +3969,10 @@
                 "description": "This EPUB uses an ordinary XML content file with mimetype application/xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-12T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3655,7 +4003,10 @@
                 "description": "This EPUB uses an custom XML content file with mimetype application/dtc+xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-12T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3686,7 +4037,10 @@
                 "description": "The XHTML content document contains a reference to an external entity. The reading system must not resolve it.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-05T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3717,7 +4071,10 @@
                 "description": "An XHTML element has an invalid name with two successive colons. The reading system must produce an error.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-04T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3748,7 +4105,10 @@
                 "description": "The spine XML is invalid. The reading system must not display the navigation document.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-05T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3779,7 +4139,10 @@
                 "description": "An XHTML element does not have a closing tag. The reading system must produce an error.",
                 "collection": "Publication Resources",
                 "modified": "2021-01-05T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3810,7 +4173,10 @@
                 "description": "Checks whether the reading system implements the required epubReadingSystem feature string queries.",
                 "collection": "Scripting",
                 "modified": "2021-12-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3841,7 +4207,10 @@
                 "description": "Checks whether the reading system implements the epubReadingSystem object.",
                 "collection": "Scripting",
                 "modified": "2021-12-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3872,7 +4241,10 @@
                 "description": "Checks whether the reading system implements the epubReadingSystem object in container-constrained document (e.g., an iframe).",
                 "collection": "Scripting",
                 "modified": "2021-12-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3903,7 +4275,10 @@
                 "description": "Checks whether the reading system implements the epubReadingSystem object in container-constrained SVG document (e.g., an iframe).",
                 "collection": "Scripting",
                 "modified": "2021-12-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3934,7 +4309,10 @@
                 "description": "Checks whether the reading system implements the epubReadingSystem object in a spine-level SVG document.",
                 "collection": "Scripting",
                 "modified": "2021-12-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3965,7 +4343,10 @@
                 "description": "Checks whether the reading system implements scripting in a spine-level document (i.e., whether a simple inline script is executed at all).",
                 "collection": "Scripting",
                 "modified": "2021-12-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -3996,7 +4377,10 @@
                 "description": "Checks whether the reading system implements container-constrained scripts (i.e., whether a simple inline script is executed at all in an iframe).",
                 "collection": "Scripting",
                 "modified": "2021-12-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -4027,7 +4411,10 @@
                 "description": "The origin values of scripted content files are displayed. They must be shared by all spine-level scripts in the publication.",
                 "collection": "Scripting",
                 "modified": "2021-03-08T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
@@ -4058,7 +4445,10 @@
                 "description": "Checks whether the reading system implements scripting in a spine-level SVG document (i.e., whether a simple inline script is executed at all).",
                 "collection": "Scripting",
                 "modified": "2021-12-10T00:00:00Z",
-                "publisher": "W3C"
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
             },
             "links": [
                 {
