@@ -7,6 +7,7 @@
     <dc:description>When rendition:spread is "auto", the reading system can choose to display spine items in a synthetic spread.</dc:description>
     <dc:identifier id="pub-id">fxl-spread-auto</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:spread auto</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

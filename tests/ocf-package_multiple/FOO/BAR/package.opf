@@ -10,6 +10,7 @@
     </dc:description>
     <dc:identifier id="pub-id">ocf-package_multiple</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Multiple packages in container file</dc:title>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#container-default-rendition</meta>
     <meta property="dcterms:modified">2021-01-21T00:00:00Z</meta>

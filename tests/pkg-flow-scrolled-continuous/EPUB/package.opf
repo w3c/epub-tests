@@ -8,6 +8,7 @@
     <dc:description>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-continuous". The content should be presented as one continuous scrolling document (i.e., not paginated).</dc:description>
     <dc:identifier id="pub-id">pkg-flow-scrolled-continuous</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:flow set to scrolled-continuous</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

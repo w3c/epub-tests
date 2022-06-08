@@ -7,6 +7,7 @@
     <dc:description>An XHTML element does not have a closing tag. The reading system must produce an error.</dc:description>
     <dc:identifier id="pub-id">pub-xml-non-validating_unclosed</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Unclosed XML tag</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

@@ -7,6 +7,7 @@
     <dc:description>When rendition:spead is "none", spine items must not appear in synthetic spreads.</dc:description>
     <dc:identifier id="pub-id">fxl-spread_none</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:spread none</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

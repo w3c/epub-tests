@@ -8,6 +8,7 @@
     <dc:description>Tests whether the Reading System plays until the end of the audio track in the absence of a clipEnd attribute in the smil file.</dc:description>
     <dc:identifier id="pub-id">mol-audio-no-clipend</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Audio track plays until end if clipEnd is missing</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

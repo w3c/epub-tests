@@ -7,6 +7,7 @@
     <dc:description>Tests whether the reading system implements Text-to-Speech as a fallback when no audio content is provided. Several fragments are defined in the SMIL file.</dc:description>
     <dc:identifier id="pub-id">mol-tts_multi</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Text-to-speech fallback for multiple fragments</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

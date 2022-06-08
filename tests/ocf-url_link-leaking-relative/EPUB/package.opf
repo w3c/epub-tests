@@ -7,6 +7,7 @@
     <dc:description>Use a relative link with several double-dot path segments from the content to a photograph. The folder hierarchy containing the photograph starts at the root level; the relative image reference exceeds depth of hierarchy.</dc:description>
     <dc:identifier id="pub-id">ocf-url_link-leaking-relative</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Relative image reference exceeds depth of hierarchy</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

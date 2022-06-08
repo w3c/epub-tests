@@ -7,6 +7,7 @@
     <dc:description>If rendition:spread is "landscape", synthetic spreads should be rendered only when the reading system is in landscape orientation.</dc:description>
     <dc:identifier id="pub-id">fxl-spread_landscape</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:spread landscape</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

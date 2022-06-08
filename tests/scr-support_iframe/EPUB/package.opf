@@ -7,6 +7,7 @@
     <dc:description>Checks whether the reading system implements container-constrained scripts (i.e., whether a simple inline script is executed at all in an iframe).</dc:description>
     <dc:identifier id="pub-id">scr-support_iframe</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Support for container-constrained scripts</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
