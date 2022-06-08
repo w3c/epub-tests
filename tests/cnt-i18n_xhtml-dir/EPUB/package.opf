@@ -7,6 +7,7 @@
     <dc:description>The content document's text direction is set to 'rtl' using the 'dir' attribute; the rendering should reflect this setting.</dc:description>
     <dc:identifier id="pub-id">cnt-i18n_xhtml-dir</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Processing the 'dir' attribute in XHTML content</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
