@@ -7,6 +7,7 @@
     <dc:description>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-doc". Each of the chapters in this publication should be vertically scrollable, and swiping horizontally should moves from one to the next. This feature is required if the reading system supports scripting.</dc:description>
     <dc:identifier id="pub-id">scr-support_scrolled-doc</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:flow set to scrolled-doc when scripting is supported</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

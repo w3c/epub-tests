@@ -7,6 +7,7 @@
     <dc:description>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-continuous". The publication is presented as one continuous scroll from spine item to spine item. This feature is optional if the reading system supports scripting.</dc:description>
     <dc:identifier id="pub-id">scr-support_scrolled-continuous</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:flow set to scrolled-doc when scripting is supported</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
