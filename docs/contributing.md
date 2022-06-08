@@ -191,8 +191,13 @@ In this example, only the relevant metadata items are shown (a test may have add
 
 (Note that, in this case, the `<meta property="belongs-to-collection">must</meta>` is not necessary, because that corresponds to the default value; it is only there as an example.)
 
+# Running tests
 
-## Implementation reports
+Running tests mean loading each test, as a separate EPUB Publication, and check whether the reading systems fulfills the requirement of that specific tests. The results are collected in an implementation report file and uploaded to the test repository.
+
+To make the running of the tests easier, a [test catalogue file](https://w3c.github.io/epub-tests/opds/opds.json) is generated using the [OPDS](https://drafts.opds.io/opds-2.0.html) format. Several reading systems understand this catalogue format, and can upload the full test suite easily.
+
+## Implementation report files
 
 The `reports` directory contains implementation reports in form of JSON files, one per reading system. The structure of the
 JSON file is as follows:
@@ -204,8 +209,8 @@ JSON file is as follows:
 
 * `ref` (optional): A URL that creates a link on the name of the reading system in the implementation report.
 
-* `tests`: An object with the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
-  values of `true`, `false`, or `null` for tests that pass, fail, or not tested, respectively. If a test is not listed, or its value is `null`, the implementation report will show a value of N/A, indicating that the implementation has not run the test.
+* `tests`: An object with the list of the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
+  value of `true`, `false`, or `null` for a test that passes, fails, or is not tested, respectively. If a test is not listed, or its value is `null`, the implementation report will show a value of N/A, indicating that the implementation has not run the test.
 
 Here is an example of a small test report:
 
@@ -232,7 +237,7 @@ The template file in `reports/xx-template.json` should list all available test i
 ## Generated test reports
 
 When new tests are committed to the repo, a GitHub Actions workflow generates a report from the tests in the `tests`
-directory and [implementation reports](#implementation-reports) in the `reports` directory.
+directory and implementation reports in the `reports` directory.
 
 The report consists of two HTML pages, namely:
 
