@@ -1,16 +1,10 @@
----
-layout: page
----
-
-![W3C Logo](https://www.w3.org/Icons/w3c_home)
 
 # Writing tests for EPUB 3.3
 
 The [w3c/epub-tests/](https://github.com/w3c/epub-tests/) repository contains tests to validate the implementability of the
 W3C's EPUB 3.3 specifications, specifically core [EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format
 itself) and [EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files).
-Our objective is to test every normative statement (that is, every
-[`MUST` or `SHOULD` or `MAY`](https://datatracker.ietf.org/doc/html/bcp14), etc.).
+Our objective is to test every normative statement (that is, every _must_, _should_, and _may_ statements).
 
 Existing tests are described in the [generated test reports](#generated-test-reports).
 
@@ -41,11 +35,11 @@ This page explains how to write new tests.
 
   * [Kindle Previewer](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765261)
 
-  * [Kobo Books](https://www.kobo.com/ca/en/p/apps) and [instructions for sideloading](https://github.com/kobolabs/epub-spec#sideloading-for-testing-purposes)
+  * [Kobo Books](https://www.kobo.com/ca/en/p/apps) ([instructions for sideloading](https://github.com/kobolabs/epub-spec#sideloading-for-testing-purposes))
 
   * [Thorium Reader](https://www.edrlab.org/software/thorium-reader/)
 
-  * [VitalSource Bookshelf](https://support.vitalsource.com/hc/en-us/sections/360002383594-Download-Bookshelf) and [instructions for sideloading](https://support.vitalsource.com/hc/en-us/search?utf8=✓&query=side+loading+epubs)
+  * [VitalSource Bookshelf](https://support.vitalsource.com/hc/en-us/sections/360002383594-Download-Bookshelf) ([instructions for sideloading](https://support.vitalsource.com/hc/en-us/search?utf8=✓&query=side+loading+epubs))
 
 
 
@@ -97,16 +91,20 @@ This page explains how to write new tests.
    your test(s) as comma-separated anchors:
 
    ```html
-   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="#doc-xhtml-support">Reading Systems MUST process
-      <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">XHTML Content Documents</a> [[EPUB-33]].</p>
+   <p id="confreq-rs-epub3-xhtml" class="support" data-tests="#doc-xhtml-support">
+      Reading Systems MUST process
+      <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">XHTML Content 
+         Documents</a> [[EPUB-33]].
+   </p>
 
    ...
 
    <p id="confreq-rs-epub3-images"
-      data-tests="#pub-cmt-gif,#pub-cmt-jpg,#pub-cmt-png,#pub-cmt-svg,#pub-cmt-webp">If a Reading System has a
-      <a>Viewport</a>, it MUST support the
-      <a href="https://www.w3.org/TR/epub-33/#cmt-grp-image">image Core Media Type Resources</a>
-      [[EPUB-33]].</p>
+      data-tests="#pub-cmt-gif,#pub-cmt-jpg,#pub-cmt-png,#pub-cmt-svg,#pub-cmt-webp">
+      If a Reading System has a <a>Viewport</a>, it MUST support the
+      <a href="https://www.w3.org/TR/epub-33/#cmt-grp-image">image Core Media 
+         Type Resources</a> [[EPUB-33]].
+   </p>
    ```
 
 1. Create a pull request for your spec change and await review.
@@ -156,7 +154,7 @@ The package document for each test must contain the following metadata, which is
   report. This should be used if the subject of the test is the value of `dc:title` itself (e.g., testing the base direction
   of the `title` element).
 
-* `belongs-to-collection` (optional, as part of a `meta` element): The value is `must`, `should`, or `may`, and it specifies whether the test corresponds to a _MUST_ (or _MUST NOT_), _SHOULD_ (or _SHOULD NOT_), or _MAY_ (or _MAY NOT_) statement in the specification, respectively. If the metadata is not provided, or any other value is used, the default `must` value is used. 
+* `belongs-to-collection` (optional, as part of a `meta` element): The value is `must`, `should`, or `may`, and it specifies whether the test corresponds to a  _must_ (or _must not_), _should_ (or _should not_), or _may_ (or _may not_) statement in the specification, respectively. If the metadata is not provided, or any other value is used, the default `must` value is used. 
 
 * `dcterms:rights` as part of a `link` element: the rights associated with the test. Except for the rare cases the `href` attribute value should be set to `https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document` (i.e., to the W3C Software and Document Notice and License).
 
@@ -167,32 +165,42 @@ In this example, only the relevant metadata items are shown (a test may have add
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
-    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-        <dc:coverage>Internationalization</dc:coverage>
-        <dc:creator>Dan Lazin</dc:creator>
-        <dc:creator>Ivan Herman</dc:creator>
-        <dc:description>
-            The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute
-            is set to 'rtl'; the title should display from right to left.
-        </dc:description>
-        <dc:identifier id="pub-id">pkg-dir_rtl-root-unset</dc:identifier>
-        <dc:title dir="rtl" xml:lang="he">CSS: הרפתקה חדשה!</dc:title>
-        <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
-        <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-        <meta property="dcterms:alternative">Title's base direction set to RTL</meta>
-        <meta property="belongs-to-collection">must</meta>
-        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
-        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir</meta>
-    </metadata>
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" 
+   version="3.0" xml:lang="en" unique-identifier="pub-id">
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <dc:coverage>Internationalization</dc:coverage>
+  <dc:creator>Dan Lazin</dc:creator>
+  <dc:creator>Ivan Herman</dc:creator>
+  <dc:description>
+    The 'dc:title' element contains text whose proper rendering requires 
+    bidi control. The element's 'dir' attribute is set to 'rtl'; the title 
+    should display from right to left.
+  </dc:description>
+  <dc:identifier id="pub-id">pkg-dir_rtl-root-unset</dc:identifier>
+  <dc:title dir="rtl" xml:lang="he">CSS: הרפתקה חדשה!</dc:title>
+  <link rel="dcterms:rights" 
+    href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+  <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+  <meta property="dcterms:alternative">Title's base direction set to RTL</meta>
+  <meta property="belongs-to-collection">must</meta>
+  <meta property="dcterms:isReferencedBy">
+    https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
+  <meta property="dcterms:isReferencedBy">
+    https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir</meta>
+</metadata>
     ...
- </package>
+</package>
 ```
 
 (Note that, in this case, the `<meta property="belongs-to-collection">must</meta>` is not necessary, because that corresponds to the default value; it is only there as an example.)
 
+# Running tests
 
-## Implementation reports
+Running tests mean loading each test, as a separate EPUB Publication, and check whether the reading systems fulfills the requirement of that specific tests. The results are collected in an implementation report file and uploaded to the test repository.
+
+To make the running of the tests easier, a [test catalogue file](https://w3c.github.io/epub-tests/opds/opds.json) is generated using the [OPDS](https://drafts.opds.io/opds-2.0.html) format. Several reading systems understand this catalogue format, and can upload the full test suite easily.
+
+## Implementation report files
 
 The `reports` directory contains implementation reports in form of JSON files, one per reading system. The structure of the
 JSON file is as follows:
@@ -204,8 +212,8 @@ JSON file is as follows:
 
 * `ref` (optional): A URL that creates a link on the name of the reading system in the implementation report.
 
-* `tests`: An object with the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
-  values of `true`, `false`, or `null` for tests that pass, fail, or not tested, respectively. If a test is not listed, or its value is `null`, the implementation report will show a value of N/A, indicating that the implementation has not run the test.
+* `tests`: An object with the list of the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
+  value of `true`, `false`, or `null` for a test that passes, fails, or is not tested, respectively. If a test is not listed, or its value is `null`, the implementation report will show a value of N/A, indicating that the implementation has not run the test.
 
 Here is an example of a small test report:
 
@@ -232,7 +240,7 @@ The template file in `reports/xx-template.json` should list all available test i
 ## Generated test reports
 
 When new tests are committed to the repo, a GitHub Actions workflow generates a report from the tests in the `tests`
-directory and [implementation reports](#implementation-reports) in the `reports` directory.
+directory and implementation reports in the `reports` directory.
 
 The report consists of two HTML pages, namely:
 

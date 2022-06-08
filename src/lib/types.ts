@@ -15,11 +15,28 @@ export namespace Constants {
     /** Location for the final report */
     export const DOCS_DIR: string = 'docs/drafts';
 
+    /** Relative location for the final OPDS data */
+    export const OPDS_DIR: string = 'docs/opds';
+
+    export const OPDS_DIR_URL: string = 'https://w3c.github.io/epub-tests/opds';
+
+    /** (Relative) File name of the OPDS file */
+    export const DOC_OPDS: string = 'opds.json';
+
+    /** (Relative) File name of the OPDS file */
+    export const DOC_OPDS_COVER_PNG: string = 'test_cover.png';
+
+    /** (Relative) File name of the OPDS file */
+    export const DOC_OPDS_COVER_SVG: string = 'test_cover.svg';
+
     /** Location for the implementation report templates */
     export const TEST_RESULTS_TEMPLATE: string = `${TEST_RESULTS_DIR}/xx-template.json`;
 
     /** Base URL for the tests in the repository */
     export const TEST_URL_BASE: string = 'https://github.com/w3c/epub-tests/tree/main/tests';
+
+    /** Base URL for the test epub file, accessible via github.io */
+    export const TEST_DOWNLOAD_URL_BASE: string = 'https://github.com/w3c/epub-tests/raw/main/tests';
 
     /** Location of the container file within the test directory */
     export const CONTAINER_FILE: string = 'META-INF/container.xml';
@@ -112,6 +129,10 @@ export interface TestData {
      * This is a series of URL strings, referring to the section in the spec this test is pertinent to.
      */
     references: string[];
+    /**
+     * The value of the 'modified' string from the package file
+     */
+    modified: string;
     /**
      * Whether this test corresponds to a _MUST_, _SHOULD_, or _MAY_ statement
      */

@@ -2,10 +2,11 @@ import { argv } from "process";
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
-import { ReportData, ImplementationReport, Constants } from './lib/types';
-import { get_report_data, get_template } from "./lib/data";
+import { TestData, ReportData, ImplementationReport, Constants } from './lib/types';
+import { get_test_data, get_report_data, get_template } from "./lib/data";
 import { create_report } from "./lib/html";
 import { apply_configuration_options } from './lib/config';
+import { OPDS, create_opds } from './lib/opds'
 
 
 /**
@@ -23,12 +24,19 @@ async function adjust_date(fname: string): Promise<void> {
  */
 async function main() {
     const test_dir = (argv.length >= 3 && argv[2] === '-t') ? Constants.TESTS_DIR_DEBUG : Constants.TESTS_DIR ;
-    const report_data: ReportData = await get_report_data(test_dir, Constants.TEST_RESULTS_DIR);
+    const test_data: TestData[] = await get_test_data(test_dir);
+    const report_data: ReportData = await get_report_data(test_data, Constants.TEST_RESULTS_DIR);
 
     const template: ImplementationReport = get_template(report_data);
 
-    const final_report_data = apply_configuration_options(report_data);
-    const {implementations, results, tests, creators} = create_report(final_report_data);
+    const final_report_data: ReportData = apply_configuration_options(report_data);
+    const { implementations, results, tests, creators }: {
+            implementations: string, 
+            results:string, 
+            tests: string, 
+            creators: string
+        } = create_report(final_report_data);
+    const opds_data: OPDS = create_opds(test_data);
     
     await Promise.all([
         fs.writeFile(Constants.IMPL_FRAGMENT, implementations, 'utf-8'),
@@ -36,6 +44,7 @@ async function main() {
         fs.writeFile(Constants.TEST_FRAGMENT, tests, 'utf-8'),
         fs.writeFile(Constants.CREATORS_FRAGMENT, creators, 'utf-8'),
         fs.writeFile(Constants.TEST_RESULTS_TEMPLATE, JSON.stringify(template, null, 4)),
+        fs.writeFile(`${Constants.OPDS_DIR}/${Constants.DOC_OPDS}`, JSON.stringify(opds_data, null, 4)),
         adjust_date(`${Constants.DOCS_DIR}/${Constants.DOC_TEST_RESULTS}`),
         adjust_date(`${Constants.DOCS_DIR}/${Constants.DOC_TEST_DESCRIPTIONS}`),
     ]);
