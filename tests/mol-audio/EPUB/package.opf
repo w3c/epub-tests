@@ -7,6 +7,7 @@
     <dc:description>Tests whether the Reading System obeys the clipBegin and clipEnd attributes.</dc:description>
     <dc:identifier id="pub-id">mol-audio</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Rendering an audio track from clipBegin to clipEnd</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

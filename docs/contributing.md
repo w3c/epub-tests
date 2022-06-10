@@ -177,6 +177,7 @@ In this example, only the relevant metadata items are shown (a test may have add
     should display from right to left.
   </dc:description>
   <dc:identifier id="pub-id">pkg-dir_rtl-root-unset</dc:identifier>
+  <dc:publisher>W3C</dc:publisher>
   <dc:title dir="rtl" xml:lang="he">CSS: הרפתקה חדשה!</dc:title>
   <link rel="dcterms:rights" 
     href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>

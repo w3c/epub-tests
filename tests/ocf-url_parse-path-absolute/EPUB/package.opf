@@ -7,6 +7,7 @@
     <dc:description>Parse, in Javascript, a path-absolute URL, i.e., beginning with a leading slash, from the content to an image. The folder hierarchy containing the image starts at the root level.</dc:description>
     <dc:identifier id="pub-id">ocf-url_parse-path-absolute</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Root-relative URL, parsed by JS</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

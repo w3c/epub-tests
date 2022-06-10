@@ -7,6 +7,7 @@
     <dc:description>Use a path-absolute link, i.e., beginning with a leading slash, from the content to a photograph. The folder hierarchy containing the photograph starts at the root level.</dc:description>
     <dc:identifier id="pub-id">ocf-url_link-path-absolute</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Path-absolute link to an image</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

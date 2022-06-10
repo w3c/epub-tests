@@ -7,6 +7,7 @@
     <dc:description>An SVG image is embedded in the XHTML content (as inline SVG).</dc:description>
     <dc:identifier id="pub-id">cnt-svg-embedded</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>SVG embedded in XHTML content</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

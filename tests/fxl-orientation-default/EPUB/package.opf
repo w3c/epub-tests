@@ -7,6 +7,7 @@
     <dc:description>rendition:orientation is not specified. Therefore, it has the value "auto" and reading systems should display the EPUB in the orientation of the device.</dc:description>
     <dc:identifier id="pub-id">fxl-orientation_default</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:orientation default</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

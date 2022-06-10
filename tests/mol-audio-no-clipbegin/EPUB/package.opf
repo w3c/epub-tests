@@ -8,6 +8,7 @@
     <dc:description>Tests whether the Reading System starts at the beginning of the audio track in the absence of a clipBegin attribute in the smil file.</dc:description>
     <dc:identifier id="pub-id">mol-audio-no-clipbegin</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Start at beginning of audio if clipBegin is missing</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

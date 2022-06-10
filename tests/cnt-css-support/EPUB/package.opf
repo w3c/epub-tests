@@ -7,6 +7,7 @@
     <dc:description>The Acid2 test, ported from acid2.acidtests.org, demonstrates broad CSS support.</dc:description>
     <dc:identifier id="pub-id">cnt-css-support</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Acid2 test</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

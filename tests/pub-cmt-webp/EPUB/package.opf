@@ -7,6 +7,7 @@
     <dc:description>A WEBP image is displayed as part of the XHTML content.</dc:description>
     <dc:identifier id="pub-id">pub-cmt-webp</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>WEBP image</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

@@ -61,15 +61,14 @@ async function main(new_metadata: string[], cut_off_pattern: string): Promise<vo
 /**
  * The extra metadata items to be added to the package metadata
  */
-const DC_Rights: string[] = [
-    '    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>',
-    '    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>',
+const new_metadata: string[] = [
+    '    <dc:publisher>W3C</dc:publisher>',
 ]
 
 /**
  * The pattern to be used to find the target for the new metadata entries. They will be inserted
  * _before_ the first occurrence of the pattern among the other metadata lines.
  */
-const cutoff_meta_property: string = '<meta property';
+const cutoff_meta: string = '<dc:title';
 
-main(DC_Rights, cutoff_meta_property);
+main(new_metadata, cutoff_meta);

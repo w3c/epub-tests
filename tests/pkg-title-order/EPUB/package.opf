@@ -10,6 +10,7 @@
     </dc:description>
     <dc:identifier id="pub-id">pkg-title-order</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>First title in package</dc:title>
     <dc:title>This title must not display first</dc:title>
     <dc:title>Also, this title must not display first</dc:title>

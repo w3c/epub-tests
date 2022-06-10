@@ -9,6 +9,7 @@
     </dc:description>
     <dc:identifier id="pub-id">pkg-dir_but_not_content</dc:identifier>
     <dc:language>he</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>CSS: הרפתקה חדשה!</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

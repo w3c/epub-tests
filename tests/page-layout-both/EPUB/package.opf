@@ -7,6 +7,7 @@
     <dc:description>If a reflowable spine item follows a pre-paginated one, it should appear on the next page.</dc:description>
     <dc:identifier id="pub-id">page-layout-both</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>page-layout-both</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

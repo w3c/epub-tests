@@ -7,6 +7,7 @@
     <dc:description>The default value for rendition:spread should be "auto" if not specified. When rendition:spread is "auto", the reading system can choose to display spine items in a synthetic spread.</dc:description>
     <dc:identifier id="pub-id">fxl-spread_default</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:spread default</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

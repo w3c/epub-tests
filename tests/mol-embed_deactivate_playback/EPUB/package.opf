@@ -7,6 +7,7 @@
     <dc:description>Tests whether the reading system implements the control of embedded videos via media overlay. The playback control of the videos are deactivated.</dc:description>
     <dc:identifier id="pub-id">mol-embed_deactivate_playback</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Media overlay with embedded video; no playback control</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

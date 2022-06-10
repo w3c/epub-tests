@@ -10,6 +10,7 @@
     </dc:description>
     <dc:identifier id="pub-id">pub-data-urls_browsing-context</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Data URL does not open in top-level context</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

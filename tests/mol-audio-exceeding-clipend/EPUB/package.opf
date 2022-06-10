@@ -8,6 +8,7 @@
     <dc:description>Tests whether the Reading System ignores the clipEnd attribute in the smil file's par element if it exceeds the length of the audio file.</dc:description>
     <dc:identifier id="pub-id">mol-audio-exceeding-clipend</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Audio track stops if clipEnd exceeds length</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

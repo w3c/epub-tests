@@ -7,6 +7,7 @@
     <dc:description>When rendition:page-spread-left is applied to a spine item, it should be displayed on the left side of the synthetic spread.</dc:description>
     <dc:identifier id="pub-id">fxl-page-spread-left</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:page-spread-left</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

@@ -7,6 +7,7 @@
     <dc:description>The origin values of scripted content files are displayed. They must be shared by all spine-level scripts in the publication.</dc:description>
     <dc:identifier id="pub-id">scr-support_origin</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>Unique origin shared by spine-level scripted contents</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>

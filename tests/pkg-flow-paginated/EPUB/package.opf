@@ -8,6 +8,7 @@
     <dc:description>Tests on handling overflow content with the "rendition:flow" property set to "paginated". The content should be dynamically paginated (i.e., not scrolled) by the reading system.</dc:description>
     <dc:identifier id="pub-id">pkg-flow-paginated</dc:identifier>
     <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
     <dc:title>rendition:flow set to paginated</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
