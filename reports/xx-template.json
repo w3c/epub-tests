@@ -130,6 +130,8 @@
         "scr-support": null,
         "scr-support_iframe": null,
         "scr-support_origin": null,
+        "scr-support_scrolled-continuous": null,
+        "scr-support_scrolled-doc": null,
         "scr-support_svg": null
     }
 }

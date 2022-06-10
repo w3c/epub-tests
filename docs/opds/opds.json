@@ -4439,6 +4439,74 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_scrolled-continuous",
+                "title": "rendition:flow set to scrolled-continuous when scripting is supported",
+                "author": "Ivan Herman",
+                "description": "Tests handling overflow content with the \"rendition:flow\" property set to \"scrolled-continuous\". The publication is presented as one continuous scroll from spine item to spine item. This feature is optional if the reading system supports scripting.",
+                "collection": "Scripting",
+                "modified": "2022-06-02T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support_scrolled-continuous.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_scrolled-doc",
+                "title": "rendition:flow set to scrolled-doc when scripting is supported",
+                "author": "Ivan Herman",
+                "description": "Tests on handling overflow content with the \"rendition:flow\" property set to \"scrolled-doc\". Each of the chapters in this publication should be vertically scrollable, and swiping horizontally should moves from one to the next. This feature is required if the reading system supports scripting.",
+                "collection": "Scripting",
+                "modified": "2022-06-02T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support_scrolled-doc.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_svg",
                 "title": "Scripting support in spine-level SVG",
                 "author": "Ivan Herman",
