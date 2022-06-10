@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="pub-id" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage>Scripting</dc:coverage>
+    <dc:creator>Ivan Herman</dc:creator>
+    <dc:date>2022-06-02</dc:date>
+    <dc:description>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-doc". Each of the chapters in this publication should be vertically scrollable, and swiping horizontally should moves from one to the next. This feature is required if the reading system supports scripting.</dc:description>
+    <dc:identifier id="pub-id">scr-support_scrolled-doc</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
+    <dc:title>rendition:flow set to scrolled-doc when scripting is supported</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-scripted-flow-scrolled</meta>
+    <meta property="dcterms:modified">2022-06-02T00:00:00Z</meta>
+    <meta property="rendition:flow">scrolled-doc</meta>
+  </metadata>
+  <manifest>
+    <item href="nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="content_001.xhtml" id="xhtml-001" media-type="application/xhtml+xml" properties="scripted"/>
+    <item href="content_002.xhtml" id="xhtml-002" media-type="application/xhtml+xml"/>
+    <item href="content_003.xhtml" id="xhtml-003" media-type="application/xhtml+xml"/>
+    <item href="content_004.xhtml" id="xhtml-004" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine>
+    <itemref idref="xhtml-001"/>
+    <itemref idref="xhtml-002"/>
+    <itemref idref="xhtml-003"/>
+    <itemref idref="xhtml-004"/>
+  </spine>
+</package>
