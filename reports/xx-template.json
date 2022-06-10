@@ -57,6 +57,8 @@
         "nav-spine_in-spine": null,
         "nav-spine_in-spine-no-list-style": null,
         "nav-spine_not-in-spine": null,
+        "ocf-metainf-inc": null,
+        "ocf-metainf-manifest": null,
         "ocf-package_arbitrary": null,
         "ocf-package_multiple": null,
         "ocf-url_link-leaking-relative": null,
