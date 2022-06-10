@@ -4,7 +4,7 @@
     <dc:coverage>Scripting</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2022-06-02</dc:date>
-    <dc:description>Tests on handling overflow content with the "rendition:flow" property set to "scrolled-continuous". The publication is presented as one continuous scroll from spine item to spine item. This feature is optional if the reading system supports scripting.</dc:description>
+    <dc:description>Tests handling overflow content with the "rendition:flow" property set to "scrolled-continuous". The publication is presented as one continuous scroll from spine item to spine item. This feature is optional if the reading system supports scripting.</dc:description>
     <dc:identifier id="pub-id">scr-support_scrolled-continuous</dc:identifier>
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
