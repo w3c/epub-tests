@@ -77,15 +77,6 @@ export namespace Constants {
     /** CSS Class name for columns containing the Requirement flag */
     export const CLASS_COL_REQ: string = "col_req";
 
-    /** CSS Class name for columns containing test table references */
-    export const CLASS_COL_TREF: string = "col_tref";
-
-    /** CSS Class name for columns containing title */
-    export const CLASS_COL_TITLE: string = "col_title";
-
-    /** CSS Class name for columns containing spec references */
-    export const CLASS_COL_SREF: string = "col_sref";
-
     /** CSS Class name for the list of creators  */
     export const CLASS_CREATOR_LIST: string = "creator_list";
 
