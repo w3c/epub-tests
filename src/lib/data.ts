@@ -29,7 +29,7 @@ import { TestData, ImplementationReport, ImplementationData, ImplementationTable
  * 
  * @internal 
  */
-function string_comparison(a: string, b: string): number {
+export function string_comparison(a: string, b: string): number {
     if (a < b) return -1;
     else if (a > b) return 1;
     else return 0;

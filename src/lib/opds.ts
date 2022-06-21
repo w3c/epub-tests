@@ -1,11 +1,12 @@
 /**
  * Generation of the OPDS file for the full set of tests.
  * 
-  * 
+ * 
  *  @packageDocumentation
  */
 
 import { TestData, Constants } from './types';
+import { string_comparison } from './data';
 
 /* ------------------------------------------------------------------------------------------------------ */
 /*                        Subset of OPDS as used here in Typescript types                                 */
@@ -51,8 +52,13 @@ export interface OPDS {
     publications: Publication[];
 }
 
+/**
+ * Generate the OPDS file
+ * 
+ * @param tests All the test data, as extracted from the corresponding package documents
+ * @returns 
+ */
 export function create_opds(tests: TestData[]): OPDS {
-
     /** All cover images are identical */
     const images: ImageLink[] = [{
         href   : `${Constants.OPDS_DIR_URL}/${Constants.DOC_OPDS_COVER_PNG}`,
@@ -87,7 +93,10 @@ export function create_opds(tests: TestData[]): OPDS {
             links,
             images,
         }
-    });
+    }).sort((a: Publication, b: Publication): number => {
+        const time_comparison = string_comparison(a.metadata.modified, b.metadata.modified);
+        return time_comparison !== 0 ? -1 * time_comparison : string_comparison(a.metadata.identifier, b.metadata.identifier);
+    })
 
     return {
         metadata : {
