@@ -13,6 +13,43 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-timing-synchronization_svg",
+                "title": "Basic media overlay in SVG",
+                "author": [
+                    "Ivan Herman",
+                    "Marisa DeMeglio"
+                ],
+                "description": "Basic media overlay test in SVG content with CSS styling.",
+                "collection": "Media Overlays",
+                "modified": "2022-06-16T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-timing-synchronization_svg.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_scrolled-continuous",
                 "title": "rendition:flow set to scrolled-continuous when scripting is supported",
                 "author": "Ivan Herman",
@@ -1133,43 +1170,6 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-audio-no-clipend.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-audio_no_clipbegin",
-                "title": "Basic media overlay in SVG",
-                "author": [
-                    "Ivan Herman",
-                    "Marisa DeMeglio"
-                ],
-                "description": "Basic media overlay test in SVG content with CSS styling.",
-                "collection": "Media Overlays",
-                "modified": "2022-02-10T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-audio_no_clipbegin.epub"
                 }
             ],
             "images": [
@@ -2477,6 +2477,40 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-manifest-unlisted-resource.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-linked-records",
+                "title": "Package processed with linked metadata record",
+                "author": "Matthew Chan",
+                "description": "Reading System must process and display the title and creator metadata from the package document. An ONIX 3.0 format linked metadata record exists, but contains neither title nor creator metadata.",
+                "collection": "Package Documents",
+                "modified": "2021-10-21T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-linked-records.epub"
                 }
             ],
             "images": [
@@ -4523,40 +4557,6 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-xml-names.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-linked-records",
-                "title": "Package processed with linked metadata record",
-                "author": "Matthew Chan",
-                "description": "Reading System must process and display the title and creator metadata from the package document. An ONIX 3.0 format linked metadata record exists, but contains neither title nor creator metadata.",
-                "collection": "Package Documents",
-                "modified": "2021-01-01T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-linked-records.epub"
                 }
             ],
             "images": [
