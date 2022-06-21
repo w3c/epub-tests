@@ -89,7 +89,7 @@ function create_impl_reports(data: ReportData): string {
             h3.id = `sec-${convert_to_id(table.header)}-results`;
 
             const test_table = add_child(table_section, 'table');
-            test_table.className = 'zebra';
+            test_table.className = 'simple';
 
             add_child(test_table, 'colgroup', `
                 <col class="${Constants.CLASS_COL_ID}"/>
@@ -97,7 +97,8 @@ function create_impl_reports(data: ReportData): string {
             `);
 
             // Header rows for each implementation
-            const header_row = add_child(test_table, 'tr');
+            const thead = add_child(test_table, 'thead');
+            const header_row = add_child(thead, 'tr');
             add_child(header_row, 'th', 'Id');
             add_child(header_row, 'th', 'Req');
             for (const impl of (consolidated ? data.consolidated_implementers : data.implementers)) {
@@ -110,9 +111,10 @@ function create_impl_reports(data: ReportData): string {
                 add_child(header_row, 'th', head);
             }
 
+            const tbody = add_child(test_table, 'tbody');
             // A cycle for each table row:
             for (const row of table.implementations) {
-                const tr = add_child(test_table, 'tr'); 
+                const tr = add_child(tbody, 'tr'); 
 
                 // First the fixed table cells...
                 const td_id = add_child(tr, 'td', `<a href="${Constants.DOC_TEST_DESCRIPTIONS}#${row.identifier}">${row.identifier}</a>`);
@@ -177,32 +179,36 @@ function create_test_data(data: ReportData): string {
         h3.id = `sec-${convert_to_id(table.header)}-data`;
 
         const test_table = add_child(table_section, 'table');
-        test_table.className = 'zebra';
+        test_table.className = 'simple sortable';
 
         // The table begins with a colgroup to allow for a proper styling, 
         // especially a common width for all columns across the document
-        add_child(test_table, 'colgroup',`
-            <col class="${Constants.CLASS_COL_ID}"/>
-            <col class="${Constants.CLASS_COL_REQ}"/>
-            <col class="${Constants.CLASS_COL_TITLE}"/>
-            <col/>
-            <col class="${Constants.CLASS_COL_SREF}"/>
-            <col class="${Constants.CLASS_COL_TREF}"/>
-        `);
+        // add_child(test_table, 'colgroup',`
+        //     <col class="${Constants.CLASS_COL_ID}"/>
+        //     <col class="${Constants.CLASS_COL_REQ}"/>
+        //     <col class="${Constants.CLASS_COL_TITLE}"/>
+        //     <col class="${Constants.CLASS_COL_DESCR}"/>
+        //     <col class="${Constants.CLASS_COL_MOD}"/>
+        //     <col class="${Constants.CLASS_COL_SREF}"/>
+        //     <col class="${Constants.CLASS_COL_TREF}"/>
+        // `);
 
+        const thead = add_child(test_table, 'thead');
         // Next is a header row
-        add_child(test_table, 'tr',`
-            <th>Id</th>
-            <th>Req</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Specs</th>
-            <th>Ref</th>
+        add_child(thead, 'tr',`
+            <th scope="col" class="order-asc" style="width:12%">Id</th>
+            <th scope="col" style="width:8%">Req</th>
+            <th scope="col" style="width:20%">Title</th>
+            <th scope="col" style="width:44%">Description</th>
+            <th scope="col" style="width:8%">Date</th>
+            <th scope="col" data-nonsortable="true" style="width:4%">Specs</th>
+            <th scope="col" data-nonsortable="true" style="width:4%">Ref</th>
         `);
 
+        const tbody = add_child(test_table, 'tbody');
         // Finally, a row per test
         for (const row of table.implementations) {
-            const tr = add_child(test_table, 'tr');
+            const tr = add_child(tbody, 'tr');
 
             // a bunch of table cells...
             const td_id = add_child(tr, 'td', `<a href="${Constants.TEST_URL_BASE}/${row.identifier}">${row.identifier}</a>`);
@@ -212,6 +218,10 @@ function create_test_data(data: ReportData): string {
             add_child(tr, 'td', row.required);
             add_child(tr, 'td', row.title); 
             add_child(tr, 'td', row.description);
+
+            const date: string[] = row.modified.split('T')[0].split('-');
+            date[0] = `’${date[0].charAt(2)}${date[0].charAt(3)}`;
+            add_child(tr, 'td', date.join('.'));
 
             const td_specs = add_child(tr, 'td');
             if (row.references.length === 0) {
@@ -224,7 +234,6 @@ function create_test_data(data: ReportData): string {
                     a.setAttribute('href', ref);
                 }
             }
-
             add_child(tr, 'td', `<a href="${Constants.DOC_TEST_RESULTS}#${row.identifier}-results">❐</a>`);
         }
     }
