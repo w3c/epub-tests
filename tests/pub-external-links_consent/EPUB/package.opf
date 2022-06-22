@@ -2,19 +2,19 @@
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:coverage>Publication Resources</dc:coverage>
-    <dc:creator>Zheng Xu</dc:creator>
-    <dc:date>2022-03-06</dc:date>
+    <dc:creator>Ivan Herman</dc:creator>
+    <dc:date>2022-06-21</dc:date>
     <dc:description>
-        The XHTML content document contains a link to an external website. The reading system should open it in a new browser instance after the reader's consent.
+        The XHTML content document contains a 'mailto:' link. The reading system should ask for the reader's consent before opening an email application.
     </dc:description>
-    <dc:identifier id="pub-id">pub-external-links</dc:identifier>
+    <dc:identifier id="pub-id">pub-external-links_consent</dc:identifier>
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
-    <dc:title>External Links open a new browser instance</dc:title>
+    <dc:title>Reader's consent for a 'mailto:' link</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="belongs-to-collection">should</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-external-links-open</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-external-links-consent</meta>
     <meta property="dcterms:modified">2022-06-21T00:00:00Z</meta>
   </metadata>
   <manifest>
