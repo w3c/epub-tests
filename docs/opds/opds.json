@@ -13,6 +13,74 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-external-links",
+                "title": "External Links open a new browser instance",
+                "author": "Zheng Xu",
+                "description": "The XHTML content document contains a link to an external website. The reading system should open it in a new browser instance after the reader's consent.",
+                "collection": "Publication Resources",
+                "modified": "2022-06-21T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-external-links.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-external-links_consent",
+                "title": "Reader's consent for a 'mailto:' link",
+                "author": "Ivan Herman",
+                "description": "The XHTML content document contains a 'mailto:' link. The reading system should ask for the reader's consent before opening an email application.",
+                "collection": "Publication Resources",
+                "modified": "2022-06-21T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-external-links_consent.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-timing-synchronization_svg",
                 "title": "Basic media overlay in SVG",
                 "author": [
@@ -746,40 +814,6 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-url_link-relative.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-external-links",
-                "title": "External Links open a new browser instance",
-                "author": "Zheng Xu",
-                "description": "The XHTML content document contains a link to an external website. The reading system should open it in a new browser instance.",
-                "collection": "Publication Resources",
-                "modified": "2022-03-06T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-external-links.epub"
                 }
             ],
             "images": [

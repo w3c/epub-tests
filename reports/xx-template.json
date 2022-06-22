@@ -115,6 +115,7 @@
         "pub-data-urls_browsing-context": null,
         "pub-data-urls_top-level-content": null,
         "pub-external-links": null,
+        "pub-external-links_consent": null,
         "pub-foreign_bad-fallback": null,
         "pub-foreign_image": null,
         "pub-foreign_json-spine": null,
