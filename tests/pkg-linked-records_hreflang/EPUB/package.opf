@@ -4,7 +4,7 @@
     <dc:coverage>Package Documents</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2022-06-23</dc:date>
-    <dc:description>Phony.</dc:description>
+    <dc:description>Tests whether language setting in the target of a link element in the package file is affected by the hreflang attribute in the link. (It should not.) </dc:description>
     <dc:identifier id="pub-id">pkg-linked-records_hreflang</dc:identifier>
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
