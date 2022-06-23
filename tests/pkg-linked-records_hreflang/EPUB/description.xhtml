@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <title>Link to a description with hreflang (description)</title>
+  </head>
+  <body>
+    <p>The test describes a situation whereby the package file includes a <code>link</code> reference to this description. The link includes a <code>hreflang</code>
+    attribute (set to 'fr', i.e., to French). This test passes if that language setting is <em>ignored</em> when rendering this description. This means that in the following quote:</p>
+
+    <blockquote><q>Le mieux est l'ennemi du bien</q></blockquote>
+
+    <p>the text must be surrounded by the usual quote characters (i.e., '"') as opposed to the '«' and '»' characters (which would be the French way).</p>
+  </body>
+</html>
