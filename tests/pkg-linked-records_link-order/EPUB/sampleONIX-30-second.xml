@@ -9,18 +9,13 @@
   </Header>
 
   <Product>
-    <RecordReference>9789999999991</RecordReference>
+    <RecordReference>9789999999992</RecordReference>
     <NotificationType>04</NotificationType>
 
     <ProductIdentifier>
       <ProductIDType>15</ProductIDType>
-      <IDValue>9789999999991</IDValue>
+      <IDValue>9789999999992</IDValue>
     </ProductIdentifier>
-
-    <Title>
-      <TitleType>01</TitleType>
-      <TitleText>ONIX metadata title (second)!</TitleText>
-    </Title>
 
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
@@ -30,9 +25,10 @@
         <TitleType>01</TitleType>
         <TitleElement>
           <TitleElementLevel>01</TitleElementLevel>
-          <YearOfAnnual>2021</YearOfAnnual>
+          <TitleText>ONIX metadata title (second)!</TitleText>
         </TitleElement>
       </TitleDetail>
+
       <Language>
         <LanguageRole>01</LanguageRole>
         <LanguageCode>eng</LanguageCode>

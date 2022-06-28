@@ -17,11 +17,6 @@
       <IDValue>9789999999991</IDValue>
     </ProductIdentifier>
 
-    <Title>
-      <TitleType>01</TitleType>
-      <TitleText>ONIX metadata title (first)!</TitleText>
-    </Title>
-
     <DescriptiveDetail>
       <ProductComposition>00</ProductComposition>
       <ProductForm>ED</ProductForm>
@@ -30,7 +25,7 @@
         <TitleType>01</TitleType>
         <TitleElement>
           <TitleElementLevel>01</TitleElementLevel>
-          <YearOfAnnual>2021</YearOfAnnual>
+          <TitleText>ONIX metadata title (first)!</TitleText>
         </TitleElement>
       </TitleDetail>
       <Language>
