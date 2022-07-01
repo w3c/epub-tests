@@ -86,6 +86,8 @@
         "pkg-flow-scrolled-doc": null,
         "pkg-lang_but_not_content": null,
         "pkg-linked-records": null,
+        "pkg-linked-records_link-order": null,
+        "pkg-linked-records_link-priority": null,
         "pkg-manifest-unknown": null,
         "pkg-manifest-unlisted-resource": null,
         "pkg-meta-unknown": null,
