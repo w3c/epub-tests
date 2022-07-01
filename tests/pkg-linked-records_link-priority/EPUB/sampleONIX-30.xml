@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<ONIXMessage xmlns="http://ns.editeur.org/onix/3.0/reference" release="3.0">
+
+  <Header>
+    <Sender>
+      <SenderName>My Publishing Company or Client Services Provider</SenderName>
+    </Sender>
+    <SentDateTime>20150723T142048Z</SentDateTime>
+  </Header>
+
+  <Product>
+    <RecordReference>9789999999991</RecordReference>
+    <NotificationType>04</NotificationType>
+
+    <ProductIdentifier>
+      <ProductIDType>15</ProductIDType>
+      <IDValue>9789999999991</IDValue>
+    </ProductIdentifier>
+
+    <DescriptiveDetail>
+      <ProductComposition>00</ProductComposition>
+      <ProductForm>ED</ProductForm>
+
+      <TitleDetail>
+        <TitleType>01</TitleType>
+        <TitleElement>
+          <TitleElementLevel>01</TitleElementLevel>
+          <TitleText>ONIX metadata title!</TitleText>
+        </TitleElement>
+      </TitleDetail>
+
+      <Language>
+        <LanguageRole>01</LanguageRole>
+        <LanguageCode>eng</LanguageCode>
+      </Language>
+      <Extent>
+        <ExtentType>10</ExtentType>
+        <ExtentValue>1234</ExtentValue>
+        <ExtentUnit>03</ExtentUnit>
+      </Extent>
+    </DescriptiveDetail>
+
+    <CollateralDetail>
+      <TextContent>
+        <TextType>02</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>I am a short description of the book.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>03</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>I am a description of the book.</Text>
+      </TextContent>
+      <TextContent>
+        <TextType>12</TextType>
+        <ContentAudience>00</ContentAudience>
+        <Text>I am a biographical note of a book not a specific author.</Text>
+      </TextContent>
+    </CollateralDetail>
+
+    <PublishingDetail>
+      <Imprint>
+        <ImprintName>My Publishing Imprint</ImprintName>
+      </Imprint>
+      <Publisher>
+        <PublishingRole>01</PublishingRole>
+        <PublisherName>My Publisher Name</PublisherName>
+      </Publisher>
+      <PublishingStatus>04</PublishingStatus>
+      <PublishingDate>
+        <PublishingDateRole>01</PublishingDateRole>
+        <DateFormat>00</DateFormat>
+        <Date>20120927</Date>
+      </PublishingDate>
+      <SalesRights>
+        <SalesRightsType>01</SalesRightsType>
+        <Territory>
+          <RegionsIncluded>WORLD</RegionsIncluded>
+        </Territory>
+      </SalesRights>
+    </PublishingDetail>
+
+    <ProductSupply>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>03</SupplierRole>
+          <SupplierName>My Supplier Name</SupplierName>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <Price>
+          <PriceType>02</PriceType>
+          <PriceAmount>9.99</PriceAmount>
+          <CurrencyCode>USD</CurrencyCode>
+          <Territory>
+            <CountriesIncluded>US</CountriesIncluded>
+          </Territory>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
+  </Product>
+
+</ONIXMessage>
