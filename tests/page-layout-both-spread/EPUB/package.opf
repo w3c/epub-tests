@@ -14,8 +14,7 @@
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#property-layout-local</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#page-spread-both</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#page-spread-both-pre-pag</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#page-spread-both-dir</meta>
-    <meta property="dcterms:modified">2022-05-12T00:00:00Z</meta>
+    <meta property="dcterms:modified">2022-07-01T00:00:00Z</meta>
     <meta property="rendition:layout">pre-paginated</meta>
   </metadata>
   <manifest>
