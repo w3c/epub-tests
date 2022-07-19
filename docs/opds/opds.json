@@ -47,6 +47,74 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-svg-icb_multi",
+                "title": "SVG contents have different ICB values in FXL",
+                "author": "Ivan Herman",
+                "description": "The same SVG content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
+                "collection": "Fixed Layout",
+                "modified": "2022-06-28T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-svg-icb_multi.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-xhtml-icb_multi",
+                "title": "XHTML contents have different ICB values in FXL",
+                "author": "Ivan Herman",
+                "description": "The same XHTML content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
+                "collection": "Fixed Layout",
+                "modified": "2022-06-28T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-xhtml-icb_multi.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-linked-records",
                 "title": "Package processed with linked metadata record",
                 "author": "Matthew Chan",
