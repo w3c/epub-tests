@@ -22,11 +22,7 @@
           if (ers !== undefined) {
             const div_pass = document.getElementById('pass');
             const div_fail = document.getElementById('fail');
-            const ers_name = document.getElementById('ers_name');
-            const ers_version = document.getElementById('ers_version');
 
-            ers_name.innerText = ers.name;
-            ers_version.innerText = ers.version;
             div_fail.style.display = 'none';
             div_pass.style.display = 'block';
           }
@@ -46,12 +42,7 @@
     </div>
 
     <div id="pass" style="display: none">
-      <p>The reading system implements the <code>epubReadingSystem</code> object, with the following properties:</p>
-      <ul>
-        <li>Reading System Name: <span id="ers_name"></span></li>
-        <li>Reading System Version: <span id="ers_version"></span></li>
-      </ul>
-      <p>Test passes, unless either of the two values are set to <code>undefined</code>.</p>
+      <p>The reading system implements the <code>epubReadingSystem</code> object. Test passes.</p>
     </div>
 
   </body>

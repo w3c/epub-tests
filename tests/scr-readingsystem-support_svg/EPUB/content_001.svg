@@ -20,11 +20,6 @@
           if (ers !== undefined) {
             const ers_passes = document.getElementById('ers_passes');
             const ers_fail = document.getElementById('ers_fails');
-            const ers_name = document.getElementById('ers_name');
-            const ers_version = document.getElementById('ers_version');
-
-            ers_name.replaceChildren(document.createTextNode(ers.name));
-            ers_version.replaceChildren(document.createTextNode(ers.version));
 
             ers_fail.style.display = 'none';
             ers_passes.style.display = 'block';
@@ -71,9 +66,7 @@
     <g transform="translate(0,-38)">
       <text x="150" y="125">The reading system</text>
       <text x="150" y="132">implements the <tspan class="ers">epubReadingSystem</tspan> object.</text>
-      <text x="150" y="139">Reading System Name: <tspan id="ers_name"></tspan></text>
-      <text x="150" y="146">Reading System Version: <tspan id="ers_version"></tspan></text>
-      <text x="150" y="153">Test passes unless one of the values is undefined.</text>
+      <text x="150" y="139">Test passes.</text>
     </g>
   </g>
 
