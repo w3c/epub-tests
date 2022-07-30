@@ -39,6 +39,8 @@
         "fxl-svg-icb_multi": null,
         "fxl-xhtml-icb": null,
         "fxl-xhtml-icb_multi": null,
+        "fxl-xhtml-icb_multi_declarations": null,
+        "fxl-xhtml-icb_units": null,
         "mol-audio": null,
         "mol-audio-exceeding-clipend": null,
         "mol-audio-no-clipbegin": null,
