@@ -12,7 +12,7 @@
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-svg-rs-embed</meta>
-    <meta property="dcterms:modified">2021-05-25T00:00:00Z</meta>
+    <meta property="dcterms:modified">2022-08-02T00:00:00Z</meta>
   </metadata>
   <manifest>
     <item id="content_001" properties="svg" href="content_001.xhtml" media-type="application/xhtml+xml" />
