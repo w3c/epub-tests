@@ -1,12 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
   <head>
-    <title>Duplicate rendition override: pre-paginated page</title>
+    <title>Override with a pre-paginated spine item: pre-paginated page</title>
     <meta name="viewport" content="width=1000, height=600" />
     <link rel="stylesheet" href="fixed.css" />
   </head>
-  <body id="p1">
+  <body>
   	<div style="position: absolute; top: 0; left: 0; background-color: red; width: 1000px; height: 600px"></div>
   	<div style="position: absolute; top: 0; left: 0; background-color: green; width: 600px; height: 300px"></div>
-  	<p>Test passes if the next page is displayed as a regular, reflowable way.</p>
+  	<p>This page should be pre-paginated, with a green rectangle on</p>
+  	<p class="second">top of a red one, both starting at the upper left corner.</p>
   </body>
 </html>
