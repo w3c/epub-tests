@@ -73,6 +73,7 @@
         "ocf-url_parse-leaking-relative": null,
         "ocf-url_parse-path-absolute": null,
         "ocf-url_relative": null,
+        "ocf-zip-comp": null,
         "ocf-zip-mult": null,
         "page-layout-both": null,
         "page-layout-both-spread": null,
