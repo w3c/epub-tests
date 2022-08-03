@@ -8,7 +8,7 @@
        */ 
       function test_support() {
         const report = document.getElementById('scripting_support');
-        report.textContent = 'This is the content of an iframe; this Reading System also supports scripting in an iframe, which makes this test relevant.';
+        report.textContent = 'This is the content of an iframe; this reading system also supports scripting in an iframe, which makes this test relevant.';
 
         const parent_content = window.parent.document.getElementById('modified_content');
         parent_content.textContent = "If this text appears then a container-constrained script running in an iframe could modify the host's DOM. This is disallowed in EPUB 3.3, meaning that the test fails."
