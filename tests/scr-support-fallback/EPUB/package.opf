@@ -4,11 +4,11 @@
     <dc:coverage>Scripting</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2022-08-04</dc:date>
-    <dc:description>Checks whether the reading system follows a scripting content fallback in case scripting is not supported.</dc:description>
+    <dc:description>Checks whether the reading system follows a fallback for scripting content in case scripting is not supported.</dc:description>
     <dc:identifier id="pub-id">scr-support-fallback</dc:identifier>
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
-    <dc:title>Support for fallback scripted content</dc:title>
+    <dc:title>Support of fallback for scripted content</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-scripted-flbk</meta>
