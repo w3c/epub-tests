@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Support for fallback scripted content</title>
+    <script>
+      /**
+       * A simple test that proves that scripting is enabled.
+       */ 
+      function test_support() {
+        const report = document.getElementById('scripting_support');
+        report.textContent = 'This reading system supports scripting. Because the fallback feature is therefore unused, this test is not relevant.';
+      }
+      window.addEventListener('load', test_support);
+    </script>
+  </head>
+  <body>
+    <p id="scripting_support">This reading system does not support scripting. The content fallback page should be displayed here;
+      as it is not the case, the test fails.
+    </p>
+  </body>
+</html>
