@@ -115,6 +115,108 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_behave-as-global",
+                "title": "Override with a reflowable spine item",
+                "author": "Ivan Herman",
+                "description": "Pre-paginated document, with a spine item overriding the global setting to use reflowable layout.",
+                "collection": "Fixed Layout",
+                "modified": "2022-08-02T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-spine-overrides_behave-as-global.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_behave-as-global-bis",
+                "title": "Override with a pre-paginated spine item",
+                "author": "Ivan Herman",
+                "description": "Reflowable document, with a spine item overriding the global setting to use pre-paginated layout.",
+                "collection": "Fixed Layout",
+                "modified": "2022-08-02T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-spine-overrides_behave-as-global-bis.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_duplicate",
+                "title": "Duplicate rendition override",
+                "author": "Ivan Herman",
+                "description": "Pre-paginated document, with a spine item overriding the global setting to use reflowable layout, but repeating the override property value back to pre-paginated. The second setting must be ignored.",
+                "collection": "Fixed Layout",
+                "modified": "2022-08-02T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-spine-overrides_duplicate.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-support_svg",
                 "title": "epubReadingSystem object support in a spine-level SVG",
                 "author": "Ivan Herman",
