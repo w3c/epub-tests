@@ -138,6 +138,8 @@
         "pub-xml-names": null,
         "pub-xml-non-validating_invalid": null,
         "pub-xml-non-validating_unclosed": null,
+        "scr-not-support_ccscript-modify-host": null,
+        "scr-not-support_ccscript-modify-size": null,
         "scr-readingsystem-features": null,
         "scr-readingsystem-support": null,
         "scr-readingsystem-support_iframe": null,

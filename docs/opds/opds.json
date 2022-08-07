@@ -13,6 +13,74 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-not-support_ccscript-modify-host",
+                "title": "Container-constrained script and host's DOM",
+                "author": "Ivan Herman",
+                "description": "Checks whether the reading system allows a container-constrained script (in an iframe) to modify the \"host\" content's DOM.",
+                "collection": "Scripting",
+                "modified": "2022-08-03T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-not-support_ccscript-modify-host.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-not-support_ccscript-modify-size",
+                "title": "Container-constrained script and iframe dimensions",
+                "author": "Ivan Herman",
+                "description": "Checks whether the reading system allows a container-constrained script (in an iframe) to modify the enclosing iframe's dimensions.",
+                "collection": "Scripting",
+                "modified": "2022-08-03T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-not-support_ccscript-modify-size.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-embedded",
                 "title": "SVG embedded in XHTML content",
                 "author": "Dan Lazin",
