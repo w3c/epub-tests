@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Container-constrained script and host's DOM</title>
+  </head>
+  <body>
+    <p>Note that the test relies on the availability of the <code>iframe</code> element in HTML. If no content appears below this line in a box, or the
+      box contains an error message, it means that the <code>iframe</code> feature is not supported, and the test fails.</p>
+
+    <iframe src="iframe_content.xhtml" width="500" height="70" style="border: solid;" title="Embedded iframe to check the requirement on container-constrained scripts"></iframe>
+
+
+    <p id="modified_content">The script in the iframe <em>must not</em> be able to modify this text. 
+      If indeed this text is visible, the test passes.</p>
+
+
+  </body>
+</html>

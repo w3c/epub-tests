@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Container-constrained script and iframe dimensions</title>
+  </head>
+  <body>
+    <p>Note that the test relies on the availability of the <code>iframe</code> element in HTML. If no content appears below this line in a box, or the
+      box contains an error message, it means that the <code>iframe</code> feature is not supported, and the test fails.</p>
+
+    <iframe id="the_frame" src="iframe_content.xhtml" width="500" height="70" style="border: solid;" title="Embedded iframe to check the requirement on container-constrained scripts"></iframe>
+
+    <p>If the iframe appears in a 200×200 square instead of a 500×70 rectangle, the container-constrained script running in an iframe could modify the dimensions of the containing rectangle. This is disallowed in EPUB 3.3, meaning that the test fails. Otherwise, the test passes.</p>
+  </body>
+</html>

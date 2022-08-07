@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Container-constrained script and iframe dimensions – the iframe content</title>
+    <script>
+      /**
+       * A simple test that proves that scripting is enabled and then tries to modify the host's
+       * DOM
+       */ 
+      function test_support() {
+        const report = document.getElementById('scripting_support');
+        report.textContent = 'This is the content of an iframe; this reading system also supports scripting in an iframe, which makes this test relevant.';
+
+        const parent_content = window.parent.document.getElementById('the_frame');
+        parent_content.width = 200;
+        parent_content.height = 200;
+      }
+      window.addEventListener('load', test_support);
+    </script>
+  </head>
+  <body>
+    <p id="scripting_support">This is the content of an iframe. However, this reading system does not support scripting in an iframe; the test is not relevant.
+    </p>
+  </body>
+</html>
