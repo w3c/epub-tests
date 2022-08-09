@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage>Media Overlays</dc:coverage>
+    <dc:creator>Ivan Herman</dc:creator>
+    <dc:date>2022-08-09</dc:date>
+    <dc:description>Tests whether the Reading System supports playback of XHTML content documents with content switching automatically as playback goes on.</dc:description>
+    <dc:identifier id="pub-id">mol-support_xhtml-load-next</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
+    <dc:title>MO playback switching XHTML content</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+    <meta property="belongs-to-collection">should</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-support-xhtml-load-next</meta>
+    <meta property="dcterms:modified">2022-08-09T00:00:00Z</meta>
+    <meta property="media:duration" refines="#md-smil">00:02:32.732</meta>
+    <meta property="media:duration">0:02:32.732</meta>
+    <meta property="media:active-class">active-item</meta>
+    <meta property="media:playback-active-class">rendered-with-mo</meta>
+  </metadata>
+  <manifest>
+    <item id="content_001" href="content_001.xhtml"  media-type="application/xhtml+xml" />
+    <item id="mobydick_1"  href="mobydick_1.xhtml"   media-type="application/xhtml+xml" media-overlay="md-smil" />
+    <item id="mobydick_2"  href="mobydick_2.xhtml"   media-type="application/xhtml+xml" media-overlay="md-smil" />
+    <item id="nav"         href="nav.xhtml"          media-type="application/xhtml+xml" properties="nav"   />
+    <item id="md-mp4"      href="audio/mobydick.mp4" media-type="audio/mp4"/>
+    <item id="md-smil"     href="mo/mobydick.smil"   media-type="application/smil+xml"/>
+    <item id="style"       href="highlights.css"     media-type="text/css" />
+  </manifest>
+  <spine>
+    <itemref idref="content_001" />
+    <itemref idref="mobydick_1" />
+    <itemref idref="mobydick_2" />
+  </spine>
+</package>
