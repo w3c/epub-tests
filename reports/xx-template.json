@@ -52,6 +52,7 @@
         "mol-embed": null,
         "mol-embed_deactivate_playback": null,
         "mol-embed_fxl": null,
+        "mol-ignore": null,
         "mol-navigation": null,
         "mol-timing-synchronization": null,
         "mol-timing-synchronization_fxl": null,
