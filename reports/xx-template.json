@@ -55,6 +55,8 @@
         "mol-ignore": null,
         "mol-navigation": null,
         "mol-support_xhtml": null,
+        "mol-support_xhtml-load": null,
+        "mol-support_xhtml-load-next": null,
         "mol-timing-synchronization": null,
         "mol-timing-synchronization_fxl": null,
         "mol-timing-synchronization_multiple_audio": null,
