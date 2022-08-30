@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Support for obfuscated fonts</title>
+    <style>
+      @font-face {
+        font-family: 'Lobster';
+        src: url(fonts/Lobster.ttf) format('truetype');
+      }
+      .font-truetype {
+        font-family: 'Lobster';
+      }
+    </style>
+  </head>
+  <body>
+    <p>Test passes if the following text is rendered with an unusual TrueType font, much like the image below: 
+      <q class="font-truetype">This should be an unusual TrueType font.</q></p>
+
+    <p>Here is the image version:</p>
+    <img src="media/text_image.png" 
+        alt="The text 'This should be an unusual TrueType font.' displayed in an unusual bold and cursive font"/>
+  </body>
+</html>
