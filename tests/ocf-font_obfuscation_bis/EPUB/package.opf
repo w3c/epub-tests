@@ -4,11 +4,11 @@
     <dc:coverage>Open Container Format</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2022-09-06</dc:date>
-    <dc:description>An obfuscated (TrueType) font should be displayed after de-obfuscation.</dc:description>
-    <dc:identifier id="pub-id">ocf-font_obfuscation</dc:identifier>
+    <dc:description>An obfuscated (TrueType) font should not be displayed after de-obfuscation, because the obfuscation used a different publication id.</dc:description>
+    <dc:identifier id="pub-id">ocf-font_obfuscation-bis</dc:identifier>
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
-    <dc:title>Support for obfuscated fonts</dc:title>
+    <dc:title>Fonts obfuscation and unique id</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="belongs-to-collection">should</meta>
