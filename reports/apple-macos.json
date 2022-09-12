@@ -1,7 +1,7 @@
 {
-    "name": "(Implementation's name)",
-    "ref": "https://www.example.com",
-    "variant" : "",
+    "name": "Apple Books",
+    "ref": "https://www.apple.com/apple-books/",
+    "variant" : "macOS",
     "tests": {
         "cnt-css-fonts": null,
         "cnt-mathml-support": null,
