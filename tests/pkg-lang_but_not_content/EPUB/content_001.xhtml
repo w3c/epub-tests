@@ -4,9 +4,16 @@
     <meta charset="utf-8"/>
   </head>
   <body>
-    <p>Test passes if the following quotation is surrounded by the pair of '“' and '”' quotation marks (used in English) as opposed to the pair of '«' and '»' characters (used in French).</p>
+    <p>Test passes if the following quotation is not surrounded by the pair '«' and '»' characters (used in French) but, typically,
+      the '“' and '”' quotation marks.</p>
 
     <blockquote><q>Le mieux est l'ennemi du bien</q></blockquote>
+
+    <p>
+      Note, however, that the exact choice of quotation marks, in case the language is undefined (which is the case for this page),
+      is not specified. While most of the browsers would use the '“' and '”' marks, others may base their choice on the 
+      locale they run in. <em>It is therefore important to avoid running this test with an underlying locale language set to French.</em>
+    </p>
 
   </body>
 </html>
