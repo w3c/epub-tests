@@ -17,7 +17,7 @@ This page explains how to write new tests.
   folder into a compressed EPUB file.
    
    * On macOS, a command in Terminal can zip EPUB. Go to the folder containing the files and enter the following:
-   `zip -X0 book.epub mimetype; zip -Xur9D book.epub META-INF OEBPS -x ‘*.DS_Store’ `
+   `zip -X0 book.epub mimetype; zip -Xur9D book.epub META-INF EPUB -x ‘*.DS_Store’ `
 
 * Ensure you have several EPUB reading systems available to validate your tests (that is, validate that you have written the
   test correctly; many tests will nonetheless fail in individual reading systems). For example:
@@ -208,13 +208,13 @@ JSON file is as follows:
 
 * `name`: The name of the reading system.
 
-* `variant` (optional): The name of the reading system variant. Typical values may be `Android,` `iOS`, or `Web`, if one
-  implementation (i.e., sharing the same `name` value) has specific versions running in those environments.
+* `variant` (optional): The name or properties of the reading system variant. Typical values may be `Android,` `iOS`, or `Web`, if one
+  implementation (i.e., sharing the same `name` value) has specific versions running in those environments. In addition to the properties of the reading system, testers may also include information on how the tests were run, for example, if a screen reader was used with the reading system.
 
 * `ref` (optional): A URL that creates a link on the name of the reading system in the implementation report.
 
 * `tests`: An object with the list of the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
-  value of `true`, `false`, or `null` for a test that passes, fails, or is not tested, respectively. If a test is not listed, or its value is `null`, the implementation report will show a value of N/A, indicating that the implementation has not run the test.
+  value of `true`, `false`, or `null` for a test that passes, fails, or is not tested, respectively. If a test is not listed, or its value is `null`, the implementation report will show a value of N/A, indicating that the implementation has not run the test or that the test is not applicable to that reading system.
 
 Here is an example of a small test report:
 
@@ -222,6 +222,7 @@ Here is an example of a small test report:
 {
     "name"  : "ACME Books",
     "ref"   : "https://www.example.org/acme",
+    "variant" : "iOS, v1.0",
     "tests" : {
         "pub-cmt-gif": true,
         "pub-cmt-jpeg": true,
