@@ -1,7 +1,6 @@
 {
     "name": "(Implementation's name)",
     "ref": "https://www.example.com",
-    "variant": "(Implementation OS, Version, and any other important details)",
     "tests": {
         "cnt-css-fonts": null,
         "cnt-mathml-support": null,
