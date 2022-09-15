@@ -13,6 +13,40 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-lang_but_not_content",
+                "title": "Content document must not inherit package language settings",
+                "author": "Ivan Herman",
+                "description": "The package document's language is set to 'fr' but the content document is not annotated for language. The content document should not become automatically 'fr' but should be the default 'en'.",
+                "collection": "Internationalization",
+                "modified": "2022-09-14T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-lang_but_not_content.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-font_obfuscation",
                 "title": "Support for obfuscated fonts",
                 "author": "Ivan Herman",
@@ -2304,40 +2338,6 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-dir_but_not_content.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-lang_but_not_content",
-                "title": "Content document must not inherit package language settings",
-                "author": "Ivan Herman",
-                "description": "The package document's language is set to 'fr' but the content document is not annotated for language. The content document should not become automatically 'fr' but should be the default 'en'.",
-                "collection": "Internationalization",
-                "modified": "2022-01-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-lang_but_not_content.epub"
                 }
             ],
             "images": [
