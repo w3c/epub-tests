@@ -1,4 +1,14 @@
 <svg version="1.1" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+
+
+  <defs>
+    <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" fill="green" fill-opacity="0.5"/>
+    </pattern>
+  </defs>
+
+
+
   <script>//<![CDATA[
       /**
       * A simple test that proves that scripting is enabled.
@@ -19,7 +29,7 @@
       fill: white;
     }
   </style>
-  <rect width="100%" height="100%" fill="red" />
+  <rect width="100%" height="100%" stroke="black" fill="url(#star)" />
   <circle cx="150" cy="100" r="80" fill="green" />
   <g transform="translate(0,-35)">
     <text x="150" y="125">The Reading System</text>
