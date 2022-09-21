@@ -1,7 +1,7 @@
 {
     "name": "Kobo Books",
     "ref": "https://www.kobo.com",
-    "variant": "eReader v4.33"
+    "variant": "eReader v4.33",
     "tests": {
         "cnt-css-fonts": false,
         "cnt-mathml-support": true,
