@@ -23,5 +23,6 @@
   <spine>
     <itemref idref="content_001" />
     <itemref idref="content_002" properties="rendition:align-x-center" />
+    <itemref idref="content_003" />
   </spine>
 </package>
