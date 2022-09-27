@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage>Layout Rendering</dc:coverage>
+    <dc:creator>Wendy Reid</dc:creator>
+    <dc:date>2022-09-17</dc:date>
+    <dc:description>For reflowable content, reading systems that support align-x-center must center each page.</dc:description>
+    <dc:identifier id="pub-id">lay-reflow-align-x-center</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
+    <dc:title>reflow align-x-center</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#reflow-align-x-center</meta>
+    <meta property="dcterms:modified">2022-09-17T00:00:00Z</meta>
+  </metadata>
+  <manifest>
+    <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
+    <item id="content_002" href="content_002.xhtml" media-type="application/xhtml+xml" />
+    <item id="content_003" href="content_003.xhtml" media-type="application/xhtml+xml" />
+    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
+  </manifest>
+  <spine>
+    <itemref idref="content_001" />
+    <itemref idref="content_002" properties="rendition:align-x-center" />
+    <itemref idref="content_003" />
+  </spine>
+</package>
