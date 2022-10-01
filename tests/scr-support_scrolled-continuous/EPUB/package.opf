@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="pub-id" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:coverage>Scripting</dc:coverage>
@@ -8,7 +7,7 @@
     <dc:identifier id="pub-id">scr-support_scrolled-continuous</dc:identifier>
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
-    <dc:title>rendition:flow set to scrolled-continuous when scripting is supported</dc:title>
+    <dc:title>scr-support_scrolled-continuous</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="belongs-to-collection">should</meta>

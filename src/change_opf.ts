@@ -92,4 +92,4 @@ async function main(dir_name: string, transform: (current: string) => string): P
 
 // =========================== Entry point for adding expressions for rights ======== 
 
-main(Constants.TESTS_DIR_DEBUG, title_to_id);
+main(Constants.TESTS_DIR, title_to_id);

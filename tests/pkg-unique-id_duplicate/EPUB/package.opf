@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:coverage>Package Documents</dc:coverage>
@@ -11,17 +10,17 @@
     <dc:identifier id="pub-id">pkg-unique-id</dc:identifier>
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
-    <dc:title>Unique identifier reused</dc:title>
+    <dc:title>pkg-unique-id</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33-rs/#confreq-rs-pkg-unique-id</meta>
     <meta property="dcterms:modified">2021-01-18T00:00:00Z</meta>
   </metadata>
   <manifest>
-    <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
-    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
+    <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
   <spine>
-    <itemref idref="content_001" />
+    <itemref idref="content_001"/>
   </spine>
 </package>
