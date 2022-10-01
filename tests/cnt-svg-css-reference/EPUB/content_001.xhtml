@@ -2,11 +2,15 @@
   <head>
     <title>CSS not applied to referenced SVG</title>
     <style type="text/css">
-      .fil0 {fill: red !important;}
+        .fil0 {
+          fill: url(#star);
+          stroke: green;
+          stroke-width: 15;
+        }
     </style>
   </head>
   <body>
-    <p>Test passes if the image appears in green. Test fails if the image appears in red.</p>
+    <p>Test passes if the image appears in solid (green) color. Test fails if the image appears appears filled with a repeated star-shaped pattern.</p>
     <img src="img/001.svg" />
   </body>
 </html>

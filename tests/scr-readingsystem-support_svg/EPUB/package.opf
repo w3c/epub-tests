@@ -14,7 +14,7 @@
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#scripting-req-readingsystem</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-scripted-readingsystem-object</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-svg-rs-script</meta>
-    <meta property="dcterms:modified">2022-08-02T00:00:00Z</meta>
+    <meta property="dcterms:modified">2022-09-22T00:00:00Z</meta>
   </metadata>
   <manifest>
     <item id="content_001" properties="scripted" href="content_001.svg" media-type="image/svg+xml" />
