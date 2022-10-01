@@ -185,8 +185,8 @@ function create_test_data(data: ReportData): string {
         // Next is a header row
         add_child(thead, 'tr',`
             <th scope="col" class="order-asc" style="width:17%">Id</th>
-            <th scope="col" style="width:8%">Req</th>
             <th scope="col" style="width:59%">Description</th>
+            <th scope="col" style="width:8%">Req</th>
             <th scope="col" style="width:8%">Date</th>
             <th scope="col" data-nonsortable="true" style="width:4%">Specs</th>
             <th scope="col" data-nonsortable="true" style="width:4%">Ref</th>
@@ -202,8 +202,8 @@ function create_test_data(data: ReportData): string {
             td_id.className = row.required;
             td_id.id = `${row.identifier}`;
 
-            add_child(tr, 'td', row.required);
             add_child(tr, 'td', row.description);
+            add_child(tr, 'td', row.required);
 
             const date: string[] = row.modified.split('T')[0].split('-');
             date[0] = `’${date[0].charAt(2)}${date[0].charAt(3)}`;
