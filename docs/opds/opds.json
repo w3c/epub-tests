@@ -4950,7 +4950,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-unique-id",
-                "title": "pkg-unique-id",
+                "title": "pkg-unique-id_duplicate",
                 "author": "Dave Cramer",
                 "description": "The package document's dc:identifier is identical across two publications. The reading system should display both publications independently.",
                 "collection": "Package Documents",
