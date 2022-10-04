@@ -1,0 +1,11 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>If viewport is missing, device sizes should be used for ICB</title>
+    <link rel="stylesheet" href="fixed.css" />
+  </head>
+  <body id="p1">
+  	<div style="position: absolute; top: 0; left: 0; width: 1000px; height: 1000px" class="solid"></div>
+  	<div style="position: absolute; top: 0; left: 0; width: 900px; height: 600px"   class="pattern"></div>
+  	<p>Test passes if you only see a grid pattern on white background on this page with a solid (red) rectangle on the right and bottom, and filling the device's full width and height (similar to the output of <code>lay-fxl-xhtml-icb_device_sizes</code>).</p>
+  </body>
+</html>
