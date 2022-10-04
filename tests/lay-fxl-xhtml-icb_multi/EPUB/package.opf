@@ -12,7 +12,7 @@
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-fxl-icb-html</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-fxl-rs-xhtml-icb</meta>
-    <meta property="dcterms:modified">2022-09-21T00:00:00Z</meta>
+    <meta property="dcterms:modified">2022-10-04T00:00:00Z</meta>
     <meta property="rendition:layout">pre-paginated</meta>
   </metadata>
   <manifest>
