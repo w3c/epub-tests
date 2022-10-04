@@ -55,9 +55,9 @@ This page explains how to write new tests.
 
 1. Claim the normative statement by [creating an issue](https://github.com/w3c/epub-tests/issues/new) in the
    [w3c/epub-tests](https://github.com/w3c/epub-tests/) repo. For example, see the issue
-   [Test obfuscated resources (fonts)](https://github.com/w3c/epub-tests/issues/39).
+   [“Test obfuscated resources (fonts)”](https://github.com/w3c/epub-tests/issues/39).
 
-1. If you are an owner of [w3c/epub-tests](https://github.com/w3c/epub-tests/), create a branch on that repo for your new
+1. If you are a co-owner of [w3c/epub-tests](https://github.com/w3c/epub-tests/), create a branch on that repo for your new
    test. Otherwise, fork the repo and create a branch on your fork. (It's easier for reviewers to clone a PR to validate the
    test if it's in the original repo.)
 
@@ -70,7 +70,7 @@ This page explains how to write new tests.
 1. Describe the test by adding the [metadata](#metadata) documented below to the package document.
 
 1. Once your test is complete, drag the test's folder onto [eCanCrusher](https://www.docdataflow.com/ecancrusher/) to
-   compress it into an EPUB file, or create a compressed EPUB file by some other means.
+   compress it into an EPUB file, or create a compressed EPUB file by some other means. (Or use any other means to produce a valid EPUB file.)
 
 1. Open the EPUB file in one or more reading systems to verify it behaves as expected. It is common for reading systems
    not to meet requirements, but if you cannot find *any* reading system that processes the test as expected, that may
@@ -133,12 +133,11 @@ The package document for each test must contain the following metadata, which is
 * `dc:identifier`: A unique identifier for the test (unique across _all_ tests). This is typically the test’s directory name.
   It is used as an anchor in the reports, so its format must be suitable as an HTML fragment identifier.
 
-* `dc:title`: The title of the test, in sentence case. It is used in the test description and should be as concise as
-  possible.
+* `dc:title`: The title of the test. In general, this value is _**identical**_ to the value of `dc:identifier`, except for those cases when the subject of the test is the treatment of the value of `dc:title` itself (e.g., testing the base direction set on the title).
 
 * `dc:creator` (may be repeated): Creator(s) of the tests.
 
-* `dc:description`: A longer description of the test for the generated test report.
+* `dc:description`: A short description of the test for the generated test report.
 
 * `dc:coverage`: Which section of the report the test should be listed in. The report has a separate table for each section
    to make it more readable. The current list of sections is listed in a
@@ -151,8 +150,7 @@ The package document for each test must contain the following metadata, which is
    generated report.
 
 * `dcterms:alternative` (optional, as part of a `meta` element): Overrides the value of `dc:title` in the generated test
-  report. This should be used if the subject of the test is the value of `dc:title` itself (e.g., testing the base direction
-  of the `title` element).
+  report. This item is only necessary if the value of `dc:title` is _not_ set to the value of `dc:identifier`; in that case this value must be set to the value of `dc:identifier`.
 
 * `belongs-to-collection` (optional, as part of a `meta` element): The value is `must`, `should`, or `may`, and it specifies whether the test corresponds to a  _must_ (or _must not_), _should_ (or _should not_), or _may_ (or _may not_) statement in the specification, respectively. If the metadata is not provided, or any other value is used, the default `must` value is used. 
 
@@ -161,7 +159,7 @@ The package document for each test must contain the following metadata, which is
 * `dcterms:rightsHolder` as part of a `link` element: the holder of the rights expressed by `dcterms:rights`. The `href` attribute value should be set to `https://www.w3.org/` in case the the rights value is set to the W3C Software and Document Notice and License, otherwise to a URL identifying the right holder.
 
 
-In this example, only the relevant metadata items are shown (a test may have additional, test-specific metadata items):
+In this example, only the relevant metadata items are shown (a test may have additional, test-specific metadata items). Note that the `dcterms:alternative` metadata is set to `pkg-dir_rtl-root-unset` because the test's subject is `dc:title`. In general, the value of `dc:title` must be identical to the value of `dc:identifier`.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -182,7 +180,7 @@ In this example, only the relevant metadata items are shown (a test may have add
   <link rel="dcterms:rights" 
     href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
   <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-  <meta property="dcterms:alternative">Title's base direction set to RTL</meta>
+  <meta property="dcterms:alternative">pkg-dir_rtl-root-unset</meta>
   <meta property="belongs-to-collection">must</meta>
   <meta property="dcterms:isReferencedBy">
     https://www.w3.org/TR/epub-33/#attrdef-dir</meta>

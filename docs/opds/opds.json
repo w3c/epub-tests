@@ -14,7 +14,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-support",
-                "title": "SVG content document",
+                "title": "cnt-svg-support",
                 "author": "Dan Lazin",
                 "description": "An SVG image is displayed as a content document (not as part of an XHTML file).",
                 "collection": "Content Documents",
@@ -48,7 +48,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-svg-icb_multi",
-                "title": "SVG contents have different ICB values in FXL",
+                "title": "lay-fxl-svg-icb_multi",
                 "author": "Ivan Herman",
                 "description": "The same SVG content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
                 "collection": "Fixed Layout",
@@ -82,7 +82,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-timing-synchronization_svg",
-                "title": "Basic media overlay in SVG",
+                "title": "mol-timing-synchronization_svg",
                 "author": [
                     "Ivan Herman",
                     "Marisa DeMeglio"
@@ -119,7 +119,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-svg",
-                "title": "SVG image",
+                "title": "pub-cmt-svg",
                 "author": "Dan Lazin",
                 "description": "An SVG image is displayed as part of the XHTML content (as a reference, not embedded).",
                 "collection": "Core Media Types",
@@ -153,7 +153,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-support_iframe_svg",
-                "title": "epubReadingSystem object support in an SVG within an iframe",
+                "title": "scr-readingsystem-support_iframe_svg",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system implements the epubReadingSystem object in container-constrained SVG document (e.g., an iframe).",
                 "collection": "Scripting",
@@ -187,7 +187,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-support_svg",
-                "title": "epubReadingSystem object support in a spine-level SVG",
+                "title": "scr-readingsystem-support_svg",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system implements the epubReadingSystem object in a spine-level SVG document.",
                 "collection": "Scripting",
@@ -221,7 +221,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-layout-default",
-                "title": "Default pagination",
+                "title": "lay-fxl-layout-default",
                 "author": "Ivan Herman",
                 "description": "The default value for pagination must be 'reflowable'.",
                 "collection": "Fixed Layout",
@@ -255,7 +255,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-layout-pre-paginated",
-                "title": "rendition:layout pre-paginated spine order",
+                "title": "lay-fxl-layout-pre-paginated",
                 "author": "Wendy Reid",
                 "description": "When rendition:layout is pre-paginated, reading systems must display one page per spine item.",
                 "collection": "Fixed Layout",
@@ -289,7 +289,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-layout-pre-paginated-spreads",
-                "title": "rendition:layout pre-paginated spreads",
+                "title": "lay-fxl-layout-pre-paginated-spreads",
                 "author": "Wendy Reid",
                 "description": "When the layout is pre-paginated, pages are displayed with no gaps when in synthetic spreads.",
                 "collection": "Fixed Layout",
@@ -323,7 +323,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-orientation-default",
-                "title": "rendition:orientation default",
+                "title": "lay-fxl-orientation-default",
                 "author": "Wendy Reid",
                 "description": "rendition:orientation is not specified. Therefore, it has the value \"auto\" and reading systems should display the EPUB in the orientation of the device.",
                 "collection": "Fixed Layout",
@@ -357,7 +357,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-orientation-landscape",
-                "title": "rendition:orientation landscape",
+                "title": "lay-fxl-orientation-landscape",
                 "author": "Wendy Reid",
                 "description": "rendition:orientation is landscape, Reading Systems should either display the content in landscape or inform the user it should be.",
                 "collection": "Fixed Layout",
@@ -391,7 +391,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-page-spread-combined",
-                "title": "rendition:page-spread combined",
+                "title": "lay-fxl-page-spread-combined",
                 "author": "Wendy Reid",
                 "description": "When rendition:page-spread-right and -left are applied to adjacent spine items, they should be displayed in a synthetic spread.",
                 "collection": "Fixed Layout",
@@ -425,7 +425,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-page-spread-left",
-                "title": "rendition:page-spread-left",
+                "title": "lay-fxl-page-spread-left",
                 "author": "Wendy Reid",
                 "description": "When rendition:page-spread-left is applied to a spine item, it should be displayed on the left side of the synthetic spread.",
                 "collection": "Fixed Layout",
@@ -459,7 +459,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-page-spread-right",
-                "title": "rendition:page-spread-right",
+                "title": "lay-fxl-page-spread-right",
                 "author": "Wendy Reid",
                 "description": "When rendition:page-spread-right is applied to a spine item, it should be displayed on the right side of the synthetic spread.",
                 "collection": "Fixed Layout",
@@ -493,7 +493,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-auto",
-                "title": "rendition:spread auto",
+                "title": "lay-fxl-spread-auto",
                 "author": "Wendy Reid",
                 "description": "When rendition:spread is \"auto\", the reading system can choose to display spine items in a synthetic spread.",
                 "collection": "Fixed Layout",
@@ -527,7 +527,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-both",
-                "title": "rendition:spread both",
+                "title": "lay-fxl-spread-both",
                 "author": "Wendy Reid",
                 "description": "When rendition:spread is \"both\", the content should appear in a synthetic spread regardless of reading system orientation.",
                 "collection": "Fixed Layout",
@@ -561,7 +561,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-default",
-                "title": "rendition:spread default",
+                "title": "lay-fxl-spread-default",
                 "author": "Wendy Reid",
                 "description": "The default value for rendition:spread should be \"auto\" if not specified. When rendition:spread is \"auto\", the reading system can choose to display spine items in a synthetic spread.",
                 "collection": "Fixed Layout",
@@ -595,7 +595,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-landscape",
-                "title": "rendition:spread landscape",
+                "title": "lay-fxl-spread-landscape",
                 "author": "Wendy Reid",
                 "description": "If rendition:spread is \"landscape\", synthetic spreads should be rendered only when the reading system is in landscape orientation.",
                 "collection": "Fixed Layout",
@@ -629,7 +629,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-none",
-                "title": "rendition:spread none",
+                "title": "lay-fxl-spread-none",
                 "author": "Wendy Reid",
                 "description": "When rendition:spead is \"none\", spine items must not appear in synthetic spreads.",
                 "collection": "Fixed Layout",
@@ -663,7 +663,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb",
-                "title": "XHTML content clipped outside viewport",
+                "title": "lay-fxl-xhtml-icb",
                 "author": "Dave Cramer",
                 "description": "XHTML content outside the initial containing block (ICB) is clipped.",
                 "collection": "Fixed Layout",
@@ -697,7 +697,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_multi",
-                "title": "XHTML contents have different ICB values in FXL",
+                "title": "lay-fxl-xhtml-icb_multi",
                 "author": "Ivan Herman",
                 "description": "The same XHTML content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
                 "collection": "Fixed Layout",
@@ -731,7 +731,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_multi_declarations",
-                "title": "Multiple viewport meta tags",
+                "title": "lay-fxl-xhtml-icb_multi_declarations",
                 "author": "Ivan Herman",
                 "description": "Only the first of multiple viewport meta tags is retained, the second is ignored.",
                 "collection": "Fixed Layout",
@@ -765,7 +765,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_units",
-                "title": "Units of length in ICB declarations",
+                "title": "lay-fxl-xhtml-icb_units",
                 "author": "Ivan Herman",
                 "description": "Units of lengths in an ICB declaration are ignored, values are in pixels.",
                 "collection": "Fixed Layout",
@@ -799,7 +799,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-page-layout-both",
-                "title": "page-layout-both",
+                "title": "lay-page-layout-both",
                 "author": "Wendy Reid",
                 "description": "If a reflowable spine item follows a pre-paginated one, it should appear on the next page.",
                 "collection": "Fixed Layout",
@@ -833,7 +833,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-page-layout-both-spread",
-                "title": "page-layout-both spread",
+                "title": "lay-page-layout-both-spread",
                 "author": "Wendy Reid",
                 "description": "If a reflowable spine item has a page-spread-* value, it must be honored.",
                 "collection": "Fixed Layout",
@@ -867,7 +867,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pkg-flow-paginated",
-                "title": "rendition:flow set to paginated",
+                "title": "lay-pkg-flow-paginated",
                 "author": [
                     "Matt Garrish",
                     "Ivan Herman"
@@ -904,7 +904,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pkg-flow-scrolled-continuous",
-                "title": "rendition:flow set to scrolled-continuous",
+                "title": "lay-pkg-flow-scrolled-continuous",
                 "author": [
                     "Matt Garrish",
                     "Ivan Herman"
@@ -941,7 +941,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pkg-flow-scrolled-doc",
-                "title": "rendition:flow set to scrolled-doc",
+                "title": "lay-pkg-flow-scrolled-doc",
                 "author": [
                     "Matt Garrish",
                     "Ivan Herman"
@@ -978,7 +978,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-rendition-flow-pre-pag",
-                "title": "rendition:flow pre-paginated",
+                "title": "lay-rendition-flow-pre-pag",
                 "author": "Wendy Reid",
                 "description": "The reading system must ignore rendition:flow properties when processing pre-paginated spine items.",
                 "collection": "Fixed Layout",
@@ -1012,7 +1012,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-reflow-align-x-center",
-                "title": "reflow align-x-center",
+                "title": "lay-reflow-align-x-center",
                 "author": "Wendy Reid",
                 "description": "For reflowable content, reading systems that support align-x-center must center each page.",
                 "collection": "Layout Rendering",
@@ -1046,7 +1046,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-viewport-meta-prop",
-                "title": "meta viewport properties",
+                "title": "lay-viewport-meta-prop",
                 "author": "Wendy Reid",
                 "description": "Reading systems must ignore rendering instructions in the meta viewport delaration other than the dimenstions.",
                 "collection": "Layout Rendering",
@@ -1080,7 +1080,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-css",
-                "title": "CSS in SVG content document",
+                "title": "cnt-svg-css",
                 "author": "Dan Lazin",
                 "description": "CSS styling is applied to an SVG content document.",
                 "collection": "Content Documents",
@@ -1114,7 +1114,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-css-inclusion",
-                "title": "CSS applied to included SVG",
+                "title": "cnt-svg-css-inclusion",
                 "author": "Dan Lazin",
                 "description": "CSS changes the color of an SVG image that is embedded in the XHTML content by inclusion.",
                 "collection": "Content Documents",
@@ -1148,7 +1148,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-lang_but_not_content",
-                "title": "Content document must not inherit package language settings",
+                "title": "pkg-lang_but_not_content",
                 "author": "Ivan Herman",
                 "description": "The package document's language is set to 'fr' but the content document is not annotated for language. The content document should not become automatically 'fr' but should be the default 'en'.",
                 "collection": "Internationalization",
@@ -1182,7 +1182,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-hyphens",
-                "title": "EPUB CSS hyphens",
+                "title": "css-epub-hyphens",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS property -epub-hyphens",
                 "collection": "Content Documents",
@@ -1216,7 +1216,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-align-last",
-                "title": "EPUB CSS text-align-last",
+                "title": "css-epub-text-align-last",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS property -epub-text-align-last",
                 "collection": "Content Documents",
@@ -1250,7 +1250,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-break",
-                "title": "FXL page-spread page-break-before",
+                "title": "fxl-page-spread-break",
                 "author": "Wendy Reid",
                 "description": "For a fixed-layout book, page-spread properties must take precedence over CSS page-break-before",
                 "collection": "Fixed Layout",
@@ -1284,7 +1284,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-font_obfuscation",
-                "title": "Support for obfuscated fonts",
+                "title": "ocf-font_obfuscation",
                 "author": "Ivan Herman",
                 "description": "An obfuscated (TrueType) font should be displayed after de-obfuscation.",
                 "collection": "Open Container Format",
@@ -1318,7 +1318,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-font_obfuscation-bis",
-                "title": "Fonts obfuscation and unique id",
+                "title": "ocf-font_obfuscation-bis",
                 "author": "Ivan Herman",
                 "description": "An obfuscated (TrueType) font should not be displayed after de-obfuscation, because the obfuscation used a different publication id.",
                 "collection": "Open Container Format",
@@ -1352,7 +1352,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-support_xhtml-load",
-                "title": "Start at MO element referring to content",
+                "title": "mol-support_xhtml-load",
                 "author": "Ivan Herman",
                 "description": "Tests whether the playback starts at the right places in the MO definition, including entries in the middle of the file.",
                 "collection": "Media Overlays",
@@ -1386,7 +1386,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-support_xhtml-load-next",
-                "title": "MO playback switching XHTML content with two MO files",
+                "title": "mol-support_xhtml-load-next",
                 "author": "Ivan Herman",
                 "description": "Tests whether the Reading System supports playback of XHTML content documents with content switching automatically as playback goes on. The switch also involves a switch of MO files.",
                 "collection": "Media Overlays",
@@ -1420,7 +1420,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-audio-exceeding-clipend",
-                "title": "Audio track stops if clipEnd exceeds length",
+                "title": "mol-audio-exceeding-clipend",
                 "author": [
                     "Ivan Herman",
                     "Marisa DeMeglio"
@@ -1457,7 +1457,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-audio-no-clipbegin",
-                "title": "Start at beginning of audio if clipBegin is missing",
+                "title": "mol-audio-no-clipbegin",
                 "author": [
                     "Ivan Herman",
                     "Marisa DeMeglio"
@@ -1494,7 +1494,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-audio-no-clipend",
-                "title": "Audio track plays until end if clipEnd is missing",
+                "title": "mol-audio-no-clipend",
                 "author": [
                     "Ivan Herman",
                     "Marisa DeMeglio"
@@ -1531,7 +1531,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-css",
-                "title": "Basic media overlay test with CSS styling",
+                "title": "mol-css",
                 "author": [
                     "Ivan Herman",
                     "Marisa DeMeglio"
@@ -1568,7 +1568,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-ignore",
-                "title": "Ignore media overlay controls",
+                "title": "mol-ignore",
                 "author": "Ivan Herman",
                 "description": "Tests whether Reading System not supporting media overlays ignores the relevant items and attributes.",
                 "collection": "Media Overlays",
@@ -1602,7 +1602,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-support_xhtml",
-                "title": "Basic audio playback with XHTML content",
+                "title": "mol-support_xhtml",
                 "author": "Ivan Herman",
                 "description": "Tests whether the Reading System supports playback for XHTML content documents.",
                 "collection": "Media Overlays",
@@ -1636,7 +1636,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-timing-synchronization_fxl",
-                "title": "Basic media overlay in fixed layout",
+                "title": "mol-timing-synchronization_fxl",
                 "author": [
                     "Ivan Herman",
                     "Wendy Reid",
@@ -1674,7 +1674,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-timing-synchronization_multiple_audio",
-                "title": "Media overlay with two audio files",
+                "title": "mol-timing-synchronization_multiple_audio",
                 "author": [
                     "Ivan Herman",
                     "Marisa DeMeglio"
@@ -1711,7 +1711,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-tts_multi",
-                "title": "Text-to-speech fallback for multiple fragments",
+                "title": "mol-tts_multi",
                 "author": "Ivan Herman",
                 "description": "Tests whether the reading system implements Text-to-Speech as a fallback when no audio content is provided. Several fragments are defined in the SMIL file.",
                 "collection": "Media Overlays",
@@ -1745,7 +1745,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-tts_single",
-                "title": "Text-to-speech fallback for a single fragment",
+                "title": "mol-tts_single",
                 "author": "Ivan Herman",
                 "description": "Tests whether the reading rystem implements text-to-speech as a fallback when no audio content is provided. Only one fragment is defined in the SMIL file.",
                 "collection": "Media Overlays",
@@ -1779,7 +1779,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support-fallback",
-                "title": "Support of fallback for scripted content",
+                "title": "scr-support-fallback",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system follows a fallback for scripting content in case scripting is not supported.",
                 "collection": "Scripting",
@@ -1813,7 +1813,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-not-support_ccscript-modify-host",
-                "title": "Container-constrained script and host's DOM",
+                "title": "scr-not-support_ccscript-modify-host",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system allows a container-constrained script (in an iframe) to modify the \"host\" content's DOM.",
                 "collection": "Scripting",
@@ -1847,7 +1847,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-not-support_ccscript-modify-size",
-                "title": "Container-constrained script and iframe dimensions",
+                "title": "scr-not-support_ccscript-modify-size",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system allows a container-constrained script (in an iframe) to modify the enclosing iframe's dimensions.",
                 "collection": "Scripting",
@@ -1881,7 +1881,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-embedded",
-                "title": "SVG embedded in XHTML content",
+                "title": "cnt-svg-embedded",
                 "author": "Dan Lazin",
                 "description": "An SVG image is embedded in the XHTML content (as inline SVG).",
                 "collection": "Content Documents",
@@ -1915,7 +1915,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/cnt-xhtml-support",
-                "title": "XHTML content document",
+                "title": "cnt-xhtml-support",
                 "author": "Dan Lazin",
                 "description": "An XHTML file is displayed as a content document.",
                 "collection": "Content Documents",
@@ -1949,7 +1949,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_behave-as-global",
-                "title": "Override with a reflowable spine item",
+                "title": "fxl-spine-overrides_behave-as-global",
                 "author": "Ivan Herman",
                 "description": "Pre-paginated document, with a spine item overriding the global setting to use reflowable layout.",
                 "collection": "Fixed Layout",
@@ -1983,7 +1983,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_behave-as-global-bis",
-                "title": "Override with a pre-paginated spine item",
+                "title": "fxl-spine-overrides_behave-as-global-bis",
                 "author": "Ivan Herman",
                 "description": "Reflowable document, with a spine item overriding the global setting to use pre-paginated layout.",
                 "collection": "Fixed Layout",
@@ -2017,7 +2017,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_duplicate",
-                "title": "Duplicate rendition override",
+                "title": "fxl-spine-overrides_duplicate",
                 "author": "Ivan Herman",
                 "description": "Pre-paginated document, with a spine item overriding the global setting to use reflowable layout, but repeating the override property value back to pre-paginated. The second setting must be ignored.",
                 "collection": "Fixed Layout",
@@ -2051,7 +2051,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-zip-comp",
-                "title": "OCF ZIP container uses compression techniques other than Deflate",
+                "title": "ocf-zip-comp",
                 "author": "Zheng Xu",
                 "description": "MUST treat any OCF ZIP container that uses compression techniques other than Deflate as in error.",
                 "collection": "Open Container Format",
@@ -2085,7 +2085,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pss-support",
-                "title": "Structural semantics support",
+                "title": "pss-support",
                 "author": "Ivan Herman",
                 "description": "A separate footnote popup (or equivalent) is displayed if the RS supports structural semantics.",
                 "collection": "Structural Semantics",
@@ -2119,7 +2119,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pss-support_ignore-title",
-                "title": "Ignore structural semantics on title",
+                "title": "pss-support_ignore-title",
                 "author": "Ivan Herman",
                 "description": "The footnote popup is not displayed for the second page, because the setting is on the title element.",
                 "collection": "Structural Semantics",
@@ -2153,7 +2153,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-zip-mult",
-                "title": "OCF ZIP container splits into segments",
+                "title": "ocf-zip-mult",
                 "author": "Zheng Xu",
                 "description": "MUST treat any OCF ZIP container that splits the content into segments as in error.",
                 "collection": "Open Container Format",
@@ -2187,7 +2187,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-features",
-                "title": "epubReadingSystem object features",
+                "title": "scr-readingsystem-features",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system implements the required epubReadingSystem feature string queries.",
                 "collection": "Scripting",
@@ -2221,7 +2221,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-support",
-                "title": "epubReadingSystem object support",
+                "title": "scr-readingsystem-support",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system implements the epubReadingSystem object.",
                 "collection": "Scripting",
@@ -2255,7 +2255,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-linked-records",
-                "title": "Package processed with linked metadata record",
+                "title": "pkg-linked-records",
                 "author": "Matthew Chan",
                 "description": "Reading System must process and display the title and creator metadata from the package document. An ONIX 3.0 format linked metadata record exists, but contains neither title nor creator metadata.",
                 "collection": "Package Documents",
@@ -2289,7 +2289,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-linked-records_link-order",
-                "title": "Package processed with two linked metadata records containing title",
+                "title": "pkg-linked-records_link-order",
                 "author": [
                     "Matthew Chan",
                     "Ivan Herman"
@@ -2326,7 +2326,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-linked-records_link-priority",
-                "title": "Package processed with linked metadata record containing title",
+                "title": "pkg-linked-records_link-priority",
                 "author": [
                     "Matthew Chan",
                     "Ivan Herman"
@@ -2363,7 +2363,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-external-links",
-                "title": "External Links open a new browser instance",
+                "title": "pub-external-links",
                 "author": "Zheng Xu",
                 "description": "The XHTML content document contains a link to an external website. The reading system should open it in a new browser instance after the reader's consent.",
                 "collection": "Publication Resources",
@@ -2397,7 +2397,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-external-links_consent",
-                "title": "Reader's consent for a 'mailto:' link",
+                "title": "pub-external-links_consent",
                 "author": "Ivan Herman",
                 "description": "The XHTML content document contains a 'mailto:' link. The reading system should ask for the reader's consent before opening an email application.",
                 "collection": "Publication Resources",
@@ -2431,7 +2431,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_scrolled-continuous",
-                "title": "rendition:flow set to scrolled-continuous when scripting is supported",
+                "title": "scr-support_scrolled-continuous",
                 "author": "Ivan Herman",
                 "description": "Tests handling overflow content with the \"rendition:flow\" property set to \"scrolled-continuous\". The publication is presented as one continuous scroll from spine item to spine item. This feature is optional if the reading system supports scripting.",
                 "collection": "Scripting",
@@ -2465,7 +2465,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_scrolled-doc",
-                "title": "rendition:flow set to scrolled-doc when scripting is supported",
+                "title": "scr-support_scrolled-doc",
                 "author": "Ivan Herman",
                 "description": "Tests on handling overflow content with the \"rendition:flow\" property set to \"scrolled-doc\". Each of the chapters in this publication should be vertically scrollable, and swiping horizontally should moves from one to the next. This feature is required if the reading system supports scripting.",
                 "collection": "Scripting",
@@ -2499,7 +2499,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-metainf-inc",
-                "title": "Extra configuration file in META-INF",
+                "title": "ocf-metainf-inc",
                 "author": "Zheng Xu",
                 "description": "An extra configuration file, not in the reserved files' list, is added to the META-INF folder; this file must be ignored.",
                 "collection": "Open Container Format",
@@ -2533,7 +2533,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-metainf-manifest",
-                "title": "Manifest information is ignored",
+                "title": "ocf-metainf-manifest",
                 "author": "Zheng Xu",
                 "description": "An ancillary manifest file, containing an extra spine item, is present in the META-INF directory; this extra item must be ignored by the reading system.",
                 "collection": "Open Container Format",
@@ -2567,7 +2567,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-audio",
-                "title": "Rendering an audio track from clipBegin to clipEnd",
+                "title": "mol-audio",
                 "author": "Dan Lazin",
                 "description": "Tests whether the Reading System obeys the clipBegin and clipEnd attributes.",
                 "collection": "Media Overlays",
@@ -2601,7 +2601,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/cnt-css-fonts",
-                "title": "CSS support for font resources",
+                "title": "cnt-css-fonts",
                 "author": "Dan Lazin",
                 "description": "TrueType, OpenType, WOFF, and WOFF2 font resources are referenced from @font-face rules.",
                 "collection": "Content Documents",
@@ -2635,7 +2635,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-line-break",
-                "title": "EPUB CSS line-break",
+                "title": "css-epub-line-break",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS property -epub-line-break",
                 "collection": "Content Documents",
@@ -2669,7 +2669,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-combine-horizontal",
-                "title": "EPUB CSS text-combine-horizontal",
+                "title": "css-epub-text-combine-horizontal",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS property -epub-text-combine-horizontal",
                 "collection": "Content Documents",
@@ -2703,7 +2703,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-emphasis",
-                "title": "EPUB CSS text-emphasis",
+                "title": "css-epub-text-emphasis",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS properties -epub-text-emphasis-color, -position, and -style",
                 "collection": "Content Documents",
@@ -2737,7 +2737,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-orientation",
-                "title": "EPUB CSS text-orientation",
+                "title": "css-epub-text-orientation",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS property -epub-text-orientation",
                 "collection": "Content Documents",
@@ -2771,7 +2771,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-transform",
-                "title": "EPUB CSS text-transform",
+                "title": "css-epub-text-transform",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS value -epub-fullwidth",
                 "collection": "Content Documents",
@@ -2805,7 +2805,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-underline-position",
-                "title": "EPUB CSS text-underline-position",
+                "title": "css-epub-text-underline-position",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS properties -epub-text-underline-position",
                 "collection": "Content Documents",
@@ -2839,7 +2839,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-word-break",
-                "title": "EPUB CSS word-break",
+                "title": "css-epub-word-break",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS property -epub-word-break",
                 "collection": "Content Documents",
@@ -2873,7 +2873,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-writing-mode",
-                "title": "EPUB CSS writing-mode",
+                "title": "css-epub-writing-mode",
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS property -epub-writing-mode",
                 "collection": "Content Documents",
@@ -2907,7 +2907,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-url_link-leaking-relative",
-                "title": "Relative image reference exceeds depth of hierarchy",
+                "title": "ocf-url_link-leaking-relative",
                 "author": "Ivan Herman",
                 "description": "Use a relative link with several double-dot path segments from the content to a photograph. The folder hierarchy containing the photograph starts at the root level; the relative image reference exceeds depth of hierarchy.",
                 "collection": "Open Container Format",
@@ -2941,7 +2941,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-url_link-path-absolute",
-                "title": "Path-absolute link to an image",
+                "title": "ocf-url_link-path-absolute",
                 "author": "Ivan Herman",
                 "description": "Use a path-absolute link, i.e., beginning with a leading slash, from the content to a photograph. The folder hierarchy containing the photograph starts at the root level.",
                 "collection": "Open Container Format",
@@ -2975,7 +2975,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-url_link-relative",
-                "title": "Simple relative link to an image",
+                "title": "ocf-url_link-relative",
                 "author": "Ivan Herman",
                 "description": "A simple relative link from the content to a photograph. The folder hierarchy containing the photograph starts at the root level.",
                 "collection": "Open Container Format",
@@ -3009,7 +3009,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-navigation",
-                "title": "Navigation with media overlays",
+                "title": "mol-navigation",
                 "author": "Marisa DeMeglio",
                 "description": "When navigating to another page, the media overlay playback position updates accordingly.",
                 "collection": "Media Overlays",
@@ -3043,7 +3043,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-timing-synchronization",
-                "title": "Basic media overlay",
+                "title": "mol-timing-synchronization",
                 "author": [
                     "Ivan Herman",
                     "Marisa DeMeglio"
@@ -3080,7 +3080,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/nav-spine_in-spine-no-list-style",
-                "title": "TOC items ignore navigation list styling",
+                "title": "nav-spine_in-spine-no-list-style",
                 "author": "Ivan Herman",
                 "description": "The reading system's rendering of the navigation must not show numbering, disregarding the list-style-type declared in the navigation document.",
                 "collection": "Navigation Documents",
@@ -3114,7 +3114,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_but_not_content",
-                "title": "Content document must not inherit package dir settings",
+                "title": "pkg-dir_but_not_content",
                 "author": "Ivan Herman",
                 "description": "The package document's language is set to 'he' and direction 'rtl' but the content document is not annotated for language and direction. The content document should not become automatically 'he' and 'rtl'.",
                 "collection": "Internationalization",
@@ -3148,7 +3148,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-readingsystem-support_iframe",
-                "title": "epubReadingSystem object support in an iframe",
+                "title": "scr-readingsystem-support_iframe",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system implements the epubReadingSystem object in container-constrained document (e.g., an iframe).",
                 "collection": "Scripting",
@@ -3182,7 +3182,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support",
-                "title": "Scripting support",
+                "title": "scr-support",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system implements scripting in a spine-level document (i.e., whether a simple inline script is executed at all).",
                 "collection": "Scripting",
@@ -3216,7 +3216,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_iframe",
-                "title": "Support for container-constrained scripts",
+                "title": "scr-support_iframe",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system implements container-constrained scripts (i.e., whether a simple inline script is executed at all in an iframe).",
                 "collection": "Scripting",
@@ -3250,7 +3250,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_svg",
-                "title": "Scripting support in spine-level SVG",
+                "title": "scr-support_svg",
                 "author": "Ivan Herman",
                 "description": "Checks whether the reading system implements scripting in a spine-level SVG document (i.e., whether a simple inline script is executed at all).",
                 "collection": "Scripting",
@@ -3284,7 +3284,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-data-urls_top-level-content",
-                "title": "Data URL not opening as a top-level content document",
+                "title": "pub-data-urls_top-level-content",
                 "author": "Matthew Chan",
                 "description": "The reading system must display an img (where src is a data URL) positioned at the bottom of the first page of a fixed layout ebook rather than opening the data URL as thought it were its own top-level content document.",
                 "collection": "Publication Resources",
@@ -3318,7 +3318,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-layout-duplication",
-                "title": "rendition:layout duplication",
+                "title": "fxl-layout-duplication",
                 "author": "Wendy Reid",
                 "description": "When rendition:layout is duplicated, EPUBCheck must return an error.",
                 "collection": "Fixed Layout",
@@ -3352,7 +3352,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-center",
-                "title": "rendition:page-spread-center",
+                "title": "fxl-page-spread-center",
                 "author": "Wendy Reid",
                 "description": "When rendition:page-spread-center is applied to a spine item, the document should be displayed in the center of the screen and not in a synthetic spread.",
                 "collection": "Fixed Layout",
@@ -3386,7 +3386,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-order-svg",
-                "title": "SVG spine items in order",
+                "title": "pkg-spine-order-svg",
                 "author": "Dave Cramer",
                 "description": "Basic test of whether a reading system can display SVG spine items in the correct order.",
                 "collection": "Package Documents",
@@ -3420,7 +3420,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-orientation_duplication",
-                "title": "rendition:orientation duplication",
+                "title": "fxl-orientation_duplication",
                 "author": "Wendy Reid",
                 "description": "rendition:orientation is specified twice. EPUBCheck should produce an error.",
                 "collection": "Fixed Layout",
@@ -3454,7 +3454,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/nav-access",
-                "title": "Single link in navigation can be accessed",
+                "title": "nav-access",
                 "author": "Dan Lazin",
                 "description": "The navigation document contains a single link and can be accessed through reading system controls.",
                 "collection": "Navigation Documents",
@@ -3488,7 +3488,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-duplicate-item-hyperlink",
-                "title": "Hyperlink to duplicate items in spine",
+                "title": "pkg-spine-duplicate-item-hyperlink",
                 "author": "Dan Lazin",
                 "description": "The spine contains several references to the same content document. The reading system must move to the position of the first duplicate in the reading order when following a hyperlink.",
                 "collection": "Package Documents",
@@ -3522,7 +3522,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-duplicate-item-rendering",
-                "title": "Duplicate items in spine render",
+                "title": "pkg-spine-duplicate-item-rendering",
                 "author": "Dan Lazin",
                 "description": "The spine contains several references to the same content document. The reading system must not skip the duplicates when rendering the reading order.",
                 "collection": "Package Documents",
@@ -3556,7 +3556,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-duplicate-item-ui",
-                "title": "UI recognizes duplicate items in spine",
+                "title": "pkg-spine-duplicate-item-ui",
                 "author": "Dan Lazin",
                 "description": "The spine contains several references to the same content document. The reading system must allow the duplicates to be independently bookmarked or otherwise recognized in the UI.",
                 "collection": "Package Documents",
@@ -3590,7 +3590,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-url_relative",
-                "title": "Content in relative subdirectory",
+                "title": "ocf-url_relative",
                 "author": "Dan Lazin",
                 "description": "The manifest refers to an XHTML file in an arbitrary subfolder that is relative to the package's own arbitrary folder. The reading system must be able to find the content.",
                 "collection": "Open Container Format",
@@ -3624,7 +3624,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-manifest-unlisted-resource",
-                "title": "Resource not listed in manifest",
+                "title": "pkg-manifest-unlisted-resource",
                 "author": "Dave Cramer",
                 "description": "The XHTML content references an image that does not appear in the manifest. The image should not be shown.",
                 "collection": "Package Documents",
@@ -3658,7 +3658,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-version-backward",
-                "title": "Package version less than 3.0",
+                "title": "pkg-version-backward",
                 "author": "Dave Cramer",
                 "description": "“Reading Systems MUST attempt to process an EPUB Publication whose Package Document version attribute is less than \"3.0\"”. This is an EPUB with package version attribute set to \"0\", to see if a reading system will open it.",
                 "collection": "Package Documents",
@@ -3692,7 +3692,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-order",
-                "title": "Spine items in order",
+                "title": "pkg-spine-order",
                 "author": "Dave Cramer",
                 "description": "Basic test of whether a reading system can display spine items in the correct order. The test fails if the reading system presents content in the order in which the file names sort, or if it presents files in manifest order rather than spine order.",
                 "collection": "Package Documents",
@@ -3726,7 +3726,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir-auto_root-rtl",
-                "title": "Correct 'dir=rtl' on the package, incorrectly overwritten by 'dir=auto' on title",
+                "title": "pkg-dir-auto_root-rtl",
                 "author": "Ivan Herman",
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'auto' and the 'dir' attribute is set to 'rtl' on the package element; the title should display incorrectly.",
                 "collection": "Internationalization",
@@ -3760,7 +3760,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir-auto_root-unset",
-                "title": "Incorrect 'dir=auto' on the title",
+                "title": "pkg-dir-auto_root-unset",
                 "author": "Ivan Herman",
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'auto'; the title should display incorrectly.",
                 "collection": "Internationalization",
@@ -3794,7 +3794,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_rtl-root-ltr",
-                "title": "Incorrect 'dir=ltr' on the package, correctly overwritten by 'dir=rtl' on title",
+                "title": "pkg-dir_rtl-root-ltr",
                 "author": "Ivan Herman",
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'rtl' and the 'dir' attribute is set to 'ltr' on the 'package' element; the title should display correctly.",
                 "collection": "Internationalization",
@@ -3828,7 +3828,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_rtl-root-unset",
-                "title": "Correct 'dir=rtl' on the title",
+                "title": "pkg-dir_rtl-root-unset",
                 "author": "Ivan Herman",
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is set to 'rtl'; the title should display correctly.",
                 "collection": "Internationalization",
@@ -3862,7 +3862,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_unset-root-rtl",
-                "title": "Correct 'dir=rtl' on the package",
+                "title": "pkg-dir_unset-root-rtl",
                 "author": "Ivan Herman",
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The root's 'dir' attribute is set to 'rtl'; the title should display correctly.",
                 "collection": "Internationalization",
@@ -3896,7 +3896,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_unset-root-unset",
-                "title": "No 'dir' on the title",
+                "title": "pkg-dir_unset-root-unset",
                 "author": "Ivan Herman",
                 "description": "The 'dc:title' element contains text whose proper rendering requires bidi control. The element's 'dir' attribute is not set; the title should display incorrectly.",
                 "collection": "Internationalization",
@@ -3930,7 +3930,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/cnt-mathml-support",
-                "title": "Support for Presentation MathML",
+                "title": "cnt-mathml-support",
                 "author": "Dan Lazin",
                 "description": "A Presentation MathML equation is displayed as part of the XHTML content.",
                 "collection": "Content Documents",
@@ -3964,7 +3964,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/cnt-svg-css-reference",
-                "title": "CSS not applied to referenced SVG",
+                "title": "cnt-svg-css-reference",
                 "author": "Dan Lazin",
                 "description": "CSS does not change the color of an SVG image that is embedded in the XHTML content by reference.",
                 "collection": "Content Documents",
@@ -3998,7 +3998,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-mp3",
-                "title": "MP3 audio",
+                "title": "pub-cmt-mp3",
                 "author": "Dan Lazin",
                 "description": "An MP3 audio file is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
@@ -4032,7 +4032,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-mp4",
-                "title": "MP4 audio",
+                "title": "pub-cmt-mp4",
                 "author": "Dan Lazin",
                 "description": "An MP4 audio file is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
@@ -4066,7 +4066,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-opus",
-                "title": "OPUS audio",
+                "title": "pub-cmt-opus",
                 "author": "Dan Lazin",
                 "description": "An OPUS audio file is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
@@ -4100,7 +4100,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-gif",
-                "title": "GIF image",
+                "title": "pub-cmt-gif",
                 "author": "Dan Lazin",
                 "description": "A GIF image is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
@@ -4134,7 +4134,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-jpeg",
-                "title": "JPEG image",
+                "title": "pub-cmt-jpeg",
                 "author": "Dan Lazin",
                 "description": "A JPEG image is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
@@ -4168,7 +4168,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-png",
-                "title": "PNG image",
+                "title": "pub-cmt-png",
                 "author": "Dan Lazin",
                 "description": "A PNG image is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
@@ -4202,7 +4202,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-cmt-webp",
-                "title": "WEBP image",
+                "title": "pub-cmt-webp",
                 "author": "Dan Lazin",
                 "description": "A WEBP image is displayed as part of the XHTML content.",
                 "collection": "Core Media Types",
@@ -4236,7 +4236,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_origin",
-                "title": "Unique origin shared by spine-level scripted contents",
+                "title": "scr-support_origin",
                 "author": "Ivan Herman",
                 "description": "The origin values of scripted content files are displayed. They must be shared by all spine-level scripts in the publication.",
                 "collection": "Scripting",
@@ -4270,7 +4270,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-url_origin",
-                "title": "Unique origin for each instance",
+                "title": "ocf-url_origin",
                 "author": "Ivan Herman",
                 "description": "The origin value is displayed. The origin must be unique for each user-specific instance of the publication.",
                 "collection": "Open Container Format",
@@ -4304,7 +4304,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-url_parse-leaking-relative",
-                "title": "Relative URL that exceeds depth of hierarchy, parsed by JS",
+                "title": "ocf-url_parse-leaking-relative",
                 "author": "Ivan Herman",
                 "description": "Parse, in Javascript, a relative link with several double-dot path segments from the content to a photograph. The folder hierarchy containing the photograph starts at the root level; the number of segments exceeds the depth of the folder hierarchy.",
                 "collection": "Open Container Format",
@@ -4338,7 +4338,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-url_parse-path-absolute",
-                "title": "Root-relative URL, parsed by JS",
+                "title": "ocf-url_parse-path-absolute",
                 "author": "Ivan Herman",
                 "description": "Parse, in Javascript, a path-absolute URL, i.e., beginning with a leading slash, from the content to an image. The folder hierarchy containing the image starts at the root level.",
                 "collection": "Open Container Format",
@@ -4372,7 +4372,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-dir_creator-rtl",
-                "title": "'dir=rtl' on the creator",
+                "title": "pkg-dir_creator-rtl",
                 "author": "Dave Cramer",
                 "description": "The 'dc:creator' element's 'dir' attribute is set to 'rtl'; the creator's name should display right-to-left.",
                 "collection": "Internationalization",
@@ -4406,7 +4406,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/nav-activation",
-                "title": "Navigation relocates position while in spine",
+                "title": "nav-activation",
                 "author": "Dave Cramer",
                 "description": "Activating a link in the navigation document relocates the reading position to the target of the link.",
                 "collection": "Navigation Documents",
@@ -4440,7 +4440,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/nav-spine_in-spine",
-                "title": "Navigation accessible while in spine",
+                "title": "nav-spine_in-spine",
                 "author": "Dave Cramer",
                 "description": "The navigation document is referenced in the spine and can be accessed through reading system controls.",
                 "collection": "Navigation Documents",
@@ -4474,7 +4474,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/nav-spine_not-in-spine",
-                "title": "Navigation accessible while not in spine",
+                "title": "nav-spine_not-in-spine",
                 "author": "Dave Cramer",
                 "description": "The navigation document is not referenced in the spine, but can still be accessed through reading system controls.",
                 "collection": "Navigation Documents",
@@ -4508,7 +4508,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-collections-unknown",
-                "title": "Collection with unknown role",
+                "title": "pkg-collections-unknown",
                 "author": "Dave Cramer",
                 "description": "The package document contains a collection with an unknown role. The reading system must open the EPUB successfully.",
                 "collection": "Package Documents",
@@ -4542,7 +4542,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-unknown",
-                "title": "Spine item with unknown properties",
+                "title": "pkg-spine-unknown",
                 "author": "Dave Cramer",
                 "description": "The package document contains a spine item with unknown properties. The reading system must open the EPUB successfully.",
                 "collection": "Package Documents",
@@ -4576,7 +4576,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-progression-pre-paginated",
-                "title": "Pre-paginated publication's spine sets 'page-progression-direction=\"ltr\"'",
+                "title": "pkg-spine-progression-pre-paginated",
                 "author": "Dave Cramer",
                 "description": "In a pre-paginated publication whose XHTML content sets 'dir=\"rtl\"', the spine sets 'page-progression-direction=\"ltr\"'. The pages must appear from left to right.",
                 "collection": "Internationalization",
@@ -4610,7 +4610,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_bad-fallback",
-                "title": "Manifest fallback with unsupported fallback",
+                "title": "pub-foreign_bad-fallback",
                 "author": "Dave Cramer",
                 "description": "This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine item is a DMG, with a fallback to a PSD file.",
                 "collection": "Publication Resources",
@@ -4644,7 +4644,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-package_arbitrary",
-                "title": "Package in arbitrary directory",
+                "title": "ocf-package_arbitrary",
                 "author": "Dave Cramer",
                 "description": "The EPUB contains three valid package files and three corresponding sets of content documents, but only one of the packages, in an unusual subdirectory, is referenced by the container.xml file. The reading system must use this package.",
                 "collection": "Open Container Format",
@@ -4678,7 +4678,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-package_multiple",
-                "title": "Multiple packages in container file",
+                "title": "ocf-package_multiple",
                 "author": "Dave Cramer",
                 "description": "The EPUB contains three valid package files and three corresponding sets of content documents, all referenced by the container.xml file. The reading system must use the first package.",
                 "collection": "Open Container Format",
@@ -4712,7 +4712,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-nonlinear-activation",
-                "title": "Non-linear spine item is reachable",
+                "title": "pkg-spine-nonlinear-activation",
                 "author": "Dave Cramer",
                 "description": "An itemref in the spine is marked as non-linear. Although it (possibly) cannot be accessed through the table of contents, it can be reached from a link in the XHTML content.",
                 "collection": "Package Documents",
@@ -4746,7 +4746,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-progression-default",
-                "title": "RTL publication's spine has implicit 'page-progression-direction=\"default\"'",
+                "title": "pkg-spine-progression-default",
                 "author": "Dave Cramer",
                 "description": "In a publication set as using an RTL language, the spine does not set 'page-progression-direction', so it is implicitly 'default'. The pages must appear from right to left.",
                 "collection": "Internationalization",
@@ -4780,7 +4780,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-progression_ltr",
-                "title": "Spine sets 'page-progression-direction=\"ltr\"'",
+                "title": "pkg-spine-progression_ltr",
                 "author": "Dave Cramer",
                 "description": "The spine sets 'page-progression-direction=\"ltr\"'. The pages must appear from left to right.",
                 "collection": "Internationalization",
@@ -4814,7 +4814,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-progression_rtl",
-                "title": "Spine sets 'page-progression-direction=\"rtl\"'",
+                "title": "pkg-spine-progression_rtl",
                 "author": "Dave Cramer",
                 "description": "The spine sets 'page-progression-direction=\"rtl\"'. The pages must appear from right to left.",
                 "collection": "Internationalization",
@@ -4848,7 +4848,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/ocf-url_manifest",
-                "title": "Content in arbitrary directory",
+                "title": "ocf-url_manifest",
                 "author": "Dave Cramer",
                 "description": "The manifest refers to an XHTML file in an arbitrary subfolder. The reading system must be able to find the content.",
                 "collection": "Open Container Format",
@@ -4882,7 +4882,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-manifest-unknown",
-                "title": "Manifest item with unknown properties",
+                "title": "pkg-manifest-unknown",
                 "author": "Dave Cramer",
                 "description": "The package document contains a manifest item with unknown properties. The reading system must open the EPUB successfully.",
                 "collection": "Package Documents",
@@ -4916,7 +4916,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-unique-id",
-                "title": "Unique identifier not unique",
+                "title": "pkg-unique-id",
                 "author": "Dave Cramer",
                 "description": "The package document's dc:identifier is identical across two publications. The reading system should display both publications independently.",
                 "collection": "Package Documents",
@@ -4950,7 +4950,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-unique-id",
-                "title": "Unique identifier reused",
+                "title": "pkg-unique-id",
                 "author": "Dave Cramer",
                 "description": "The package document's dc:identifier is identical across two publications. The reading system should display both publications independently.",
                 "collection": "Package Documents",
@@ -4984,7 +4984,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_image",
-                "title": "Manifest fallback with image",
+                "title": "pub-foreign_image",
                 "author": "Dave Cramer",
                 "description": "An HTML content file contains a PSD image, with a manifest fallback to a PNG image. This tests fallbacks for resources that are not in the spine.",
                 "collection": "Publication Resources",
@@ -5018,7 +5018,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_json-spine",
-                "title": "Manifest fallback With JSON content document in spine",
+                "title": "pub-foreign_json-spine",
                 "author": "Dave Cramer",
                 "description": "This EPUB uses a JSON content file in the spine, with a manifest fallback to an HTML document. If the reading system does not support JSON, it should display the HTML.",
                 "collection": "Publication Resources",
@@ -5052,7 +5052,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_xml-spine",
-                "title": "Manifest fallback with XML in spine",
+                "title": "pub-foreign_xml-spine",
                 "author": "Dave Cramer",
                 "description": "This EPUB uses an ordinary XML content file with mimetype application/xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.",
                 "collection": "Publication Resources",
@@ -5086,7 +5086,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_xml-suffix-spine",
-                "title": "Manifest fallback with XML with suffix in spine",
+                "title": "pub-foreign_xml-suffix-spine",
                 "author": "Dave Cramer",
                 "description": "This EPUB uses an custom XML content file with mimetype application/dtc+xml in the spine, with a manifest fallback to an HTML document. If the reading system does not support XML, it should display the HTML.",
                 "collection": "Publication Resources",
@@ -5120,7 +5120,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-creator-order",
-                "title": "Creators listed in order",
+                "title": "pkg-creator-order",
                 "author": [
                     "Dave Cramer",
                     "Wendy Reid",
@@ -5160,7 +5160,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-meta-unknown",
-                "title": "Meta tag with unknown property",
+                "title": "pkg-meta-unknown",
                 "author": "Dave Cramer",
                 "description": "The package document contains a meta tag with an unknown property. The reading system must open the EPUB successfully.",
                 "collection": "Package Documents",
@@ -5194,7 +5194,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-meta-whitespace",
-                "title": "Whitespace removed from package metadata",
+                "title": "pkg-meta-whitespace",
                 "author": "Dave Cramer",
                 "description": "The package document's title and creator contain leading and trailing spaces along with excess internal whitespace. The reading system must render only a single space in all cases.",
                 "collection": "Package Documents",
@@ -5228,7 +5228,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-title-order",
-                "title": "First title in package",
+                "title": "pkg-title-order",
                 "author": "Dave Cramer",
                 "description": "Several titles are listed in the package document. The reading system must use the first title (and whether to use other titles is not defined).",
                 "collection": "Package Documents",
@@ -5262,7 +5262,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-external-id",
-                "title": "XML external entity not resolved",
+                "title": "pub-xml-external-id",
                 "author": "Dave Cramer",
                 "description": "The XHTML content document contains a reference to an external entity. The reading system must not resolve it.",
                 "collection": "Publication Resources",
@@ -5296,7 +5296,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-non-validating_invalid",
-                "title": "Invalid XML navigation document",
+                "title": "pub-xml-non-validating_invalid",
                 "author": "Dave Cramer",
                 "description": "The spine XML is invalid. The reading system must not display the navigation document.",
                 "collection": "Publication Resources",
@@ -5330,7 +5330,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-non-validating_unclosed",
-                "title": "Unclosed XML tag",
+                "title": "pub-xml-non-validating_unclosed",
                 "author": "Dave Cramer",
                 "description": "An XHTML element does not have a closing tag. The reading system must produce an error.",
                 "collection": "Publication Resources",
@@ -5364,7 +5364,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-names",
-                "title": "Invalid XML element name",
+                "title": "pub-xml-names",
                 "author": "Dave Cramer",
                 "description": "An XHTML element has an invalid name with two successive colons. The reading system must produce an error.",
                 "collection": "Publication Resources",
@@ -5398,7 +5398,7 @@
             "metadata": {
                 "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-data-urls_browsing-context",
-                "title": "Data URL does not open in top-level context",
+                "title": "pub-data-urls_browsing-context",
                 "author": "Matthew Chan",
                 "description": "The XHTML content contains an img element where the src attribute is given as a data URL. The reading system must display the image rather than opening it in a new top-level browsing context.",
                 "collection": "Publication Resources",

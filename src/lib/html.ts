@@ -181,25 +181,12 @@ function create_test_data(data: ReportData): string {
         const test_table = add_child(table_section, 'table');
         test_table.className = 'simple sortable';
 
-        // The table begins with a colgroup to allow for a proper styling, 
-        // especially a common width for all columns across the document
-        // add_child(test_table, 'colgroup',`
-        //     <col class="${Constants.CLASS_COL_ID}"/>
-        //     <col class="${Constants.CLASS_COL_REQ}"/>
-        //     <col class="${Constants.CLASS_COL_TITLE}"/>
-        //     <col class="${Constants.CLASS_COL_DESCR}"/>
-        //     <col class="${Constants.CLASS_COL_MOD}"/>
-        //     <col class="${Constants.CLASS_COL_SREF}"/>
-        //     <col class="${Constants.CLASS_COL_TREF}"/>
-        // `);
-
         const thead = add_child(test_table, 'thead');
         // Next is a header row
         add_child(thead, 'tr',`
-            <th scope="col" class="order-asc" style="width:12%">Id</th>
+            <th scope="col" class="order-asc" style="width:17%">Id</th>
+            <th scope="col" style="width:59%">Description</th>
             <th scope="col" style="width:8%">Req</th>
-            <th scope="col" style="width:20%">Title</th>
-            <th scope="col" style="width:44%">Description</th>
             <th scope="col" style="width:8%">Date</th>
             <th scope="col" data-nonsortable="true" style="width:4%">Specs</th>
             <th scope="col" data-nonsortable="true" style="width:4%">Ref</th>
@@ -215,9 +202,8 @@ function create_test_data(data: ReportData): string {
             td_id.className = row.required;
             td_id.id = `${row.identifier}`;
 
-            add_child(tr, 'td', row.required);
-            add_child(tr, 'td', row.title); 
             add_child(tr, 'td', row.description);
+            add_child(tr, 'td', row.required);
 
             const date: string[] = row.modified.split('T')[0].split('-');
             date[0] = `’${date[0].charAt(2)}${date[0].charAt(3)}`;
@@ -234,7 +220,7 @@ function create_test_data(data: ReportData): string {
                     a.setAttribute('href', ref);
                 }
             }
-            add_child(tr, 'td', `<a href="${Constants.DOC_TEST_RESULTS}#${row.identifier}-results">❐</a>`);
+            add_child(tr, 'td', `<a href="${Constants.DOC_TEST_RESULTS}#${row.identifier}-results">☞</a>`); /* ❐ */
         }
     }
 
