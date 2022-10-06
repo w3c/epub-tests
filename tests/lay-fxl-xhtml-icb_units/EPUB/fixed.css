@@ -24,3 +24,13 @@ p {
   font-size: 20px;
   font-family: "StixTwoText";
 }
+
+.pattern {
+  background-color: white;
+  background-image: linear-gradient(currentColor 1px, transparent 1px), linear-gradient(to right, currentColor 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.solid {
+  background-color: red;
+}
