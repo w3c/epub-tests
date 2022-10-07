@@ -41,7 +41,7 @@
         "lay-fxl-spread-default": null,
         "lay-fxl-spread-landscape": null,
         "lay-fxl-spread-none": null,
-        "lay-fxl-svg-icb_multi": null,
+        "lay-fxl-svg-icb_multi": true,
         "lay-fxl-xhtml-icb": null,
         "lay-fxl-xhtml-icb_multi": null,
         "lay-fxl-xhtml-icb_multi_declarations": null,
