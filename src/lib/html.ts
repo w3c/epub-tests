@@ -86,7 +86,7 @@ function create_impl_reports(data: ReportData): string {
             const table_section = add_child(top_section, 'section');
 
             const h3 = add_child(table_section, 'h3', table.header);
-            h3.id = `sec-${convert_to_id(table.header)}-results`;
+            h3.id = (consolidated) ? `sec-consolidated-${convert_to_id(table.header)}-results` : `sec-detailed-${convert_to_id(table.header)}-results`;
 
             const test_table = add_child(table_section, 'table');
             test_table.className = 'simple';
