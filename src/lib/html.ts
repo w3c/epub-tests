@@ -126,7 +126,11 @@ function create_impl_reports(data: ReportData): string {
                 //... followed by the test results themselves
                 for (const result of row.implementations) {
                     if (result === undefined) {
-                        add_child(tr, 'td', 'n/a');
+                        const td_impl = add_child(tr, 'td', 'not tested');
+                        td_impl.className = Constants.CLASS_NOT_TESTED;                        
+                    } else if (result === "n/a") {
+                        const td_impl = add_child(tr, 'td', 'n/a');
+                        td_impl.className = Constants.CLASS_NA;                        
                     } else {
                         const text = result ? Constants.CLASS_PASS : Constants.CLASS_FAIL
                         const td_impl = add_child(tr, 'td', text);

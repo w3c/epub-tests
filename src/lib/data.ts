@@ -171,7 +171,7 @@ async function get_implementation_reports(dir_name: string): Promise<Implementat
  */
 function consolidate_implementation_reports(implementations: ImplementationReport[]): ImplementationReport[] {
     // Results of a test, indexed by the ID of the test itself
-    interface TestResults { [index: string]: boolean }
+    interface TestResults { [index: string]: (boolean|string) }
     interface Variants { [index: string]: TestResults[]}
     const final: ImplementationReport[] = [];
     const to_be_consolidated: Variants = {};
@@ -185,7 +185,7 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
         // Get all keys together
         const all_keys: string[] = variant_results
             .map((variant) => Object.keys(variant))
-            .reduce( (p: string[], c: string[]): string[] => [...p, ...c], []);
+            .reduce((p: string[], c: string[]): string[] => [...p, ...c], []);
         // This is a neat trick to remove duplicates!
         const keys: string[] = [...new Set(all_keys)];
 
@@ -194,8 +194,21 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
             // Minor side effect trick: for each key there is at least one Test Result that has a value. We can therefore
             // safely set the result to 'false' temporarily if the test result is not available; there must be a false or true
             // value somewhere else in the array anyway.
-            const all_results: boolean[] = variant_results.map((results: TestResults): boolean => key in results ? results[key] : false);
-            retval[key] = all_results.reduce( (p: boolean, c: boolean): boolean => p || c, false);
+            const all_results: (boolean|string)[] = variant_results.map((results: TestResults): (boolean|string) => { 
+                return key in results ? results[key] : false
+            });
+            retval[key] = all_results.reduce((previousValue: (boolean|string), currentValue: (boolean|string)): (boolean|string) => {
+                if (typeof(previousValue) === 'boolean') {
+                    // A boolean always trumps a "n/a"
+                    if (typeof(currentValue) === 'boolean') {
+                        return previousValue || currentValue;
+                    } else {
+                        return previousValue;
+                    }
+                } else {
+                    return currentValue;
+                }
+            }, "n/a" );
         }
         return retval;
     };
