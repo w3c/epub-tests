@@ -71,6 +71,12 @@ export namespace Constants {
     /** CSS Class name for table cells with negative test results */
     export const CLASS_FAIL: string = "fail";
 
+    /** CSS Class name for table cells with non applicable tests */
+    export const CLASS_NA: string = "na";
+
+    /** CSS Class name for table cells with non applicable tests */
+    export const CLASS_NOT_TESTED: string = "not_tested";
+
     /** CSS Class name for columns containing the ID-s */
     export const CLASS_COL_ID: string = "col_id";
 
@@ -131,24 +137,26 @@ export interface TestData {
 }
 
 /**
- * Data about a single implementer: essentially, the data that is necessary to the final report about each implementer
+ * Data about a single implementer: essentially, the data that is necessary to the final 
+ * report about each implementer
  */
 export interface Implementer {
     /** Name of the implementation, to appear in the final report */
-    name: string;
+    name : string;
     /** Name of a variant, to appear in the final report */
-    variant?: string;
+    variant ?: string;
     /** If present, the name becomes a hyperlink to this URL */
-    ref?: string
+    ref ?: string
 }
 
 /**
- * The report of each implementer: beyond the data about the implementation itself it includes an object listing
- * tests results, one for each test that has been run. The index is the ID of the test.
+ * The report of each implementer: beyond the data about the implementation itself it 
+ * includes an object listing tests results, one for each test that has been run. 
+ * The index is the ID of the test.
  */
 export interface ImplementationReport extends Implementer {
     tests: {
-       [index: string]: boolean; 
+       [index: string]: boolean|string; 
     }
 }
 
@@ -162,12 +170,13 @@ export interface ImplementationData extends TestData {
     /**
      * The array of implementation flags for this test
      */
-    implementations: boolean[];
+    implementations: (boolean|string)[];
 }
 
 
 /**
- * A single set ("table") of implementations, grouped as one "section" (using the "coverage" value in the tests)
+ * A single set ("table") of implementations, grouped as one "section" (using the "coverage" 
+ * value in the tests)
  */
 export interface ImplementationTable {
     header: string;
