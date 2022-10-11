@@ -5,7 +5,7 @@
  *  @packageDocumentation
  */
 
-import { ReportData, Implementer, Constants, Score, CLASS_UNTESTED } from './types';
+import { ReportData, Implementer, Constants, Score } from './types';
 import { JSDOM } from "jsdom";
 
 /**
@@ -126,7 +126,7 @@ function create_impl_reports(data: ReportData): string {
                 //... followed by the test results themselves
                 for (const result of row.implementations) {
                     if (result === undefined) {
-                        // This should not happen, in fact, but just in case...
+                        // This may happen if the tester has not started with a full template...
                         const td_impl = add_child(tr, 'td', '?');
                         td_impl.className = Constants.CLASS_UNTESTED;                        
                     } else {

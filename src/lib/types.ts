@@ -166,9 +166,9 @@ export namespace Score {
     export function get_td(s: Score): string {
         switch (s) {
         case Score.FAIL: 
-            return "Fail";
+            return "fail";
         case Score.PASS: 
-            return "Pass";
+            return "pass";
         case Score.NONAPPLICABLE: 
             return "n/a";
         case Score.UNTESTED: 
@@ -191,6 +191,7 @@ export interface Implementer {
     ref ?: string
 }
 
+
 /**
  * The report of each implementer: beyond the data about the implementation itself it 
  * includes an object listing tests results, one for each test that has been run. 
@@ -202,11 +203,12 @@ export interface ImplementationReport extends Implementer {
     }
 }
 
+
 /**
- * The report of each implementer in the JSON format.
+ * The report of each implementer in JSON format.
  * 
  * (In an ideal world, this should be identical to ImplementationReport, but by the time
- * this was improved to use more values, tests were already done, and was not feasible
+ * this was improved to use more values, tests had been already done, and it was not feasible
  * to change the existing test results. Oh well...)
  */
 export interface Raw_ImplementationReport extends Implementer {

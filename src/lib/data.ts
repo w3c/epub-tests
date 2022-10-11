@@ -32,6 +32,7 @@ import {
     Constants, 
 } from './types';
 
+
 /** 
  * Name tells it all...
  * 
@@ -105,10 +106,11 @@ export function isFile(name: string): boolean {
     return fs_old_school.lstatSync(name).isFile();
 }
 
+
 /**
  * Lists of a directory content.
  * 
- * (Note: at this moment this returns all the file names. Depending on the final configuration some filters may have to be added.)
+ * (Note: by default this returns all the file names. Depending on the final configuration some filters may have to be added.)
  * 
  * @param dir_name name of the directory
  * @param filter_name a function to filter the retrieved list (e.g., no directories)
@@ -124,12 +126,19 @@ export async function get_list_dir(dir_name: string, filter_name: (name: string)
     return file_names.filter(file_name_filter)
 }
 
+
 /**
- * Get, and convert to its internal format, a single implementation report
+ * Get a single implementation report in JSON and convert to its internal format, 
  * 
  * @internal
  */
 async function get_an_implementation_report(fname: string): Promise<ImplementationReport> {
+    // Just to make the code more readable...
+    type raw_index_pair = [string, string|boolean];
+    type internal_index_pair = [string, Score];
+    interface raw_map {[index: string]: (boolean|string)}
+    interface internal_map {[index: string]: Score}
+   
     // the boolean|string in the JSON file is transformed into a proper Score
     const transform = (raw_score: (boolean|string)): Score => {
         if (typeof(raw_score) === 'boolean') {
@@ -138,15 +147,14 @@ async function get_an_implementation_report(fname: string): Promise<Implementati
             return (raw_score === "n/a")? Score.NONAPPLICABLE : Score.UNTESTED;
         }
     };
-
     // Transform al the tests into proper Scores; just get all the entries transformed
-    const transform_tests = (raw: {[index: string]: (boolean|string)}): {[index:string]: Score} => {
-        const retval: {[index:string]: Score} = {};
-        for (const key in raw) {
-            const score: Score = transform(raw[key]);
-            retval[key] = score;
-        }
-        return retval;
+    const transform_tests = (raw: raw_map): internal_map => {
+        return Object.entries(raw)
+            .map((value: raw_index_pair): internal_index_pair => [value[0], transform(value[1])])
+            .reduce((previous: internal_map, current: internal_index_pair): internal_map => {
+                previous[current[0]] = current[1];
+                return previous;
+            },{});
     };
 
     const raw_data = await fs.readFile(fname, 'utf-8');
@@ -201,7 +209,8 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
     const consolidate_test_results = (variant_results: TestResults[]): TestResults => {
         const retval: TestResults = {};
 
-        // Get all keys together
+        // Collect all keys together. In theory, all variants have the same keys, but errors may have
+        // committed by the tester, so better be conservative.
         const all_keys: string[] = variant_results
             .map((variant) => Object.keys(variant))
             .reduce((p: string[], c: string[]): string[] => [...p, ...c], []);
@@ -209,15 +218,16 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
         const keys: string[] = [...new Set(all_keys)];
 
         for (const key of keys) {
-            const all_results: Score[] = variant_results.map((results: TestResults): Score => results[key]);
+            // Missing entries are extended to untested; the tester has not started with a full template.
+            const all_results: Score[] = variant_results.map((results: TestResults): Score => results[key] || Score.UNTESTED);
             if (all_results.includes(Score.PASS)) {
                 retval[key] = Score.PASS;
             } else if (all_results.includes(Score.FAIL)) {
                 retval[key] = Score.FAIL
+            } else if (all_results.includes(Score.UNTESTED)) {
+                retval[key] = Score.UNTESTED
             } else if (all_results.includes(Score.NONAPPLICABLE)) {
                 retval[key] = Score.NONAPPLICABLE
-            } else {
-                retval[key] = Score.UNTESTED
             }
         }
         return retval;
