@@ -142,10 +142,10 @@ export interface TestData {
  */
 // eslint-disable-next-line no-shadow
 export enum Score {
-    FAIL,
-    PASS,
-    NONAPPLICABLE,
-    UNTESTED,
+    FAIL = "fail",
+    PASS = "pass",
+    NONAPPLICABLE = "n/a",
+    UNTESTED = "?",
 }
 
 export namespace Score {
@@ -164,19 +164,10 @@ export namespace Score {
     }
 
     export function get_td(s: Score): string {
-        switch (s) {
-        case Score.FAIL: 
-            return "fail";
-        case Score.PASS: 
-            return "pass";
-        case Score.NONAPPLICABLE: 
-            return "n/a";
-        case Score.UNTESTED: 
-        default:
-            return "?";
-        }
+        return s as string;
     }
 }
+
 
 /**
  * Data about a single implementer: essentially, the data that is necessary to the final 
