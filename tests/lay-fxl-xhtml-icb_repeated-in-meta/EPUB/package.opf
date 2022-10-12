@@ -1,25 +1,22 @@
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:coverage>Fixed Layout</dc:coverage>
-    <dc:creator>Dave Cramer</dc:creator>
-    <dc:date>2021-01-27</dc:date>
-    <dc:description>XHTML content outside the initial containing block (ICB) is clipped.</dc:description>
-    <dc:identifier id="pub-id">lay-fxl-xhtml-icb</dc:identifier>
+    <dc:creator>Ivan Herman</dc:creator>
+    <dc:date>2021-10-12</dc:date>
+    <dc:description>Reading system should use the first declaration of a 'width' or 'height' (i.e., ignore repeated declarations).</dc:description>
+    <dc:identifier id="pub-id">lay-fxl-xhtml-icb_repeated-in-meta</dc:identifier>
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
-    <dc:title>lay-fxl-xhtml-icb</dc:title>
+    <dc:title>lay-fxl-xhtml-icb_repeated-in-meta</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-fxl-icb-html</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-fxl-rs-xhtml-icb</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-fxl-rs-xhtml-icb_repeated-in-meta</meta>
     <meta property="dcterms:modified">2022-10-12T00:00:00Z</meta>
     <meta property="rendition:layout">pre-paginated</meta>
   </metadata>
   <manifest>
     <item id="page_001" href="page_001.xhtml" media-type="application/xhtml+xml"/>
     <item id="page_002" href="page_002.xhtml" media-type="application/xhtml+xml"/>
-    <item id="page_003" href="page_003.xhtml" media-type="application/xhtml+xml"/>
-    <item id="page_004" href="page_004.xhtml" media-type="application/xhtml+xml"/>
     <item id="style" href="fixed.css" media-type="text/css"/>
     <item id="stix-font" href="fonts/STIXTwoText-Regular.otf" media-type="font/otf"/>
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
@@ -27,7 +24,5 @@
   <spine>
     <itemref idref="page_001"/>
     <itemref idref="page_002"/>
-    <itemref idref="page_003"/>
-    <itemref idref="page_004"/>
   </spine>
 </package>
