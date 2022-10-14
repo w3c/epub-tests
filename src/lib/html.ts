@@ -86,7 +86,7 @@ function create_impl_reports(data: ReportData): string {
             const table_section = add_child(top_section, 'section');
 
             const h3 = add_child(table_section, 'h3', table.header);
-            h3.id = `sec-${convert_to_id(table.header)}-results`;
+            h3.id = (consolidated) ? `sec-consolidated-${convert_to_id(table.header)}-results` : `sec-detailed-${convert_to_id(table.header)}-results`;
 
             const test_table = add_child(table_section, 'table');
             test_table.className = 'simple';
@@ -126,7 +126,11 @@ function create_impl_reports(data: ReportData): string {
                 //... followed by the test results themselves
                 for (const result of row.implementations) {
                     if (result === undefined) {
-                        add_child(tr, 'td', 'n/a');
+                        const td_impl = add_child(tr, 'td', '?');
+                        td_impl.className = Constants.CLASS_NOT_TESTED;                        
+                    } else if (result === "n/a") {
+                        const td_impl = add_child(tr, 'td', 'n/a');
+                        td_impl.className = Constants.CLASS_NA;                        
                     } else {
                         const text = result ? Constants.CLASS_PASS : Constants.CLASS_FAIL
                         const td_impl = add_child(tr, 'td', text);
