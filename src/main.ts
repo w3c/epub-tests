@@ -2,7 +2,7 @@ import { argv } from "process";
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
-import { TestData, ReportData, ImplementationReport, Constants } from './lib/types';
+import { TestData, ReportData, Raw_ImplementationReport, Constants } from './lib/types';
 import { get_test_data, get_report_data, get_template } from "./lib/data";
 import { create_report } from "./lib/html";
 import { apply_configuration_options } from './lib/config';
@@ -27,7 +27,7 @@ async function main() {
     const test_data: TestData[] = await get_test_data(test_dir);
     const report_data: ReportData = await get_report_data(test_data, Constants.TEST_RESULTS_DIR);
 
-    const template: ImplementationReport = get_template(report_data);
+    const template: Raw_ImplementationReport = get_template(report_data);
 
     const final_report_data: ReportData = apply_configuration_options(report_data);
     const { implementations, results, tests, creators }: {

@@ -5,7 +5,7 @@
  *  @packageDocumentation
  */
 
-import { ReportData, Implementer, Constants } from './types';
+import { ReportData, Implementer, Constants, Score } from './types';
 import { JSDOM } from "jsdom";
 
 /**
@@ -126,15 +126,12 @@ function create_impl_reports(data: ReportData): string {
                 //... followed by the test results themselves
                 for (const result of row.implementations) {
                     if (result === undefined) {
+                        // This may happen if the tester has not started with a full template...
                         const td_impl = add_child(tr, 'td', '?');
-                        td_impl.className = Constants.CLASS_NOT_TESTED;                        
-                    } else if (result === "n/a") {
-                        const td_impl = add_child(tr, 'td', 'n/a');
-                        td_impl.className = Constants.CLASS_NA;                        
+                        td_impl.className = Constants.CLASS_UNTESTED;                        
                     } else {
-                        const text = result ? Constants.CLASS_PASS : Constants.CLASS_FAIL
-                        const td_impl = add_child(tr, 'td', text);
-                        td_impl.className = text
+                        const td_impl = add_child(tr, 'td', Score.get_td(result));
+                        td_impl.className = Score.get_class(result)
                     }
                 }
             }

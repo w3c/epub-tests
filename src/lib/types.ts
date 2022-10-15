@@ -74,8 +74,8 @@ export namespace Constants {
     /** CSS Class name for table cells with non applicable tests */
     export const CLASS_NA: string = "na";
 
-    /** CSS Class name for table cells with non applicable tests */
-    export const CLASS_NOT_TESTED: string = "not_tested";
+    /** CSS Class name for table cells with non test results */
+    export const CLASS_UNTESTED: string = "untested";
 
     /** CSS Class name for columns containing the ID-s */
     export const CLASS_COL_ID: string = "col_id";
@@ -136,6 +136,39 @@ export interface TestData {
     required: ReqType;
 }
 
+
+/**
+ * (Internal) values for the test scores
+ */
+// eslint-disable-next-line no-shadow
+export enum Score {
+    FAIL = "fail",
+    PASS = "pass",
+    NOT_APPLICABLE = "n/a",
+    UNTESTED = "?",
+}
+
+export namespace Score {
+    export function get_class(s: Score): string {
+        switch (s) {
+        case Score.FAIL: 
+            return Constants.CLASS_FAIL;
+        case Score.PASS: 
+            return Constants.CLASS_PASS;
+        case Score.NOT_APPLICABLE: 
+            return Constants.CLASS_NA;
+        case Score.UNTESTED: 
+        default: 
+            return Constants.CLASS_UNTESTED;
+        }
+    }
+
+    export function get_td(s: Score): string {
+        return s as string;
+    }
+}
+
+
 /**
  * Data about a single implementer: essentially, the data that is necessary to the final 
  * report about each implementer
@@ -149,6 +182,7 @@ export interface Implementer {
     ref ?: string
 }
 
+
 /**
  * The report of each implementer: beyond the data about the implementation itself it 
  * includes an object listing tests results, one for each test that has been run. 
@@ -156,7 +190,21 @@ export interface Implementer {
  */
 export interface ImplementationReport extends Implementer {
     tests: {
-       [index: string]: boolean|string; 
+       [index: string]: Score; 
+    }
+}
+
+
+/**
+ * The report of each implementer in JSON format.
+ * 
+ * (In an ideal world, this should be identical to ImplementationReport, but by the time
+ * this was improved to use more values, tests had been already done, and it was not feasible
+ * to change the existing test results. Oh well...)
+ */
+export interface Raw_ImplementationReport extends Implementer {
+    tests: {
+        [index:string]: (boolean|string)
     }
 }
 
@@ -170,7 +218,7 @@ export interface ImplementationData extends TestData {
     /**
      * The array of implementation flags for this test
      */
-    implementations: (boolean|string)[];
+    implementations: Score[];
 }
 
 

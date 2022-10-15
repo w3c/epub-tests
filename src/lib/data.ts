@@ -22,7 +22,16 @@ import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 import * as xml2js from "xml2js";
 
-import { TestData, ImplementationReport, ImplementationData, ImplementationTable, Implementer, ReportData, ReqType, Constants } from './types';
+import { 
+    TestData, 
+    Score,
+    ImplementationReport, Raw_ImplementationReport,
+    ImplementationData, ImplementationTable, 
+    Implementer, ReportData, 
+    ReqType, 
+    Constants, 
+} from './types';
+
 
 /** 
  * Name tells it all...
@@ -101,7 +110,7 @@ export function isFile(name: string): boolean {
 /**
  * Lists of a directory content.
  * 
- * (Note: at this moment this returns all the file names. Depending on the final configuration some filters may have to be added.)
+ * (Note: by default this returns all the file names. Depending on the final configuration some filters may have to be added.)
  * 
  * @param dir_name name of the directory
  * @param filter_name a function to filter the retrieved list (e.g., no directories)
@@ -119,39 +128,59 @@ export async function get_list_dir(dir_name: string, filter_name: (name: string)
 
 
 /**
+ * Get a single implementation report in JSON and convert to its internal format, 
+ * 
+ * @internal
+ */
+async function get_an_implementation_report(fname: string): Promise<ImplementationReport> {
+    // Just to make the code more readable...
+    type raw_index_pair = [string, string|boolean];
+    type internal_index_pair = [string, Score];
+    interface raw_map {[index: string]: (boolean|string)}
+    interface internal_map {[index: string]: Score}
+   
+    // the boolean|string in the JSON file is transformed into a proper Score
+    const transform = (raw_score: (boolean|string)): Score => {
+        if (typeof(raw_score) === 'boolean') {
+            return (raw_score) ? Score.PASS : Score.FAIL;
+        } else if (raw_score === null) {
+            return Score.UNTESTED;
+        } else {
+            return (raw_score.toLowerCase() === "n/a")? Score.NOT_APPLICABLE : Score.UNTESTED;
+        }
+    };
+    // Transform al the tests into proper Scores; just get all the entries transformed
+    const transform_tests = (raw: raw_map): internal_map => {
+        return Object.entries(raw)
+            .map((value: raw_index_pair): internal_index_pair => [value[0], transform(value[1])])
+            .reduce((previous: internal_map, current: internal_index_pair): internal_map => {
+                previous[current[0]] = current[1];
+                return previous;
+            },{});
+    };
+
+    const raw_data = await fs.readFile(fname, 'utf-8');
+    const raw_report: Raw_ImplementationReport = JSON.parse(raw_data) as Raw_ImplementationReport;
+    return {
+        name    : raw_report.name,
+        ref     : raw_report.ref,
+        variant : raw_report.variant,
+        tests   : transform_tests(raw_report.tests),
+    }
+}
+
+/**
  * Get all the implementation reports from the file system.
  * The results are sorted using the implementation's name as a key.
  * 
  * @param dir_name the directory that contains the implementation reports
+ * @internal
  */
 async function get_implementation_reports(dir_name: string): Promise<ImplementationReport[]> {
-    // Filter out the "null" values from the implementation reports
-    const remove_nulls = (inp: ImplementationReport): ImplementationReport => {
-        const val: any = {};
-        for (const key in inp.tests) {
-            if (inp.tests[key] !== null) {
-                val[key] = inp.tests[key]
-            }
-        }
-        inp.tests = val;
-        return inp;
-    }
-
-    // Get a single implementation report, which must be a JSON file
-    const get_implementation_report = async (file_name: string): Promise<ImplementationReport> => {
-        const implementation_report = await fs.readFile(file_name, 'utf-8');
-        try {
-            return remove_nulls(JSON.parse(implementation_report) as ImplementationReport);
-        } catch (error) {
-            console.warn(`Warning: unable to parse ${file_name}; ignored`);
-            return undefined;
-        }
-    };
-
     const implementation_list = await get_list_dir(dir_name, isFile);
 
     // Use the 'Promise.all' trick to get to all the implementation reports in one async step rather than going through a cycle
-    const report_list_promises: Promise<ImplementationReport>[] = implementation_list.map((file_name) => get_implementation_report(`${dir_name}/${file_name}`));
+    const report_list_promises: Promise<ImplementationReport>[] = implementation_list.map((file_name) => get_an_implementation_report(`${dir_name}/${file_name}`));
     const proto_implementation_reports: ImplementationReport[] = await Promise.all(report_list_promises);
     const implementation_reports: ImplementationReport[] = proto_implementation_reports.filter((entry) => entry !== undefined); 
     implementation_reports.sort((a,b) => string_comparison(a.name, b.name));
@@ -171,7 +200,7 @@ async function get_implementation_reports(dir_name: string): Promise<Implementat
  */
 function consolidate_implementation_reports(implementations: ImplementationReport[]): ImplementationReport[] {
     // Results of a test, indexed by the ID of the test itself
-    interface TestResults { [index: string]: (boolean|string) }
+    interface TestResults { [index: string]: Score }
     interface Variants { [index: string]: TestResults[]}
     const final: ImplementationReport[] = [];
     const to_be_consolidated: Variants = {};
@@ -182,33 +211,26 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
     const consolidate_test_results = (variant_results: TestResults[]): TestResults => {
         const retval: TestResults = {};
 
-        // Get all keys together
+        // Collect all keys together. In theory, all variants have the same keys, but errors may have
+        // committed by the tester, so better be conservative.
         const all_keys: string[] = variant_results
             .map((variant) => Object.keys(variant))
             .reduce((p: string[], c: string[]): string[] => [...p, ...c], []);
         // This is a neat trick to remove duplicates!
         const keys: string[] = [...new Set(all_keys)];
 
-        // Next is to merge all the results. The rule is to set the result to 'true' if at least one of the values is 'true'
         for (const key of keys) {
-            // Minor side effect trick: for each key there is at least one Test Result that has a value. We can therefore
-            // safely set the result to 'false' temporarily if the test result is not available; there must be a false or true
-            // value somewhere else in the array anyway.
-            const all_results: (boolean|string)[] = variant_results.map((results: TestResults): (boolean|string) => { 
-                return key in results ? results[key] : false
-            });
-            retval[key] = all_results.reduce((previousValue: (boolean|string), currentValue: (boolean|string)): (boolean|string) => {
-                if (typeof(previousValue) === 'boolean') {
-                    // A boolean always trumps a "n/a"
-                    if (typeof(currentValue) === 'boolean') {
-                        return previousValue || currentValue;
-                    } else {
-                        return previousValue;
-                    }
-                } else {
-                    return currentValue;
-                }
-            }, "n/a" );
+            // Missing entries are extended to untested; the tester has not started with a full template.
+            const all_results: Score[] = variant_results.map((results: TestResults): Score => results[key] || Score.UNTESTED);
+            if (all_results.includes(Score.PASS)) {
+                retval[key] = Score.PASS;
+            } else if (all_results.includes(Score.FAIL)) {
+                retval[key] = Score.FAIL
+            } else if (all_results.includes(Score.UNTESTED)) {
+                retval[key] = Score.UNTESTED
+            } else if (all_results.includes(Score.NOT_APPLICABLE)) {
+                retval[key] = Score.NOT_APPLICABLE
+            }
         }
         return retval;
     };
@@ -476,7 +498,7 @@ export async function get_report_data(test_data: TestData[], reports: string): P
  * 
  * @param report the full report, as generated by earlier calls
  */
-export function get_template(report: ReportData): ImplementationReport {
+export function get_template(report: ReportData): Raw_ImplementationReport {
     const test_list: {[index: string]: boolean } = {};
     const keys: string[] = [];
 
