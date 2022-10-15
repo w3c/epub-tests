@@ -143,8 +143,10 @@ async function get_an_implementation_report(fname: string): Promise<Implementati
     const transform = (raw_score: (boolean|string)): Score => {
         if (typeof(raw_score) === 'boolean') {
             return (raw_score) ? Score.PASS : Score.FAIL;
+        } else if (raw_score === null) {
+            return Score.UNTESTED;
         } else {
-            return (raw_score === "n/a")? Score.NONAPPLICABLE : Score.UNTESTED;
+            return (raw_score.toLowerCase() === "n/a")? Score.NOT_APPLICABLE : Score.UNTESTED;
         }
     };
     // Transform al the tests into proper Scores; just get all the entries transformed
@@ -226,8 +228,8 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
                 retval[key] = Score.FAIL
             } else if (all_results.includes(Score.UNTESTED)) {
                 retval[key] = Score.UNTESTED
-            } else if (all_results.includes(Score.NONAPPLICABLE)) {
-                retval[key] = Score.NONAPPLICABLE
+            } else if (all_results.includes(Score.NOT_APPLICABLE)) {
+                retval[key] = Score.NOT_APPLICABLE
             }
         }
         return retval;

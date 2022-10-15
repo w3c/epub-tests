@@ -144,7 +144,7 @@ export interface TestData {
 export enum Score {
     FAIL = "fail",
     PASS = "pass",
-    NONAPPLICABLE = "n/a",
+    NOT_APPLICABLE = "n/a",
     UNTESTED = "?",
 }
 
@@ -155,7 +155,7 @@ export namespace Score {
             return Constants.CLASS_FAIL;
         case Score.PASS: 
             return Constants.CLASS_PASS;
-        case Score.NONAPPLICABLE: 
+        case Score.NOT_APPLICABLE: 
             return Constants.CLASS_NA;
         case Score.UNTESTED: 
         default: 
