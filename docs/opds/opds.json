@@ -18,7 +18,7 @@
                 "author": "Dave Cramer",
                 "description": "XHTML content outside the initial containing block (ICB) is clipped.",
                 "collection": "Fixed Layout",
-                "modified": "2022-10-04T00:00:00Z",
+                "modified": "2022-10-12T00:00:00Z",
                 "publisher": "W3C",
                 "subject": [
                     "epub-test"
@@ -29,6 +29,108 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_invalid_meta",
+                "title": "lay-fxl-xhtml-icb_invalid_meta",
+                "author": "Ivan Herman",
+                "description": "Reading systems SHOULD attempt to extract 'width' and 'height' values even if the tag's syntax is invalid.",
+                "collection": "Fixed Layout",
+                "modified": "2022-10-12T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb_invalid_meta.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_repeated-in-meta",
+                "title": "lay-fxl-xhtml-icb_repeated-in-meta",
+                "author": "Ivan Herman",
+                "description": "Reading system should use the first declaration of a 'width' or 'height' (i.e., ignore repeated declarations).",
+                "collection": "Fixed Layout",
+                "modified": "2022-10-12T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb_repeated-in-meta.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_device_sizes",
+                "title": "lay-fxl-xhtml-icb_device_sizes",
+                "author": "Ivan Herman",
+                "description": "The viewport can be set to device-width, resp. device-height, to fill the full display area.",
+                "collection": "Fixed Layout",
+                "modified": "2022-10-04T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb_device_sizes.epub"
                 }
             ],
             "images": [
