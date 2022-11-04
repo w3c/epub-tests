@@ -5,7 +5,7 @@
     <dc:date>2021-01-22</dc:date>
     <dc:description>
       This is a test of manifest fallbacks where both the spine item and the fallback are likely to be unsupported. The spine
-      item is a DMG, with a fallback to a PSD file.
+      item is a DMG, with a fallback to a PSD file. Reading systems may raise an error on the ingenstion workflow.
     </dc:description>
     <dc:identifier id="pub-id">pub-foreign_bad-fallback</dc:identifier>
     <dc:language>en</dc:language>
@@ -14,7 +14,7 @@
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-foreign</meta>
-    <meta property="dcterms:modified">2021-01-22T00:00:00Z</meta>
+    <meta property="dcterms:modified">2022-11-04T00:00:00Z</meta>
   </metadata>
   <manifest>
     <item id="content_001" href="foo.dmg" media-type="application/octet-stream" fallback="bar"/>
