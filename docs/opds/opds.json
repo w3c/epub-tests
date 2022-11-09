@@ -13,6 +13,40 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-non-validating_comment",
+                "title": "pub-xml-non-validating_comment",
+                "author": "Dave Cramer",
+                "description": "This is a test of XML processing. The nav doc should not appear in the spine because the itemref is commented out.",
+                "collection": "Publication Resources",
+                "modified": "2022-11-06T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-xml-non-validating_comment.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-foreign_bad-fallback",
                 "title": "pub-foreign_bad-fallback",
                 "author": "Dave Cramer",
@@ -5379,40 +5413,6 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-title-order.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pub-xml-non-validating_invalid",
-                "title": "pub-xml-non-validating_invalid",
-                "author": "Dave Cramer",
-                "description": "The spine XML is invalid. The reading system must not display the navigation document.",
-                "collection": "Publication Resources",
-                "modified": "2021-01-05T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-xml-non-validating_invalid.epub"
                 }
             ],
             "images": [
