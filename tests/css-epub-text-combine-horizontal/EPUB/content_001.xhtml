@@ -15,5 +15,13 @@
 
     <p style="margin: 1em; writing-mode: vertical-lr;">これはテストです<span style="-epub-text-combine-horizontal: all;">10</span><span style="-epub-text-combine-horizontal: all;">11</span><span style="-epub-text-combine-horizontal: all;">12</span>。</p>
     
+    <p>3. This test passes if the text below renders vertically with each digit appearing individually.</p>
+
+    <p style="margin: 1em; -epub-text-combine: none; writing-mode: vertical-lr">これはテストです101112。</p>
+
+    <p>4. This test passes if the text below renders vertically with pairs of digits appearing in the space of a single character.</p>
+
+    <p style="margin: 1em; writing-mode: vertical-lr;">これはテストです<span style="-epub-text-combine: horizontal;">10</span><span style="-epub-text-combine: horizontal;">11</span><span style="-epub-text-combine: horizontal;">12</span>。</p>
+
   </body>
 </html>
