@@ -140,7 +140,7 @@
         "pub-foreign_xml-suffix-spine": false,
         "pub-xml-external-id": true,
         "pub-xml-names": true,
-        "pub-xml-non-validating_invalid": true,
+        "pub-xml-non-validating_comment": true,
         "pub-xml-non-validating_unclosed": false,
         "scr-not-support_ccscript-modify-host": false,
         "scr-not-support_ccscript-modify-size": null,
