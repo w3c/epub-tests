@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>EPUB CSS Text Emphasis</title>
+
+    <style>
+      @font-face {
+          font-family: "KentenGeneric";
+          src: url(KentenGeneric.otf) format("opentype");
+      }
+
+      p.test {
+        font-family: "KentenGeneric";
+      }
+      html {
+        -epub-writing-mode:vertical-lr;
+        writing-mode:vertical-lr;
+      }
+      .emphasis-filled-dot-over-left {
+        -epub-text-emphasis-style: filled dot;
+        -epub-text-emphasis-position: over left;
+      }
+    </style>
+  </head>
+  <body>
+  <p class="test"><span class="emphasis-filled-dot-over-left">forces from the rest of the Greeks; and complaining to Thetis, she</span></p>
+  </body>
+</html>
