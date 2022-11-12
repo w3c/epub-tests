@@ -1,12 +1,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
   <head>
     <title>EPUB CSS Text Transform</title>
+    <style>
+      html {
+        -epub-writing-mode:vertical-rl;
+        writing-mode:vertical-rl;
+      }
+    </style>
   </head>
   <body>
     <h1>text-transform Test</h1>
 
     <p>1. This test passes if the English letters appear at the same width and orientation as the Japanese characters.</p>
 
-    <p style="margin: 1em; writing-mode: vertical-lr; text-transform: -epub-fullwidth;">これはテストです。<br />123456abcdef</p>
+    <p style="margin: 1em; text-transform: -epub-fullwidth;">これはテストです。<br />123456abcdef</p>
   </body>
 </html>
