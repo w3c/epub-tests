@@ -16,9 +16,11 @@
   </metadata>
   <manifest>
     <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="content_002" href="content_002.xhtml" media-type="application/xhtml+xml"/>
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
   <spine>
     <itemref idref="content_001"/>
+    <itemref idref="content_002"/>
   </spine>
 </package>
