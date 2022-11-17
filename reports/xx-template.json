@@ -74,6 +74,8 @@
         "mol-tts_single": null,
         "nav-access": null,
         "nav-activation": null,
+        "nav-non-text_img": null,
+        "nav-non-text_img_title": null,
         "nav-spine_in-spine": null,
         "nav-spine_in-spine-no-list-style": null,
         "nav-spine_not-in-spine": null,
