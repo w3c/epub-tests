@@ -25,9 +25,9 @@
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
   <spine>
-    <itemref idref="page_001" properties="rendition:page-spread-left"/>
-    <itemref idref="page_002" properties="rendition:page-spread-right"/>
-    <itemref idref="page_003" properties="rendition:page-spread-left"/>
-    <itemref idref="page_004" properties="rendition:page-spread-right"/>
+    <itemref idref="page_001" properties="page-spread-left"/>
+    <itemref idref="page_002" properties="page-spread-right"/>
+    <itemref idref="page_003" properties="page-spread-left"/>
+    <itemref idref="page_004" properties="page-spread-right"/>
   </spine>
 </package>
