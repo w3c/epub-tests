@@ -23,8 +23,8 @@
   </manifest>
   <spine>
     <itemref idref="content_001"/>
-    <itemref idref="content_002" properties="rendition:layout-pre-paginated"/>
-    <itemref idref="content_003" properties="rendition:layout-pre-paginated"/>
+    <itemref idref="content_002" properties="pre-paginated"/>
+    <itemref idref="content_003" properties="pre-paginated"/>
     <itemref idref="content_004"/>
   </spine>
 </package>
