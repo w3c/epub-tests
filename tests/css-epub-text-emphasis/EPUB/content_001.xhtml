@@ -11,6 +11,41 @@
       p.test {
         font-family: "KentenGeneric";
       }
+      .emphasis-filled-dot {
+        -epub-text-emphasis-style: filled dot;
+      }
+      .emphasis-filled-circle {
+        -epub-text-emphasis-style: filled circle;
+      }
+      .emphasis-filled-double-circle {
+        -epub-text-emphasis-style: filled double-circle;
+      }
+      .emphasis-filled-double-triangle {
+        -epub-text-emphasis-style: filled triangle;
+      }
+      .emphasis-filled-sesame {
+        -epub-text-emphasis-style: filled sesame;
+      }
+      .emphasis-a {
+        -epub-text-emphasis-style: 'a';
+      }
+      .emphasis-filled-double-circle {
+        -epub-text-emphasis-style: filled double-circle;
+      }
+      .emphasis-open-dot {
+        -epub-text-emphasis-style:  open dot;
+      }
+      .emphasis-filled-triangle {
+        -epub-text-emphasis-style: filled triangle;
+      }
+      .emphasis-filled-dot-blue {
+        -epub-text-emphasis-style: filled dot;
+        -epub-text-emphasis-color: blue;
+      }
+      .emphasis-filled-dot-under {
+        -epub-text-emphasis-style: filled dot;
+        -epub-text-emphasis-position: under;
+      }
     </style>
   </head>
   <body>
@@ -22,63 +57,57 @@
 
     <p>1. This test passes if the emphasis marks appear as solid dots over the text below. If the marks do not appear, all of the following tests fail.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled dot">In the war of Troy, the Greeks having sacked some of the neighbouring</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-dot">In the war of Troy, the Greeks having sacked some of the neighbouring</span></p>
 
     <p>2. This test passes if the emphasis marks appear as solid circles over the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled circle;">towns, and taken from thence two beautiful captives, Chryseïs and</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-circle">towns, and taken from thence two beautiful captives, Chryseïs and</span></p>
 
     <p>3. This test passes if the emphasis marks appear as solid double-circles above the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled double-circle;">Briseïs, allotted the first to Agamemnon, and the last to Achilles.</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-double-circle">Briseïs, allotted the first to Agamemnon, and the last to Achilles.</span></p>
 
     <p>4. This test passes if the emphasis marks appear as solid triangles about the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled triangle;">Chryses, the father of Chryseïs, and priest of Apollo, comes to the</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-double-triangle">Chryses, the father of Chryseïs, and priest of Apollo, comes to the</span></p>
 
     <p>5. This test passes if the emphasis marks appear as solid angled rectangles above the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled sesame;">Grecian camp to ransom her; with which the action of the poem opens, in</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-sesame">Grecian camp to ransom her; with which the action of the poem opens, in</span></p>
 
     <p>6. This test passes if the letter "a" appears above the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: 'a';">the tenth year of the siege. The priest being refused, and insolently</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-a">the tenth year of the siege. The priest being refused, and insolently</span></p>
 
     <p>7. This test passes if the emphasis marks appear as hollow dots over the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: open dot">dismissed by Agamemnon, entreats for vengeance from his god; who</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-open-dot">dismissed by Agamemnon, entreats for vengeance from his god; who</span></p>
 
     <p>8. This test passes if the emphasis marks appear as hollow circles over the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: open circle;">inflicts a pestilence on the Greeks. Achilles calls a council, and</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-open-dot">inflicts a pestilence on the Greeks. Achilles calls a council, and</span></p>
 
     <p>9. This test passes if the emphasis marks appear as hollow double-circles above the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled double-circle;">encourages Chalcas to declare the cause of it; who attributes it to the</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-double-circle">encourages Chalcas to declare the cause of it; who attributes it to the</span></p>
 
     <p>10. This test passes if the emphasis marks appear as hollow triangles about the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled triangle;">refusal of Chryseïs. The king, being obliged to send back his captive,</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-triangle">refusal of Chryseïs. The king, being obliged to send back his captive,</span></p>
 
     <p>11. This test passes if the emphasis marks appear as hollow angled rectangles above the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled sesame;">enters into a furious contest with Achilles, which Nestor pacifies;</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-triangle">enters into a furious contest with Achilles, which Nestor pacifies;</span></p>
 
     <p>12. This test passes if the emphasis marks appear as blue solid dots above the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled dot; -epub-text-emphasis-color: blue;">however, as he had the absolute command of the army, he seizes on</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-dot-blue">however, as he had the absolute command of the army, he seizes on</span></p>
 
     <p>13. This test passes if the emphasis marks appear below the text below.</p>
 
-    <p class="test" style="margin: 1em; -epub-text-emphasis-style: filled dot; -epub-text-emphasis-position: under;">Briseïs in revenge. Achilles in discontent withdraws himself and his</p>
+    <p class="test" style="margin: 1em;"><span class="emphasis-filled-dot-under">Briseïs in revenge. Achilles in discontent withdraws himself and his</span></p>
 
-    <p>14. This test passes if the emphasis marks appear to the left of the text below.</p>
-    
-    <p class="test" style="margin: 1em; writing-mode: vertical-lr; -epub-text-emphasis-style: filled dot; -epub-text-emphasis-position: over left;">forces from the rest of the Greeks; and complaining to Thetis, she</p>
-
-    <p>15. This test passes if the emphasis marks appear to the right of the text below.</p>
-    
-    <p class="test" style="margin: 1em; writing-mode: vertical-lr; -epub-text-emphasis-style: filled dot; -epub-text-emphasis-position: over right;">supplicates Jupiter to render them sensible of the wrong done to her</p>
+    <p>14. This test passes if the emphasis marks appear to the left of the text next page.</p>
 
   </body>
 </html>
