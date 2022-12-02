@@ -154,7 +154,7 @@
                 "author": "Wendy Reid",
                 "description": "Tests for the prefixed CSS property -epub-text-combine-horizontal",
                 "collection": "Content Documents",
-                "modified": "2022-11-09T00:00:00Z",
+                "modified": "2022-11-10T00:00:00Z",
                 "publisher": "W3C",
                 "subject": [
                     "epub-test"
@@ -165,6 +165,142 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-combine-horizontal.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-emphasis",
+                "title": "css-epub-text-emphasis",
+                "author": "Wendy Reid",
+                "description": "Tests for the prefixed CSS properties -epub-text-emphasis-color, -position, and -style",
+                "collection": "Content Documents",
+                "modified": "2022-11-09T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-emphasis.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-transform",
+                "title": "css-epub-text-transform",
+                "author": "Wendy Reid",
+                "description": "Tests for the prefixed CSS value -epub-fullwidth",
+                "collection": "Content Documents",
+                "modified": "2022-11-09T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-transform.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-underline-position",
+                "title": "css-epub-text-underline-position",
+                "author": "Wendy Reid",
+                "description": "Tests for the prefixed CSS properties -epub-text-underline-position",
+                "collection": "Content Documents",
+                "modified": "2022-11-09T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-underline-position.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-reflow-align-x-center",
+                "title": "lay-reflow-align-x-center",
+                "author": "Wendy Reid",
+                "description": "For reflowable content, reading systems that support align-x-center must center each page.",
+                "collection": "Layout Rendering",
+                "modified": "2022-11-09T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-reflow-align-x-center.epub"
                 }
             ],
             "images": [
@@ -1367,40 +1503,6 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-rendition-flow-pre-pag.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-reflow-align-x-center",
-                "title": "lay-reflow-align-x-center",
-                "author": "Wendy Reid",
-                "description": "For reflowable content, reading systems that support align-x-center must center each page.",
-                "collection": "Layout Rendering",
-                "modified": "2022-09-17T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-reflow-align-x-center.epub"
                 }
             ],
             "images": [
@@ -3008,40 +3110,6 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-emphasis",
-                "title": "css-epub-text-emphasis",
-                "author": "Wendy Reid",
-                "description": "Tests for the prefixed CSS properties -epub-text-emphasis-color, -position, and -style",
-                "collection": "Content Documents",
-                "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-emphasis.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-orientation",
                 "title": "css-epub-text-orientation",
                 "author": "Wendy Reid",
@@ -3058,74 +3126,6 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-orientation.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-transform",
-                "title": "css-epub-text-transform",
-                "author": "Wendy Reid",
-                "description": "Tests for the prefixed CSS value -epub-fullwidth",
-                "collection": "Content Documents",
-                "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-transform.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/css-epub-text-underline-position",
-                "title": "css-epub-text-underline-position",
-                "author": "Wendy Reid",
-                "description": "Tests for the prefixed CSS properties -epub-text-underline-position",
-                "collection": "Content Documents",
-                "modified": "2022-03-28T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-underline-position.epub"
                 }
             ],
             "images": [
