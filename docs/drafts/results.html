@@ -25,6 +25,11 @@
 				background-color: hsl(60, 100%, 79%);;
 			}
 
+			tr.under_implemented {
+				border: dashed 0.15em black ;
+				font-style: italic;
+			}
+
 			div#button_container {
 				display: flex; 
 				justify-content: center; 
@@ -49,7 +54,7 @@
 				latestVersion: "https://w3c.github.io/epub-tests/results",
 				specStatus: "base",
 				noRecTrack: true,
-				publishDate: "2022-12-05",
+				publishDate: "2022-12-06",
 				shortName: "epub-tests-results",
 				edDraftURI: "https://w3c.github.io/epub-tests/drafts/results",
                 copyrightStart: "2021",
@@ -83,32 +88,43 @@
 			// The current visibility state is stored in a local storage
 			// This means that the requested visibility is kept (in the same browser) and
 			// is valid across the two report files.
-			const ROW_HIDE = "true";
-			const ROW_SHOW = "false";
+			const HIDE = "true";
+			const SHOW = "false";
 			const STORAGE_KEY = 'hide_should_may_tests';
 
 			function row_visibility(current_state) {
 				// Modify the inline text to reflect the visibility status
 				const span = document.getElementById("test_visibility");
-				span.textContent = current_state === ROW_HIDE ? "hidden" : "visible";
+				span.textContent = current_state === HIDE ? "hidden" : "visible";
 
 				const change_button = document.getElementById('should_may_visibility');
-				change_button.innerHTML = current_state === ROW_HIDE ? 
+				change_button.innerHTML = current_state === HIDE ? 
 					"Currently showing the results for <span>MUST</span> tests only; click here to show all test results" : 
 					"Currently showing all test results; click here to show the results for <span>MUST</span> tests only";
+
+				// Collect all relevant `<section>` elements...
+				const section_all = document.querySelectorAll("section.optional_feature");
+
+				// ... and change the visibility
+				for (const section of section_all) {
+					section.hidden = (current_state === HIDE);
+					const selector = `a[href="#sec-consolidated-${section.id}-results"]`
+					const toc_a = document.querySelector(selector);
+					toc_a.parentNode.hidden = (current_state === HIDE);
+				}
 
 				// Collect all relevant `<tr>` elements... 
 				const tr_all = document.querySelectorAll("td.should, td.may");
 
 				// ... and change the visibility
 				for (const td of tr_all) {
-					td.parentNode.hidden = (current_state === ROW_HIDE);
+					td.parentNode.hidden = (current_state === HIDE);
 				}
 			}
 
 			// Button clicked: change the status and regenerate the relevant tables
 			function clicked() {
-				let current_state = localStorage.getItem(STORAGE_KEY) === ROW_HIDE ? ROW_SHOW : ROW_HIDE;
+				let current_state = localStorage.getItem(STORAGE_KEY) === HIDE ? SHOW : HIDE;
 				localStorage.setItem(STORAGE_KEY, current_state);
 				row_visibility(current_state);
 			}
@@ -118,8 +134,8 @@
 				// At first run the visibility is not yet set, so it must be set to a default.
 				let current_state = localStorage.getItem(STORAGE_KEY);
 				if (current_state === null) {
-					localStorage.setItem(STORAGE_KEY, ROW_SHOW);
-					current_state = ROW_SHOW;
+					localStorage.setItem(STORAGE_KEY, SHOW);
+					current_state = SHOW;
 				} 
 				row_visibility(current_state);
 				
@@ -182,15 +198,12 @@
 
 		<section data-include='fragments/implementations.html' data-include-replace='true'></section>
 
-		<section>
-			<h2>Implementations Results</h2>
+		<div id="button_container">
+			<button id="should_may_visibility" type="button">switch visibility</button>
+		</div>
 
-			<div id="button_container">
-				<button id="should_may_visibility" type="button">switch visibility</button>
-			</div>
-
-			<section data-include='fragments/results.html' data-include-replace='true'></section>
-		</section>
+		<section data-include='fragments/consolidated_results.html' data-include-replace='true'></section>
+		<section data-include='fragments/complete_results.html' data-include-replace='true'></section>
 
 	</body>
 </html>

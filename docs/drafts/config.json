@@ -16,10 +16,11 @@
         "Package Documents",
         "Internationalization",
         "Content Documents",
-        "Scripting",
         "Navigation Documents",
+        "Layout Rendering",
         "Fixed Layout",
         "Open Container Format",
+        "Scripting",
         "Media Overlays",
         "Structural Semantics"
     ]
