@@ -2,12 +2,23 @@
   <head>
     <title>CSS applied to included SVG</title>
       <style type="text/css">
-        .fil0 {fill: green;}
+        .fil0 {
+          fill: url(#star);
+          stroke: green;
+          stroke-width: 15;
+        }
       </style>
   </head>
   <body>
-    <p>Test passes if the image appears in green.</p>
-    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="20.4978in" height="18.0152in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 46296.26 40689.13" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <p>Test passes if the image appears filled with a repeated star-shaped pattern.</p>
+    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 46296.26 40689.13" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+      <defs>
+        <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
+          <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" fill="green" fill-opacity="0.5"/>
+        </pattern>
+      </defs>
+    
       <g id="Layer_x0020_1">
         <metadata id="CorelCorpID_0Corel-Layer"/>
         <g id="_1763071151248">

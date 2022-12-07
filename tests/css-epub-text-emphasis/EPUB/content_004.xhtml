@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>EPUB CSS Text Emphasis</title>
+
+    <style>
+      @font-face {
+          font-family: "KentenGeneric";
+          src: url(KentenGeneric.otf) format("opentype");
+      }
+
+      p.test {
+        font-family: "KentenGeneric";
+      }
+      html {
+        -epub-writing-mode:vertical-rl;
+        writing-mode:vertical-rl;
+      }
+      .emphasis-filled-dot-over-right {
+        -epub-text-emphasis-style: filled dot;
+        -epub-text-emphasis-position: over right;
+      }
+    </style>
+  </head>
+  <body>
+  <p class="test"><span class="emphasis-filled-dot-over-right">supplicates Jupiter to render them sensible of the wrong done to her</span></p>
+
+  </body>
+</html>

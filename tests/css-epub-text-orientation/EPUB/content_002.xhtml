@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>EPUB CSS Text Orientation</title>
+    <style>
+      html {
+        -epub-writing-mode:vertical-rl;
+        writing-mode:vertical-rl;
+      }
+      .text-orientation-mixed {
+        -epub-text-orientation: mixed;
+      }
+      .text-orientation-upright {
+        -epub-text-orientation: upright;
+      }
+      .text-orientation-sideways {
+        -epub-text-orientation: sideways;
+      }
+      .text-orientation-sideways-right {
+        -epub-text-orientation: sideways-right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>-epub-text-orientation Tests</h1>
+
+    <p>Instructions: All conditions of this test book must pass for the feature to pass. If any test fails, mark this section as a fail in the implementation report.</p>
+
+    <p style="margin: 1em;" class="text-orientation-mixed">1. これはテストです。This test passes if the English text appears to be turned 90 degrees while the Japanese text is vertical.</p>
+
+    <p style="margin: 1em;" class="text-orientation-upright">2. これはテストです。This test passes if the English text appears upright and vertical while the Japanese text is vertical.</p>
+
+    <p style="margin: 1em;" class="text-orientation-sideways">3. これはテストです。This test passes if both the English and Japanese text appear to be turned 90 degrees while vertical.</p>
+
+    <p style="margin: 1em;" class="text-orientation-sideways-right">4. これはテストです。This test passes if this text renders identically to the test previous paragraph.</p>
+
+  </body>
+</html>

@@ -14,12 +14,13 @@
         "Publication Resources",
         "Core Media Types",
         "Package Documents",
+        "Manifest Fallbacks",
         "Internationalization",
         "Content Documents",
-        "Scripting",
         "Navigation Documents",
         "Fixed Layout",
         "Open Container Format",
+        "Scripting",
         "Media Overlays",
         "Structural Semantics"
     ]

@@ -1,19 +1,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
   <head>
     <title>EPUB CSS Text Combine</title>
+    <style>
+      html {
+        -epub-writing-mode:vertical-rl;
+        writing-mode:vertical-rl;
+      }
+      .epub-text-combine-horizontal-none {
+        -epub-text-combine-horizontal: none;
+      }
+      .epub-text-combine-horizontal-all {
+        -epub-text-combine-horizontal: all;
+      }
+      .epub-text-combine-none {
+        -epub-text-combine: none;
+      }
+      .epub-text-combine-horizontal {
+        -epub-text-combine: horizontal;
+      }
+    </style>
   </head>
   <body>
     <h1>-epub-text-combine-horizontal Tests</h1>
 
     <p>Instructions: All conditions of this test book must pass for the feature to pass. If any test fails, mark this section as a fail in the implementation report.</p>
 
-    <p>1. This test passes if the text below renders vertically with each digit appearing individually.</p>
+    <p>1. This test passes if the text next paragraph renders vertically with each digit appearing individually.</p>
 
-    <p style="margin: 1em; -epub-text-combine-horizontal: none; writing-mode: vertical-lr">これはテストです101112。</p>
+    <p style="margin: 1em;">これはテストです<span class="epub-text-combine-horizontal-none">101112</span>。</p>
     
-    <p>2. This test passes if the text below renders vertically with pairs of digits appearing in the space of a single character.</p>
+    <p>2. This test passes if the text below next paragraph vertically with pairs of digits appearing in the space of a single character.</p>
 
-    <p style="margin: 1em; -epub-text-combine-horizontal: all; writing-mode: vertical-lr;">これはテストです101112。</p>
+    <p style="margin: 1em;">これはテストです<span class="epub-text-combine-horizontal-all">10</span><span class="epub-text-combine-horizontal-all">11</span><span class="epub-text-combine-horizontal-all">12</span>。</p>
     
+    <p>3. This test passes if the text next paragraph renders vertically with each digit appearing individually.</p>
+
+    <p style="margin: 1em;">これはテストです<span class="epub-text-combine-none">101112</span>。</p>
+
+    <p>4. This test passes if the text next paragraph renders vertically with pairs of digits appearing in the space of a single character.</p>
+
+    <p style="margin: 1em;">これはテストです<span class="epub-text-combine-horizontal">10</span><span class="epub-text-combine-horizontal">11</span><span class="epub-text-combine-horizontal">12</span>。</p>
+
   </body>
 </html>

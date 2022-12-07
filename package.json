@@ -10,7 +10,8 @@
     "generate": "./node_modules/ts-node/dist/bin.js src/main.ts",
     "respec": "(cd docs/drafts; ../../node_modules/respec/tools/respec2html.js --localhost  -s index.html -o ../index.html; ../../node_modules/respec/tools/respec2html.js --localhost -s results.html -o ../results.html)",
     "lint": "eslint . --ext .ts",
-    "add_metadata": "./node_modules/ts-node/dist/bin.js src/add_metadata.ts"
+    "add_metadata": "./node_modules/ts-node/dist/bin.js src/add_metadata.ts",
+    "modify_metadata": "./node_modules/ts-node/dist/bin.js src/change_opf.ts"
   },
   "repository": {
     "type": "git",

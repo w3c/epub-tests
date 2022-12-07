@@ -5,7 +5,7 @@
  *  @packageDocumentation
  */
 
-import { ReportData, Implementer, Constants } from './types';
+import { ReportData, Implementer, Constants, Score, HTMLFragments } from './types';
 import { JSDOM } from "jsdom";
 
 /**
@@ -67,7 +67,7 @@ function create_impl_list(impl: Implementer[]): string {
  * @returns Serialized XML
  */
 // eslint-disable-next-line max-lines-per-function
-function create_impl_reports(data: ReportData): string {
+function create_impl_reports(data: ReportData): {consolidated_results: string, complete_results: string} {
     // Two tables must be created: the consolidated and detailed results. The function below is 
     // invoked twice to get these two.
     const create_impl_report = (consolidated: boolean): string => {
@@ -86,7 +86,12 @@ function create_impl_reports(data: ReportData): string {
             const table_section = add_child(top_section, 'section');
 
             const h3 = add_child(table_section, 'h3', table.header);
-            h3.id = `sec-${convert_to_id(table.header)}-results`;
+            h3.id = (consolidated) ? `sec-consolidated-${convert_to_id(table.header)}-results` : `sec-detailed-${convert_to_id(table.header)}-results`;
+
+            if (consolidated && Constants.OPTIONAL_FEATURES.includes(table.header)) {
+                const p = add_child(table_section,'p','The general feature is <em>OPTIONAL;</em> a "must" tests means that <em>it is required to pass it to claim conformance in implementing the feature</em>.');
+                table_section.className = "optional_feature";
+            }
 
             const test_table = add_child(table_section, 'table');
             test_table.className = 'simple';
@@ -124,25 +129,32 @@ function create_impl_reports(data: ReportData): string {
                 add_child(tr, 'td', row.required);
 
                 //... followed by the test results themselves
+                let passes = 0;
                 for (const result of row.implementations) {
                     if (result === undefined) {
-                        add_child(tr, 'td', 'n/a');
+                        // This may happen if the tester has not started with a full template...
+                        const td_impl = add_child(tr, 'td', '?');
+                        td_impl.className = Constants.CLASS_UNTESTED;                        
                     } else {
-                        const text = result ? Constants.CLASS_PASS : Constants.CLASS_FAIL
-                        const td_impl = add_child(tr, 'td', text);
-                        td_impl.className = text
+                        const td_impl = add_child(tr, 'td', Score.get_td(result));
+                        td_impl.className = Score.get_class(result)
+                        if (Score.get_td(result) === Score.PASS) {
+                            passes += 1;
+                        }
                     }
+                }
+                if (consolidated && row.required === "must" && passes < 2) {
+                    tr.className = "under_implemented";
                 }
             }
         }
         return top_section.outerHTML;
     }
 
-    return `
-    ${create_impl_report(true)}
-
-    ${create_impl_report(false)}
-    `;
+    return {
+        consolidated_results : create_impl_report(true),
+        complete_results     : create_impl_report(false),
+    };
 }
 
 
@@ -181,25 +193,12 @@ function create_test_data(data: ReportData): string {
         const test_table = add_child(table_section, 'table');
         test_table.className = 'simple sortable';
 
-        // The table begins with a colgroup to allow for a proper styling, 
-        // especially a common width for all columns across the document
-        // add_child(test_table, 'colgroup',`
-        //     <col class="${Constants.CLASS_COL_ID}"/>
-        //     <col class="${Constants.CLASS_COL_REQ}"/>
-        //     <col class="${Constants.CLASS_COL_TITLE}"/>
-        //     <col class="${Constants.CLASS_COL_DESCR}"/>
-        //     <col class="${Constants.CLASS_COL_MOD}"/>
-        //     <col class="${Constants.CLASS_COL_SREF}"/>
-        //     <col class="${Constants.CLASS_COL_TREF}"/>
-        // `);
-
         const thead = add_child(test_table, 'thead');
         // Next is a header row
         add_child(thead, 'tr',`
-            <th scope="col" class="order-asc" style="width:12%">Id</th>
+            <th scope="col" class="order-asc" style="width:17%">Id</th>
+            <th scope="col" style="width:59%">Description</th>
             <th scope="col" style="width:8%">Req</th>
-            <th scope="col" style="width:20%">Title</th>
-            <th scope="col" style="width:44%">Description</th>
             <th scope="col" style="width:8%">Date</th>
             <th scope="col" data-nonsortable="true" style="width:4%">Specs</th>
             <th scope="col" data-nonsortable="true" style="width:4%">Ref</th>
@@ -215,9 +214,8 @@ function create_test_data(data: ReportData): string {
             td_id.className = row.required;
             td_id.id = `${row.identifier}`;
 
-            add_child(tr, 'td', row.required);
-            add_child(tr, 'td', row.title); 
             add_child(tr, 'td', row.description);
+            add_child(tr, 'td', row.required);
 
             const date: string[] = row.modified.split('T')[0].split('-');
             date[0] = `’${date[0].charAt(2)}${date[0].charAt(3)}`;
@@ -234,7 +232,7 @@ function create_test_data(data: ReportData): string {
                     a.setAttribute('href', ref);
                 }
             }
-            add_child(tr, 'td', `<a href="${Constants.DOC_TEST_RESULTS}#${row.identifier}-results">❐</a>`);
+            add_child(tr, 'td', `<a href="${Constants.DOC_TEST_RESULTS}#${row.identifier}-results">☞</a>`); /* ❐ */
         }
     }
 
@@ -298,10 +296,12 @@ function create_creator_list(data: ReportData): string {
  * The return for each of those is in the form of a string containing the XHTML fragment
  * 
  */
-export function create_report(data: ReportData): {implementations: string, results: string, tests: string, creators: string} {
+export function create_report(data: ReportData): HTMLFragments {
+    const {consolidated_results, complete_results} = create_impl_reports(data);
     return {
         implementations : create_impl_list(data.implementers),
-        results         : create_impl_reports(data),
+        consolidated_results,
+        complete_results,
         tests           : create_test_data(data),
         creators        : create_creator_list(data),
     }

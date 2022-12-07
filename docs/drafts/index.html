@@ -8,19 +8,15 @@
 			td a {
 				text-decoration: none !important;
 			}
-
 			td summary {
 				font-weight: normal;
 			}
-
 			td.pass {
 				background-color: green;
 			}
-
 			td.fail {
 				background-color: red;
 			}
-
 			div#button_container {
 				display: flex; 
 				justify-content: center; 
@@ -38,31 +34,30 @@
 			button#should_may_visibility span {
 				font-size: 90%;
 			}
-
 			table.sortable > thead > tr > th {
 				cursor: pointer;
 			}
-
 			table.sortable > thead > tr > th[data-nonsortable='true']{
 				cursor: default;
 			}
-
 			table.sortable > thead > tr > th.order-field{
 				padding-right: 0px;
 			} 
-
 			table.sortable > thead > tr > th.order-asc:after{
 				display: inline-block;
 				text-align: center;
 				width: 15px;
 				content: '\25B2';
 			}
-
 			table.sortable > thead > tr > th.order-desc:after{
 				display: inline-block;
 				text-align: center;
 				width: 15px;
 				content: '\25BC';
+			}
+			td {
+				hyphens: auto !important;
+				-webkit-hyphens: auto !important;
 			}
 		</style>
 		<script class="remove">
@@ -71,7 +66,7 @@
 				latestVersion: "https://w3c.github.io/epub-tests/",
 				specStatus: "base",
 				noRecTrack: true,
-				publishDate: "2022-09-12",
+				publishDate: "2022-12-07",
 				shortName: "epub-tests",
 				edDraftURI: "https://w3c.github.io/epub-tests/results/drafts/",
                 copyrightStart: "2021",
@@ -179,7 +174,7 @@
 			<ol>
 				<li>The identification of each test, linked to the unzipped test contents in the GitHub repository.</li>
 				<li>Conformance flag (i.e., <code>must</code>, <code>should</code>, or <code>may</code>).</li>
-				<li>Title.</li>
+				<li>Title. In most of the cases this value is identical to identification value; there are a few exception when the title metadata itself is the subject of the test (e.g., in the case of some internationalization tests).</li>
 				<li>Short description.</li>
 				<li>The date of the last modification.</li>
 				<li>Reference(s) to the corresponding normative statements or sections in the EPUB 3.3 specification(s).</li>

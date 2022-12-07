@@ -44,8 +44,11 @@ export namespace Constants {
     /** Location for the HTML fragment on implementation lists */
     export const IMPL_FRAGMENT: string = `${DOCS_DIR}/fragments/implementations.html`;
 
-    /** Location for the HTML fragment on implementation results */
-    export const RESULT_FRAGMENT: string = `${DOCS_DIR}/fragments/results.html`;
+    /** Location for the HTML fragment on the consolidated implementation results */
+    export const CONSOLIDATED_RESULT_FRAGMENT: string = `${DOCS_DIR}/fragments/consolidated_results.html`;
+
+    /** Location for the HTML fragment on the detailed implementation results */
+    export const COMPLETE_RESULT_FRAGMENT: string = `${DOCS_DIR}/fragments/complete_results.html`;
 
     /** Location for the HTML fragment on test metadata */
     export const TEST_FRAGMENT: string = `${DOCS_DIR}/fragments/tests.html`;
@@ -71,6 +74,12 @@ export namespace Constants {
     /** CSS Class name for table cells with negative test results */
     export const CLASS_FAIL: string = "fail";
 
+    /** CSS Class name for table cells with non applicable tests */
+    export const CLASS_NA: string = "na";
+
+    /** CSS Class name for table cells with non test results */
+    export const CLASS_UNTESTED: string = "untested";
+
     /** CSS Class name for columns containing the ID-s */
     export const CLASS_COL_ID: string = "col_id";
 
@@ -84,6 +93,8 @@ export namespace Constants {
     export const CONFIG_FILE: string = `${DOCS_DIR}/config.json`;
 
     export const EPUB_MEDIA_TYPE: string = 'application/epub+zip';
+
+    export const OPTIONAL_FEATURES: string[] = ["Media Overlays", "Structural Semantics", "Scripting"];
 }
 
 /**
@@ -130,25 +141,75 @@ export interface TestData {
     required: ReqType;
 }
 
+
 /**
- * Data about a single implementer: essentially, the data that is necessary to the final report about each implementer
+ * (Internal) values for the test scores
+ */
+// eslint-disable-next-line no-shadow
+export enum Score {
+    FAIL = "fail",
+    PASS = "pass",
+    NOT_APPLICABLE = "n/a",
+    UNTESTED = "?",
+}
+
+export namespace Score {
+    export function get_class(s: Score): string {
+        switch (s) {
+        case Score.FAIL: 
+            return Constants.CLASS_FAIL;
+        case Score.PASS: 
+            return Constants.CLASS_PASS;
+        case Score.NOT_APPLICABLE: 
+            return Constants.CLASS_NA;
+        case Score.UNTESTED: 
+        default: 
+            return Constants.CLASS_UNTESTED;
+        }
+    }
+
+    export function get_td(s: Score): string {
+        return s as string;
+    }
+}
+
+
+/**
+ * Data about a single implementer: essentially, the data that is necessary to the final 
+ * report about each implementer
  */
 export interface Implementer {
     /** Name of the implementation, to appear in the final report */
-    name: string;
+    name : string;
     /** Name of a variant, to appear in the final report */
-    variant?: string;
+    variant ?: string;
     /** If present, the name becomes a hyperlink to this URL */
-    ref?: string
+    ref ?: string
 }
 
+
 /**
- * The report of each implementer: beyond the data about the implementation itself it includes an object listing
- * tests results, one for each test that has been run. The index is the ID of the test.
+ * The report of each implementer: beyond the data about the implementation itself it 
+ * includes an object listing tests results, one for each test that has been run. 
+ * The index is the ID of the test.
  */
 export interface ImplementationReport extends Implementer {
     tests: {
-       [index: string]: boolean; 
+       [index: string]: Score; 
+    }
+}
+
+
+/**
+ * The report of each implementer in JSON format.
+ * 
+ * (In an ideal world, this should be identical to ImplementationReport, but by the time
+ * this was improved to use more values, tests had been already done, and it was not feasible
+ * to change the existing test results. Oh well...)
+ */
+export interface Raw_ImplementationReport extends Implementer {
+    tests: {
+        [index:string]: (boolean|string)
     }
 }
 
@@ -162,12 +223,13 @@ export interface ImplementationData extends TestData {
     /**
      * The array of implementation flags for this test
      */
-    implementations: boolean[];
+    implementations: Score[];
 }
 
 
 /**
- * A single set ("table") of implementations, grouped as one "section" (using the "coverage" value in the tests)
+ * A single set ("table") of implementations, grouped as one "section" (using the "coverage" 
+ * value in the tests)
  */
 export interface ImplementationTable {
     header: string;
@@ -184,3 +246,14 @@ export interface ReportData {
     implementers : Implementer[];
     consolidated_implementers: Implementer[];
 } 
+
+/**
+ * Data returned from the HTML generation
+ */
+export interface HTMLFragments {
+    implementations: string, 
+    consolidated_results: string,
+    complete_results: string, 
+    tests: string, 
+    creators: string
+}

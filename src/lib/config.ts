@@ -17,7 +17,8 @@ interface Config {
 }
 
 /**
- * If the configuration file sets the `final` value to `false`, all references to the final,`/TR` version of the document must be changed for the editor's draft. This function changes those references.
+ * If the configuration file sets the `final` value to `false`, all references to the final,`/TR` version of the
+ * document must be changed for the editor's draft. This function changes those references.
  * 
  * @param config Configuration file
  * @param table reference to all the tests (as part of the implementation table)

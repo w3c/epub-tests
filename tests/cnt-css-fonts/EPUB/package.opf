@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:coverage>Content Documents</dc:coverage>
@@ -8,21 +7,21 @@
     <dc:identifier id="pub-id">cnt-css-fonts</dc:identifier>
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
-    <dc:title>CSS support for font resources</dc:title>
+    <dc:title>cnt-css-fonts</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-css-rs-fonts</meta>
     <meta property="dcterms:modified">2022-05-13T00:00:00Z</meta>
   </metadata>
   <manifest>
-    <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml" />
-    <item id="font_opentype" href="fonts/FrankyToys.otf" media-type="font/otf" />
-    <item id="font_truetype" href="fonts/Lobster.ttf" media-type="font/ttf" />
-    <item id="font_woff" href="fonts/Pacifico.woff" media-type="font/woff" />
-    <item id="font_woff2" href="fonts/Macondo.woff2" media-type="font/woff2" />
-    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml" />
+    <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="font_opentype" href="fonts/FrankyToys.otf" media-type="font/otf"/>
+    <item id="font_truetype" href="fonts/Lobster.ttf" media-type="font/ttf"/>
+    <item id="font_woff" href="fonts/Pacifico.woff" media-type="font/woff"/>
+    <item id="font_woff2" href="fonts/Macondo.woff2" media-type="font/woff2"/>
+    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
   </manifest>
   <spine>
-    <itemref idref="content_001" />
+    <itemref idref="content_001"/>
   </spine>
 </package>

@@ -1,0 +1,36 @@
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage>Fixed Layout</dc:coverage>
+    <dc:creator>Wendy Reid</dc:creator>
+    <dc:date>2021-11-24</dc:date>
+    <dc:description>If a reflowable spine item follows a pre-paginated one, it should appear on the next page.</dc:description>
+    <dc:identifier id="pub-id">lay-page-layout-both</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
+    <dc:title>lay-page-layout-both</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+    <meta property="belongs-to-collection">should</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#property-layout-local</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#page-layout-both</meta>
+    <meta property="dcterms:modified">2022-09-21T00:00:00Z</meta>
+    <meta property="rendition:layout">pre-paginated</meta>
+  </metadata>
+  <manifest>
+    <item id="page_001" href="page_001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="page_002" href="page_002.xhtml" media-type="application/xhtml+xml"/>
+    <item id="page_003" href="page_003.xhtml" media-type="application/xhtml+xml"/>
+    <item id="page_004" href="page_004.xhtml" media-type="application/xhtml+xml"/>
+    <item id="style" href="fixed.css" media-type="text/css"/>
+    <item id="style2" href="reflow.css" media-type="text/css"/>
+    <item id="stix-font" href="fonts/STIXTwoText-Regular.otf" media-type="font/otf"/>
+    <item id="murmure-font" href="fonts/le-murmure.otf" media-type="font/otf"/>
+    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine>
+    <itemref idref="page_001"/>
+    <itemref idref="page_002" properties="rendition:layout-reflowable"/>
+    <itemref idref="page_003"/>
+    <itemref idref="page_004"/>
+  </spine>
+</package>
