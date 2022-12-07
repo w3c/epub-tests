@@ -44,8 +44,11 @@ export namespace Constants {
     /** Location for the HTML fragment on implementation lists */
     export const IMPL_FRAGMENT: string = `${DOCS_DIR}/fragments/implementations.html`;
 
-    /** Location for the HTML fragment on implementation results */
-    export const RESULT_FRAGMENT: string = `${DOCS_DIR}/fragments/results.html`;
+    /** Location for the HTML fragment on the consolidated implementation results */
+    export const CONSOLIDATED_RESULT_FRAGMENT: string = `${DOCS_DIR}/fragments/consolidated_results.html`;
+
+    /** Location for the HTML fragment on the detailed implementation results */
+    export const COMPLETE_RESULT_FRAGMENT: string = `${DOCS_DIR}/fragments/complete_results.html`;
 
     /** Location for the HTML fragment on test metadata */
     export const TEST_FRAGMENT: string = `${DOCS_DIR}/fragments/tests.html`;
@@ -90,6 +93,8 @@ export namespace Constants {
     export const CONFIG_FILE: string = `${DOCS_DIR}/config.json`;
 
     export const EPUB_MEDIA_TYPE: string = 'application/epub+zip';
+
+    export const OPTIONAL_FEATURES: string[] = ["Media Overlays", "Structural Semantics", "Scripting"];
 }
 
 /**
@@ -241,3 +246,14 @@ export interface ReportData {
     implementers : Implementer[];
     consolidated_implementers: Implementer[];
 } 
+
+/**
+ * Data returned from the HTML generation
+ */
+export interface HTMLFragments {
+    implementations: string, 
+    consolidated_results: string,
+    complete_results: string, 
+    tests: string, 
+    creators: string
+}
