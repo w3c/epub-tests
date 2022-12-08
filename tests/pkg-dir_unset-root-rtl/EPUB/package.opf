@@ -3,7 +3,7 @@
     <dc:coverage>Internationalization</dc:coverage>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2021-09-22</dc:date>
-    <dc:description lang="en">
+    <dc:description xml:lang="en">
       The 'dc:title' element contains text whose proper rendering requires bidi control. The root's 'dir' attribute is set to
       'rtl'; the title should display correctly.
     </dc:description>
@@ -13,7 +13,7 @@
     <dc:title xml:lang="ar">CSS: مغامرة جديدة!</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:alternative" lang="en">pkg-dir_unset-root-rtl</meta>
+    <meta property="dcterms:alternative" xml:lang="en">pkg-dir_unset-root-rtl</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir-intro</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir</meta>
