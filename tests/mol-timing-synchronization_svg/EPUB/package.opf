@@ -25,6 +25,7 @@
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
     <item id="md-mp3" href="audio/mobydick.mp3" media-type="audio/mpeg"/>
     <item id="md-smil" href="mo/mobydick.smil" media-type="application/smil+xml"/>
+    <item id="style" href="style.css" media-type="text/css"/>
   </manifest>
   <spine>
     <itemref idref="content_001"/>

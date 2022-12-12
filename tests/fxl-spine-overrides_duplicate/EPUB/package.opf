@@ -24,6 +24,6 @@
   </manifest>
   <spine>
     <itemref idref="page_001"/>
-    <itemref idref="page_002" properties="reflowable pre-paginated"/>
+    <itemref idref="page_002" properties="rendition:layout-reflowable rendition:layout-pre-paginated"/>
   </spine>
 </package>
