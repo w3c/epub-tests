@@ -1,0 +1,12 @@
+.active-item {
+    background-color: #fbf4ef;
+}
+
+.rendered-with-mo {
+    font-weight: bold;
+}
+
+text {
+    font-size: 5px;
+    fill: black;
+}
