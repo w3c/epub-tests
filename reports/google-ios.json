@@ -13,7 +13,7 @@
         "cnt-xhtml-support": null,
         "css-epub-hyphens": null,
         "css-epub-line-break": null,
-        "css-epub-text-align-last": null,
+        "css-epub-text-align-last": false,
         "css-epub-text-combine-horizontal": null,
         "css-epub-text-emphasis": null,
         "css-epub-text-orientation": null,
