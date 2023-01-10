@@ -133,7 +133,7 @@ function create_impl_reports(data: ReportData): {consolidated_results: string, c
                 for (const result of row.implementations) {
                     if (result === undefined) {
                         // This may happen if the tester has not started with a full template...
-                        const td_impl = add_child(tr, 'td', '?');
+                        const td_impl = add_child(tr, 'td', ' ');
                         td_impl.className = Constants.CLASS_UNTESTED;                        
                     } else {
                         const td_impl = add_child(tr, 'td', Score.get_td(result));
