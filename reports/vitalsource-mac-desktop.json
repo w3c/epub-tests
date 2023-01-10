@@ -105,8 +105,6 @@
         "pkg-dir-auto_root-rtl": false,
         "pkg-dir-auto_root-unset": false,
         "pkg-lang_but_not_content": true,
-        "pkg-linked-records_link-order": "n/a",
-        "pkg-linked-records_link-priority": "n/a",
         "pkg-linked-records": "n/a",
         "pkg-manifest-unknown": true,
         "pkg-manifest-unlisted-resource": false,

@@ -99,8 +99,6 @@
         "lay-pkg-flow-scrolled-doc": false,
         "pkg-lang_but_not_content": null,
         "pkg-linked-records": null,
-        "pkg-linked-records_link-order": null,
-        "pkg-linked-records_link-priority": null,
         "pkg-manifest-unknown": true,
         "pkg-manifest-unlisted-resource": false,
         "pkg-meta-unknown": true,
