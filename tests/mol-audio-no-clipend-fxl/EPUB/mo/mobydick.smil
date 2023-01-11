@@ -1,0 +1,15 @@
+<smil xmlns="http://www.w3.org/ns/SMIL" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0">
+    <body>
+        <seq epub:textref="../mobydick.xhtml#mobyexcerpt">
+            <par id="first">
+                <text src="../mobydick.xhtml#first"/>
+                <audio src="../audio/mobydick.mp3" clipBegin="0:00:29.268" clipEnd="0:00:44.783"/>
+            </par>
+
+            <par id="second">
+                <text src="../mobydick.xhtml#second"/>
+                <audio src="../audio/mobydick.mp3" clipBegin="0:00:44.783" />
+            </par>
+        </seq>
+    </body>
+</smil>   

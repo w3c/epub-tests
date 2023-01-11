@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Text-to-speech fallback for multiple fragments</title>
+	<meta name="viewport" content="width=800, height=1240"/>
+	<style>
+		html {
+			font-size: 62.5%;
+		}
+		body {
+			font-size: 2.5rem;
+		}
+	</style>
+</head>
+<body>
+    <p>Test passes (i.e., the Reading System correctly falls back to its own Text-to-Speech system when no audio file is present) if</p>
+    <ol>
+        <li>The Reading System provides the user with a way to turn text reading on</li>
+        <li>If turned on, the extract on the next page is read aloud by the Reading System using Text-to-Speech</li>
+     </ol>
+
+    <p>The Reading System may highlight the text being read with a green background with the text grayed out;
+        but this feature is not required for the test to pass.</p>
+</body>
+</html>
