@@ -22,7 +22,6 @@
         "css-epub-word-break": false,
         "css-epub-writing-mode": true,
         "fxl-layout-duplication": null,
-        "fxl-orientation-duplication": null,
         "fxl-page-spread-break": true,
         "fxl-page-spread-center": true,
         "fxl-spine-overrides_behave-as-global-bis": true,
