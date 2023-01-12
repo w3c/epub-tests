@@ -10,9 +10,10 @@
     <dc:title>css-epub-writing-mode</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+    <meta property="belongs-to-collection">should</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-css-prefixed-writing-modes-writing-mode</meta>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-css-rs-prefixed</meta>
-    <meta property="dcterms:modified">2022-11-21T00:00:00Z</meta>
+    <meta property="dcterms:modified">2023-01-10T00:00:00Z</meta>
   </metadata>
   <manifest>
     <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml"/>
