@@ -10,10 +10,11 @@
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
     <dc:title>nav-non-text_img</dc:title>
+    <meta property="belongs-to-collection">should</meta>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-nav-alt-text</meta>
-    <meta property="dcterms:modified">2022-11-15T00:00:00Z</meta>
+    <meta property="dcterms:modified">2023-01-11T00:00:00Z</meta>
   </metadata>
   <manifest>
     <item id="content_001"    href="content_001.xhtml" media-type="application/xhtml+xml"/>
