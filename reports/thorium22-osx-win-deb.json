@@ -107,8 +107,6 @@
         "pkg-dir_unset-root-unset": true,
         "pkg-lang_but_not_content": true,
         "pkg-linked-records": true,
-        "pkg-linked-records_link-order": false,
-        "pkg-linked-records_link-priority": false,
         "pkg-manifest-unknown": true,
         "pkg-manifest-unlisted-resource": true,
         "pkg-meta-unknown": true,
