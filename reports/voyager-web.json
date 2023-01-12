@@ -1,7 +1,7 @@
 {
     "name": "VOYAGER BinB",
     "ref": "https://www.voyager.co.jp/products/binb/",
-    "variant" : "Web Browser",
+    "variant" : "Web Platform",
     "tests": {
         "cnt-css-fonts": false,
         "cnt-mathml-support": false,
