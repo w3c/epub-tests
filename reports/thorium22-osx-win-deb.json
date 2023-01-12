@@ -1,6 +1,7 @@
 {
-    "name": "Thorium Reader 2.2.0 Windows, MacOS, Linux",
+    "name": "Thorium Reader 2.2.0",
     "ref": "https://www.edrlab.org/software/thorium-reader/",
+    "variant": "Windows, MacOS, Linux",
     "tests": {
         "cnt-css-fonts": true,
         "cnt-mathml-support": true,
