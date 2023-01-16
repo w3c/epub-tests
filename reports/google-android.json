@@ -109,6 +109,7 @@
         "pkg-spine-duplicate-item-rendering": null,
         "pkg-spine-duplicate-item-ui": null,
         "pkg-spine-nonlinear-activation": true,
+        "pkg-spine-nonlinear-usable": null,
         "pkg-spine-order": null,
         "pkg-spine-order-svg": null,
         "pkg-spine-progression-default": null,

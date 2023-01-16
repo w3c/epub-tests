@@ -114,6 +114,7 @@
         "pkg-spine-duplicate-item-ui": false,
         "pkg-spine-nonlinear-activation": true,
         "pkg-spine-order-svg": false,
+        "pkg-spine-nonlinear-usable": null,
         "pkg-spine-order": true,
         "pkg-spine-progression_ltr": true,
         "pkg-spine-progression_rtl": false,
