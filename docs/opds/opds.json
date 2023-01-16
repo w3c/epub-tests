@@ -5011,6 +5011,40 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-nonlinear-usable",
+                "title": "pkg-spine-nonlinear-usable",
+                "author": "Gautier Chomel",
+                "description": "An itemref in the spine is marked as non-linear. Although it (possibly) cannot be accessed through the table of contents, it can be reached from a link in the XHTML content. Once reached it is possible to read it till the end.",
+                "collection": "Package Documents",
+                "modified": "2023-01-16T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-nonlinear-usable.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/pkg-spine-progression-default",
                 "title": "pkg-spine-progression-default",
                 "author": "Dave Cramer",
