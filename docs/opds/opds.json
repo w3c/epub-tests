@@ -13,6 +13,43 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-audio-no-clipend",
+                "title": "mol-audio-no-clipend",
+                "author": [
+                    "Ivan Herman",
+                    "Marisa DeMeglio"
+                ],
+                "description": "Tests whether the Reading System plays until the end of the audio track in the absence of a clipEnd attribute in the smil file.",
+                "collection": "Media Overlays",
+                "modified": "2023-01-18T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-audio-no-clipend.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-navigation",
                 "title": "mol-navigation",
                 "author": "Marisa DeMeglio",
@@ -2471,43 +2508,6 @@
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
                     "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-audio-no-clipbegin.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 849,
-                    "width": 600
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-audio-no-clipend",
-                "title": "mol-audio-no-clipend",
-                "author": [
-                    "Ivan Herman",
-                    "Marisa DeMeglio"
-                ],
-                "description": "Tests whether the Reading System plays until the end of the audio track in the absence of a clipEnd attribute in the smil file.",
-                "collection": "Media Overlays",
-                "modified": "2022-08-09T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-audio-no-clipend.epub"
                 }
             ],
             "images": [
