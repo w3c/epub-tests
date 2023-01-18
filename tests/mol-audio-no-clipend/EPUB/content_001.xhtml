@@ -11,7 +11,10 @@
         <li>If turned on, the extract on the next page is read aloud by the Reading System</li>
         <li>The full text is read</li>
     </ol>
-    <p>The Reading System may highlight the text being read with a green background with the text grayed out;
-        but this feature is not required for the test to pass.</p>
+    <p>
+        The Reading System may highlight the text being read with a green background with the text grayed out;
+        but this feature is not required for the test to pass. Note that, if highlighted,
+        the highlight may get out of sync with after the second sentence: the audio keeps playing while the highlight remains on the second sentence. This is a possible effect of the missing <code>clipEnd</code> for the second sentence.
+    </p>
 </body>
 </html>
