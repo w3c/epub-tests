@@ -150,7 +150,7 @@ export enum Score {
     FAIL = "fail",
     PASS = "pass",
     NOT_APPLICABLE = "n/a",
-    UNTESTED = "?",
+    UNTESTED = "todo",
 }
 
 export namespace Score {
