@@ -99,7 +99,7 @@
         "ocf-url_parse-leaking-relative": true,
         "ocf-url_parse-path-absolute": true,
         "ocf-url_relative": true,
-        "ocf-zip-comp": false,
+        "ocf-zip-comp": true,
         "ocf-zip-mult": false,
         "pkg-collections-unknown": true,
         "pkg-creator-order": true,
