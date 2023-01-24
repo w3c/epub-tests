@@ -214,7 +214,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "latestVersion": "https://w3c.github.io/epub-tests/results",
   "specStatus": "base",
   "noRecTrack": true,
-  "publishDate": "2023-01-19",
+  "publishDate": "2023-01-24",
   "shortName": "epub-tests-results",
   "edDraftURI": "https://w3c.github.io/epub-tests/drafts/results",
   "copyrightStart": "2021",
@@ -242,15 +242,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/epub-tests",
     "branch": "main"
   },
-  "publishISODate": "2023-01-19T00:00:00.000Z",
-  "generatedSubtitle": "19 January 2023"
+  "publishISODate": "2023-01-24T00:00:00.000Z",
+  "generatedSubtitle": "24 January 2023"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css"></head>
 	
-	<body class="h-entry informative"><div class="head">
+	<body class="h-entry informative toc-inline"><div class="head">
     
     <h1 id="title" class="title">EPUB 3.3 Test Results</h1> 
-    <p id="w3c-state"> <time class="dt-published" datetime="2023-01-19">19 January 2023</time></p>
+    <p id="w3c-state"> <time class="dt-published" datetime="2023-01-24">24 January 2023</time></p>
     <details open="">
       <summary>More details about this document</summary>
       <dl>
@@ -329,16 +329,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				This document contains the test results for all tests. There is a <a href="index.html">separate document</a> which provides a short description for each test; these descriptions are derived from the tests in the tables below.
 			</p>
 
-      <p>
-        In the EPUB community, implementors may develop one or more EPUB Reading System rendering engines which are then used in multiple applications across different platforms (ex. iOS, Android, or Web). To accurately reflect this in our tests, we have "variants", which allow the implementors to report results based on both the core engine and the platforms they support using that engine. From a <abbr title="World Wide Web Consortium">W3C</abbr> Process point of view, these variants should not be considered independent implementations. We are reporting the results of the different variants for the benefit of implementors and the EPUB community, who may find it beneficial to know how implementations support EPUB features across platforms.
-      </p>
-
 			<p>
-				The report tables in sections 3 and 4 reflect this implementation process. <a href="#sec-consolidated-report-tables" class="sec-ref"><bdi class="secno">3. </bdi>Consolidated Implementation Results</a> shows a view of the results where implementations with identical core engines are consolidated into a single implementation. The test results for a specific test is set to <code>pass</code> if <em>any</em> of the variants has a <code>true</code> value. The separate <a href="#sec-detailed-report-tables" class="sec-ref"><bdi class="secno">4. </bdi>Detailed Implementation Results</a> shows the full implementation results for each implementation.
+				In the EPUB community, implementors may develop one or more EPUB Reading System rendering engines which are then used in multiple applications across different platforms (ex. iOS, Android, or Web). To accurately reflect this in our tests, we have "variants", which allow the implementors to report results based on both the core engine and the platforms they support using that engine. From a <abbr title="World Wide Web Consortium">W3C</abbr> Process point of view, these variants should not be considered independent implementations. We are reporting the results of the different variants for the benefit of implementors and the EPUB community, who may find it beneficial to know how implementations support EPUB features across platforms.
 			</p>
 
 			<p>
-				<a href="#sec-implementer-list" class="sec-ref"><bdi class="secno">2. </bdi>List of Implementations</a> lists all the implementations and their variants. The variant will appear after the implementation name, and may include a version number for the software tested and what browser or platform it was tested on. 
+				The report tables in sections 3 and 4 reflect this implementation process.<a href="#sec-consolidated-report-tables" class="sec-ref"><bdi class="secno">3. </bdi>Consolidated Implementation Results</a> shows a view of the reports where reports with identical core engines are consolidated into a single implementation. The test results for a specific test is set to <code>pass</code> if <em>any</em> of the variants has a <code>pass</code> value. The separate <a href="#sec-detailed-report-tables" class="sec-ref"><bdi class="secno">4. </bdi>Detailed Implementation Results</a> shows the full implementation results for each implementation.
+			</p>
+
+			<p>
+				<a href="#sec-implementer-list" class="sec-ref"><bdi class="secno">2. </bdi>List of Implementations</a> lists all the implementations and their variants. The variant will appear after the implementation name, and may include a version number for the software tested and what browser or platform it was tested on.
 			</p>
 
 			<p>
@@ -347,7 +347,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 			<p>
 				The <code>should</code> and <code>may</code> tests are not necessary for the official CR testing of
-				the specifications. Implementors and the EPUB community may find these results useful, which is why they were gathered. These tests are currently <span id="test_visibility">visible</span> in the tables; to change their visibility, click the 
+				the specifications. Implementors and the EPUB community may find these results useful, which is why they were gathered.
+				These tests are currently <span id="test_visibility">visible</span> in the tables; to change their visibility, click the 
 				switch visibility button below.
 			</p>
 
@@ -361,7 +362,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 		<section id="sec-implementer-list"><div class="header-wrapper"><h2 id="x2-list-of-implementations"><bdi class="secno">2. </bdi>List of Implementations</h2><a class="self-link" href="#sec-implementer-list" aria-label="Permalink for Section 2."></a></div><ol><li><a href="https://www.access-company.com/en/products/ebook/publus-reader/">ACCESS/BPS PUBLUS Reader</a>, Android OS</li><li><a href="https://www.apple.com/apple-books/">Apple Books</a>, iOS</li><li><a href="https://www.apple.com/apple-books/">Apple Books</a>, macOS (Books 4.4)</li><li><a href="https://colibrio.com">Colibrio Reader</a>, Web Platform</li><li><a href="https://play.google.com/books">Google Play Books</a>, Android</li><li><a href="https://play.google.com/books">Google Play Books</a>, iOS</li><li><a href="https://play.google.com/books">Google Play Books</a>, Web (Chrome)</li><li><a href="https://www.kobo.com">Kobo Books</a>, eReader v4.33</li><li><a href="https://www.kobo.com">Kobo Books</a>, iOS v10.2</li><li><a href="https://www.kobo.com">Kobo Books</a>, Web Reader (Chrome)</li><li><a href="https://www.edrlab.org/software/thorium-reader/">Thorium Reader 2.2.0</a>, Windows, MacOS, Linux</li><li><a href="https://www.voyager.co.jp/products/binb/">VOYAGER BinB</a>, Web Platform</li><li><a href="https://www.vitalsource.com">VitalSource Bookshelf</a>, Android</li><li><a href="https://www.vitalsource.com">VitalSource Bookshelf</a>, iOS</li><li><a href="https://www.vitalsource.com">VitalSource Bookshelf</a>, Mac Desktop</li><li><a href="https://www.vitalsource.com">VitalSource Bookshelf</a>, Web (Chrome)</li><li><a href="https://www.vitalsource.com">VitalSource Bookshelf</a>, Windows Desktop</li></ol></section>
 
 		<div id="button_container">
-			<button id="should_may_visibility" type="button">Currently showing all test results; click here to show the results for <span><em class="rfc2119">MUST</em></span> tests only</button>
+			<button id="should_may_visibility" type="button">Currently showing all test results; click here to show the results for <span>MUST</span> tests only</button>
 		</div>
 
 		<section id="sec-consolidated-report-tables"><div class="header-wrapper"><h2 id="x3-consolidated-implementation-results"><bdi class="secno">3. </bdi>Consolidated Implementation Results</h2><a class="self-link" href="#sec-consolidated-report-tables" aria-label="Permalink for Section 3."></a></div><section id="publication-resources"><div class="header-wrapper"><h3 id="sec-consolidated-publication-resources-results"><bdi class="secno">3.1 </bdi>Publication Resources</h3><a class="self-link" href="#sec-consolidated-publication-resources-results" aria-label="Permalink for Section 3.1"></a></div><table class="simple"><colgroup>
