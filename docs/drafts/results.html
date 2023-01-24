@@ -163,24 +163,19 @@
 		<section>
 			<h2>Introduction</h2>
 			<p>
-				This document contains the test results for all tests. There is a <a href="index.html">separate document</a> giving a short description for each tests; these descriptions are linked from the the tests in the tables below.
+				This document contains the test results for all tests. There is a <a href="index.html">separate document</a> which provides a short description for each test; these descriptions are derived from the tests in the tables below.
 			</p>
 
 			<p>
-				Some implementations may come in different "variants": though they have identical core EPUB Reading system engines, their behaviors may slightly diverge 
-				in different environments (typically IOS, Android, or Web) and, therefore, they are reported separately from one another.
-				From the W3C Process point of view, these variants should not considered to be independent implementations and, 
-				therefore, they should be considered as one implementation as far as the formal Candidate Recommendation report is concerned.
-				On the other hand, implementors may see a value in keeping those implementation results separated.
+				In the EPUB community, implementors may develop one or more EPUB Reading System rendering engines which are then used in multiple applications across different platforms (ex. iOS, Android, or Web). To accurately reflect this in our tests, we have "variants", which allow the implementors to report results based on both the core engine and the platforms they support using that engine. From a <abbr title="World Wide Web Consortium">W3C</abbr> Process point of view, these variants should not be considered independent implementations. We are reporting the results of the different variants for the benefit of implementors and the EPUB community, who may find it beneficial to know how implementations support EPUB features across platforms.
 			</p>
 
 			<p>
-				The report tables below reflect this duality. <a href="#sec-consolidated-report-tables"></a> shows a view of the reports where reports with identical core engines, albeit in different variants,
-				are displayed as if it was a single implementation. The test results for a specific test is set to <code>true</code> if <em>any</em> of the variants has a <code>true</code> value. On the other hand, the separate <a href="#sec-detailed-report-tables"></a> keeps all the variants separate, showing the full implementation results.
+				The report tables in sections 3 and 4 reflect this implementation process.<a href="#sec-consolidated-report-tables"></a> shows a view of the reports where reports with identical core engines are consolidated into a single implementation. The test results for a specific test is set to <code>pass</code> if <em>any</em> of the variants has a <code>pass</code> value. The separate <a href="#sec-detailed-report-tables"></a> shows the full implementation results for each implementation.
 			</p>
 
 			<p>
-				<a href="#sec-implementer-list"></a> lists all the implementations with the variant in parenthesis, if applicable.
+				<a href="#sec-implementer-list"></a> lists all the implementations and their variants. The variant will appear after the implementation name, and may include a version number for the software tested and what browser or platform it was tested on.
 			</p>
 
 			<p>
@@ -188,8 +183,9 @@
 			</p>
 
 			<p>
-				Strictly speaking, the <code>should</code> and <code>may</code> tests are not necessary for the official CR testing of
-				the specifications. These tests are currently <span id="test_visibility"></span> in the tables; to change their visibility, click the 
+				The <code>should</code> and <code>may</code> tests are not necessary for the official CR testing of
+				the specifications. Implementors and the EPUB community may find these results useful, which is why they were gathered.
+				These tests are currently <span id="test_visibility">visible</span> in the tables; to change their visibility, click the 
 				switch visibility button below.
 			</p>
 
