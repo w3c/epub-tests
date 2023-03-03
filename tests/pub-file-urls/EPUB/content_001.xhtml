@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Resources referenced by file URLs are not loaded</title>
+    <style>
+      iframe {
+        border: 2px solid black;
+        width: 100%;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Test passes if none of the local resources are loaded, i.e. all embedded iframes in the following sections remain empty.</p>
+
+
+    <h2>Linux</h2>
+
+    <h3>Text document</h3>
+    <iframe src="file:///var/log/lastlog"></iframe>
+
+
+    <h2>MacOS</h2>
+
+    <h3>Text document</h3>
+    <iframe src="file:///var/log/system.log"></iframe>
+
+
+    <h2>Windows</h2>
+
+    <h3>Text document</h3>
+    <iframe src="file://C:/Windows/setuplog.txt"></iframe>
+
+  </body>
+</html>
