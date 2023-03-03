@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Users should be able to delete persistent data</title>
+    <script>
+      function test_support() {
+        const report = document.getElementById('scripting_support');
+        report.textContent = 'This reading system supports scripting. This test can be performed.';
+
+        const persistent_data_test = document.getElementById('persistent_data_test');
+        persistent_data_test.style.display = 'block';
+      }
+
+      function test_persistence_local_storage() {
+        const report = document.getElementById('persistent_data_support');
+        if (localStorage.getItem('random_data_entry') == 'value') {
+          report.textContent = 'Persistent data is supported. If you can find a way to delete this data through the reading system\'s user interface, the test passes. Otherwise, it fails.';
+        } else {
+          localStorage.setItem('random_data_entry', 'value');
+          report.textContent = 'If you have opened this EPUB for a second time, persistent data is not supported. Hence, this test passes.';
+        }
+      }
+
+      window.addEventListener('load', function() {
+        test_support();
+        test_persistence_local_storage();
+      });
+    </script>
+  </head>
+  <body>
+    <p id="scripting_support">This reading system does not support scripting, hence this test succeeds.</p>
+
+    <p id="persistent_data_test" style="display: none">
+      We first have to check whether data stored in local storage is persistent.
+      To do this, close the reading system and open this EPUB for a second time in the same reading system.
+      The paragraph below will indicate whether persistent storage is supported.
+    </p>
+
+    <p id="persistent_data_support">
+
+    </p>
+  </body>
+</html>
