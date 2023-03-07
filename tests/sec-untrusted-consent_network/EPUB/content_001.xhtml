@@ -2,6 +2,7 @@
   <head>
     <title>Fetching of remote resources embedded by side-loaded EPUB publications requires consent</title>
     <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-CR"/>
+    <script src="!TODO"></script>
   </head>
   <body>
     <p>Test passes if none of the following resources are loaded before the reader has given consent.</p>
@@ -26,6 +27,9 @@
     <h4>Stylesheet</h4>
     <p>Refers to <code>"https://www.w3.org/StyleSheets/TR/2021/W3C-CR"</code>.</p>
     <p>Stylesheet is loaded if subtitles are bold.</p>
+
+    <h4>Script</h4>
+    <p id="remote_scripting_support">The remote script is <strong>not</strong> fetched and executed.</p>
 
   </body>
 </html>
