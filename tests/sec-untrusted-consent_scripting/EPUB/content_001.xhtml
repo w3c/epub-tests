@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Scripting embedded by side-loaded EPUB publications requires consent</title>
+    <script>
+      function test_support() {
+        const report = document.getElementById('scripting_support');
+        report.textContent = 'The script has been executed. Test passes if consent has been given, otherwise it fails.';
+      }
+      window.addEventListener('load', test_support);
+    </script>
+  </head>
+  <body>
+    <p>Test passes if the following paragraph indicates the script has been executed only after the reader has given consent for scripting.</p>
+
+    <p id="scripting_support">No script has been executed. Test passes, because scripting is not supported.</p>
+  </body>
+</html>
