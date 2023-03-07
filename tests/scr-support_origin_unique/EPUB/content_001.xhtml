@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Every EPUB publication is assigned a unique origin</title>
+        <script src="js/display_origin.js"></script>
+    </head>
+    <body>
+        <p id="no_scripting" style="display: block">This reading system does not support scripting, which is necessary for this test to run.</p>
+
+        <div id="scripting" style="display:none">
+            <p>The test passes if the value below is different from the origin displayed by the EPUB publication of <code>src-support_origin</code></p>
+            <dl>
+                <dt>Origin URL:</dt>
+                <dd id="origin"></dd>
+            </dl>
+        </div>
+    </body>
+</html>
