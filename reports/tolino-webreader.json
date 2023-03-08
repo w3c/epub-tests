@@ -167,6 +167,7 @@
         "scr-support_scrolled-continuous": true,
         "scr-support_scrolled-doc": true,
         "scr-support_svg": true,
-        "sec-untrusted-consent_network.epub": false
+        "sec-untrusted-consent_network": false,
+        "sec-untrusted-consent_scripting": false
     }
 }

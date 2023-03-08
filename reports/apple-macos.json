@@ -159,6 +159,7 @@
         "scr-support_scrolled-continuous": false,
         "scr-support_scrolled-doc": false,
         "scr-support_svg": true,
-        "sec-untrusted-consent_network": true
+        "sec-untrusted-consent_network": true,
+        "sec-untrusted-consent_scripting": false
     }
 }

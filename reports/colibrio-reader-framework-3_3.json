@@ -94,7 +94,8 @@
         "scr-support_scrolled-continuous": false,
         "scr-support_svg": true,
 
-        "sec-untrusted-consent_network": true,
+        "sec-untrusted-consent_network": false,
+        "sec-untrusted-consent_scripting": false,
 
         "nav-access": true,
         "nav-activation": true,

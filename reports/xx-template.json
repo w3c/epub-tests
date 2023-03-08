@@ -166,6 +166,7 @@
         "scr-support_scrolled-continuous": null,
         "scr-support_scrolled-doc": null,
         "scr-support_svg": null,
-        "sec-untrusted-consent_network.epub": null
+        "sec-untrusted-consent_network": null,
+        "sec-untrusted-consent_scripting": null
     }
 }

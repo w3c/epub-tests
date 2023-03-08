@@ -2,16 +2,19 @@
   <head>
     <title>Scripting embedded by side-loaded EPUB publications requires consent</title>
     <script>
-      function test_support() {
+      function test_support_inline() {
         const report = document.getElementById('scripting_support');
         report.textContent = 'The script has been executed. Test passes if consent has been given, otherwise it fails.';
       }
-      window.addEventListener('load', test_support);
+      window.addEventListener('load', test_support_inline);
     </script>
+    <script src="js/external_script.js"></script>
   </head>
   <body>
-    <p>Test passes if the following paragraph indicates the script has been executed only after the reader has given consent for scripting.</p>
+    <p>Test passes if the following paragraph or the paragraph in the iframe indicates a script has been executed only after the reader has given consent for scripting.</p>
 
-    <p id="scripting_support">No script has been executed. Test passes, because scripting is not supported.</p>
+    <p id="scripting_support">No script has been executed.</p>
+
+    <iframe src="iframe_content.xhtml"></iframe>
   </body>
 </html>
