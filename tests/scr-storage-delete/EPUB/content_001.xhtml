@@ -12,18 +12,16 @@
 
       function test_persistence_local_storage() {
         const report = document.getElementById('persistent_data_support');
-        if (localStorage.getItem('random_data_entry') == 'value') {
-          report.textContent = 'Persistent data is supported. If you can find a way to delete this data through the reading system\'s user interface, the test passes. Otherwise, it fails.';
+        if (localStorage.getItem('scr_storage_delete_random_data_entry') == 'value') {
+          report.textContent = 'Persistent data is supported. If you can find a way to delete this data ({"scr_storage_delete_random_data_entry": "value"}) through the reading system\'s user interface, the test passes. Otherwise, it fails.';
         } else {
-          localStorage.setItem('random_data_entry', 'value');
+          localStorage.setItem('scr_storage_delete_random_data_entry', 'value');
           report.textContent = 'If you have opened this EPUB for a second time, persistent data is not supported. Hence, this test passes.';
         }
       }
 
-      window.addEventListener('load', function() {
-        test_support();
-        test_persistence_local_storage();
-      });
+      window.addEventListener('load', test_support);
+      window.addEventListener('load', test_persistence_local_storage);
     </script>
   </head>
   <body>
