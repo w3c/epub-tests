@@ -158,6 +158,7 @@
         "scr-support_origin": true,
         "scr-support_scrolled-continuous": false,
         "scr-support_scrolled-doc": false,
-        "scr-support_svg": true
+        "scr-support_svg": true,
+        "sec-untrusted-consent_network": true
     }
 }

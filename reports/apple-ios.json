@@ -158,6 +158,7 @@
         "scr-support_origin": true,
         "scr-support_scrolled-continuous": null,
         "scr-support_scrolled-doc": null,
-        "scr-support_svg": true
+        "scr-support_svg": true,
+        "sec-untrusted-consent_network.epub": true
     }
 }
