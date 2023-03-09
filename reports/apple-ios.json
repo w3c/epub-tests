@@ -152,6 +152,7 @@
         "scr-readingsystem-support_iframe": true,
         "scr-readingsystem-support_iframe_svg": true,
         "scr-readingsystem-support_svg": true,
+        "scr-storage-delete": false,
         "scr-support": true,
         "scr-support-fallback": null,
         "scr-support_iframe": true,
