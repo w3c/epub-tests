@@ -13,6 +13,40 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/scr-support_origin_unique",
+                "title": "scr-support_origin_unique",
+                "author": "Gertjan Franken",
+                "description": "The reading system must assign a unique origin to each EPUB publication. This EPUB publication will display its origin, which will be compared to the origin of the EPUB publication of the \"scr-support_origin\" test.",
+                "collection": "Scripting",
+                "modified": "2023-03-07T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support_origin_unique.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 849,
+                    "width": 600
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
                 "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/mol-audio-no-clipend",
                 "title": "mol-audio-no-clipend",
                 "author": [
