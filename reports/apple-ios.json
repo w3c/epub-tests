@@ -156,6 +156,7 @@
         "scr-support-fallback": null,
         "scr-support_iframe": true,
         "scr-support_origin": true,
+        "scr-support_origin_unique": true,
         "scr-support_scrolled-continuous": null,
         "scr-support_scrolled-doc": null,
         "scr-support_svg": true
