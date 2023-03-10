@@ -138,7 +138,7 @@
         "pub-data-urls_top-level-content": true,
         "pub-external-links_consent": false,
         "pub-external-links": false,
-        "pub-file-urls": false,
+        "pub-file-urls": true,
         "pub-foreign_bad-fallback": null,
         "pub-foreign_image": false,
         "pub-foreign_json-spine": null,

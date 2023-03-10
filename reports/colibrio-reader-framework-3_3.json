@@ -5,6 +5,7 @@
     "tests" : {
         "pub-data-urls_browsing-context": true,
         "pub-data-urls_top-level-content": true,
+        "pub-file-urls": true,
         "pub-foreign_bad-fallback": true,
         "pub-foreign_image": true,
         "pub-foreign_json-spine": true,
@@ -42,10 +43,10 @@
         "pkg-spine-order-svg": true,
         "pkg-spine-unknown": true,
         "pkg-title-order": true,
-        "pkg-unique-id": true,        
+        "pkg-unique-id": true,
         "pkg-version-backward": true,
         "pkg-manifest-unlisted-resource": false,
-        
+
         "pkg-dir-auto_root-rtl": true,
         "pkg-dir-auto_root-unset": true,
         "pkg-dir_but_not_content": true,
