@@ -1,0 +1,27 @@
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage>Publication Resources</dc:coverage>
+    <dc:creator>Gertjan Franken</dc:creator>
+    <dc:date>2023-03-03</dc:date>
+    <dc:description>
+      The XHTML content document contains iframes referring to resources on the user's local file system through a file URL.
+      The reading system should refrain from loading these resources.
+    </dc:description>
+    <dc:identifier id="pub-id">pub-file-urls</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
+    <dc:title>pub-file-urls</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+    <meta property="belongs-to-collection">must</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-file-urls</meta>
+    <meta property="dcterms:modified">2023-03-03T00:00:00Z</meta>
+  </metadata>
+  <manifest>
+    <item id="content_001" properties="remote-resources" href="content_001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine>
+    <itemref idref="content_001"/>
+  </spine>
+</package>
