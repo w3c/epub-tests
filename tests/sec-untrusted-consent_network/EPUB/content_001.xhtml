@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>Fetching of remote resources embedded by side-loaded EPUB publications requires consent</title>
+    <link rel="stylesheet" href="https://www.w3.org/2023/03/epub_tests_files/paint_red.css"/>
+    <script src="https://www.w3.org/2023/03/epub_tests_files/remote_scripting.js"></script>
+  </head>
+  <body>
+    <p>Test passes if none of the following resources are loaded before the reader has given consent.</p>
+
+    <h4>Iframe loading HTML page</h4>
+    <p>Refers to <code>"https://www.w3.org/TR/epub-rs-33/"</code></p>
+    <iframe width="100" style="border: solid;" src="https://www.w3.org/TR/epub-rs-33/"></iframe>
+
+    <h4>Image</h4>
+    <p>Refers to <code>"https://www.w3.org/StyleSheets/TR/2021/logos/W3C"</code></p>
+    <img width="150" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C"/>
+
+    <h4>Audio</h4>
+    <p>Refers to <code>"https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"</code></p>
+    <audio controls="" src="https://www.w3.org/2023/03/epub_tests_files/t-rex-roar.mp3">
+    </audio>
+
+    <h4>Video</h4>
+    <p>Refers to <code>"https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"</code></p>
+    <video width="150" src="https://www.w3.org/2023/03/epub_tests_files/flower.webm"></video>
+
+    <h4>Stylesheet</h4>
+    <p>Refers to <code>"https://www.w3.org/2023/03/epub_tests_files/paint_red.css"</code>.</p>
+    <p class="paint_red">Stylesheet is fetched if this text is red.</p>
+
+    <h4>Script</h4>
+    <p>Refers to <code>https://www.w3.org/2023/03/epub_tests_files/remote_scripting.js</code></p>
+    <p id="remote_scripting_support">The remote script is <strong>not</strong> fetched and executed.</p>
+
+  </body>
+</html>

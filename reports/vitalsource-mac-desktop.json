@@ -161,6 +161,8 @@
         "scr-support_scrolled-doc": true,
         "scr-support_svg": null,
         "scr-support-fallback": "n/a",
-        "scr-support": true
+        "scr-support": true,
+        "sec-untrusted-consent_network": false,
+        "sec-untrusted-consent_scripting": false
     }
 }
