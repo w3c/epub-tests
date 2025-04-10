@@ -2,8 +2,8 @@
 # Writing tests for EPUB 3.3
 
 The [w3c/epub-tests/](https://github.com/w3c/epub-tests/) repository contains tests to validate the implementability of the
-W3C's EPUB 3.3 specifications, specifically core [EPUB 3.3](https://www.w3.org/TR/epub-33/) (the spec for the EPUB format
-itself) and [EPUB Reading Systems 3.3](https://www.w3.org/TR/epub-rs-33/) (the spec for applications that read EPUB files).
+W3C's EPUB 3.3 specifications, specifically core [EPUB 3.4](https://www.w3.org/TR/epub-34/) (the spec for the EPUB format
+itself) and [EPUB Reading Systems 3.4](https://www.w3.org/TR/epub-rs-34/) (the spec for applications that read EPUB files).
 Our objective is to test every normative statement (that is, every _must_, _should_, and _may_ statements).
 
 Existing tests are described in the [generated test reports](#generated-test-reports).
@@ -45,10 +45,10 @@ This page explains how to write new tests.
 
 ## Step-by-step
 
-1. Find an untested normative statement in the [EPUB 3.3](https://w3c.github.io/epub-specs/epub33/core/) or
-   [EPUB Reading Systems 3.3](https://w3c.github.io/epub-specs/epub33/rs/) specs to test — that is, a statement that does not
+1. Find an untested normative statement in the [EPUB 3.4](https://w3c.github.io/epub-specs/epub34/authoring/) or
+   [EPUB Reading Systems 3.4](https://w3c.github.io/epub-specs/epub34/rs/) specs to test — that is, a statement that does not
    have an expandable "tests" section like
-   [Core Media Types](https://w3c.github.io/epub-specs/epub33/rs/#sec-epub-rs-conf-cmt). (Note that these links point at the
+   [Core Media Types](https://w3c.github.io/epub-specs/epub34/rs/#sec-epub-rs-conf-cmt). (Note that these links point at the
    working drafts of the spec on GitHub, not the published versions on w3.org; the published spec hides the "tests" sections.
    In the published versions, you can still see whether a statement is tested by checking whether its anchor element has a
    `data-tests` attribute.)
@@ -83,8 +83,8 @@ This page explains how to write new tests.
    ensure the PR's description clearly indicates which statement is being tested. Await review.
 
 1. Once the pull request has been merged, fork the repo for the spec you are testing —
-   [EPUB 3.3](https://github.com/w3c/epub-specs/blob/main/epub33/core/index.html) or
-   [EPUB Reading Systems 3.3](https://github.com/w3c/epub-specs/blob/main/epub33/rs/index.html).
+   [EPUB 3.4](https://github.com/w3c/epub-specs/blob/main/epub34/authoring/index.html) or
+   [EPUB Reading Systems 3.4](https://github.com/w3c/epub-specs/blob/main/epub34/rs/index.html).
 
 1. In the spec document, find the anchor element for the normative statement. If there is no anchor element, add one, using
    the same naming conventions as nearby anchors. Then add a `data-tests` attribute to the anchor element with the name(s) of
@@ -93,8 +93,8 @@ This page explains how to write new tests.
    ```html
    <p id="confreq-rs-epub3-xhtml" class="support" data-tests="#doc-xhtml-support">
       Reading Systems MUST process
-      <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">XHTML Content 
-         Documents</a> [[EPUB-33]].
+      <a href="https://www.w3.org/TR/epub-34/#sec-xhtml">XHTML Content 
+         Documents</a> [[EPUB-34]].
    </p>
 
    ...
@@ -102,8 +102,8 @@ This page explains how to write new tests.
    <p id="confreq-rs-epub3-images"
       data-tests="#pub-cmt-gif,#pub-cmt-jpg,#pub-cmt-png,#pub-cmt-svg,#pub-cmt-webp">
       If a Reading System has a <a>Viewport</a>, it MUST support the
-      <a href="https://www.w3.org/TR/epub-33/#cmt-grp-image">image Core Media 
-         Type Resources</a> [[EPUB-33]].
+      <a href="https://www.w3.org/TR/epub-34/#cmt-grp-image">image Core Media 
+         Type Resources</a> [[EPUB-34]].
    </p>
    ```
 
@@ -115,13 +115,13 @@ This page explains how to write new tests.
 Test names should start with a three-letter abbreviation that corresponds to the value of the [`dc:coverage`](#metadata)
 element below (for example, `cnt` for Content Documents, `pkg` for Package Documents, etc.), followed by a short hyphenated
 identifier that makes clear which requirement is under test. For example, a test for
-[the requirement for reading systems to support MathML](https://www.w3.org/TR/epub-rs-33/#confreq-mathml-rs-behavior) should
+[the requirement for reading systems to support MathML](https://www.w3.org/TR/epub-rs-34/#confreq-mathml-rs-behavior) should
 be named `cnt-mathml-support`.
 
 If multiple tests are necessary for a single normative statement, differentiate the test cases by appending an underscore and
 a unique identifier. For example, a test that ensures reading systems treat explicit `dir="auto"` identically to omitting
 `dir`, as part of the requirement to
-[automatically handle base direction of the package document](https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir-auto)
+[automatically handle base direction of the package document](https://www.w3.org/TR/epub-rs-34/#confreq-rs-pkg-dir-auto)
 might be named `pkg-dir-auto_explicit`.
 
 
