@@ -330,6 +330,7 @@ function create_implementation_tables(implementation_data: ImplementationData[])
 // eslint-disable-next-line max-lines-per-function
 export async function get_test_data(dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
+    // eslint-disable-next-line max-lines-per-function
     const get_single_test_data = async (file_name: string): Promise<TestData> => {
         // Note the heavy use of "any" in the function; this is related to the fact that
         // the xmljs package returns a pretty "unpredictable" object...
@@ -394,6 +395,11 @@ export async function get_test_data(dir_name: string): Promise<TestData[]> {
             return alternate_title === undefined ? get_string_value("dc:title", "(No title)", metadata) : alternate_title._;    
         }
 
+        const get_reference_version = (metadata: any): string => {
+            const version = get_single_meta_value("schema:version", metadata);
+            return version === undefined ? "3.3" : version._;
+        }
+
         // ---------
 
         let package_xml: string;
@@ -416,6 +422,7 @@ export async function get_test_data(dir_name: string): Promise<TestData[]> {
             title       : get_final_title(test_metadata),
             description : get_string_value("dc:description", "(No description)", test_metadata),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)", test_metadata),
+            version     : get_reference_version(test_metadata),
             creators    : get_array_of_string_values("dc:creator", "(Unknown)", test_metadata),
             required    : get_required(test_metadata),
             modified    : modification_date === undefined ? "(Unknown)" : modification_date._,

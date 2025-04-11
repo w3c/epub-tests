@@ -26,11 +26,13 @@ async function main() {
     const test_dir = (argv.length >= 3 && argv[2] === '-t') ? Constants.TESTS_DIR_DEBUG : Constants.TESTS_DIR ;
     const test_data: TestData[] = await get_test_data(test_dir);
     const report_data: ReportData = await get_report_data(test_data, Constants.TEST_RESULTS_DIR);
-
     const template: Raw_ImplementationReport = get_template(report_data);
 
     const final_report_data: ReportData = apply_configuration_options(report_data);
+
     const { implementations, consolidated_results, complete_results, tests, creators }: HTMLFragments = create_report(final_report_data);
+
+
     const opds_data: OPDS = create_opds(test_data);
     
     await Promise.all([
