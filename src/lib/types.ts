@@ -128,6 +128,10 @@ export interface TestData {
      */
     coverage: string;
     /**
+     * EPUB Version number. The value of the version is the revision where the test has been added in.
+     */
+    version: string;
+    /**
      * This is a series of URL strings, referring to the section in the spec this test is pertinent to.
      */
     references: string[];
