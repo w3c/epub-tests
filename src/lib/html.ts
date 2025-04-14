@@ -6,7 +6,7 @@
  */
 
 import { ReportData, Implementer, Constants, Score, HTMLFragments } from './types';
-import { JSDOM }                                                    from "jsdom";
+import { JSDOM }                                                    from 'jsdom';
 
 /**
  * Turn a text into a string that can be used as an ID

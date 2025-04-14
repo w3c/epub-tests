@@ -11,7 +11,7 @@
 
 import { promises as fs } from 'fs';
 import * as fs_old_school from 'fs';
-import * as xml2js        from "xml2js";
+import * as xml2js        from 'xml2js';
 
 import { 
     TestData, 
