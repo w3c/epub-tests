@@ -5,7 +5,7 @@
  */
 
 import { ImplementationTable, Constants, ReportData } from './types';
-import * as fs from "fs";
+import * as fs                                        from 'fs';
 
 /**
  * External configuration type

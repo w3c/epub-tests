@@ -6,7 +6,7 @@
  */
 
 import { TestData, Constants } from './types';
-import { stringComparison } from './data';
+import { stringComparison }    from './data';
 
 /* ------------------------------------------------------------------------------------------------------ */
 /*                        Subset of OPDS as used here in Typescript types                                 */
