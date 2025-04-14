@@ -1,6 +1,7 @@
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:coverage>Package Documents</dc:coverage>
+    <dc:coverage id="coverage">Package Documents</dc:coverage>
+    <meta refines="#coverage" property="schema:version">3.3</meta>
     <dc:creator>Matthew Chan</dc:creator>
     <dc:date>2021-10-21</dc:date>
     <dc:description>
@@ -15,8 +16,8 @@
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="belongs-to-collection">should</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#sec-linked-records</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#sec-linked-records</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#sec-linked-records</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub/#sec-linked-records</meta>
     <meta property="dcterms:modified">2023-01-16T00:00:00Z</meta>
     <meta property="dcterms:alternative">pkg-linked-records</meta>
   </metadata>

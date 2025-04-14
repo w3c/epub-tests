@@ -1,6 +1,7 @@
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:coverage>Fixed Layout</dc:coverage>
+    <dc:coverage id="coverage">Fixed Layout</dc:coverage>
+    <meta refines="#coverage" property="schema:version">3.3</meta>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2022-08-02</dc:date>
     <dc:description>Pre-paginated document, with a spine item overriding the global setting to use reflowable layout, but repeating the override property value back to pre-paginated. The second setting must be ignored.</dc:description>
@@ -10,7 +11,7 @@
     <dc:title>fxl-spine-overrides_duplicate</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-spine-override-first</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-pkg-spine-override-first</meta>
     <meta property="dcterms:modified">2022-08-02T00:00:00Z</meta>
     <meta property="rendition:layout">pre-paginated</meta>
     <meta property="rendition:spread">none</meta>
