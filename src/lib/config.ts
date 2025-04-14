@@ -24,8 +24,8 @@ interface Config {
  * @param table reference to all the tests (as part of the implementation table)
  * @returns new URL
  */
-function change_references(config: Config, table: ImplementationTable[]): ImplementationTable[] {
-    const change_doc_references = (url: string): string => {
+function changeReferences(config: Config, table: ImplementationTable[]): ImplementationTable[] {
+    const changeDocReferences = (url: string): string => {
         if (config.final === false) {
             for (const mapping of config.document_mappings) {
                 if (url.startsWith(mapping.from)) {
@@ -40,7 +40,7 @@ function change_references(config: Config, table: ImplementationTable[]): Implem
 
     for (const implementation_table of table) {
         for (const implementation_data of implementation_table.implementations) {
-            implementation_data.references = implementation_data.references.map(change_doc_references);
+            implementation_data.references = implementation_data.references.map(changeDocReferences);
         }
     }
     return table;
@@ -56,7 +56,7 @@ function change_references(config: Config, table: ImplementationTable[]): Implem
  * @param table Properly sorted table
  * @returns 
  */
-function order_implementation_table(config: Config, table: ImplementationTable[]): ImplementationTable[] {
+function sortImplementationTable(config: Config, table: ImplementationTable[]): ImplementationTable[] {
     const simple_sort = (left: number|string, right: number|string): number => {
         if (left < right) return -1;
         else if (left > right) return 1;
@@ -97,18 +97,18 @@ function order_implementation_table(config: Config, table: ImplementationTable[]
  * @param report 
  * @returns 
  */
-export function apply_configuration_options(report: ReportData): ReportData {
+export function applyConfigurationOptions(report: ReportData): ReportData {
     try {
         // 1. Get the configuration file. If there are issues, just return the original data, unchanged.
         const config_text = fs.readFileSync(Constants.CONFIG_FILE, 'utf-8');
         const config: Config = <Config>JSON.parse(config_text); 
 
         // 2. get the document references right
-        change_references(config, report.tables);
+        changeReferences(config, report.tables);
 
         // 3. sort the implementation tables
-        const tables = order_implementation_table(config, report.tables);
-        const consolidated_tables = order_implementation_table(config, report.consolidated_tables);
+        const tables = sortImplementationTable(config, report.tables);
+        const consolidated_tables = sortImplementationTable(config, report.consolidated_tables);
 
         return {
             tables,

@@ -1,17 +1,15 @@
 /**
  * Module to create an epub instance based on the deflated folder content with the same name.
+ * Used by the auxiliary scripts to generate the EPUB files for the tests.
  * 
  * @packageDocumentation
  */
 
 
-import * as fs_old_school from "fs";
-const fs = fs_old_school.promises;
-import * as path from "path";
-
-import JSZip = require('jszip');
-
-import { Constants } from './types';
+import { promises as fs } from 'fs';
+import * as path          from "path";
+import * as JSZip         from 'jszip';
+import { Constants }      from './types';
 
 /** 
  * These files should be ignored when reading the content of the EPUB testing directory 
@@ -19,7 +17,7 @@ import { Constants } from './types';
  * - `mimetype`: must be put into the EPUB file explicitly at first and non-compressed
  * - `.DS_Store`: a MacOS artefact that should be ignored altogether
  */
-const ignored_files: string[] = ['.DS_Store', 'mimetype'];
+const ignoredFiles: string[] = ['.DS_Store', 'mimetype'];
 
 
 /**
@@ -32,7 +30,7 @@ const ignored_files: string[] = ['.DS_Store', 'mimetype'];
  * @param dir name of a directory
  * @param filter filter to remove unwanted file names from the result
  */
-export async function recursive_walk(dir: string, filter?: (f:string) => boolean): Promise<string[]> {
+export async function recursiveWalk(dir: string, filter?: (f:string) => boolean): Promise<string[]> {
     try {
         const content: string[] = await fs.readdir(dir);
         const retval: string[] = [];
@@ -42,7 +40,7 @@ export async function recursive_walk(dir: string, filter?: (f:string) => boolean
             const file = path.resolve(dir,fname);
             const stat = await fs.stat(file);
             if (stat && stat.isDirectory()) {
-                dir_content.push(recursive_walk(file, filter));
+                dir_content.push(recursiveWalk(file, filter));
             } else {
                 if (typeof filter === 'undefined' || (filter && filter(file))) {
                     retval.push(file);
@@ -78,8 +76,8 @@ export async function recursive_walk(dir: string, filter?: (f:string) => boolean
  * @param filter filter to remove unwanted file names from the result
  * @returns 
  */
-async function get_content(entry_dir: string): Promise<FileContent[]> {
-    const file_names: string[]  = await recursive_walk(entry_dir, (fname: string): boolean => !(ignored_files.includes(path.basename(fname))));
+async function getContent(entry_dir: string): Promise<FileContent[]> {
+    const file_names: string[]  = await recursiveWalk(entry_dir, (fname: string): boolean => !(ignoredFiles.includes(path.basename(fname))));
     const content: Buffer[]     = await Promise.all(file_names.map((fname) => fs.readFile(fname)));
     const retval: FileContent[] = [];
 
@@ -101,7 +99,7 @@ async function get_content(entry_dir: string): Promise<FileContent[]> {
  * 
  * @param test_dir 
  */
-export async function create_epub(test_dir: string): Promise<void> {
+export async function createEPUB(test_dir: string): Promise<void> {
     // This creates an in-memory archive
     const the_book: JSZip = new JSZip();
 
@@ -109,7 +107,7 @@ export async function create_epub(test_dir: string): Promise<void> {
     the_book.file('mimetype', Constants.EPUB_MEDIA_TYPE, {compression: 'STORE'})
 
     // Get all the content for that directory:
-    const content: FileContent[] = await get_content(test_dir);
+    const content: FileContent[] = await getContent(test_dir);
 
     // Put the full content into the in-memory archive
     for (const file of content) {
