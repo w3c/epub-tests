@@ -13,9 +13,9 @@
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
-import {get_list_dir, isDirectory, get_opf_file} from './lib/data';
+import {getListDir, isDirectory, get_opf_file} from './lib/data';
 import { Constants } from './lib/types';
-import { create_epub } from './lib/epub';
+import { createEPUB } from './lib/epub';
 
 /**
  * Main entry point for the separate metadata extension: modify the OPF file for each test directory, and generate the epub files themselves.
@@ -26,7 +26,7 @@ import { create_epub } from './lib/epub';
  * 
  */
 async function main(): Promise<void> {
-    const dir_name: string = Constants.TESTS_DIR;
+    const dir_name: string = Constants.TESTS_DIR_DEBUG;
     const handle_single_test_metadata = async (file_name: string): Promise<void> => {
         const opf_file_name = await get_opf_file(file_name)
         const opf_file = await `${file_name}/${opf_file_name}`;
@@ -58,14 +58,14 @@ async function main(): Promise<void> {
         await fs.writeFile(opf_file, lines.join('\n'));
     }
 
-    const dirs: string[] = await get_list_dir(dir_name, isDirectory);
+    const dirs: string[] = await getListDir(dir_name, isDirectory);
 
     // Modify the metadata content for the tests
     const dir_promises: Promise<void>[] = dirs.map((test) => handle_single_test_metadata(`${dir_name}/${test}`));
     await Promise.all(dir_promises);
 
     // Generate the epub files themselves
-    const epub_promises: Promise<void>[] = dirs.map((test) => create_epub(`${dir_name}/${test}`));
+    const epub_promises: Promise<void>[] = dirs.map((test) => createEPUB(`${dir_name}/${test}`));
     await Promise.all(epub_promises);
 }
 
