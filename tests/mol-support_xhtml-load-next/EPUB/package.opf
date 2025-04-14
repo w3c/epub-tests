@@ -1,6 +1,7 @@
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:coverage>Media Overlays</dc:coverage>
+    <dc:coverage id="coverage">Media Overlays</dc:coverage>
+    <meta refines="#coverage" property="schema:version">3.3</meta>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2022-08-10</dc:date>
     <dc:description>Tests whether the Reading System supports playback of XHTML content documents with content switching automatically as playback goes on. The switch also involves a switch of MO files.</dc:description>
@@ -11,7 +12,7 @@
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
     <meta property="belongs-to-collection">should</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-support-xhtml-load-next</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#mol-support-xhtml-load-next</meta>
     <meta property="dcterms:modified">2022-08-10T00:00:00Z</meta>
     <meta property="media:duration" refines="#md-smil_1">00:01:17.0</meta>
     <meta property="media:duration" refines="#md-smil_2">00:00:48.0</meta>

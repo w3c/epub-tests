@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:coverage>TODO: Report Category</dc:coverage>
+    <dc:coverage id="coverage">TODO: Report Category</dc:coverage>
+    <meta refines="#coverage" property="schema:version">3.4</meta>
     <dc:creator>TODO: Your Name</dc:creator>
     <dc:date>TODO: 2021-01-01</dc:date>
     <dc:description>TODO: A description of the test for the generated test report.</dc:description>
@@ -11,8 +12,8 @@
     <dc:title>TODO: test-id</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:isReferencedBy">TODO: https://www.w3.org/TR/epub-33/#spec-anchor</meta>
-    <meta property="dcterms:isReferencedBy">TODO: https://www.w3.org/TR/epub-rs-33/#spec-anchor</meta>
+    <meta property="dcterms:isReferencedBy">TODO: https://www.w3.org/TR/epub/#spec-anchor</meta>
+    <meta property="dcterms:isReferencedBy">TODO: https://www.w3.org/TR/epub-rs/#spec-anchor</meta>
     <meta property="dcterms:modified">TODO: 2021-01-01T00:00:00Z</meta>
   </metadata>
   <manifest>
