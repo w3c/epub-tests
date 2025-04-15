@@ -94,7 +94,7 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
             }
 
             const test_table = addChild(table_section, 'table');
-            test_table.className = 'simple';
+            test_table.className = 'zebra';
 
             addChild(test_table, 'colgroup', `
                 <col class="${Constants.CLASS_COL_ID}"/>
@@ -191,7 +191,7 @@ function createTestData(data: ReportData): string {
         h3.id = `sec-${convertToID(table.header)}-data`;
 
         const test_table = addChild(table_section, 'table');
-        test_table.className = 'simple sortable';
+        test_table.className = 'zebra sortable';
 
         const thead = addChild(test_table, 'thead');
         // Next is a header row
