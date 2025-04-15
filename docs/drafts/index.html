@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="color-scheme" content="light dark" />
 		<title>EPUB 3.4 Tests</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 		<style>
@@ -74,6 +75,22 @@
 				border-bottom:1px solid #ddd;
 				padding:.2em 1em;
 			}
+
+			body.darkmode table.zebra tr:nth-child(even) {
+			    color: black !important;
+				background-color: hsl(241, 0%, 78%) !important;
+			}
+
+			body.darkmode table.zebra tr:nth-child(odd) {
+				background-color: hsl(241, 0%, 35%) !important;
+			}
+
+			body.darkmode table.zebra tr:nth-child(even) td a:link,
+			body.darkmode table.zebra tr:nth-child(even) td a:visited
+			 {
+				color: darkblue;
+			}
+
 
 			table.sortable > thead > tr > th {
 				cursor: pointer;

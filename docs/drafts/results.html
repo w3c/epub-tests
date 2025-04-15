@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 	<head>
 		<meta charset="utf-8" />
+		<meta  name="color-scheme" content="light dark" />
 		<title>EPUB 3.4 Test Results</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 		<style>
@@ -15,18 +16,22 @@
 
 			td.pass {
 				background-color: hsl(120, 20%, 70%);
+				color: black !important
 			}
 
 			td.fail {
 				background-color: hsl(355, 100%, 72%);
+				color: black !important
 			}
 
 			td.untested {
 				background-color: hsl(60, 100%, 85%);
+				color: black !important
 			}
 
 			td.na {
 				background-color: hsl(30, 5%, 97%);
+				color: black !important
 			}
 
 			tr.under_implemented {
@@ -63,6 +68,7 @@
 
 			table.zebra tr:nth-child(even) {
 				background-color: hsl(180, 30%, 93%) !important;
+				color: black !important;
 			}
 
 			table.zebra th {
@@ -72,6 +78,27 @@
 			table.zebra td {
 				border-bottom:1px solid #ddd;
 				padding:.2em 1em;
+			}
+
+			body.darkmode table.zebra tr:nth-child(odd) {
+			    color: black !important;
+				background-color: hsl(241, 0%, 78%) !important;
+			}
+
+			
+			/* body.darkmode table.zebra tr:nth-child(odd) {
+				background-color: hsl(241, 0%, 30%) !important;
+			} */
+
+			body.darkmode table.zebra tr:nth-child(even) td a:link,
+			body.darkmode table.zebra tr:nth-child(even) td a:visited
+			{
+				color: green;
+			}
+			body.darkmode table.zebra tr:nth-child(odd) td a:link,
+			body.darkmode table.zebra tr:nth-child(odd) td a:visited
+			{
+				color: navy;
 			}
 
 			div#button_container {
