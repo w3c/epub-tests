@@ -1,8 +1,8 @@
 
-# Writing tests for EPUB 3.3
+# Writing tests for EPUB 3.4
 
 The [w3c/epub-tests/](https://github.com/w3c/epub-tests/) repository contains tests to validate the implementability of the
-W3C's EPUB 3.3 specifications, specifically core [EPUB 3.4](https://www.w3.org/TR/epub-34/) (the spec for the EPUB format
+W3C's EPUB 3.4 specifications, specifically core [EPUB 3.4](https://www.w3.org/TR/epub-34/) (the spec for the EPUB format
 itself) and [EPUB Reading Systems 3.4](https://www.w3.org/TR/epub-rs-34/) (the spec for applications that read EPUB files).
 Our objective is to test every normative statement (that is, every _must_, _should_, and _may_ statements).
 
@@ -16,7 +16,7 @@ This page explains how to write new tests.
 * Install [eCanCrusher](https://www.docdataflow.com/ecancrusher/) or another utility or local script that can turn an EPUB
   folder into a compressed EPUB file.
    
-   * On macOS, a command in Terminal can zip EPUB. Go to the folder containing the files and enter the following:
+   * On macOS, a command in Terminal can zip EPUB. Go to the folder containing the files and enter the following (replace `book.epub` with the test name):
    `zip -X0 book.epub mimetype; zip -Xur9D book.epub META-INF EPUB -x ‘*.DS_Store’ `
 
 * Ensure you have several EPUB reading systems available to validate your tests (that is, validate that you have written the
@@ -45,7 +45,7 @@ This page explains how to write new tests.
 
 ## Step-by-step
 
-1. Find an untested normative statement in the [EPUB 3.4](https://w3c.github.io/epub-specs/epub34/authoring/) or
+1. Find an untested normative statement in the editors' drafts of [EPUB 3.4](https://w3c.github.io/epub-specs/epub34/authoring/) or
    [EPUB Reading Systems 3.4](https://w3c.github.io/epub-specs/epub34/rs/) specs to test — that is, a statement that does not
    have an expandable "tests" section like
    [Core Media Types](https://w3c.github.io/epub-specs/epub34/rs/#sec-epub-rs-conf-cmt). (Note that these links point at the
@@ -77,7 +77,7 @@ This page explains how to write new tests.
    indicate an implementation mistake in the test. Fix as necessary.
 
 1. Run the EPUB through [EPUBCheck](https://www.w3.org/publishing/epubcheck/) to ensure you didn't make any silly mistakes.
-   Fix if you did.
+   Fix if you did. Your EPUBCheck version must be up to date; the program evolves with the specification…
 
 1. Create a pull request for your test change, including both the uncompressed folder and the compressed EPUB file. Please
    ensure the PR's description clearly indicates which statement is being tested. Await review.
@@ -96,7 +96,7 @@ This page explains how to write new tests.
       <a href="https://www.w3.org/TR/epub-34/#sec-xhtml">XHTML Content 
          Documents</a> [[EPUB-34]].
    </p>
-
+   
    ...
 
    <p id="confreq-rs-epub3-images"
@@ -115,13 +115,13 @@ This page explains how to write new tests.
 Test names should start with a three-letter abbreviation that corresponds to the value of the [`dc:coverage`](#metadata)
 element below (for example, `cnt` for Content Documents, `pkg` for Package Documents, etc.), followed by a short hyphenated
 identifier that makes clear which requirement is under test. For example, a test for
-[the requirement for reading systems to support MathML](https://www.w3.org/TR/epub-rs-34/#confreq-mathml-rs-behavior) should
+[the requirement for reading systems to support MathML](https://www.w3.org/TR/epub-rs/#confreq-mathml-rs-behavior) should
 be named `cnt-mathml-support`.
 
 If multiple tests are necessary for a single normative statement, differentiate the test cases by appending an underscore and
 a unique identifier. For example, a test that ensures reading systems treat explicit `dir="auto"` identically to omitting
 `dir`, as part of the requirement to
-[automatically handle base direction of the package document](https://www.w3.org/TR/epub-rs-34/#confreq-rs-pkg-dir-auto)
+[automatically handle base direction of the package document](https://www.w3.org/TR/epub-rs/#confreq-rs-pkg-dir-auto)
 might be named `pkg-dir-auto_explicit`.
 
 
@@ -145,9 +145,13 @@ The package document for each test must contain the following metadata, which is
    value, edit that JSON file in the same pull request to add the new value under the `coverage_labels`. That list should
    reflect the order of the corresponding sections in the EPUB specification.
 
+   The element must carry an `id` attribute (usually `coverage`) that can be used for refinement.
+
+* `schema:version` (part of a `meta` element refining `dc:coverage`): Must indicate the EPUB version being worked on by the Working Group at the time of creating the test. At present, this value must be 3.4. (This version identifier can be used to filter tests added to a newer version, as opposed to tests "inherited" from previous versions.)
+
 * `dcterms:isReferencedBy` (repeated, as part of a `meta` element): A series of URLs that refer to the relevant sections of
    the specification. These links provide back-links to the relevant normative statements from each test entry in the
-   generated report.
+   generated report. The document references must use the documents' short name, i.e., `https://www.w3.org/TR/epub` or `https://www.w3.org/TR/epub-rs` (the scripts generating the reports will convert these to the actual versions or editors' drafts). Using these short names ensures that the tests always refer to the latest versions.
 
 * `dcterms:alternative` (optional, as part of a `meta` element): Overrides the value of `dc:title` in the generated test
   report. This item is only necessary if the value of `dc:title` is _not_ set to the value of `dc:identifier`; in that case this value must be set to the value of `dc:identifier`.
@@ -166,7 +170,8 @@ In this example, only the relevant metadata items are shown (a test may have add
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" 
    version="3.0" xml:lang="en" unique-identifier="pub-id">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <dc:coverage>Internationalization</dc:coverage>
+  <dc:coverage id="coverage">Internationalization</dc:coverage>
+  <meta refines="#coverage" property="schema:version">3.4</meta>
   <dc:creator>Dan Lazin</dc:creator>
   <dc:creator>Ivan Herman</dc:creator>
   <dc:description>
@@ -183,9 +188,9 @@ In this example, only the relevant metadata items are shown (a test may have add
   <meta property="dcterms:alternative">pkg-dir_rtl-root-unset</meta>
   <meta property="belongs-to-collection">must</meta>
   <meta property="dcterms:isReferencedBy">
-    https://www.w3.org/TR/epub-33/#attrdef-dir</meta>
+    https://www.w3.org/TR/epub/#attrdef-dir</meta>
   <meta property="dcterms:isReferencedBy">
-    https://www.w3.org/TR/epub-rs-33/#confreq-rs-pkg-dir</meta>
+    https://www.w3.org/TR/epub-rs/#confreq-rs-pkg-dir</meta>
 </metadata>
     ...
 </package>
