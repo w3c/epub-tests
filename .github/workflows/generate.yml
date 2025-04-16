@@ -28,8 +28,7 @@ jobs:
       - name: commit the changes
         run: |
           git add docs/*.html
-          git add docs/drafts/fragments/*.html
-          git add docs/drafts/*.html
+          git add docs/fragments/*.html
           git add reports/xx-*.json
           git add docs/opds/*.json
           git commit -am "Automated report generation"

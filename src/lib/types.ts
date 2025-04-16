@@ -34,7 +34,7 @@ export namespace Constants {
     export const TEST_RESULTS_DIR: string = 'reports';
 
     /** Location for the final report */
-    export const DOCS_DIR: string = 'docs/drafts';
+    export const DOCS_DIR: string = 'docs/';
 
     /** Relative location for the final OPDS data */
     export const OPDS_DIR: string = 'docs/opds';
