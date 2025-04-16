@@ -1,26 +1,17 @@
 /**
  * Module to extract and gather information necessary to produce the right reports and an overview page for test cases.
  * 
- * Note: the term "consolidation" is used, throughout this module, for the following situation. 
- * Some implementations may come in different variants:
- * the same name (typically designating the core engine) but a separate versions ("variants")
- * for different environments, typically iOS, Android, or Web.
- * Per W3C these are not considered to be independent implementations and, therefore,
- * they should be considered as one implementation as far as the
- * formal CR report is concerned. On the other hand, there is value to keep the various implementation results separated.
- * 
- * To keep this, the report generator (and the display of the results) "duplicates" the list of
- * implementations: one is the original (ie, with variants kept separated) and
- * one where the result of all the variants are "consolidated" into a unique implementation report.
- * The duplication of these data is then reflected in the way the reports are displayed.
+ * Several functions are used by the auxiliary tools to manipulate the packages files for existing tests, not the report
+ * generation itself.
  * 
  * @packageDocumentation
+ * @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
+ * 
  */
 
-
-import * as fs_old_school from "fs";
-const fs = fs_old_school.promises;
-import * as xml2js from "xml2js";
+import { promises as fs } from 'fs';
+import * as fs_old_school from 'fs';
+import * as xml2js        from 'xml2js';
 
 import { 
     TestData, 
@@ -38,7 +29,7 @@ import {
  * 
  * @internal 
  */
-export function string_comparison(a: string, b: string): number {
+export function stringComparison(a: string, b: string): number {
     if (a < b) return -1;
     else if (a > b) return 1;
     else return 0;
@@ -46,7 +37,9 @@ export function string_comparison(a: string, b: string): number {
 
 
 /**
- * Get OPF file location, following the official EPUB mechanism
+ * Get OPF file location, following the official EPUB mechanism: extract the container file
+ * (which it at a fix location in the EPUB file) and then extract the OPF file name from there.
+ * 
  * @param dirname 
  * @returns fname
  */
@@ -88,7 +81,8 @@ async function get_opf(dirname: string): Promise<string> {
 
 
 /** 
- * See if a file name path refers to a real file
+ * See if a file name path refers to a real file.
+ * Note: this function is only used in the utilities, not in the main program.
  * 
  * @internal 
  */
@@ -98,7 +92,8 @@ export function isDirectory(name: string): boolean {
 
 
 /** 
- * See if a file name path refers to a real file
+ * See if a file name path refers to a real file.
+ * Note: this function is only used in the utilities, not in the main program.
  * 
  * @internal 
  */
@@ -117,9 +112,10 @@ export function isFile(name: string): boolean {
  * @returns lists of files in the directory
  */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function get_list_dir(dir_name: string, filter_name: (name: string) => boolean = (name: string) => true): Promise<string[]> {
+export async function getListDir(dir_name: string, filter_name: (name: string) => boolean = (name: string) => true): Promise<string[]> {
     // The filter works on the full path, hence this extra layer
     const file_name_filter = (name: string): boolean => {
+        // The 'xx-' prefix are used for the template tests
         return name.startsWith('xx-') === false && filter_name(`${dir_name}/${name}`);
     }
     const file_names = await fs.readdir(dir_name);
@@ -132,7 +128,7 @@ export async function get_list_dir(dir_name: string, filter_name: (name: string)
  * 
  * @internal
  */
-async function get_an_implementation_report(fname: string): Promise<ImplementationReport> {
+async function getAnImplementationReport(fname: string): Promise<ImplementationReport> {
     // Just to make the code more readable...
     type raw_index_pair = [string, string|boolean];
     type internal_index_pair = [string, Score];
@@ -176,14 +172,14 @@ async function get_an_implementation_report(fname: string): Promise<Implementati
  * @param dir_name the directory that contains the implementation reports
  * @internal
  */
-async function get_implementation_reports(dir_name: string): Promise<ImplementationReport[]> {
-    const implementation_list = await get_list_dir(dir_name, isFile);
+async function getImplementationReports(dir_name: string): Promise<ImplementationReport[]> {
+    const implementation_list = await getListDir(dir_name, isFile);
 
     // Use the 'Promise.all' trick to get to all the implementation reports in one async step rather than going through a cycle
-    const report_list_promises: Promise<ImplementationReport>[] = implementation_list.map((file_name) => get_an_implementation_report(`${dir_name}/${file_name}`));
+    const report_list_promises: Promise<ImplementationReport>[] = implementation_list.map((file_name) => getAnImplementationReport(`${dir_name}/${file_name}`));
     const proto_implementation_reports: ImplementationReport[] = await Promise.all(report_list_promises);
     const implementation_reports: ImplementationReport[] = proto_implementation_reports.filter((entry) => entry !== undefined); 
-    implementation_reports.sort((a,b) => string_comparison(a.name, b.name));
+    implementation_reports.sort((a,b) => stringComparison(a.name, b.name));
 
     return implementation_reports
 }
@@ -198,7 +194,7 @@ async function get_implementation_reports(dir_name: string): Promise<Implementat
  * @param implementations the original list of implementation reports
  * @returns a consolidated list of the implementation reports
  */
-function consolidate_implementation_reports(implementations: ImplementationReport[]): ImplementationReport[] {
+function consolidateImplementationReports(implementations: ImplementationReport[]): ImplementationReport[] {
     // Results of a test, indexed by the ID of the test itself
     interface TestResults { [index: string]: Score }
     interface Variants { [index: string]: TestResults[]}
@@ -208,7 +204,7 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
     // This is the real meat: create a new set of test results combining the test result of the variants.
     // The problem is that different variants may skip some tests, i.e., the
     // final list of test names must be the union of all the tests in the different variants
-    const consolidate_test_results = (variant_results: TestResults[]): TestResults => {
+    const consolidateTestResults = (variant_results: TestResults[]): TestResults => {
         const retval: TestResults = {};
 
         // Collect all keys together. In theory, all variants have the same keys, but errors may have
@@ -251,7 +247,7 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
 
     // 2. consolidate the variants for the same name, and add those to the result
     for (const variant_name in to_be_consolidated) {
-        const tests = consolidate_test_results(to_be_consolidated[variant_name]);
+        const tests = consolidateTestResults(to_be_consolidated[variant_name]);
         final.push({
             name    : variant_name,
             variant : 'consolidated',
@@ -260,7 +256,7 @@ function consolidate_implementation_reports(implementations: ImplementationRepor
     }
 
     // Re-sort the array to follow the original order
-    const retval: ImplementationReport[] = final.sort((a,b) => string_comparison(a.name, b.name));
+    const retval: ImplementationReport[] = final.sort((a,b) => stringComparison(a.name, b.name));
     return retval;
 }
 
@@ -291,7 +287,7 @@ function create_implementation_data(metadata: TestData[], implementations: Imple
  * that share the same `dc:coverage` data
  * 
  */
-function create_implementation_tables(implementation_data: ImplementationData[]): ImplementationTable[] {
+function createImplementationTables(implementation_data: ImplementationData[]): ImplementationTable[] {
     const retval: ImplementationTable[] = [];
 
     for (const impl_data of implementation_data) {
@@ -312,7 +308,7 @@ function create_implementation_tables(implementation_data: ImplementationData[])
     // Note that this sounds like unnecessary, because, at a later step, the sections are reordered
     // per the configuration file. But this is a safety measure: if the configuration file is
     // not available and/or erroneous, the order is still somewhat deterministic.
-    retval.sort((a,b) => string_comparison(a.header, b.header));
+    retval.sort((a,b) => stringComparison(a.header, b.header));
     return retval;
 }
 
@@ -328,9 +324,10 @@ function create_implementation_tables(implementation_data: ImplementationData[])
  * @returns EPUB metadata converted into the [[TestData]] structure
  */
 // eslint-disable-next-line max-lines-per-function
-export async function get_test_data(dir_name: string): Promise<TestData[]> {
+export async function getTestData(dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
-    const get_single_test_data = async (file_name: string): Promise<TestData> => {
+    // eslint-disable-next-line max-lines-per-function
+    const getSingleTestData = async (file_name: string): Promise<TestData> => {
         // Note the heavy use of "any" in the function; this is related to the fact that
         // the xmljs package returns a pretty "unpredictable" object...
         // As a consequence, this function bypasses most of TypeScript's checks. Alas!
@@ -348,7 +345,7 @@ export async function get_test_data(dir_name: string): Promise<TestData[]> {
             }
         };
 
-        const get_array_of_string_values = (label: string, fallback:string, metadata: any): string[] => {
+        const getArrayOfStringValues = (label: string, fallback:string, metadata: any): string[] => {
             try {
                 const entries = metadata[label];
                 if (entries === undefined || entries.length === 0) {
@@ -364,16 +361,16 @@ export async function get_test_data(dir_name: string): Promise<TestData[]> {
             }
         };
 
-        const get_array_of_meta_values = (property: string, metadata: any): string[] => {
+        const getArrayOfMetaValues = (property: string, metadata: any): string[] => {
             return metadata["meta"].filter((entry:any): boolean => entry["$"].property === property)
         }
 
-        const get_single_meta_value = (property: string, metadata: any): any => {
+        const getSingleMetaValue = (property: string, metadata: any): any => {
             return metadata.meta.find((entry: any): boolean => entry["$"].property === property)
         }
 
-        const get_required = (metadata: any): ReqType => {
-            const is_set = get_single_meta_value("belongs-to-collection", metadata);
+        const getRequired = (metadata: any): ReqType => {
+            const is_set = getSingleMetaValue("belongs-to-collection", metadata);
             if (is_set === undefined) {
                 return "must";
             } else {
@@ -389,9 +386,14 @@ export async function get_test_data(dir_name: string): Promise<TestData[]> {
             }
         }
 
-        const get_final_title = (metadata: any): string => {
-            const alternate_title = get_single_meta_value("dcterms:alternative", metadata);
+        const getFinalTitle = (metadata: any): string => {
+            const alternate_title = getSingleMetaValue("dcterms:alternative", metadata);
             return alternate_title === undefined ? get_string_value("dc:title", "(No title)", metadata) : alternate_title._;    
+        }
+
+        const getReferenceVersion = (metadata: any): string => {
+            const version = getSingleMetaValue("schema:version", metadata);
+            return version === undefined ? "3.3" : version._;
         }
 
         // ---------
@@ -409,23 +411,24 @@ export async function get_test_data(dir_name: string): Promise<TestData[]> {
             explicitArray : true,
         });
         const test_metadata = package_js.package.metadata[0];
-        const modification_date = get_single_meta_value("dcterms:modified", test_metadata);
+        const modification_date = getSingleMetaValue("dcterms:modified", test_metadata);
         
         return {
             identifier  : get_string_value("dc:identifier", file_name.split('/').pop(), test_metadata),
-            title       : get_final_title(test_metadata),
+            title       : getFinalTitle(test_metadata),
             description : get_string_value("dc:description", "(No description)", test_metadata),
             coverage    : get_string_value("dc:coverage", "(Uncategorized)", test_metadata),
-            creators    : get_array_of_string_values("dc:creator", "(Unknown)", test_metadata),
-            required    : get_required(test_metadata),
+            version     : getReferenceVersion(test_metadata),
+            creators    : getArrayOfStringValues("dc:creator", "(Unknown)", test_metadata),
+            required    : getRequired(test_metadata),
             modified    : modification_date === undefined ? "(Unknown)" : modification_date._,
-            references  : get_array_of_meta_values("dcterms:isReferencedBy", test_metadata).map((entry:any): string => entry._),
+            references  : getArrayOfMetaValues("dcterms:isReferencedBy", test_metadata).map((entry:any): string => entry._),
         }
     }
 
     // Get the test descriptions
-    const test_list = await get_list_dir(dir_name, isDirectory);
-    const test_data_promises: Promise<TestData>[] = test_list.map((name: string) => get_single_test_data(`${dir_name}/${name}`));
+    const test_list = await getListDir(dir_name, isDirectory);
+    const test_data_promises: Promise<TestData>[] = test_list.map((name: string) => getSingleTestData(`${dir_name}/${name}`));
     
     // Use the 'Promise.all' trick to get to all the data in one async step rather than going through a cycle
     const test_data: TestData[] = await Promise.all(test_data_promises);
@@ -435,12 +438,12 @@ export async function get_test_data(dir_name: string): Promise<TestData[]> {
 
 /**
  * Get all the test reports and tests files metadata and create the data structures that allow a simple
- * generation of a final report
+ * generation of a final report.
  * 
  * @param test_data all the metadata for all tests
  * @param reports directory where the implementation reports reside
  */
-export async function get_report_data(test_data: TestData[], reports: string): Promise<ReportData> {
+export async function getReportData(test_data: TestData[], reports: string): Promise<ReportData> {
     const sort_test_data = (all_tests: TestData[]): TestData[] => {
         const required_tests: TestData[] = [];
         const optional_tests: TestData[] = [];
@@ -465,9 +468,9 @@ export async function get_report_data(test_data: TestData[], reports: string): P
         // However, in rare cases, the test's file name and the test's identifier may not coincide, and the latter
         // should prevail...
         return [
-            ...required_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
-            ...optional_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
-            ...possible_tests.sort((a,b) => string_comparison(a.identifier, b.identifier)),
+            ...required_tests.sort((a,b) => stringComparison(a.identifier, b.identifier)),
+            ...optional_tests.sort((a,b) => stringComparison(a.identifier, b.identifier)),
+            ...possible_tests.sort((a,b) => stringComparison(a.identifier, b.identifier)),
         ]
     }
 
@@ -475,16 +478,16 @@ export async function get_report_data(test_data: TestData[], reports: string): P
     const metadata: TestData[] = sort_test_data(test_data);
 
     // Get the list of available implementation reports
-    const impl_list: ImplementationReport[] = await get_implementation_reports(reports);
-    const consolidated_list: ImplementationReport[] = consolidate_implementation_reports(impl_list);
+    const impl_list: ImplementationReport[] = await getImplementationReports(reports);
+    const consolidated_list: ImplementationReport[] = consolidateImplementationReports(impl_list);
 
     // Combine the two lists to create an array of Implementation data
     const implementation_data: ImplementationData[] = create_implementation_data(metadata, impl_list);
     const consolidated_data: ImplementationData[] = create_implementation_data(metadata, consolidated_list)
 
     // Section the list of implementation data
-    const tables: ImplementationTable[] = create_implementation_tables(implementation_data)
-    const consolidated_tables: ImplementationTable[] = create_implementation_tables(consolidated_data)
+    const tables: ImplementationTable[] = createImplementationTables(implementation_data)
+    const consolidated_tables: ImplementationTable[] = createImplementationTables(consolidated_data)
 
     // Create an array of implementers that only contain the bare minimum
     const implementers = impl_list as Implementer[];
@@ -498,7 +501,7 @@ export async function get_report_data(test_data: TestData[], reports: string): P
  * 
  * @param report the full report, as generated by earlier calls
  */
-export function get_template(report: ReportData): Raw_ImplementationReport {
+export function getTemplate(report: ReportData): Raw_ImplementationReport {
     const test_list: {[index: string]: boolean } = {};
     const keys: string[] = [];
 

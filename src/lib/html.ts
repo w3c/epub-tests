@@ -6,13 +6,13 @@
  */
 
 import { ReportData, Implementer, Constants, Score, HTMLFragments } from './types';
-import { JSDOM } from "jsdom";
+import { JSDOM }                                                    from 'jsdom';
 
 /**
  * Turn a text into a string that can be used as an ID
  * @internal
  */
-const convert_to_id = (header: string): string => {
+const convertToID = (header: string): string => {
     return header.toLowerCase().replace(' ', '-');
 }
 
@@ -26,7 +26,7 @@ const convert_to_id = (header: string): string => {
  * 
  * @internal
  */
-const add_child = (parent: HTMLElement, element: string, content: string = undefined): HTMLElement => {
+const addChild = (parent: HTMLElement, element: string, content: string = undefined): HTMLElement => {
     const new_element = parent.ownerDocument.createElement(element);
     parent.appendChild(new_element);
     if (content !== undefined) new_element.innerHTML = content;
@@ -42,14 +42,14 @@ const add_child = (parent: HTMLElement, element: string, content: string = undef
  * @param impl 
  * @returns results in XML format
  */
-function create_impl_list(impl: Implementer[]): string {
+function createImplementationList(impl: Implementer[]): string {
     const dom: DocumentFragment = JSDOM.fragment('<section id="sec-implementer-list"><h2>List of Implementations</h2></section>');
     const section: HTMLElement = dom.querySelector('section');
 
-    const ol = add_child(section, 'ol');
+    const ol = addChild(section, 'ol');
 
     for (const implementer of impl) {
-        const li = add_child(ol, 'li');
+        const li = addChild(ol, 'li');
         const name = 'ref' in implementer ? `<a href="${implementer.ref}">${implementer.name}</a>` : `${implementer.name}`;
         li.innerHTML = 'variant' in implementer ? `${name}, ${implementer.variant}` : name;
     }
@@ -67,10 +67,10 @@ function create_impl_list(impl: Implementer[]): string {
  * @returns Serialized XML
  */
 // eslint-disable-next-line max-lines-per-function
-function create_impl_reports(data: ReportData): {consolidated_results: string, complete_results: string} {
+function createImplementationReports(data: ReportData): {consolidated_results: string, complete_results: string} {
     // Two tables must be created: the consolidated and detailed results. The function below is 
     // invoked twice to get these two.
-    const create_impl_report = (consolidated: boolean): string => {
+    const createImplReport = (consolidated: boolean): string => {
         // The whole content is enclosed in a large, top level section
         const title = consolidated ? 'Consolidated Implementation Results' : 'Detailed Implementation Results';
         const id = consolidated ? 'sec-consolidated-report-tables' : 'sec-detailed-report-tables';
@@ -83,29 +83,29 @@ function create_impl_reports(data: ReportData): {consolidated_results: string, c
         // Each table corresponds to one 'category' (Core Media Types, Internationalizations, Fixed Layouts, etc.)
         for (const table of (consolidated ? data.consolidated_tables : data.tables)) {
             // Each table is enclosed in a separate subsection
-            const table_section = add_child(top_section, 'section');
+            const table_section = addChild(top_section, 'section');
 
-            const h3 = add_child(table_section, 'h3', table.header);
-            h3.id = (consolidated) ? `sec-consolidated-${convert_to_id(table.header)}-results` : `sec-detailed-${convert_to_id(table.header)}-results`;
+            const h3 = addChild(table_section, 'h3', table.header);
+            h3.id = (consolidated) ? `sec-consolidated-${convertToID(table.header)}-results` : `sec-detailed-${convertToID(table.header)}-results`;
 
             if (consolidated && Constants.OPTIONAL_FEATURES.includes(table.header)) {
-                const p = add_child(table_section,'p','The general feature is <em>OPTIONAL;</em> a "must" tests means that <em>it is required to pass it to claim conformance in implementing the feature</em>.');
+                const p = addChild(table_section,'p','The general feature is <em>OPTIONAL;</em> a "must" tests means that <em>it is required to pass it to claim conformance in implementing the feature</em>.');
                 table_section.className = "optional_feature";
             }
 
-            const test_table = add_child(table_section, 'table');
-            test_table.className = 'simple';
+            const test_table = addChild(table_section, 'table');
+            test_table.className = 'zebra';
 
-            add_child(test_table, 'colgroup', `
+            addChild(test_table, 'colgroup', `
                 <col class="${Constants.CLASS_COL_ID}"/>
                 <col class="${Constants.CLASS_COL_REQ}"/>
             `);
 
             // Header rows for each implementation
-            const thead = add_child(test_table, 'thead');
-            const header_row = add_child(thead, 'tr');
-            add_child(header_row, 'th', 'Id');
-            add_child(header_row, 'th', 'Req');
+            const thead = addChild(test_table, 'thead');
+            const header_row = addChild(thead, 'tr');
+            addChild(header_row, 'th', 'Id');
+            addChild(header_row, 'th', 'Req');
             for (const impl of (consolidated ? data.consolidated_implementers : data.implementers)) {
                 let head: string;
                 if (impl.variant !== undefined) {
@@ -113,30 +113,30 @@ function create_impl_reports(data: ReportData): {consolidated_results: string, c
                 } else {
                     head = `${impl.name}`;
                 }
-                add_child(header_row, 'th', head);
+                addChild(header_row, 'th', head);
             }
 
-            const tbody = add_child(test_table, 'tbody');
+            const tbody = addChild(test_table, 'tbody');
             // A cycle for each table row:
             for (const row of table.implementations) {
-                const tr = add_child(tbody, 'tr'); 
+                const tr = addChild(tbody, 'tr'); 
 
                 // First the fixed table cells...
-                const td_id = add_child(tr, 'td', `<a href="${Constants.DOC_TEST_DESCRIPTIONS}#${row.identifier}">${row.identifier}</a>`);
+                const td_id = addChild(tr, 'td', `<a href="${Constants.DOC_TEST_DESCRIPTIONS}#${row.identifier}">${row.identifier}</a>`);
                 td_id.id = `${row.identifier}-results${suffix}`;
                 td_id.className = row.required;
 
-                add_child(tr, 'td', row.required);
+                addChild(tr, 'td', row.required);
 
                 //... followed by the test results themselves
                 let passes = 0;
                 for (const result of row.implementations) {
                     if (result === undefined) {
                         // This may happen if the tester has not started with a full template...
-                        const td_impl = add_child(tr, 'td', 'todo');
+                        const td_impl = addChild(tr, 'td', 'todo');
                         td_impl.className = Constants.CLASS_UNTESTED;                        
                     } else {
-                        const td_impl = add_child(tr, 'td', Score.get_td(result));
+                        const td_impl = addChild(tr, 'td', Score.get_td(result));
                         td_impl.className = Score.get_class(result)
                         if (Score.get_td(result) === Score.PASS) {
                             passes += 1;
@@ -152,8 +152,8 @@ function create_impl_reports(data: ReportData): {consolidated_results: string, c
     }
 
     return {
-        consolidated_results : create_impl_report(true),
-        complete_results     : create_impl_report(false),
+        consolidated_results : createImplReport(true),
+        complete_results     : createImplReport(false),
     };
 }
 
@@ -167,12 +167,12 @@ function create_impl_reports(data: ReportData): {consolidated_results: string, c
  * @param data 
  * @returns Serialized XML
  */
-function create_test_data(data: ReportData): string {
+function createTestData(data: ReportData): string {
     // Add the button to switch the visibility of should/may tests on and off
-    const add_visibility_button = (parent: HTMLElement): void => {
-        const div = add_child(parent, "div");
+    const addVisibilityButton = (parent: HTMLElement): void => {
+        const div = addChild(parent, "div");
         div.id = "button_container";
-        const button = add_child(div, "button", "Switch visibility");
+        const button = addChild(div, "button", "Switch visibility");
         button.id = "should_may_visibility"
         button.setAttribute("type", "button");
     };
@@ -181,58 +181,61 @@ function create_test_data(data: ReportData): string {
     const full_section: HTMLElement = dom.querySelector('section');
 
     // Add the visibility switch button
-    add_visibility_button(full_section);
+    addVisibilityButton(full_section);
 
     for (const table of data.tables) {
         // Each table is enclosed in a separate subsection
-        const table_section = add_child(full_section, 'section');
+        const table_section = addChild(full_section, 'section');
 
-        const h3 = add_child(table_section, 'h3', table.header);
-        h3.id = `sec-${convert_to_id(table.header)}-data`;
+        const h3 = addChild(table_section, 'h3', table.header);
+        h3.id = `sec-${convertToID(table.header)}-data`;
 
-        const test_table = add_child(table_section, 'table');
-        test_table.className = 'simple sortable';
+        const test_table = addChild(table_section, 'table');
+        test_table.className = 'zebra sortable';
 
-        const thead = add_child(test_table, 'thead');
+        const thead = addChild(test_table, 'thead');
         // Next is a header row
-        add_child(thead, 'tr',`
+        addChild(thead, 'tr',`
             <th scope="col" class="order-asc" style="width:17%">Id</th>
-            <th scope="col" style="width:59%">Description</th>
+            <th scope="col" style="width:57%">Description</th>
             <th scope="col" style="width:8%">Req</th>
-            <th scope="col" style="width:8%">Date</th>
+            <th scope="col" class="order-asc" style="width:4%">Version</th>
+            <th scope="col" style="width:6%">Date</th>
             <th scope="col" data-nonsortable="true" style="width:4%">Specs</th>
             <th scope="col" data-nonsortable="true" style="width:4%">Ref</th>
         `);
 
-        const tbody = add_child(test_table, 'tbody');
+        const tbody = addChild(test_table, 'tbody');
         // Finally, a row per test
         for (const row of table.implementations) {
-            const tr = add_child(tbody, 'tr');
+            const tr = addChild(tbody, 'tr');
 
             // a bunch of table cells...
-            const td_id = add_child(tr, 'td', `<a href="${Constants.TEST_URL_BASE}/${row.identifier}">${row.identifier}</a>`);
+            const td_id = addChild(tr, 'td', `<a href="${Constants.TEST_URL_BASE}/${row.identifier}">${row.identifier}</a>`);
             td_id.className = row.required;
             td_id.id = `${row.identifier}`;
 
-            add_child(tr, 'td', row.description);
-            add_child(tr, 'td', row.required);
+            addChild(tr, 'td', row.description);
+            addChild(tr, 'td', row.required);
+            addChild(tr, 'td', row.version);
 
             const date: string[] = row.modified.split('T')[0].split('-');
             date[0] = `’${date[0].charAt(2)}${date[0].charAt(3)}`;
-            add_child(tr, 'td', date.join('.'));
+            addChild(tr, 'td', date.join('.'));
 
-            const td_specs = add_child(tr, 'td');
+
+            const td_specs = addChild(tr, 'td');
             if (row.references.length === 0) {
                 td_specs.innerHTML = 'n.a. ';
             } else {
                 let counter = 0;
                 for (const ref of row.references) {
                     counter += 1;
-                    const a = add_child(td_specs, 'a', ` (${counter})`);
+                    const a = addChild(td_specs, 'a', ` (${counter})`);
                     a.setAttribute('href', ref);
                 }
             }
-            add_child(tr, 'td', `<a href="${Constants.DOC_TEST_RESULTS}#${row.identifier}-results">☞</a>`); /* ❐ */
+            addChild(tr, 'td', `<a href="${Constants.DOC_TEST_RESULTS}#${row.identifier}-results">☞</a>`); /* ❐ */
         }
     }
 
@@ -250,7 +253,7 @@ function create_test_data(data: ReportData): string {
  * @param data 
  * @returns Serialized XML for the creators' list.
  */
-function create_creator_list(data: ReportData): string {
+function createCreatorList(data: ReportData): string {
     const creators: Set<string> = new Set<string>();
     const dom: DocumentFragment = JSDOM.fragment('<ul></ul>');
     const ul: HTMLElement = dom.querySelector('ul');
@@ -271,7 +274,7 @@ function create_creator_list(data: ReportData): string {
     }
 
     for (const creator of [...creators].sort()) {
-        add_child(ul, 'li', creator);
+        addChild(ul, 'li', creator);
     }
 
     return ul.outerHTML;
@@ -288,22 +291,21 @@ function create_creator_list(data: ReportData): string {
  * that is simply an HTML `<ul>` list. These fragments can be included in the final report using the `data-include` feature of respec:
  * 
  * 1. A bulleted list of available implementations, linked (if available) to the Web Site of the implementation itself
- * 2. A series of subsections, each with its own table; each table row is a reference to the test and a series of cells (one per implementation) whether the test passes or not. This structure comes twice: one for consolidated results, and one for the
- * original ones
+ * 2. A series of subsections, each with its own table; each table row is a reference to the test and a series of cells (one per implementation) whether the test passes or not. This structure comes twice: one for consolidated results, and one for the original ones
  * 3. A series of subsections, each with its own table; each table row contains basic metadata and cross references to the tests.
  * 4. A list of test creators
  * 
  * The return for each of those is in the form of a string containing the XHTML fragment
  * 
  */
-export function create_report(data: ReportData): HTMLFragments {
-    const {consolidated_results, complete_results} = create_impl_reports(data);
+export function createReport(data: ReportData): HTMLFragments {
+    const {consolidated_results, complete_results} = createImplementationReports(data);
     return {
-        implementations : create_impl_list(data.implementers),
+        implementations : createImplementationList(data.implementers),
         consolidated_results,
         complete_results,
-        tests           : create_test_data(data),
-        creators        : create_creator_list(data),
+        tests           : createTestData(data),
+        creators        : createCreatorList(data),
     }
 }
 

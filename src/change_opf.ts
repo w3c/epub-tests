@@ -13,9 +13,9 @@
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
-import {get_list_dir, isDirectory, get_opf_file} from './lib/data';
+import {getListDir, isDirectory, get_opf_file} from './lib/data';
 import { Constants } from './lib/types';
-import { create_epub } from './lib/epub';
+import { createEPUB } from './lib/epub';
 import { JSDOM } from 'jsdom';
 
 
@@ -78,14 +78,14 @@ async function main(dir_name: string, transform: (current: string) => string): P
         await fs.writeFile(opf_file, new_opf_file);
     }
 
-    const dirs: string[] = await get_list_dir(dir_name, filter_locals);
+    const dirs: string[] = await getListDir(dir_name, filter_locals);
 
     // Modify the metadata content for the tests
     const dir_promises: Promise<void>[] = dirs.map((test) => handle_single_test_metadata(`${dir_name}/${test}`));
     await Promise.all(dir_promises);
 
     // Generate the epub files themselves
-    const epub_promises: Promise<void>[] = dirs.map((test) => create_epub(`${dir_name}/${test}`));
+    const epub_promises: Promise<void>[] = dirs.map((test) => createEPUB(`${dir_name}/${test}`));
     await Promise.all(epub_promises);
 }
 

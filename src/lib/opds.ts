@@ -6,7 +6,7 @@
  */
 
 import { TestData, Constants } from './types';
-import { string_comparison } from './data';
+import { stringComparison }    from './data';
 
 /* ------------------------------------------------------------------------------------------------------ */
 /*                        Subset of OPDS as used here in Typescript types                                 */
@@ -58,7 +58,7 @@ export interface OPDS {
  * @param tests All the test data, as extracted from the corresponding package documents
  * @returns 
  */
-export function create_opds(tests: TestData[]): OPDS {
+export function createOPDS(tests: TestData[]): OPDS {
     /** All cover images are identical */
     const images: ImageLink[] = [{
         href   : `${Constants.OPDS_DIR_URL}/${Constants.DOC_OPDS_COVER_PNG}`,
@@ -94,13 +94,13 @@ export function create_opds(tests: TestData[]): OPDS {
             images,
         }
     }).sort((a: Publication, b: Publication): number => {
-        const time_comparison = string_comparison(a.metadata.modified, b.metadata.modified);
-        return time_comparison !== 0 ? -1 * time_comparison : string_comparison(a.metadata.identifier, b.metadata.identifier);
+        const time_comparison = stringComparison(a.metadata.modified, b.metadata.modified);
+        return time_comparison !== 0 ? -1 * time_comparison : stringComparison(a.metadata.identifier, b.metadata.identifier);
     })
 
     return {
         metadata : {
-            title : 'W3C EPUB 3.3 Test Suite',
+            title : 'W3C EPUB 3.4 Test Suite',
         },
         links : [
             {

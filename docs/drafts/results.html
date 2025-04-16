@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
 	<head>
 		<meta charset="utf-8" />
-		<title>EPUB 3.4 Test Results</title>
+		<meta  name="color-scheme" content="light dark" />
+		<title>EPUB 3 Test Results</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 		<style>
 			td a {
@@ -15,23 +16,89 @@
 
 			td.pass {
 				background-color: hsl(120, 20%, 70%);
+				color: black !important
 			}
 
 			td.fail {
 				background-color: hsl(355, 100%, 72%);
+				color: black !important
 			}
 
 			td.untested {
 				background-color: hsl(60, 100%, 85%);
+				color: black !important
 			}
 
 			td.na {
 				background-color: hsl(30, 5%, 97%);
+				color: black !important
 			}
 
 			tr.under_implemented {
 				border: dashed 0.15em black ;
 				font-style: italic;
+			}
+
+			table.zebra {
+				font-size:inherit;
+				font:80%;
+				margin:1em;
+			}
+
+			table.zebra td {
+				padding-left: 0.3em;
+			}
+
+			table.zebra th {
+				font-weight: bold;
+				text-align: center;
+				background-color: rgb(0,0,128) !important;
+				font-size: 90%;
+				background: hsl(180, 30%, 50%);
+				color: #fff;
+			}
+
+			table.zebra th a:link {
+				color: #fff;
+			}
+
+			table.zebra th a:visited {
+				color: #aaa;
+			}
+
+			table.zebra tr:nth-child(even) {
+				background-color: hsl(180, 30%, 93%) !important;
+				color: black !important;
+			}
+
+			table.zebra th {
+				border-bottom:1px solid #bbb;
+				padding:.2em 1em;
+			}
+			table.zebra td {
+				border-bottom:1px solid #ddd;
+				padding:.2em 1em;
+			}
+
+			body.darkmode table.zebra tr:nth-child(odd) {
+			    color: black !important;
+				background-color: hsl(241, 0%, 78%) !important;
+			}
+
+			
+			/* body.darkmode table.zebra tr:nth-child(odd) {
+				background-color: hsl(241, 0%, 30%) !important;
+			} */
+
+			body.darkmode table.zebra tr:nth-child(even) td a:link,
+			body.darkmode table.zebra tr:nth-child(even) td a:visited
+			{
+				color: green;
+			}
+			body.darkmode table.zebra tr:nth-child(odd) td a:link,
+			body.darkmode table.zebra tr:nth-child(odd) td a:visited
+			{
+				color: navy;
 			}
 
 			div#button_container {
@@ -54,11 +121,10 @@
 		</style>
 		<script class="remove">
 			var respecConfig = {
-				wgPublicList: "public-epub3",
+				wgPublicList: "public-pm-wg",
 				latestVersion: "https://w3c.github.io/epub-tests/results",
 				specStatus: "base",
 				noRecTrack: true,
-				publishDate: "2023-03-22",
 				shortName: "epub-tests-results",
 				edDraftURI: "https://w3c.github.io/epub-tests/drafts/results",
                 copyrightStart: "2021",
@@ -78,7 +144,6 @@
 						companyURL: "https://www.google.com",
 					}
 				],
-				processVersion: 2020,
 				includePermalinks: true,
 				permalinkEdge: true,
 				permalinkHide: false,
@@ -151,14 +216,15 @@
 	
 	<body>
 		<section id="abstract">
-			<p>This documents shows the results of EPUB 3.3 Testing.
-				It corresponds to the <a href="https://w3c.github.io/epub-specs/epub33/core/">EPUB 3.3</a> specification's 
-				<a href="https://w3c.github.io/epub-specs/epub33/reports/exit_criteria#exit-criteria-core-1">category 1 exit criteria</a>, 
-				as well as the complete <a href="https://w3c.github.io/epub-specs/epub33/reports/exit_criteria#exit-criteria-rs">exit criteria</a>
-				for the <a href="https://w3c.github.io/epub-specs/epub33/rs/">EPUB 3.3 Reading Systems</a> specification.
+			<p>This documents shows the results of EPUB 3.4 Testing.
+				It corresponds to the <a href="https://w3c.github.io/epub-specs/epub34/authoring/">EPUB 3.4</a> specification's 
+				<a href="https://w3c.github.io/epub-specs/epub34/reports/exit_criteria#exit-criteria-core-1">category 1 exit criteria</a>, 
+				as well as the complete <a href="https://w3c.github.io/epub-specs/epub34/reports/exit_criteria#exit-criteria-rs">exit criteria</a>
+				for the <a href="https://w3c.github.io/epub-specs/epub34/rs/">EPUB 3.4 Reading Systems</a> specification.
 			</p>
 		</section>
 		<section id="sotd"></section>
+		<section id="conformance"></section>
 
 		<section>
 			<h2>Introduction</h2>

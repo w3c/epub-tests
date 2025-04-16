@@ -1,4 +1,25 @@
+/* eslint-disable no-multi-spaces */
 /* eslint-disable @typescript-eslint/no-namespace */
+
+/**
+ * Constants and types used in the EPUB test suite presentation.
+ * 
+ * Note: the term "consolidation" is used, throughout this package, for the following situation. 
+ * Some implementations may come in different variants: i.e., the same name (typically designating the core engine) but a separate versions ("variants")
+ * for different environments, typically iOS, Android, or Web.
+ * Per W3C these are not considered to be independent implementations and, therefore, 
+ * they should be considered as one implementation as far as the
+ * formal CR report is concerned. On the other hand, there is value to keep 
+ * the various implementation results separated.
+ * 
+ * To keep this, the report generator (and the display of the results) "duplicates" the list of 
+ * implementations: one is the original (ie, with variants kept separated) and
+ * one where the result of all the variants are "consolidated" into a unique implementation report. 
+ * The duplication of these data is then reflected in the way the reports are displayed. 
+ *  
+ * @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
+ * @packageDocumentation
+ */
 
 /**
  * Constants
@@ -111,30 +132,42 @@ export interface TestData {
      * Unique identifier (usually the file name)
      */
     identifier: string;
+
     /**
      * Creator of the test
      */
     creators: string[];
+
     /**
      * Short title of the test
      */
     title: string;
+
     /**
      * Description of the test
      */
     description: string;
+
     /**
      * "Coverage" of the test, ie, the broad area that the test belongs to
      */
     coverage: string;
+
+    /**
+     * EPUB Version number. The value of the version is the revision where the test has been added in.
+     */
+    version: string;
+
     /**
      * This is a series of URL strings, referring to the section in the spec this test is pertinent to.
      */
     references: string[];
+    
     /**
      * The value of the 'modified' string from the package file
      */
     modified: string;
+
     /**
      * Whether this test corresponds to a _MUST_, _SHOULD_, or _MAY_ statement
      */
@@ -147,10 +180,10 @@ export interface TestData {
  */
 // eslint-disable-next-line no-shadow
 export enum Score {
-    FAIL = "fail",
-    PASS = "pass",
+    FAIL           = "fail",
+    PASS           = "pass",
     NOT_APPLICABLE = "n/a",
-    UNTESTED = "todo",
+    UNTESTED       = "todo",
 }
 
 export namespace Score {
@@ -175,16 +208,18 @@ export namespace Score {
 
 
 /**
- * Data about a single implementer: essentially, the data that is necessary to the final 
+ * Data about a single implementer: the data that is necessary to the final 
  * report about each implementer
  */
 export interface Implementer {
     /** Name of the implementation, to appear in the final report */
-    name : string;
+    name     : string;
+
     /** Name of a variant, to appear in the final report */
     variant ?: string;
+
     /** If present, the name becomes a hyperlink to this URL */
-    ref ?: string
+    ref     ?: string
 }
 
 
@@ -228,12 +263,11 @@ export interface ImplementationData extends TestData {
 
 
 /**
- * A single set ("table") of implementations, grouped as one "section" (using the "coverage" 
- * value in the tests)
+ * A single set ("table") of all implementation data, grouped by a "section" (i.e., the "coverage" value in the tests)
  */
 export interface ImplementationTable {
-    header: string;
-    implementations: ImplementationData[];
+    header          : string;
+    implementations : ImplementationData[];
 }
 
 
@@ -241,19 +275,19 @@ export interface ImplementationTable {
  * Data needed for the display of the test results
  */
 export interface ReportData {
-    tables: ImplementationTable[];
-    consolidated_tables: ImplementationTable[];
-    implementers : Implementer[];
-    consolidated_implementers: Implementer[];
+    tables                    : ImplementationTable[];
+    consolidated_tables       : ImplementationTable[];
+    implementers              : Implementer[];
+    consolidated_implementers : Implementer[];
 } 
 
 /**
  * Data returned from the HTML generation
  */
 export interface HTMLFragments {
-    implementations: string, 
-    consolidated_results: string,
-    complete_results: string, 
-    tests: string, 
-    creators: string
+    implementations      : string, 
+    consolidated_results : string,
+    complete_results     : string, 
+    tests                : string, 
+    creators             : string
 }

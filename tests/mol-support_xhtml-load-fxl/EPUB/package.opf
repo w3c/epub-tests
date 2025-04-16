@@ -1,6 +1,7 @@
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:coverage>Media Overlays</dc:coverage>
+    <dc:coverage id="coverage">Media Overlays</dc:coverage>
+    <meta refines="#coverage" property="schema:version">3.3</meta>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2023-01-11</dc:date>
     <dc:description>Tests whether the playback starts at the right places in the MO definition, including entries in the middle of the file in fixed layout.</dc:description>
@@ -10,7 +11,7 @@
     <dc:title>mol-support_xhtml-load-fxl</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#mol-support-xhtml-load</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#mol-support-xhtml-load</meta>
     <meta property="dcterms:modified">2023-01-11T00:00:00Z</meta>
     <meta property="media:duration" refines="#md-smil">00:02:32.732</meta>
     <meta property="media:duration">0:02:32.732</meta>
