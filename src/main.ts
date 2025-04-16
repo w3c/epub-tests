@@ -3,10 +3,10 @@ import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
 import { TestData, ReportData, Raw_ImplementationReport, Constants, HTMLFragments } from './lib/types';
-import { getTestData, getReportData, getTemplate }                             from "./lib/data";
-import { createReport }                                                            from "./lib/html";
-import { applyConfigurationOptions }                                              from './lib/config';
-import { OPDS, createOPDS }                                                        from './lib/opds'
+import { getTestData, getReportData, getTemplate }                                  from "./lib/data";
+import { createReport }                                                             from "./lib/html";
+import { applyConfigurationOptions }                                                from './lib/config';
+import { OPDS, createOPDS }                                                         from './lib/opds'
 
 
 /**
