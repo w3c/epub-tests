@@ -38,7 +38,7 @@ jobs:
         # Details depend on where the script is located
         run: |
           (cd src; deno run -A main.ts)
-          rm script/deno.lock
+          rm src/deno.lock
       - name: Setup Github Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
