@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-namespace
 /* eslint-disable no-multi-spaces */
 /* eslint-disable @typescript-eslint/no-namespace */
 
@@ -26,18 +27,18 @@
  */
 export namespace Constants {
     /** Location for the tests themselves */
-    export const TESTS_DIR: string = 'tests';
+    export const TESTS_DIR: string = '../tests';
 
-    export const TESTS_DIR_DEBUG: string = 'local_tests';
+    export const TESTS_DIR_DEBUG: string = '../local_tests';
 
     /** Location for the implementation reports */
-    export const TEST_RESULTS_DIR: string = 'reports';
+    export const TEST_RESULTS_DIR: string = '../reports';
 
     /** Location for the final report */
-    export const DOCS_DIR: string = 'docs/';
+    export const DOCS_DIR: string = '../docs/';
 
     /** Relative location for the final OPDS data */
-    export const OPDS_DIR: string = 'docs/opds';
+    export const OPDS_DIR: string = '../docs/opds';
 
     export const OPDS_DIR_URL: string = 'https://w3c.github.io/epub-tests/opds';
 
@@ -244,7 +245,7 @@ export interface ImplementationReport extends Implementer {
  */
 export interface Raw_ImplementationReport extends Implementer {
     tests: {
-        [index:string]: (boolean|string)
+        [index:string]: (boolean|null)
     }
 }
 

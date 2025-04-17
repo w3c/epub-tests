@@ -13,9 +13,9 @@
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
-import {getListDir, isDirectory, get_opf_file} from './lib/data';
-import { Constants } from './lib/types';
-import { createEPUB } from './lib/epub';
+import {getListDir, isDirectory, get_opf_file} from './lib/data.ts';
+import { Constants }                           from './lib/types.ts';
+import { createEPUB }                          from './lib/epub.ts';
 
 /**
  * Main entry point for the separate metadata extension: modify the OPF file for each test directory, and generate the epub files themselves.

@@ -5,8 +5,8 @@
  *  @packageDocumentation
  */
 
-import { ReportData, Implementer, Constants, Score, HTMLFragments } from './types';
-import { JSDOM }                                                    from 'jsdom';
+import { ReportData, Implementer, Constants, Score, HTMLFragments } from './types.ts';
+import { JSDOM }                                                    from 'npm:jsdom';
 
 /**
  * Turn a text into a string that can be used as an ID
@@ -26,7 +26,7 @@ const convertToID = (header: string): string => {
  * 
  * @internal
  */
-const addChild = (parent: HTMLElement, element: string, content: string = undefined): HTMLElement => {
+const addChild = (parent: HTMLElement, element: string, content: string|undefined = undefined): HTMLElement => {
     const new_element = parent.ownerDocument.createElement(element);
     parent.appendChild(new_element);
     if (content !== undefined) new_element.innerHTML = content;
@@ -44,7 +44,13 @@ const addChild = (parent: HTMLElement, element: string, content: string = undefi
  */
 function createImplementationList(impl: Implementer[]): string {
     const dom: DocumentFragment = JSDOM.fragment('<section id="sec-implementer-list"><h2>List of Implementations</h2></section>');
-    const section: HTMLElement = dom.querySelector('section');
+    const section: HTMLElement|null = dom.querySelector('section');
+
+    if (section === null) {
+        // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
+        // does not realize that
+        throw new Error('Unable to create the implementation list: no section element found');
+    }
 
     const ol = addChild(section, 'ol');
 
@@ -77,7 +83,13 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
         const suffix: string = consolidated ? '' : '-detailed'
 
         const dom: DocumentFragment = JSDOM.fragment(`<section id="${id}"><h2>${title}</h2></section>`);
-        const top_section: HTMLElement = dom.querySelector('section');
+        const top_section: HTMLElement|null = dom.querySelector('section');
+
+        if (top_section === null) {
+            // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
+            // does not realize that
+            throw new Error('Unable to create the implementation report: no section element found in result tables');
+        }
 
         // Going through the implementation table entries; 
         // Each table corresponds to one 'category' (Core Media Types, Internationalizations, Fixed Layouts, etc.)
@@ -178,7 +190,13 @@ function createTestData(data: ReportData): string {
     };
     
     const dom: DocumentFragment = JSDOM.fragment('<section id="sec-test-tables"><h2>Description of the Tests</h2></section>');
-    const full_section: HTMLElement = dom.querySelector('section');
+    const full_section: HTMLElement|null = dom.querySelector('section');
+
+    if (full_section === null) {
+        // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
+        // does not realize that
+        throw new Error('Unable to create the test data section: no section element found');
+    }
 
     // Add the visibility switch button
     addVisibilityButton(full_section);
@@ -256,7 +274,13 @@ function createTestData(data: ReportData): string {
 function createCreatorList(data: ReportData): string {
     const creators: Set<string> = new Set<string>();
     const dom: DocumentFragment = JSDOM.fragment('<ul></ul>');
-    const ul: HTMLElement = dom.querySelector('ul');
+    const ul: HTMLElement|null = dom.querySelector('ul');
+
+    if (ul === null) {
+        // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
+        // does not realize that
+        throw new Error('Unable to create the creator list: no ul element found');
+    }
 
     // Collect all creators into a set (to avoid duplicates)
     // Some (fake) creators should not be added; these are tests that test the id values...

@@ -5,8 +5,8 @@
  *  @packageDocumentation
  */
 
-import { TestData, Constants } from './types';
-import { stringComparison }    from './data';
+import { TestData, Constants } from './types.ts';
+import { stringComparison }    from './data.ts';
 
 /* ------------------------------------------------------------------------------------------------------ */
 /*                        Subset of OPDS as used here in Typescript types                                 */
