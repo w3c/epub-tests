@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 /**
  * Module to extract and gather information necessary to produce the right reports and an overview page for test cases.
  * 
@@ -9,9 +10,9 @@
  * 
  */
 
-import { promises as fs } from 'fs';
-import * as fs_old_school from 'fs';
-import * as xml2js        from 'xml2js';
+import { promises as fs } from 'node:fs';
+import * as fs_old_school from 'node:fs';
+import * as xml2js        from 'npm:xml2js';
 
 import { 
     TestData, 
@@ -21,7 +22,7 @@ import {
     Implementer, ReportData, 
     ReqType, 
     Constants, 
-} from './types';
+} from './types.ts';
 
 
 /** 
@@ -47,10 +48,11 @@ export async function get_opf_file(dirname: string): Promise<string> {
     let container_xml: string;
     try {
         container_xml = await fs.readFile(`${dirname}/${Constants.CONTAINER_FILE}`, 'utf-8');
-    } catch (error) {
+    } catch (_error) {
         console.warn(`Container.xml file could not be accessed in Directory ${dirname}`);
         throw (`"container.xml" file could not be accessed in directory "${dirname}"`)
     }
+    // deno-lint-ignore no-explicit-any
     const container_js: any = await xml2js.parseStringPromise(container_xml, {
         trim          : true,
         normalizeTags : true,
@@ -58,7 +60,7 @@ export async function get_opf_file(dirname: string): Promise<string> {
     });
     try {
         return container_js.container.rootfiles[0].rootfile[0]["$"]["full-path"];
-    } catch (error) {
+    } catch (_error) {
         throw (`OPF file name could not be accessed in the "container.xml" file of "${dirname}"`)
     }
 }
@@ -74,8 +76,8 @@ async function get_opf(dirname: string): Promise<string> {
     const fname: string = await get_opf_file(dirname);
     try {
         return await fs.readFile(`${dirname}/${fname}`,'utf-8');
-    } catch (error) {
-        throw (`OPF file could not be accessed in directory "${dirname}"`)
+    } catch (_error) {
+        throw (`OPF file could not be accessed in directory "${dirname}/${fname}"`)
     }
 }
 
@@ -112,14 +114,19 @@ export function isFile(name: string): boolean {
  * @returns lists of files in the directory
  */
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function getListDir(dir_name: string, filter_name: (name: string) => boolean = (name: string) => true): Promise<string[]> {
+export async function getListDir(dir_name: string, filter_name: (name: string) => boolean = (_name: string) => true): Promise<string[]> {
     // The filter works on the full path, hence this extra layer
     const file_name_filter = (name: string): boolean => {
         // The 'xx-' prefix are used for the template tests
         return name.startsWith('xx-') === false && filter_name(`${dir_name}/${name}`);
     }
-    const file_names = await fs.readdir(dir_name);
-    return file_names.filter(file_name_filter)
+    try {
+        const file_names = await fs.readdir(dir_name);
+        return file_names.filter(file_name_filter)
+    } catch (error) {
+        console.warn(`Directory "${dir_name}" could not be accessed ()`);
+        throw (`Directory "${dir_name}" could not be accessed (${error})`);
+    }
 }
 
 
@@ -276,7 +283,7 @@ function create_implementation_data(metadata: TestData[], implementations: Imple
             } else {
                 return undefined
             }
-        });
+        }).filter((entry) => entry !== undefined);
         return retval;
     })
 }
@@ -327,7 +334,7 @@ function createImplementationTables(implementation_data: ImplementationData[]): 
 export async function getTestData(dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
     // eslint-disable-next-line max-lines-per-function
-    const getSingleTestData = async (file_name: string): Promise<TestData> => {
+    const getSingleTestData = async (file_name: string): Promise<TestData|undefined> => {
         // Note the heavy use of "any" in the function; this is related to the fact that
         // the xmljs package returns a pretty "unpredictable" object...
         // As a consequence, this function bypasses most of TypeScript's checks. Alas!
@@ -412,26 +419,33 @@ export async function getTestData(dir_name: string): Promise<TestData[]> {
         });
         const test_metadata = package_js.package.metadata[0];
         const modification_date = getSingleMetaValue("dcterms:modified", test_metadata);
-        
-        return {
-            identifier  : get_string_value("dc:identifier", file_name.split('/').pop(), test_metadata),
-            title       : getFinalTitle(test_metadata),
-            description : get_string_value("dc:description", "(No description)", test_metadata),
-            coverage    : get_string_value("dc:coverage", "(Uncategorized)", test_metadata),
-            version     : getReferenceVersion(test_metadata),
-            creators    : getArrayOfStringValues("dc:creator", "(Unknown)", test_metadata),
-            required    : getRequired(test_metadata),
-            modified    : modification_date === undefined ? "(Unknown)" : modification_date._,
-            references  : getArrayOfMetaValues("dcterms:isReferencedBy", test_metadata).map((entry:any): string => entry._),
+        const path: string[] = file_name.split('/');
+        const identifier = path[path.length - 1];
+
+        if (file_name !== undefined) {
+            return {
+                identifier  : get_string_value("dc:identifier", identifier, test_metadata),
+                title       : getFinalTitle(test_metadata),
+                description : get_string_value("dc:description", "(No description)", test_metadata),
+                coverage    : get_string_value("dc:coverage", "(Uncategorized)", test_metadata),
+                version     : getReferenceVersion(test_metadata),
+                creators    : getArrayOfStringValues("dc:creator", "(Unknown)", test_metadata),
+                required    : getRequired(test_metadata),
+                modified    : modification_date === undefined ? "(Unknown)" : modification_date._,
+                references  : getArrayOfMetaValues("dcterms:isReferencedBy", test_metadata).map((entry:any): string => entry._),
+            }
+        } else {
+            console.warn(`File "${file_name}" does not contain a valid package file`);
+            return undefined;
         }
     }
 
     // Get the test descriptions
     const test_list = await getListDir(dir_name, isDirectory);
-    const test_data_promises: Promise<TestData>[] = test_list.map((name: string) => getSingleTestData(`${dir_name}/${name}`));
+    const test_data_promises: Promise<TestData|undefined>[] = test_list.map((name: string) => getSingleTestData(`${dir_name}/${name}`));
     
     // Use the 'Promise.all' trick to get to all the data in one async step rather than going through a cycle
-    const test_data: TestData[] = await Promise.all(test_data_promises);
+    const test_data: (TestData|undefined)[] = await Promise.all(test_data_promises);
     return test_data.filter((entry) => entry !== undefined);
 }
 
@@ -502,7 +516,7 @@ export async function getReportData(test_data: TestData[], reports: string): Pro
  * @param report the full report, as generated by earlier calls
  */
 export function getTemplate(report: ReportData): Raw_ImplementationReport {
-    const test_list: {[index: string]: boolean } = {};
+    const test_list: {[index: string]: boolean|null } = {};
     const keys: string[] = [];
 
     // Get the keys first in order to sort them
