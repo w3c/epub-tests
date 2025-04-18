@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-namespace
 /* eslint-disable no-multi-spaces */
 /* eslint-disable @typescript-eslint/no-namespace */
 
@@ -26,18 +27,18 @@
  */
 export namespace Constants {
     /** Location for the tests themselves */
-    export const TESTS_DIR: string = 'tests';
+    export const TESTS_DIR: string = '../../tests';
 
-    export const TESTS_DIR_DEBUG: string = 'local_tests';
+    export const TESTS_DIR_DEBUG: string = '../../local_tests';
 
     /** Location for the implementation reports */
-    export const TEST_RESULTS_DIR: string = 'reports';
+    export const TEST_RESULTS_DIR: string = '../../reports';
 
     /** Location for the final report */
-    export const DOCS_DIR: string = 'docs/';
+    export const DOCS_DIR: string = '../../';
 
     /** Relative location for the final OPDS data */
-    export const OPDS_DIR: string = 'docs/opds';
+    export const OPDS_DIR: string = '../../opds';
 
     export const OPDS_DIR_URL: string = 'https://w3c.github.io/epub-tests/opds';
 
@@ -63,19 +64,19 @@ export namespace Constants {
     export const CONTAINER_FILE: string = 'META-INF/container.xml';
 
     /** Location for the HTML fragment on implementation lists */
-    export const IMPL_FRAGMENT: string = `${DOCS_DIR}/fragments/implementations.html`;
+    export const IMPL_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/implementations.html`;
 
     /** Location for the HTML fragment on the consolidated implementation results */
-    export const CONSOLIDATED_RESULT_FRAGMENT: string = `${DOCS_DIR}/fragments/consolidated_results.html`;
+    export const CONSOLIDATED_RESULT_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/consolidated_results.html`;
 
     /** Location for the HTML fragment on the detailed implementation results */
-    export const COMPLETE_RESULT_FRAGMENT: string = `${DOCS_DIR}/fragments/complete_results.html`;
+    export const COMPLETE_RESULT_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/complete_results.html`;
 
     /** Location for the HTML fragment on test metadata */
-    export const TEST_FRAGMENT: string = `${DOCS_DIR}/fragments/tests.html`;
+    export const TEST_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/tests.html`;
 
     /** Location for the HTML fragment on test creators */
-    export const CREATORS_FRAGMENT: string = `${DOCS_DIR}/fragments/creators.html`;
+    export const CREATORS_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/creators.html`;
 
     /** (Relative) File name of the test results */
     export const DOC_TEST_RESULTS: string = 'results.html';
@@ -111,7 +112,7 @@ export namespace Constants {
     export const CLASS_CREATOR_LIST: string = "creator_list";
 
     /** Config file location */
-    export const CONFIG_FILE: string = `${DOCS_DIR}/config.json`;
+    export const CONFIG_FILE: string = `../config.json`;
 
     export const EPUB_MEDIA_TYPE: string = 'application/epub+zip';
 
@@ -244,7 +245,7 @@ export interface ImplementationReport extends Implementer {
  */
 export interface Raw_ImplementationReport extends Implementer {
     tests: {
-        [index:string]: (boolean|string)
+        [index:string]: (boolean|null)
     }
 }
 

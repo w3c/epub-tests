@@ -1,12 +1,12 @@
-import { argv } from "process";
-import * as fs_old_school from "fs";
+import { argv }           from "node:process";
+import * as fs_old_school from "node:fs";
 const fs = fs_old_school.promises;
 
-import { TestData, ReportData, Raw_ImplementationReport, Constants, HTMLFragments } from './lib/types';
-import { getTestData, getReportData, getTemplate }                                  from "./lib/data";
-import { createReport }                                                             from "./lib/html";
-import { applyConfigurationOptions }                                                from './lib/config';
-import { OPDS, createOPDS }                                                         from './lib/opds'
+import { TestData, ReportData, Raw_ImplementationReport, Constants, HTMLFragments } from './lib/types.ts';
+import { getTestData, getReportData, getTemplate }                                  from "./lib/data.ts";
+import { createReport }                                                             from "./lib/html.ts";
+import { applyConfigurationOptions }                                                from './lib/config.ts';
+import { OPDS, createOPDS }                                                         from './lib/opds.ts'
 
 
 /**

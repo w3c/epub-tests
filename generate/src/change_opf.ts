@@ -13,10 +13,10 @@
 import * as fs_old_school from "fs";
 const fs = fs_old_school.promises;
 
-import {getListDir, isDirectory, get_opf_file} from './lib/data';
-import { Constants } from './lib/types';
-import { createEPUB } from './lib/epub';
-import { JSDOM } from 'jsdom';
+import {getListDir, isDirectory, get_opf_file} from './lib/data.ts';
+import { Constants }                           from './lib/types.ts';
+import { createEPUB }                          from './lib/epub.ts';
+import { JSDOM }                               from 'npm:jsdom';
 
 
 /**

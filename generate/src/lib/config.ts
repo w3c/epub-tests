@@ -4,8 +4,8 @@
  *  @packageDocumentation
  */
 
-import { ImplementationTable, Constants, ReportData } from './types';
-import * as fs                                        from 'fs';
+import { ImplementationTable, Constants, ReportData } from './types.ts';
+import * as fs                                        from 'node:fs';
 
 /**
  * External configuration type
