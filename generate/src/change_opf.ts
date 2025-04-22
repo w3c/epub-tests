@@ -44,7 +44,7 @@ function title_to_id(current: string) :string {
 
     // see if there is alternate title
     const metas = document.getElementsByTagName('meta');
-    let alternate_element: Element;
+    let alternate_element: Element|undefined = undefined;
     for (let i = 0; i < metas.length; i++) {
         const meta = metas[i];
         if (meta.getAttribute('property') === 'dcterms:alternative') {

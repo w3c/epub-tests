@@ -1,13 +1,14 @@
 // deno-lint-ignore-file no-namespace
 /* eslint-disable no-multi-spaces */
 /* eslint-disable @typescript-eslint/no-namespace */
-
 /**
  * Constants and types used in the EPUB test suite presentation.
  * 
+ * ---
+ * 
  * Note: the term "consolidation" is used, throughout this package, for the following situation. 
- * Some implementations may come in different variants: i.e., the same name (typically designating the core engine) but a separate versions ("variants")
- * for different environments, typically iOS, Android, or Web.
+ * Some implementations may come in different variants: i.e., the same name (typically designating the core engine) 
+ * but a separate versions ("variants") for different environments, typically iOS, Android, or Web.
  * Per W3C these are not considered to be independent implementations and, therefore, 
  * they should be considered as one implementation as far as the
  * formal CR report is concerned. On the other hand, there is value to keep 
@@ -20,6 +21,7 @@
  *  
  * @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
  * @packageDocumentation
+ * 
  */
 
 /**
@@ -84,7 +86,10 @@ export namespace Constants {
     /** (Relative) File name of the test descriptions */
     export const DOC_TEST_DESCRIPTIONS: string = 'index.html';
 
-    /** List of test ID-s whose creators should not be considered for display */
+    /** 
+     * List of test ID-s whose creators should not be considered for display; these appear in some I18N tests
+     * that are used to test the bidi of the creator strings themselves.
+     */
     export const IGNORE_CREATOR_ID: string[] = ['pkg-creator-order', 'pkg-dir_creator-rtl'];
 
     /** List of creator names that should not be considered for display */
@@ -177,9 +182,11 @@ export interface TestData {
 
 
 /**
- * (Internal) values for the test scores
+ * (Internal) values for the test scores.
+ * 
+ * (Note the duality of enum and a namespace, which makes it possible to use the term in a more confortable way
+ * in the code, while keeping the enum values as strings. This is a bit of a hack, but it works well.)
  */
-// eslint-disable-next-line no-shadow
 export enum Score {
     FAIL           = "fail",
     PASS           = "pass",
@@ -188,6 +195,7 @@ export enum Score {
 }
 
 export namespace Score {
+    /** Function used for the final rendering of the data.  */
     export function get_class(s: Score): string {
         switch (s) {
         case Score.FAIL: 
@@ -202,6 +210,7 @@ export namespace Score {
         }
     }
 
+    /** Return the string value of an enum. */
     export function get_td(s: Score): string {
         return s as string;
     }
@@ -209,25 +218,25 @@ export namespace Score {
 
 
 /**
- * Data about a single implementer: the data that is necessary to the final 
- * report about each implementer
+ * Data about a single implementer: it is necessary to the final 
+ * report about each implementer.
  */
 export interface Implementer {
-    /** Name of the implementation, to appear in the final report */
+    /** Name of the implementation, to appear in the final report. */
     name     : string;
 
-    /** Name of a variant, to appear in the final report */
+    /** Name of a variant (if applicable), to appear in the final report. */
     variant ?: string;
 
-    /** If present, the name becomes a hyperlink to this URL */
+    /** If present, the name becomes a hyperlink to this URL. */
     ref     ?: string
 }
 
 
 /**
- * The report of each implementer: beyond the data about the implementation itself it 
+ * The report of each implementer: beyond the (meta)data about the implementation itself it 
  * includes an object listing tests results, one for each test that has been run. 
- * The index is the ID of the test.
+ * The index is the ID of a test.
  */
 export interface ImplementationReport extends Implementer {
     tests: {
@@ -245,7 +254,7 @@ export interface ImplementationReport extends Implementer {
  */
 export interface Raw_ImplementationReport extends Implementer {
     tests: {
-        [index:string]: (boolean|null)
+        [index:string]: (boolean|string|null)
     }
 }
 
@@ -264,7 +273,8 @@ export interface ImplementationData extends TestData {
 
 
 /**
- * A single set ("table") of all implementation data, grouped by a "section" (i.e., the "coverage" value in the tests)
+ * A single set (essentially a table rows) of all implementation data for a specific "section" 
+ * (i.e., the "coverage" value in the tests)
  */
 export interface ImplementationTable {
     header          : string;
@@ -273,7 +283,10 @@ export interface ImplementationTable {
 
 
 /**
- * Data needed for the display of the test results
+ * Complete data needed for the display of the test results. It is the result of combining the test
+ * results, the metadata about the implementations, and the metadata about the tests.
+ * 
+ * Note (again) that the order for implementers the order of extracted implementations.
  */
 export interface ReportData {
     tables                    : ImplementationTable[];

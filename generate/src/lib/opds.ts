@@ -1,7 +1,7 @@
 /**
- * Generation of the OPDS file for the full set of tests.
+ * Generation of the [OPDS](https://specs.opds.io/opds-1.2) file for the full set of tests.
  * 
- * 
+ *  @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
  *  @packageDocumentation
  */
 
@@ -9,10 +9,9 @@ import { TestData, Constants } from './types.ts';
 import { stringComparison }    from './data.ts';
 
 /* ------------------------------------------------------------------------------------------------------ */
-/*                        Subset of OPDS as used here in Typescript types                                 */
+/*                     Subset of OPDS specification used here in Typescript types                         */
 /* ------------------------------------------------------------------------------------------------------ */
-
-
+ 
 interface PublicationMetadata {
     "@type": string;
     identifier: string;
@@ -44,6 +43,10 @@ interface Publication {
     images: ImageLink[];
 }
 
+/**
+ * The OPDS specification's translation into a Typescript types. More exactly, the part of the full OPDS
+ * specification that is used for the EPUB test suite.
+ */
 export interface OPDS {
     metadata: {
         title: string;
@@ -53,7 +56,7 @@ export interface OPDS {
 }
 
 /**
- * Generate the OPDS file
+ * Generate the OPDS file. The entries are sorted by the modification date of the test cases.
  * 
  * @param tests All the test data, as extracted from the corresponding package documents
  * @returns 
@@ -70,6 +73,9 @@ export function createOPDS(tests: TestData[]): OPDS {
         type : 'image/svg',
     }]
 
+    /* Convert each test data into the formalism used by OPDS; the results are sorted
+       with the tests' modification dates as keys
+     */
     const publications = tests.map((test: TestData): Publication => {
         const links: PublicationLink[] = [{
             type : `${Constants.EPUB_MEDIA_TYPE}`,
@@ -98,6 +104,7 @@ export function createOPDS(tests: TestData[]): OPDS {
         return time_comparison !== 0 ? -1 * time_comparison : stringComparison(a.metadata.identifier, b.metadata.identifier);
     })
 
+    /* Add the OPDS metadata to the list of all the publications. */
     return {
         metadata : {
             title : 'W3C EPUB 3.4 Test Suite',

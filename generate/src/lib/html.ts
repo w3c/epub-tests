@@ -1,7 +1,7 @@
 /**
  * Generation of the HTML Fragments for the EPUB 3 Testing Reports.
  * 
-  * 
+ *  @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software) 
  *  @packageDocumentation
  */
 
@@ -38,7 +38,9 @@ const addChild = (parent: HTMLElement, element: string, content: string|undefine
 /* ------------------------------------------------------------------------------------------------------ */
 
 /**
- * Create the list of implementation: a simple set of numbered items, with the name and (possible) reference to the implementation site.
+ * Create the list of implementation: a simple set of numbered items, with the name 
+ * and (possible) reference to the implementation's web site.
+ * 
  * @param impl 
  * @returns results in XML format
  */
@@ -70,24 +72,26 @@ function createImplementationList(impl: Implementer[]): string {
 /**
  * Create a series of sections with implementation tables; this includes separating the block of
  * "consolidated" data from the "variant" versions.
- * @returns Serialized XML
+ * @returns Serialized XML for an HTML fragment
  */
 // eslint-disable-next-line max-lines-per-function
 function createImplementationReports(data: ReportData): {consolidated_results: string, complete_results: string} {
     // Two tables must be created: the consolidated and detailed results. The function below is 
-    // invoked twice to get these two.
+    // invoked twice to get these two separately.
     const createImplReport = (consolidated: boolean): string => {
         // The whole content is enclosed in a large, top level section
         const title = consolidated ? 'Consolidated Implementation Results' : 'Detailed Implementation Results';
         const id = consolidated ? 'sec-consolidated-report-tables' : 'sec-detailed-report-tables';
-        const suffix: string = consolidated ? '' : '-detailed'
+        // This is used when generating a table row id, to distinguish between the two variants.
+        const suffix: string = consolidated ? '' : '-detailed';
 
+        // This is the top level for the HTML fragment to be returned (serialized) at the end.
         const dom: DocumentFragment = JSDOM.fragment(`<section id="${id}"><h2>${title}</h2></section>`);
         const top_section: HTMLElement|null = dom.querySelector('section');
 
         if (top_section === null) {
-            // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
-            // does not realize that
+            // In fact, this never happens, because we run the query on the string itself so we know the
+            // result. But a TS compiler does not realize that and we want to keep it happy.
             throw new Error('Unable to create the implementation report: no section element found in result tables');
         }
 
@@ -176,8 +180,9 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
 
 /**
  * Create the test (meta) data table.
+ * 
  * @param data 
- * @returns Serialized XML
+ * @returns Serialized XML for an HTML fragment
  */
 function createTestData(data: ReportData): string {
     // Add the button to switch the visibility of should/may tests on and off
@@ -194,7 +199,7 @@ function createTestData(data: ReportData): string {
 
     if (full_section === null) {
         // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
-        // does not realize that
+        // does not realize that and we want to keep it happy.
         throw new Error('Unable to create the test data section: no section element found');
     }
 
@@ -278,7 +283,7 @@ function createCreatorList(data: ReportData): string {
 
     if (ul === null) {
         // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
-        // does not realize that
+        // does not realize that and we want to keep it happy.s
         throw new Error('Unable to create the creator list: no ul element found');
     }
 
@@ -311,15 +316,16 @@ function createCreatorList(data: ReportData): string {
 /* ------------------------------------------------------------------------------------------------------ */
 
 /**
- * Create four HTML fragments, to be stored in separate files. Each is in a `<section>` with a subtitle, except for the last one
- * that is simply an HTML `<ul>` list. These fragments can be included in the final report using the `data-include` feature of respec:
+ * Create four HTML fragments, to be stored, eventually, in separate files. 
+ * Each is in a `<section>` with a subtitle, except for the last one that is simply an HTML `<ul>` list. 
+ * These fragments can be included in the final report using the `data-include` feature of respec:
  * 
- * 1. A bulleted list of available implementations, linked (if available) to the Web Site of the implementation itself
+ * 1. A bulleted list of available implementations, linked (if available) to the Web site of the implementation itself
  * 2. A series of subsections, each with its own table; each table row is a reference to the test and a series of cells (one per implementation) whether the test passes or not. This structure comes twice: one for consolidated results, and one for the original ones
  * 3. A series of subsections, each with its own table; each table row contains basic metadata and cross references to the tests.
  * 4. A list of test creators
  * 
- * The return for each of those is in the form of a string containing the XHTML fragment
+ * The return for each of those is in the form of a string containing the XHTML fragment.
  * 
  */
 export function createReport(data: ReportData): HTMLFragments {

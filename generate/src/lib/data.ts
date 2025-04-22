@@ -107,13 +107,13 @@ export function isFile(name: string): boolean {
 /**
  * Lists of a directory content.
  * 
- * (Note: by default this returns all the file names. Depending on the final configuration some filters may have to be added.)
+ * (Note: by default this returns all the test file names. 
+ * Depending on the final configuration some filters may have to be added.)
  * 
  * @param dir_name name of the directory
  * @param filter_name a function to filter the retrieved list (e.g., no directories)
  * @returns lists of files in the directory
  */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function getListDir(dir_name: string, filter_name: (name: string) => boolean = (_name: string) => true): Promise<string[]> {
     // The filter works on the full path, hence this extra layer
     const file_name_filter = (name: string): boolean => {
@@ -137,13 +137,13 @@ export async function getListDir(dir_name: string, filter_name: (name: string) =
  */
 async function getAnImplementationReport(fname: string): Promise<ImplementationReport> {
     // Just to make the code more readable...
-    type raw_index_pair = [string, string|boolean];
+    type raw_index_pair      = [string, string|boolean|null];
     type internal_index_pair = [string, Score];
-    interface raw_map {[index: string]: (boolean|string)}
+    interface raw_map {[index: string]: (boolean|string|null)}
     interface internal_map {[index: string]: Score}
    
     // the boolean|string in the JSON file is transformed into a proper Score
-    const transform = (raw_score: (boolean|string)): Score => {
+    const transform = (raw_score: (boolean|string|null)): Score => {
         if (typeof(raw_score) === 'boolean') {
             return (raw_score) ? Score.PASS : Score.FAIL;
         } else if (raw_score === null) {
@@ -152,6 +152,7 @@ async function getAnImplementationReport(fname: string): Promise<ImplementationR
             return (raw_score.toLowerCase() === "n/a")? Score.NOT_APPLICABLE : Score.UNTESTED;
         }
     };
+
     // Transform al the tests into proper Scores; just get all the entries transformed
     const transform_tests = (raw: raw_map): internal_map => {
         return Object.entries(raw)

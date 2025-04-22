@@ -13,3 +13,5 @@ The [test reports](https://w3c.github.io/epub-tests/) describe all the tests, in
 [how to contribute](https://w3c.github.io/epub-tests/contributing).
 
 The current, tested EPUB 3 version is [EPUB 3.4](https://www.w3.org/TR/epub-overview-34). Because this version is backward compatible with earlier versions, most of these tests are also valid for earlier versions. Each test is assigned a `version` value, denoting the EPUB revision where the test has been added in as shown on the [test table](https://w3c.github.io/epub-tests/)
+
+Note that the current setup is based on release 3.4 of the EPUB 3 specification. See the separate [NewVersion.md](generate/NewVersion.md) file for the steps to follow to update the repository for a new version of the EPUB 3 specification.

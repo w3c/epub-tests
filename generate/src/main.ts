@@ -1,3 +1,33 @@
+/**
+ * Entry point for the generation of the EPUB 3 test descriptions and test results. Running this script will
+ * generate a number of HTML fragments containing sections with tables containing the essential metadata for each test,
+ * the test results showing the implementation results for each tests, and it will also create an OPDS file that
+ * may help to download and execute the tests.
+ * 
+ * The HTML fragments, to be stored, eventually, in separate files, in the `/generate/fragments` directory of the repository.
+ * These fragments are included in the final report using the `data-include` feature of respec as follows:
+ * 
+ * - the `/index.html` file is the main entry point for the report, and it includes the description of each test with pointers to the specifications themselves, as well as a list of contributors;
+ * - the `/results.html` file contains the results of the tests, listing the implementation results for each test and for each reported implementation.
+ * 
+ * The tests themselves are a collection of EPUB 3 books, each instance testing a specific feature of the EPUB 3 specification.
+ * They are present both as EPUB 3 books, i.e., as zipped files, as well as deflated EPUB contents, i.e., as directories; all tests are available in the `/tests` 
+ * directory of the current working repository. 
+ * 
+ * The implementation results are stored in the `/reports` directory. Each implementation 
+ * report is stored in a separate JSON file, containing some metadata about the implementation, and the results of the tests. 
+ * 
+ * The `/generate/src/lib/types.ts` file contains, as part of the `Constants` namespace, the file names and directories for tests, final place for fragments, etc.
+ * If the repository is reorganized or cloned, that file should be updated to reflect the new structure. 
+ * 
+ * Note that the current setup is based on release 3.4 of the EPUB 3 specification. See the separate `/generate/NewVersion.md` file for the steps to follow to
+ * update the repository for a new version of the EPUB 3 specification.
+ * 
+ * @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
+ */
+
+
+
 import { argv }           from "node:process";
 import * as fs_old_school from "node:fs";
 const fs = fs_old_school.promises;

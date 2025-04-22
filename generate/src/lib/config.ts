@@ -1,6 +1,7 @@
 /**
- * Handling configuration data
+ * Handling configuration data.
  * 
+ *  @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software) 
  *  @packageDocumentation
  */
 
@@ -85,6 +86,7 @@ function sortImplementationTable(config: Config, table: ImplementationTable[]): 
 
     return [...final_mentioned, ...final_not_mentioned];
 }
+
 
 /**
  * Apply the configuration actions on the report before it is used to generate HTML files.

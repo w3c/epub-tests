@@ -1,14 +1,16 @@
 /**
  * Module to create an epub instance based on the deflated folder content with the same name.
- * Used by the auxiliary scripts to generate the EPUB files for the tests.
+ * Used by the auxiliary scripts to generate the EPUB files for the tests, not by the main
+ * generation process.
  * 
+ * @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software) 
  * @packageDocumentation
  */
 
 
 import { promises as fs } from 'node:fs';
 import * as path          from 'node:path';
-import * as JSZip         from 'npm:jszip';
+import JSZip              from "npm:jszip";
 import { Constants }      from './types.ts';
 import { Buffer }         from 'node:buffer';
 
