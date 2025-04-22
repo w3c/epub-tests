@@ -71,6 +71,7 @@
 				border-bottom:1px solid #bbb;
 				padding:.2em 1em;
 			}
+
 			table.zebra td {
 				border-bottom:1px solid #ddd;
 				padding:.2em 1em;
@@ -87,32 +88,36 @@
 
 			body.darkmode table.zebra tr:nth-child(even) td a:link,
 			body.darkmode table.zebra tr:nth-child(even) td a:visited
-			 {
+			{
 				color: darkblue;
 			}
-
 
 			table.sortable > thead > tr > th {
 				cursor: pointer;
 			}
+
 			table.sortable > thead > tr > th[data-nonsortable='true']{
 				cursor: default;
 			}
+
 			table.sortable > thead > tr > th.order-field{
 				padding-right: 0px;
 			} 
+
 			table.sortable > thead > tr > th.order-asc:after{
 				display: inline-block;
 				text-align: center;
 				width: 15px;
 				content: '\25B2';
 			}
+
 			table.sortable > thead > tr > th.order-desc:after{
 				display: inline-block;
 				text-align: center;
 				width: 15px;
 				content: '\25BC';
 			}
+			
 			td {
 				hyphens: auto !important;
 				-webkit-hyphens: auto !important;
@@ -231,7 +236,7 @@
 			<ol>
 				<li>The identification of each test, linked to the unzipped test contents in the GitHub repository.</li>
 				<li>Short description.</li>
-        <li>Conformance flag (i.e., <code>must</code>, <code>should</code>, or <code>may</code>).</li>
+        		<li>Conformance flag (i.e., <code>must</code>, <code>should</code>, or <code>may</code>).</li>
 				<li>The date of the last modification.</li>
 				<li>Reference(s) to the corresponding normative statements or sections in the EPUB 3 specification(s).</li>
 				<li>Reference to the (consolidated) implementation status of the test in the separate <a href="results">implementation report</a>.</li>
@@ -249,13 +254,13 @@
 			</p>
 		</section>
 
-		<section data-include="fragments/tests.html" data-include-replace="true"></section>
+		<section data-include="generate/fragments/tests.html" data-include-replace="true"></section>
 		<section class="appendix" id="contributors">
 			<h2>Acknowledgements</h2>
 
 			<p>The following experts contributed to the test suite:</p>
 
-			<ul data-include="fragments/creators.html" data-include-replace="true"></ul>	
+			<ul data-include="generate/fragments/creators.html" data-include-replace="true"></ul>	
 		</section>
 
 		<script type="text/javascript">

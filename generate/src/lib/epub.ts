@@ -6,10 +6,11 @@
  */
 
 
-import { promises as fs } from 'fs';
-import * as path          from "path";
-import * as JSZip         from 'jszip';
-import { Constants }      from './types';
+import { promises as fs } from 'node:fs';
+import * as path          from 'node:path';
+import * as JSZip         from 'npm:jszip';
+import { Constants }      from './types.ts';
+import { Buffer }         from 'node:buffer';
 
 /** 
  * These files should be ignored when reading the content of the EPUB testing directory 

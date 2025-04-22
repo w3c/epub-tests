@@ -1,37 +1,50 @@
-name: Automatic Report generation
+# Relies on the standard GitHub action setup to deploy to GitHub Pages
+# The really specific details are in the steps that generates the index files
+# (and the deployment of deno as an underling tool).
+name: Publish to Github Pages
 on:
   push:
     branches: [main]
-    paths: ["reports/**", "tests/**", "src/**", "docs/drafts/*.html", "docs/drafts/config.json"]
+    paths: ["reports/**", "tests/**", "src/**", "docs/*.html", "docs/contributing.md", "docs/config.json"]
+
+  # Allows workflow to be triggered manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  build:
-    name: Generate Reports using NodeJS
-
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [22.x]
-
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout the repository
+        uses: actions/checkout/@v4
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run generate
-      - name: setup git config
+          deno-version: v2.x
+      - name: Generate the index files
+        # Details depend on where the script is located
         run: |
-          git config user.name "Report generation bot"
-          git config user.email "<>"
-      - name: commit the changes
-        run: |
-          git add docs/*.html
-          git add docs/fragments/*.html
-          git add reports/xx-*.json
-          git add docs/opds/*.json
-          git commit -am "Automated report generation"
-          git push origin main
-
-
+          (cd generate/src; deno run -A main.ts; rm deno.lock)
+      - name: Setup Github Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
