@@ -5,8 +5,8 @@ EPUB evolves. This repository was created while [EPUB 3.3](https://www.w3.org/T
 When upgrading from EPUB 3.n to EPUB 3.n+1, the following changes on the repository must be done:
 
 - Modify the `/Readme.md` file, changing the corresponding revision.
-- Modify the first paragraph of the introduction section of `/index.html` by updating the revision number and related URL-s.
+- Modify the first paragraph in the introduction section of `/index.html` by updating the revision number and related URL-s.
 - Modify the abstract section of `/results.html` by updating the revision number and related URL-s.
-- Modify the configuration file in `/generate/config.json` by expanding/updating the URL-s in the `"document_mappings"` array. The most important entries are the last two that are used to refer to the latest editors' drafts from the [test table](https://w3c.github.io/epub-tests/).
+- Modify the configuration file in `/generate/config.json` by expanding and/or updating the URL-s in the `"document_mappings"` array. The most important entries are the last two, used to refer to the latest editors' drafts from the [test table](https://w3c.github.io/epub-tests/).
 - Modify the metadata in the `/tests/xx-epub-template/EPUB/package.opf` and `/tests/xx-fixed-layout-template/EPUB/package.opf` files: the `<meta refines="#coverage" property="schema:version">` entry should refer to the latest revision number.
 - (Possibly update this document…)

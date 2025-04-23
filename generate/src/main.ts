@@ -17,10 +17,14 @@
  * The implementation results are stored in the `/reports` directory. Each implementation 
  * report is stored in a separate JSON file, containing some metadata about the implementation, and the results of the tests. 
  * 
- * The `/generate/src/lib/types.ts` file contains, as part of the `Constants` namespace, the file names and directories for tests, final place for fragments, etc.
+ * Finally, the script also creates a template implementation result file (`/reports/xx-template.json`) that can be used to create new implementation reports.
+ * 
+ * ### Changing the configuration of the script
+ * 
+ * The `/generate/src/lib/types.ts` file contains, as part of the `Constants` namespace, the file and directories names for tests, final place for fragments, etc.
  * If the repository is reorganized or cloned, that file should be updated to reflect the new structure. 
  * 
- * Note that the current setup is based on release 3.4 of the EPUB 3 specification. See the separate `/generate/NewVersion.md` file for the steps to follow to
+ * The current setup is based on release 3.4 of the EPUB 3 specification. See the separate `/generate/NewVersion.md` file for the steps to follow to
  * update the repository for a new version of the EPUB 3 specification.
  * 
  * @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
