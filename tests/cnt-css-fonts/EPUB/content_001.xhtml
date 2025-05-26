@@ -13,6 +13,11 @@
     }
 
     @font-face {
+      font-family: 'blow';
+      src: url(fonts/blow.ttf) format('truetype');
+    }
+
+    @font-face {
       font-family: 'Franky Toys';
       src: url(fonts/FrankyToys.otf) format('opentype');
     }
@@ -30,6 +35,10 @@
       font-family: 'Lobster';
     }
 
+    .font-x-truetype {
+      font-family: 'blow';
+    }
+
     .font-woff {
       font-family: 'Pacifico';
     }
@@ -44,6 +53,7 @@
     <ol>
       <li class="font-opentype">This should be an unusual OpenType font.</li>
       <li class="font-truetype">This should be an unusual TrueType font.</li>
+      <li class="font-x-truetype">This should be an unusual TrueType font (using legacy media type).</li>
       <li class="font-woff">This should be an unusual WOFF font.</li>
       <li class="font-woff2">This should be an unusual WOFF2 font.</li>
     </ol>
