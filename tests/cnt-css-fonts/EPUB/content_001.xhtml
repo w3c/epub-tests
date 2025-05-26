@@ -1,12 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
   <head>
-    <title>CSS support for font resources</title>
+    <title>CSS support for font resources with different media types</title>
     <style>
-    @font-face {
-      font-family: 'Macondo';
-      src: url(fonts/Macondo.woff2) format('woff2');
-    }
-
     @font-face {
       font-family: 'Lobster';
       src: url(fonts/Lobster.ttf) format('truetype');
@@ -18,8 +13,23 @@
     }
 
     @font-face {
+      font-family: 'Moche';
+      src: url(fonts/Moche-Regular.ttf) format('truetype');
+    }
+
+    @font-face {
       font-family: 'Franky Toys';
       src: url(fonts/FrankyToys.otf) format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Basteleur';
+      src: url(fonts/Basteleur-Bold.otf) format('opentype');
+    }
+
+    @font-face {
+      font-family: 'Ambidexter';
+      src: url(fonts/ambidexter.otf) format('opentype');
     }
 
     @font-face {
@@ -27,10 +37,16 @@
       src: url(fonts/Pacifico.woff) format('woff');
     }
 
-    .font-opentype {
-      font-family: 'Franky Toys';
+    @font-face {
+      font-family: 'Ribes';
+      src: url(fonts/Ribes-Black.woff) format('woff');
     }
 
+    @font-face {
+      font-family: 'Macondo';
+      src: url(fonts/Macondo.woff2) format('woff2');
+    }
+ 
     .font-truetype {
       font-family: 'Lobster';
     }
@@ -39,8 +55,28 @@
       font-family: 'blow';
     }
 
+    .font-sfnt-truetype {
+      font-family: 'Moche';
+    }
+
+    .font-opentype {
+      font-family: 'Franky Toys';
+    }
+
+    .font-vnd-opentype {
+      font-family: 'Basteleur';
+    }
+
+    .font-sfnt-opentype {
+      font-family: 'Ambidexter';
+    }
+
     .font-woff {
       font-family: 'Pacifico';
+    }
+
+    .font-app-woff {
+      font-family: 'Ribes';
     }
 
     .font-woff2 {
@@ -49,13 +85,17 @@
     </style>
   </head>
   <body>
-    <p>Test passes if all four list items below are rendered in unusual fonts.</p>
+    <p>Test passes if all list items below are rendered in unusual fonts.</p>
     <ol>
-      <li class="font-opentype">This should be an unusual OpenType font.</li>
-      <li class="font-truetype">This should be an unusual TrueType font.</li>
-      <li class="font-x-truetype">This should be an unusual TrueType font (using legacy media type).</li>
-      <li class="font-woff">This should be an unusual WOFF font.</li>
-      <li class="font-woff2">This should be an unusual WOFF2 font.</li>
+      <li><span class="font-truetype">This should be an unusual TrueType font, served as “<code>font/ttf</code>”.</span></li>
+      <li><span class="font-x-truetype">This should be an unusual TrueType font, served as “<code>application/x-font-ttf</code>”.</span></li>
+      <li><span class="font-sfnt-truetype">This should be an unusual TrueType font, served as “<code>application/font-sfnt</code>”.</span></li>
+      <li style="margin-top: 0.5%;"><span class="font-opentype">This should be an unusual OpenType font, served as “<code>font/otf</code>”.</span></li>
+      <li><span class="font-vnd-opentype">This should be an unusual OpenType font, served as “<code>application/vnd.ms-opentype</code>”.</span></li>
+      <li><span class="font-sfnt-opentype">This should be an unusual OpenType font, served as “<code>application/font-sfnt</code>”.</span></li>
+      <li style="margin-top: 0.5%;"><span class="font-woff">This should be an unusual WOFF font, served as “<code>font/woff</code>”.</span></li>
+      <li><span class="font-app-woff">This should be an unusual WOFF font, served as “<code>application/font-woff</code>”.</span></li>
+      <li style="margin-top: 0.5%;"><span class="font-woff2">This should be an unusual WOFF2 font, served as “<code>font/woff2</code>”.</span></li>
     </ol>
   </body>
 </html>
