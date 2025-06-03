@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>CSS support for font resource in OpenType format</title>
+    <style>
+
+    @font-face {
+      font-family: 'Franky Toys';
+      src: url(fonts/FrankyToys.otf) format('opentype');
+    }
+
+    .font-opentype {
+      font-family: 'Franky Toys';
+    }
+
+    </style>
+  </head>
+  <body>
+    <p>Test passes if the item below is rendered in unusual font.</p>
+    <ul>
+      <li class="font-opentype">This should be an unusual font in OpenType format.</li>
+    </ul>
+  </body>
+</html>

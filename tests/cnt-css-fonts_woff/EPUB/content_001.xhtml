@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>CSS support for font resource in WOFF format</title>
+    <style>
+
+    @font-face {
+      font-family: 'Pacifico';
+      src: url(fonts/Pacifico.woff) format('woff');
+    }
+
+    .font-woff {
+      font-family: 'Pacifico';
+    }
+
+    </style>
+  </head>
+  <body>
+    <p>Test passes if the item below is rendered in unusual font.</p>
+    <ul>
+      <li class="font-woff">This should be an unusual font in WOFF format.</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="en">
+  <head>
+    <title>CSS support for font resource in WOFF2 format</title>
+    <style>
+
+    @font-face {
+      font-family: 'Macondo';
+      src: url(fonts/Macondo.woff2) format('woff2');
+    }
+
+    .font-woff2 {
+      font-family: 'Macondo';
+    }
+
+    </style>
+  </head>
+  <body>
+    <p>Test passes if the item below is rendered in unusual font.</p>
+    <ul>
+      <li class="font-woff2">This should be an unusual font in WOFF2 format.</li>
+    </ul>
+  </body>
+</html>
