@@ -3,7 +3,7 @@
 
 The [w3c/epub-tests/](https://github.com/w3c/epub-tests/) repository contains tests to validate the implementability of the
 W3C's EPUB 3.4 specifications, specifically core [EPUB 3.4](https://www.w3.org/TR/epub-34/) (the spec for the EPUB format
-itself) and [EPUB Reading Systems 3.4](https://www.w3.org/TR/epub-rs-34/) (the spec for applications that read EPUB files).
+itself) and [EPUB Reading Systems 3.4](https://www.w3.org/TR/epub-rs-34/) (the spec for applications that read and render EPUB files).
 Our objective is to test every normative statement (that is, every _must_, _should_, and _may_ statements).
 
 Existing tests are described in the [generated test reports](#generated-test-reports).
@@ -15,7 +15,7 @@ This page explains how to write new tests.
 
 * Install [eCanCrusher](https://www.docdataflow.com/ecancrusher/) or another utility or local script that can turn an EPUB
   folder into a compressed EPUB file.
-   
+
    * On macOS, a command in Terminal can zip EPUB. Go to the folder containing the files and enter the following (replace `book.epub` with the test name):
    `zip -X0 book.epub mimetype; zip -Xur9D book.epub META-INF EPUB -x ‘*.DS_Store’ `
 
@@ -93,16 +93,16 @@ This page explains how to write new tests.
    ```html
    <p id="confreq-rs-epub3-xhtml" class="support" data-tests="#doc-xhtml-support">
       Reading Systems MUST process
-      <a href="https://www.w3.org/TR/epub-34/#sec-xhtml">XHTML Content 
+      <a href="https://www.w3.org/TR/epub-34/#sec-xhtml">XHTML Content
          Documents</a> [[EPUB-34]].
    </p>
-   
+
    ...
 
    <p id="confreq-rs-epub3-images"
       data-tests="#pub-cmt-gif,#pub-cmt-jpg,#pub-cmt-png,#pub-cmt-svg,#pub-cmt-webp">
       If a Reading System has a <a>Viewport</a>, it MUST support the
-      <a href="https://www.w3.org/TR/epub-34/#cmt-grp-image">image Core Media 
+      <a href="https://www.w3.org/TR/epub-34/#cmt-grp-image">image Core Media
          Type Resources</a> [[EPUB-34]].
    </p>
    ```
@@ -156,7 +156,7 @@ The package document for each test must contain the following metadata, which is
 * `dcterms:alternative` (optional, as part of a `meta` element): Overrides the value of `dc:title` in the generated test
   report. This item is only necessary if the value of `dc:title` is _not_ set to the value of `dc:identifier`; in that case this value must be set to the value of `dc:identifier`.
 
-* `belongs-to-collection` (optional, as part of a `meta` element): The value is `must`, `should`, or `may`, and it specifies whether the test corresponds to a  _must_ (or _must not_), _should_ (or _should not_), or _may_ (or _may not_) statement in the specification, respectively. If the metadata is not provided, or any other value is used, the default `must` value is used. 
+* `belongs-to-collection` (optional, as part of a `meta` element): The value is `must`, `should`, or `may`, and it specifies whether the test corresponds to a  _must_ (or _must not_), _should_ (or _should not_), or _may_ (or _may not_) statement in the specification, respectively. If the metadata is not provided, or any other value is used, the default `must` value is used.
 
 * `dcterms:rights` as part of a `link` element: the rights associated with the test. Except for the rare cases the `href` attribute value should be set to `https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document` (i.e., to the W3C Software and Document Notice and License).
 
@@ -167,7 +167,7 @@ In this example, only the relevant metadata items are shown (a test may have add
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" 
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops"
    version="3.0" xml:lang="en" unique-identifier="pub-id">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
   <dc:coverage id="coverage">Internationalization</dc:coverage>
@@ -175,14 +175,14 @@ In this example, only the relevant metadata items are shown (a test may have add
   <dc:creator>Dan Lazin</dc:creator>
   <dc:creator>Ivan Herman</dc:creator>
   <dc:description>
-    The 'dc:title' element contains text whose proper rendering requires 
-    bidi control. The element's 'dir' attribute is set to 'rtl'; the title 
+    The 'dc:title' element contains text whose proper rendering requires
+    bidi control. The element's 'dir' attribute is set to 'rtl'; the title
     should display from right to left.
   </dc:description>
   <dc:identifier id="pub-id">pkg-dir_rtl-root-unset</dc:identifier>
   <dc:publisher>W3C</dc:publisher>
   <dc:title dir="rtl" xml:lang="he">CSS: הרפתקה חדשה!</dc:title>
-  <link rel="dcterms:rights" 
+  <link rel="dcterms:rights"
     href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
   <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
   <meta property="dcterms:alternative">pkg-dir_rtl-root-unset</meta>
