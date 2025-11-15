@@ -1,34 +1,34 @@
 // deno-lint-ignore-file no-explicit-any
 /**
  * Module to extract and gather information necessary to produce the right reports and an overview page for test cases.
- * 
+ *
  * Several functions are used by the auxiliary tools to manipulate the packages files for existing tests, not the report
  * generation itself.
- * 
+ *
  * @packageDocumentation
  * @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
- * 
+ *
  */
 
 import { promises as fs } from 'node:fs';
 import * as fs_old_school from 'node:fs';
 import * as xml2js        from 'npm:xml2js';
 
-import { 
-    TestData, 
+import {
+    TestData,
     Score,
     ImplementationReport, Raw_ImplementationReport,
-    ImplementationData, ImplementationTable, 
-    Implementer, ReportData, 
-    ReqType, 
-    Constants, 
+    ImplementationData, ImplementationTable,
+    Implementer, ReportData,
+    ReqType,
+    Constants,
 } from './types.ts';
 
 
-/** 
+/**
  * Name tells it all...
- * 
- * @internal 
+ *
+ * @internal
  */
 export function stringComparison(a: string, b: string): number {
     if (a < b) return -1;
@@ -40,8 +40,8 @@ export function stringComparison(a: string, b: string): number {
 /**
  * Get OPF file location, following the official EPUB mechanism: extract the container file
  * (which it at a fix location in the EPUB file) and then extract the OPF file name from there.
- * 
- * @param dirname 
+ *
+ * @param dirname
  * @returns fname
  */
 export async function get_opf_file(dirname: string): Promise<string> {
@@ -68,7 +68,7 @@ export async function get_opf_file(dirname: string): Promise<string> {
 
 /**
  * Find and extract the OPF file, following the official EPUB mechanism
- * 
+ *
  * @param dirname Directory name
  * @returns OPF content in an XML string
  */
@@ -82,22 +82,22 @@ async function get_opf(dirname: string): Promise<string> {
 }
 
 
-/** 
+/**
  * See if a file name path refers to a real file.
  * Note: this function is only used in the utilities, not in the main program.
- * 
- * @internal 
+ *
+ * @internal
  */
 export function isDirectory(name: string): boolean {
     return fs_old_school.lstatSync(name).isDirectory();
 }
 
 
-/** 
+/**
  * See if a file name path refers to a real file.
  * Note: this function is only used in the utilities, not in the main program.
- * 
- * @internal 
+ *
+ * @internal
  */
 export function isFile(name: string): boolean {
     return fs_old_school.lstatSync(name).isFile();
@@ -106,10 +106,10 @@ export function isFile(name: string): boolean {
 
 /**
  * Lists of a directory content.
- * 
- * (Note: by default this returns all the test file names. 
+ *
+ * (Note: by default this returns all the test file names.
  * Depending on the final configuration some filters may have to be added.)
- * 
+ *
  * @param dir_name name of the directory
  * @param filter_name a function to filter the retrieved list (e.g., no directories)
  * @returns lists of files in the directory
@@ -131,8 +131,8 @@ export async function getListDir(dir_name: string, filter_name: (name: string) =
 
 
 /**
- * Get a single implementation report in JSON and convert to its internal format, 
- * 
+ * Get a single implementation report in JSON and convert to its internal format,
+ *
  * @internal
  */
 async function getAnImplementationReport(fname: string): Promise<ImplementationReport> {
@@ -141,7 +141,7 @@ async function getAnImplementationReport(fname: string): Promise<ImplementationR
     type internal_index_pair = [string, Score];
     interface raw_map {[index: string]: (boolean|string|null)}
     interface internal_map {[index: string]: Score}
-   
+
     // the boolean|string in the JSON file is transformed into a proper Score
     const transform = (raw_score: (boolean|string|null)): Score => {
         if (typeof(raw_score) === 'boolean') {
@@ -176,7 +176,7 @@ async function getAnImplementationReport(fname: string): Promise<ImplementationR
 /**
  * Get all the implementation reports from the file system.
  * The results are sorted using the implementation's name as a key.
- * 
+ *
  * @param dir_name the directory that contains the implementation reports
  * @internal
  */
@@ -186,7 +186,7 @@ async function getImplementationReports(dir_name: string): Promise<Implementatio
     // Use the 'Promise.all' trick to get to all the implementation reports in one async step rather than going through a cycle
     const report_list_promises: Promise<ImplementationReport>[] = implementation_list.map((file_name) => getAnImplementationReport(`${dir_name}/${file_name}`));
     const proto_implementation_reports: ImplementationReport[] = await Promise.all(report_list_promises);
-    const implementation_reports: ImplementationReport[] = proto_implementation_reports.filter((entry) => entry !== undefined); 
+    const implementation_reports: ImplementationReport[] = proto_implementation_reports.filter((entry) => entry !== undefined);
     implementation_reports.sort((a,b) => stringComparison(a.name, b.name));
 
     return implementation_reports
@@ -194,7 +194,7 @@ async function getImplementationReports(dir_name: string): Promise<Implementatio
 
 /**
  * Create consolidated implementation reports.
- * 
+ *
  * Some implementation report appear several times as 'variants' (typically android, ios, or web). These
  * are usually using the same engine, so their results should be merged into one for the purpose of a formal
  * report for the AC.
@@ -270,9 +270,9 @@ function consolidateImplementationReports(implementations: ImplementationReport[
 
 
 /**
- * Combine the metadata, as retrieved from the tests, and the implementation reports into 
+ * Combine the metadata, as retrieved from the tests, and the implementation reports into
  * one structure for each tests with the test run results included
- * 
+ *
  */
 function create_implementation_data(metadata: TestData[], implementations: ImplementationReport[]): ImplementationData[] {
     return metadata.map((single_test: TestData): ImplementationData => {
@@ -293,7 +293,7 @@ function create_implementation_data(metadata: TestData[], implementations: Imple
 /**
  * Create Implementation tables: a separate list of implementations for each "section", ie, a collection of tests
  * that share the same `dc:coverage` data
- * 
+ *
  */
 function createImplementationTables(implementation_data: ImplementationData[]): ImplementationTable[] {
     const retval: ImplementationTable[] = [];
@@ -327,7 +327,7 @@ function createImplementationTables(implementation_data: ImplementationData[]): 
 
 /**
  * Extract all the test information from all available tests.
- * 
+ *
  * @param dir_name test directory name
  * @returns EPUB metadata converted into the [[TestData]] structure
  */
@@ -396,7 +396,7 @@ export async function getTestData(dir_name: string): Promise<TestData[]> {
 
         const getFinalTitle = (metadata: any): string => {
             const alternate_title = getSingleMetaValue("dcterms:alternative", metadata);
-            return alternate_title === undefined ? get_string_value("dc:title", "(No title)", metadata) : alternate_title._;    
+            return alternate_title === undefined ? get_string_value("dc:title", "(No title)", metadata) : alternate_title._;
         }
 
         const getReferenceVersion = (metadata: any): string => {
@@ -444,7 +444,7 @@ export async function getTestData(dir_name: string): Promise<TestData[]> {
     // Get the test descriptions
     const test_list = await getListDir(dir_name, isDirectory);
     const test_data_promises: Promise<TestData|undefined>[] = test_list.map((name: string) => getSingleTestData(`${dir_name}/${name}`));
-    
+
     // Use the 'Promise.all' trick to get to all the data in one async step rather than going through a cycle
     const test_data: (TestData|undefined)[] = await Promise.all(test_data_promises);
     return test_data.filter((entry) => entry !== undefined);
@@ -454,7 +454,7 @@ export async function getTestData(dir_name: string): Promise<TestData[]> {
 /**
  * Get all the test reports and tests files metadata and create the data structures that allow a simple
  * generation of a final report.
- * 
+ *
  * @param test_data all the metadata for all tests
  * @param reports directory where the implementation reports reside
  */
@@ -466,12 +466,12 @@ export async function getReportData(test_data: TestData[], reports: string): Pro
 
         const get_array = (val: ReqType): TestData[] => {
             switch (val) {
-            case "must": return required_tests;
-            case "should": return optional_tests;
-            case "may": return possible_tests;
-            // This is, in fact, not necessary, but typescript is not sophisticated enough to see that...
-            // and I hate eslint warnings!
-            default: return required_tests;
+                case "must": return required_tests;
+                case "should": return optional_tests;
+                case "may": return possible_tests;
+                // This is, in fact, not necessary, but typescript is not sophisticated enough to see that...
+                // and I hate eslint warnings!
+                default: return required_tests;
             }
         }
 
@@ -512,9 +512,9 @@ export async function getReportData(test_data: TestData[], reports: string): Pro
 }
 
 /**
- * 
+ *
  * Generate a template report that contains the list of all tests, with a placeholder for the results and the metadata
- * 
+ *
  * @param report the full report, as generated by earlier calls
  */
 export function getTemplate(report: ReportData): Raw_ImplementationReport {

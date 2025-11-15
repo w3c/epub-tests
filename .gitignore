@@ -31,3 +31,6 @@ tests/.DS_Store
 .idea/
 
 .vscode/
+
+.editorconfig
+

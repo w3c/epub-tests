@@ -3,25 +3,25 @@
 /* eslint-disable @typescript-eslint/no-namespace */
 /**
  * Constants and types used in the EPUB test suite presentation.
- * 
+ *
  * ---
- * 
- * Note: the term "consolidation" is used, throughout this package, for the following situation. 
- * Some implementations may come in different variants: i.e., the same name (typically designating the core engine) 
+ *
+ * Note: the term "consolidation" is used, throughout this package, for the following situation.
+ * Some implementations may come in different variants: i.e., the same name (typically designating the core engine)
  * but a separate versions ("variants") for different environments, typically iOS, Android, or Web.
- * Per W3C these are not considered to be independent implementations and, therefore, 
+ * Per W3C these are not considered to be independent implementations and, therefore,
  * they should be considered as one implementation as far as the
- * formal CR report is concerned. On the other hand, there is value to keep 
+ * formal CR report is concerned. On the other hand, there is value to keep
  * the various implementation results separated.
- * 
- * To keep this, the report generator (and the display of the results) "duplicates" the list of 
+ *
+ * To keep this, the report generator (and the display of the results) "duplicates" the list of
  * implementations: one is the original (ie, with variants kept separated) and
- * one where the result of all the variants are "consolidated" into a unique implementation report. 
- * The duplication of these data is then reflected in the way the reports are displayed. 
- *  
+ * one where the result of all the variants are "consolidated" into a unique implementation report.
+ * The duplication of these data is then reflected in the way the reports are displayed.
+ *
  * @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
  * @packageDocumentation
- * 
+ *
  */
 
 /**
@@ -86,7 +86,7 @@ export namespace Constants {
     /** (Relative) File name of the test descriptions */
     export const DOC_TEST_DESCRIPTIONS: string = 'index.html';
 
-    /** 
+    /**
      * List of test ID-s whose creators should not be considered for display; these appear in some I18N tests
      * that are used to test the bidi of the creator strings themselves.
      */
@@ -168,7 +168,7 @@ export interface TestData {
      * This is a series of URL strings, referring to the section in the spec this test is pertinent to.
      */
     references: string[];
-    
+
     /**
      * The value of the 'modified' string from the package file
      */
@@ -183,7 +183,7 @@ export interface TestData {
 
 /**
  * (Internal) values for the test scores.
- * 
+ *
  * (Note the duality of enum and a namespace, which makes it possible to use the term in a more confortable way
  * in the code, while keeping the enum values as strings. This is a bit of a hack, but it works well.)
  */
@@ -198,15 +198,15 @@ export namespace Score {
     /** Function used for the final rendering of the data.  */
     export function get_class(s: Score): string {
         switch (s) {
-        case Score.FAIL: 
-            return Constants.CLASS_FAIL;
-        case Score.PASS: 
-            return Constants.CLASS_PASS;
-        case Score.NOT_APPLICABLE: 
-            return Constants.CLASS_NA;
-        case Score.UNTESTED: 
-        default: 
-            return Constants.CLASS_UNTESTED;
+            case Score.FAIL:
+                return Constants.CLASS_FAIL;
+            case Score.PASS:
+                return Constants.CLASS_PASS;
+            case Score.NOT_APPLICABLE:
+                return Constants.CLASS_NA;
+            case Score.UNTESTED:
+            default:
+                return Constants.CLASS_UNTESTED;
         }
     }
 
@@ -218,7 +218,7 @@ export namespace Score {
 
 
 /**
- * Data about a single implementer: it is necessary to the final 
+ * Data about a single implementer: it is necessary to the final
  * report about each implementer.
  */
 export interface Implementer {
@@ -234,20 +234,20 @@ export interface Implementer {
 
 
 /**
- * The report of each implementer: beyond the (meta)data about the implementation itself it 
- * includes an object listing tests results, one for each test that has been run. 
+ * The report of each implementer: beyond the (meta)data about the implementation itself it
+ * includes an object listing tests results, one for each test that has been run.
  * The index is the ID of a test.
  */
 export interface ImplementationReport extends Implementer {
     tests: {
-       [index: string]: Score; 
+       [index: string]: Score;
     }
 }
 
 
 /**
  * The report of each implementer in JSON format.
- * 
+ *
  * (In an ideal world, this should be identical to ImplementationReport, but by the time
  * this was improved to use more values, tests had been already done, and it was not feasible
  * to change the existing test results. Oh well...)
@@ -261,7 +261,7 @@ export interface Raw_ImplementationReport extends Implementer {
 
 /**
  * The information about a single tests: the original metadata extended with an
- * array of true/false values on whether the implementation passes the test or not. 
+ * array of true/false values on whether the implementation passes the test or not.
  * The order of the test results is in sync with the order of extracted implementations.
  */
 export interface ImplementationData extends TestData {
@@ -273,7 +273,7 @@ export interface ImplementationData extends TestData {
 
 
 /**
- * A single set (essentially a table rows) of all implementation data for a specific "section" 
+ * A single set (essentially a table rows) of all implementation data for a specific "section"
  * (i.e., the "coverage" value in the tests)
  */
 export interface ImplementationTable {
@@ -285,7 +285,7 @@ export interface ImplementationTable {
 /**
  * Complete data needed for the display of the test results. It is the result of combining the test
  * results, the metadata about the implementations, and the metadata about the tests.
- * 
+ *
  * Note (again) that the order for implementers the order of extracted implementations.
  */
 export interface ReportData {
@@ -293,15 +293,15 @@ export interface ReportData {
     consolidated_tables       : ImplementationTable[];
     implementers              : Implementer[];
     consolidated_implementers : Implementer[];
-} 
+}
 
 /**
  * Data returned from the HTML generation
  */
 export interface HTMLFragments {
-    implementations      : string, 
+    implementations      : string,
     consolidated_results : string,
-    complete_results     : string, 
-    tests                : string, 
+    complete_results     : string,
+    tests                : string,
     creators             : string
 }
