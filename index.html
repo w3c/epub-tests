@@ -19,9 +19,9 @@
 				background-color: red;
 			}
 			div#button_container {
-				display: flex; 
-				justify-content: center; 
-				align-items: center;				
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 			button#should_may_visibility {
 				cursor: pointer;
@@ -102,7 +102,7 @@
 
 			table.sortable > thead > tr > th.order-field{
 				padding-right: 0px;
-			} 
+			}
 
 			table.sortable > thead > tr > th.order-asc:after{
 				display: inline-block;
@@ -117,7 +117,12 @@
 				width: 15px;
 				content: '\25BC';
 			}
-			
+
+            tr.deprecated td:nth-child(2)::after {
+                content: " (Feature is deprecated.)"
+
+            }
+
 			td {
 				hyphens: auto !important;
 				-webkit-hyphens: auto !important;
@@ -169,14 +174,14 @@
 				// Modify the inline text to reflect the visibility status
 				const span = document.getElementById("test_visibility");
 				span.textContent = current_state === ROW_HIDE ? "hidden" : "visible";
-				
+
 				const change_button = document.getElementById('should_may_visibility');
-				change_button.innerHTML = current_state === ROW_HIDE ? 
-					"Currently showing only the <span>MUST</span> tests; click here to show all the tests" : 
+				change_button.innerHTML = current_state === ROW_HIDE ?
+					"Currently showing only the <span>MUST</span> tests; click here to show all the tests" :
 					"Currently showing all the tests; click here to show only the <span>MUST</span> tests";
 
-				// Collect all relevant `<tr>` elements... 
-				const tr_all = document.querySelectorAll("td.should, td.may");
+				// Collect all relevant `<tr>` elements...
+				const tr_all = document.querySelectorAll("td.should, td.may, td.deprecated");
 
 				// ... and change the visibility
 				for (const td of tr_all) {
@@ -198,9 +203,9 @@
 				if (current_state === null) {
 					localStorage.setItem(STORAGE_KEY, ROW_SHOW);
 					current_state = ROW_SHOW;
-				} 
+				}
 				row_visibility(current_state);
-				
+
 				const change_button = document.getElementById('should_may_visibility');
 				change_button.addEventListener('click', clicked);
 			});
@@ -219,7 +224,7 @@
 
 			<p>
 				<a href="https://github.com/w3c/epub-tests">w3c/epub-tests</a> is the repository for the tests to
-				validate the implementability of W3C's EPUB 3 specifications, specifically the core 
+				validate the implementability of W3C's EPUB 3 specifications, specifically the core
 				<a href="https://www.w3.org/TR/epub-34/">EPUB 3.x</a> (the specification for the EPUB format itself) and the
 				<a href="https://www.w3.org/TR/epub-rs-34/">EPUB Reading Systems 3.x</a> (the specification for applications
 				that read and render EPUB files).
@@ -236,20 +241,20 @@
 			<ol>
 				<li>The identification of each test, linked to the unzipped test contents in the GitHub repository.</li>
 				<li>Short description.</li>
-        		<li>Conformance flag (i.e., <code>must</code>, <code>should</code>, or <code>may</code>).</li>
+        		<li>Conformance flag (i.e., <code>must</code>, <code>should</code>, or <code>may</code>, or whether the test relates to a deprecated feature).</li>
 				<li>The date of the last modification.</li>
 				<li>Reference(s) to the corresponding normative statements or sections in the EPUB 3 specification(s).</li>
 				<li>Reference to the (consolidated) implementation status of the test in the separate <a href="results">implementation report</a>.</li>
 			</ol>
 			<p>
-				By default, the table rows are ordered (alphabetically) by the test identifier values. By clicking on the headers 
+				By default, the table rows are ordered (alphabetically) by the test identifier values. By clicking on the headers
 				(except for the two columns with the references) the tables can be dynamically reordered either in decreasing or increasing alphabetical order. This can be used, for example,
 				to search for the tests that have been modified recently.
 			</p>
 
 			<p>
-				Strictly speaking, the <code>should</code> and <code>may</code> tests are not necessary for the official CR testing of
-				the specifications. These tests are currently <span id="test_visibility"></span> in the tables; to change their visibility, click the 
+				Strictly speaking, the <code>should</code>, <code>may</code>, or <code>deprecated</code> tests are not necessary for the official CR testing of
+				the specifications. These tests are currently <span id="test_visibility"></span> in the tables; to change their visibility, click the
 				switch visibility button below.
 			</p>
 		</section>
@@ -260,7 +265,7 @@
 
 			<p>The following experts contributed to the test suite:</p>
 
-			<ul data-include="generate/fragments/creators.html" data-include-replace="true"></ul>	
+			<ul data-include="generate/fragments/creators.html" data-include-replace="true"></ul>
 		</section>
 
 		<script type="text/javascript">

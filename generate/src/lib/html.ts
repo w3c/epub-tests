@@ -1,12 +1,12 @@
 /**
  * Generation of the HTML Fragments for the EPUB 3 Testing Reports.
- * 
- *  @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software) 
+ *
+ *  @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
  *  @packageDocumentation
  */
 
-import { ReportData, Implementer, Constants, Score, HTMLFragments } from './types.ts';
-import { JSDOM }                                                    from 'npm:jsdom';
+import { ReportData, Implementer, Constants, Score, HTMLFragments, ReqType} from './types.ts';
+import { JSDOM }                                                            from 'npm:jsdom';
 
 /**
  * Turn a text into a string that can be used as an ID
@@ -18,12 +18,12 @@ const convertToID = (header: string): string => {
 
 /**
  * Add a new HTML Element to a parent, and return the new element
- * 
+ *
  * @param parent The parent HTML Element
  * @param element The new element's name
  * @param content The new element's (HTML) content
- * @returns 
- * 
+ * @returns
+ *
  * @internal
  */
 const addChild = (parent: HTMLElement, element: string, content: string|undefined = undefined): HTMLElement => {
@@ -38,10 +38,10 @@ const addChild = (parent: HTMLElement, element: string, content: string|undefine
 /* ------------------------------------------------------------------------------------------------------ */
 
 /**
- * Create the list of implementation: a simple set of numbered items, with the name 
+ * Create the list of implementation: a simple set of numbered items, with the name
  * and (possible) reference to the implementation's web site.
- * 
- * @param impl 
+ *
+ * @param impl
  * @returns results in XML format
  */
 function createImplementationList(impl: Implementer[]): string {
@@ -49,7 +49,7 @@ function createImplementationList(impl: Implementer[]): string {
     const section: HTMLElement|null = dom.querySelector('section');
 
     if (section === null) {
-        // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
+        // In fact, this never happens, because we run the query on the string itself. But a TS compiler
         // does not realize that
         throw new Error('Unable to create the implementation list: no section element found');
     }
@@ -76,7 +76,7 @@ function createImplementationList(impl: Implementer[]): string {
  */
 // eslint-disable-next-line max-lines-per-function
 function createImplementationReports(data: ReportData): {consolidated_results: string, complete_results: string} {
-    // Two tables must be created: the consolidated and detailed results. The function below is 
+    // Two tables must be created: the consolidated and detailed results. The function below is
     // invoked twice to get these two separately.
     const createImplReport = (consolidated: boolean): string => {
         // The whole content is enclosed in a large, top level section
@@ -95,7 +95,7 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
             throw new Error('Unable to create the implementation report: no section element found in result tables');
         }
 
-        // Going through the implementation table entries; 
+        // Going through the implementation table entries;
         // Each table corresponds to one 'category' (Core Media Types, Internationalizations, Fixed Layouts, etc.)
         for (const table of (consolidated ? data.consolidated_tables : data.tables)) {
             // Each table is enclosed in a separate subsection
@@ -135,7 +135,7 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
             const tbody = addChild(test_table, 'tbody');
             // A cycle for each table row:
             for (const row of table.implementations) {
-                const tr = addChild(tbody, 'tr'); 
+                const tr = addChild(tbody, 'tr');
 
                 // First the fixed table cells...
                 const td_id = addChild(tr, 'td', `<a href="${Constants.DOC_TEST_DESCRIPTIONS}#${row.identifier}">${row.identifier}</a>`);
@@ -150,7 +150,7 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
                     if (result === undefined) {
                         // This may happen if the tester has not started with a full template...
                         const td_impl = addChild(tr, 'td', 'todo');
-                        td_impl.className = Constants.CLASS_UNTESTED;                        
+                        td_impl.className = Constants.CLASS_UNTESTED;
                     } else {
                         const td_impl = addChild(tr, 'td', Score.get_td(result));
                         td_impl.className = Score.get_class(result)
@@ -180,8 +180,8 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
 
 /**
  * Create the test (meta) data table.
- * 
- * @param data 
+ *
+ * @param data
  * @returns Serialized XML for an HTML fragment
  */
 function createTestData(data: ReportData): string {
@@ -193,12 +193,12 @@ function createTestData(data: ReportData): string {
         button.id = "should_may_visibility"
         button.setAttribute("type", "button");
     };
-    
+
     const dom: DocumentFragment = JSDOM.fragment('<section id="sec-test-tables"><h2>Description of the Tests</h2></section>');
     const full_section: HTMLElement|null = dom.querySelector('section');
 
     if (full_section === null) {
-        // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
+        // In fact, this never happens, because we run the query on the string itself. But a TS compiler
         // does not realize that and we want to keep it happy.
         throw new Error('Unable to create the test data section: no section element found');
     }
@@ -232,6 +232,7 @@ function createTestData(data: ReportData): string {
         // Finally, a row per test
         for (const row of table.implementations) {
             const tr = addChild(tbody, 'tr');
+            tr.classList.add(row.required);
 
             // a bunch of table cells...
             const td_id = addChild(tr, 'td', `<a href="${Constants.TEST_URL_BASE}/${row.identifier}">${row.identifier}</a>`);
@@ -239,13 +240,12 @@ function createTestData(data: ReportData): string {
             td_id.id = `${row.identifier}`;
 
             addChild(tr, 'td', row.description);
-            addChild(tr, 'td', row.required);
+            addChild(tr, 'td', row.required === ReqType.deprecated ? "depr." : row.required);
             addChild(tr, 'td', row.version);
 
             const date: string[] = row.modified.split('T')[0].split('-');
             date[0] = `’${date[0].charAt(2)}${date[0].charAt(3)}`;
             addChild(tr, 'td', date.join('.'));
-
 
             const td_specs = addChild(tr, 'td');
             if (row.references.length === 0) {
@@ -272,8 +272,8 @@ function createTestData(data: ReportData): string {
 
 /**
  * Create an HTML unnumbered list with the creators of the tests. The names are sorted alphabetically.
- * 
- * @param data 
+ *
+ * @param data
  * @returns Serialized XML for the creators' list.
  */
 function createCreatorList(data: ReportData): string {
@@ -282,7 +282,7 @@ function createCreatorList(data: ReportData): string {
     const ul: HTMLElement|null = dom.querySelector('ul');
 
     if (ul === null) {
-        // In fact, this never happens, because we run the query on the string itself. But a TS compiler 
+        // In fact, this never happens, because we run the query on the string itself. But a TS compiler
         // does not realize that and we want to keep it happy.s
         throw new Error('Unable to create the creator list: no ul element found');
     }
@@ -297,7 +297,7 @@ function createCreatorList(data: ReportData): string {
                     if (!Constants.IGNORE_CREATORS.includes(creator)) {
                         creators.add(creator)
                     }
-                } 
+                }
             }
         }
     }
@@ -316,17 +316,17 @@ function createCreatorList(data: ReportData): string {
 /* ------------------------------------------------------------------------------------------------------ */
 
 /**
- * Create four HTML fragments, to be stored, eventually, in separate files. 
- * Each is in a `<section>` with a subtitle, except for the last one that is simply an HTML `<ul>` list. 
+ * Create four HTML fragments, to be stored, eventually, in separate files.
+ * Each is in a `<section>` with a subtitle, except for the last one that is simply an HTML `<ul>` list.
  * These fragments can be included in the final report using the `data-include` feature of respec:
- * 
+ *
  * 1. A bulleted list of available implementations, linked (if available) to the Web site of the implementation itself
  * 2. A series of subsections, each with its own table; each table row is a reference to the test and a series of cells (one per implementation) whether the test passes or not. This structure comes twice: one for consolidated results, and one for the original ones
  * 3. A series of subsections, each with its own table; each table row contains basic metadata and cross references to the tests.
  * 4. A list of test creators
- * 
+ *
  * The return for each of those is in the form of a string containing the XHTML fragment.
- * 
+ *
  */
 export function createReport(data: ReportData): HTMLFragments {
     const {consolidated_results, complete_results} = createImplementationReports(data);

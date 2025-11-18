@@ -11,9 +11,10 @@
     <dc:title>lay-fxl-orientation-default</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#orientation</meta>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub/#orientation</meta>
-    <meta property="dcterms:modified">2022-09-21T00:00:00Z</meta>
+    <meta property="belongs-to-collection">deprecated</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#orientation</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-33/#orientation</meta>
+    <meta property="dcterms:modified">2025-11-18T00:00:00Z</meta>
     <meta property="rendition:layout">pre-paginated</meta>
   </metadata>
   <manifest>

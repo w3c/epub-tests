@@ -1,6 +1,6 @@
 /**
  * Generation of the [OPDS](https://specs.opds.io/opds-1.2) file for the full set of tests.
- * 
+ *
  *  @license [W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software)
  *  @packageDocumentation
  */
@@ -11,7 +11,7 @@ import { stringComparison }    from './data.ts';
 /* ------------------------------------------------------------------------------------------------------ */
 /*                     Subset of OPDS specification used here in Typescript types                         */
 /* ------------------------------------------------------------------------------------------------------ */
- 
+
 interface PublicationMetadata {
     "@type": string;
     identifier: string;
@@ -57,9 +57,9 @@ export interface OPDS {
 
 /**
  * Generate the OPDS file. The entries are sorted by the modification date of the test cases.
- * 
+ *
  * @param tests All the test data, as extracted from the corresponding package documents
- * @returns 
+ * @returns
  */
 export function createOPDS(tests: TestData[]): OPDS {
     /** All cover images are identical */
@@ -107,7 +107,7 @@ export function createOPDS(tests: TestData[]): OPDS {
     /* Add the OPDS metadata to the list of all the publications. */
     return {
         metadata : {
-            title : 'W3C EPUB 3.4 Test Suite',
+            title : `W3C EPUB ${Constants.EPUB_VERSION} Test Suite`,
         },
         links : [
             {

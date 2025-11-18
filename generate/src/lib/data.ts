@@ -21,6 +21,7 @@ import {
     ImplementationData, ImplementationTable,
     Implementer, ReportData,
     ReqType,
+    // Obsolete,
     Constants,
 } from './types.ts';
 
@@ -251,7 +252,6 @@ function consolidateImplementationReports(implementations: ImplementationReport[
             final.push(impl);
         }
     }
-    // TODO: if there is a ref somewhere, then use that in the output as well
 
     // 2. consolidate the variants for the same name, and add those to the result
     for (const variant_name in to_be_consolidated) {
@@ -334,6 +334,8 @@ function createImplementationTables(implementation_data: ImplementationData[]): 
 // eslint-disable-next-line max-lines-per-function
 export async function getTestData(dir_name: string): Promise<TestData[]> {
     // Extract the metadata information from the tests' package file for a single test
+    // This function is the real "meat" in converting the OPF data into its
+    // internal representation.
     // eslint-disable-next-line max-lines-per-function
     const getSingleTestData = async (file_name: string): Promise<TestData|undefined> => {
         // Note the heavy use of "any" in the function; this is related to the fact that
@@ -380,16 +382,14 @@ export async function getTestData(dir_name: string): Promise<TestData[]> {
         const getRequired = (metadata: any): ReqType => {
             const is_set = getSingleMetaValue("belongs-to-collection", metadata);
             if (is_set === undefined) {
-                return "must";
+                return ReqType.must;
             } else {
-                const val: string = (<string>is_set._).toLowerCase();
+                const val: string = (is_set._ as string).toLowerCase();
                 switch (val) {
-                case "must":
-                case "should":
-                case "may":
-                    return val;
-                default:
-                    return "must";
+                    case "should"       : return ReqType.should;
+                    case "may"          : return ReqType.may ;
+                    case "deprecated"   : return ReqType.deprecated
+                    case "must"         : default: return ReqType.must;
                 }
             }
         }
@@ -403,6 +403,7 @@ export async function getTestData(dir_name: string): Promise<TestData[]> {
             const version = getSingleMetaValue("schema:version", metadata);
             return version === undefined ? "3.3" : version._;
         }
+
 
         // ---------
 
@@ -460,18 +461,17 @@ export async function getTestData(dir_name: string): Promise<TestData[]> {
  */
 export async function getReportData(test_data: TestData[], reports: string): Promise<ReportData> {
     const sort_test_data = (all_tests: TestData[]): TestData[] => {
-        const required_tests: TestData[] = [];
-        const optional_tests: TestData[] = [];
-        const possible_tests: TestData[] = [];
+        const required_tests:   TestData[] = [];
+        const optional_tests:   TestData[] = [];
+        const possible_tests:   TestData[] = [];
+        const deprecated_tests: TestData[] = [];
 
         const get_array = (val: ReqType): TestData[] => {
             switch (val) {
-                case "must": return required_tests;
-                case "should": return optional_tests;
-                case "may": return possible_tests;
-                // This is, in fact, not necessary, but typescript is not sophisticated enough to see that...
-                // and I hate eslint warnings!
-                default: return required_tests;
+                case ReqType.must :       return required_tests;
+                case ReqType.should :     return optional_tests;
+                case ReqType.may :        return possible_tests;
+                case ReqType.deprecated : return deprecated_tests;
             }
         }
 
@@ -482,14 +482,16 @@ export async function getReportData(test_data: TestData[], reports: string): Pro
         // This is, most of the times, unnecessary, because the directory reading has an alphabetic order already.
         // However, in rare cases, the test's file name and the test's identifier may not coincide, and the latter
         // should prevail...
+        const sort_tests = (a: TestData, b: TestData): number => stringComparison(a.identifier, b.identifier);
         return [
-            ...required_tests.sort((a,b) => stringComparison(a.identifier, b.identifier)),
-            ...optional_tests.sort((a,b) => stringComparison(a.identifier, b.identifier)),
-            ...possible_tests.sort((a,b) => stringComparison(a.identifier, b.identifier)),
+            ...required_tests.sort(sort_tests),
+            ...optional_tests.sort(sort_tests),
+            ...possible_tests.sort(sort_tests),
+            ...deprecated_tests.sort(sort_tests),
         ]
     }
 
-    // Sort the metadata for all available tests. including the separation of must/should/may tests;
+    // Sort the metadata for all available tests. including the separation of must/should/may/deprecated tests;
     const metadata: TestData[] = sort_test_data(test_data);
 
     // Get the list of available implementation reports

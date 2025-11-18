@@ -1,5 +1,4 @@
-<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id"
-prefix="epub-test: https://w3c.github.io/epub-tests/vocabulary#">
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
     <dc:coverage id="coverage">Fixed Layout</dc:coverage>
     <meta refines="#coverage" property="schema:version">3.3</meta>
@@ -12,15 +11,11 @@ prefix="epub-test: https://w3c.github.io/epub-tests/vocabulary#">
     <dc:title>lay-fxl-orientation-landscape</dc:title>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="belongs-to-collection">should</meta>
-    <meta property="dcterms:isReferencedBy">hhttps://www.w3.org/TR/epub-rs-33/#orientation</meta>
-    <meta property="dcterms:modified">2022-09-21T00:00:00Z</meta>
+    <meta property="belongs-to-collection">deprecated</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#orientation</meta>
+    <meta property="dcterms:modified">2025-11-18T00:00:00Z</meta>
     <meta property="rendition:layout">pre-paginated</meta>
     <meta property="rendition:orientation">landscape</meta>
-
-	<meta property="epub-test:deprecated" id="deprecation">true</meta>
-    <meta refines="#deprecation" property="epub-test:deprecatedInVersion">3.4</meta>
-    <link refines="#deprecation" rel="dcterms:isRequiredBy" href="https://w3c.github.io/pm-wg/minutes/2025-11-10-f2f.html#14e0"/>
   </metadata>
   <manifest>
     <item id="page_001" href="page_001.xhtml" media-type="application/xhtml+xml"/>

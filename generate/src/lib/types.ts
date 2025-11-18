@@ -28,6 +28,8 @@
  * Constants
  */
 export namespace Constants {
+    export const EPUB_VERSION: string = '3.4';
+
     /** Location for the tests themselves */
     export const TESTS_DIR: string = '../../tests';
 
@@ -125,9 +127,15 @@ export namespace Constants {
 }
 
 /**
- * The three possible values for the conformance level of a test.
+ * The three possible values for the conformance level of a test, plus
+ * a separate designator for deprecated tests
  */
-export type ReqType = "must" | "should" | "may";
+export enum ReqType {
+    must        = "must",
+    should      = "should",
+    may         = "may",
+    deprecated  = "deprecated",
+}
 
 /**
  * The metadata related to a single test, extracted from the test's package document
@@ -175,10 +183,11 @@ export interface TestData {
     modified: string;
 
     /**
-     * Whether this test corresponds to a _MUST_, _SHOULD_, or _MAY_ statement
+     * Whether this test corresponds to a _MUST_, _SHOULD_, or _MAY_ statement, or whether it is,
+     * in fact, a deprecated feature
      */
     required: ReqType;
-}
+ }
 
 
 /**
