@@ -156,7 +156,7 @@ The package document for each test must contain the following metadata, which is
 * `dcterms:alternative` (optional, as part of a `meta` element): Overrides the value of `dc:title` in the generated test
   report. This item is only necessary if the value of `dc:title` is _not_ set to the value of `dc:identifier`; in that case this value must be set to the value of `dc:identifier`.
 
-* `belongs-to-collection` (optional, as part of a `meta` element): The value is `must`, `should`, or `may`, and it specifies whether the test corresponds to a  _must_ (or _must not_), _should_ (or _should not_), or _may_ (or _may not_) statement in the specification, respectively. If the metadata is not provided, or any other value is used, the default `must` value is used.
+* `belongs-to-collection` (optional, as part of a `meta` element): The value is `must`, `should`, or `may`, and it specifies whether the test corresponds to a  _must_ (or _must not_), _should_ (or _should not_), or _may_ (or _may not_) statement in the specification, respectively. If the metadata is not provided, the default `must` value is used. (See also the additional `deprecated` value below.)
 
 * `dcterms:rights` as part of a `link` element: the rights associated with the test. Except for the rare cases the `href` attribute value should be set to `https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document` (i.e., to the W3C Software and Document Notice and License).
 
@@ -196,7 +196,27 @@ In this example, only the relevant metadata items are shown (a test may have add
 </package>
 ```
 
-(Note that, in this case, the `<meta property="belongs-to-collection">must</meta>` is not necessary, because that corresponds to the default value; it is only there as an example.)
+(Note that, in this case, the `<meta property="belongs-to-collection">must</meta>` is not necessary, because it corresponds to the default value; it is only there as an example.)
+
+## Change tests for deprecated feature
+
+In the course of the EPUB 3.x evolution some feature may become deprecated (e.g., `rendition:orientation` that got deprecated for EPUB 3.4). Older tests for these features shouldn't be removed from the script; instead, they are marked as "deprecated" in the package metadata. More specifically, the `<meta property="belongs-to-collection">…</meta>` must be added/modified: the relevant test should be added to a separate, special collection called "deprecated". These test are then treated like, e.g., `may` tests: they are pushed to the end of the tables, marked as `depr.` instead of `must`, `should`, or `may`, and they are removed from the final list if the user switches off the non `must` tests. Furthermore, an additional remark is added to the description of the test. Here is the relevant portion of the OPF file for a deprecated test:
+
+```xml
+<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage id="coverage">Fixed Layout</dc:coverage>
+    <meta refines="#coverage" property="schema:version">3.3</meta>
+    <dc:creator>Wendy Reid</dc:creator>
+    <dc:description>rendition:orientation is landscape, Reading Systems should either display the content in landscape or inform the user it should be.</dc:description>
+    …
+    <meta property="belongs-to-collection">deprecated</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#orientation</meta>
+    <meta property="dcterms:modified">2022-09-21T00:00:00Z</meta>
+    <meta property="rendition:layout">pre-paginated</meta>
+    <meta property="rendition:orientation">landscape</meta>
+```
+
+Note that the value of the `dcterms:isReferencedBy` has been changed as well; instead of referring to the EPUB spec through a generic URL, it now refers to the specific version which included this feature. That ensures the proper links.
 
 # Running tests
 
