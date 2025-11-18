@@ -7,6 +7,7 @@
 
 import { ReportData, Implementer, Constants, Score, HTMLFragments, ReqType} from './types.ts';
 import { JSDOM }                                                            from 'npm:jsdom';
+import { beautify } from './beautify.ts';
 
 /**
  * Turn a text into a string that can be used as an ID
@@ -62,7 +63,7 @@ function createImplementationList(impl: Implementer[]): string {
         li.innerHTML = 'variant' in implementer ? `${name}, ${implementer.variant}` : name;
     }
     // This returns, in effect, the XML serialization of the section
-    return section.outerHTML;
+    return beautify(section.outerHTML);
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
@@ -164,7 +165,7 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
                 }
             }
         }
-        return top_section.outerHTML;
+        return beautify(top_section.outerHTML);
     }
 
     return {
@@ -263,7 +264,7 @@ function createTestData(data: ReportData): string {
     }
 
     // This is where the object is turned into an XML serialization...
-    return full_section.outerHTML;
+    return beautify(full_section.outerHTML);
 }
 
 /* ------------------------------------------------------------------------------------------------------ */
@@ -306,7 +307,7 @@ function createCreatorList(data: ReportData): string {
         addChild(ul, 'li', creator);
     }
 
-    return ul.outerHTML;
+    return beautify(ul.outerHTML);
 }
 
 

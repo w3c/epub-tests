@@ -40,7 +40,7 @@ import { TestData, ReportData, Raw_ImplementationReport, Constants, HTMLFragment
 import { getTestData, getReportData, getTemplate }                                  from "./lib/data.ts";
 import { createReport }                                                             from "./lib/html.ts";
 import { applyConfigurationOptions }                                                from './lib/config.ts';
-import { OPDS, createOPDS }                                                         from './lib/opds.ts'
+import { OPDS, createOPDS }                                                         from './lib/opds.ts';
 
 
 /**
