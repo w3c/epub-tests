@@ -17,7 +17,7 @@
                 "title": "mol-support_xhtml-fxl",
                 "author": "Ivan Herman",
                 "description": "Tests whether the Reading System supports playback for XHTML content documents in fixed layout.",
-                "collection": "Media Overlays",
+                "collection": "Fixed Layout",
                 "modified": "2023-01-11T00:00:00Z",
                 "publisher": "W3C",
                 "subject": [
@@ -35,8 +35,8 @@
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
                     "type": "image/png",
-                    "height": 849,
-                    "width": 600
+                    "height": 2123,
+                    "width": 1500
                 },
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
@@ -69,8 +69,8 @@
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
                     "type": "image/png",
-                    "height": 849,
-                    "width": 600
+                    "height": 2123,
+                    "width": 1500
                 },
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
@@ -85,7 +85,7 @@
                 "title": "pkg-dir_creator-rtl",
                 "author": "Dave Cramer",
                 "description": "The 'dc:creator' element's 'dir' attribute is set to 'rtl'; the creator's name should display right-to-left.",
-                "collection": "Internationalization",
+                "collection": "Fixed Layout",
                 "modified": "2021-02-03T00:00:00Z",
                 "publisher": "W3C",
                 "subject": [
@@ -103,8 +103,8 @@
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
                     "type": "image/png",
-                    "height": 849,
-                    "width": 600
+                    "height": 2123,
+                    "width": 1500
                 },
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
@@ -119,7 +119,7 @@
                 "title": "pkg-collections-unknown",
                 "author": "Dave Cramer",
                 "description": "The package document contains a collection with an unknown role. The reading system must open the EPUB successfully.",
-                "collection": "Package Documents",
+                "collection": "Fixed Layout",
                 "modified": "2021-01-26T00:00:00Z",
                 "publisher": "W3C",
                 "subject": [
@@ -137,8 +137,8 @@
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
                     "type": "image/png",
-                    "height": 849,
-                    "width": 600
+                    "height": 2123,
+                    "width": 1500
                 },
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
@@ -159,7 +159,7 @@
                     "Brady Duga"
                 ],
                 "description": "Several creators are listed in the package document. The reading system must not display them out of order (but it may display only the first).",
-                "collection": "Package Documents",
+                "collection": "Fixed Layout",
                 "modified": "2021-01-11T00:00:00Z",
                 "publisher": "W3C",
                 "subject": [
@@ -177,8 +177,8 @@
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
                     "type": "image/png",
-                    "height": 849,
-                    "width": 600
+                    "height": 2123,
+                    "width": 1500
                 },
                 {
                     "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",

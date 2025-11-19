@@ -66,8 +66,8 @@ export function createOPDS(tests: TestData[]): OPDS {
     const images: ImageLink[] = [{
         href   : `${Constants.OPDS_DIR_URL}/${Constants.DOC_OPDS_COVER_PNG}`,
         type   : 'image/png',
-        height : 849,
-        width  : 600,
+        height : 2123,
+        width  : 1500,
     },{
         href : `${Constants.OPDS_DIR_URL}/${Constants.DOC_OPDS_COVER_SVG}`,
         type : 'image/svg',
