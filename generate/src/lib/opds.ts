@@ -5,42 +5,42 @@
  *  @packageDocumentation
  */
 
-import { TestData, Constants } from './types.ts';
-import { stringComparison }    from './data.ts';
+import { type TestData, Constants } from './types.ts';
+import { stringComparison         }    from './data.ts';
 
 /* ------------------------------------------------------------------------------------------------------ */
 /*                     Subset of OPDS specification used here in Typescript types                         */
 /* ------------------------------------------------------------------------------------------------------ */
 
 interface PublicationMetadata {
-    "@type": string;
-    identifier: string;
-    title: string;
-    author: string | string[];
-    description: string;
-    collection: string;
-    modified: string;
-    publisher: string;
-    subject: string | string[];
+    "@type"     : string;
+    identifier  : string;
+    title       : string;
+    author      : string | string[];
+    description : string;
+    collection  : string;
+    modified    : string;
+    publisher   : string;
+    subject     : string | string[];
 }
 
 interface PublicationLink {
-    type: string;
-    rel: string;
-    href: string;
+    type : string;
+    rel  : string;
+    href : string;
 }
 
 interface ImageLink {
-    type: string;
-    href: string;
-    height?: number;
-    width?: number;
+    type    : string;
+    href    : string;
+    height ?: number;
+    width  ?: number;
 }
 
 interface Publication {
-    metadata: PublicationMetadata;
-    links: PublicationLink[];
-    images: ImageLink[];
+    metadata : PublicationMetadata;
+    links    : PublicationLink[];
+    images   : ImageLink[];
 }
 
 /**
@@ -51,8 +51,8 @@ export interface OPDS {
     metadata: {
         title: string;
     };
-    links : PublicationLink[];
-    publications: Publication[];
+    links        : PublicationLink[];
+    publications : Publication[];
 }
 
 /**

@@ -1,37 +1,38 @@
 {
-  "description": "Generation of index and resolutions' files for EPUB tests and test results.",
-  // Version 1.1.0 adds the concept and management of deprecated tests
-  "version": "1.1.0.",
-  "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "dom.asynciterable",
-      "esnext",
-      "deno.ns"
-    ]
-  },
-  "fmt": {
-    "useTabs": true,
-    "lineWidth": 180,
-    "indentWidth": 4,
-    "proseWrap": "preserve"
-  },
-  "tasks": {
-    "generate": {
-        "description" : "This is the command ran via a github action: run all the report generation.",
-        "command"     : "deno run -A main.ts"
+    "description": "Generation of index and resolutions' files for EPUB tests and test results.",
+    // Version 1.1.0 adds the concept and management of deprecated tests
+    "version": "1.1.0.",
+    "compilerOptions": {
+        "lib": ["dom", "dom.iterable", "dom.asynciterable", "esnext", "deno.ns"]
     },
-    "debug": {
-        "description" : "Run the generation script, but on the 'local_tests' folder; saves running the script on the full test suite.",
-        "command"     :  "deno run -A main.ts -t"
+    "fmt": {
+        "useTabs": true,
+        "lineWidth": 180,
+        "indentWidth": 4,
+        "proseWrap": "preserve"
     },
-    // The names tell them all: utility to modify, if necessary, the metadata for all tests
-    // this is necessary if a new metadata has to be added to all, change or modify the metadata.
-    // The real "meat" is in the code, which have all the general logic to access and modify
-    // the metadata of the respective OPF files
-    "add_metadata"     : "deno run -A add_metadata.ts",
-    "massage_metadata" : "deno run -A massage_metadata.ts",
-    "modify_metadata"  : "deno run -A change_opf.ts"
-  }
+    "imports": {
+        "jszip"              : "npm:jszip@^3.10.1",
+        "xml2js"             : "npm:xml2js@^0.6.2",
+        "path"               : "jsr:@std/path",
+        "jsdom"              : "npm:jsdom@^27.2.0",
+        "js-beautify"        : "npm:js-beautify@^1.15.4"
+    },
+    "tasks": {
+        "generate": {
+            "description": "This is the command ran via a github action: run all the report generation.",
+            "command": "deno run -A main.ts"
+        },
+        "debug": {
+            "description": "Run the generation script, but on the 'local_tests' folder; saves running the script on the full test suite.",
+            "command": "deno run -A main.ts -t"
+        },
+        // The names tell them all: utility to modify, if necessary, the metadata for all tests
+        // this is necessary if a new metadata has to be added to all, change or modify the metadata.
+        // The real "meat" is in the code, which have all the general logic to access and modify
+        // the metadata of the respective OPF files
+        "add_metadata": "deno run -A add_metadata.ts",
+        "massage_metadata": "deno run -A massage_metadata.ts",
+        "modify_metadata": "deno run -A change_opf.ts"
+    }
 }

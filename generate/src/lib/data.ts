@@ -10,9 +10,7 @@
  *
  */
 
-import { promises as fs } from 'node:fs';
-import * as fs_old_school from 'node:fs';
-import * as xml2js        from 'npm:xml2js';
+import * as xml2js from 'xml2js';
 
 import {
     TestData,
@@ -48,7 +46,7 @@ export function stringComparison(a: string, b: string): number {
 export async function get_opf_file(dirname: string): Promise<string> {
     let container_xml: string;
     try {
-        container_xml = await fs.readFile(`${dirname}/${Constants.CONTAINER_FILE}`, 'utf-8');
+        container_xml = await Deno.readTextFile(`${dirname}/${Constants.CONTAINER_FILE}`);
     } catch (_error) {
         console.warn(`Container.xml file could not be accessed in Directory ${dirname}`);
         throw (`"container.xml" file could not be accessed in directory "${dirname}"`)
@@ -76,7 +74,7 @@ export async function get_opf_file(dirname: string): Promise<string> {
 async function get_opf(dirname: string): Promise<string> {
     const fname: string = await get_opf_file(dirname);
     try {
-        return await fs.readFile(`${dirname}/${fname}`,'utf-8');
+        return await Deno.readTextFile(`${dirname}/${fname}`);
     } catch (_error) {
         throw (`OPF file could not be accessed in directory "${dirname}/${fname}"`)
     }
@@ -90,7 +88,7 @@ async function get_opf(dirname: string): Promise<string> {
  * @internal
  */
 export function isDirectory(name: string): boolean {
-    return fs_old_school.lstatSync(name).isDirectory();
+    return Deno.lstatSync(name).isDirectory;
 }
 
 
@@ -101,7 +99,7 @@ export function isDirectory(name: string): boolean {
  * @internal
  */
 export function isFile(name: string): boolean {
-    return fs_old_school.lstatSync(name).isFile();
+    return Deno.lstatSync(name).isFile;
 }
 
 
@@ -122,7 +120,10 @@ export async function getListDir(dir_name: string, filter_name: (name: string) =
         return name.startsWith('xx-') === false && filter_name(`${dir_name}/${name}`);
     }
     try {
-        const file_names = await fs.readdir(dir_name);
+        const file_names: string[] = [];
+        for await(const entry of Deno.readDir(dir_name)) {
+            file_names.push(entry.name);
+        }
         return file_names.filter(file_name_filter)
     } catch (error) {
         console.warn(`Directory "${dir_name}" could not be accessed ()`);
@@ -164,7 +165,7 @@ async function getAnImplementationReport(fname: string): Promise<ImplementationR
             },{});
     };
 
-    const raw_data = await fs.readFile(fname, 'utf-8');
+    const raw_data = await Deno.readTextFile(fname);
     const raw_report: Raw_ImplementationReport = JSON.parse(raw_data) as Raw_ImplementationReport;
     return {
         name    : raw_report.name,

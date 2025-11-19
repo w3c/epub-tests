@@ -5,8 +5,7 @@
  *  @packageDocumentation
  */
 
-import { ImplementationTable, Constants, ReportData } from './types.ts';
-import * as fs                                        from 'node:fs';
+import { type ImplementationTable, Constants, type ReportData } from './types.ts';
 
 /**
  * External configuration type
@@ -102,7 +101,7 @@ function sortImplementationTable(config: Config, table: ImplementationTable[]): 
 export function applyConfigurationOptions(report: ReportData): ReportData {
     try {
         // 1. Get the configuration file. If there are issues, just return the original data, unchanged.
-        const config_text = fs.readFileSync(Constants.CONFIG_FILE, 'utf-8');
+        const config_text = Deno.readTextFileSync(Constants.CONFIG_FILE);
         const config: Config = JSON.parse(config_text) as Config;
 
         // 2. get the document references right

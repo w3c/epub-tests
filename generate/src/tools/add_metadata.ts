@@ -1,21 +1,18 @@
 /**
  * Adding extra metadata to the tests.
- * 
- * Note that this module is _not_ part of the report generation; it is supposed to be ran separately. It is kept alongside the 
+ *
+ * Note that this module is _not_ part of the report generation; it is supposed to be ran separately. It is kept alongside the
  * report generation script because it reuses some tools in the library.
- * 
+ *
  * Note that the generation of an EPUB file (ie, the zipped content) is done in a separate module in the library.
- * 
- * 
+ *
+ *
  *  @packageDocumentation
  */
 
-import * as fs_old_school from "fs";
-const fs = fs_old_school.promises;
-
-import {getListDir, isDirectory, get_opf_file} from './lib/data.ts';
-import { Constants }                           from './lib/types.ts';
-import { createEPUB }                          from './lib/epub.ts';
+import { getListDir, isDirectory, get_opf_file } from './lib/data.ts';
+import { Constants }                             from './lib/types.ts';
+import { createEPUB }                            from './lib/epub.ts';
 
 /**
  * Main entry point for the separate metadata extension: modify the OPF file for each test directory, and generate the epub files themselves.
@@ -25,7 +22,7 @@ async function main(new_metadata: string[], cut_off_pattern: string): Promise<vo
     const handle_single_test_metadata = async (file_name: string): Promise<void> => {
         const opf_file_name = await get_opf_file(file_name)
         const opf_file = await `${file_name}/${opf_file_name}`;
-        const package_xml = await fs.readFile(opf_file,'utf-8');
+        const package_xml = await Deno.readTextFile(opf_file);
         const lines: string[] = package_xml.split(/\n/);
         // let us avoid doing things twice...
         if (lines.indexOf(new_metadata[0]) === -1) {
@@ -39,9 +36,9 @@ async function main(new_metadata: string[], cut_off_pattern: string): Promise<vo
 
             // 2. insert the extra data
             const final_lines = [...lines.slice(0,index), ...new_metadata, ...lines.slice(index)];
-        
+
             // 3. Write back the data into the OPF file
-            await fs.writeFile(opf_file, final_lines.join('\n'));
+            await Deno.writeTextFile(opf_file, final_lines.join('\n'));
         }
     }
 
@@ -57,7 +54,7 @@ async function main(new_metadata: string[], cut_off_pattern: string): Promise<vo
 }
 
 
-// =========================== Entry point for adding expressions for rights ======== 
+// =========================== Entry point for adding expressions for rights ========
 /**
  * The extra metadata items to be added to the package metadata
  */

@@ -1,29 +1,27 @@
 /**
  * Change the OPF content.
- * 
- * Note that this module is _not_ part of the report generation; it is supposed to be ran separately. It is kept alongside the 
+ *
+ * Note that this module is _not_ part of the report generation; it is supposed to be ran separately. It is kept alongside the
  * report generation script because it reuses some tools in the library.
- * 
+ *
  * The generation of an EPUB file (ie, the zipped content) is done in a separate module in the library.
- * 
- * 
+ *
+ *
  *  @packageDocumentation
  */
 
-import * as fs_old_school from "fs";
-const fs = fs_old_school.promises;
 
 import {getListDir, isDirectory, get_opf_file} from './lib/data.ts';
 import { Constants }                           from './lib/types.ts';
 import { createEPUB }                          from './lib/epub.ts';
-import { JSDOM }                               from 'npm:jsdom';
+import { JSDOM }                               from 'jsdom';
 
 
 /**
  * Filter a directory name, removing 'Attic' and 'Done', used in the local debug
- * 
+ *
  * @param name proposed directory name
- * @returns 
+ * @returns
  */
 function filter_locals(name: string): boolean {
     return name.includes('Attic') === false && name.includes('Done') === false && isDirectory(name);
@@ -31,7 +29,7 @@ function filter_locals(name: string): boolean {
 
 /**
  * Change the title to the ID of the test (used as a result of the discussion at TPAC'22)
- * 
+ *
  * @param current The text version (ie, before parse) of the OPF content
  * @returns The text version of the new OPF content
  */
@@ -61,10 +59,10 @@ function title_to_id(current: string) :string {
 }
 
 /**
- * Main entry point for the separate metadata transform: modify the OPF file for each test directory, 
+ * Main entry point for the separate metadata transform: modify the OPF file for each test directory,
  * and generate the epub files themselves.
- * 
- * @param dir_name the top level name of the directory. Can be TEST_DIR or TEST_DIR_DEBUG 
+ *
+ * @param dir_name the top level name of the directory. Can be TEST_DIR or TEST_DIR_DEBUG
  * @param transform the transformation function to be used for the OPF content
  * @async
  */
@@ -72,10 +70,10 @@ async function main(dir_name: string, transform: (current: string) => string): P
     const handle_single_test_metadata = async (file_name: string): Promise<void> => {
         const opf_file_name = await get_opf_file(file_name);
         const opf_file = await `${file_name}/${opf_file_name}`;
-        const package_xml = await fs.readFile(opf_file,'utf-8');
-        
+        const package_xml = await Deno.readTextFile(opf_file);
+
         const new_opf_file = transform(package_xml);
-        await fs.writeFile(opf_file, new_opf_file);
+        await Deno.writeTextFile(opf_file, new_opf_file);
     }
 
     const dirs: string[] = await getListDir(dir_name, filter_locals);
@@ -90,6 +88,6 @@ async function main(dir_name: string, transform: (current: string) => string): P
 }
 
 
-// =========================== Entry point for adding expressions for rights ======== 
+// =========================== Entry point for adding expressions for rights ========
 
 main(Constants.TESTS_DIR, title_to_id);

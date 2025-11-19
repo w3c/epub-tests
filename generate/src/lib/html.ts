@@ -5,8 +5,9 @@
  *  @packageDocumentation
  */
 
-import { ReportData, Implementer, Constants, Score, HTMLFragments, ReqType} from './types.ts';
-import { JSDOM }                                                            from 'npm:jsdom';
+import type { ReportData, Implementer, HTMLFragments } from './types.ts';
+import { Constants, Score, ReqType }                   from './types.ts';
+import { JSDOM }                                       from 'jsdom';
 import { beautify } from './beautify.ts';
 
 /**

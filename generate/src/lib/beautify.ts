@@ -1,4 +1,4 @@
-import * as jsBeautify from "npm:js-beautify@^1.15.4";
+import * as jsBeautify from "js-beautify";
 
 /** Suffix mapping to beautify options */
 export type ConfigOptions = Record<string, number | boolean | string>;
