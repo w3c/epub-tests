@@ -181,9 +181,9 @@
 				// ... and change the visibility
 				for (const section of section_all) {
 					section.hidden = (current_state === HIDE);
-					const selector = `a[href="#sec-consolidated-${section.id}-results"]`
+					const selector = `a[href="#sec-consolidated-${section.id}-results"]`;
 					const toc_a = document.querySelector(selector);
-					toc_a.parentNode.hidden = (current_state === HIDE);
+                    if (toc_a) toc_a.parentNode.hidden = (current_state === HIDE);
 				}
 
 				// Collect all relevant `<tr>` elements...
@@ -202,19 +202,19 @@
 				row_visibility(current_state);
 			}
 
-			window.addEventListener('load', () => {
-				// This is the initial setup
-				// At first run the visibility is not yet set, so it must be set to a default.
-				let current_state = localStorage.getItem(STORAGE_KEY);
-				if (current_state === null) {
-					localStorage.setItem(STORAGE_KEY, SHOW);
-					current_state = SHOW;
-				}
-				row_visibility(current_state);
+			// window.addEventListener('load', () => {
+			// 	// This is the initial setup
+			// 	// At first run the visibility is not yet set, so it must be set to a default.
+			// 	let current_state = localStorage.getItem(STORAGE_KEY);
+			// 	if (current_state === null) {
+			// 		localStorage.setItem(STORAGE_KEY, SHOW);
+			// 		current_state = SHOW;
+			// 	}
+			// 	row_visibility(current_state);
 
-				const change_button = document.getElementById('should_may_visibility');
-				change_button.addEventListener('click', clicked);
-			});
+			// 	const change_button = document.getElementById('should_may_visibility');
+			// 	change_button.addEventListener('click', clicked);
+			// });
 		</script>
 	</head>
 
@@ -275,5 +275,20 @@
 		<section data-include='generate/fragments/consolidated_results.html' data-include-replace='true'></section>
 		<section data-include='generate/fragments/complete_results.html' data-include-replace='true'></section>
 
+        <script>
+            window.addEventListener('load', () => {
+                // This is the initial setup
+                // At first run the visibility is not yet set, so it must be set to a default.
+                let current_state = localStorage.getItem(STORAGE_KEY);
+                if (current_state === null) {
+                    localStorage.setItem(STORAGE_KEY, SHOW);
+                    current_state = SHOW;
+                }
+                row_visibility(current_state);
+
+                const change_button = document.getElementById('should_may_visibility');
+                change_button.addEventListener('click', clicked);
+            });
+        </script>
 	</body>
 </html>
