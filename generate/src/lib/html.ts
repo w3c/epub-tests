@@ -186,14 +186,6 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
  * @returns Serialized XML for an HTML fragment
  */
 function createTestData(data: ReportData): string {
-    // Add the button to switch the visibility of should/may tests on and off
-    const addVisibilityButton = (parent: HTMLElement): void => {
-        const div = addChild(parent, "div");
-        div.id = "button_container";
-        const button = addChild(div, "button", "Switch visibility");
-        button.id = "should_may_visibility"
-        button.setAttribute("type", "button");
-    };
 
     const dom: DocumentFragment = JSDOM.fragment('<section id="sec-test-tables"><h2>Description of the Tests</h2></section>');
     const full_section: HTMLElement|null = dom.querySelector('section');
@@ -203,9 +195,6 @@ function createTestData(data: ReportData): string {
         // does not realize that and we want to keep it happy.
         throw new Error('Unable to create the test data section: no section element found');
     }
-
-    // Add the visibility switch button
-    addVisibilityButton(full_section);
 
     for (const table of data.tables) {
         // Each table is enclosed in a separate subsection

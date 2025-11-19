@@ -86,7 +86,7 @@
 				background-color: hsl(241, 0%, 78%) !important;
 			}
 
-			
+
 			body.darkmode table.zebra tr:nth-child(odd) {
 				background-color: hsl(241, 0%, 30%) !important;
 			}
@@ -104,9 +104,9 @@
 			}
 
 			div#button_container {
-				display: flex; 
-				justify-content: center; 
-				align-items: center;				
+				display: flex;
+				justify-content: center;
+				align-items: center;
 			}
 
 			button#should_may_visibility {
@@ -118,7 +118,7 @@
 				background-color: #005a9c;
 				color: white;
 			}
-			
+
 			button#should_may_visibility span {
 				font-size: 90%;
 			}
@@ -163,7 +163,7 @@
 			// is valid across the two report files.
 			const HIDE = "true";
 			const SHOW = "false";
-			const STORAGE_KEY = 'hide_should_may_tests';
+			const STORAGE_KEY = 'hide_should_may_results';
 
 			function row_visibility(current_state) {
 				// Modify the inline text to reflect the visibility status
@@ -171,8 +171,8 @@
 				span.textContent = current_state === HIDE ? "hidden" : "visible";
 
 				const change_button = document.getElementById('should_may_visibility');
-				change_button.innerHTML = current_state === HIDE ? 
-					"Currently showing the results for <span>MUST</span> tests only; click here to show all test results" : 
+				change_button.innerHTML = current_state === HIDE ?
+					"Currently showing the results for <span>MUST</span> tests only; click here to show all test results" :
 					"Currently showing all test results; click here to show the results for <span>MUST</span> tests only";
 
 				// Collect all relevant `<section>` elements...
@@ -186,8 +186,8 @@
 					toc_a.parentNode.hidden = (current_state === HIDE);
 				}
 
-				// Collect all relevant `<tr>` elements... 
-				const tr_all = document.querySelectorAll("td.should, td.may");
+				// Collect all relevant `<tr>` elements...
+				const tr_all = document.querySelectorAll("td.should, td.may, td.deprecated");
 
 				// ... and change the visibility
 				for (const td of tr_all) {
@@ -209,20 +209,20 @@
 				if (current_state === null) {
 					localStorage.setItem(STORAGE_KEY, SHOW);
 					current_state = SHOW;
-				} 
+				}
 				row_visibility(current_state);
-				
+
 				const change_button = document.getElementById('should_may_visibility');
 				change_button.addEventListener('click', clicked);
 			});
 		</script>
 	</head>
-	
+
 	<body>
 		<section id="abstract">
 			<p>This documents shows the results of EPUB 3.4 Testing.
-				It corresponds to the <a href="https://w3c.github.io/epub-specs/epub34/authoring/">EPUB 3.4</a> specification's 
-				<a href="https://w3c.github.io/epub-specs/epub34/reports/exit_criteria#exit-criteria-core-1">category 1 exit criteria</a>, 
+				It corresponds to the <a href="https://w3c.github.io/epub-specs/epub34/authoring/">EPUB 3.4</a> specification's
+				<a href="https://w3c.github.io/epub-specs/epub34/reports/exit_criteria#exit-criteria-core-1">category 1 exit criteria</a>,
 				as well as the complete <a href="https://w3c.github.io/epub-specs/epub34/reports/exit_criteria#exit-criteria-rs">exit criteria</a>
 				for the <a href="https://w3c.github.io/epub-specs/epub34/rs/">EPUB 3.4 Reading Systems</a> specification.
 			</p>
@@ -255,7 +255,7 @@
 			<p>
 				The <code>should</code> and <code>may</code> tests are not necessary for the official CR testing of
 				the specifications. Implementors and the EPUB community may find these results useful, which is why they were gathered.
-				These tests are currently <span id="test_visibility">visible</span> in the tables; to change their visibility, click the 
+				These tests are currently <span id="test_visibility">visible</span> in the tables; to change their visibility, click the
 				switch visibility button below.
 			</p>
 
