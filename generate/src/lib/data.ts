@@ -19,7 +19,6 @@ import {
     ImplementationData, ImplementationTable,
     Implementer, ReportData,
     ReqType,
-    // Obsolete,
     Constants,
 } from './types.ts';
 
@@ -83,23 +82,32 @@ async function get_opf(dirname: string): Promise<string> {
 
 /**
  * See if a file name path refers to a real file.
- * Note: this function is only used in the utilities, not in the main program.
+ * Note: this function is also used in the utilities, not in the main program.
  *
  * @internal
  */
-export function isDirectory(name: string): boolean {
-    return Deno.lstatSync(name).isDirectory;
+export function isDirectory(name: string | Deno.DirEntry): boolean {
+    if (typeof name === 'string') {
+        return Deno.lstatSync(name).isDirectory;
+    } else {
+        return name.isDirectory;
+    }
 }
+
 
 
 /**
  * See if a file name path refers to a real file.
- * Note: this function is only used in the utilities, not in the main program.
+ * Note: this function is also used in the utilities, not in the main program.
  *
  * @internal
  */
-export function isFile(name: string): boolean {
-    return Deno.lstatSync(name).isFile;
+export function isFile(name: string | Deno.DirEntry): boolean {
+    if (typeof name === 'string') {
+        return Deno.lstatSync(name).isFile;
+    } else {
+        return name.isFile;
+    }
 }
 
 
@@ -110,21 +118,21 @@ export function isFile(name: string): boolean {
  * Depending on the final configuration some filters may have to be added.)
  *
  * @param dir_name name of the directory
- * @param filter_name a function to filter the retrieved list (e.g., no directories)
+ * @param filter_entry a function to filter the retrieved list (e.g., no directories)
  * @returns lists of files in the directory
  */
-export async function getListDir(dir_name: string, filter_name: (name: string) => boolean = (_name: string) => true): Promise<string[]> {
+export async function getListDir(dir_name: string, filter_entry: (entry: Deno.DirEntry) => boolean): Promise<string[]> {
     // The filter works on the full path, hence this extra layer
-    const file_name_filter = (name: string): boolean => {
+    const file_name_filter = (entry: Deno.DirEntry): boolean => {
         // The 'xx-' prefix are used for the template tests
-        return name.startsWith('xx-') === false && filter_name(`${dir_name}/${name}`);
+        return entry.name.startsWith('xx-') === false && filter_entry(entry);
     }
     try {
-        const file_names: string[] = [];
+        const file_names: Deno.DirEntry[] = [];
         for await(const entry of Deno.readDir(dir_name)) {
-            file_names.push(entry.name);
+            file_names.push(entry);
         }
-        return file_names.filter(file_name_filter)
+        return file_names.filter(file_name_filter).map((entry:Deno.DirEntry): string => entry.name);
     } catch (error) {
         console.warn(`Directory "${dir_name}" could not be accessed ()`);
         throw (`Directory "${dir_name}" could not be accessed (${error})`);
