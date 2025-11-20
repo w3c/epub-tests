@@ -162,54 +162,6 @@
 				}
 			};
 		</script>
-		<script>
-			// The current visibility state is stored in a local storage
-			// This means that the requested visibility is kept (in the same browser) and
-			// is valid across the two report files.
-			const ROW_HIDE = "true";
-			const ROW_SHOW = "false";
-			const STORAGE_KEY = 'hide_should_may_tests';
-
-			function row_visibility(current_state) {
-				// Modify the inline text to reflect the visibility status
-				const span = document.getElementById("test_visibility");
-				span.textContent = current_state === ROW_HIDE ? "hidden" : "visible";
-
-				const change_button = document.getElementById('should_may_visibility');
-				change_button.innerHTML = current_state === ROW_HIDE ?
-					"Currently showing only the <span>MUST</span> tests; click here to show all the tests" :
-					"Currently showing all the tests; click here to show only the <span>MUST</span> tests";
-
-				// Collect all relevant `<tr>` elements...
-				const tr_all = document.querySelectorAll("td.should, td.may, td.deprecated");
-
-				// ... and change the visibility
-				for (const td of tr_all) {
-					td.parentNode.hidden = (current_state === ROW_HIDE);
-				}
-			}
-
-			// Button clicked: change the status and regenerate the relevant tables
-			function clicked() {
-				let current_state = localStorage.getItem(STORAGE_KEY) === ROW_HIDE ? ROW_SHOW : ROW_HIDE;
-				localStorage.setItem(STORAGE_KEY, current_state);
-				row_visibility(current_state);
-			}
-
-			window.addEventListener('load', () => {
-				// This is the initial setup
-				// At first run the visibility is not yet set, so it must be set to a default.
-				let current_state = localStorage.getItem(STORAGE_KEY);
-				if (current_state === null) {
-					localStorage.setItem(STORAGE_KEY, ROW_SHOW);
-					current_state = ROW_SHOW;
-				}
-				row_visibility(current_state);
-
-				const change_button = document.getElementById('should_may_visibility');
-				change_button.addEventListener('click', clicked);
-			});
-		</script>
 	</head>
 	<body>
 		<section id="abstract">
@@ -314,5 +266,53 @@
 				}
 			});
 		</script>
+        <script>
+            // The current visibility state is stored in a local storage
+            // This means that the requested visibility is kept (in the same browser) and
+            // is valid across the two report files.
+            const ROW_HIDE = "true";
+            const ROW_SHOW = "false";
+            const STORAGE_KEY = 'hide_should_may_tests';
+
+            function row_visibility(current_state) {
+                // Modify the inline text to reflect the visibility status
+                const span = document.getElementById("test_visibility");
+                span.textContent = current_state === ROW_HIDE ? "hidden" : "visible";
+
+                const change_button = document.getElementById('should_may_visibility');
+                change_button.innerHTML = current_state === ROW_HIDE ?
+                    "Currently showing only the <span>MUST</span> tests; click here to show all the tests" :
+                    "Currently showing all the tests; click here to show only the <span>MUST</span> tests";
+
+                // Collect all relevant `<tr>` elements...
+                const tr_all = document.querySelectorAll("td.should, td.may, td.deprecated");
+
+                // ... and change the visibility
+                for (const td of tr_all) {
+                    td.parentNode.hidden = (current_state === ROW_HIDE);
+                }
+            }
+
+            // Button clicked: change the status and regenerate the relevant tables
+            function clicked() {
+                let current_state = localStorage.getItem(STORAGE_KEY) === ROW_HIDE ? ROW_SHOW : ROW_HIDE;
+                localStorage.setItem(STORAGE_KEY, current_state);
+                row_visibility(current_state);
+            }
+
+            window.addEventListener('load', () => {
+                // This is the initial setup
+                // At first run the visibility is not yet set, so it must be set to a default.
+                let current_state = localStorage.getItem(STORAGE_KEY);
+                if (current_state === null) {
+                    localStorage.setItem(STORAGE_KEY, ROW_SHOW);
+                    current_state = ROW_SHOW;
+                }
+                row_visibility(current_state);
+
+                const change_button = document.getElementById('should_may_visibility');
+                change_button.addEventListener('click', clicked);
+            });
+        </script>
 	</body>
 </html>

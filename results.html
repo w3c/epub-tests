@@ -157,65 +157,6 @@
 				}
 			};
 		</script>
-		<script>
-			// The current visibility state is stored in a local storage
-			// This means that the requested visibility is kept (in the same browser) and
-			// is valid across the two report files.
-			const HIDE = "true";
-			const SHOW = "false";
-			const STORAGE_KEY = 'hide_should_may_results';
-
-			function row_visibility(current_state) {
-				// Modify the inline text to reflect the visibility status
-				const span = document.getElementById("test_visibility");
-				span.textContent = current_state === HIDE ? "hidden" : "visible";
-
-				const change_button = document.getElementById('should_may_visibility');
-				change_button.innerHTML = current_state === HIDE ?
-					"Currently showing the results for <span>MUST</span> tests only; click here to show all test results" :
-					"Currently showing all test results; click here to show the results for <span>MUST</span> tests only";
-
-				// Collect all relevant `<section>` elements...
-				const section_all = document.querySelectorAll("section.optional_feature");
-
-				// ... and change the visibility
-				for (const section of section_all) {
-					section.hidden = (current_state === HIDE);
-					const selector = `a[href="#sec-consolidated-${section.id}-results"]`;
-					const toc_a = document.querySelector(selector);
-                    if (toc_a) toc_a.parentNode.hidden = (current_state === HIDE);
-				}
-
-				// Collect all relevant `<tr>` elements...
-				const tr_all = document.querySelectorAll("td.should, td.may, td.deprecated");
-
-				// ... and change the visibility
-				for (const td of tr_all) {
-					td.parentNode.hidden = (current_state === HIDE);
-				}
-			}
-
-			// Button clicked: change the status and regenerate the relevant tables
-			function clicked() {
-				let current_state = localStorage.getItem(STORAGE_KEY) === HIDE ? SHOW : HIDE;
-				localStorage.setItem(STORAGE_KEY, current_state);
-				row_visibility(current_state);
-			}
-
-			// window.addEventListener('load', () => {
-			// 	// This is the initial setup
-			// 	// At first run the visibility is not yet set, so it must be set to a default.
-			// 	let current_state = localStorage.getItem(STORAGE_KEY);
-			// 	if (current_state === null) {
-			// 		localStorage.setItem(STORAGE_KEY, SHOW);
-			// 		current_state = SHOW;
-			// 	}
-			// 	row_visibility(current_state);
-
-			// 	const change_button = document.getElementById('should_may_visibility');
-			// 	change_button.addEventListener('click', clicked);
-			// });
-		</script>
 	</head>
 
 	<body>
@@ -276,7 +217,51 @@
 		<section data-include='generate/fragments/complete_results.html' data-include-replace='true'></section>
 
         <script>
-            window.addEventListener('load', () => {
+                // The current visibility state is stored in a local storage
+                // This means that the requested visibility is kept (in the same browser) and
+                // is valid across the two report files.
+                const HIDE = "true";
+                const SHOW = "false";
+                const STORAGE_KEY = 'hide_should_may_results';
+
+                function row_visibility(current_state) {
+                    // Modify the inline text to reflect the visibility status
+                    const span = document.getElementById("test_visibility");
+                    span.textContent = current_state === HIDE ? "hidden" : "visible";
+
+                    const change_button = document.getElementById('should_may_visibility');
+                    change_button.innerHTML = current_state === HIDE ?
+                        "Currently showing the results for <span>MUST</span> tests only; click here to show all test results" :
+                        "Currently showing all test results; click here to show the results for <span>MUST</span> tests only";
+
+                    // Collect all relevant `<section>` elements...
+                    const section_all = document.querySelectorAll("section.optional_feature");
+
+                    // ... and change the visibility
+                    for (const section of section_all) {
+                        section.hidden = (current_state === HIDE);
+                        const selector = `a[href="#sec-consolidated-${section.id}-results"]`;
+                        const toc_a = document.querySelector(selector);
+                        if (toc_a) toc_a.parentNode.hidden = (current_state === HIDE);
+                    }
+
+                    // Collect all relevant `<tr>` elements...
+                    const tr_all = document.querySelectorAll("td.should, td.may, td.deprecated");
+
+                    // ... and change the visibility
+                    for (const td of tr_all) {
+                        td.parentNode.hidden = (current_state === HIDE);
+                    }
+                }
+
+                // Button clicked: change the status and regenerate the relevant tables
+                function clicked() {
+                    let current_state = localStorage.getItem(STORAGE_KEY) === HIDE ? SHOW : HIDE;
+                    localStorage.setItem(STORAGE_KEY, current_state);
+                    row_visibility(current_state);
+                }
+
+                window.addEventListener('load', () => {
                 // This is the initial setup
                 // At first run the visibility is not yet set, so it must be set to a default.
                 let current_state = localStorage.getItem(STORAGE_KEY);
