@@ -30,19 +30,20 @@
 export namespace Constants {
     export const EPUB_VERSION: string = '3.4';
 
-    /** Location for the tests themselves */
-    export const TESTS_DIR: string = '../../tests';
-
-    export const TESTS_DIR_DEBUG: string = '../../local_tests';
-
-    /** Location for the implementation reports */
-    export const TEST_RESULTS_DIR: string = '../../reports';
-
-    /** Location for the final report */
+    /** Location for the tests, final report, and adjacent files */
     export const DOCS_DIR: string = '../../';
 
+    /** Location for the final debug tests, report, and adjacent files */
+    export const DOCS_DIR_DEBUG: string = '../../debug/';
+
+    /** Location for the tests themselves */
+    export const TESTS_DIR: string = 'tests';
+
+    /** Location for the implementation reports */
+    const TEST_RESULTS_DIR: string = 'reports';
+
     /** Relative location for the final OPDS data */
-    export const OPDS_DIR: string = '../../opds';
+    export const OPDS_DIR: string = 'opds';
 
     export const OPDS_DIR_URL: string = 'https://w3c.github.io/epub-tests/opds';
 
@@ -55,9 +56,6 @@ export namespace Constants {
     /** (Relative) File name of the OPDS file */
     export const DOC_OPDS_COVER_SVG: string = 'test_cover.svg';
 
-    /** Location for the implementation report templates */
-    export const TEST_RESULTS_TEMPLATE: string = `${TEST_RESULTS_DIR}/xx-template.json`;
-
     /** Base URL for the tests in the repository */
     export const TEST_URL_BASE: string = 'https://github.com/w3c/epub-tests/tree/main/tests';
 
@@ -67,27 +65,95 @@ export namespace Constants {
     /** Location of the container file within the test directory */
     export const CONTAINER_FILE: string = 'META-INF/container.xml';
 
-    /** Location for the HTML fragment on implementation lists */
-    export const IMPL_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/implementations.html`;
-
-    /** Location for the HTML fragment on the consolidated implementation results */
-    export const CONSOLIDATED_RESULT_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/consolidated_results.html`;
-
-    /** Location for the HTML fragment on the detailed implementation results */
-    export const COMPLETE_RESULT_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/complete_results.html`;
-
-    /** Location for the HTML fragment on test metadata */
-    export const TEST_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/tests.html`;
-
-    /** Location for the HTML fragment on test creators */
-    export const CREATORS_FRAGMENT: string = `${DOCS_DIR}/generate/fragments/creators.html`;
-
     /** (Relative) File name of the test results */
     export const DOC_TEST_RESULTS: string = 'results.html';
 
     /** (Relative) File name of the test descriptions */
     export const DOC_TEST_DESCRIPTIONS: string = 'index.html';
 
+    /**
+  * Constant-like function: a number of references are dependent on whether
+  * the script is ran in debug mode or not. These values should be constants if they were simply
+  * used directly, without debugs...
+  */
+    export function final_constants(debug: boolean): string[] {
+        if (debug) {
+            return [
+                // The constants in the comments refer to the variable names used in main.ts */
+                /* Location for the tests, TESTS_DIR */
+                `${DOCS_DIR_DEBUG}${TESTS_DIR}`,
+
+                /* Location for the HTML fragment on implementation lists, IMPL_FRAGMENT */
+                `${DOCS_DIR_DEBUG}generate/fragments/implementations.html`,
+
+                /* Location for the HTML fragment on the consolidated implementation results, CONSOLIDATED_RESULT_FRAGMENT */
+                `${DOCS_DIR_DEBUG}generate/fragments/consolidated_results.html`,
+
+                /* Location for the HTML fragment on the detailed implementation results, COMPLETE_RESULT_FRAGMENT */
+                `${DOCS_DIR_DEBUG}generate/fragments/complete_results.html`,
+
+                /* Location for the HTML fragment on test metadata, TEST_FRAGMENT */
+                `${DOCS_DIR_DEBUG}generate/fragments/tests.html`,
+
+                /* Location for the HTML fragment on test creators, CREATORS_FRAGMENT */
+                `${DOCS_DIR_DEBUG}generate/fragments/creators.html`,
+
+                /* Location for the test results, TEST_RESULTS_DIR */
+                `${DOCS_DIR_DEBUG}${TEST_RESULTS_DIR}/`,
+
+                /* Location for the implementation report templates, TEST_RESULTS_TEMPLATE */
+                `${DOCS_DIR_DEBUG}${TEST_RESULTS_DIR}/xx-template.json`,
+
+                /* Location for the implementation report templates, OPDS */
+                `${DOCS_DIR_DEBUG}${OPDS_DIR}/${DOC_OPDS}`,
+
+                /* (Relative) File name of the test results, DOC_TEST_RESULTS */
+                `${DOCS_DIR_DEBUG}${DOC_TEST_RESULTS}`,
+
+                /* (Relative) File name of the test descriptions DOC_TEST_DESCRIPTIONS */
+                `${DOCS_DIR_DEBUG}${DOC_TEST_DESCRIPTIONS}`
+            ];
+        } else {
+            return [
+                // The constants in the comments refer to the variable names used in main.ts */
+                /* Location for the tests, TESTS_DIR */
+                /* Location for the tests */
+                `${DOCS_DIR}${TESTS_DIR}`,
+
+                /* Location for the HTML fragment on implementation lists, IMPL_FRAGMENT */
+                `${DOCS_DIR}generate/fragments/implementations.html`,
+
+                /* Location for the HTML fragment on the consolidated implementation results, CONSOLIDATED_RESULT_FRAGMENT */
+                `${DOCS_DIR}generate/fragments/consolidated_results.html`,
+
+                /* Location for the HTML fragment on the detailed implementation results, COMPLETE_RESULT_FRAGMENT */
+                `${DOCS_DIR}generate/fragments/complete_results.html`,
+
+                /* Location for the HTML fragment on test metadata, TEST_FRAGMENT */
+                `${DOCS_DIR}generate/fragments/tests.html`,
+
+                /* Location for the HTML fragment on test creators, CREATORS_FRAGMENT */
+                `${DOCS_DIR}generate/fragments/creators.html`,
+
+                /* Location for the test results, TEST_RESULTS_DIR */
+                `${DOCS_DIR}${TEST_RESULTS_DIR}/`,
+
+                /* Location for the implementation report templates, TEST_RESULTS_TEMPLATE */
+                `${DOCS_DIR}${TEST_RESULTS_DIR}/xx-template.json`,
+
+                /* Location for the implementation report templates, OPDS */
+                `${DOCS_DIR}${OPDS_DIR}/${DOC_OPDS}`,
+
+                /* (Relative) File name of the test results, DOC_TEST_RESULTS */
+                `${DOCS_DIR}${DOC_TEST_RESULTS}`,
+
+                /* (Relative) File name of the test descriptions DOC_TEST_DESCRIPTIONS */
+                `${DOCS_DIR}${DOC_TEST_DESCRIPTIONS}`
+            ];
+        }
+    }
+
+    // ------------------------------------------------------------------------------------------------------
     /**
      * List of test ID-s whose creators should not be considered for display; these appear in some I18N tests
      * that are used to test the bidi of the creator strings themselves.
@@ -121,10 +187,13 @@ export namespace Constants {
     /** Config file location */
     export const CONFIG_FILE: string = `../config.json`;
 
+    /** The official EPUB Media type */
     export const EPUB_MEDIA_TYPE: string = 'application/epub+zip';
 
+    /** List of optional features which are tested for conformance reasons */
     export const OPTIONAL_FEATURES: string[] = ["Media Overlays", "Structural Semantics", "Scripting"];
 }
+
 
 /**
  * The three possible values for the conformance level of a test, plus

@@ -21,6 +21,9 @@ typings/
 
 # Local tests
 local_tests/
+local_generate/
+local_debug/
+debug/
 
 # Null-tests
 reports/null-test.json

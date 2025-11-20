@@ -52,27 +52,40 @@ async function adjust_date(fname: string): Promise<void> {
  * Main entry point: generate the reports' html fragment files (i.e., the real "meat" for the data) and a template file
  */
 async function main() {
-    const test_dir = (Deno.args.length > 0 && Deno.args[0] === '-t') ? Constants.TESTS_DIR_DEBUG : Constants.TESTS_DIR ;
-    const test_data: TestData[]              = await getTestData(test_dir);
-    const report_data: ReportData            = await getReportData(test_data, Constants.TEST_RESULTS_DIR);
+    // Get the final data for files and directories, depending on the debug flag
+    const [
+        TESTS_DIR,
+        IMPL_FRAGMENT,
+        CONSOLIDATED_RESULT_FRAGMENT,
+        COMPLETE_RESULT_FRAGMENT,
+        TEST_FRAGMENT,
+        CREATORS_FRAGMENT,
+        TEST_RESULTS_DIR,
+        TEST_RESULTS_TEMPLATE,
+        OPDS,
+        DOC_TEST_RESULTS,
+        DOC_TEST_DESCRIPTIONS
+    ] = Constants.final_constants((Deno.args.length > 0 && Deno.args[0] === '-t'));
+
+    const test_data: TestData[]              = await getTestData(TESTS_DIR);
+    const report_data: ReportData            = await getReportData(test_data, TEST_RESULTS_DIR);
     const template: Raw_ImplementationReport = getTemplate(report_data);
 
     const final_report_data: ReportData = applyConfigurationOptions(report_data);
-
     const { implementations, consolidated_results, complete_results, tests, creators }: HTMLFragments = createReport(final_report_data);
 
     const opds_data: OPDS = createOPDS(test_data);
 
     await Promise.all([
-        Deno.writeTextFile(Constants.IMPL_FRAGMENT, implementations),
-        Deno.writeTextFile(Constants.CONSOLIDATED_RESULT_FRAGMENT, consolidated_results),
-        Deno.writeTextFile(Constants.COMPLETE_RESULT_FRAGMENT, complete_results),
-        Deno.writeTextFile(Constants.TEST_FRAGMENT, tests),
-        Deno.writeTextFile(Constants.CREATORS_FRAGMENT, creators),
-        Deno.writeTextFile(Constants.TEST_RESULTS_TEMPLATE, JSON.stringify(template, null, 4)),
-        Deno.writeTextFile(`${Constants.OPDS_DIR}/${Constants.DOC_OPDS}`, JSON.stringify(opds_data, null, 4)),
-        adjust_date(`${Constants.DOCS_DIR}/${Constants.DOC_TEST_RESULTS}`),
-        adjust_date(`${Constants.DOCS_DIR}/${Constants.DOC_TEST_DESCRIPTIONS}`),
+        Deno.writeTextFile(IMPL_FRAGMENT, implementations),
+        Deno.writeTextFile(CONSOLIDATED_RESULT_FRAGMENT, consolidated_results),
+        Deno.writeTextFile(COMPLETE_RESULT_FRAGMENT, complete_results),
+        Deno.writeTextFile(TEST_FRAGMENT, tests),
+        Deno.writeTextFile(CREATORS_FRAGMENT, creators),
+        Deno.writeTextFile(TEST_RESULTS_TEMPLATE, JSON.stringify(template, null, 4)),
+        Deno.writeTextFile(OPDS, JSON.stringify(opds_data, null, 4)),
+        adjust_date(DOC_TEST_RESULTS),
+        adjust_date(DOC_TEST_DESCRIPTIONS),
     ]);
 }
 
