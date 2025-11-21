@@ -81,16 +81,18 @@ export async function recursiveWalk(dir: string, filter?: (f:string) => boolean)
  * @returns
  */
 async function getContent(entry_dir: string): Promise<FileContent[]> {
+
     const file_names: string[]  = await recursiveWalk(entry_dir, (fname: string): boolean => !(ignoredFiles.includes(path.basename(fname))));
     const content: Uint8Array[] = await Promise.all(file_names.map((fname) => Deno.readFile(fname)));
     const retval: FileContent[] = [];
 
+    const dir_basename = path.basename(entry_dir);
     for (let i = 0; i < file_names.length; i++) {
         retval.push({
             // What we need here is the file name relative to the start directory,
             // this is what the zip file creation uses
             // The last step removes the '/' character at the start of the string
-            path    : file_names[i].split(entry_dir)[1].slice(1),
+            path: file_names[i].split(dir_basename)[1].slice(1),
             content : content[i],
         });
     }

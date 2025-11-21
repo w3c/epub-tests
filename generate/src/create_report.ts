@@ -65,7 +65,7 @@ async function main() {
         OPDS,
         DOC_TEST_RESULTS,
         DOC_TEST_DESCRIPTIONS
-    ] = Constants.final_constants((Deno.args.length > 0 && Deno.args[0] === '-t'));
+    ] = Constants.final_constants((Deno.args.length > 0 && Deno.args[0] === '-d'));
 
     const test_data: TestData[]              = await getTestData(TESTS_DIR);
     const report_data: ReportData            = await getReportData(test_data, TEST_RESULTS_DIR);

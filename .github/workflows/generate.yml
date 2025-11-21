@@ -37,7 +37,7 @@ jobs:
       - name: Generate the index files
         # Details depend on where the script is located
         run: |
-          (cd generate/src; deno run -A main.ts; rm deno.lock)
+          (cd generate/src; deno run -A create_report.ts; rm deno.lock)
       - name: Setup Github Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
