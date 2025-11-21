@@ -47,10 +47,8 @@ export async function get_opf_file(dirname: string): Promise<string> {
     try {
         container_xml = await Deno.readTextFile(`${dirname}/${Constants.CONTAINER_FILE}`);
     } catch (_error) {
-        console.warn(`Container.xml file could not be accessed in Directory ${dirname}`);
         throw (`"container.xml" file could not be accessed in directory "${dirname}"`)
     }
-    // deno-lint-ignore no-explicit-any
     const container_js: any = await xml2js.parseStringPromise(container_xml, {
         trim          : true,
         normalizeTags : true,

@@ -1,14 +1,14 @@
 import { Constants }                             from './lib/types.ts';
 import { getListDir, isDirectory, get_opf_file } from "./lib/data.ts";
 import { createEPUB }                            from './lib/epub.ts';
-import { callbacks }                             from './tools/opf_callbacks.ts';
-
+import { callbacks }                             from './lib/opf_callbacks.ts';
 import { Command }                               from 'commander';
 
 type Callback = (text: string) => string;
 
 /**
- * Main entry point: generate the reports' html fragment files (i.e., the real "meat" for the data) and a template file
+ * Main entry point: go through all the tests, possibly modify their OPF file (depending on what is in the `callback` array)
+ * and generate the epub files themselves.
  */
 async function main() {
     const program = new Command();
@@ -25,18 +25,19 @@ async function main() {
     const modify = options.modify ?? false;
 
     const front_end = async (dir_test: string): Promise<void> => {
+        // Get the OPF file in the EPUB way: get the container file to get the name of the OPF file
         const opf_file_name = await get_opf_file(dir_test);
-        const opf_file      = await `${dir_test}/${opf_file_name}`;
+        const opf_file      = `${dir_test}/${opf_file_name}`;
         const package_xml   = await Deno.readTextFile(opf_file);
 
         // Perform whatever is to be performed on the opf file
-        let new_opf_file = package_xml;
+        let new_opf = package_xml;
         for (const callback of callbacks) {
-            new_opf_file = callback(new_opf_file);
+            new_opf = callback(new_opf);
         }
 
         // Write back the new opf file
-        await Deno.writeTextFile(opf_file, new_opf_file);
+        await Deno.writeTextFile(opf_file, new_opf);
     }
 
     // Get the final data for files and directories, depending on the debug flag
@@ -61,7 +62,6 @@ async function main() {
         const modify_promises = dirs.map((dir_test) => front_end(`${TESTS_DIR}/${dir_test}`));
         await Promise.all(modify_promises);
     }
-
     // Generate the epub files
     const epub_promises: Promise<void>[] = dirs.map((test) => createEPUB(`${TESTS_DIR}/${test}`));
     await Promise.all(epub_promises);

@@ -24,13 +24,12 @@ const ignoredFiles: string[] = ['.DS_Store', 'mimetype'];
  * Recursive walk through a directory. The return value is the list of the full paths of the files,
  * suitable for a file read.
  *
- * (The only reason this function is defined as 'export' is because it may be useful at some later point for
- * other purposes...)
+ *
  *
  * @param dir name of a directory
  * @param filter filter to remove unwanted file names from the result
  */
-export async function recursiveWalk(dir: string, filter?: (f:string) => boolean): Promise<string[]> {
+async function recursiveWalk(dir: string, filter?: (f:string) => boolean): Promise<string[]> {
     try {
         const content: string[] = [];
         for await (const entry of Deno.readDir(dir)) {
