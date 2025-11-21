@@ -72,85 +72,47 @@ export namespace Constants {
     export const DOC_TEST_DESCRIPTIONS: string = 'index.html';
 
     /**
-  * Constant-like function: a number of references are dependent on whether
-  * the script is ran in debug mode or not. These values should be constants if they were simply
-  * used directly, without debugs...
-  */
+     * Constant-like function: a number of references are dependent on whether
+     * the script is ran in debug mode or not. These values should be constants if they were simply
+     * used directly, without debugs...
+     */
     export function final_constants(debug: boolean): string[] {
-        if (debug) {
-            return [
-                // The constants in the comments refer to the variable names used in main.ts */
-                /* Location for the tests, TESTS_DIR */
-                `${DOCS_DIR_DEBUG}${TESTS_DIR}`,
+        const docs_dir = (debug) ? DOCS_DIR_DEBUG : DOCS_DIR;
+        return [
+            // The constants in the comments refer to the variable names used in main.ts */
+            /* Location for the tests, TESTS_DIR */
+            `${docs_dir}${TESTS_DIR}`,
 
-                /* Location for the HTML fragment on implementation lists, IMPL_FRAGMENT */
-                `${DOCS_DIR_DEBUG}generate/fragments/implementations.html`,
+            /* Location for the HTML fragment on implementation lists, IMPL_FRAGMENT */
+            `${docs_dir}generate/fragments/implementations.html`,
 
-                /* Location for the HTML fragment on the consolidated implementation results, CONSOLIDATED_RESULT_FRAGMENT */
-                `${DOCS_DIR_DEBUG}generate/fragments/consolidated_results.html`,
+            /* Location for the HTML fragment on the consolidated implementation results, CONSOLIDATED_RESULT_FRAGMENT */
+            `${docs_dir}generate/fragments/consolidated_results.html`,
 
-                /* Location for the HTML fragment on the detailed implementation results, COMPLETE_RESULT_FRAGMENT */
-                `${DOCS_DIR_DEBUG}generate/fragments/complete_results.html`,
+            /* Location for the HTML fragment on the detailed implementation results, COMPLETE_RESULT_FRAGMENT */
+            `${docs_dir}generate/fragments/complete_results.html`,
 
-                /* Location for the HTML fragment on test metadata, TEST_FRAGMENT */
-                `${DOCS_DIR_DEBUG}generate/fragments/tests.html`,
+            /* Location for the HTML fragment on test metadata, TEST_FRAGMENT */
+            `${docs_dir}generate/fragments/tests.html`,
 
-                /* Location for the HTML fragment on test creators, CREATORS_FRAGMENT */
-                `${DOCS_DIR_DEBUG}generate/fragments/creators.html`,
+            /* Location for the HTML fragment on test creators, CREATORS_FRAGMENT */
+            `${docs_dir}generate/fragments/creators.html`,
 
-                /* Location for the test results, TEST_RESULTS_DIR */
-                `${DOCS_DIR_DEBUG}${TEST_RESULTS_DIR}/`,
+            /* Location for the test results, TEST_RESULTS_DIR */
+            `${docs_dir}${TEST_RESULTS_DIR}/`,
 
-                /* Location for the implementation report templates, TEST_RESULTS_TEMPLATE */
-                `${DOCS_DIR_DEBUG}${TEST_RESULTS_DIR}/xx-template.json`,
+            /* Location for the implementation report templates, TEST_RESULTS_TEMPLATE */
+            `${docs_dir}${TEST_RESULTS_DIR}/xx-template.json`,
 
-                /* Location for the implementation report templates, OPDS */
-                `${DOCS_DIR_DEBUG}${OPDS_DIR}/${DOC_OPDS}`,
+            /* Location for the implementation report templates, OPDS */
+            `${docs_dir}${OPDS_DIR}/${DOC_OPDS}`,
 
-                /* (Relative) File name of the test results, DOC_TEST_RESULTS */
-                `${DOCS_DIR_DEBUG}${DOC_TEST_RESULTS}`,
+            /* (Relative) File name of the test results, DOC_TEST_RESULTS */
+            `${docs_dir}${DOC_TEST_RESULTS}`,
 
-                /* (Relative) File name of the test descriptions DOC_TEST_DESCRIPTIONS */
-                `${DOCS_DIR_DEBUG}${DOC_TEST_DESCRIPTIONS}`
-            ];
-        } else {
-            return [
-                // The constants in the comments refer to the variable names used in main.ts */
-                /* Location for the tests, TESTS_DIR */
-                /* Location for the tests */
-                `${DOCS_DIR}${TESTS_DIR}`,
-
-                /* Location for the HTML fragment on implementation lists, IMPL_FRAGMENT */
-                `${DOCS_DIR}generate/fragments/implementations.html`,
-
-                /* Location for the HTML fragment on the consolidated implementation results, CONSOLIDATED_RESULT_FRAGMENT */
-                `${DOCS_DIR}generate/fragments/consolidated_results.html`,
-
-                /* Location for the HTML fragment on the detailed implementation results, COMPLETE_RESULT_FRAGMENT */
-                `${DOCS_DIR}generate/fragments/complete_results.html`,
-
-                /* Location for the HTML fragment on test metadata, TEST_FRAGMENT */
-                `${DOCS_DIR}generate/fragments/tests.html`,
-
-                /* Location for the HTML fragment on test creators, CREATORS_FRAGMENT */
-                `${DOCS_DIR}generate/fragments/creators.html`,
-
-                /* Location for the test results, TEST_RESULTS_DIR */
-                `${DOCS_DIR}${TEST_RESULTS_DIR}/`,
-
-                /* Location for the implementation report templates, TEST_RESULTS_TEMPLATE */
-                `${DOCS_DIR}${TEST_RESULTS_DIR}/xx-template.json`,
-
-                /* Location for the implementation report templates, OPDS */
-                `${DOCS_DIR}${OPDS_DIR}/${DOC_OPDS}`,
-
-                /* (Relative) File name of the test results, DOC_TEST_RESULTS */
-                `${DOCS_DIR}${DOC_TEST_RESULTS}`,
-
-                /* (Relative) File name of the test descriptions DOC_TEST_DESCRIPTIONS */
-                `${DOCS_DIR}${DOC_TEST_DESCRIPTIONS}`
-            ];
-        }
+            /* (Relative) File name of the test descriptions DOC_TEST_DESCRIPTIONS */
+            `${docs_dir}${DOC_TEST_DESCRIPTIONS}`
+        ];
     }
 
     // ------------------------------------------------------------------------------------------------------
