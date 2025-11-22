@@ -8,7 +8,7 @@ import xmlFormat from 'xml-formatter';
  * @param opf
  * @returns
  */
-function change_date(opf: string): string {
+function _change_date(opf: string): string {
     const dom = new JSDOM(opf, { contentType: 'application/xml' });
     const document = dom.window.document;
     const metas = document.getElementsByTagName("meta");
@@ -31,15 +31,15 @@ function change_date(opf: string): string {
  * @param opf
  * @returns
  */
-function nop(opf: string): string {
+function _nop(opf: string): string {
     return opf;
 }
 
 type Callback = (text: string) => string;
 
 export const callbacks: Callback[] = [
-    change_date
-    // nop
+    // _change_date
+    // _nop
 ]
 
 
