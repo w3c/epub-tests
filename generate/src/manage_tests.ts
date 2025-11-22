@@ -18,11 +18,13 @@ async function main() {
         .usage('[options]')
         .option('-d --debug', 'run the script on the debug test suite')
         .option('-m --modify', 'modify the OPF contents')
+        .option('-n --noepub', 'do not generate EPUB files, just do the modifications')
         .parse(["", "", ...Deno.args]);
     const options = program.opts();
 
-    const debug = options.debug ?? false;
+    const debug  = options.debug ?? false;
     const modify = options.modify ?? false;
+    const noepub = options.noepub ?? false;
 
     const front_end = async (dir_test: string): Promise<void> => {
         // Get the OPF file in the EPUB way: get the container file to get the name of the OPF file
@@ -62,16 +64,18 @@ async function main() {
         const modify_promises = dirs.map((dir_test) => front_end(`${TESTS_DIR}/${dir_test}`));
         await Promise.all(modify_promises);
     }
-    // Generate the epub files
-    const epub_promises: Promise<void>[] = dirs.map((test) => createEPUB(`${TESTS_DIR}/${test}`));
-    const results = await Promise.allSettled(epub_promises);
-    const errors: string[] = [];
-    for (const entry of results) {
-        if (entry.status === "rejected") {
-            errors.push(entry.reason);
+    // If required, generate the epub files
+    if (noepub === false) {
+        const epub_promises: Promise<void>[] = dirs.map((test) => createEPUB(`${TESTS_DIR}/${test}`));
+        const results = await Promise.allSettled(epub_promises);
+        const errors: string[] = [];
+        for (const entry of results) {
+            if (entry.status === "rejected") {
+                errors.push(entry.reason);
+            }
         }
+        if (errors.length > 0) console.error(`Errors when managing epub tests: ${errors}`);
     }
-    if (errors.length > 0) console.error(`Errors when managing epub tests: ${errors}`);
 }
 
 await main();
