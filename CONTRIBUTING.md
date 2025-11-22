@@ -42,7 +42,6 @@ This page explains how to write new tests.
   * [VitalSource Bookshelf](https://support.vitalsource.com/hc/en-us/sections/360002383594-Download-Bookshelf) ([instructions for sideloading](https://support.vitalsource.com/hc/en-us/search?utf8=✓&query=side+loading+epubs))
 
 
-
 ## Step-by-step
 
 1. Find an untested normative statement in the editors' drafts of [EPUB 3.4](https://w3c.github.io/epub-specs/epub34/authoring/) or
@@ -79,14 +78,16 @@ This page explains how to write new tests.
 1. Run the EPUB through [EPUBCheck](https://www.w3.org/publishing/epubcheck/) to ensure you didn't make any silly mistakes.
    Fix if you did. Your EPUBCheck version must be up to date; the program evolves with the specification…
 
-1. Create a pull request for your test change, including both the uncompressed folder and the compressed EPUB file. Please
-   ensure the PR's description clearly indicates which statement is being tested. Await review.
+2. Create a pull request for your test change, including both the uncompressed folder. Please
+   ensure the PR's description clearly indicates which statement is being tested.
+   It is not strictly necessary to upload the generated epub files; they will be regenerated
+   automatically on GitHub anyway. Await review.
 
-1. Once the pull request has been merged, fork the repo for the spec you are testing —
+3. Once the pull request has been merged, fork the repo for the spec you are testing —
    [EPUB 3.4](https://github.com/w3c/epub-specs/blob/main/epub34/authoring/index.html) or
    [EPUB Reading Systems 3.4](https://github.com/w3c/epub-specs/blob/main/epub34/rs/index.html).
 
-1. In the spec document, find the anchor element for the normative statement. If there is no anchor element, add one, using
+4. In the spec document, find the anchor element for the normative statement. If there is no anchor element, add one, using
    the same naming conventions as nearby anchors. Then add a `data-tests` attribute to the anchor element with the name(s) of
    your test(s) as comma-separated anchors:
 
@@ -107,7 +108,7 @@ This page explains how to write new tests.
    </p>
    ```
 
-1. Create a pull request for your spec change and await review.
+5. Create a pull request for your spec change and await review.
 
 
 ## Naming
