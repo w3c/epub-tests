@@ -12,12 +12,13 @@
         "proseWrap": "preserve"
     },
     "imports": {
-        "jszip"       : "npm:jszip@^3.10.1",
-        "xml2js"      : "npm:xml2js@^0.6.2",
-        "path"        : "jsr:@std/path",
-        "jsdom"       : "npm:jsdom@^27.2.0",
-        "js-beautify" : "npm:js-beautify@^1.15.4",
-        "commander"   : "npm:commander@^13.1.0"
+        "jszip"         : "npm:jszip@^3.10.1",
+        "xml2js"        : "npm:xml2js@^0.6.2",
+        "path"          : "jsr:@std/path",
+        "jsdom"         : "npm:jsdom@^27.2.0",
+        "js-beautify"   : "npm:js-beautify@^1.15.4",
+        "commander"     : "npm:commander@^13.1.0",
+        "xml-formatter" : "npm:xml-formatter@^3.6.7"
     },
     "tasks": {
         "generate": {
@@ -28,20 +29,13 @@
             "description": "Run the generation script, but on the 'debug/tests' folder; saves running the script on the full test suite.",
             "command": "deno run -A create_report.ts -d"
         },
-        "epub": {
+        "manage": {
             "description": "This is the command ran via a github action: create all the epub files.",
-            "command": "deno run -A create_epubs.ts"
+            "command": "deno run -A manage_tests.ts"
         },
-        "debug-epub": {
+        "debug-manage": {
             "description": "Create all the epub files, but on the 'debug/tests' folder; saves running the script on the full test suite.",
-            "command": "deno run -A create_epubs.ts -d"
+            "command": "deno run -A manage_tests.ts -d"
         }
-        // The names tell them all: utility to modify, if necessary, the metadata for all tests
-        // this is necessary if a new metadata has to be added to all, change or modify the metadata.
-        // The real "meat" is in the code, which have all the general logic to access and modify
-        // the metadata of the respective OPF files
-        // "add_metadata": "deno run -A add_metadata.ts",
-        // "massage_metadata": "deno run -A massage_metadata.ts",
-        // "modify_metadata": "deno run -A change_opf.ts"
     }
 }

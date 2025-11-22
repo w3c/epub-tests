@@ -1,4 +1,6 @@
 import { JSDOM } from 'jsdom';
+// @deno-types="npm:@types/xml-formatter"
+import xmlFormat from 'xml-formatter';
 
 /**
  * A typical modification function, using the DOM
@@ -17,7 +19,11 @@ function change_date(opf: string): string {
         }
     }
 
-    return dom.serialize();
+    return xmlFormat(dom.serialize(), {
+        indentation: '  ',
+        collapseContent: true,
+        lineSeparator: '\n'
+    });
 }
 
 /**

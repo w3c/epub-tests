@@ -64,7 +64,14 @@ async function main() {
     }
     // Generate the epub files
     const epub_promises: Promise<void>[] = dirs.map((test) => createEPUB(`${TESTS_DIR}/${test}`));
-    await Promise.all(epub_promises);
+    const results = await Promise.allSettled(epub_promises);
+    const errors: string[] = [];
+    for (const entry of results) {
+        if (entry.status === "rejected") {
+            errors.push(entry.reason);
+        }
+    }
+    if (errors.length > 0) console.error(`Errors when managing epub tests: ${errors}`);
 }
 
 await main();
