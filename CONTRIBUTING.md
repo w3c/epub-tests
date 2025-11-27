@@ -78,7 +78,7 @@ This page explains how to write new tests.
 1. Run the EPUB through [EPUBCheck](https://www.w3.org/publishing/epubcheck/) to ensure you didn't make any silly mistakes.
    Fix if you did. Your EPUBCheck version must be up to date; the program evolves with the specification…
 
-2. Create a pull request for your test change, including both the uncompressed folder. Please
+2. Create a pull request for your test change, including the uncompressed folder. Please
    ensure the PR's description clearly indicates which statement is being tested.
    It is not strictly necessary to upload the generated epub files; they will be regenerated
    automatically on GitHub anyway. Await review.
