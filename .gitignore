@@ -35,5 +35,6 @@ tests/.DS_Store
 
 .vscode/
 
-.editorconfig
+tests/*.epub
+
 

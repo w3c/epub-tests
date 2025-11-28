@@ -24,13 +24,12 @@ const ignoredFiles: string[] = ['.DS_Store', 'mimetype'];
  * Recursive walk through a directory. The return value is the list of the full paths of the files,
  * suitable for a file read.
  *
- * (The only reason this function is defined as 'export' is because it may be useful at some later point for
- * other purposes...)
+ *
  *
  * @param dir name of a directory
  * @param filter filter to remove unwanted file names from the result
  */
-export async function recursiveWalk(dir: string, filter?: (f:string) => boolean): Promise<string[]> {
+async function recursiveWalk(dir: string, filter?: (f:string) => boolean): Promise<string[]> {
     try {
         const content: string[] = [];
         for await (const entry of Deno.readDir(dir)) {
@@ -81,16 +80,18 @@ export async function recursiveWalk(dir: string, filter?: (f:string) => boolean)
  * @returns
  */
 async function getContent(entry_dir: string): Promise<FileContent[]> {
+
     const file_names: string[]  = await recursiveWalk(entry_dir, (fname: string): boolean => !(ignoredFiles.includes(path.basename(fname))));
     const content: Uint8Array[] = await Promise.all(file_names.map((fname) => Deno.readFile(fname)));
     const retval: FileContent[] = [];
 
+    const dir_basename = path.basename(entry_dir);
     for (let i = 0; i < file_names.length; i++) {
         retval.push({
             // What we need here is the file name relative to the start directory,
             // this is what the zip file creation uses
             // The last step removes the '/' character at the start of the string
-            path    : file_names[i].split(entry_dir)[1].slice(1),
+            path: file_names[i].split(dir_basename)[1].slice(1),
             content : content[i],
         });
     }

@@ -1,7 +1,7 @@
 # Relies on the standard GitHub action setup to deploy to GitHub Pages
 # The really specific details are in the steps that generates the index files
 # (and the deployment of deno as an underling tool).
-name: Publish to Github Pages
+name: Generate epub files and test reports before publishing on GitHub Pages
 on:
   push:
     branches: [main]
@@ -37,7 +37,7 @@ jobs:
       - name: Generate the index files
         # Details depend on where the script is located
         run: |
-          (cd generate/src; deno run -A main.ts; rm deno.lock)
+          (cd generate/src; deno run -A create_report.ts; deno run -A manage_tests.ts ; rm deno.lock)
       - name: Setup Github Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
