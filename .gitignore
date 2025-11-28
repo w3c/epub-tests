@@ -39,4 +39,6 @@ tests/.DS_Store
 
 .gitignore
 
+tests/*.epub
+
 
