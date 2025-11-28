@@ -35,10 +35,6 @@ tests/.DS_Store
 
 .vscode/
 
-.editorconfig
-
-.gitignore
-
 tests/*.epub
 
 
