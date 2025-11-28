@@ -60,7 +60,7 @@ export namespace Constants {
     export const TEST_URL_BASE: string = 'https://github.com/w3c/epub-tests/tree/main/tests';
 
     /** Base URL for the test epub file, accessible via github.io */
-    export const TEST_DOWNLOAD_URL_BASE: string = 'https://github.com/w3c/epub-tests/raw/main/tests';
+    export const TEST_DOWNLOAD_URL_BASE: string = 'https://w3c.github.io/epub-tests/tests';
 
     /** Location of the container file within the test directory */
     export const CONTAINER_FILE: string = 'META-INF/container.xml';
