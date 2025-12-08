@@ -78,10 +78,10 @@ This page explains how to write new tests.
 1. Run the EPUB through [EPUBCheck](https://www.w3.org/publishing/epubcheck/) to ensure you didn't make any silly mistakes.
    Fix if you did. Your EPUBCheck version must be up to date; the program evolves with the specification…
 
-2. Create a pull request for your test change, including the uncompressed folder. Please
+2. Create a pull request for your test change with the uncompressed folder. Please
    ensure the PR's description clearly indicates which statement is being tested.
-   It is not strictly necessary to upload the generated epub files; they will be regenerated
-   automatically on GitHub anyway. Await review.
+   The generated epub file should not be uploaded to the repository; it will be regenerated
+   automatically on GitHub. Await review.
 
 3. Once the pull request has been merged, fork the repo for the spec you are testing —
    [EPUB 3.4](https://github.com/w3c/epub-specs/blob/main/epub34/authoring/index.html) or
@@ -97,7 +97,6 @@ This page explains how to write new tests.
       <a href="https://www.w3.org/TR/epub-34/#sec-xhtml">XHTML Content
          Documents</a> [[EPUB-34]].
    </p>
-
    ...
 
    <p id="confreq-rs-epub3-images"
@@ -221,9 +220,12 @@ Note that the value of the `dcterms:isReferencedBy` has been changed as well; in
 
 # Running tests
 
-Running tests mean loading each test, as a separate EPUB Publication, and check whether the reading systems fulfills the requirement of that specific tests. The results are collected in an implementation report file and uploaded to the test repository.
+Running tests mean loading each test as a separate EPUB Publication, and check whether the reading systems fulfills the requirement of that specific tests. The results are collected in an implementation report file and uploaded to the test repository.
 
 To make the running of the tests easier, a [test catalogue file](https://w3c.github.io/epub-tests/opds/opds.json) is generated using the [OPDS](https://drafts.opds.io/opds-2.0.html) format. Several reading systems understand this catalogue format, and can upload the full test suite easily.
+
+Alternatively, the test repository can be cloned, and downloaded to the tester's machine. To make the testing step easier, there is a `generateEpubs.sh`
+script in the `tests` folder of repository that will generate an epub version of each test.
 
 ## Implementation report files
 
