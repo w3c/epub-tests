@@ -137,7 +137,7 @@ The package document for each test must contain the following metadata, which is
 
 * `dc:creator` (may be repeated): Creator(s) of the tests.
 
-* `dc:description`: A short description of the test for the generated test report.
+* `dc:description`: A short description of the test for the generated test report. Note that only the _first_ description item is used by the test reporting mechanism; additional items may be used for further information.
 
 * `dc:coverage`: Which section of the report the test should be listed in. The report has a separate table for each section
    to make it more readable. The current list of sections is listed in a
