@@ -1,7 +1,7 @@
 {
     "description": "Generation of index and resolutions' files for EPUB tests and test results.",
     // Version 1.1.0 adds the concept and management of deprecated tests
-    "version": "1.1.0.",
+    "version": "1.1.1.",
     "compilerOptions": {
         "lib": ["dom", "dom.iterable", "dom.asynciterable", "esnext", "deno.ns"]
     },
@@ -22,12 +22,20 @@
     },
     "tasks": {
         "generate": {
-            "description": "This is the command ran via a github action: run all the report generation.",
+            "description": "This is the command ran via a github action: run all the report generation. Deprecated tests are ignored.",
+            "command": "deno run -A create_report.ts"
+        },
+        "generate_full-full": {
+            "description": "This is the command ran via a github action: run all the report generation. Deprecated tests are included.",
             "command": "deno run -A create_report.ts"
         },
         "debug-generate": {
-            "description": "Run the generation script, but on the 'debug/tests' folder; saves running the script on the full test suite.",
+            "description": "Run the generation script, but on the 'debug/tests' folder; saves running the script on the full test suite. Deprecated tests are ignored",
             "command": "deno run -A create_report.ts -d"
+        },
+        "debug-generate-full": {
+            "description": "Run the generation script, but on the 'debug/tests' folder; saves running the script on the full test suite. Deprecated tests are included.",
+            "command": "deno run -A create_report.ts -df"
         },
         "manage": {
             "description": "This is the command ran via a github action: create all the epub files.",

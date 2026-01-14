@@ -36,6 +36,7 @@ import { getTestData, getReportData, getTemplate }                            fr
 import { createReport }                                                       from "./lib/html.ts";
 import { applyConfigurationOptions }                                          from './lib/config.ts';
 import { type OPDS, createOPDS }                                              from './lib/opds.ts';
+import { Command }                                                            from 'commander';
 
 
 /**
@@ -52,6 +53,18 @@ async function adjust_date(fname: string): Promise<void> {
  * Main entry point: generate the reports' html fragment files (i.e., the real "meat" for the data) and a template file
  */
 async function main() {
+    const program = new Command();
+    program
+        .name('generate')
+        .description('Generation of the EPUB 3 test descriptions and test results')
+        .usage('[options')
+        .option('-d --debug', 'run the script on the debug test suite')
+        .option('-f --full', 'run in full mode, ie, include the deprecated tests in the output')
+        .parse(["", "", ...Deno.args]);
+    const options = program.opts();
+    const debug = options.debug ?? false;
+    const full  = options.full ?? false;
+
     // Get the final data for files and directories, depending on the debug flag
     const [
         TESTS_DIR,
@@ -65,10 +78,10 @@ async function main() {
         OPDS,
         DOC_TEST_RESULTS,
         DOC_TEST_DESCRIPTIONS
-    ] = Constants.final_constants((Deno.args.length > 0 && Deno.args[0] === '-d'));
+    ] = Constants.final_constants(debug);
 
     const test_data: TestData[]              = await getTestData(TESTS_DIR);
-    const report_data: ReportData            = await getReportData(test_data, TEST_RESULTS_DIR);
+    const report_data: ReportData            = await getReportData(test_data, TEST_RESULTS_DIR, full);
     const template: Raw_ImplementationReport = getTemplate(report_data);
 
     const final_report_data: ReportData = applyConfigurationOptions(report_data);

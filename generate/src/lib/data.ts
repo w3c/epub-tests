@@ -466,7 +466,7 @@ export async function getTestData(dir_name: string): Promise<TestData[]> {
  * @param test_data all the metadata for all tests
  * @param reports directory where the implementation reports reside
  */
-export async function getReportData(test_data: TestData[], reports: string): Promise<ReportData> {
+export async function getReportData(test_data: TestData[], reports: string, full: boolean): Promise<ReportData> {
     const sort_test_data = (all_tests: TestData[]): TestData[] => {
         const required_tests:   TestData[] = [];
         const optional_tests:   TestData[] = [];
@@ -483,7 +483,9 @@ export async function getReportData(test_data: TestData[], reports: string): Pro
         }
 
         for (const test of all_tests) {
-            get_array(test.required).push(test);
+            // unless explicitly required in the command line, deprecated tests are ignored
+            if (!(test.required === ReqType.deprecated && full === false))
+                get_array(test.required).push(test);
         }
 
         // This is, most of the times, unnecessary, because the directory reading has an alphabetic order already.
