@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package version="3.0" unique-identifier="pub-id" xml:lang="en" xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
-        <dc:coverage id="coverage">Pre-paginated Layout</dc:coverage>
+        <dc:coverage id="coverage">Roll Layout</dc:coverage>
         <meta refines="#coverage" property="schema:version">3.4</meta>
         <dc:creator>Ivan Herman</dc:creator>
         <dc:creator>Susan Neuhaus</dc:creator>
@@ -12,7 +12,7 @@
         <dc:publisher>W3C</dc:publisher>
         <dc:title>A Apple Pie — embedded images except for two in the spine in a roll</dc:title>
         <meta property="dcterms:modified">2026-01-15T20:32:01Z</meta>
-        <meta property="rendition:layout">pre-paginated</meta>
+        <meta property="rendition:layout">roll</meta>
         <dc:identifier id="pub-id">lay-roll-images-mixed</dc:identifier>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-epub3-fxl</meta>
         <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>

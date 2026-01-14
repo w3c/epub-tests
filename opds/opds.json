@@ -13,12 +13,12 @@
         {
             "metadata": {
                 "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-orientation-default",
-                "title": "lay-fxl-orientation-default",
-                "author": "Wendy Reid",
-                "description": "rendition:orientation is not specified. Therefore, it has the value \"auto\" and reading systems should display the EPUB in the orientation of the device.",
-                "collection": "Fixed Layout",
-                "modified": "2025-11-18T00:00:00Z",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_behave-as-global",
+                "title": "fxl-spine-overrides_behave-as-global",
+                "author": "Ivan Herman",
+                "description": "Pre-paginated document, with a spine item overriding the global setting to use reflowable layout.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-02-15T00:00:00Z",
                 "publisher": "W3C",
                 "subject": [
                     "epub-test"
@@ -28,7 +28,529 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-orientation-default.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/fxl-spine-overrides_behave-as-global.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_behave-as-global-bis",
+                "title": "fxl-spine-overrides_behave-as-global-bis",
+                "author": "Ivan Herman",
+                "description": "Reflowable document, with a spine item overriding the global setting to use pre-paginated layout.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-02-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/fxl-spine-overrides_behave-as-global-bis.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-page-spread-combined",
+                "title": "lay-fxl-page-spread-combined",
+                "author": "Wendy Reid",
+                "description": "When rendition:page-spread-right and -left are applied to adjacent spine items, they should be displayed in a synthetic spread.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-02-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-page-spread-combined.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-both",
+                "title": "lay-fxl-spread-both",
+                "author": "Wendy Reid",
+                "description": "When rendition:spread is \"both\", the content should appear in a synthetic spread regardless of reading system orientation.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-02-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-spread-both.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-page-spread-combined",
+                "title": "lay-pp-page-spread-combined",
+                "author": "Wendy Reid",
+                "description": "When rendition:page-spread-right and -left are applied to adjacent spine items, they should be displayed in a synthetic spread.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-02-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-page-spread-combined.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-embedded-images",
+                "title": "A Apple Pie — embedded images",
+                "author": [
+                    "Ivan Herman",
+                    "Susan Neuhaus"
+                ],
+                "description": "Pre-paginated publication with images embedded in XHTML.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T20:32:01Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-embedded-images.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-images-mixed",
+                "title": "A Apple Pie — embedded images except for two in the spine",
+                "author": [
+                    "Ivan Herman",
+                    "Susan Neuhaus"
+                ],
+                "description": "Pre-paginated publication with mixed embedded and spine images.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T20:32:01Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-images-mixed.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-roll-embedded-images",
+                "title": "A Apple Pie — embedded images in roll",
+                "author": [
+                    "Ivan Herman",
+                    "Susan Neuhaus"
+                ],
+                "description": "Roll publication with images embedded in XHTML.",
+                "collection": "Roll Layout",
+                "modified": "2026-01-15T20:32:01Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-roll-embedded-images.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-roll-images-mixed",
+                "title": "A Apple Pie — embedded images except for two in the spine in a roll",
+                "author": [
+                    "Ivan Herman",
+                    "Susan Neuhaus"
+                ],
+                "description": "Roll publication with mixed embedded and spine images.",
+                "collection": "Roll Layout",
+                "modified": "2026-01-15T20:32:01Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-roll-images-mixed.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-layout-duplication",
+                "title": "fxl-layout-duplication",
+                "author": "Wendy Reid",
+                "description": "When rendition:layout is duplicated, EPUBCheck must return an error.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/fxl-layout-duplication.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-break",
+                "title": "fxl-page-spread-break",
+                "author": "Wendy Reid",
+                "description": "For a fixed-layout book, page-spread properties must take precedence over CSS page-break-before",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/fxl-page-spread-break.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-center",
+                "title": "fxl-page-spread-center",
+                "author": "Wendy Reid",
+                "description": "When rendition:page-spread-center is applied to a spine item, the document should be displayed in the center of the screen and not in a synthetic spread.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/fxl-page-spread-center.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_duplicate",
+                "title": "fxl-spine-overrides_duplicate",
+                "author": "Ivan Herman",
+                "description": "Pre-paginated document, with a spine item overriding the global setting to use reflowable layout, but repeating the override property value back to pre-paginated. The second setting must be ignored.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/fxl-spine-overrides_duplicate.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-layout-default",
+                "title": "lay-fxl-layout-default",
+                "author": "Ivan Herman",
+                "description": "The default value for pagination must be 'reflowable'.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-layout-default.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-layout-pre-paginated",
+                "title": "lay-fxl-layout-pre-paginated",
+                "author": "Wendy Reid",
+                "description": "When rendition:layout is pre-paginated, reading systems must display one page per spine item.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-layout-pre-paginated.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-orientation-default",
+                "title": "lay-fxl-orientation-default",
+                "author": "Wendy Reid",
+                "description": "rendition:orientation is not specified. Therefore, it has the value \"auto\" and reading systems should display the EPUB in the orientation of the device.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-orientation-default.epub"
                 }
             ],
             "images": [
@@ -51,8 +573,8 @@
                 "title": "lay-fxl-orientation-landscape",
                 "author": "Wendy Reid",
                 "description": "rendition:orientation is landscape, Reading Systems should either display the content in landscape or inform the user it should be.",
-                "collection": "Fixed Layout",
-                "modified": "2025-11-18T00:00:00Z",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
                 "publisher": "W3C",
                 "subject": [
                     "epub-test"
@@ -62,7 +584,897 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-orientation-landscape.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-orientation-landscape.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-page-spread-right",
+                "title": "lay-fxl-page-spread-right",
+                "author": "Wendy Reid",
+                "description": "When rendition:page-spread-right is applied to a spine item, it should be displayed on the right side of the synthetic spread.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-page-spread-right.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-auto",
+                "title": "lay-fxl-spread-auto",
+                "author": "Wendy Reid",
+                "description": "When rendition:spread is \"auto\", the reading system can choose to display spine items in a synthetic spread.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-spread-auto.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-default",
+                "title": "lay-fxl-spread-default",
+                "author": "Wendy Reid",
+                "description": "The default value for rendition:spread should be \"auto\" if not specified. When rendition:spread is \"auto\", the reading system can choose to display spine items in a synthetic spread.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-spread-default.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-landscape",
+                "title": "lay-fxl-spread-landscape",
+                "author": "Wendy Reid",
+                "description": "If rendition:spread is \"landscape\", synthetic spreads should be rendered only when the reading system is in landscape orientation.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-spread-landscape.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-svg-icb_multi",
+                "title": "lay-fxl-svg-icb_multi",
+                "author": "Ivan Herman",
+                "description": "The same SVG content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-svg-icb_multi.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-svg-icb_multi",
+                "title": "lay-fxl-svg-icb_multi",
+                "author": "Ivan Herman",
+                "description": "The same SVG content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-svg-icb_multi.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb",
+                "title": "lay-fxl-xhtml-icb",
+                "author": "Dave Cramer",
+                "description": "XHTML content outside the initial containing block (ICB) is clipped.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-xhtml-icb.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_device_sizes",
+                "title": "lay-fxl-xhtml-icb_device_sizes",
+                "author": "Ivan Herman",
+                "description": "The viewport can be set to device-width, resp. device-height, to fill the full display area.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-xhtml-icb_device_sizes.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_invalid_meta",
+                "title": "lay-fxl-xhtml-icb_invalid_meta",
+                "author": "Ivan Herman",
+                "description": "Reading systems SHOULD attempt to extract 'width' and 'height' values even if the tag's syntax is invalid.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-xhtml-icb_invalid_meta.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_multi",
+                "title": "lay-fxl-xhtml-icb_multi",
+                "author": "Ivan Herman",
+                "description": "The same XHTML content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-xhtml-icb_multi.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_multi_declarations",
+                "title": "lay-fxl-xhtml-icb_multi_declarations",
+                "author": "Ivan Herman",
+                "description": "Only the first of multiple viewport meta tags is retained, the second is ignored.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-xhtml-icb_multi_declarations.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_repeated-in-meta",
+                "title": "lay-fxl-xhtml-icb_repeated-in-meta",
+                "author": "Ivan Herman",
+                "description": "Reading system should use the first declaration of a 'width' or 'height' (i.e., ignore repeated declarations).",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-xhtml-icb_repeated-in-meta.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_units",
+                "title": "lay-fxl-xhtml-icb_units",
+                "author": "Ivan Herman",
+                "description": "Units of lengths in an ICB declaration are ignored, values are in pixels.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-xhtml-icb_units.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-images-in-spine",
+                "title": "A Apple Pie — images in the spine",
+                "author": [
+                    "Ivan Herman",
+                    "Susan Neuhaus"
+                ],
+                "description": "Pre-paginated publication with images in the spine with fallbacks.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-images-in-spine.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-layout-default",
+                "title": "lay-pp-layout-default",
+                "author": "Ivan Herman",
+                "description": "The default value for pagination must be 'reflowable'.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-layout-default.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-layout-pre-paginated",
+                "title": "lay-pp-layout-pre-paginated",
+                "author": "Wendy Reid",
+                "description": "When rendition:layout is pre-paginated, reading systems must display one page per spine item.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-layout-pre-paginated.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-page-spread-right",
+                "title": "lay-pp-page-spread-right",
+                "author": "Wendy Reid",
+                "description": "When rendition:page-spread-right is applied to a spine item, it should be displayed on the right side of the synthetic spread.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-page-spread-right.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-spine-overrides_behave-as-global",
+                "title": "lay-pp-spine-overrides_behave-as-global",
+                "author": "Ivan Herman",
+                "description": "Pre-paginated document, with a spine item overriding the global setting to use reflowable layout.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-spine-overrides_behave-as-global.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-spine-overrides_behave-as-global-bis",
+                "title": "lay-pp-spine-overrides_behave-as-global-bis",
+                "author": "Ivan Herman",
+                "description": "Reflowable document, with a spine item overriding the global setting to use pre-paginated layout.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-spine-overrides_behave-as-global-bis.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-xhtml-icb",
+                "title": "lay-pp-xhtml-icb",
+                "author": "Dave Cramer",
+                "description": "XHTML content outside the initial containing block (ICB) is clipped.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-xhtml-icb.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-xhtml-icb_invalid_meta",
+                "title": "lay-pp-xhtml-icb_invalid_meta",
+                "author": "Ivan Herman",
+                "description": "Reading systems SHOULD attempt to extract 'width' and 'height' values even if the tag's syntax is invalid.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-xhtml-icb_invalid_meta.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-xhtml-icb_multi",
+                "title": "lay-pp-xhtml-icb_multi",
+                "author": "Ivan Herman",
+                "description": "The same XHTML content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-xhtml-icb_multi.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-xhtml-icb_multi_declarations",
+                "title": "lay-pp-xhtml-icb_multi_declarations",
+                "author": "Ivan Herman",
+                "description": "Only the first of multiple viewport meta tags is retained, the second is ignored.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-xhtml-icb_multi_declarations.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-xhtml-icb_repeated-in-meta",
+                "title": "lay-pp-xhtml-icb_repeated-in-meta",
+                "author": "Ivan Herman",
+                "description": "Reading system should use the first declaration of a 'width' or 'height' (i.e., ignore repeated declarations).",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-xhtml-icb_repeated-in-meta.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-xhtml-icb_units",
+                "title": "lay-pp-xhtml-icb_units",
+                "author": "Ivan Herman",
+                "description": "Units of lengths in an ICB declaration are ignored, values are in pixels.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-xhtml-icb_units.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-roll-images-in-spine",
+                "title": "A Apple Pie — images in the spine in roll",
+                "author": [
+                    "Ivan Herman",
+                    "Susan Neuhaus"
+                ],
+                "description": "Roll publication with images in the spine with fallbacks",
+                "collection": "Roll Layout",
+                "modified": "2026-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-roll-images-in-spine.epub"
                 }
             ],
             "images": [
@@ -96,7 +1508,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-cmt-avif.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-cmt-avif.epub"
                 }
             ],
             "images": [
@@ -133,7 +1545,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-css-fonts_ot.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-css-fonts_ot.epub"
                 }
             ],
             "images": [
@@ -170,7 +1582,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-css-fonts_tt.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-css-fonts_tt.epub"
                 }
             ],
             "images": [
@@ -207,7 +1619,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-css-fonts_woff.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-css-fonts_woff.epub"
                 }
             ],
             "images": [
@@ -244,7 +1656,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-css-fonts_woff2.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-css-fonts_woff2.epub"
                 }
             ],
             "images": [
@@ -278,7 +1690,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/nav-spine_in-spine-hidden-toc-css.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/nav-spine_in-spine-hidden-toc-css.epub"
                 }
             ],
             "images": [
@@ -312,7 +1724,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/nav-spine_in-spine-hidden-toc-html.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/nav-spine_in-spine-hidden-toc-html.epub"
                 }
             ],
             "images": [
@@ -346,7 +1758,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support_origin_unique.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-support_origin_unique.epub"
                 }
             ],
             "images": [
@@ -380,7 +1792,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/sec-untrusted-consent_network.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/sec-untrusted-consent_network.epub"
                 }
             ],
             "images": [
@@ -414,7 +1826,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/sec-untrusted-consent_scripting.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/sec-untrusted-consent_scripting.epub"
                 }
             ],
             "images": [
@@ -448,7 +1860,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-file-urls.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-file-urls.epub"
                 }
             ],
             "images": [
@@ -482,7 +1894,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-storage-delete.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-storage-delete.epub"
                 }
             ],
             "images": [
@@ -519,7 +1931,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-audio-no-clipend.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-audio-no-clipend.epub"
                 }
             ],
             "images": [
@@ -553,7 +1965,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-navigation.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-navigation.epub"
                 }
             ],
             "images": [
@@ -587,7 +1999,245 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-linked-records.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-linked-records.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-layout-pre-paginated-spreads",
+                "title": "lay-fxl-layout-pre-paginated-spreads",
+                "author": "Wendy Reid",
+                "description": "When the layout is pre-paginated, pages are displayed with no gaps when in synthetic spreads.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2023-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-layout-pre-paginated-spreads.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-page-spread-left",
+                "title": "lay-fxl-page-spread-left",
+                "author": "Wendy Reid",
+                "description": "When rendition:page-spread-left is applied to a spine item, it should be displayed on the left side of the synthetic spread.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2023-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-page-spread-left.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-none",
+                "title": "lay-fxl-spread-none",
+                "author": "Wendy Reid",
+                "description": "When rendition:spead is \"none\", spine items must not appear in synthetic spreads.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2023-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-fxl-spread-none.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-layout-duplication",
+                "title": "lay-pp-layout-duplication",
+                "author": "Wendy Reid",
+                "description": "When rendition:layout is duplicated, EPUBCheck must return an error.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2023-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-layout-duplication.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-layout-pre-paginated-spreads",
+                "title": "lay-pp-layout-pre-paginated-spreads",
+                "author": "Wendy Reid",
+                "description": "When the layout is pre-paginated, pages are displayed with no gaps when in synthetic spreads.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2023-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-layout-pre-paginated-spreads.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-page-spread-left",
+                "title": "lay-pp-page-spread-left",
+                "author": "Wendy Reid",
+                "description": "When rendition:page-spread-left is applied to a spine item, it should be displayed on the left side of the synthetic spread.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2023-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-page-spread-left.epub"
+                }
+            ],
+            "images": [
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
+                    "type": "image/png",
+                    "height": 2123,
+                    "width": 1500
+                },
+                {
+                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
+                    "type": "image/svg"
+                }
+            ]
+        },
+        {
+            "metadata": {
+                "@type": "http://schema.org/Book",
+                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-pp-spread-none",
+                "title": "lay-pp-spread-none",
+                "author": "Wendy Reid",
+                "description": "When rendition:spead is \"none\", spine items must not appear in synthetic spreads.",
+                "collection": "Pre-paginated Layout",
+                "modified": "2023-01-15T00:00:00Z",
+                "publisher": "W3C",
+                "subject": [
+                    "epub-test"
+                ]
+            },
+            "links": [
+                {
+                    "type": "application/epub+zip",
+                    "rel": "http://opds-spec.org/acquisition/open-access",
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pp-spread-none.epub"
                 }
             ],
             "images": [
@@ -621,7 +2271,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-emphasis.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-text-emphasis.epub"
                 }
             ],
             "images": [
@@ -655,7 +2305,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-support_xhtml-fxl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-support_xhtml-fxl.epub"
                 }
             ],
             "images": [
@@ -689,7 +2339,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-support_xhtml-load-fxl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-support_xhtml-load-fxl.epub"
                 }
             ],
             "images": [
@@ -723,7 +2373,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-support_xhtml-load-next-fxl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-support_xhtml-load-next-fxl.epub"
                 }
             ],
             "images": [
@@ -760,7 +2410,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-timing-synchronization_multiple_audio-fxl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-timing-synchronization_multiple_audio-fxl.epub"
                 }
             ],
             "images": [
@@ -797,7 +2447,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-timing-synchronization_svg-fxl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-timing-synchronization_svg-fxl.epub"
                 }
             ],
             "images": [
@@ -831,7 +2481,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/nav-non-text_img.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/nav-non-text_img.epub"
                 }
             ],
             "images": [
@@ -865,7 +2515,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/nav-non-text_img_title.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/nav-non-text_img_title.epub"
                 }
             ],
             "images": [
@@ -899,7 +2549,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-hyphens.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-hyphens.epub"
                 }
             ],
             "images": [
@@ -933,7 +2583,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-line-break.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-line-break.epub"
                 }
             ],
             "images": [
@@ -967,7 +2617,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-align-last.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-text-align-last.epub"
                 }
             ],
             "images": [
@@ -1001,7 +2651,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-combine-horizontal.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-text-combine-horizontal.epub"
                 }
             ],
             "images": [
@@ -1035,7 +2685,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-orientation.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-text-orientation.epub"
                 }
             ],
             "images": [
@@ -1069,7 +2719,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-transform.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-text-transform.epub"
                 }
             ],
             "images": [
@@ -1103,7 +2753,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-text-underline-position.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-text-underline-position.epub"
                 }
             ],
             "images": [
@@ -1137,7 +2787,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-word-break.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-word-break.epub"
                 }
             ],
             "images": [
@@ -1171,7 +2821,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/css-epub-writing-mode.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/css-epub-writing-mode.epub"
                 }
             ],
             "images": [
@@ -1205,7 +2855,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-cmt-opus.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-cmt-opus.epub"
                 }
             ],
             "images": [
@@ -1242,7 +2892,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-pkg-flow-paginated.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pkg-flow-paginated.epub"
                 }
             ],
             "images": [
@@ -1279,7 +2929,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-pkg-flow-scrolled-continuous.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pkg-flow-scrolled-continuous.epub"
                 }
             ],
             "images": [
@@ -1316,7 +2966,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-pkg-flow-scrolled-doc.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-pkg-flow-scrolled-doc.epub"
                 }
             ],
             "images": [
@@ -1350,7 +3000,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-reflow-align-x-center.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-reflow-align-x-center.epub"
                 }
             ],
             "images": [
@@ -1384,7 +3034,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-viewport-meta-prop.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-viewport-meta-prop.epub"
                 }
             ],
             "images": [
@@ -1422,7 +3072,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-timing-synchronization_fxl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-timing-synchronization_fxl.epub"
                 }
             ],
             "images": [
@@ -1456,7 +3106,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-foreign_bad-fallback.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-foreign_bad-fallback.epub"
                 }
             ],
             "images": [
@@ -1490,7 +3140,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-foreign_image.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-foreign_image.epub"
                 }
             ],
             "images": [
@@ -1524,7 +3174,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-foreign_json-spine.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-foreign_json-spine.epub"
                 }
             ],
             "images": [
@@ -1558,7 +3208,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-foreign_xml-spine.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-foreign_xml-spine.epub"
                 }
             ],
             "images": [
@@ -1592,7 +3242,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-foreign_xml-suffix-spine.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-foreign_xml-suffix-spine.epub"
                 }
             ],
             "images": [
@@ -1626,7 +3276,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-xml-non-validating_comment.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-xml-non-validating_comment.epub"
                 }
             ],
             "images": [
@@ -1660,245 +3310,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-xml-external-id.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb",
-                "title": "lay-fxl-xhtml-icb",
-                "author": "Dave Cramer",
-                "description": "XHTML content outside the initial containing block (ICB) is clipped.",
-                "collection": "Fixed Layout",
-                "modified": "2022-10-12T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_invalid_meta",
-                "title": "lay-fxl-xhtml-icb_invalid_meta",
-                "author": "Ivan Herman",
-                "description": "Reading systems SHOULD attempt to extract 'width' and 'height' values even if the tag's syntax is invalid.",
-                "collection": "Fixed Layout",
-                "modified": "2022-10-12T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb_invalid_meta.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_repeated-in-meta",
-                "title": "lay-fxl-xhtml-icb_repeated-in-meta",
-                "author": "Ivan Herman",
-                "description": "Reading system should use the first declaration of a 'width' or 'height' (i.e., ignore repeated declarations).",
-                "collection": "Fixed Layout",
-                "modified": "2022-10-12T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb_repeated-in-meta.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_device_sizes",
-                "title": "lay-fxl-xhtml-icb_device_sizes",
-                "author": "Ivan Herman",
-                "description": "The viewport can be set to device-width, resp. device-height, to fill the full display area.",
-                "collection": "Fixed Layout",
-                "modified": "2022-10-04T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb_device_sizes.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_multi",
-                "title": "lay-fxl-xhtml-icb_multi",
-                "author": "Ivan Herman",
-                "description": "The same XHTML content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
-                "collection": "Fixed Layout",
-                "modified": "2022-10-04T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb_multi.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_multi_declarations",
-                "title": "lay-fxl-xhtml-icb_multi_declarations",
-                "author": "Ivan Herman",
-                "description": "Only the first of multiple viewport meta tags is retained, the second is ignored.",
-                "collection": "Fixed Layout",
-                "modified": "2022-10-04T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb_multi_declarations.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-xhtml-icb_units",
-                "title": "lay-fxl-xhtml-icb_units",
-                "author": "Ivan Herman",
-                "description": "Units of lengths in an ICB declaration are ignored, values are in pixels.",
-                "collection": "Fixed Layout",
-                "modified": "2022-10-04T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-xhtml-icb_units.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-xml-external-id.epub"
                 }
             ],
             "images": [
@@ -1932,41 +3344,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-svg-support.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-svg-icb_multi",
-                "title": "lay-fxl-svg-icb_multi",
-                "author": "Ivan Herman",
-                "description": "The same SVG content outside the initial containing block (ICB) is clipped but the effect is different because the two pages have a different viewport setting.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-22T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-svg-icb_multi.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-svg-support.epub"
                 }
             ],
             "images": [
@@ -2003,7 +3381,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-timing-synchronization_svg.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-timing-synchronization_svg.epub"
                 }
             ],
             "images": [
@@ -2037,7 +3415,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-cmt-svg.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-cmt-svg.epub"
                 }
             ],
             "images": [
@@ -2071,7 +3449,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-readingsystem-support_iframe_svg.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-readingsystem-support_iframe_svg.epub"
                 }
             ],
             "images": [
@@ -2105,381 +3483,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-readingsystem-support_svg.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-layout-default",
-                "title": "lay-fxl-layout-default",
-                "author": "Ivan Herman",
-                "description": "The default value for pagination must be 'reflowable'.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-layout-default.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-layout-pre-paginated",
-                "title": "lay-fxl-layout-pre-paginated",
-                "author": "Wendy Reid",
-                "description": "When rendition:layout is pre-paginated, reading systems must display one page per spine item.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-layout-pre-paginated.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-layout-pre-paginated-spreads",
-                "title": "lay-fxl-layout-pre-paginated-spreads",
-                "author": "Wendy Reid",
-                "description": "When the layout is pre-paginated, pages are displayed with no gaps when in synthetic spreads.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-layout-pre-paginated-spreads.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-page-spread-combined",
-                "title": "lay-fxl-page-spread-combined",
-                "author": "Wendy Reid",
-                "description": "When rendition:page-spread-right and -left are applied to adjacent spine items, they should be displayed in a synthetic spread.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-page-spread-combined.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-page-spread-left",
-                "title": "lay-fxl-page-spread-left",
-                "author": "Wendy Reid",
-                "description": "When rendition:page-spread-left is applied to a spine item, it should be displayed on the left side of the synthetic spread.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-page-spread-left.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-page-spread-right",
-                "title": "lay-fxl-page-spread-right",
-                "author": "Wendy Reid",
-                "description": "When rendition:page-spread-right is applied to a spine item, it should be displayed on the right side of the synthetic spread.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-page-spread-right.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-auto",
-                "title": "lay-fxl-spread-auto",
-                "author": "Wendy Reid",
-                "description": "When rendition:spread is \"auto\", the reading system can choose to display spine items in a synthetic spread.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-spread-auto.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-both",
-                "title": "lay-fxl-spread-both",
-                "author": "Wendy Reid",
-                "description": "When rendition:spread is \"both\", the content should appear in a synthetic spread regardless of reading system orientation.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-spread-both.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-default",
-                "title": "lay-fxl-spread-default",
-                "author": "Wendy Reid",
-                "description": "The default value for rendition:spread should be \"auto\" if not specified. When rendition:spread is \"auto\", the reading system can choose to display spine items in a synthetic spread.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-spread-default.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-landscape",
-                "title": "lay-fxl-spread-landscape",
-                "author": "Wendy Reid",
-                "description": "If rendition:spread is \"landscape\", synthetic spreads should be rendered only when the reading system is in landscape orientation.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-spread-landscape.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/lay-fxl-spread-none",
-                "title": "lay-fxl-spread-none",
-                "author": "Wendy Reid",
-                "description": "When rendition:spead is \"none\", spine items must not appear in synthetic spreads.",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-21T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-fxl-spread-none.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-readingsystem-support_svg.epub"
                 }
             ],
             "images": [
@@ -2513,7 +3517,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-page-layout-both.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-page-layout-both.epub"
                 }
             ],
             "images": [
@@ -2547,7 +3551,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-page-layout-both-spread.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-page-layout-both-spread.epub"
                 }
             ],
             "images": [
@@ -2581,7 +3585,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/lay-rendition-flow-pre-pag.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/lay-rendition-flow-pre-pag.epub"
                 }
             ],
             "images": [
@@ -2615,7 +3619,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-svg-css.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-svg-css.epub"
                 }
             ],
             "images": [
@@ -2649,7 +3653,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-svg-css-inclusion.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-svg-css-inclusion.epub"
                 }
             ],
             "images": [
@@ -2683,41 +3687,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-lang_but_not_content.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-break",
-                "title": "fxl-page-spread-break",
-                "author": "Wendy Reid",
-                "description": "For a fixed-layout book, page-spread properties must take precedence over CSS page-break-before",
-                "collection": "Fixed Layout",
-                "modified": "2022-09-12T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-page-spread-break.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-lang_but_not_content.epub"
                 }
             ],
             "images": [
@@ -2751,7 +3721,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-font_obfuscation.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-font_obfuscation.epub"
                 }
             ],
             "images": [
@@ -2785,7 +3755,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-font_obfuscation-bis.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-font_obfuscation-bis.epub"
                 }
             ],
             "images": [
@@ -2819,7 +3789,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-support_xhtml-load.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-support_xhtml-load.epub"
                 }
             ],
             "images": [
@@ -2853,7 +3823,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-support_xhtml-load-next.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-support_xhtml-load-next.epub"
                 }
             ],
             "images": [
@@ -2890,7 +3860,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-audio-exceeding-clipend.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-audio-exceeding-clipend.epub"
                 }
             ],
             "images": [
@@ -2927,7 +3897,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-audio-no-clipbegin.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-audio-no-clipbegin.epub"
                 }
             ],
             "images": [
@@ -2964,7 +3934,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-css.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-css.epub"
                 }
             ],
             "images": [
@@ -2998,7 +3968,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-ignore.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-ignore.epub"
                 }
             ],
             "images": [
@@ -3032,7 +4002,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-support_xhtml.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-support_xhtml.epub"
                 }
             ],
             "images": [
@@ -3069,7 +4039,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-timing-synchronization_multiple_audio.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-timing-synchronization_multiple_audio.epub"
                 }
             ],
             "images": [
@@ -3103,7 +4073,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-tts_multi.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-tts_multi.epub"
                 }
             ],
             "images": [
@@ -3137,7 +4107,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-tts_single.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-tts_single.epub"
                 }
             ],
             "images": [
@@ -3171,7 +4141,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support-fallback.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-support-fallback.epub"
                 }
             ],
             "images": [
@@ -3205,7 +4175,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-not-support_ccscript-modify-host.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-not-support_ccscript-modify-host.epub"
                 }
             ],
             "images": [
@@ -3239,7 +4209,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-not-support_ccscript-modify-size.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-not-support_ccscript-modify-size.epub"
                 }
             ],
             "images": [
@@ -3273,7 +4243,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-svg-embedded.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-svg-embedded.epub"
                 }
             ],
             "images": [
@@ -3307,109 +4277,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-xhtml-support.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_behave-as-global",
-                "title": "fxl-spine-overrides_behave-as-global",
-                "author": "Ivan Herman",
-                "description": "Pre-paginated document, with a spine item overriding the global setting to use reflowable layout.",
-                "collection": "Fixed Layout",
-                "modified": "2022-08-02T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-spine-overrides_behave-as-global.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_behave-as-global-bis",
-                "title": "fxl-spine-overrides_behave-as-global-bis",
-                "author": "Ivan Herman",
-                "description": "Reflowable document, with a spine item overriding the global setting to use pre-paginated layout.",
-                "collection": "Fixed Layout",
-                "modified": "2022-08-02T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-spine-overrides_behave-as-global-bis.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-spine-overrides_duplicate",
-                "title": "fxl-spine-overrides_duplicate",
-                "author": "Ivan Herman",
-                "description": "Pre-paginated document, with a spine item overriding the global setting to use reflowable layout, but repeating the override property value back to pre-paginated. The second setting must be ignored.",
-                "collection": "Fixed Layout",
-                "modified": "2022-08-02T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-spine-overrides_duplicate.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-xhtml-support.epub"
                 }
             ],
             "images": [
@@ -3443,7 +4311,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-zip-comp.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-zip-comp.epub"
                 }
             ],
             "images": [
@@ -3477,7 +4345,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pss-support.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pss-support.epub"
                 }
             ],
             "images": [
@@ -3511,7 +4379,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pss-support_ignore-title.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pss-support_ignore-title.epub"
                 }
             ],
             "images": [
@@ -3545,7 +4413,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-zip-mult.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-zip-mult.epub"
                 }
             ],
             "images": [
@@ -3579,7 +4447,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-readingsystem-features.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-readingsystem-features.epub"
                 }
             ],
             "images": [
@@ -3613,7 +4481,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-readingsystem-support.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-readingsystem-support.epub"
                 }
             ],
             "images": [
@@ -3647,7 +4515,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-external-links.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-external-links.epub"
                 }
             ],
             "images": [
@@ -3681,7 +4549,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-external-links_consent.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-external-links_consent.epub"
                 }
             ],
             "images": [
@@ -3715,7 +4583,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support_scrolled-continuous.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-support_scrolled-continuous.epub"
                 }
             ],
             "images": [
@@ -3749,7 +4617,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support_scrolled-doc.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-support_scrolled-doc.epub"
                 }
             ],
             "images": [
@@ -3783,7 +4651,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-metainf-inc.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-metainf-inc.epub"
                 }
             ],
             "images": [
@@ -3817,7 +4685,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-metainf-manifest.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-metainf-manifest.epub"
                 }
             ],
             "images": [
@@ -3851,7 +4719,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-audio.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-audio.epub"
                 }
             ],
             "images": [
@@ -3885,7 +4753,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-url_link-leaking-relative.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-url_link-leaking-relative.epub"
                 }
             ],
             "images": [
@@ -3919,7 +4787,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-url_link-path-absolute.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-url_link-path-absolute.epub"
                 }
             ],
             "images": [
@@ -3953,7 +4821,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-url_link-relative.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-url_link-relative.epub"
                 }
             ],
             "images": [
@@ -3990,7 +4858,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/mol-timing-synchronization.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/mol-timing-synchronization.epub"
                 }
             ],
             "images": [
@@ -4024,7 +4892,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/nav-spine_in-spine-no-list-style.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/nav-spine_in-spine-no-list-style.epub"
                 }
             ],
             "images": [
@@ -4058,7 +4926,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-dir_but_not_content.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-dir_but_not_content.epub"
                 }
             ],
             "images": [
@@ -4092,7 +4960,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-readingsystem-support_iframe.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-readingsystem-support_iframe.epub"
                 }
             ],
             "images": [
@@ -4126,7 +4994,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-support.epub"
                 }
             ],
             "images": [
@@ -4160,7 +5028,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support_iframe.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-support_iframe.epub"
                 }
             ],
             "images": [
@@ -4194,7 +5062,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support_svg.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-support_svg.epub"
                 }
             ],
             "images": [
@@ -4228,75 +5096,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-data-urls_top-level-content.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-layout-duplication",
-                "title": "fxl-layout-duplication",
-                "author": "Wendy Reid",
-                "description": "When rendition:layout is duplicated, EPUBCheck must return an error.",
-                "collection": "Fixed Layout",
-                "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-layout-duplication.epub"
-                }
-            ],
-            "images": [
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.png",
-                    "type": "image/png",
-                    "height": 2123,
-                    "width": 1500
-                },
-                {
-                    "href": "https://w3c.github.io/epub-tests/opds/test_cover.svg",
-                    "type": "image/svg"
-                }
-            ]
-        },
-        {
-            "metadata": {
-                "@type": "http://schema.org/Book",
-                "identifier": "https://github.com/w3c/epub-tests/tree/main/tests/fxl-page-spread-center",
-                "title": "fxl-page-spread-center",
-                "author": "Wendy Reid",
-                "description": "When rendition:page-spread-center is applied to a spine item, the document should be displayed in the center of the screen and not in a synthetic spread.",
-                "collection": "Fixed Layout",
-                "modified": "2021-11-24T00:00:00Z",
-                "publisher": "W3C",
-                "subject": [
-                    "epub-test"
-                ]
-            },
-            "links": [
-                {
-                    "type": "application/epub+zip",
-                    "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/fxl-page-spread-center.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-data-urls_top-level-content.epub"
                 }
             ],
             "images": [
@@ -4330,7 +5130,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-order-svg.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-order-svg.epub"
                 }
             ],
             "images": [
@@ -4364,7 +5164,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/nav-access.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/nav-access.epub"
                 }
             ],
             "images": [
@@ -4398,7 +5198,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-duplicate-item-hyperlink.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-duplicate-item-hyperlink.epub"
                 }
             ],
             "images": [
@@ -4432,7 +5232,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-duplicate-item-rendering.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-duplicate-item-rendering.epub"
                 }
             ],
             "images": [
@@ -4466,7 +5266,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-duplicate-item-ui.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-duplicate-item-ui.epub"
                 }
             ],
             "images": [
@@ -4500,7 +5300,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-url_relative.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-url_relative.epub"
                 }
             ],
             "images": [
@@ -4534,7 +5334,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-manifest-unlisted-resource.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-manifest-unlisted-resource.epub"
                 }
             ],
             "images": [
@@ -4568,7 +5368,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-version-backward.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-version-backward.epub"
                 }
             ],
             "images": [
@@ -4602,7 +5402,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-order.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-order.epub"
                 }
             ],
             "images": [
@@ -4636,7 +5436,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-dir-auto_root-rtl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-dir-auto_root-rtl.epub"
                 }
             ],
             "images": [
@@ -4670,7 +5470,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-dir-auto_root-unset.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-dir-auto_root-unset.epub"
                 }
             ],
             "images": [
@@ -4704,7 +5504,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-dir_rtl-root-ltr.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-dir_rtl-root-ltr.epub"
                 }
             ],
             "images": [
@@ -4738,7 +5538,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-dir_rtl-root-unset.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-dir_rtl-root-unset.epub"
                 }
             ],
             "images": [
@@ -4772,7 +5572,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-dir_unset-root-rtl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-dir_unset-root-rtl.epub"
                 }
             ],
             "images": [
@@ -4806,7 +5606,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-dir_unset-root-unset.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-dir_unset-root-unset.epub"
                 }
             ],
             "images": [
@@ -4840,7 +5640,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-mathml-support.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-mathml-support.epub"
                 }
             ],
             "images": [
@@ -4874,7 +5674,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/cnt-svg-css-reference.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/cnt-svg-css-reference.epub"
                 }
             ],
             "images": [
@@ -4908,7 +5708,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-cmt-mp3.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-cmt-mp3.epub"
                 }
             ],
             "images": [
@@ -4942,7 +5742,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-cmt-mp4.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-cmt-mp4.epub"
                 }
             ],
             "images": [
@@ -4976,7 +5776,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-cmt-gif.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-cmt-gif.epub"
                 }
             ],
             "images": [
@@ -5010,7 +5810,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-cmt-jpeg.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-cmt-jpeg.epub"
                 }
             ],
             "images": [
@@ -5044,7 +5844,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-cmt-png.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-cmt-png.epub"
                 }
             ],
             "images": [
@@ -5078,7 +5878,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-cmt-webp.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-cmt-webp.epub"
                 }
             ],
             "images": [
@@ -5112,7 +5912,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/scr-support_origin.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/scr-support_origin.epub"
                 }
             ],
             "images": [
@@ -5146,7 +5946,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-url_origin.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-url_origin.epub"
                 }
             ],
             "images": [
@@ -5180,7 +5980,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-url_parse-leaking-relative.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-url_parse-leaking-relative.epub"
                 }
             ],
             "images": [
@@ -5214,7 +6014,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-url_parse-path-absolute.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-url_parse-path-absolute.epub"
                 }
             ],
             "images": [
@@ -5248,7 +6048,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-dir_creator-rtl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-dir_creator-rtl.epub"
                 }
             ],
             "images": [
@@ -5282,7 +6082,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/nav-activation.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/nav-activation.epub"
                 }
             ],
             "images": [
@@ -5316,7 +6116,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/nav-spine_in-spine.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/nav-spine_in-spine.epub"
                 }
             ],
             "images": [
@@ -5350,7 +6150,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/nav-spine_not-in-spine.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/nav-spine_not-in-spine.epub"
                 }
             ],
             "images": [
@@ -5384,7 +6184,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-collections-unknown.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-collections-unknown.epub"
                 }
             ],
             "images": [
@@ -5418,7 +6218,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-unknown.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-unknown.epub"
                 }
             ],
             "images": [
@@ -5452,7 +6252,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-progression-pre-paginated.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-progression-pre-paginated.epub"
                 }
             ],
             "images": [
@@ -5486,7 +6286,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-package_arbitrary.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-package_arbitrary.epub"
                 }
             ],
             "images": [
@@ -5520,7 +6320,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-package_multiple.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-package_multiple.epub"
                 }
             ],
             "images": [
@@ -5554,7 +6354,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-nonlinear-activation.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-nonlinear-activation.epub"
                 }
             ],
             "images": [
@@ -5588,7 +6388,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-progression-default.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-progression-default.epub"
                 }
             ],
             "images": [
@@ -5622,7 +6422,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-progression_ltr.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-progression_ltr.epub"
                 }
             ],
             "images": [
@@ -5656,7 +6456,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-spine-progression_rtl.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-spine-progression_rtl.epub"
                 }
             ],
             "images": [
@@ -5690,7 +6490,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/ocf-url_manifest.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/ocf-url_manifest.epub"
                 }
             ],
             "images": [
@@ -5724,7 +6524,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-manifest-unknown.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-manifest-unknown.epub"
                 }
             ],
             "images": [
@@ -5758,7 +6558,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-unique-id.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-unique-id.epub"
                 }
             ],
             "images": [
@@ -5792,7 +6592,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-unique-id.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-unique-id.epub"
                 }
             ],
             "images": [
@@ -5832,7 +6632,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-creator-order.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-creator-order.epub"
                 }
             ],
             "images": [
@@ -5866,7 +6666,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-meta-unknown.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-meta-unknown.epub"
                 }
             ],
             "images": [
@@ -5900,7 +6700,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-meta-whitespace.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-meta-whitespace.epub"
                 }
             ],
             "images": [
@@ -5934,7 +6734,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pkg-title-order.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pkg-title-order.epub"
                 }
             ],
             "images": [
@@ -5968,7 +6768,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-xml-non-validating_unclosed.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-xml-non-validating_unclosed.epub"
                 }
             ],
             "images": [
@@ -6002,7 +6802,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-xml-names.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-xml-names.epub"
                 }
             ],
             "images": [
@@ -6036,7 +6836,7 @@
                 {
                     "type": "application/epub+zip",
                     "rel": "http://opds-spec.org/acquisition/open-access",
-                    "href": "https://github.com/w3c/epub-tests/raw/main/tests/pub-data-urls_browsing-context.epub"
+                    "href": "https://w3c.github.io/epub-tests/tests/pub-data-urls_browsing-context.epub"
                 }
             ],
             "images": [

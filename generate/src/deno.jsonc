@@ -25,9 +25,9 @@
             "description": "This is the command ran via a github action: run all the report generation. Deprecated tests are ignored.",
             "command": "deno run -A create_report.ts"
         },
-        "generate_full-full": {
+        "generate-full": {
             "description": "This is the command ran via a github action: run all the report generation. Deprecated tests are included.",
-            "command": "deno run -A create_report.ts"
+            "command": "deno run -A create_report.ts -f"
         },
         "debug-generate": {
             "description": "Run the generation script, but on the 'debug/tests' folder; saves running the script on the full test suite. Deprecated tests are ignored",
