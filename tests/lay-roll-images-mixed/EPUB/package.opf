@@ -45,7 +45,7 @@
     </manifest>
     <spine>
         <!-- <itemref idref="cover.xhtml"/> -->
-        <itemref idref="Title_html" properties="rendition:page-spread-center"/>
+        <itemref idref="Title_html"/>
         <itemref idref="A_html"/>
         <itemref idref="B_html"/>
         <itemref idref="C_image" />
