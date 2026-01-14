@@ -1,0 +1,31 @@
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage id="coverage">Pre-paginated Layout</dc:coverage>
+    <meta refines="#coverage" property="schema:version">3.3</meta>
+    <dc:creator>Ivan Herman</dc:creator>
+    <dc:date>2022-08-02</dc:date>
+    <dc:description>Pre-paginated document, with a spine item overriding the global setting to use reflowable layout.</dc:description>
+    <dc:identifier id="pub-id">lay-pp-spine-overrides_behave-as-global</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
+    <dc:title>lay-pp-spine-overrides_behave-as-global</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-pkg-spine-override</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-pkg-spine-override-first</meta>
+    <meta property="dcterms:modified">2026-01-15T00:00:00Z</meta>
+    <meta property="rendition:layout">pre-paginated</meta>
+    <meta property="rendition:spread">none</meta>
+  </metadata>
+  <manifest>
+    <item id="page_001" href="page_001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="page_002" href="page_002.xhtml" media-type="application/xhtml+xml"/>
+    <item id="style" href="fixed.css" media-type="text/css"/>
+    <item id="stix-font" href="fonts/STIXTwoText-Regular.otf" media-type="font/otf"/>
+    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine>
+    <itemref idref="page_001"/>
+    <itemref idref="page_002" properties="rendition:layout-reflowable"/>
+  </spine>
+</package>

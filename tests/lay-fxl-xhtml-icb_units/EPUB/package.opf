@@ -1,6 +1,6 @@
 <package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
   <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:coverage id="coverage">Fixed Layout</dc:coverage>
+    <dc:coverage id="coverage">Pre-paginated Layout</dc:coverage>
     <meta refines="#coverage" property="schema:version">3.3</meta>
     <dc:creator>Ivan Herman</dc:creator>
     <dc:date>2022-07-26</dc:date>
@@ -9,10 +9,11 @@
     <dc:language>en</dc:language>
     <dc:publisher>W3C</dc:publisher>
     <dc:title>lay-fxl-xhtml-icb_units</dc:title>
+    <meta property="belongs-to-collection">deprecated</meta>
     <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
     <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
-    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-fxl-rs-xhtml-icb-units</meta>
-    <meta property="dcterms:modified">2022-10-04T00:00:00Z</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs-33/#confreq-fxl-rs-xhtml-icb-units</meta>
+    <meta property="dcterms:modified">2026-01-15T00:00:00Z</meta>
     <meta property="rendition:layout">pre-paginated</meta>
     <meta property="rendition:orientation">landscape</meta>
     <meta property="rendition:spread">none</meta>

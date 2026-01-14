@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "StixTwoText";
+  font-weight: normal;
+  font-style: normal;
+  src: url('fonts/STIXTwoText-Regular.otf');
+}
+
+h1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-family: "StixTwoText";
+}
+
+p {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "StixTwoText";
+}
+
+p.second {
+  position: absolute;
+  top: 110px;
+  left: 40px;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: "StixTwoText";
+}
