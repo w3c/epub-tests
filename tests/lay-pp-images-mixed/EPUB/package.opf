@@ -15,6 +15,7 @@
         <meta property="rendition:layout">pre-paginated</meta>
         <dc:identifier id="pub-id">lay-pp-images-mixed</dc:identifier>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-epub3-fxl</meta>
+        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-pkg-manifest-fallback</meta>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#spine-fallbacks</meta>
         <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
         <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
