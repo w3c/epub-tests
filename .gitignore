@@ -36,6 +36,8 @@ tests/.DS_Store
 .vscode/
 
 tests/*.epub
+check
+
 
 
 check

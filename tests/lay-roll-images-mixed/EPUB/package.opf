@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="pub-id" xml:lang="en" xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:coverage id="coverage">Roll Layout</dc:coverage>
+        <meta refines="#coverage" property="schema:version">3.4</meta>
+        <dc:creator>Ivan Herman</dc:creator>
+        <dc:creator>Susan Neuhaus</dc:creator>
+        <dc:date>2026-01-15</dc:date>
+        <dc:description>Roll publication with mixed embedded and spine images.</dc:description>
+        <dc:description>Original book by Kate Greenaway, 1846-1901; reproduced digitally at the US Library of Congress (http://hdl.loc.gov/loc.rbc/bit.11404), in public domain.</dc:description>
+        <dc:language>en</dc:language>
+        <dc:publisher>W3C</dc:publisher>
+        <dc:title>A Apple Pie — embedded images except for two in the spine in a roll</dc:title>
+        <meta property="dcterms:modified">2026-01-15T20:32:01Z</meta>
+        <meta property="rendition:layout">roll</meta>
+        <dc:identifier id="pub-id">lay-roll-images-mixed</dc:identifier>
+        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-epub3-fxl</meta>
+        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-pkg-manifest-fallback</meta>
+        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#spine-fallbacks</meta>
+        <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+        <meta name="cover" content="cover-a-apple-pie.jpg"/>
+    </metadata>
+    <manifest>
+        <item id="A_html" href="texts/A.xhtml" media-type="application/xhtml+xml"/>
+        <item id="B_html" href="texts/B.xhtml" media-type="application/xhtml+xml"/>
+        <item id="C_html" media-type="application/xhtml+xml" href="fallbacks/C.xhtml" />
+        <item id="D_html" media-type="application/xhtml+xml" href="fallbacks/D.xhtml" />
+        <item id="E_html" href="texts/E.xhtml" media-type="application/xhtml+xml"/>
+        <item id="F_html" href="texts/F.xhtml" media-type="application/xhtml+xml"/>
+        <item id="G_html" href="texts/G.xhtml" media-type="application/xhtml+xml"/>
+        <item id="H_html" href="texts/H.xhtml" media-type="application/xhtml+xml"/>
+        <item id="Title_html" href="texts/Title.xhtml" media-type="application/xhtml+xml"/>
+        <item id="A_image" href="images/A.png" media-type="image/png"/>
+        <item id="B_image" href="images/B.png" media-type="image/png"/>
+        <item id="C_image" fallback="C_html" media-type="image/png" href="images/C.png" />
+        <item id="D_image" fallback="D_html" media-type="image/png" href="images/D.png" />
+        <item id="E_image" href="images/E.png" media-type="image/png"/>
+        <item id="F_image" href="images/F.png" media-type="image/png"/>
+        <item id="G_image" href="images/G.png" media-type="image/png"/>
+        <item id="H_image" href="images/H.png" media-type="image/png"/>
+        <item id="Title_image" href="images/Title.png" media-type="image/png"/>
+        <item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+        <item id="css" href="texts/fixed.css" media-type="text/css"/>
+        <item id="cover-a-apple-pie.jpg" href="images/cover-a-apple-pie.jpg" media-type="image/jpeg" properties="cover-image"/>
+        <item id="cover.xhtml" href="texts/cover.xhtml" media-type="application/xhtml+xml" properties="svg"/>
+    </manifest>
+    <spine>
+        <!-- <itemref idref="cover.xhtml"/> -->
+        <itemref idref="Title_html"/>
+        <itemref idref="A_html"/>
+        <itemref idref="B_html"/>
+        <itemref idref="C_image" />
+        <itemref idref="D_image" />
+        <itemref idref="E_html"/>
+        <itemref idref="F_html"/>
+        <itemref idref="G_html"/>
+        <itemref idref="H_html"/>
+    </spine>
+</package>
