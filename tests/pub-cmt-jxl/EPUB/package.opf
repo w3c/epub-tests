@@ -1,0 +1,26 @@
+<package xmlns="http://www.idpf.org/2007/opf" xmlns:epub="http://www.idpf.org/2007/ops" version="3.0" xml:lang="en" unique-identifier="pub-id">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:coverage id="coverage">Core Media Types</dc:coverage>
+    <meta refines="#coverage" property="schema:version">3.4</meta>
+    <dc:creator>Ivan Herman</dc:creator>
+    <dc:date>2026-01-23</dc:date>
+    <dc:description>A JPEG XL image is displayed as part of the XHTML content.</dc:description>
+    <dc:identifier id="pub-id">pub-cmt-jxl</dc:identifier>
+    <dc:language>en</dc:language>
+    <dc:publisher>W3C</dc:publisher>
+    <dc:title>pub-cmt-jxl</dc:title>
+    <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub/#cmt-jxl</meta>
+    <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-epub3-images</meta>
+    <meta property="dcterms:modified">2026-01-23T13:40:00Z</meta>
+  </metadata>
+  <manifest>
+    <item id="content_001" href="content_001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
+    <item id="img001" href="img/001.jxl" media-type="image/jxl"/>
+  </manifest>
+  <spine>
+    <itemref idref="content_001"/>
+  </spine>
+</package>
