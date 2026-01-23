@@ -15,9 +15,8 @@
         <meta property="rendition:layout">roll</meta>
         <dc:identifier id="pub-id">lay-roll-images-mixed</dc:identifier>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-epub3-fxl</meta>
+        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#sec-roll-layouts</meta>
         <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#confreq-rs-pkg-manifest-fallback</meta>
-        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#spine-fallbacks</meta>
-        <meta property="dcterms:isReferencedBy">https://www.w3.org/TR/epub-rs/#cconfreq-rendition-rs-spine-fallback</meta>
         <link rel="dcterms:rights" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
         <link rel="dcterms:rightsHolder" href="https://www.w3.org"/>
         <meta name="cover" content="cover-a-apple-pie.jpg"/>
