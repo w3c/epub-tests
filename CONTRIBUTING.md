@@ -61,8 +61,9 @@ This page explains how to write new tests.
    test if it's in the original repo.)
 
 1. Within the branch, copy the [test template](https://github.com/w3c/epub-tests/tree/main/tests/xx-epub-template)
-   (or the [fixed layout template](https://github.com/w3c/epub-tests/tree/main/tests/xx-fixed-layout-template) if you're
-   testing fixed layout). Name your copy as explained in [naming](#naming) below.
+   ([pre-paginated](https://github.com/w3c/epub-tests/tree/main/tests/xx-lay-pp-template)
+   or [roll](https://github.com/w3c/epub-tests/tree/main/tests/xx-lay-roll-template) templates if
+   you are testing pre-paginated, respectively roll layout). Name your copy as explained in [naming](#naming) below.
 
 1. Modify the template as necessary to implement the test.
 
