@@ -57,8 +57,8 @@ This page explains how to write new tests.
    [“Test obfuscated resources (fonts)”](https://github.com/w3c/epub-tests/issues/39).
 
 1. If you are a co-owner of [w3c/epub-tests](https://github.com/w3c/epub-tests/), create a branch on that repo for your new
-   test. Otherwise, fork the repo and create a branch on your fork. (It's easier for reviewers to clone a PR to validate the
-   test if it's in the original repo.)
+   test. Otherwise, fork the repo and create a branch on your fork. (It makes it easier for reviewers to clone a PR; they
+   can validate whether the test is in the original repo.)
 
 1. Within the branch, copy the [test template](https://github.com/w3c/epub-tests/tree/main/tests/xx-epub-template)
    ([pre-paginated](https://github.com/w3c/epub-tests/tree/main/tests/xx-lay-pp-template)
@@ -78,6 +78,8 @@ This page explains how to write new tests.
 
 1. Run the EPUB through [EPUBCheck](https://www.w3.org/publishing/epubcheck/) to ensure you didn't make any silly mistakes.
    Fix if you did. Your EPUBCheck version must be up to date; the program evolves with the specification…
+
+    (Note that you can also run epubcheck with the `--mode exp` flag on the original, uncompressed, folder; this may make the process easier.)
 
 2. Create a pull request for your test change with the uncompressed folder. Please
    ensure the PR's description clearly indicates which statement is being tested.
@@ -142,7 +144,8 @@ The package document for each test must contain the following metadata, which is
 
 * `dc:coverage`: Which section of the report the test should be listed in. The report has a separate table for each section
    to make it more readable. The current list of sections is listed in a
-   [JSON configuration file](https://github.com/w3c/epub-tests/blob/main/docs/drafts/config.json); if you add a new coverage
+   [JSON configuration file](https://github.com/w3c/epub-tests/blob/main/generate/config.json);
+   if you add a new coverage
    value, edit that JSON file in the same pull request to add the new value under the `coverage_labels`. That list should
    reflect the order of the corresponding sections in the EPUB specification.
 
@@ -264,7 +267,7 @@ Here is an example of a small test report:
 }
 ```
 
-The template file in `reports/xx-template.json` should list all available test identifiers, with all values set, initially, to `null`.
+The template file in [`xx-template.json`](https://w3c.github.io/epub-tests/reports/xx-template.json) should list all available test identifiers, with all values set to `null`. Download this file and fill in the test results for those tests that you did perform.
 
 
 ## Generated test reports

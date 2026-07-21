@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="color-scheme" content="light dark" />
-		<title>EPUB 3 Tests</title>
+		<title>EPUB 3.4 Tests</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 		<style>
 			td a {
@@ -128,13 +128,24 @@
 				-webkit-hyphens: auto !important;
 			}
 		</style>
+        <script>
+            function removeFirstConformanceParagraph() {
+            var section = document.getElementById('conformance');
+                if (!section) return false;
+            var firstParagraph = section.querySelector('p');
+            if (firstParagraph) {
+                firstParagraph.remove();
+                return true;
+            }
+            return false;
+        }
+        </script>
 		<script class="remove">
 			var respecConfig = {
 				wgPublicList: "public-pm-wg",
 				latestVersion: "https://w3c.github.io/epub-tests/",
 				specStatus: "base",
 				noRecTrack: true,
-                publishDate: "2026-01-14",
 				shortName: "epub-tests",
 				edDraftURI: "https://w3c.github.io/epub-tests/",
                 copyrightStart: "2021",
@@ -160,7 +171,8 @@
 				github: {
 					repoURL: "https://github.com/w3c/epub-tests",
 					branch: "main"
-				}
+				},
+                postProcess : [removeFirstConformanceParagraph]
 			};
 		</script>
 	</head>
@@ -178,8 +190,8 @@
 			<p>
 				<a href="https://github.com/w3c/epub-tests">w3c/epub-tests</a> is the repository for the tests to
 				validate the implementability of W3C's EPUB 3 specifications, specifically the core
-				<a href="https://www.w3.org/TR/epub-34/">EPUB 3.x</a> (the specification for the EPUB format itself) and the
-				<a href="https://www.w3.org/TR/epub-rs-34/">EPUB Reading Systems 3.x</a> (the specification for applications
+				<a href="https://www.w3.org/TR/epub-34/">EPUB 3.4</a> (the specification for the EPUB format itself) and the
+				<a href="https://www.w3.org/TR/epub-rs-34/">EPUB Reading Systems 3.4</a> (the specification for applications
 				that read and render EPUB files).
 			</p>
 
