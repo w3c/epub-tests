@@ -174,10 +174,11 @@ async function getAnImplementationReport(fname: string): Promise<ImplementationR
     const raw_data = await Deno.readTextFile(fname);
     const raw_report: Raw_ImplementationReport = JSON.parse(raw_data) as Raw_ImplementationReport;
     return {
-        name    : raw_report.name,
-        ref     : raw_report.ref,
-        variant : raw_report.variant,
-        tests   : transform_tests(raw_report.tests),
+        name     : raw_report.name,
+        ref      : raw_report.ref,
+        variant  : raw_report.variant,
+        official : raw_report.official,
+        tests    : transform_tests(raw_report.tests),
     }
 }
 
@@ -543,8 +544,9 @@ export function getTemplate(report: ReportData): Raw_ImplementationReport {
     }
 
     return {
-        "name"  : "(Implementation's name)",
-        "ref"   : "https://www.example.com",
-        "tests" : test_list,
+        "name"     : "(Implementation's name)",
+        "ref"      : "https://www.example.com",
+        "official" : false,
+        "tests"    : test_list,
     }
 }

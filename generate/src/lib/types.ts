@@ -269,7 +269,14 @@ export interface Implementer {
     variant ?: string;
 
     /** If present, the name becomes a hyperlink to this URL. */
-    ref     ?: string
+    ref     ?: string;
+
+    /**
+     * If present and set to true, the tester is "official", ie,
+     * the test have been performed by someone who officially represent
+     * the implementers
+     */
+    official ?: boolean;
 }
 
 
