@@ -1,0 +1,49 @@
+name: Test Results Submission
+description: Submit test results for EPUB 3. 
+title: "RESULTS: "
+labels: "results"
+body:
+  - type: markdown
+    attributes:
+      value: "## Test results for EPUB 3"
+  - type: input
+    id: reading-system
+    attributes:
+      label: Reading System/Platform Name
+      description: Name of your company or reading system. 
+  - type: checkboxes
+    id: operating-systems
+    attributes:
+      label: What operating systems or platforms were tested?
+      description: Select all that were tested. 
+      options:
+        - label: iOS
+        - label: Android
+        - label: eInk Device
+        - label: Web - Chromium (Chrome)
+        - label: Web - WebKit (Safari)
+        - label: Web - Gecko (Firefox)
+        - label: MacOS
+        - label: Windows
+        - label: Linux
+        - label: Other (provide details below)
+  - type: dropdown
+    id: tested-by
+    attributes: 
+      label: Are you the implementer or a third-party tester? 
+      description: Did you complete the tests on behalf of the reading system or independently. 
+      options:
+        - Implementer
+        - Third-party Tester
+  - type: upload
+    id: results-files
+    attributes:
+      label: Upload test result files
+      description: All files should be .json format. 
+    validations:
+      accept: ".json"
+  - type: textarea
+    id: other
+    attributes: 
+      label: Comments or other information
+      description: Provide any additional detail or questions here. 
