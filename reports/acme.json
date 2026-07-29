@@ -1,0 +1,16 @@
+{
+    "name": "ACME Books (placeholder)",
+    "ref": "https://www.example.org/acme",
+    "variant": "iOS, v1.0",
+    "tests": {
+        "pub-cmt-gif": true,
+        "pub-cmt-jpeg": true,
+        "pkg-dir_rtl-root-ltr": false,
+        "pkg-dir_rtl-root-unset": true,
+        "pkg-dir_unset-root-rtl": false,
+        "pkg-dir_unset-root-unset": true,
+        "pkg-dir-auto_root-rtl": null,
+        "pkg-dir-auto_root-unset": false,
+        "pkg-linked-records": "n/a"
+    }
+}
