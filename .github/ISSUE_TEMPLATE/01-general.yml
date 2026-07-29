@@ -1,0 +1,55 @@
+name: Bug Report or Feature Request
+description: Submit a bug report or feature request for the project. 
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to submit a bug report or feature request! Please fill out the following template to help us understand your issue or suggestion. 
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: A brief summary of the issue or feature request.
+      placeholder: "Example: Bug in login functionality"
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A detailed description of the issue or feature request.
+      placeholder: "Please provide a detailed description of the problem or feature you are requesting."
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce (for bugs)
+      description: If reporting a bug, please provide the steps to reproduce the issue.
+      placeholder: "1. Go to '...'\n2. Click on '...'\n3. See error"
+      required: false
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior (for bugs)
+      description: What you expected to happen when you encountered the bug.
+      placeholder: "The login should succeed and redirect to the dashboard."
+      required: false
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior (for bugs)
+      description: What actually happened when you encountered the bug.
+      placeholder: "The login failed with an error message."
+      required: false
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context (optional)
+      description: Any additional information that may help us understand the issue or feature request.
+      placeholder: "Include any other relevant information."
+      required: false
+  - type: upload
+    id: attachments
+    attributes:
+      label: Attachments (optional)
+      description: Upload any relevant files, screenshots, or logs that may help us understand the issue or feature request.
+      required: false
