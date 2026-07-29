@@ -6,7 +6,7 @@
  */
 
 import type { ReportData, Implementer, HTMLFragments } from './types.ts';
-import { Constants, Score, ReqType }                   from './types.ts';
+import { Constants, Score, ReqType, TESTED_BY }        from './types.ts';
 import { JSDOM }                                       from 'jsdom';
 import { beautify } from './beautify.ts';
 
@@ -62,8 +62,8 @@ function createImplementationList(impl: Implementer[]): string {
         const li = addChild(ol, 'li');
         const name = 'ref' in implementer ? `<a href="${implementer.ref}">${implementer.name}</a>` : `${implementer.name}`;
         const fullName = "variant" in implementer ? `${name}, ${implementer.variant}` : name;
-        const official = implementer?.official === true ? " (official test results)" : "";
-        li.innerHTML = `${fullName}${official}`;
+        const tested_by = TESTED_BY.get_tester(implementer["tested-by"]);
+        li.innerHTML = `${fullName} ${tested_by}`;
     }
     // This returns, in effect, the XML serialization of the section
     return beautify(section.outerHTML);
