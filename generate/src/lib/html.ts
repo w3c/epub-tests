@@ -62,7 +62,7 @@ function createImplementationList(impl: Implementer[]): string {
         const li = addChild(ol, 'li');
         const name = 'ref' in implementer ? `<a href="${implementer.ref}">${implementer.name}</a>` : `${implementer.name}`;
         const fullName = "variant" in implementer ? `${name}, ${implementer.variant}` : name;
-        const official = "official" in implementer && implementer.official === true ? " (official test results)" : "";
+        const official = implementer?.official === true ? " (official test results)" : "";
         li.innerHTML = `${fullName}${official}`;
     }
     // This returns, in effect, the XML serialization of the section
