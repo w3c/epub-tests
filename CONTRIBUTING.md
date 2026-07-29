@@ -255,7 +255,7 @@ Here is an example of a small test report:
     "name"     : "ACME Books",
     "ref"      : "https://www.example.org/acme",
     "variant"  : "iOS, v1.0",
-    "official" : true,
+    "tested-by" : "implementer",
     "tests" : {
         "pub-cmt-gif": true,
         "pub-cmt-jpeg": true,
