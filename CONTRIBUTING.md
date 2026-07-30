@@ -317,3 +317,69 @@ In the course of the EPUB 3.x evolution some feature may become deprecated (e.g.
 ```
 
 Note that the value of the `dcterms:isReferencedBy` has been changed as well; instead of referring to the EPUB spec through a generic URL, it now refers to the specific version which included this feature. That ensures the proper links.
+
+# Running tests
+
+Running tests mean loading each test as a separate EPUB Publication, and check whether the reading systems fulfills the requirement of that specific tests. The results are collected in an implementation report file and uploaded to the test repository.
+
+To make the running of the tests easier, a [test catalogue file](https://w3c.github.io/epub-tests/opds/opds.json) is generated using the [OPDS](https://drafts.opds.io/opds-2.0.html) format. Several reading systems understand this catalogue format, and can upload the full test suite easily.
+
+Alternatively, the test repository can be cloned, and downloaded to the tester's machine. To make the testing step easier, there is a `generateEpubs.sh`
+script in the `tests` folder of repository that will generate an epub version of each test.
+
+## Implementation report files
+
+The `reports` directory contains implementation reports in form of JSON files, one per reading system. The structure of the
+JSON file is as follows:
+
+* `name`: The name of the reading system.
+
+* `variant` (optional): The name or properties of the reading system variant. Typical values may be `Android,` `iOS`, or `Web`, if one
+  implementation (i.e., sharing the same `name` value) has specific versions running in those environments. In addition to the properties of the reading system, testers may also include information on how the tests were run, for example, if a screen reader was used with the reading system.
+
+* `ref` (optional): A URL that creates a link on the name of the reading system in the implementation report.
+
+* `tested-by` (optional): If set to `implementer` the tests have been performed by the implementers of the reading system, otherwise it should be set to `third-party`.
+
+* `tests`: An object with the list of the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
+  value of `true`, `false`, `"n/a"`, or `null` for a test that passes, fails, is not applicable (i.e., is not implemented for some reasons), or is not yet tested, respectively. If a test is not listed, its value is considered to be `null`. The implementation report will show "?" for `null`, indicating that the implementation has not run the test.
+
+Here is an example of a small test report:
+
+```json
+{
+    "name"     : "ACME Books",
+    "ref"      : "https://www.example.org/acme",
+    "variant"  : "iOS, v1.0",
+    "tested-by" : "implementer",
+    "tests" : {
+        "pub-cmt-gif": true,
+        "pub-cmt-jpeg": true,
+        "pkg-dir_rtl-root-ltr": false,
+        "pkg-dir_rtl-root-unset": true,
+        "pkg-dir_unset-root-rtl": false,
+        "pkg-dir_unset-root-unset": true,
+        "pkg-dir-auto_root-rtl": null,
+        "pkg-dir-auto_root-unset": false,
+        "pkg-linked-records": "n/a"
+    }
+}
+```
+
+The template file in [`xx-template.json`](https://w3c.github.io/epub-tests/reports/xx-template.json) should list all available test identifiers, with all values set to `null`. Download this file and fill in the test results for those tests that you did perform.
+
+
+## Generated test reports
+
+When new tests are committed to the repo, a GitHub Actions workflow generates a report from the tests in the `tests`
+directory and implementation reports in the `reports` directory.
+
+The report consists of two HTML pages, namely:
+
+* A [test suite description](https://w3c.github.io/epub-tests/) that lists each test, split into one table per unique
+  `dc:coverage` value. Each table has one row per test, showing the test's ID, title, description, back-links to the relevant
+  normative statements in the spec, and links to the implementation results.
+
+* An [implementation report](https://w3c.github.io/epub-tests/results) that lists reading systems that have submitted test
+  results along with their results tables. Each table has one row per test and one column per implementation, with cells
+  indicating whether the test passed, failed, or has not been run.

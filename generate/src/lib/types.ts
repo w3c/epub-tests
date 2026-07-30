@@ -256,6 +256,22 @@ export namespace Score {
     }
 }
 
+/**
+ * Enum for the tester's status in the test results
+ */
+
+export enum TESTED_BY {
+    IMPLEMENTER = "implementer",
+    THIRD_PARTY = "third-party",
+}
+
+export namespace TESTED_BY {
+    export function get_tester(t: TESTED_BY | undefined): string {
+        // This is a bit loose; any string that is not "implementer" will lead to a third party flag.
+        // But this looseness is not really harmful for our purposes...
+        return t !== undefined && `${t}` !== "implementer" ? "(tested by a third party)" : "";
+    }
+}
 
 /**
  * Data about a single implementer: it is necessary to the final
@@ -269,7 +285,14 @@ export interface Implementer {
     variant ?: string;
 
     /** If present, the name becomes a hyperlink to this URL. */
-    ref     ?: string
+    ref     ?: string;
+
+    /**
+     * If present and set to true, the tester is "official", ie,
+     * the test have been performed by someone who officially represent
+     * the implementers
+     */
+    "tested-by" ?: TESTED_BY;
 }
 
 
