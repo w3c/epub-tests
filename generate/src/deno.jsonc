@@ -1,7 +1,7 @@
 {
     "description": "Generation of index and resolutions' files for EPUB tests and test results.",
-    // Version 1.1.0 adds the concept and management of deprecated tests
-    "version": "1.1.1.",
+    // Version 1.2.0 adds the extra "tested-by" field to the test results
+    "version": "1.2.0.",
     "compilerOptions": {
         "lib": ["dom", "dom.iterable", "dom.asynciterable", "esnext", "deno.ns"]
     },
