@@ -1,0 +1,50 @@
+name: Test Revision or New Test Suggestion
+description: Issues related to an existing test or recommendations for a new one. 
+title: "TEST: "
+body: 
+  - type: markdown
+    attributes:
+      value: If you have found an issue in an existing test or have a suggestion for a new one, provide details here. 
+  - type: input
+    id: test-id
+    attributes: 
+      label: Test ID
+      description: (Required) Provide the name of the existing test or proposed name for a new test. 
+      required: true
+  - type: dropdown
+    id: test-area
+    attributes:
+      label: What area of the EPUB3 specification does this test apply to? 
+      description: (Optional) Select one of the following. 
+      options: 
+        - label: Publication Resources
+        - label: Core Media Types
+        - label: Package Documents
+        - label: Manifest Fallbacks
+        - label: Internationalization
+        - label: Content Documents 
+        - label: Navigation Documents
+        - label: Pre-paginated Layout
+        - label: Roll Layout
+        - label: Open Container Format
+        - label: Scripting
+        - label: Media Overlays
+        - label: Structural Semantics
+        - label: Fixed Layout
+  - type: input
+    id: spec-location
+    attributes: 
+      label: URL of the statement being tested.
+      description: (Optional) Provide a link to the section containing the MUST or SHOULD statement this test applies to. 
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue or new test. 
+      description: (Required) Provide a detailed explanation of the issue or feature the test requires.
+      required: true
+  - type: upload
+    id: supporting-materials
+    attributes:
+      label: Upload screenshots or test files. 
+      description: (Optional) Provide any screenshots or content related to the test that may be helpful. 
+      
