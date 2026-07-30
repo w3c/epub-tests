@@ -243,7 +243,7 @@ JSON file is as follows:
 
 * `ref` (optional): A URL that creates a link on the name of the reading system in the implementation report.
 
-* `official` (optional): If set to `true`, the tests have been performed by a persons that officially represent the implementers of the reading system for the purpose of testing.
+* `tested-by` (optional): If set to `implementer` the tests have been performed by the implementers of the reading system, otherwise it should be set to `third-party`.
 
 * `tests`: An object with the list of the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
   value of `true`, `false`, `"n/a"`, or `null` for a test that passes, fails, is not applicable (i.e., is not implemented for some reasons), or is not yet tested, respectively. If a test is not listed, its value is considered to be `null`. The implementation report will show "?" for `null`, indicating that the implementation has not run the test.
