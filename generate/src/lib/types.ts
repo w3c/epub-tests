@@ -266,10 +266,39 @@ export enum TESTED_BY {
 }
 
 export namespace TESTED_BY {
+    /**
+     * Note: the undefined value check is not really necessary; by the logic of the program,
+     * ie, by the result of set function below, this value is always set.
+     * @param t
+     * @returns the string to be displayed in the result
+     */
     export function get_tester(t: TESTED_BY | undefined): string {
-        // This is a bit loose; any string that is not "implementer" will lead to a third party flag.
-        // But this looseness is not really harmful for our purposes...
-        return t !== undefined && `${t}` !== "implementer" ? "(tested by a third party)" : "";
+        return t !== undefined && t !== TESTED_BY.IMPLEMENTER ? "(tested by a third party)" : "";
+    }
+
+    // A type-guard for the ENUM.
+    // deno-lint-ignore no-explicit-any
+    function isTestedBy (value: any): value is TESTED_BY {
+        return Object.values(TESTED_BY).includes(value);
+    }
+
+    /**
+     * Just to be on the safe side when converting raw JSON into the internal type:
+     * make it sure that the result is what we want.
+     *
+     * @param t
+     * @returns
+     */
+    export const set = (t: TESTED_BY | string | undefined): TESTED_BY => {
+        if (t === undefined) {
+            return TESTED_BY.IMPLEMENTER;
+        } else if (isTestedBy(t)) {
+            return t as TESTED_BY;
+        } else {
+            // This is when the tester adds an invalid string; the converter does not recognize
+            // this and may generate an invalid value
+            return TESTED_BY.THIRD_PARTY;
+        }
     }
 }
 
