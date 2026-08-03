@@ -178,7 +178,7 @@ async function getAnImplementationReport(fname: string): Promise<ImplementationR
         name        : raw_report.name,
         ref         : raw_report.ref,
         variant     : raw_report.variant,
-        "tested-by" : raw_report["tested-by"] || TESTED_BY.IMPLEMENTER,
+        "tested-by" : TESTED_BY.set(raw_report["tested-by"]),
         tests       : transform_tests(raw_report.tests),
     }
 }
