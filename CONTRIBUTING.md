@@ -1,3 +1,100 @@
+# Running tests
+
+Running tests mean loading each test as a separate EPUB Publication, and checking whether the reading systems fulfills the requirement of that specific test. Each test outlines the pass or fail criteria for the test. The results are collected in an implementation report file and uploaded to the test repository.
+
+To make the running of the tests easier, a [test catalogue file](https://w3c.github.io/epub-tests/opds/opds.json) is generated using the [OPDS](https://drafts.opds.io/opds-2.0.html) format. Several reading systems understand this catalogue format, and can upload the full test suite easily.
+
+Alternatively, the test repository can be forked, and downloaded to the tester's machine. To make the testing step easier, there is a `generateEpubs.sh` script in the `tests` folder of repository that will generate an epub version of each test. To fork this repository, go to the "Fork" menu at the top of the [repository page](https://github.com/w3c/epub-tests/). To create a local copy of the files, download the ZIP file for this repository to your machine from the "Code" menu at the top of the repository page. 
+
+## Generating the tests 
+
+All of the test files are located in the `tests/` folder. Using Terminal/your preferred command line tool, go to your local version of the repository, or the ZIP file location, and open that folder:
+
+`cd [FOLDER]/epub-tests/tests/`
+
+To generate the tests, run the `generateEpubs.sh` script file:
+
+`sh generateEpubs.sh`
+
+The script will run and the `.epub` files will be added to the `tests/` folder. You can then take those files and load them to your reading application or servers.
+
+## Implementation report files
+
+Save a copy of the template file: [xx-template.json](https://w3c.github.io/epub-tests/reports/xx-template.json), change the file name to reflect the reading system and platform being tested (if multiple are being tested). 
+
+`acme-ios.json`
+
+The structure of the JSON file is as follows:
+
+* `name`: The name of the reading system.
+
+* `variant` (optional): The name or properties of the reading system variant. Typical values may be `"Android"`, `"iOS"`, or `"Web"`, if one
+  implementation (i.e., sharing the same `name` value) has specific versions running in those environments. In addition to the properties of the reading system, testers may also include information on how the tests were run, for example, if a screen reader was used with the reading system.
+
+* `ref` (optional): A URL that creates a link on the name of the reading system in the implementation report.
+
+* `tested-by` (optional): If set to `"implementer"` the tests have been performed by the implementers of the reading system, otherwise it should be set to `"third-party"`.
+
+* `tests`: An object with the list of the test results. Each key is a test's unique identifier (its `dc:identifier`) with a value of `true`, `false`, `"n/a"`, or `null`. Use `true` for a test that passes, `false` for a test that fails, `"n/a"` for a test is not applicable. A test would have a result of `null` if it is not yet performed. If a test is not listed its value is considered to be null. The implementation report will show a value of "?" for null, indicating that the implementation has not run the test.
+
+Here is an example of a small test report:
+
+```json
+{
+    "name"  : "ACME Books",
+    "ref"   : "https://www.example.org/acme",
+    "variant" : "iOS, v1.0",
+    "tested-by": "implementer",
+    "tests" : {
+        "pub-cmt-gif": true,
+        "pub-cmt-jpeg": true,
+        "pkg-dir_rtl-root-ltr": false,
+        "pkg-dir_rtl-root-unset": true,
+        "pkg-dir_unset-root-rtl": false,
+        "pkg-dir_unset-root-unset": true,
+        "pkg-dir-auto_root-rtl": null,
+        "pkg-dir-auto_root-unset": false,
+        "pkg-linked-records": "n/a"
+    }
+}
+```
+
+The test report template will list all of the available tests, with the default value set to `null`.
+
+### Running the tests and completing the report
+
+Once the test files are loaded on your reading system, running the tests is simple. Open each file, where the test scenario will be on the first or second page, explaining the condition in which the test passes. In most cases, the test is within the EPUB itself, however there are some tests related to the presentation of metadata such as the title or author, the test will inform you of what to look for.
+
+For each test, there are four possible values to give in the JSON:
+
+* `null`: the test has not been run
+
+* `true`: the test passes according to the criteria of the test
+
+* `false`: the test fails according to the criteria of the test
+
+* `"n/a"`: the test does not apply to your reading system (the feature is not implemented or cannot be supported by the reading system, such as audio playback for reading systems without audio support) **[NOTE: the quotes around "n/a" are required formatting]**
+
+### Submitting the test results
+
+If you are not familiar with GitHub or creating PRs (pull requests), you are welcome to submit your test reports by [opening a Test Results Submission issue](https://github.com/w3c/epub-tests/issues/new/choose) on the repository and attaching the reports, or emailing the `.json` files to [group-pm-wg-chairs@w3.org](mailto:group-pm-wg-chairs@w3.org).
+
+If you have forked this repository, you can create a PR with the test results. All test results files should be added to the `results/` folder and follow the naming conventions outlined above. All test results files should be added to the `results/` folder and follow the naming conventions outlined in the [Implementation report files](#implementation-report-files) section of this document.
+
+## Generated test reports
+
+When new tests are committed to the repo, a GitHub Actions workflow generates a report from the tests in the `tests`
+directory and implementation reports in the `reports` directory.
+
+The report consists of two HTML pages, namely:
+
+* A [test suite description](https://w3c.github.io/epub-tests/) that lists each test, split into one table per unique
+  `dc:coverage` value. Each table has one row per test, showing the test's ID, title, description, back-links to the relevant
+  normative statements in the spec, and links to the implementation results.
+
+* An [implementation report](https://w3c.github.io/epub-tests/results) that lists reading systems that have submitted test
+  results along with their results tables. Each table has one row per test and one column per implementation, with cells
+  indicating whether the test passed, failed, or has not been run.
 
 # Writing tests for EPUB 3.4
 
@@ -221,69 +318,3 @@ In the course of the EPUB 3.x evolution some feature may become deprecated (e.g.
 ```
 
 Note that the value of the `dcterms:isReferencedBy` has been changed as well; instead of referring to the EPUB spec through a generic URL, it now refers to the specific version which included this feature. That ensures the proper links.
-
-# Running tests
-
-Running tests mean loading each test as a separate EPUB Publication, and check whether the reading systems fulfills the requirement of that specific tests. The results are collected in an implementation report file and uploaded to the test repository.
-
-To make the running of the tests easier, a [test catalogue file](https://w3c.github.io/epub-tests/opds/opds.json) is generated using the [OPDS](https://drafts.opds.io/opds-2.0.html) format. Several reading systems understand this catalogue format, and can upload the full test suite easily.
-
-Alternatively, the test repository can be cloned, and downloaded to the tester's machine. To make the testing step easier, there is a `generateEpubs.sh`
-script in the `tests` folder of repository that will generate an epub version of each test.
-
-## Implementation report files
-
-The `reports` directory contains implementation reports in form of JSON files, one per reading system. The structure of the
-JSON file is as follows:
-
-* `name`: The name of the reading system.
-
-* `variant` (optional): The name or properties of the reading system variant. Typical values may be `Android,` `iOS`, or `Web`, if one
-  implementation (i.e., sharing the same `name` value) has specific versions running in those environments. In addition to the properties of the reading system, testers may also include information on how the tests were run, for example, if a screen reader was used with the reading system.
-
-* `ref` (optional): A URL that creates a link on the name of the reading system in the implementation report.
-
-* `tested-by` (optional): If set to `implementer` the tests have been performed by the implementers of the reading system, otherwise it should be set to `third-party`.
-
-* `tests`: An object with the list of the implementation results. Each key is a test's unique identifier (its `dc:identifier`) with a
-  value of `true`, `false`, `"n/a"`, or `null` for a test that passes, fails, is not applicable (i.e., is not implemented for some reasons), or is not yet tested, respectively. If a test is not listed, its value is considered to be `null`. The implementation report will show "?" for `null`, indicating that the implementation has not run the test.
-
-Here is an example of a small test report:
-
-```json
-{
-    "name"     : "ACME Books",
-    "ref"      : "https://www.example.org/acme",
-    "variant"  : "iOS, v1.0",
-    "tested-by" : "implementer",
-    "tests" : {
-        "pub-cmt-gif": true,
-        "pub-cmt-jpeg": true,
-        "pkg-dir_rtl-root-ltr": false,
-        "pkg-dir_rtl-root-unset": true,
-        "pkg-dir_unset-root-rtl": false,
-        "pkg-dir_unset-root-unset": true,
-        "pkg-dir-auto_root-rtl": null,
-        "pkg-dir-auto_root-unset": false,
-        "pkg-linked-records": "n/a"
-    }
-}
-```
-
-The template file in [`xx-template.json`](https://w3c.github.io/epub-tests/reports/xx-template.json) should list all available test identifiers, with all values set to `null`. Download this file and fill in the test results for those tests that you did perform.
-
-
-## Generated test reports
-
-When new tests are committed to the repo, a GitHub Actions workflow generates a report from the tests in the `tests`
-directory and implementation reports in the `reports` directory.
-
-The report consists of two HTML pages, namely:
-
-* A [test suite description](https://w3c.github.io/epub-tests/) that lists each test, split into one table per unique
-  `dc:coverage` value. Each table has one row per test, showing the test's ID, title, description, back-links to the relevant
-  normative statements in the spec, and links to the implementation results.
-
-* An [implementation report](https://w3c.github.io/epub-tests/results) that lists reading systems that have submitted test
-  results along with their results tables. Each table has one row per test and one column per implementation, with cells
-  indicating whether the test passed, failed, or has not been run.
