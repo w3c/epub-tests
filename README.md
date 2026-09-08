@@ -57,6 +57,7 @@ Here is an example:
     "name"  : "ACME Books",
     "ref"   : "https://www.example.org/acme",
     "variant" : "iOS, v1.0",
+    "tested-by": "implementer",
     "tests" : {
         "pub-cmt-gif": true,
         "pub-cmt-jpeg": true,
