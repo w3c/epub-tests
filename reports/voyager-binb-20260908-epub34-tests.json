@@ -1,6 +1,7 @@
 {
   "name": "VOYAGER BinB",
   "variant": "v1.7510 (EPUB 3.4 Config Enabled / Dev)",
+  "ref": "https://www.voyager.co.jp/products/binb/",
   "tests": {
     "cnt-css-fonts_ot": "n/a",
     "cnt-css-fonts_tt": "n/a",
