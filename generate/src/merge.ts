@@ -7,8 +7,9 @@ function main() {
     program
         .name('merge')
         .description('Merge the old testing results into a new one.')
-        .usage('[options]')
-        .option('-i --info', 'run the script but dump only the additions')
+        .usage('[options] <newFile> <oldFile>')
+        .option('-i, --info', 'run the script but dump only the additions')
+        .arguments('<newFile> <oldFile>')
         .parse(["", "", ...Deno.args]);
     const options = program.opts();
     const info    = options.info ?? false;
