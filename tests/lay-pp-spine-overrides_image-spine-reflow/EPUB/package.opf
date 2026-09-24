@@ -19,7 +19,7 @@
     <item id="page_001" href="page_001.xhtml" media-type="application/xhtml+xml"/>
     <item id="page_002" href="page_002.xhtml" media-type="application/xhtml+xml"/>
     <item id="page_003" href="page_003.xhtml" media-type="application/xhtml+xml"/>
-    <item id="image_002" href="page_2.png" fallback="page_002" media-type="image/png"/>
+    <item id="image_002" href="images/page_2.png" fallback="page_002" media-type="image/png"/>
     <item id="style" href="fixed.css" media-type="text/css"/>
     <item id="stix-font" href="fonts/STIXTwoText-Regular.otf" media-type="font/otf"/>
     <item id="nav" properties="nav" href="nav.xhtml" media-type="application/xhtml+xml"/>
