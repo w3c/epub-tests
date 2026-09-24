@@ -1,0 +1,29 @@
+{
+  "name": "PUBLUS Reader",
+  "ref": "https://publus.jp/",
+  "tested-by": "implementer",
+  "name": "PUBLUS Reader",
+  "variant": "Android",
+  "tests": {
+    "pub-cmt-avif": false,
+    "pub-cmt-jxl": false,
+    "cnt-css-fonts_ot": true,
+    "cnt-css-fonts_tt": true,
+    "cnt-css-fonts_woff": true,
+    "cnt-css-fonts_woff2": true,
+    "nav-spine_in-spine-hidden-toc-css": true,
+    "nav-spine_in-spine-hidden-toc-html": true,
+    "lay-pp-embedded-images": true,
+    "lay-pp-embedded-images-svg": true,
+    "lay-pp-images-in-spine": true,
+    "lay-pp-images-mixed": true,
+    "lay-pp-spine-overrides_image-only-pp": true,
+    "lay-pp-spine-overrides_image-only-reflow": true,
+    "lay-pp-spine-overrides_image-spine-pp": true,
+    "lay-pp-spine-overrides_image-spine-reflow": true,
+    "lay-roll-embedded-images": true,
+    "lay-roll-embedded-images-svg": true,
+    "lay-roll-images-in-spine": true,
+    "lay-roll-images-mixed": true
+  }
+}
