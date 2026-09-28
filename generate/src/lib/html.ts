@@ -109,7 +109,7 @@ function createImplementationReports(data: ReportData): {consolidated_results: s
             h3.id = (consolidated) ? `sec-consolidated-${convertToID(table.header)}-results` : `sec-detailed-${convertToID(table.header)}-results`;
 
             if (consolidated && Constants.OPTIONAL_FEATURES.includes(table.header)) {
-                const p = addChild(table_section,'p','The general feature is <em>OPTIONAL;</em> a "must" tests means that <em>it is required to pass it to claim conformance in implementing the feature</em>.');
+                const _p = addChild(table_section,'p','The general feature is <em>OPTIONAL;</em> a "must" tests means that <em>it is required to pass it to claim conformance in implementing the feature</em>.');
                 table_section.className = "optional_feature";
             }
 

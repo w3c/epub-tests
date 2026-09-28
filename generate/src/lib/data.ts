@@ -140,11 +140,13 @@ export async function getListDir(dir_name: string, filter_entry: (entry: Deno.Di
 
 
 /**
- * Get a single implementation report in JSON and convert to its internal format,
+ * Get a single implementation report in JSON and convert to its internal format. Note that
+ * the identifiers of all available tests are also provided; this is used to complete test
+ * results that may not have started with the full template. The missing entry is set to 'null'.
  *
  * @internal
  */
-async function getAnImplementationReport(fname: string): Promise<ImplementationReport> {
+async function getAnImplementationReport(fname: string, test_ids: string[]): Promise<ImplementationReport> {
     // Just to make the code more readable...
     type raw_index_pair      = [string, string|boolean|null];
     type internal_index_pair = [string, Score];
@@ -174,6 +176,13 @@ async function getAnImplementationReport(fname: string): Promise<ImplementationR
 
     const raw_data = await Deno.readTextFile(fname);
     const raw_report: Raw_ImplementationReport = JSON.parse(raw_data) as Raw_ImplementationReport;
+
+    for (const key of test_ids) {
+        if (raw_report.tests[key] === undefined) {
+            raw_report.tests[key] = null;
+        }
+    }
+
     return {
         name        : raw_report.name,
         ref         : raw_report.ref,
@@ -190,11 +199,11 @@ async function getAnImplementationReport(fname: string): Promise<ImplementationR
  * @param dir_name the directory that contains the implementation reports
  * @internal
  */
-async function getImplementationReports(dir_name: string): Promise<ImplementationReport[]> {
+async function getImplementationReports(dir_name: string, test_ids: string[]): Promise<ImplementationReport[]> {
     const implementation_list = await getListDir(dir_name, isFile);
 
     // Use the 'Promise.all' trick to get to all the implementation reports in one async step rather than going through a cycle
-    const report_list_promises: Promise<ImplementationReport>[] = implementation_list.map((file_name) => getAnImplementationReport(`${dir_name}/${file_name}`));
+    const report_list_promises: Promise<ImplementationReport>[] = implementation_list.map((file_name) => getAnImplementationReport(`${dir_name}/${file_name}`, test_ids));
     const proto_implementation_reports: ImplementationReport[] = await Promise.all(report_list_promises);
     const implementation_reports: ImplementationReport[] = proto_implementation_reports.filter((entry) => entry !== undefined);
     implementation_reports.sort((a,b) => stringComparison(a.name, b.name));
@@ -284,7 +293,7 @@ function consolidateImplementationReports(implementations: ImplementationReport[
  *
  */
 function create_implementation_data(metadata: TestData[], implementations: ImplementationReport[]): ImplementationData[] {
-    return metadata.map((single_test: TestData): ImplementationData => {
+     const return_data = metadata.map((single_test: TestData): ImplementationData => {
         // Extend the object with, at first, an empty array of implementations
         const retval: ImplementationData = {...single_test, implementations: []};
         retval.implementations = implementations.map((implementor: ImplementationReport) => {
@@ -295,7 +304,8 @@ function create_implementation_data(metadata: TestData[], implementations: Imple
             }
         }).filter((entry) => entry !== undefined);
         return retval;
-    })
+    });
+    return return_data;
 }
 
 
@@ -505,8 +515,10 @@ export async function getReportData(test_data: TestData[], reports: string, full
     // Sort the metadata for all available tests. including the separation of must/should/may/deprecated tests;
     const metadata: TestData[] = sort_test_data(test_data);
 
+    const test_ids: string[] = metadata.map((test: TestData): string => test.identifier);
+
     // Get the list of available implementation reports
-    const impl_list: ImplementationReport[] = await getImplementationReports(reports);
+    const impl_list: ImplementationReport[] = await getImplementationReports(reports, test_ids);
     const consolidated_list: ImplementationReport[] = consolidateImplementationReports(impl_list);
 
     // Combine the two lists to create an array of Implementation data
