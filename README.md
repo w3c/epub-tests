@@ -2,21 +2,15 @@
 
 # Test repository for the EPUB 3 specifications
 
-This repository contains tests to validate the implementability of the W3C's EPUB 3 specifications, specifically core
-[EPUB 3](https://www.w3.org/TR/epub/) (the spec for the EPUB format itself) and
-[EPUB Reading Systems 3](https://www.w3.org/TR/epub-rs/) (the spec for applications that read EPUB files). Our
-objective is to test every normative statement (that is, every
-[`MUST` or `SHOULD` or `MAY`](https://datatracker.ietf.org/doc/html/bcp14), etc.).
+This repository contains tests to validate the implementability of the W3C's EPUB 3 specifications, specifically core [EPUB 3](https://www.w3.org/TR/epub/) (the spec for the EPUB format itself) and [EPUB Reading Systems 3](https://www.w3.org/TR/epub-rs/) (the spec for applications that read EPUB files). Our objective is to test every normative statement (that is, every [`MUST` or `SHOULD` or `MAY`](https://datatracker.ietf.org/doc/html/bcp14), etc.).
 
-The [test reports](https://w3c.github.io/epub-tests/) describe all the tests, including
-[implementation results](https://w3c.github.io/epub-tests/results) and
-[how to contribute](https://w3c.github.io/epub-tests/contributing).
+The [test reports](https://w3c.github.io/epub-tests/) describe all the tests, including [implementation results](https://w3c.github.io/epub-tests/results) and [how to contribute](https://w3c.github.io/epub-tests/contributing).
 
-The current, tested EPUB 3 version is [EPUB 3.4](https://www.w3.org/TR/epub-overview-34). Because this version is backward compatible with earlier versions, most of these tests are also valid for earlier versions. Each test is assigned a `version` value, denoting the EPUB revision where the test has been added in as shown on the [test table](https://w3c.github.io/epub-tests/)
+The current, tested EPUB 3 version is [EPUB 3.4](https://www.w3.org/TR/epub-overview-34). Because this version is backward compatible with earlier versions, most of these tests are also valid for earlier versions. Each test is assigned a `version` value, denoting the EPUB revision where the test has been added in as shown on the [test table](https://w3c.github.io/epub-tests/),
 
-Note that the current setup is based on release 3.4 of the EPUB 3 specification. See the separate [NewVersion.md](generate/NewVersion.md) file for the steps to follow when updating the repository for a new version of the EPUB 3 specification.
+Note that the current setup is based on release 3.4 of the EPUB 3 specification. See the separate [NewVersion.md](generate/NewVersion.md) file for the steps to follow when updating the repository for a new version of the EPUB 3 specification.
 
-## How to run tests for EPUB 
+## How to run tests for EPUB
 
 Running tests mean loading each test as a separate EPUB Publication, and checking whether the reading systems fulfills the requirement of that specific test. Each test outlines the pass or fail criteria for the test. The results are collected in an implementation report file and uploaded to the test repository.
 
@@ -26,7 +20,7 @@ Alternatively, the test repository can be forked, and downloaded to the tester's
 
 ### Generating the tests
 
-All of the test files are located in the `tests/` folder. Using Terminal/your preferred command line tool, go to your local version of the repository, or the ZIP file location, and open that folder: 
+All of the test files are located in the `tests/` folder. Using Terminal/your preferred command line tool, go to your local version of the repository, or the ZIP file location, and open that folder:
 
 `cd [FOLDER]/epub-tests/tests/`
 
@@ -38,11 +32,11 @@ The script will run and the `.epub` files will be added to the `tests/` folder. 
 
 ### The test report
 
-Save a copy of the template file: [xx-template.json](https://w3c.github.io/epub-tests/reports/xx-template.json), change the file name to reflect the reading system and platform being tested (if multiple are being tested). 
+Save a copy of the template file: [xx-template.json](https://w3c.github.io/epub-tests/reports/xx-template.json), change the file name to reflect the reading system and platform being tested (if multiple are being tested).
 
 `acme-ios.json`
 
-Open the file in any text editor application and fill in the reporting fields: 
+Open the file in any text editor application and fill in the reporting fields:
 
 - `name`: The name of the reading system.
 - `variant` (optional): The name or properties of the reading system variant. Typical values may be Android, iOS, or Web, if one implementation (i.e., sharing the same name value) has specific versions running in those environments. In addition to the properties of the reading system, testers may also include information on how the tests were run, for example, if a screen reader was used with the reading system.
@@ -81,7 +75,7 @@ Once the test files are loaded on your reading system, running the tests is simp
 For each test, there are four possible values to give in the JSON:
 
 - `null`: the test has not been run
-- `true`: the test passes according to the criteria of the test 
+- `true`: the test passes according to the criteria of the test
 - `false`: the test fails according to the criteria of the test
 - `"n/a"`: the test does not apply to your reading system (the feature is not implemented or cannot be supported by the reading system, such as audio playback for reading systems without audio support) [NOTE: the quotes around "n/a" are required formatting]
 
