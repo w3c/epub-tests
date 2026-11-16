@@ -63,7 +63,8 @@ function createImplementationList(impl: Implementer[]): string {
         const name = 'ref' in implementer ? `<a href="${implementer.ref}">${implementer.name}</a>` : `${implementer.name}`;
         const fullName = "variant" in implementer ? `${name}, ${implementer.variant}` : name;
         const tested_by = TESTED_BY.get_tester(implementer["tested-by"]);
-        li.innerHTML = `${fullName} ${tested_by}`;
+        const date = implementer.date ? `, submitted on ${implementer.date}` : "";
+        li.innerHTML = `${fullName}${date} ${tested_by}`;
     }
     // This returns, in effect, the XML serialization of the section
     return beautify(section.outerHTML);

@@ -322,6 +322,13 @@ export interface Implementer {
      * the implementers
      */
     "tested-by" ?: TESTED_BY;
+
+    /**
+     * Submission date; displayed as part of the listing of implementers.
+     * Becomes important if tests for previous versions of EPUB 3.X are
+     * reused for more recent versions.
+     */
+    date        ?: string;
 }
 
 
