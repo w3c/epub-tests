@@ -4,9 +4,9 @@ Running tests mean loading each test as a separate EPUB Publication, and checkin
 
 To make the running of the tests easier, a [test catalogue file](https://w3c.github.io/epub-tests/opds/opds.json) is generated using the [OPDS](https://drafts.opds.io/opds-2.0.html) format. Several reading systems understand this catalogue format, and can upload the full test suite easily.
 
-Alternatively, the test repository can be forked, and downloaded to the tester's machine. To make the testing step easier, there is a `generateEpubs.sh` script in the `tests` folder of repository that will generate an epub version of each test. To fork this repository, go to the "Fork" menu at the top of the [repository page](https://github.com/w3c/epub-tests/). To create a local copy of the files, download the ZIP file for this repository to your machine from the "Code" menu at the top of the repository page. 
+Alternatively, the test repository can be forked, and downloaded to the tester's machine. To make the testing step easier, there is a `generateEpubs.sh` script in the `tests` folder of repository that will generate an epub version of each test. To fork this repository, go to the "Fork" menu at the top of the [repository page](https://github.com/w3c/epub-tests/). To create a local copy of the files, download the ZIP file for this repository to your machine from the "Code" menu at the top of the repository page.
 
-## Generating the tests 
+## Generating the tests
 
 All of the test files are located in the `tests/` folder. Using Terminal/your preferred command line tool, go to your local version of the repository, or the ZIP file location, and open that folder:
 
@@ -20,7 +20,7 @@ The script will run and the `.epub` files will be added to the `tests/` folder. 
 
 ## Implementation report files
 
-Save a copy of the template file: [xx-template.json](https://w3c.github.io/epub-tests/reports/xx-template.json), change the file name to reflect the reading system and platform being tested (if multiple are being tested). 
+Save a copy of the template file: [xx-template.json](https://w3c.github.io/epub-tests/reports/xx-template.json), change the file name to reflect the reading system and platform being tested (if multiple are being tested).
 
 `acme-ios.json`
 
@@ -35,6 +35,8 @@ The structure of the JSON file is as follows:
 
 * `tested-by` (optional): If set to `"implementer"` the tests have been performed by the implementers of the reading system, otherwise it should be set to `"third-party"`.
 
+* `date` (optional): Date of the test result submission. If set, the date is displayed as part of the implementation list. The format should be YYYY-MM-DD.
+
 * `tests`: An object with the list of the test results. Each key is a test's unique identifier (its `dc:identifier`) with a value of `true`, `false`, `"n/a"`, or `null`. Use `true` for a test that passes, `false` for a test that fails, `"n/a"` for a test is not applicable. A test would have a result of `null` if it is not yet performed. If a test is not listed its value is considered to be null. The implementation report will show a value of "?" for null, indicating that the implementation has not run the test.
 
 Here is an example of a small test report:
@@ -45,6 +47,7 @@ Here is an example of a small test report:
     "ref"   : "https://www.example.org/acme",
     "variant" : "iOS, v1.0",
     "tested-by": "implementer",
+    "date" : "2026-11-16",
     "tests" : {
         "pub-cmt-gif": true,
         "pub-cmt-jpeg": true,
