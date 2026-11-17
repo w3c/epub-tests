@@ -308,27 +308,28 @@ export namespace TESTED_BY {
  */
 export interface Implementer {
     /** Name of the implementation, to appear in the final report. */
-    name     : string;
+    name: string;
 
     /** Name of a variant (if applicable), to appear in the final report. */
-    variant ?: string;
+    variant?: string;
 
     /** If present, the name becomes a hyperlink to this URL. */
-    ref     ?: string;
+    ref?: string;
 
     /**
      * If present and set to true, the tester is "official", ie,
      * the test have been performed by someone who officially represent
      * the implementers
      */
-    "tested-by" ?: TESTED_BY;
+    "tested-by"?: TESTED_BY;
 
     /**
      * Submission date; displayed as part of the listing of implementers.
      * Becomes important if tests for previous versions of EPUB 3.X are
      * reused for more recent versions.
+     * Dates should be specified in YYYY-MM-DD format.
      */
-    date        ?: string;
+    date?: string;
 }
 
 
