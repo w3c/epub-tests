@@ -188,6 +188,7 @@ async function getAnImplementationReport(fname: string, test_ids: string[]): Pro
         ref         : raw_report.ref,
         variant     : raw_report.variant,
         "tested-by" : TESTED_BY.set(raw_report["tested-by"]),
+        date        : raw_report.date,
         tests       : transform_tests(raw_report.tests),
     }
 }
@@ -560,6 +561,7 @@ export function getTemplate(report: ReportData): Raw_ImplementationReport {
         "name"      : "(Implementation's name)",
         "ref"       : "https://www.example.com",
         "tested-by" : TESTED_BY.IMPLEMENTER,
+        "date"      : new Date().toISOString().split('T')[0],
         "tests"     : test_list,
     }
 }

@@ -4,6 +4,7 @@
   "tested-by": "implementer",
   "name": "PUBLUS Reader",
   "variant": "Android",
+  "date": "2026-09-24",
   "tests": {
     "pub-cmt-avif": false,
     "pub-cmt-jxl": false,
