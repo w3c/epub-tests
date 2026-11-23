@@ -12,10 +12,10 @@
  * - The "tested-by" field is set to "third party"
  * - For each test reference in the submission, the old test result is copied to the new
  * version, unless
- *     - The test has been deprecated for EPUB 3.4, in which case the test result is simply dropped
+ *     - the test has been deprecated for EPUB 3.4, in which case the test result is simply dropped
  *       from the output
- *     - The test has been renamed for EPUB 3.4, in which case the test results are added to
- *       new test using the new name
+ *     - the test has been renamed for EPUB 3.4, in which case the test results are added to
+ *       new test report using the new name
  *
  * The script has the 3.3->3.4 transfer built-in for now (it is ran once only after all), but
  * when the time comes, it will be trivial to adapt it to the, say, 3.4->3.5 case.
