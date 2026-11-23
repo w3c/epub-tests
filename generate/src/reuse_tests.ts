@@ -6,9 +6,9 @@
  *
  * When transforming an old test, the following actions have been taken
  *
- * - Unless the date field appears in the test, the new version's date is set to 2023-05-25,
+ * - Unless the date field appears in the report, the new version's date is set to 2023-05-25,
  * which is the the EPUB 3.3 publication date
- * - The name of the test is expanded with the parenthetical note of "(EPUB 3.3 test report)"
+ * - The name of the report is expanded with the parenthetical note of "(EPUB 3.3 test report)"
  * - The "tested-by" field is set to "third party"
  * - For each test reference in the submission, the old test result is copied to the new
  * version, unless
