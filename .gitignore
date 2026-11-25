@@ -24,6 +24,8 @@ local_tests/
 local_generate/
 local_debug/
 debug/
+generate/src/update_test.js
+
 
 # Null-tests
 reports/null-test.json
