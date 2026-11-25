@@ -65,7 +65,7 @@
         "nav-spine_in-spine-no-list-style": true,
         "nav-spine_not-in-spine": true,
         "ocf-font_obfuscation": true,
-        "ocf-font_obfuscation-bis": true,
+        "ocf-font_obfuscation_bis": true,
         "ocf-metainf-inc": true,
         "ocf-metainf-manifest": true,
         "ocf-package_arbitrary": true,

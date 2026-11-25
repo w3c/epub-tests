@@ -134,7 +134,7 @@
         "ocf-zip-comp": true,
         "ocf-zip-mult": false,
         "ocf-font_obfuscation": true,
-        "ocf-font_obfuscation-bis": true,
+        "ocf-font_obfuscation_bis": true,
         "mol-audio": true,
         "mol-audio-exceeding-clipend": true,
         "mol-audio-no-clipbegin": true,
