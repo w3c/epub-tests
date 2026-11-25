@@ -1,0 +1,3802 @@
+{
+  "metadata": {
+    "description": "Test version mapping schema for tracking EPUB test evolution across versions",
+    "created": "2026-11-17",
+    "lastUpdated": "2026-11-17",
+    "versions": [
+      "3.3",
+      "3.4"
+    ],
+    "nextExpectedVersion": "3.5",
+    "note": "Canonical IDs use the latest version identifier. The lineage array allows for future versions to append new entries.",
+    "statistics": {
+      "total_tests_in_3_4": 177,
+      "new_tests_in_3_4": 27,
+      "revised_tests": 18,
+      "deprecated_in_3_4": 10,
+      "carried_forward_unchanged": 133
+    }
+  },
+  "tests": {
+    "cnt-css-fonts_ot": {
+      "category": "content",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-css-fonts_ot",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "cnt-css-fonts",
+          "status": "original",
+          "revisionNotes": "Content support test"
+        },
+        {
+          "version": "3.4",
+          "id": "cnt-css-fonts_ot",
+          "status": "renamed",
+          "revisionNotes": "Renamed from cnt-css-fonts"
+        }
+      ]
+    },
+    "cnt-css-fonts_tt": {
+      "category": "content",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-css-fonts_tt",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "cnt-css-fonts_tt",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "cnt-css-fonts_woff": {
+      "category": "content",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-css-fonts_woff",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "cnt-css-fonts_woff",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "cnt-css-fonts_woff2": {
+      "category": "content",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-css-fonts_woff2",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "cnt-css-fonts_woff2",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "cnt-mathml-support": {
+      "category": "content",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-mathml-support",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "cnt-mathml-support",
+          "status": "original",
+          "revisionNotes": "Content support test"
+        },
+        {
+          "version": "3.4",
+          "id": "cnt-mathml-support",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "cnt-svg-css": {
+      "category": "content",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-svg-css",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "cnt-svg-css",
+          "status": "original",
+          "revisionNotes": "Content support test"
+        },
+        {
+          "version": "3.4",
+          "id": "cnt-svg-css",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "cnt-svg-css-inclusion": {
+      "category": "content",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-svg-css-inclusion",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "cnt-svg-css-inclusion",
+          "status": "original",
+          "revisionNotes": "Content support test"
+        },
+        {
+          "version": "3.4",
+          "id": "cnt-svg-css-inclusion",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "cnt-svg-css-reference": {
+      "category": "content",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-svg-css-reference",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "cnt-svg-css-reference",
+          "status": "original",
+          "revisionNotes": "Content support test"
+        },
+        {
+          "version": "3.4",
+          "id": "cnt-svg-css-reference",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "cnt-svg-embedded": {
+      "category": "content",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-svg-embedded",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "cnt-svg-embedded",
+          "status": "original",
+          "revisionNotes": "Content support test"
+        },
+        {
+          "version": "3.4",
+          "id": "cnt-svg-embedded",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "cnt-svg-support": {
+      "category": "content",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-svg-support",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "cnt-svg-support",
+          "status": "original",
+          "revisionNotes": "Content support test"
+        },
+        {
+          "version": "3.4",
+          "id": "cnt-svg-support",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "cnt-xhtml-support": {
+      "category": "content",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/cnt-xhtml-support",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "cnt-xhtml-support",
+          "status": "original",
+          "revisionNotes": "Content support test"
+        },
+        {
+          "version": "3.4",
+          "id": "cnt-xhtml-support",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-hyphens": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-hyphens",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-hyphens",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-hyphens",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-line-break": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-line-break",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-line-break",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-line-break",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-text-align-last": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-text-align-last",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-text-align-last",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-text-align-last",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-text-combine-horizontal": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-text-combine-horizontal",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-text-combine-horizontal",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-text-combine-horizontal",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-text-emphasis": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-text-emphasis",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-text-emphasis",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-text-emphasis",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-text-orientation": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-text-orientation",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-text-orientation",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-text-orientation",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-text-transform": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-text-transform",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-text-transform",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-text-transform",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-text-underline-position": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-text-underline-position",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-text-underline-position",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-text-underline-position",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-word-break": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-word-break",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-word-break",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-word-break",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "css-epub-writing-mode": {
+      "category": "css",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/css-epub-writing-mode",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "css-epub-writing-mode",
+          "status": "original",
+          "revisionNotes": "Css support test"
+        },
+        {
+          "version": "3.4",
+          "id": "css-epub-writing-mode",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "fxl-orientation_duplication": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "fxl-orientation_duplication",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "fxl-page-spread-break": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "fxl-page-spread-break",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "fxl-page-spread-center": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "fxl-page-spread-center",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "fxl-spine-overrides_duplicate": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "fxl-spine-overrides_duplicate",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-fxl-orientation-default": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-orientation-default",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-fxl-orientation-landscape": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-orientation-landscape",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-fxl-spread-auto": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-spread-auto",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-fxl-spread-both": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-spread-both",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-fxl-spread-default": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-spread-default",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-fxl-spread-landscape": {
+      "category": "layout",
+      "status": "deprecated",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": "3.4",
+      "testFolder": null,
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-spread-landscape",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": null,
+          "status": "deprecated",
+          "revisionNotes": "Removed from test suite in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-fxl-svg-icb_multi": {
+      "category": "layout",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-fxl-svg-icb_multi",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-svg-icb_multi",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-fxl-svg-icb_multi",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "lay-page-layout-both": {
+      "category": "layout",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-page-layout-both",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-page-layout-both",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-page-layout-both",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "lay-page-layout-both-spread": {
+      "category": "layout",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-page-layout-both-spread",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-page-layout-both-spread",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-page-layout-both-spread",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "lay-pkg-flow-paginated": {
+      "category": "layout",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pkg-flow-paginated",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-pkg-flow-paginated",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pkg-flow-paginated",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "lay-pkg-flow-scrolled-continuous": {
+      "category": "layout",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pkg-flow-scrolled-continuous",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-pkg-flow-scrolled-continuous",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pkg-flow-scrolled-continuous",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "lay-pkg-flow-scrolled-doc": {
+      "category": "layout",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pkg-flow-scrolled-doc",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-pkg-flow-scrolled-doc",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pkg-flow-scrolled-doc",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "lay-pp-embedded-images": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-embedded-images",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-pp-embedded-images",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-pp-embedded-images-svg": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-embedded-images-svg",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-pp-embedded-images-svg",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-pp-images-in-spine": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-images-in-spine",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-pp-images-in-spine",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-pp-images-mixed": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-images-mixed",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-pp-images-mixed",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-pp-layout-default": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-layout-default",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-layout-default",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-layout-default",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-layout-default"
+        }
+      ]
+    },
+    "lay-pp-layout-duplication": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-layout-duplication",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "fxl-layout-duplication",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-layout-duplication",
+          "status": "renamed",
+          "revisionNotes": "Renamed from fxl-layout-duplication"
+        }
+      ]
+    },
+    "lay-pp-layout-pre-paginated": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-layout-pre-paginated",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-layout-pre-paginated",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-layout-pre-paginated",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-layout-pre-paginated"
+        }
+      ]
+    },
+    "lay-pp-layout-pre-paginated-spreads": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-layout-pre-paginated-spreads",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-layout-pre-paginated-spreads",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-layout-pre-paginated-spreads",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-layout-pre-paginated-spreads"
+        }
+      ]
+    },
+    "lay-pp-page-spread-combined": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-page-spread-combined",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-page-spread-combined",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-page-spread-combined",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-page-spread-combined"
+        }
+      ]
+    },
+    "lay-pp-page-spread-left": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-page-spread-left",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-page-spread-left",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-page-spread-left",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-page-spread-left"
+        }
+      ]
+    },
+    "lay-pp-page-spread-right": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-page-spread-right",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-page-spread-right",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-page-spread-right",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-page-spread-right"
+        }
+      ]
+    },
+    "lay-pp-spine-overrides_behave-as-global": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-spine-overrides_behave-as-global",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "fxl-spine-overrides_behave-as-global",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-spine-overrides_behave-as-global",
+          "status": "renamed",
+          "revisionNotes": "Renamed from fxl-spine-overrides_behave-as-global"
+        }
+      ]
+    },
+    "lay-pp-spine-overrides_behave-as-global-bis": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-spine-overrides_behave-as-global-bis",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "fxl-spine-overrides_behave-as-global-bis",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-spine-overrides_behave-as-global-bis",
+          "status": "renamed",
+          "revisionNotes": "Renamed from fxl-spine-overrides_behave-as-global-bis"
+        }
+      ]
+    },
+    "lay-pp-spine-overrides_image-only-pp": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-spine-overrides_image-only-pp",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-pp-spine-overrides_image-only-pp",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-pp-spine-overrides_image-only-reflow": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-spine-overrides_image-only-reflow",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-pp-spine-overrides_image-only-reflow",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-pp-spine-overrides_image-spine-pp": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-spine-overrides_image-spine-pp",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-pp-spine-overrides_image-spine-pp",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-pp-spine-overrides_image-spine-reflow": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-spine-overrides_image-spine-reflow",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-pp-spine-overrides_image-spine-reflow",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-pp-spread-none": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-spread-none",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-spread-none",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-spread-none",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-spread-none"
+        }
+      ]
+    },
+    "lay-pp-xhtml-icb": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-xhtml-icb",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-xhtml-icb",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-xhtml-icb",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-xhtml-icb"
+        }
+      ]
+    },
+    "lay-pp-xhtml-icb_invalid_meta": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-xhtml-icb_invalid_meta",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-xhtml-icb_invalid_meta",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-xhtml-icb_invalid_meta",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-xhtml-icb_invalid_meta"
+        }
+      ]
+    },
+    "lay-pp-xhtml-icb_multi": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-xhtml-icb_multi",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-xhtml-icb_multi",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-xhtml-icb_multi",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-xhtml-icb_multi"
+        }
+      ]
+    },
+    "lay-pp-xhtml-icb_multi_declarations": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-xhtml-icb_multi_declarations",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-xhtml-icb_multi_declarations",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-xhtml-icb_multi_declarations",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-xhtml-icb_multi_declarations"
+        }
+      ]
+    },
+    "lay-pp-xhtml-icb_repeated-in-meta": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-xhtml-icb_repeated-in-meta",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-xhtml-icb_repeated-in-meta",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-xhtml-icb_repeated-in-meta",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-xhtml-icb_repeated-in-meta"
+        }
+      ]
+    },
+    "lay-pp-xhtml-icb_units": {
+      "category": "layout",
+      "status": "revised",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-pp-xhtml-icb_units",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-fxl-xhtml-icb_units",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-pp-xhtml-icb_units",
+          "status": "renamed",
+          "revisionNotes": "Renamed from lay-fxl-xhtml-icb_units"
+        }
+      ]
+    },
+    "lay-reflow-align-x-center": {
+      "category": "layout",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-reflow-align-x-center",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-reflow-align-x-center",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-reflow-align-x-center",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "lay-rendition-flow-pre-pag": {
+      "category": "layout",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-rendition-flow-pre-pag",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-rendition-flow-pre-pag",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-rendition-flow-pre-pag",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "lay-roll-embedded-images": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-roll-embedded-images",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-roll-embedded-images",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-roll-embedded-images-svg": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-roll-embedded-images-svg",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-roll-embedded-images-svg",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-roll-images-in-spine": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-roll-images-in-spine",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-roll-images-in-spine",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-roll-images-mixed": {
+      "category": "layout",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-roll-images-mixed",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "lay-roll-images-mixed",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "lay-viewport-meta-prop": {
+      "category": "layout",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/lay-viewport-meta-prop",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "lay-viewport-meta-prop",
+          "status": "original",
+          "revisionNotes": "Layout support test"
+        },
+        {
+          "version": "3.4",
+          "id": "lay-viewport-meta-prop",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-audio": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-audio",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-audio",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-audio",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-audio-exceeding-clipend": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-audio-exceeding-clipend",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-audio-exceeding-clipend",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-audio-exceeding-clipend",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-audio-no-clipbegin": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-audio-no-clipbegin",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-audio-no-clipbegin",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-audio-no-clipbegin",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-audio-no-clipend": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-audio-no-clipend",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-audio-no-clipend",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-audio-no-clipend",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-css": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-css",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-css",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-css",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-ignore": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-ignore",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-ignore",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-ignore",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-navigation": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-navigation",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-navigation",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-navigation",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-support_xhtml": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-support_xhtml",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-support_xhtml",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-support_xhtml",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-support_xhtml-fxl": {
+      "category": "media-overlays",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-support_xhtml-fxl",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "mol-support_xhtml-fxl",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "mol-support_xhtml-load": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-support_xhtml-load",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-support_xhtml-load",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-support_xhtml-load",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-support_xhtml-load-fxl": {
+      "category": "media-overlays",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-support_xhtml-load-fxl",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "mol-support_xhtml-load-fxl",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "mol-support_xhtml-load-next": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-support_xhtml-load-next",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-support_xhtml-load-next",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-support_xhtml-load-next",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-support_xhtml-load-next-fxl": {
+      "category": "media-overlays",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-support_xhtml-load-next-fxl",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "mol-support_xhtml-load-next-fxl",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "mol-timing-synchronization": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-timing-synchronization",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-timing-synchronization",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-timing-synchronization",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-timing-synchronization_fxl": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-timing-synchronization_fxl",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-timing-synchronization_fxl",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-timing-synchronization_fxl",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-timing-synchronization_multiple_audio": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-timing-synchronization_multiple_audio",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-timing-synchronization_multiple_audio",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-timing-synchronization_multiple_audio",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-timing-synchronization_multiple_audio-fxl": {
+      "category": "media-overlays",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-timing-synchronization_multiple_audio-fxl",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "mol-timing-synchronization_multiple_audio-fxl",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "mol-timing-synchronization_svg": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-timing-synchronization_svg",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-timing-synchronization_svg",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-timing-synchronization_svg",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-timing-synchronization_svg-fxl": {
+      "category": "media-overlays",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-timing-synchronization_svg-fxl",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "mol-timing-synchronization_svg-fxl",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "mol-tts_multi": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-tts_multi",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-tts_multi",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-tts_multi",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "mol-tts_single": {
+      "category": "media-overlays",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/mol-tts_single",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "mol-tts_single",
+          "status": "original",
+          "revisionNotes": "Media Overlays support test"
+        },
+        {
+          "version": "3.4",
+          "id": "mol-tts_single",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "nav-access": {
+      "category": "navigation",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/nav-access",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "nav-access",
+          "status": "original",
+          "revisionNotes": "Navigation support test"
+        },
+        {
+          "version": "3.4",
+          "id": "nav-access",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "nav-activation": {
+      "category": "navigation",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/nav-activation",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "nav-activation",
+          "status": "original",
+          "revisionNotes": "Navigation support test"
+        },
+        {
+          "version": "3.4",
+          "id": "nav-activation",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "nav-non-text_img": {
+      "category": "navigation",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/nav-non-text_img",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "nav-non-text_img",
+          "status": "original",
+          "revisionNotes": "Navigation support test"
+        },
+        {
+          "version": "3.4",
+          "id": "nav-non-text_img",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "nav-non-text_img_title": {
+      "category": "navigation",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/nav-non-text_img_title",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "nav-non-text_img_title",
+          "status": "original",
+          "revisionNotes": "Navigation support test"
+        },
+        {
+          "version": "3.4",
+          "id": "nav-non-text_img_title",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "nav-spine_in-spine": {
+      "category": "navigation",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/nav-spine_in-spine",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "nav-spine_in-spine",
+          "status": "original",
+          "revisionNotes": "Navigation support test"
+        },
+        {
+          "version": "3.4",
+          "id": "nav-spine_in-spine",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "nav-spine_in-spine-hidden-toc-css": {
+      "category": "navigation",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/nav-spine_in-spine-hidden-toc-css",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "nav-spine_in-spine-hidden-toc-css",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "nav-spine_in-spine-hidden-toc-html": {
+      "category": "navigation",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/nav-spine_in-spine-hidden-toc-html",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "nav-spine_in-spine-hidden-toc-html",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "nav-spine_in-spine-no-list-style": {
+      "category": "navigation",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/nav-spine_in-spine-no-list-style",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "nav-spine_in-spine-no-list-style",
+          "status": "original",
+          "revisionNotes": "Navigation support test"
+        },
+        {
+          "version": "3.4",
+          "id": "nav-spine_in-spine-no-list-style",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "nav-spine_not-in-spine": {
+      "category": "navigation",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/nav-spine_not-in-spine",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "nav-spine_not-in-spine",
+          "status": "original",
+          "revisionNotes": "Navigation support test"
+        },
+        {
+          "version": "3.4",
+          "id": "nav-spine_not-in-spine",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-font_obfuscation": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-font_obfuscation",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-font_obfuscation",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-font_obfuscation",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-font_obfuscation-bis": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-font_obfuscation-bis",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-font_obfuscation-bis",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-font_obfuscation-bis",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-metainf-inc": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-metainf-inc",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-metainf-inc",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-metainf-inc",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-metainf-manifest": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-metainf-manifest",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-metainf-manifest",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-metainf-manifest",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-package_arbitrary": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-package_arbitrary",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-package_arbitrary",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-package_arbitrary",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-package_multiple": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-package_multiple",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-package_multiple",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-package_multiple",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-url_link-leaking-relative": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-url_link-leaking-relative",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-url_link-leaking-relative",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-url_link-leaking-relative",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-url_link-path-absolute": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-url_link-path-absolute",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-url_link-path-absolute",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-url_link-path-absolute",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-url_link-relative": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-url_link-relative",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-url_link-relative",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-url_link-relative",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-url_manifest": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-url_manifest",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-url_manifest",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-url_manifest",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-url_origin": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-url_origin",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-url_origin",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-url_origin",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-url_parse-leaking-relative": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-url_parse-leaking-relative",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-url_parse-leaking-relative",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-url_parse-leaking-relative",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-url_parse-path-absolute": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-url_parse-path-absolute",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-url_parse-path-absolute",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-url_parse-path-absolute",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-url_relative": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-url_relative",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-url_relative",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-url_relative",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-zip-comp": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-zip-comp",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-zip-comp",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-zip-comp",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "ocf-zip-mult": {
+      "category": "ocf",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/ocf-zip-mult",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "ocf-zip-mult",
+          "status": "original",
+          "revisionNotes": "Ocf support test"
+        },
+        {
+          "version": "3.4",
+          "id": "ocf-zip-mult",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-collections-unknown": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-collections-unknown",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-collections-unknown",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-collections-unknown",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-creator-order": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-creator-order",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-creator-order",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-creator-order",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-dir-auto_root-rtl": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-dir-auto_root-rtl",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-dir-auto_root-rtl",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-dir-auto_root-rtl",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-dir-auto_root-unset": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-dir-auto_root-unset",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-dir-auto_root-unset",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-dir-auto_root-unset",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-dir_but_not_content": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-dir_but_not_content",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-dir_but_not_content",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-dir_but_not_content",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-dir_creator-rtl": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-dir_creator-rtl",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-dir_creator-rtl",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-dir_creator-rtl",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-dir_rtl-root-ltr": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-dir_rtl-root-ltr",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-dir_rtl-root-ltr",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-dir_rtl-root-ltr",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-dir_rtl-root-unset": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-dir_rtl-root-unset",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-dir_rtl-root-unset",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-dir_rtl-root-unset",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-dir_unset-root-rtl": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-dir_unset-root-rtl",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-dir_unset-root-rtl",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-dir_unset-root-rtl",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-dir_unset-root-unset": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-dir_unset-root-unset",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-dir_unset-root-unset",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-dir_unset-root-unset",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-lang_but_not_content": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-lang_but_not_content",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-lang_but_not_content",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-lang_but_not_content",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-linked-records": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-linked-records",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-linked-records",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-linked-records",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-manifest-unknown": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-manifest-unknown",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-manifest-unknown",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-manifest-unknown",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-manifest-unlisted-resource": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-manifest-unlisted-resource",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-manifest-unlisted-resource",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-manifest-unlisted-resource",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-meta-unknown": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-meta-unknown",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-meta-unknown",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-meta-unknown",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-meta-whitespace": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-meta-whitespace",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-meta-whitespace",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-meta-whitespace",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-duplicate-item-hyperlink": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-duplicate-item-hyperlink",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-duplicate-item-hyperlink",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-duplicate-item-hyperlink",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-duplicate-item-rendering": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-duplicate-item-rendering",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-duplicate-item-rendering",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-duplicate-item-rendering",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-duplicate-item-ui": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-duplicate-item-ui",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-duplicate-item-ui",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-duplicate-item-ui",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-nonlinear-activation": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-nonlinear-activation",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-nonlinear-activation",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-nonlinear-activation",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-order": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-order",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-order",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-order",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-order-svg": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-order-svg",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-order-svg",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-order-svg",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-progression-default": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-progression-default",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-progression-default",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-progression-default",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-progression-pre-paginated": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-progression-pre-paginated",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-progression-pre-paginated",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-progression-pre-paginated",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-progression_ltr": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-progression_ltr",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-progression_ltr",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-progression_ltr",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-progression_rtl": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-progression_rtl",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-progression_rtl",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-progression_rtl",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-spine-unknown": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-spine-unknown",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-spine-unknown",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-spine-unknown",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-title-order": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-title-order",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-title-order",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-title-order",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-unique-id": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-unique-id",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-unique-id",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-unique-id",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pkg-version-backward": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pkg-version-backward",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pkg-version-backward",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pkg-version-backward",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pss-support": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pss-support",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pss-support",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pss-support",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pss-support_ignore-title": {
+      "category": "package",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pss-support_ignore-title",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pss-support_ignore-title",
+          "status": "original",
+          "revisionNotes": "Package support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pss-support_ignore-title",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-cmt-avif": {
+      "category": "publications",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-avif",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "pub-cmt-avif",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "pub-cmt-gif": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-gif",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-cmt-gif",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-cmt-gif",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-cmt-jpeg": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-jpeg",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-cmt-jpeg",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-cmt-jpeg",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-cmt-jxl": {
+      "category": "publications",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-jxl",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "pub-cmt-jxl",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "pub-cmt-mp3": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-mp3",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-cmt-mp3",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-cmt-mp3",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-cmt-mp4": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-mp4",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-cmt-mp4",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-cmt-mp4",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-cmt-opus": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-opus",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-cmt-opus",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-cmt-opus",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-cmt-png": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-png",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-cmt-png",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-cmt-png",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-cmt-svg": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-svg",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-cmt-svg",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-cmt-svg",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-cmt-webp": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-cmt-webp",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-cmt-webp",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-cmt-webp",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-data-urls_browsing-context": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-data-urls_browsing-context",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-data-urls_browsing-context",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-data-urls_browsing-context",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-data-urls_top-level-content": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-data-urls_top-level-content",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-data-urls_top-level-content",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-data-urls_top-level-content",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-external-links": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-external-links",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-external-links",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-external-links",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-external-links_consent": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-external-links_consent",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-external-links_consent",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-external-links_consent",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-file-urls": {
+      "category": "publications",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-file-urls",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "pub-file-urls",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "pub-foreign_bad-fallback": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-foreign_bad-fallback",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-foreign_bad-fallback",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-foreign_bad-fallback",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-foreign_image": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-foreign_image",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-foreign_image",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-foreign_image",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-foreign_json-spine": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-foreign_json-spine",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-foreign_json-spine",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-foreign_json-spine",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-foreign_xml-spine": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-foreign_xml-spine",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-foreign_xml-spine",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-foreign_xml-spine",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-foreign_xml-suffix-spine": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-foreign_xml-suffix-spine",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-foreign_xml-suffix-spine",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-foreign_xml-suffix-spine",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-xml-external-id": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-xml-external-id",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-xml-external-id",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-xml-external-id",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-xml-names": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-xml-names",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-xml-names",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-xml-names",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-xml-non-validating_comment": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-xml-non-validating_comment",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-xml-non-validating_comment",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-xml-non-validating_comment",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "pub-xml-non-validating_unclosed": {
+      "category": "publications",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/pub-xml-non-validating_unclosed",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "pub-xml-non-validating_unclosed",
+          "status": "original",
+          "revisionNotes": "Publications support test"
+        },
+        {
+          "version": "3.4",
+          "id": "pub-xml-non-validating_unclosed",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-not-support_ccscript-modify-host": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-not-support_ccscript-modify-host",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-not-support_ccscript-modify-host",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-not-support_ccscript-modify-host",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-not-support_ccscript-modify-size": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-not-support_ccscript-modify-size",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-not-support_ccscript-modify-size",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-not-support_ccscript-modify-size",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-readingsystem-features": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-readingsystem-features",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-readingsystem-features",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-readingsystem-features",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-readingsystem-support": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-readingsystem-support",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-readingsystem-support",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-readingsystem-support",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-readingsystem-support_iframe": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-readingsystem-support_iframe",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-readingsystem-support_iframe",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-readingsystem-support_iframe",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-readingsystem-support_iframe_svg": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-readingsystem-support_iframe_svg",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-readingsystem-support_iframe_svg",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-readingsystem-support_iframe_svg",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-readingsystem-support_svg": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-readingsystem-support_svg",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-readingsystem-support_svg",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-readingsystem-support_svg",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-storage-delete": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-storage-delete",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-storage-delete",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-storage-delete",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-support": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-support",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-support",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-support",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-support-fallback": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-support-fallback",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-support-fallback",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-support-fallback",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-support_iframe": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-support_iframe",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-support_iframe",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-support_iframe",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-support_origin": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-support_origin",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-support_origin",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-support_origin",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-support_origin_unique": {
+      "category": "scripting",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-support_origin_unique",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "scr-support_origin_unique",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "scr-support_scrolled-continuous": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-support_scrolled-continuous",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-support_scrolled-continuous",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-support_scrolled-continuous",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-support_scrolled-doc": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-support_scrolled-doc",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-support_scrolled-doc",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-support_scrolled-doc",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "scr-support_svg": {
+      "category": "scripting",
+      "status": "active",
+      "firstIntroduced": "3.3",
+      "deprecatedIn": null,
+      "testFolder": "tests/scr-support_svg",
+      "lineage": [
+        {
+          "version": "3.3",
+          "id": "scr-support_svg",
+          "status": "original",
+          "revisionNotes": "Scripting support test"
+        },
+        {
+          "version": "3.4",
+          "id": "scr-support_svg",
+          "status": "carried-forward",
+          "revisionNotes": "No changes from EPUB 3.3"
+        }
+      ]
+    },
+    "sec-untrusted-consent_network": {
+      "category": "security",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/sec-untrusted-consent_network",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "sec-untrusted-consent_network",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    },
+    "sec-untrusted-consent_scripting": {
+      "category": "security",
+      "status": "new",
+      "firstIntroduced": "3.4",
+      "deprecatedIn": null,
+      "testFolder": "tests/sec-untrusted-consent_scripting",
+      "lineage": [
+        {
+          "version": "3.4",
+          "id": "sec-untrusted-consent_scripting",
+          "status": "original",
+          "revisionNotes": "New test added in EPUB 3.4"
+        }
+      ]
+    }
+  }
+}
